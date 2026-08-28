@@ -81,12 +81,29 @@ def render_report(matches: Sequence[Match], insights: dict[str, ResearchInsight]
     return "\n".join(lines)
 
 
-def write_reports(directory: Path, body: str, now: dt.datetime) -> Path:
+def write_reports(directory: Path, body: str, now: dt.datetime,
+                  new_count: int) -> Path:
+    """Write the daily report without losing alerts found by an earlier run."""
     directory.mkdir(parents=True, exist_ok=True)
-    day = now.astimezone(JST).date().isoformat()
+    local_time = now.astimezone(JST)
+    day = local_time.date().isoformat()
     archive = directory / f"{day}.md"
-    archive.write_text(body)
-    (directory / "latest.md").write_text(body)
+    stored_body = body
+    if archive.exists():
+        previous = archive.read_text()
+        if new_count == 0:
+            # The 07:20 fallback must not replace a 07:00 alert with a
+            # zero-result report after the paper has entered seen.json.
+            stored_body = previous
+        elif "新着採択: **0件**" not in previous:
+            heading = local_time.strftime("%H:%M JST")
+            stored_body = (
+                previous.rstrip()
+                + f"\n\n---\n\n## 追加検出（{heading}）\n\n"
+                + body
+            )
+    archive.write_text(stored_body)
+    (directory / "latest.md").write_text(stored_body)
     summary = os.getenv("GITHUB_STEP_SUMMARY", "")
     if summary:
         with Path(summary).open("a") as stream:
@@ -195,7 +212,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"Insight: {match.paper.title} [{insight.source}]")
 
     body = render_report(new, insights, now, counts, errors)
-    archive = write_reports(args.report_dir, body, now)
+    archive = write_reports(args.report_dir, body, now, len(new))
 
     token = os.getenv("GITHUB_TOKEN", "")
     repository = os.getenv("GITHUB_REPOSITORY", "")
