@@ -48,7 +48,7 @@ python -m unittest discover -s tests -v
 通知せずに検索する場合：
 
 ```bash
-python src/literature_monitor.py --no-notify
+python -m src.literature_monitor --no-notify
 ```
 
 ## 設定
@@ -70,7 +70,9 @@ permissions:
 ```text
 .github/workflows/daily-literature-monitor.yml  毎朝の検索、テスト、通知、結果保存
 config.json                                    検索語と選定条件
-src/literature_monitor.py                      検索、重複除外、選定、通知
+src/core.py                                    データ構造、選定、重複除外、状態管理
+src/sources.py                                 Europe PMC・Crossref・arXivの取得
+src/literature_monitor.py                      レポート、Issue通知、実行制御
 state/seen.json                                通知済み文献と最終成功時刻
 reports/                                       日次レポート
 tests/test_monitor.py                          単体テスト
