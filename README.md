@@ -6,7 +6,7 @@
 
 - 本実行：毎日 **07:00（日本時間、Asia/Tokyo）**
 - 予備実行：毎日 **07:20（日本時間）**
-- 07:00の処理が成功していれば、07:20の処理は検索せず終了します。
+- 07:00の処理が完全に成功していれば、07:20の処理は検索せず終了します。
 - GitHub側の混雑により、実際の開始が数分遅れる場合があります。
 
 ## 検索対象
@@ -26,6 +26,36 @@
 3. 推定法、最適化法、モデル評価、共変量選択、アルゴリズム、ソフトウェアなどの方法論的要素がある
 
 単に機械学習を特定薬剤へ適用した研究、通常の薬剤別PopPK解析、レビュー、解説、症例報告は原則として除外します。判定はキーワード規則に基づくため、研究上の重要性は本文で確認してください。
+
+## 各論文の報告内容
+
+通知Issueと日次レポートでは、書誌情報に加えて次の4点を日本語で整理します。
+
+- **従来の課題**：既存法では何が未解決だったか
+- **今回の方法・新規性**：論文が導入または検証した方法
+- **新たに可能になったこと**：従来できなかった何を扱えるようになったか
+- **研究上の意義**：PopPK、ファーマコメトリクス、個別化投与にとって何が重要か
+
+これらはタイトルと抄録だけに基づいて生成し、抄録で裏付けられない臨床効果は記載しない設計です。検索語、スコア、抄録抜粋は折りたたみ欄に保存します。
+
+### 要約方法
+
+1. `OPENAI_API_KEY` が登録されている場合：OpenAI Responses APIを用いて、論文ごとの内容に即した日本語要約を作成します。
+2. APIキーがない場合、またはAPI呼び出しに失敗した場合：分野別のルールベース要約へ自動的に切り替えます。
+3. 抄録を取得できない文献では、何が可能になったかを推測せず、本文確認が必要であることを明記します。
+
+### OpenAI要約を有効にする方法
+
+GitHubリポジトリで次の操作を行います。
+
+1. **Settings → Secrets and variables → Actions**
+2. **Secrets** タブで **New repository secret**
+3. Nameを `OPENAI_API_KEY` とする
+4. ValueにOpenAI Platformで発行したAPIキーを入力して保存する
+
+APIキーはコード、Issue、レポートには出力されません。モデルを変更する場合は、同じ画面の **Variables** タブで `OPENAI_MODEL` を登録します。未設定時は `config.json` の `gpt-5.6-luna` を使用します。
+
+APIへ送信する内容は、採択された新着文献のタイトル、抄録、掲載情報、公開日、自動判定語に限定しています。
 
 ## 通知と保存
 
@@ -54,7 +84,7 @@ python -m src.literature_monitor --no-notify
 
 ## 設定
 
-`config.json` で検索語、対象データソース、検索期間、除外語を変更できます。CrossrefとEurope PMCへ連絡先を付ける場合は、任意で **Settings → Secrets and variables → Actions → Variables** に `CONTACT_EMAIL` を登録します。未登録でも動作します。
+`config.json` で検索語、対象データソース、検索期間、除外語、要約モデルを変更できます。CrossrefとEurope PMCへ連絡先を付ける場合は、任意で **Settings → Secrets and variables → Actions → Variables** に `CONTACT_EMAIL` を登録します。未登録でも動作します。
 
 ## GitHub Actionsの権限
 
@@ -70,9 +100,10 @@ permissions:
 
 ```text
 .github/workflows/daily-literature-monitor.yml  毎朝の検索、テスト、通知、結果保存
-config.json                                    検索語と選定条件
+config.json                                    検索語、選定条件、要約設定
 src/core.py                                    データ構造、選定、重複除外、状態管理
 src/sources.py                                 Europe PMC・Crossref・arXivの取得
+src/insights.py                                従来の課題、新規性、可能になったこと、意義の要約
 src/literature_monitor.py                      レポート、Issue通知、実行制御
 state/seen.json                                通知済み文献と最終成功時刻
 reports/                                       日次レポート
