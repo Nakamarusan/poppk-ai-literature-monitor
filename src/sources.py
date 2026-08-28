@@ -83,8 +83,12 @@ def fetch_arxiv(config: dict[str, Any], since: dt.date, until: dt.date) -> list[
     search = " OR ".join(f'all:"{term}"' for term in config["search_terms"])
     params = {"search_query": search, "start": "0", "max_results": "200",
               "sortBy": "submittedDate", "sortOrder": "descending"}
+    # arXiv asks API clients to be conservative. GitHub-hosted runners also share
+    # egress IPs, so a brief initial delay plus a longer exponential retry window
+    # makes transient HTTP 429 responses much less likely to cause a missed day.
+    time.sleep(5)
     payload = request("https://export.arxiv.org/api/query?" + urlencode(params),
-                      accept="application/atom+xml")
+                      accept="application/atom+xml", retries=8)
     root = ET.fromstring(payload)
     ns = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
     papers: list[Paper] = []
