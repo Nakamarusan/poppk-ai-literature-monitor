@@ -1,12 +1,13 @@
 import datetime as dt
 import json
+import tempfile
 import unittest
 from pathlib import Path
 
 from src.insights import ResearchInsight, heuristic_insight, parse_insight_json
 from src.literature_monitor import (
     JST, Match, Paper, already_succeeded_today, deduplicate, fingerprint,
-    normalize_doi, normalize_title, render_report, screen,
+    normalize_doi, normalize_title, render_report, screen, write_reports,
 )
 
 
@@ -131,6 +132,31 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("**従来の課題:** 従来の課題。", body)
         self.assertIn("**新たに可能になったこと:**", body)
         self.assertIn("<details>", body)
+
+    def test_fallback_does_not_overwrite_alert_report(self):
+        now = dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc)
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            alert_body = "新着採択: **1件**\n\n論文A"
+            empty_body = "新着採択: **0件**\n\n新着なし"
+            write_reports(directory, alert_body, now, 1)
+            write_reports(directory, empty_body, now + dt.timedelta(minutes=20), 0)
+            archive = directory / "2026-08-28.md"
+            self.assertEqual(archive.read_text(), alert_body)
+            self.assertEqual((directory / "latest.md").read_text(), alert_body)
+
+    def test_later_new_alert_is_appended(self):
+        now = dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc)
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            first = "新着採択: **1件**\n\n論文A"
+            second = "新着採択: **1件**\n\n論文B"
+            write_reports(directory, first, now, 1)
+            write_reports(directory, second, now + dt.timedelta(minutes=20), 1)
+            combined = (directory / "2026-08-28.md").read_text()
+            self.assertIn("論文A", combined)
+            self.assertIn("論文B", combined)
+            self.assertIn("追加検出", combined)
 
 
 if __name__ == "__main__":
