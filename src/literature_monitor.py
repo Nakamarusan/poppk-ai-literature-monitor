@@ -182,7 +182,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         if not value.get("notified_at")
         or dt.datetime.fromisoformat(value["notified_at"].replace("Z", "+00:00")) >= cutoff
     }
-    state["last_success_utc"] = stamp
+    if errors:
+        # A partial run is useful for alerts, but should not suppress the 07:20
+        # fallback. Clearing last_success makes the fallback retry failed sources.
+        state["last_partial_utc"] = stamp
+        state.pop("last_success_utc", None)
+    else:
+        state["last_success_utc"] = stamp
+        state.pop("last_partial_utc", None)
     save_json(args.state, state)
     print(f"Report: {archive}; retrieved {len(papers)}, unique {len(unique)}, screened {len(screened)}, new {len(new)}")
     return 0
