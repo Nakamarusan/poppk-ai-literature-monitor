@@ -12,13 +12,6 @@ on:
         description: "Number of days to search (1-90)"
         required: false
         default: "8"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/daily-literature-monitor.yml"
-      - "config.json"
-      - "src/**"
-      - "tests/**"
 
 permissions:
   contents: write
@@ -38,6 +31,13 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+
+      - name: Sync latest main branch
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v7
