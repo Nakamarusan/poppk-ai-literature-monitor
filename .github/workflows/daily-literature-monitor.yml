@@ -1,0 +1,75 @@
+name: Daily PopPK × AI literature monitor
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+      timezone: "Asia/Tokyo"
+    - cron: "20 7 * * *"
+      timezone: "Asia/Tokyo"
+  workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: "Number of days to search (1-90)"
+        required: false
+        default: "8"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-literature-monitor.yml"
+      - "config.json"
+      - "src/**"
+      - "tests/**"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: poppk-ai-daily-literature-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        id: checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Search, screen, and notify
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          LOOKBACK_DAYS: ${{ github.event_name == 'workflow_dispatch' && inputs.lookback_days || '' }}
+          SKIP_IF_SUCCESS_TODAY: ${{ github.event_name == 'schedule' && github.event.schedule == '20 7 * * *' && 'true' || 'false' }}
+        run: python -m src.literature_monitor
+
+      - name: Commit state and reports
+        if: ${{ always() && steps.checkout.outcome == 'success' }}
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- state reports)" ]; then
+            echo "No state or report changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state reports
+          git commit -m "Update daily literature-monitor state"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt * 3))
+          done
+          exit 1
