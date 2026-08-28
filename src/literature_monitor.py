@@ -161,15 +161,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             create_issue(title, f"@{owner}\n\n{body}", "", token, repository, owner)
         raise MonitorError("All enabled literature sources failed")
 
-    if new or errors:
-        digest = fingerprint(new) if new else ""
-        marker = f"<!-- poppk-ai-alert:{digest} -->" if digest else ""
-        title = (f"[母集団PK × AI] 方法論の新着論文 {len(new)}件 — {today}"
-                 if new else f"[母集団PK × AI] データソース警告 — {today}")
+    if new:
+        digest = fingerprint(new)
+        marker = f"<!-- poppk-ai-alert:{digest} -->"
+        title = f"[母集団PK × AI] 方法論の新着論文 {len(new)}件 — {today}"
         if can_notify:
-            issue_body = f"{marker}\n\n@{owner}\n\n{body}" if marker else f"@{owner}\n\n{body}"
+            issue_body = f"{marker}\n\n@{owner}\n\n{body}"
             print("Issue:", create_issue(title, issue_body, marker, token, repository, owner))
-        elif new:
+        else:
             print("Notification skipped: GitHub credentials unavailable or --no-notify used.")
 
     stamp = now.isoformat()
