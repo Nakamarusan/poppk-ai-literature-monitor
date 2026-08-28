@@ -12,48 +12,72 @@ from typing import Sequence
 from .core import (JST, UTC, Match, MonitorError, Paper, already_succeeded_today,
                    clean, deduplicate, fingerprint, load_json, normalize_doi,
                    normalize_title, request_json, save_json, screen)
+from .insights import ResearchInsight, summarize_research
 from .sources import fetch_arxiv, fetch_crossref, fetch_europe_pmc
 
 __all__ = [
-    "JST", "Match", "Paper", "already_succeeded_today", "deduplicate",
-    "fingerprint", "normalize_doi", "normalize_title", "screen",
+    "JST", "Match", "Paper", "ResearchInsight", "already_succeeded_today",
+    "deduplicate", "fingerprint", "normalize_doi", "normalize_title",
+    "screen", "summarize_research",
 ]
 
 
-def render_report(matches: Sequence[Match], now: dt.datetime, counts: dict[str, int],
+def render_report(matches: Sequence[Match], insights: dict[str, ResearchInsight],
+                  now: dt.datetime, counts: dict[str, int],
                   errors: dict[str, str]) -> str:
     lines = [
         "# 母集団PK × AI 方法論文献アラート", "",
         f"実行日時: {now.astimezone(JST).strftime('%Y-%m-%d %H:%M JST')}",
         f"新着採択: **{len(matches)}件**", "",
-        "取得数: " + ", ".join(f"{name} {count}件" for name, count in sorted(counts.items())), "",
+        "取得数: " + ", ".join(
+            f"{name} {count}件" for name, count in sorted(counts.items())
+        ), "",
     ]
     if errors:
         lines += ["## データソースの警告", ""]
-        lines += [f"- **{name}:** {clean(message)}" for name, message in sorted(errors.items())]
+        lines += [f"- **{name}:** {clean(message)}"
+                  for name, message in sorted(errors.items())]
         lines += [""]
     if not matches:
         lines += ["通知条件を満たす未通知の新着論文はありませんでした。", ""]
     for number, item in enumerate(matches, 1):
         paper = item.paper
-        link = paper.url or (f"https://doi.org/{normalize_doi(paper.doi)}" if paper.doi else "")
+        insight = insights[paper.title_key()]
+        link = paper.url or (
+            f"https://doi.org/{normalize_doi(paper.doi)}" if paper.doi else ""
+        )
         title = f"[{paper.title}]({link})" if link else paper.title
-        authors = ", ".join(paper.authors[:8]) + (", et al." if len(paper.authors) > 8 else "")
+        authors = ", ".join(paper.authors[:8]) + (
+            ", et al." if len(paper.authors) > 8 else ""
+        )
         abstract = paper.abstract[:700] + "…" if len(paper.abstract) > 700 else paper.abstract
         lines += [
             f"## {number}. {title}", "",
-            f"- **優先度:** {item.priority}（スコア {item.score}）",
             f"- **著者:** {authors or '記載なし'}",
             f"- **掲載誌・公開元:** {paper.venue or ', '.join(paper.sources)}",
             f"- **公開日:** {paper.date or '記載なし'}",
-            f"- **DOI:** {normalize_doi(paper.doi) or '記載なし'}",
+            f"- **DOI:** {normalize_doi(paper.doi) or '記載なし'}", "",
+            "### 研究の位置づけ（抄録ベース）", "",
+            f"- **従来の課題:** {insight.prior_limitation}",
+            f"- **今回の方法・新規性:** {insight.contribution}",
+            f"- **新たに可能になったこと:** {insight.new_capability}",
+            f"- **研究上の意義:** {insight.significance}", "",
+            f"*要約方法: {insight.source}*", "",
+            "<details>",
+            "<summary>自動判定の根拠と抄録を表示</summary>", "",
+            f"- **優先度:** {item.priority}（スコア {item.score}）",
             f"- **取得元:** {', '.join(dict.fromkeys(paper.sources))}",
             f"- **母集団PK関連語:** {', '.join(item.pk_hits)}",
             f"- **AI関連語:** {', '.join(item.ai_hits)}",
             f"- **方法論関連語:** {', '.join(item.method_hits) or 'AI手法自体を方法論的と判定'}",
             f"- **抄録抜粋:** {abstract or '記載なし'}", "",
+            "</details>", "",
         ]
-    lines += ["---", "自動スクリーニング結果であり、論文の質を評価するものではありません。", ""]
+    lines += [
+        "---",
+        "研究の位置づけはタイトルと抄録に基づく自動要約であり、本文全体の評価ではありません。",
+        "",
+    ]
     return "\n".join(lines)
 
 
@@ -70,7 +94,8 @@ def write_reports(directory: Path, body: str, now: dt.datetime) -> Path:
     return archive
 
 
-def create_issue(title: str, body: str, marker: str, token: str, repository: str, owner: str) -> str:
+def create_issue(title: str, body: str, marker: str, token: str,
+                 repository: str, owner: str) -> str:
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
@@ -86,12 +111,16 @@ def create_issue(title: str, body: str, marker: str, token: str, repository: str
             return clean(issue.get("html_url"))
     payload = {"title": title, "body": body, "assignees": [owner]}
     try:
-        result = request_json(endpoint, method="POST", payload=payload, headers=headers, retries=1)
+        result = request_json(
+            endpoint, method="POST", payload=payload, headers=headers, retries=1
+        )
     except MonitorError as exc:
         if "HTTP 422" not in str(exc):
             raise
         payload.pop("assignees", None)
-        result = request_json(endpoint, method="POST", payload=payload, headers=headers, retries=1)
+        result = request_json(
+            endpoint, method="POST", payload=payload, headers=headers, retries=1
+        )
     return clean(result.get("html_url"))
 
 
@@ -108,11 +137,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     state = load_json(args.state, {"schema_version": 1, "seen": {}})
     now = dt.datetime.now(UTC)
     today = now.astimezone(JST).date()
-    if os.getenv("SKIP_IF_SUCCESS_TODAY", "").lower() == "true" and already_succeeded_today(state, today):
+    if (
+        os.getenv("SKIP_IF_SUCCESS_TODAY", "").lower() == "true"
+        and already_succeeded_today(state, today)
+    ):
         print(f"Successful run already recorded for {today}; fallback skipped.")
         return 0
 
-    lookback = args.lookback_days or int(os.getenv("LOOKBACK_DAYS") or config["lookback_days"])
+    lookback = args.lookback_days or int(
+        os.getenv("LOOKBACK_DAYS") or config["lookback_days"]
+    )
     if not 1 <= lookback <= 90:
         raise MonitorError("lookback_days must be between 1 and 90")
     since = today - dt.timedelta(days=lookback - 1)
@@ -143,11 +177,24 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     unique = deduplicate(papers)
     screened = [match for paper in unique if (match := screen(paper, config))]
-    screened.sort(key=lambda match: (match.priority != "High", -match.score, match.paper.title.lower()))
+    screened.sort(
+        key=lambda match: (
+            match.priority != "High", -match.score, match.paper.title.lower()
+        )
+    )
     seen = state.setdefault("seen", {})
-    new = [match for match in screened if not any(key in seen for key in match.paper.keys())]
-    new = new[:int(config["max_alerts"])]
-    body = render_report(new, now, counts, errors)
+    new = [
+        match for match in screened
+        if not any(key in seen for key in match.paper.keys())
+    ][:int(config["max_alerts"])]
+
+    insights: dict[str, ResearchInsight] = {}
+    for match in new:
+        insight = summarize_research(match, config)
+        insights[match.paper.title_key()] = insight
+        print(f"Insight: {match.paper.title} [{insight.source}]")
+
+    body = render_report(new, insights, now, counts, errors)
     archive = write_reports(args.report_dir, body, now)
 
     token = os.getenv("GITHUB_TOKEN", "")
@@ -167,31 +214,44 @@ def main(argv: Sequence[str] | None = None) -> int:
         title = f"[母集団PK × AI] 方法論の新着論文 {len(new)}件 — {today}"
         if can_notify:
             issue_body = f"{marker}\n\n@{owner}\n\n{body}"
-            print("Issue:", create_issue(title, issue_body, marker, token, repository, owner))
+            print(
+                "Issue:",
+                create_issue(title, issue_body, marker, token, repository, owner),
+            )
         else:
-            print("Notification skipped: GitHub credentials unavailable or --no-notify used.")
+            print(
+                "Notification skipped: GitHub credentials unavailable "
+                "or --no-notify used."
+            )
 
     stamp = now.isoformat()
     for item in new:
-        record = {"title": item.paper.title, "doi": normalize_doi(item.paper.doi), "notified_at": stamp}
+        record = {
+            "title": item.paper.title,
+            "doi": normalize_doi(item.paper.doi),
+            "notified_at": stamp,
+        }
         for key in item.paper.keys():
             seen[key] = record
     cutoff = now - dt.timedelta(days=int(config["state_retention_days"]))
     state["seen"] = {
         key: value for key, value in seen.items()
         if not value.get("notified_at")
-        or dt.datetime.fromisoformat(value["notified_at"].replace("Z", "+00:00")) >= cutoff
+        or dt.datetime.fromisoformat(
+            value["notified_at"].replace("Z", "+00:00")
+        ) >= cutoff
     }
     if errors:
-        # A partial run is useful for alerts, but should not suppress the 07:20
-        # fallback. Clearing last_success makes the fallback retry failed sources.
         state["last_partial_utc"] = stamp
         state.pop("last_success_utc", None)
     else:
         state["last_success_utc"] = stamp
         state.pop("last_partial_utc", None)
     save_json(args.state, state)
-    print(f"Report: {archive}; retrieved {len(papers)}, unique {len(unique)}, screened {len(screened)}, new {len(new)}")
+    print(
+        f"Report: {archive}; retrieved {len(papers)}, unique {len(unique)}, "
+        f"screened {len(screened)}, new {len(new)}"
+    )
     return 0
 
 
