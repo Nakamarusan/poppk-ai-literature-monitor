@@ -12,6 +12,13 @@ on:
         description: "Number of days to search (1-90)"
         required: false
         default: "8"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-literature-monitor.yml"
+      - "config.json"
+      - "src/**"
+      - "tests/**"
 
 permissions:
   contents: write
@@ -24,7 +31,7 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Check out repository
         id: checkout
@@ -47,16 +54,19 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
 
-      - name: Search, screen, and notify
+      - name: Search, summarize, and notify
+        if: ${{ github.event_name != 'push' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           LOOKBACK_DAYS: ${{ github.event_name == 'workflow_dispatch' && inputs.lookback_days || '' }}
           SKIP_IF_SUCCESS_TODAY: ${{ github.event_name == 'schedule' && github.event.schedule == '20 7 * * *' && 'true' || 'false' }}
         run: python -m src.literature_monitor
 
       - name: Commit state and reports
-        if: ${{ always() && steps.checkout.outcome == 'success' }}
+        if: ${{ github.event_name != 'push' && always() && steps.checkout.outcome == 'success' }}
         shell: bash
         run: |
           if [ -z "$(git status --porcelain -- state reports)" ]; then
