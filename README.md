@@ -1,111 +1,15 @@
-# 母集団PK × AI 方法論文献モニター
+# PopPK × AI Literature Monitor
 
-母集団薬物動態解析（population pharmacokinetics、NLME、pharmacometrics）とAI・機械学習の両方に関係する**新しい方法論論文・プレプリント**を自動検索し、該当文献がある場合だけGitHub Issueで通知します。
+本リポジトリは、**Vibe codingで作成した文献監視ワークフローの検証用リポジトリ**です。
 
-## 実行時刻
+GitHub Actionsを用いて毎朝7時（日本時間）に、Europe PMC、Crossref、arXivから、母集団薬物動態解析・ファーマコメトリクスとAI／機械学習に関する新着の方法論論文を検索します。
 
-- 本実行：毎日 **07:00（日本時間、Asia/Tokyo）**
-- 予備実行：毎日 **07:20（日本時間）**
-- 07:00の処理が完全に成功していれば、07:20の処理は検索せず終了します。
-- GitHub側の混雑により、実際の開始が数分遅れる場合があります。
+該当する論文が見つかった場合、GitHub Issueと `reports/` に以下を自動出力します。
 
-## 検索対象
+- 書誌情報と論文リンク
+- 従来の課題
+- 方法上の新規性
+- 新たに可能になったこと
+- PopPK・ファーマコメトリクス研究における意義
 
-- Europe PMC：PubMedを含む生物医学文献
-- Crossref：出版社が登録した論文とプレプリント
-- arXiv：関連プレプリント
-
-収載遅延を考慮し、既定では直近8日間を毎日再検索します。DOI、arXiv ID、データベースID、正規化タイトルで重複を除外し、通知済み文献を `state/seen.json` で管理します。
-
-## 採択条件
-
-次の3条件をすべて満たす文献を通知します。
-
-1. PopPK、NLME、pharmacometrics、MIPD、QSPなどとの明確な関連がある
-2. 機械学習、連合学習、強化学習、Neural ODE、normalizing flow、差分プライバシーなどとの関連がある
-3. 推定法、最適化法、モデル評価、共変量選択、アルゴリズム、ソフトウェアなどの方法論的要素がある
-
-単に機械学習を特定薬剤へ適用した研究、通常の薬剤別PopPK解析、レビュー、解説、症例報告は原則として除外します。判定はキーワード規則に基づくため、研究上の重要性は本文で確認してください。
-
-## 各論文の報告内容
-
-通知Issueと日次レポートでは、書誌情報に加えて次の4点を日本語で整理します。
-
-- **従来の課題**：既存法では何が未解決だったか
-- **今回の方法・新規性**：論文が導入または検証した方法
-- **新たに可能になったこと**：従来できなかった何を扱えるようになったか
-- **研究上の意義**：PopPK、ファーマコメトリクス、個別化投与にとって何が重要か
-
-これらはタイトルと抄録だけに基づいて生成し、抄録で裏付けられない臨床効果は記載しない設計です。検索語、スコア、抄録抜粋は折りたたみ欄に保存します。
-
-### 要約方法
-
-1. `OPENAI_API_KEY` が登録されている場合：OpenAI Responses APIを用いて、論文ごとの内容に即した日本語要約を作成します。
-2. APIキーがない場合、またはAPI呼び出しに失敗した場合：分野別のルールベース要約へ自動的に切り替えます。
-3. 抄録を取得できない文献では、何が可能になったかを推測せず、本文確認が必要であることを明記します。
-
-### OpenAI要約を有効にする方法
-
-GitHubリポジトリで次の操作を行います。
-
-1. **Settings → Secrets and variables → Actions**
-2. **Secrets** タブで **New repository secret**
-3. Nameを `OPENAI_API_KEY` とする
-4. ValueにOpenAI Platformで発行したAPIキーを入力して保存する
-
-APIキーはコード、Issue、レポートには出力されません。モデルを変更する場合は、同じ画面の **Variables** タブで `OPENAI_MODEL` を登録します。未設定時は `config.json` の `gpt-5.6-luna` を使用します。
-
-APIへ送信する内容は、採択された新着文献のタイトル、抄録、掲載情報、公開日、自動判定語に限定しています。
-
-## 通知と保存
-
-- 新着文献がある場合、リポジトリ所有者をメンションし、担当者に指定したIssueを作成します。
-- 一部のデータソースに障害がある場合は、日次レポートへ警告を記録し、利用可能なデータソースで検索を続けます。
-- すべてのデータソースが失敗した場合は、Issueで警告します。
-- 同じ通知内容のIssueは重複作成しません。
-- 毎日の結果は `reports/YYYY-MM-DD.md` と `reports/latest.md` に保存します。
-- GitHubの通知設定に応じて、Web、モバイル、またはメールで通知を受け取れます。
-
-## 手動実行
-
-GitHubの **Actions** タブで `Daily PopPK × AI literature monitor` を選択し、**Run workflow** を実行します。検索期間は1～90日に変更できます。
-
-ローカルでテストする場合：
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-通知せずに検索する場合：
-
-```bash
-python -m src.literature_monitor --no-notify
-```
-
-## 設定
-
-`config.json` で検索語、対象データソース、検索期間、除外語、要約モデルを変更できます。CrossrefとEurope PMCへ連絡先を付ける場合は、任意で **Settings → Secrets and variables → Actions → Variables** に `CONTACT_EMAIL` を登録します。未登録でも動作します。
-
-## GitHub Actionsの権限
-
-日次レポートと通知履歴を保存し、Issueを作成するため、ワークフローは次の権限を使用します。
-
-```yaml
-permissions:
-  contents: write
-  issues: write
-```
-
-## 構成
-
-```text
-.github/workflows/daily-literature-monitor.yml  毎朝の検索、テスト、通知、結果保存
-config.json                                    検索語、選定条件、要約設定
-src/core.py                                    データ構造、選定、重複除外、状態管理
-src/sources.py                                 Europe PMC・Crossref・arXivの取得
-src/insights.py                                従来の課題、新規性、可能になったこと、意義の要約
-src/literature_monitor.py                      レポート、Issue通知、実行制御
-state/seen.json                                通知済み文献と最終成功時刻
-reports/                                       日次レポート
-tests/test_monitor.py                          単体テスト
-```
+検索、選定、要約は自動処理であり、内容の妥当性は原論文で確認する必要があります。
