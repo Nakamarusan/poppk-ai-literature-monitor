@@ -1,15 +1,15 @@
 # PopPK × AI Literature Monitor
 
-本リポジトリは、**Vibe codingで作成した文献監視ワークフローの検証用リポジトリ**です。
+This repository is a proof-of-concept built through vibe coding to test an automated literature-monitoring workflow.
 
-GitHub Actionsを用いて毎朝7時（日本時間）に、Europe PMC、Crossref、arXivから、母集団薬物動態解析・ファーマコメトリクスとAI／機械学習に関する新着の方法論論文を検索します。
+A GitHub Actions workflow runs every day at 7:00 AM JST and searches Europe PMC, Crossref, and arXiv for newly published methodological studies at the intersection of population pharmacokinetics, pharmacometrics, and artificial intelligence or machine learning.
 
-該当する論文が見つかった場合、GitHub Issueと `reports/` に以下を自動出力します。
+For each eligible paper, the workflow creates a GitHub Issue and stores a report in `reports/` containing:
 
-- 書誌情報と論文リンク
-- 従来の課題
-- 方法上の新規性
-- 新たに可能になったこと
-- PopPK・ファーマコメトリクス研究における意義
+- Bibliographic information and a link to the paper
+- The limitation of previous approaches
+- The methodological contribution
+- What the study makes newly possible
+- Its relevance to population PK and pharmacometrics research
 
-検索、選定、要約は自動処理であり、内容の妥当性は原論文で確認する必要があります。
+Screening and summarization are automated, so the results should be verified against the original paper.
