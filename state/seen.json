@@ -1,5 +1,5 @@
 {
-  "last_success_utc": "2026-08-28T10:12:51.890847+00:00",
+  "last_success_utc": "2026-08-29T03:26:59.536032+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1016/j.jiac.2026.103058": {
@@ -7,10 +7,25 @@
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
     },
+    "doi:10.64898/2026.08.25.26361215": {
+      "doi": "10.64898/2026.08.25.26361215",
+      "notified_at": "2026-08-29T03:26:59.536032+00:00",
+      "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:crossref:10.64898/2026.08.25.26361215": {
+      "doi": "10.64898/2026.08.25.26361215",
+      "notified_at": "2026-08-29T03:26:59.536032+00:00",
+      "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
     "source:europe pmc:med:42648633": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "title:9a33003f9f24e27860ff548c": {
+      "doi": "10.64898/2026.08.25.26361215",
+      "notified_at": "2026-08-29T03:26:59.536032+00:00",
+      "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
     },
     "title:f24f43e98f6f0b03fac53eee": {
       "doi": "10.1016/j.jiac.2026.103058",
