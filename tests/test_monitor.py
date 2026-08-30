@@ -6,8 +6,9 @@ from pathlib import Path
 
 from src.insights import ResearchInsight, heuristic_insight, parse_insight_json
 from src.literature_monitor import (
-    JST, Match, Paper, already_succeeded_today, deduplicate, fingerprint,
-    normalize_doi, normalize_title, render_report, screen, write_reports,
+    JST, Match, Paper, already_succeeded_today, choose_historical, deduplicate,
+    fingerprint, normalize_doi, normalize_title, render_report, screen,
+    should_use_historical_fallback, write_reports,
 )
 
 
@@ -126,12 +127,64 @@ class MonitorTests(unittest.TestCase):
         body = render_report(
             [match], {paper.title_key(): insight},
             dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc),
-            {"Crossref": 1}, {},
+            {"Crossref": 1}, {}, selection_mode="new",
         )
         self.assertIn("### 研究の位置づけ（抄録ベース）", body)
         self.assertIn("**従来の課題:** 従来の課題。", body)
         self.assertIn("**新たに可能になったこと:**", body)
+        self.assertIn("新着採択: **1件**", body)
         self.assertIn("<details>", body)
+
+    def test_historical_selection_excludes_old_and_seen_papers(self):
+        old = Paper(["x"], ["old"], "Old", date="2019-12-31")
+        seen_paper = Paper(
+            ["x"], ["seen"], "Seen", date="2022-01-01", doi="10.1/seen"
+        )
+        candidate = Paper(
+            ["x"], ["candidate"], "Candidate", date="2021-05-01",
+            doi="10.1/candidate",
+        )
+        matches = [
+            Match(old, 30, "High", [], [], []),
+            Match(seen_paper, 20, "High", [], [], []),
+            Match(candidate, 10, "Medium", [], [], []),
+        ]
+        seen = {seen_paper.keys()[0]: {"notified_at": "2026-01-01T00:00:00Z"}}
+        selected = choose_historical(
+            matches, seen, dt.date(2020, 1, 1), dt.date(2026, 8, 29), 1
+        )
+        self.assertEqual([item.paper.title for item in selected], ["Candidate"])
+
+    def test_historical_fallback_runs_only_once_per_day(self):
+        today = dt.date(2026, 8, 29)
+        self.assertTrue(should_use_historical_fallback({}, today))
+        self.assertFalse(should_use_historical_fallback(
+            {"last_selection_date_jst": "2026-08-29"}, today
+        ))
+
+    def test_historical_report_is_clearly_labeled(self):
+        paper = Paper(
+            ["x"], ["1"], "Historical methodology paper",
+            authors=["A Author"], venue="Journal", date="2021-04-01",
+            doi="10.1/historical", abstract="An abstract.",
+        )
+        match = Match(
+            paper, 10, "High",
+            ["population pharmacokinetic"], ["machine learning"], ["framework"],
+        )
+        insight = ResearchInsight(
+            "従来の課題。", "今回の方法。", "新たに可能になったこと。",
+            "研究上の意義。", "test",
+        )
+        body = render_report(
+            [match], {paper.title_key(): insight},
+            dt.datetime(2026, 8, 29, 0, tzinfo=dt.timezone.utc),
+            {"Crossref": 1}, {}, selection_mode="historical",
+            historical_counts={"Crossref": 100}, historical_start_year=2020,
+        )
+        self.assertIn("新着採択: **0件**", body)
+        self.assertIn("過去論文の紹介: **1件**", body)
+        self.assertIn("2020年以降の過去論文", body)
 
     def test_fallback_does_not_overwrite_alert_report(self):
         now = dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc)
