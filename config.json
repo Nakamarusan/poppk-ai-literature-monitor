@@ -7,6 +7,16 @@
     "crossref": true,
     "arxiv": true
   },
+  "historical_fallback": {
+    "enabled": true,
+    "start_year": 2020,
+    "count": 1,
+    "sources": {
+      "europe_pmc": true,
+      "crossref": true,
+      "arxiv": false
+    }
+  },
   "search_terms": [
     "population pharmacokinetic",
     "population pharmacokinetics",
@@ -121,7 +131,7 @@
     "case report",
     "letter to the editor"
   ],
-  "monitor_version": 2,
+  "monitor_version": 3,
   "insights": {
     "enabled": true,
     "model": "gpt-5.6-luna",
