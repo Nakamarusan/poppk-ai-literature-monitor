@@ -9,17 +9,45 @@ import sys
 from pathlib import Path
 from typing import Any, Sequence
 
-from .core import (JST, UTC, Match, MonitorError, Paper, already_succeeded_today,
-                   clean, deduplicate, fingerprint, load_json, normalize_doi,
-                   normalize_title, parse_date, request_json, save_json, screen)
+from .core import (
+    JST,
+    UTC,
+    Match,
+    MonitorError,
+    Paper,
+    already_succeeded_today,
+    clean,
+    deduplicate,
+    fingerprint,
+    load_json,
+    normalize_doi,
+    normalize_title,
+    parse_date,
+    request_json,
+    save_json,
+    screen,
+)
 from .insights import ResearchInsight, summarize_research
 from .sources import fetch_arxiv, fetch_crossref, fetch_europe_pmc
 
 __all__ = [
-    "JST", "Match", "Paper", "ResearchInsight", "already_succeeded_today",
-    "choose_historical", "deduplicate", "fingerprint", "normalize_doi",
-    "normalize_title", "render_report", "screen", "summarize_research",
-    "should_use_historical_fallback", "write_reports",
+    "JST",
+    "Match",
+    "Paper",
+    "ResearchInsight",
+    "already_succeeded_today",
+    "choose_historical",
+    "deduplicate",
+    "fingerprint",
+    "normalize_doi",
+    "normalize_title",
+    "render_report",
+    "screen",
+    "source_is_optional",
+    "summarize_research",
+    "should_attempt_source",
+    "should_use_historical_fallback",
+    "write_reports",
 ]
 
 SELECTION_MARKER = "<!-- poppk-ai-selection -->"
@@ -29,15 +57,36 @@ def _is_unseen(match: Match, seen: dict[str, Any]) -> bool:
     return not any(key in seen for key in match.paper.keys())
 
 
-def should_use_historical_fallback(state: dict[str, Any],
-                                   today: dt.date) -> bool:
+def source_is_optional(config: dict[str, Any], key: str) -> bool:
+    policy = config.get("source_policies", {}).get(key, {})
+    return bool(policy.get("optional", False))
+
+
+def should_attempt_source(
+    state: dict[str, Any], config: dict[str, Any], key: str, today: dt.date
+) -> bool:
+    """Allow configured optional sources to be attempted at most once per JST day."""
+    policy = config.get("source_policies", {}).get(key, {})
+    if not policy.get("once_per_day", False):
+        return True
+    attempted = state.get("source_attempt_dates", {}).get(key)
+    return clean(attempted) != today.isoformat()
+
+
+def should_use_historical_fallback(
+    state: dict[str, Any], today: dt.date
+) -> bool:
     """Limit the historical fallback to one reported selection per JST day."""
     return clean(state.get("last_selection_date_jst")) != today.isoformat()
 
 
-def choose_historical(matches: Sequence[Match], seen: dict[str, Any],
-                      start: dt.date, until: dt.date,
-                      limit: int = 1) -> list[Match]:
+def choose_historical(
+    matches: Sequence[Match],
+    seen: dict[str, Any],
+    start: dt.date,
+    until: dt.date,
+    limit: int = 1,
+) -> list[Match]:
     """Choose previously unreported eligible papers published in the date range."""
     candidates: list[Match] = []
     for match in matches:
@@ -55,12 +104,12 @@ def choose_historical(matches: Sequence[Match], seen: dict[str, Any],
             match.paper.title.lower(),
         )
     )
-    return candidates[:max(0, limit)]
+    return candidates[: max(0, limit)]
 
 
-def fetch_historical_pool(config: dict[str, Any], start: dt.date,
-                          until: dt.date) -> tuple[list[Paper], dict[str, int],
-                                                  dict[str, str]]:
+def fetch_historical_pool(
+    config: dict[str, Any], start: dt.date, until: dt.date
+) -> tuple[list[Paper], dict[str, int], dict[str, str]]:
     """Retrieve a broader 2020+ pool only when the recent search has no hit."""
     settings = config.get("historical_fallback", {})
     source_settings = settings.get("sources", {})
@@ -93,30 +142,41 @@ def fetch_historical_pool(config: dict[str, Any], start: dt.date,
     return papers, counts, errors
 
 
-def render_report(matches: Sequence[Match], insights: dict[str, ResearchInsight],
-                  now: dt.datetime, counts: dict[str, int],
-                  errors: dict[str, str], *, selection_mode: str = "new",
-                  historical_counts: dict[str, int] | None = None,
-                  historical_start_year: int = 2020) -> str:
+def render_report(
+    matches: Sequence[Match],
+    insights: dict[str, ResearchInsight],
+    now: dt.datetime,
+    counts: dict[str, int],
+    errors: dict[str, str],
+    *,
+    selection_mode: str = "new",
+    historical_counts: dict[str, int] | None = None,
+    historical_start_year: int = 2020,
+) -> str:
     new_count = len(matches) if selection_mode == "new" else 0
     historical_count = len(matches) if selection_mode == "historical" else 0
     lines: list[str] = []
     if matches:
         lines += [SELECTION_MARKER, ""]
     lines += [
-        "# 母集団PK × AI 方法論文献アラート", "",
+        "# 母集団PK × AI 方法論文献アラート",
+        "",
         f"実行日時: {now.astimezone(JST).strftime('%Y-%m-%d %H:%M JST')}",
         f"新着採択: **{new_count}件**",
         f"過去論文の紹介: **{historical_count}件**"
-        f"（{historical_start_year}年以降・未紹介）", "",
-        "新着検索の取得数: " + ", ".join(
+        f"（{historical_start_year}年以降・未紹介）",
+        "",
+        "新着検索の取得数: "
+        + ", ".join(
             f"{name} {count}件" for name, count in sorted(counts.items())
-        ), "",
+        ),
+        "",
     ]
     historical_counts = historical_counts or {}
     if historical_counts:
         lines += [
-            "過去論文検索の取得数: " + ", ".join(
+            "過去論文検索の取得数: "
+            + ", ".join(
                 f"{name} {count}件"
                 for name, count in sorted(historical_counts.items())
             ),
@@ -146,35 +206,45 @@ def render_report(matches: Sequence[Match], insights: dict[str, ResearchInsight]
         )
         abstract = (
             paper.abstract[:700] + "…"
-            if len(paper.abstract) > 700 else paper.abstract
+            if len(paper.abstract) > 700
+            else paper.abstract
         )
         category = (
             f"{historical_start_year}年以降の過去論文（新着がない日の補完）"
-            if selection_mode == "historical" else "新着論文"
+            if selection_mode == "historical"
+            else "新着論文"
         )
         lines += [
-            f"## {number}. {title}", "",
+            f"## {number}. {title}",
+            "",
             f"- **区分:** {category}",
             f"- **著者:** {authors or '記載なし'}",
             f"- **掲載誌・公開元:** {paper.venue or ', '.join(paper.sources)}",
             f"- **公開日:** {paper.date or '記載なし'}",
-            f"- **DOI:** {normalize_doi(paper.doi) or '記載なし'}", "",
-            "### 研究の位置づけ（抄録ベース）", "",
+            f"- **DOI:** {normalize_doi(paper.doi) or '記載なし'}",
+            "",
+            "### 研究の位置づけ（抄録ベース）",
+            "",
             f"- **従来の課題:** {insight.prior_limitation}",
             f"- **今回の方法・新規性:** {insight.contribution}",
             f"- **新たに可能になったこと:** {insight.new_capability}",
-            f"- **研究上の意義:** {insight.significance}", "",
-            f"*要約方法: {insight.source}*", "",
+            f"- **研究上の意義:** {insight.significance}",
+            "",
+            f"*要約方法: {insight.source}*",
+            "",
             "<details>",
-            "<summary>自動判定の根拠と抄録を表示</summary>", "",
+            "<summary>自動判定の根拠と抄録を表示</summary>",
+            "",
             f"- **優先度:** {item.priority}（スコア {item.score}）",
             f"- **取得元:** {', '.join(dict.fromkeys(paper.sources))}",
             f"- **母集団PK関連語:** {', '.join(item.pk_hits)}",
             f"- **AI関連語:** {', '.join(item.ai_hits)}",
             f"- **方法論関連語:** "
             f"{', '.join(item.method_hits) or 'AI手法自体を方法論的と判定'}",
-            f"- **抄録抜粋:** {abstract or '記載なし'}", "",
-            "</details>", "",
+            f"- **抄録抜粋:** {abstract or '記載なし'}",
+            "",
+            "</details>",
+            "",
         ]
     lines += [
         "---",
@@ -188,16 +258,16 @@ def _report_has_selection(body: str) -> bool:
     if SELECTION_MARKER in body:
         return True
     return (
-        "新着採択: **0件**" not in body
-        and "新着採択:" in body
+        "新着採択: **0件**" not in body and "新着採択:" in body
     ) or (
         "過去論文の紹介: **0件**" not in body
         and "過去論文の紹介:" in body
     )
 
 
-def write_reports(directory: Path, body: str, now: dt.datetime,
-                  selected_count: int) -> Path:
+def write_reports(
+    directory: Path, body: str, now: dt.datetime, selected_count: int
+) -> Path:
     """Write the daily report without losing a selection from an earlier run."""
     directory.mkdir(parents=True, exist_ok=True)
     local_time = now.astimezone(JST)
@@ -224,8 +294,14 @@ def write_reports(directory: Path, body: str, now: dt.datetime,
     return archive
 
 
-def create_issue(title: str, body: str, marker: str, token: str,
-                 repository: str, owner: str) -> str:
+def create_issue(
+    title: str,
+    body: str,
+    marker: str,
+    token: str,
+    repository: str,
+    owner: str,
+) -> str:
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
@@ -242,14 +318,22 @@ def create_issue(title: str, body: str, marker: str, token: str,
     payload = {"title": title, "body": body, "assignees": [owner]}
     try:
         result = request_json(
-            endpoint, method="POST", payload=payload, headers=headers, retries=1
+            endpoint,
+            method="POST",
+            payload=payload,
+            headers=headers,
+            retries=1,
         )
     except MonitorError as exc:
         if "HTTP 422" not in str(exc):
             raise
         payload.pop("assignees", None)
         result = request_json(
-            endpoint, method="POST", payload=payload, headers=headers, retries=1
+            endpoint,
+            method="POST",
+            payload=payload,
+            headers=headers,
+            retries=1,
         )
     return clean(result.get("html_url"))
 
@@ -289,33 +373,68 @@ def main(argv: Sequence[str] | None = None) -> int:
     papers: list[Paper] = []
     counts: dict[str, int] = {}
     errors: dict[str, str] = {}
+    optional_errors: dict[str, str] = {}
+    mandatory_successes = 0
+    source_attempt_dates = state.setdefault("source_attempt_dates", {})
+    source_health = state.setdefault("source_health", {})
+
     for name, (key, fetcher) in fetchers.items():
         if not config["sources"].get(key, True):
+            continue
+        policy = config.get("source_policies", {}).get(key, {})
+        optional = source_is_optional(config, key)
+        if not should_attempt_source(state, config, key, today):
+            print(f"{name}: skipped; already attempted on {today}")
             continue
         try:
             found = fetcher(config, since, today)
             papers.extend(found)
             counts[name] = len(found)
+            if not optional:
+                mandatory_successes += 1
+            source_health[key] = {
+                "status": "ok",
+                "last_attempt_utc": now.isoformat(),
+                "records": len(found),
+            }
             print(f"{name}: {len(found)} records")
         except Exception as exc:
             message = clean(exc)
             contact = os.getenv("CONTACT_EMAIL", "").strip()
             if contact:
                 message = message.replace(contact, "[REDACTED]")
-            errors[name] = message[:1000]
-            print(f"{name} failed: {errors[name]}", file=sys.stderr)
+            message = message[:1000]
+            source_health[key] = {
+                "status": "error",
+                "last_attempt_utc": now.isoformat(),
+                "message": message,
+            }
+            if optional and policy.get("silent_errors", True):
+                optional_errors[name] = message
+                print(
+                    f"Optional source {name} unavailable: {message}",
+                    file=sys.stderr,
+                )
+            else:
+                errors[name] = message
+                print(f"{name} failed: {message}", file=sys.stderr)
+        finally:
+            if policy.get("once_per_day", False):
+                source_attempt_dates[key] = today.isoformat()
 
     unique = deduplicate(papers)
     screened = [match for paper in unique if (match := screen(paper, config))]
     screened.sort(
         key=lambda match: (
-            match.priority != "High", -match.score, match.paper.title.lower()
+            match.priority != "High",
+            -match.score,
+            match.paper.title.lower(),
         )
     )
     seen = state.setdefault("seen", {})
     recent_new = [
         match for match in screened if _is_unseen(match, seen)
-    ][:int(config["max_alerts"])]
+    ][: int(config["max_alerts"])]
 
     selected = recent_new
     selection_mode = "new" if selected else "none"
@@ -326,7 +445,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     fallback_settings = config.get("historical_fallback", {})
     fallback_enabled = bool(fallback_settings.get("enabled", True))
     if (
-        counts and not selected and fallback_enabled
+        mandatory_successes > 0
+        and not selected
+        and fallback_enabled
         and should_use_historical_fallback(state, today)
     ):
         historical_start = dt.date(historical_start_year, 1, 1)
@@ -336,7 +457,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         errors.update(historical_errors)
         historical_unique = deduplicate(historical_papers)
         historical_screened = [
-            match for paper in historical_unique
+            match
+            for paper in historical_unique
             if (match := screen(paper, config))
         ]
         selected = choose_historical(
@@ -372,11 +494,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     owner = os.getenv("GITHUB_REPOSITORY_OWNER", "")
     can_notify = bool(token and repository and owner and not args.no_notify)
 
-    if not counts:
-        title = f"[母集団PK × AI] 全データソースの取得に失敗 — {today}"
+    if mandatory_successes == 0:
+        title = f"[母集団PK × AI] 主要データソースの取得に失敗 — {today}"
         if can_notify:
-            create_issue(title, f"@{owner}\n\n{body}", "", token, repository, owner)
-        raise MonitorError("All enabled recent-literature sources failed")
+            create_issue(
+                title,
+                f"@{owner}\n\n{body}",
+                "",
+                token,
+                repository,
+                owner,
+            )
+        raise MonitorError("All enabled mandatory literature sources failed")
 
     if selected:
         digest = fingerprint(selected)
@@ -395,7 +524,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             issue_body = f"{marker}\n\n@{owner}\n\n{body}"
             print(
                 "Issue:",
-                create_issue(title, issue_body, marker, token, repository, owner),
+                create_issue(
+                    title,
+                    issue_body,
+                    marker,
+                    token,
+                    repository,
+                    owner,
+                ),
             )
         else:
             print(
@@ -417,12 +553,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         state["last_selection_date_jst"] = today.isoformat()
     cutoff = now - dt.timedelta(days=int(config["state_retention_days"]))
     state["seen"] = {
-        key: value for key, value in seen.items()
+        key: value
+        for key, value in seen.items()
         if not value.get("notified_at")
         or dt.datetime.fromisoformat(
             value["notified_at"].replace("Z", "+00:00")
-        ) >= cutoff
+        )
+        >= cutoff
     }
+    if optional_errors:
+        state["last_optional_source_errors"] = {
+            name: {"message": message, "at_utc": stamp}
+            for name, message in optional_errors.items()
+        }
+    else:
+        state.pop("last_optional_source_errors", None)
     if errors:
         state["last_partial_utc"] = stamp
         state.pop("last_success_utc", None)
@@ -433,7 +578,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     print(
         f"Report: {archive}; retrieved {len(papers)}, unique {len(unique)}, "
         f"screened {len(screened)}, recent_new {len(recent_new)}, "
-        f"selected {len(selected)} ({selection_mode})"
+        f"selected {len(selected)} ({selection_mode}), "
+        f"optional_errors {len(optional_errors)}"
     )
     return 0
 
