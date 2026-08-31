@@ -1,11 +1,18 @@
 {
-  "last_success_utc": "2026-08-29T23:50:24.597124+00:00",
+  "last_partial_utc": "2026-08-31T00:09:01.329370+00:00",
+  "last_selection_date_jst": "2026-08-31",
   "schema_version": 1,
   "seen": {
     "doi:10.1016/j.jiac.2026.103058": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.64898/2026.05.30.26354512": {
+      "doi": "10.64898/2026.05.30.26354512",
+      "notified_at": "2026-08-31T00:09:01.329370+00:00",
+      "selection_type": "historical",
+      "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model"
     },
     "doi:10.64898/2026.08.25.26361215": {
       "doi": "10.64898/2026.08.25.26361215",
@@ -22,10 +29,22 @@
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
     },
+    "source:europe pmc:ppr:ppr1244176": {
+      "doi": "10.64898/2026.05.30.26354512",
+      "notified_at": "2026-08-31T00:09:01.329370+00:00",
+      "selection_type": "historical",
+      "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model"
+    },
     "title:9a33003f9f24e27860ff548c": {
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "title:d2a7662c504dab804f6756e1": {
+      "doi": "10.64898/2026.05.30.26354512",
+      "notified_at": "2026-08-31T00:09:01.329370+00:00",
+      "selection_type": "historical",
+      "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model"
     },
     "title:f24f43e98f6f0b03fac53eee": {
       "doi": "10.1016/j.jiac.2026.103058",
