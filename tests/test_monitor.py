@@ -6,10 +6,23 @@ from pathlib import Path
 
 from src.insights import ResearchInsight, heuristic_insight, parse_insight_json
 from src.literature_monitor import (
-    JST, Match, Paper, already_succeeded_today, choose_historical, deduplicate,
-    fingerprint, normalize_doi, normalize_title, render_report, screen,
-    should_use_historical_fallback, write_reports,
+    JST,
+    Match,
+    Paper,
+    already_succeeded_today,
+    choose_historical,
+    deduplicate,
+    fingerprint,
+    normalize_doi,
+    normalize_title,
+    render_report,
+    screen,
+    should_attempt_source,
+    should_use_historical_fallback,
+    source_is_optional,
+    write_reports,
 )
+from src.sources import build_arxiv_search_query
 
 
 class MonitorTests(unittest.TestCase):
@@ -19,7 +32,8 @@ class MonitorTests(unittest.TestCase):
 
     def test_methodology_paper_is_selected(self):
         paper = Paper(
-            ["x"], ["1"],
+            ["x"],
+            ["1"],
             "Federated learning framework for population pharmacokinetic estimation",
             abstract=(
                 "We propose a distributed optimization algorithm for "
@@ -30,7 +44,8 @@ class MonitorTests(unittest.TestCase):
 
     def test_routine_application_is_excluded(self):
         paper = Paper(
-            ["x"], ["1"],
+            ["x"],
+            ["1"],
             "Machine learning population pharmacokinetic model of vancomycin",
             abstract="A retrospective drug-specific clinical application.",
         )
@@ -38,7 +53,8 @@ class MonitorTests(unittest.TestCase):
 
     def test_review_is_excluded(self):
         paper = Paper(
-            ["x"], ["1"],
+            ["x"],
+            ["1"],
             "Review of machine learning methods in population pharmacokinetics",
             abstract="A review of algorithms.",
             publication_type="review",
@@ -48,8 +64,11 @@ class MonitorTests(unittest.TestCase):
     def test_doi_deduplication(self):
         a = Paper(["Europe PMC"], ["MED:1"], "One title", doi="10.1/ABC")
         b = Paper(
-            ["Crossref"], ["10.1/abc"], "One title",
-            doi="https://doi.org/10.1/abc", abstract="Long abstract",
+            ["Crossref"],
+            ["10.1/abc"],
+            "One title",
+            doi="https://doi.org/10.1/abc",
+            abstract="Long abstract",
         )
         result = deduplicate([a, b])
         self.assertEqual(len(result), 1)
@@ -71,13 +90,41 @@ class MonitorTests(unittest.TestCase):
 
     def test_fallback_uses_japan_date(self):
         state = {"last_success_utc": "2026-08-28T22:10:00+00:00"}
+        self.assertTrue(already_succeeded_today(state, dt.date(2026, 8, 29)))
+
+    def test_arxiv_query_is_narrow_and_date_filtered(self):
+        query = build_arxiv_search_query(
+            self.config, dt.date(2026, 8, 20), dt.date(2026, 8, 29)
+        )
+        self.assertIn('all:"population pharmacokinetic"', query)
+        self.assertIn('all:"machine learning"', query)
+        self.assertIn("submittedDate:[202608200000 TO 202608292359]", query)
+        self.assertIn(" AND ", query)
+
+    def test_arxiv_is_optional_and_silent(self):
+        policy = self.config["source_policies"]["arxiv"]
+        self.assertTrue(source_is_optional(self.config, "arxiv"))
+        self.assertTrue(policy["silent_errors"])
+        self.assertTrue(policy["once_per_day"])
+        self.assertFalse(source_is_optional(self.config, "crossref"))
+
+    def test_arxiv_is_attempted_at_most_once_per_day(self):
+        today = dt.date(2026, 8, 29)
         self.assertTrue(
-            already_succeeded_today(state, dt.date(2026, 8, 29))
+            should_attempt_source({}, self.config, "arxiv", today)
+        )
+        state = {"source_attempt_dates": {"arxiv": "2026-08-29"}}
+        self.assertFalse(
+            should_attempt_source(state, self.config, "arxiv", today)
+        )
+        self.assertTrue(
+            should_attempt_source(state, self.config, "crossref", today)
         )
 
     def test_model_selection_insight_is_specific(self):
         paper = Paper(
-            ["Europe PMC"], ["MED:1"],
+            ["Europe PMC"],
+            ["MED:1"],
             "Development and validation of machine learning model for "
             "selecting the optimal population pharmacokinetic model",
             abstract=(
@@ -87,7 +134,9 @@ class MonitorTests(unittest.TestCase):
             ),
         )
         match = Match(
-            paper, 10, "High",
+            paper,
+            10,
+            "High",
             ["population pharmacokinetic"],
             ["machine learning"],
             ["model selection"],
@@ -112,22 +161,37 @@ class MonitorTests(unittest.TestCase):
 
     def test_report_contains_research_positioning(self):
         paper = Paper(
-            ["x"], ["1"], "A methodology paper",
-            authors=["A Author"], venue="Journal", date="2026-08-28",
-            doi="10.1/a", abstract="An abstract.",
+            ["x"],
+            ["1"],
+            "A methodology paper",
+            authors=["A Author"],
+            venue="Journal",
+            date="2026-08-28",
+            doi="10.1/a",
+            abstract="An abstract.",
         )
         match = Match(
-            paper, 10, "High",
-            ["population pharmacokinetic"], ["machine learning"], ["framework"],
+            paper,
+            10,
+            "High",
+            ["population pharmacokinetic"],
+            ["machine learning"],
+            ["framework"],
         )
         insight = ResearchInsight(
-            "従来の課題。", "今回の方法。", "新たに可能になったこと。",
-            "研究上の意義。", "test",
+            "従来の課題。",
+            "今回の方法。",
+            "新たに可能になったこと。",
+            "研究上の意義。",
+            "test",
         )
         body = render_report(
-            [match], {paper.title_key(): insight},
+            [match],
+            {paper.title_key(): insight},
             dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc),
-            {"Crossref": 1}, {}, selection_mode="new",
+            {"Crossref": 1},
+            {},
+            selection_mode="new",
         )
         self.assertIn("### 研究の位置づけ（抄録ベース）", body)
         self.assertIn("**従来の課題:** 従来の課題。", body)
@@ -138,10 +202,17 @@ class MonitorTests(unittest.TestCase):
     def test_historical_selection_excludes_old_and_seen_papers(self):
         old = Paper(["x"], ["old"], "Old", date="2019-12-31")
         seen_paper = Paper(
-            ["x"], ["seen"], "Seen", date="2022-01-01", doi="10.1/seen"
+            ["x"],
+            ["seen"],
+            "Seen",
+            date="2022-01-01",
+            doi="10.1/seen",
         )
         candidate = Paper(
-            ["x"], ["candidate"], "Candidate", date="2021-05-01",
+            ["x"],
+            ["candidate"],
+            "Candidate",
+            date="2021-05-01",
             doi="10.1/candidate",
         )
         matches = [
@@ -149,38 +220,62 @@ class MonitorTests(unittest.TestCase):
             Match(seen_paper, 20, "High", [], [], []),
             Match(candidate, 10, "Medium", [], [], []),
         ]
-        seen = {seen_paper.keys()[0]: {"notified_at": "2026-01-01T00:00:00Z"}}
+        seen = {
+            seen_paper.keys()[0]: {"notified_at": "2026-01-01T00:00:00Z"}
+        }
         selected = choose_historical(
-            matches, seen, dt.date(2020, 1, 1), dt.date(2026, 8, 29), 1
+            matches,
+            seen,
+            dt.date(2020, 1, 1),
+            dt.date(2026, 8, 29),
+            1,
         )
         self.assertEqual([item.paper.title for item in selected], ["Candidate"])
 
     def test_historical_fallback_runs_only_once_per_day(self):
         today = dt.date(2026, 8, 29)
         self.assertTrue(should_use_historical_fallback({}, today))
-        self.assertFalse(should_use_historical_fallback(
-            {"last_selection_date_jst": "2026-08-29"}, today
-        ))
+        self.assertFalse(
+            should_use_historical_fallback(
+                {"last_selection_date_jst": "2026-08-29"}, today
+            )
+        )
 
     def test_historical_report_is_clearly_labeled(self):
         paper = Paper(
-            ["x"], ["1"], "Historical methodology paper",
-            authors=["A Author"], venue="Journal", date="2021-04-01",
-            doi="10.1/historical", abstract="An abstract.",
+            ["x"],
+            ["1"],
+            "Historical methodology paper",
+            authors=["A Author"],
+            venue="Journal",
+            date="2021-04-01",
+            doi="10.1/historical",
+            abstract="An abstract.",
         )
         match = Match(
-            paper, 10, "High",
-            ["population pharmacokinetic"], ["machine learning"], ["framework"],
+            paper,
+            10,
+            "High",
+            ["population pharmacokinetic"],
+            ["machine learning"],
+            ["framework"],
         )
         insight = ResearchInsight(
-            "従来の課題。", "今回の方法。", "新たに可能になったこと。",
-            "研究上の意義。", "test",
+            "従来の課題。",
+            "今回の方法。",
+            "新たに可能になったこと。",
+            "研究上の意義。",
+            "test",
         )
         body = render_report(
-            [match], {paper.title_key(): insight},
+            [match],
+            {paper.title_key(): insight},
             dt.datetime(2026, 8, 29, 0, tzinfo=dt.timezone.utc),
-            {"Crossref": 1}, {}, selection_mode="historical",
-            historical_counts={"Crossref": 100}, historical_start_year=2020,
+            {"Crossref": 1},
+            {},
+            selection_mode="historical",
+            historical_counts={"Crossref": 100},
+            historical_start_year=2020,
         )
         self.assertIn("新着採択: **0件**", body)
         self.assertIn("過去論文の紹介: **1件**", body)
@@ -193,10 +288,14 @@ class MonitorTests(unittest.TestCase):
             alert_body = "新着採択: **1件**\n\n論文A"
             empty_body = "新着採択: **0件**\n\n新着なし"
             write_reports(directory, alert_body, now, 1)
-            write_reports(directory, empty_body, now + dt.timedelta(minutes=20), 0)
+            write_reports(
+                directory, empty_body, now + dt.timedelta(minutes=20), 0
+            )
             archive = directory / "2026-08-28.md"
             self.assertEqual(archive.read_text(), alert_body)
-            self.assertEqual((directory / "latest.md").read_text(), alert_body)
+            self.assertEqual(
+                (directory / "latest.md").read_text(), alert_body
+            )
 
     def test_later_new_alert_is_appended(self):
         now = dt.datetime(2026, 8, 28, 0, tzinfo=dt.timezone.utc)
@@ -205,7 +304,9 @@ class MonitorTests(unittest.TestCase):
             first = "新着採択: **1件**\n\n論文A"
             second = "新着採択: **1件**\n\n論文B"
             write_reports(directory, first, now, 1)
-            write_reports(directory, second, now + dt.timedelta(minutes=20), 1)
+            write_reports(
+                directory, second, now + dt.timedelta(minutes=20), 1
+            )
             combined = (directory / "2026-08-28.md").read_text()
             self.assertIn("論文A", combined)
             self.assertIn("論文B", combined)
