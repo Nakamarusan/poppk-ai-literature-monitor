@@ -1,6 +1,6 @@
 {
-  "last_partial_utc": "2026-08-31T00:09:01.329370+00:00",
   "last_selection_date_jst": "2026-08-31",
+  "last_success_utc": "2026-08-31T00:37:17.977808+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1016/j.jiac.2026.103058": {
@@ -50,6 +50,26 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    }
+  },
+  "source_attempt_dates": {
+    "arxiv": "2026-08-31"
+  },
+  "source_health": {
+    "arxiv": {
+      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "records": 0,
+      "status": "ok"
+    },
+    "crossref": {
+      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "records": 2700,
+      "status": "ok"
+    },
+    "europe_pmc": {
+      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "records": 33,
+      "status": "ok"
     }
   }
 }
