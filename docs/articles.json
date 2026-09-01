@@ -46,7 +46,7 @@
           "automated"
         ]
       },
-      "abstract": "Abstract Objective: Conventional pharmacodynamic (PD) modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility.",
+      "abstract": "Abstract Objective: Conventional pharmacodynamic (PD) modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility. This study aims to develop PD Union, a unified, automated, and interpretable framework for mechanistic PD modeling. Methods: PD Union is built upon a unified continuous dynamical skeleton that organizes absorption and systemic exposure module, the receptor module, the drug input module, the first delay module, the primary pharmacodynamic function module, the primary pharmacodynamic state module, the downstream pharmacodyna…",
       "source": "Europe PMC"
     },
     {
@@ -90,7 +90,7 @@
           "architecture"
         ]
       },
-      "abstract": "Introduction The sharing of individual patient data is essential for advancing pharmacometrics but is strictly limited by privacy regulations (e.g., GDPR). While synthetic data generation offers a legally compliant alternative, its structural impact on complex nonlinear mixed-effects (NLME) modelling remains largely unexplored.",
+      "abstract": "Introduction The sharing of individual patient data is essential for advancing pharmacometrics but is strictly limited by privacy regulations (e.g., GDPR). While synthetic data generation offers a legally compliant alternative, its structural impact on complex nonlinear mixed-effects (NLME) modelling remains largely unexplored. This study aimed to benchmark five generative artificial intelligence algorithms by evaluating the balance between data privacy and the preservation of structural PK properties and clinical dosing guidance. Material & methods A daptomycin two-compartment PopPK model was used to simulate a reference cohort of 500 patients. Five generative algorithms (Modified AVATAR, G…",
       "source": "Europe PMC"
     },
     {
@@ -124,7 +124,7 @@
           "framework"
         ]
       },
-      "abstract": "mRNA-based therapeutics have emerged as a transformative class of medicines, yet their translation beyond infectious disease vaccines remains challenged by the absence of an integrated pharmacological framework accounting for the tri-component nature of these therapies.",
+      "abstract": "mRNA-based therapeutics have emerged as a transformative class of medicines, yet their translation beyond infectious disease vaccines remains challenged by the absence of an integrated pharmacological framework accounting for the tri-component nature of these therapies - the lipid nanoparticle, the mRNA, and the expressed protein. Here, we present a modular, multiscale computational platform integrating two complementary mechanistic models covering the full pharmacological cascade of mRNA-based immunotherapies. The first is a Quantitative Systems Pharmacology (QSP) model describing the immunological response to mRNA vaccines, from antigen expression in antigen-presenting cells through B cell…",
       "source": "Crossref"
     },
     {
