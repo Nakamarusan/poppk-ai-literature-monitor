@@ -1,12 +1,18 @@
 {
-  "last_selection_date_jst": "2026-08-31",
-  "last_success_utc": "2026-08-31T00:37:17.977808+00:00",
+  "last_selection_date_jst": "2026-09-01",
+  "last_success_utc": "2026-09-01T00:56:28.340578+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1016/j.jiac.2026.103058": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.64898/2026.05.05.26352278": {
+      "doi": "10.64898/2026.05.05.26352278",
+      "notified_at": "2026-09-01T00:56:28.340578+00:00",
+      "selection_type": "historical",
+      "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
     },
     "doi:10.64898/2026.05.30.26354512": {
       "doi": "10.64898/2026.05.30.26354512",
@@ -35,6 +41,18 @@
       "selection_type": "historical",
       "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model"
     },
+    "source:europe pmc:ppr:ppr1265248": {
+      "doi": "10.64898/2026.05.05.26352278",
+      "notified_at": "2026-09-01T00:56:28.340578+00:00",
+      "selection_type": "historical",
+      "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
+    },
+    "title:866e560f6e23d545f013fcfd": {
+      "doi": "10.64898/2026.05.05.26352278",
+      "notified_at": "2026-09-01T00:56:28.340578+00:00",
+      "selection_type": "historical",
+      "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
+    },
     "title:9a33003f9f24e27860ff548c": {
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
@@ -53,21 +71,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-08-31"
+    "arxiv": "2026-09-01"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "last_attempt_utc": "2026-09-01T00:56:28.340578+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "last_attempt_utc": "2026-09-01T00:56:28.340578+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-08-31T00:37:17.977808+00:00",
+      "last_attempt_utc": "2026-09-01T00:56:28.340578+00:00",
       "records": 33,
       "status": "ok"
     }
