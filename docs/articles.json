@@ -1,13 +1,53 @@
 {
   "schema_version": 1,
-  "last_scan_at": "2026-09-01 09:56 JST",
-  "article_count": 4,
+  "last_scan_at": "2026-09-02 08:44 JST",
+  "article_count": 5,
   "new_count": 2,
-  "historical_count": 2,
+  "historical_count": 3,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "id": "doi:10.1002/psp4.70285",
+      "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression.",
+      "url": "https://europepmc.org/article/MED/42338400",
+      "authors": "Bräm DS, Steiert B, Steffens B, Pfister M, Koch G",
+      "venue": "Europe PMC",
+      "publication_date": "2026-07-01",
+      "doi": "10.1002/psp4.70285",
+      "selection_type": "historical",
+      "report_date": "2026-09-02",
+      "reported_at": "2026-09-02 08:44 JST",
+      "priority": "High",
+      "score": 15,
+      "insights": {
+        "prior_limitation": "複数の既存PopPKモデルから、患者ごとに適切なモデルを選ぶ客観的基準が不足していた。",
+        "contribution": "臨床変数と予測誤差を用い、機械学習で適切なPopPKモデルを選択する手順を構築・検証した。",
+        "new_capability": "初回投与時から、患者ごとに予測誤差が小さいと見込まれるモデルを選べるようになる。",
+        "significance": "固定した単一モデルへの依存を減らし、モデル選択自体を個別化投与設計の一部として扱える。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "pharmacometrics",
+          "pharmacometric"
+        ],
+        "ai": [
+          "machine learning",
+          "artificial intelligence",
+          "neural ordinary differential equation",
+          "neural ode"
+        ],
+        "method": [
+          "algorithm",
+          "model selection",
+          "automated"
+        ]
+      },
+      "abstract": "Current pharmacometrics (PMX) model development is a manual process with iterative model building, fitting, and evaluation, which can be resource-intensive and time-consuming. Existing automated model development approaches utilize algorithms that still rely on iterative processes and perform model selection based on goodness-of-fit criteria. Recent advances in machine learning and artificial intelligence, particularly neural ordinary differential equations (NODEs), have demonstrated strong potential for characterizing complex pharmacokinetic (PK) and pharmacodynamic (PD) dynamics directly from data. However, NODEs are inherently black-box models, which limits their interpretability and thei…",
+      "source": "Europe PMC"
+    },
     {
       "id": "doi:10.64898/2026.05.05.26352278",
       "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance",
