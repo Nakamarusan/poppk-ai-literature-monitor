@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "last_scan_at": "2026-09-01 09:56 JST",
+  "article_count": 4,
+  "new_count": 2,
+  "historical_count": 2,
+  "years": [
+    "2026"
+  ],
+  "articles": [
+    {
+      "id": "doi:10.64898/2026.05.05.26352278",
+      "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance",
+      "url": "https://europepmc.org/article/PPR/PPR1265248",
+      "authors": "Du s, Liu D",
+      "venue": "Europe PMC",
+      "publication_date": "2026-05-06",
+      "doi": "10.64898/2026.05.05.26352278",
+      "selection_type": "historical",
+      "report_date": "2026-09-01",
+      "reported_at": "2026-09-01 09:56 JST",
+      "priority": "High",
+      "score": 16,
+      "insights": {
+        "prior_limitation": "複数の既存PopPKモデルから、患者ごとに適切なモデルを選ぶ客観的基準が不足していた。",
+        "contribution": "臨床変数と予測誤差を用い、機械学習で適切なPopPKモデルを選択する手順を構築・検証した。",
+        "new_capability": "初回投与時から、患者ごとに予測誤差が小さいと見込まれるモデルを選べるようになる。",
+        "significance": "固定した単一モデルへの依存を減らし、モデル選択自体を個別化投与設計の一部として扱える。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "population pharmacokinetic",
+          "population pharmacokinetics",
+          "population pk/pd"
+        ],
+        "ai": [
+          "machine learning"
+        ],
+        "method": [
+          "framework",
+          "optimization",
+          "benchmark",
+          "model selection",
+          "workflow",
+          "automated"
+        ]
+      },
+      "abstract": "Abstract Objective: Conventional pharmacodynamic (PD) modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility.",
+      "source": "Europe PMC"
+    },
+    {
+      "id": "doi:10.64898/2026.05.30.26354512",
+      "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model",
+      "url": "https://europepmc.org/article/PPR/PPR1244176",
+      "authors": "Destere A, Lombardi R, Labriffe M, Benoist C, Marquet P, Lavrut T, Gérard A, Bouveyron C, et al.",
+      "venue": "Europe PMC",
+      "publication_date": "2026-06-02",
+      "doi": "10.64898/2026.05.30.26354512",
+      "selection_type": "historical",
+      "report_date": "2026-08-31",
+      "reported_at": "2026-08-31 09:09 JST",
+      "priority": "High",
+      "score": 21,
+      "insights": {
+        "prior_limitation": "多施設データの統合では、個人情報保護と解析精度を同時に確保することが難しかった。",
+        "contribution": "プライバシー保護技術をPopPK・ファーマコメトリクス解析へ組み込む方法を提示した。",
+        "new_capability": "患者情報の漏えいリスクを抑えながら、施設横断的な解析を実施できる可能性が生じる。",
+        "significance": "データ利用の制約を守りつつ、より大きく多様な集団からモデルを構築できる点に意義がある。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "population pharmacokinetic",
+          "pop[- ]?pk",
+          "pharmacometrics",
+          "pharmacometric",
+          "nonlinear mixed-effects",
+          "nlme"
+        ],
+        "ai": [
+          "privacy-preserving",
+          "artificial intelligence",
+          "deep learning"
+        ],
+        "method": [
+          "framework",
+          "algorithm",
+          "benchmark",
+          "architecture"
+        ]
+      },
+      "abstract": "Introduction The sharing of individual patient data is essential for advancing pharmacometrics but is strictly limited by privacy regulations (e.g., GDPR). While synthetic data generation offers a legally compliant alternative, its structural impact on complex nonlinear mixed-effects (NLME) modelling remains largely unexplored.",
+      "source": "Europe PMC"
+    },
+    {
+      "id": "doi:10.64898/2026.08.25.26361215",
+      "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies",
+      "url": "https://doi.org/10.64898/2026.08.25.26361215",
+      "authors": "Elisa Pettinà, Frederick Abi Chahine, Elio Campanile, Stefano Giampiccolo, Luca Marchetti",
+      "venue": "Crossref",
+      "publication_date": "2026-08-28",
+      "doi": "10.64898/2026.08.25.26361215",
+      "selection_type": "new",
+      "report_date": "2026-08-29",
+      "reported_at": "2026-08-29 12:26 JST",
+      "priority": "Medium",
+      "score": 3,
+      "insights": {
+        "prior_limitation": "従来法では、複雑な患者差や非線形関係を一貫して解析へ取り込むことが難しかった。",
+        "contribution": "PopPK・ファーマコメトリクスにAI手法を組み込む方法を提示し、その性能を評価した。",
+        "new_capability": "従来の固定的または手作業中心の解析を、データ駆動で補助・自動化できる可能性が生じる。",
+        "significance": "モデル構築・予測・意思決定のいずれかを再現可能かつ効率的にする点に意義がある。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "quantitative systems pharmacology"
+        ],
+        "ai": [
+          "machine learning"
+        ],
+        "method": [
+          "framework"
+        ]
+      },
+      "abstract": "mRNA-based therapeutics have emerged as a transformative class of medicines, yet their translation beyond infectious disease vaccines remains challenged by the absence of an integrated pharmacological framework accounting for the tri-component nature of these therapies.",
+      "source": "Crossref"
+    },
+    {
+      "id": "doi:10.1016/j.jiac.2026.103058",
+      "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin.",
+      "url": "https://europepmc.org/article/MED/42648633",
+      "authors": "Akamatsu H, Kodama Y, Terai A, Imamura M, Oda K, Jono H, Ohyama K",
+      "venue": "Europe PMC",
+      "publication_date": "2026-08-26",
+      "doi": "10.1016/j.jiac.2026.103058",
+      "selection_type": "new",
+      "report_date": "2026-08-28",
+      "reported_at": "2026-08-28 19:06 JST",
+      "priority": "High",
+      "score": 10,
+      "insights": {
+        "prior_limitation": "複数の既存PopPKモデルから、患者ごとに適切なモデルを選ぶ客観的基準が不足していた。",
+        "contribution": "臨床変数と予測誤差を用い、機械学習で適切なPopPKモデルを選択する手順を構築・検証した。",
+        "new_capability": "初回投与時から、患者ごとに予測誤差が小さいと見込まれるモデルを選べるようになる。",
+        "significance": "固定した単一モデルへの依存を減らし、モデル選択自体を個別化投与設計の一部として扱える。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "population pharmacokinetic",
+          "pop[- ]?pk"
+        ],
+        "ai": [
+          "machine learning"
+        ],
+        "method": [
+          "algorithm",
+          "model selection",
+          "software"
+        ]
+      },
+      "abstract": "Therapeutic drug monitoring (TDM) of vancomycin is recommended based on the area under the concentration-time curve (AUC). The Practical Antimicrobial TDM (PAT) software incorporates two population pharmacokinetic (popPK) models developed by Oda et al. and Yasuhara et al.; however, no objective criteria for model selection have been established. This study aimed to develop and validate a machine learning (ML) model to optimize popPK model selection for initial vancomycin dosing. The primary outcome was comparison of the two models to identify which yielded a lower absolute relative prediction error for AUC in each patient. Thirty-three clinical variables were screened using Lasso regression …",
+      "source": "Europe PMC"
+    }
+  ]
+}
