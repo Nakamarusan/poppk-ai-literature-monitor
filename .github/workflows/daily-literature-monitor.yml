@@ -65,18 +65,21 @@ jobs:
           SKIP_IF_SUCCESS_TODAY: ${{ github.event_name == 'schedule' && github.event.schedule == '20 7 * * *' && 'true' || 'false' }}
         run: python -m src.literature_monitor
 
-      - name: Commit state and reports
-        if: ${{ github.event_name != 'push' && always() && steps.checkout.outcome == 'success' }}
+      - name: Build HTML dashboard data
+        run: python -m src.site_generator
+
+      - name: Commit state, reports, and dashboard data
+        if: ${{ always() && steps.checkout.outcome == 'success' }}
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- state reports)" ]; then
-            echo "No state or report changes."
+          if [ -z "$(git status --porcelain -- state reports docs)" ]; then
+            echo "No state, report, or dashboard changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state reports
-          git commit -m "Update daily literature-monitor state"
+          git add state reports docs
+          git commit -m "Update literature monitor outputs"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main
