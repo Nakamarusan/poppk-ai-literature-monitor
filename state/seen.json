@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-02",
-  "last_success_utc": "2026-09-01T23:44:02.778982+00:00",
+  "last_selection_date_jst": "2026-09-03",
+  "last_success_utc": "2026-09-02T23:46:45.286041+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -13,6 +13,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.3390/pharmaceutics18040501": {
+      "doi": "10.3390/pharmaceutics18040501",
+      "notified_at": "2026-09-02T23:46:45.286041+00:00",
+      "selection_type": "historical",
+      "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
     },
     "doi:10.64898/2026.05.05.26352278": {
       "doi": "10.64898/2026.05.05.26352278",
@@ -35,6 +41,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:europe pmc:med:42076151": {
+      "doi": "10.3390/pharmaceutics18040501",
+      "notified_at": "2026-09-02T23:46:45.286041+00:00",
+      "selection_type": "historical",
+      "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
     },
     "source:europe pmc:med:42338400": {
       "doi": "10.1002/psp4.70285",
@@ -82,6 +94,12 @@
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
     },
+    "title:ea6bb6a4bf42c674d6856f1c": {
+      "doi": "10.3390/pharmaceutics18040501",
+      "notified_at": "2026-09-02T23:46:45.286041+00:00",
+      "selection_type": "historical",
+      "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
+    },
     "title:f24f43e98f6f0b03fac53eee": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
@@ -89,22 +107,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-02"
+    "arxiv": "2026-09-03"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-01T23:44:02.778982+00:00",
+      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-01T23:44:02.778982+00:00",
+      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-01T23:44:02.778982+00:00",
-      "records": 30,
+      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
+      "records": 36,
       "status": "ok"
     }
   }

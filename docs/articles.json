@@ -1,13 +1,53 @@
 {
   "schema_version": 1,
-  "last_scan_at": "2026-09-02 08:44 JST",
-  "article_count": 5,
+  "last_scan_at": "2026-09-03 08:46 JST",
+  "article_count": 6,
   "new_count": 2,
-  "historical_count": 3,
+  "historical_count": 4,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "id": "doi:10.3390/pharmaceutics18040501",
+      "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking.",
+      "url": "https://europepmc.org/article/MED/42076151",
+      "authors": "Kwack H, Kong H, Lim J, Zhang BT, Hahn J, Chang MJ",
+      "venue": "Europe PMC",
+      "publication_date": "2026-04-18",
+      "doi": "10.3390/pharmaceutics18040501",
+      "selection_type": "historical",
+      "report_date": "2026-09-03",
+      "reported_at": "2026-09-03 08:46 JST",
+      "priority": "High",
+      "score": 15,
+      "insights": {
+        "prior_limitation": "複雑なAI・PopPKモデルを、共通条件で比較し妥当性を判断する評価枠組みが不足していた。",
+        "contribution": "再現可能な評価指標またはベンチマークを用いて、モデル性能を比較する方法を提示した。",
+        "new_capability": "異なるモデルの長所と限界を同じ基準で確認し、用途に応じて選択できるようになる。",
+        "significance": "予測精度だけに依存せず、一般化性能や実装可能性を含めて方法を評価できる点に意義がある。",
+        "source": "ルールベース（抄録・キーワード）／根拠文あり"
+      },
+      "terms": {
+        "pk": [
+          "population pharmacokinetic",
+          "pop[- ]?pk",
+          "pharmacometrics",
+          "pharmacometric"
+        ],
+        "ai": [
+          "large language model"
+        ],
+        "method": [
+          "optimization",
+          "benchmark",
+          "workflow",
+          "automated"
+        ]
+      },
+      "abstract": "Background/Objectives: Population pharmacokinetic (PopPK) modeling in NONMEM requires iterative, expertise-dependent workflows. Naïve zero-shot prompting of general-purpose large language models (LLMs) typically produces NONMEM code that fails to execute. This study introduces PKGPT, a recursive agentic LLM system designed to automate NONMEM-based PopPK model development and benchmarks its performance against human expert models. Methods: PKGPT, powered by Google's Gemini 3.0 Flash, embeds pharmacometrics expertise into phase-specific expert-agent prompts orchestrated across five sequential phases: base model establishment, structural diagnostics, overfitting reduction, random-effects optimi…",
+      "source": "Europe PMC"
+    },
     {
       "id": "doi:10.1002/psp4.70285",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression.",
