@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Abstract-only monitoring of PopPK and AI methodology literature">
+  <meta name="description" content="An abstract-only index of methodology papers at the intersection of population pharmacokinetics, pharmacometrics, and AI.">
   <meta name="theme-color" content="#0d0907">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PopPK × AI Methodology Atlas">
+  <meta property="og:description" content="Daily, abstract-only monitoring of PopPK and AI methodology literature.">
+  <meta property="og:url" content="https://nakamarusan.github.io/poppk-ai-literature-monitor/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://nakamarusan.github.io/poppk-ai-literature-monitor/">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <title>PopPK × AI Methodology Atlas</title>
   <link rel="stylesheet" href="./assets/styles.css">
   <link rel="stylesheet" href="./assets/observatory.css">
@@ -15,7 +23,7 @@
 
   <header class="chiaroscuro-header">
     <nav class="site-nav shell" aria-label="Primary navigation">
-      <a class="brand" href="./" aria-label="Methodology Atlas home">
+      <a class="brand" href="./" aria-label="Methodology Atlas home" aria-current="page">
         <span class="brand-seal" aria-hidden="true">PK</span>
         <span class="brand-copy">
           <strong>Methodology Atlas</strong>
@@ -23,7 +31,7 @@
         </span>
       </a>
       <div class="nav-links">
-        <a class="active" href="./">Library</a>
+        <a class="active" href="./" aria-current="page">Library</a>
         <a href="./method.html">Method</a>
         <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
            target="_blank" rel="noopener noreferrer">Repository ↗</a>
@@ -40,8 +48,8 @@
         <p class="lead">
           A daily editorial index of methodological studies connecting
           population pharmacokinetics, pharmacometrics, and artificial
-          intelligence. The interface brings each study forward from a dark
-          field while keeping interpretation within the available abstract.
+          intelligence. Discovery uses titles and abstracts; interpretation is
+          restricted to the available abstract.
         </p>
         <div class="hero-actions">
           <a class="ink-button" href="#articles">Enter the library</a>
@@ -59,6 +67,10 @@
           <span>Study in motion</span>
           <p>Proportion, iteration, and connected evidence.</p>
         </div>
+        <button id="motionToggle" class="motion-toggle" type="button"
+                aria-pressed="false" aria-label="Pause or resume the geometric motion">
+          Pause motion
+        </button>
         <svg viewBox="0 0 560 560" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="traceGradient" x1="0" y1="0" x2="1" y2="1">
@@ -103,8 +115,8 @@
           </g>
         </svg>
         <figcaption>
-          An original geometric interface study in selective light. The slow
-          rotation represents observation, comparison, and revision.
+          An original geometric study in selective light. Its slow rotation
+          represents observation, comparison, and revision.
         </figcaption>
       </figure>
     </div>
@@ -183,7 +195,7 @@
       </section>
 
       <div class="result-bar">
-        <p id="resultCount" aria-live="polite">Loading the studies…</p>
+        <p id="resultCount" aria-live="polite" aria-atomic="true">Loading the studies…</p>
         <p><span class="status-dot" aria-hidden="true"></span>Abstract-only evidence</p>
       </div>
 
