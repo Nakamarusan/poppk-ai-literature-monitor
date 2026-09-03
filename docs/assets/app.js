@@ -1,22 +1,20 @@
-const state = {
-  articles: [],
-  filtered: [],
-};
+const catalog = { articles: [] };
 
-const elements = {
-  list: document.querySelector("#articles"),
-  empty: document.querySelector("#emptyState"),
-  error: document.querySelector("#errorState"),
-  count: document.querySelector("#resultCount"),
-  search: document.querySelector("#searchInput"),
-  type: document.querySelector("#typeFilter"),
-  year: document.querySelector("#yearFilter"),
-  sort: document.querySelector("#sortOrder"),
-  clear: document.querySelector("#clearFilters"),
-  statTotal: document.querySelector("#statTotal"),
-  statNew: document.querySelector("#statNew"),
-  statHistorical: document.querySelector("#statHistorical"),
-  statScan: document.querySelector("#statScan"),
+const $ = (selector) => document.querySelector(selector);
+const ui = {
+  list: $("#articles"),
+  empty: $("#emptyState"),
+  error: $("#errorState"),
+  count: $("#resultCount"),
+  search: $("#searchInput"),
+  type: $("#typeFilter"),
+  year: $("#yearFilter"),
+  sort: $("#sortOrder"),
+  clear: $("#clearFilters"),
+  total: $("#statTotal"),
+  newCount: $("#statNew"),
+  archiveCount: $("#statHistorical"),
+  scan: $("#statScan"),
 };
 
 const escapeHtml = (value) =>
@@ -34,43 +32,58 @@ const safeUrl = (value) =>
 const normalize = (value) =>
   String(value ?? "")
     .normalize("NFKC")
-    .toLocaleLowerCase("ja")
+    .toLocaleLowerCase("en")
     .replace(/\s+/g, " ")
     .trim();
 
-const parseDateValue = (value) => {
+const dateValue = (value) => {
   const time = Date.parse(value || "");
   return Number.isFinite(time) ? time : 0;
 };
 
 const displayDate = (value) => {
-  const time = parseDateValue(value);
-  if (!time) return value || "日付不明";
-  return new Intl.DateTimeFormat("ja-JP", {
+  const time = dateValue(value);
+  if (!time) return value || "Date unavailable";
+  return new Intl.DateTimeFormat("en", {
     year: "numeric",
     month: "short",
     day: "numeric",
   }).format(new Date(time));
 };
 
-const flattenTerms = (article) => [
-  ...(article.terms?.pk || []),
-  ...(article.terms?.ai || []),
-  ...(article.terms?.method || []),
-];
+const authors = (article) => {
+  if (Array.isArray(article.authors)) return article.authors.join(", ");
+  return article.authors || "Authors unavailable";
+};
 
-const searchText = (article) =>
+const score = (article) => {
+  const raw = article.score;
+  if (typeof raw === "number") {
+    return { total: raw, priority: "", components: {} };
+  }
+  return {
+    total: Number(raw?.total) || 0,
+    priority: raw?.priority || "",
+    components: raw?.components || {},
+  };
+};
+
+const terms = (article) => {
+  const groups = article.evidence?.terms || article.terms || {};
+  return ["pk", "ai", "method"].flatMap((group) => groups[group] || []);
+};
+
+const summary = (article) => article.summary || article.insights || {};
+
+const searchableText = (article) =>
   normalize([
     article.title,
-    article.authors,
+    authors(article),
     article.venue,
     article.doi,
     article.abstract,
-    article.insights?.prior_limitation,
-    article.insights?.contribution,
-    article.insights?.new_capability,
-    article.insights?.significance,
-    ...flattenTerms(article),
+    ...Object.values(summary(article)),
+    ...terms(article),
   ].join(" "));
 
 const articleYear = (article) => {
@@ -78,57 +91,68 @@ const articleYear = (article) => {
   return match ? match[0] : "";
 };
 
-const badgeForType = (type) =>
+const typeBadge = (type) =>
   type === "historical"
-    ? '<span class="badge badge-historical">2020+ archive</span>'
-    : '<span class="badge badge-new">New</span>';
+    ? '<span class="badge badge-historical">Archive selection</span>'
+    : '<span class="badge badge-new">New article</span>';
 
-const badgeForPriority = (priority) => {
-  if (!priority) return "";
-  const className = priority.toLowerCase() === "high"
-    ? "badge-high"
-    : "badge-medium";
-  return `<span class="badge ${className}">${escapeHtml(priority)}</span>`;
+const priorityBadge = (value) => {
+  if (!value) return "";
+  return `<span class="badge badge-${escapeHtml(value.toLowerCase())}">
+    ${escapeHtml(value)} relevance
+  </span>`;
 };
 
-const renderTags = (values) => {
-  const tags = [...new Set(values.filter(Boolean))].slice(0, 14);
-  if (!tags.length) return "<p>抽出語はありません。</p>";
-  return `<div class="tag-list">${tags
-    .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
+const tagList = (values) => {
+  const unique = [...new Set(values.filter(Boolean))].slice(0, 18);
+  if (!unique.length) return "<p>No matched terms.</p>";
+  return `<div class="tag-list">${unique
+    .map((value) => `<span class="tag">${escapeHtml(value)}</span>`)
     .join("")}</div>`;
 };
 
-const insightBlock = (number, title, value) => `
+const insight = (number, title, value) => `
   <section class="insight">
     <span class="insight-number">${number}</span>
     <h3>${escapeHtml(title)}</h3>
-    <p>${escapeHtml(value || "抄録では明示されていません。")}</p>
+    <p>${escapeHtml(value || "Not stated in the available abstract.")}</p>
   </section>
 `;
 
-const articleCard = (article) => {
+const scoreBreakdown = (components) => {
+  const labels = [
+    ["PK", components.pk],
+    ["AI", components.ai],
+    ["Method", components.method],
+    ["Intersection", components.intersection],
+  ];
+  return `<div class="score-breakdown">${labels
+    .map(([label, value]) =>
+      `<span>${escapeHtml(label)} ${Number(value) || 0}</span>`)
+    .join("")}</div>`;
+};
+
+const articleCard = (article, index) => {
+  const articleScore = score(article);
+  const articleSummary = summary(article);
   const sourceUrl = safeUrl(article.url);
+  const reported = article.reported_at || article.report_date || "Unknown";
+  const components = articleScore.components;
   const doi = article.doi
-    ? `<span class="doi">DOI: ${escapeHtml(article.doi)}</span>`
+    ? `<span class="doi">DOI ${escapeHtml(article.doi)}</span>`
     : "";
-  const scoreText = Number.isFinite(Number(article.score))
-    ? ` / score ${Number(article.score)}`
-    : "";
-  const typeLabel = article.selection_type === "historical"
-    ? "2020年以降の過去論文"
-    : "新着論文";
-  const reportLabel = article.reported_at || article.report_date || "";
-  const tags = flattenTerms(article);
-  const id = escapeHtml(article.id || article.title);
+  const sourceLabel = article.venue
+    || (Array.isArray(article.sources) ? article.sources.join(", ") : article.source)
+    || "Source unavailable";
 
   return `
-    <article class="paper-card" id="${id}">
+    <article class="paper-card" id="${escapeHtml(article.id || article.title)}">
+      <span class="folio-index">FOLIO ${String(index + 1).padStart(2, "0")}</span>
       <div class="paper-main">
         <div class="paper-topline">
-          ${badgeForType(article.selection_type)}
-          ${badgeForPriority(article.priority)}
-          <span class="reported-date">${escapeHtml(typeLabel)} · 紹介 ${escapeHtml(reportLabel)}</span>
+          ${typeBadge(article.selection_type)}
+          ${priorityBadge(articleScore.priority)}
+          <span class="reported-date">Indexed ${escapeHtml(reported)}</span>
         </div>
 
         <h2 class="paper-title">
@@ -138,117 +162,113 @@ const articleCard = (article) => {
         </h2>
 
         <p class="metadata">
-          <span>${escapeHtml(article.authors || "著者情報なし")}</span>
-          <span>${escapeHtml(article.venue || article.source || "掲載元不明")}</span>
-          <span>公開 ${escapeHtml(displayDate(article.publication_date))}</span>
+          <span>${escapeHtml(authors(article))}</span>
+          <span>${escapeHtml(sourceLabel)}</span>
+          <span>Published ${escapeHtml(displayDate(article.publication_date))}</span>
         </p>
 
         <div class="paper-actions">
-          <a class="primary-link" href="${escapeHtml(sourceUrl)}"
-             target="_blank" rel="noopener noreferrer">原論文を開く</a>
+          <a class="source-link" href="${escapeHtml(sourceUrl)}"
+             target="_blank" rel="noopener noreferrer">Open source record</a>
           ${doi}
         </div>
 
+        <div class="score-study" aria-label="Relevance score">
+          <span>Relevance</span>
+          <div class="score-track" aria-hidden="true">
+            <div class="score-fill" style="width: ${Math.min(articleScore.total, 100)}%"></div>
+          </div>
+          <strong class="score-value">${articleScore.total}/100</strong>
+        </div>
+
         <div class="insight-grid">
-          ${insightBlock("01", "従来の課題", article.insights?.prior_limitation)}
-          ${insightBlock("02", "方法・新規性", article.insights?.contribution)}
-          ${insightBlock("03", "新たに可能になったこと", article.insights?.new_capability)}
-          ${insightBlock("04", "研究上の意義", article.insights?.significance)}
+          ${insight("01", "Prior limitation", articleSummary.prior_limitation)}
+          ${insight("02", "Methodological contribution", articleSummary.contribution)}
+          ${insight("03", "What becomes possible", articleSummary.new_capability)}
+          ${insight("04", "Why it matters", articleSummary.significance)}
         </div>
       </div>
 
       <details class="paper-details">
-        <summary>抄録・抽出語・判定情報</summary>
+        <summary>Abstract, terms, and score construction</summary>
         <div class="details-content">
-          <h3>抄録抜粋</h3>
-          <p>${escapeHtml(article.abstract || "抄録は取得されていません。")}</p>
-          <h3>抽出語</h3>
-          ${renderTags(tags)}
-          <h3>自動判定</h3>
+          <h3>Available abstract</h3>
+          <p>${escapeHtml(article.abstract || "No abstract was available.")}</p>
+
+          <h3>Matched terms</h3>
+          ${tagList(terms(article))}
+
+          <h3>Relevance score</h3>
           <p>
-            ${escapeHtml(article.priority || "Priority not assigned")}${escapeHtml(scoreText)}
-            · ${escapeHtml(article.insights?.source || "要約方法不明")}
+            This score measures scope alignment, not scientific quality.
+            <a href="./method.html#score">See the scoring method.</a>
           </p>
+          ${scoreBreakdown(components)}
+
+          <h3>Interpretation basis</h3>
+          <p>${escapeHtml(
+            articleSummary.source
+            || "Abstract-only deterministic summary"
+          )}</p>
         </div>
       </details>
     </article>
   `;
 };
 
+const sortArticles = (articles, order) => [...articles].sort((a, b) => {
+  if (order === "published-desc") {
+    return dateValue(b.publication_date) - dateValue(a.publication_date);
+  }
+  if (order === "score-desc") {
+    return score(b).total - score(a).total
+      || dateValue(b.publication_date) - dateValue(a.publication_date);
+  }
+  const parseReported = (value) =>
+    dateValue(String(value || "").replace(" JST", "+09:00").replace(" ", "T"));
+  return parseReported(b.reported_at) - parseReported(a.reported_at);
+});
+
+const render = () => {
+  const query = normalize(ui.search.value);
+  const selectedType = ui.type.value;
+  const selectedYear = ui.year.value;
+
+  const filtered = sortArticles(
+    catalog.articles.filter((article) =>
+      (!query || searchableText(article).includes(query))
+      && (selectedType === "all" || article.selection_type === selectedType)
+      && (selectedYear === "all" || articleYear(article) === selectedYear)),
+    ui.sort.value,
+  );
+
+  ui.list.innerHTML = filtered.map(articleCard).join("");
+  ui.list.hidden = filtered.length === 0;
+  ui.empty.hidden = filtered.length !== 0;
+  ui.count.textContent = `${filtered.length} folio${filtered.length === 1 ? "" : "s"} shown`;
+};
+
 const populateYears = (years) => {
-  const values = Array.isArray(years)
-    ? years
-    : [...new Set(state.articles.map(articleYear).filter(Boolean))].sort().reverse();
-  for (const year of values) {
+  for (const year of years) {
     const option = document.createElement("option");
     option.value = year;
     option.textContent = year;
-    elements.year.append(option);
+    ui.year.append(option);
   }
 };
 
-const updateStats = (payload) => {
-  elements.statTotal.textContent = String(payload.article_count ?? state.articles.length);
-  elements.statNew.textContent = String(
-    payload.new_count ?? state.articles.filter((item) => item.selection_type === "new").length
-  );
-  elements.statHistorical.textContent = String(
-    payload.historical_count
-      ?? state.articles.filter((item) => item.selection_type === "historical").length
-  );
-  elements.statScan.textContent = payload.last_scan_at || "—";
-};
-
-const sortArticles = (articles, order) => [...articles].sort((a, b) => {
-  if (order === "published-desc") {
-    return parseDateValue(b.publication_date) - parseDateValue(a.publication_date);
+const bind = () => {
+  for (const element of [ui.search, ui.type, ui.year, ui.sort]) {
+    element.addEventListener(element === ui.search ? "input" : "change", render);
   }
-  if (order === "score-desc") {
-    return (Number(b.score) || 0) - (Number(a.score) || 0)
-      || parseDateValue(b.publication_date) - parseDateValue(a.publication_date);
-  }
-  return parseDateValue(
-    String(b.reported_at || "").replace(" JST", "+09:00").replace(" ", "T")
-  ) - parseDateValue(
-    String(a.reported_at || "").replace(" JST", "+09:00").replace(" ", "T")
-  );
-});
-
-const applyFilters = () => {
-  const query = normalize(elements.search.value);
-  const type = elements.type.value;
-  const year = elements.year.value;
-
-  let filtered = state.articles.filter((article) => {
-    const queryMatch = !query || searchText(article).includes(query);
-    const typeMatch = type === "all" || article.selection_type === type;
-    const yearMatch = year === "all" || articleYear(article) === year;
-    return queryMatch && typeMatch && yearMatch;
+  ui.clear.addEventListener("click", () => {
+    ui.search.value = "";
+    ui.type.value = "all";
+    ui.year.value = "all";
+    ui.sort.value = "reported-desc";
+    render();
+    ui.search.focus();
   });
-
-  filtered = sortArticles(filtered, elements.sort.value);
-  state.filtered = filtered;
-  elements.list.innerHTML = filtered.map(articleCard).join("");
-  elements.empty.hidden = filtered.length !== 0;
-  elements.list.hidden = filtered.length === 0;
-  elements.count.textContent = `${filtered.length}件を表示`;
-};
-
-const clearFilters = () => {
-  elements.search.value = "";
-  elements.type.value = "all";
-  elements.year.value = "all";
-  elements.sort.value = "reported-desc";
-  applyFilters();
-  elements.search.focus();
-};
-
-const bindEvents = () => {
-  elements.search.addEventListener("input", applyFilters);
-  elements.type.addEventListener("change", applyFilters);
-  elements.year.addEventListener("change", applyFilters);
-  elements.sort.addEventListener("change", applyFilters);
-  elements.clear.addEventListener("click", clearFilters);
 };
 
 const load = async () => {
@@ -256,16 +276,23 @@ const load = async () => {
     const response = await fetch("./articles.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
-    state.articles = Array.isArray(payload.articles) ? payload.articles : [];
-    populateYears(payload.years);
-    updateStats(payload);
-    bindEvents();
-    applyFilters();
+
+    catalog.articles = Array.isArray(payload.articles) ? payload.articles : [];
+    ui.total.textContent = payload.article_count ?? catalog.articles.length;
+    ui.newCount.textContent = payload.new_count
+      ?? catalog.articles.filter((item) => item.selection_type === "new").length;
+    ui.archiveCount.textContent = payload.historical_count
+      ?? catalog.articles.filter((item) => item.selection_type === "historical").length;
+    ui.scan.textContent = payload.last_scan_at || "—";
+
+    populateYears(payload.years || []);
+    bind();
+    render();
   } catch (error) {
-    console.error("Unable to load articles.json", error);
-    elements.count.textContent = "読み込みに失敗しました。";
-    elements.error.hidden = false;
-    elements.list.hidden = true;
+    console.error("Unable to load the article catalog", error);
+    ui.count.textContent = "Catalog loading failed.";
+    ui.error.hidden = false;
+    ui.list.hidden = true;
   }
 };
 
