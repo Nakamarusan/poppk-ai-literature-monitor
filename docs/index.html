@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0d0907">
   <title>PopPK × AI Methodology Atlas</title>
   <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/observatory.css">
   <script src="./assets/app.js" defer></script>
 </head>
 <body class="library-page">
@@ -53,63 +54,57 @@
         </div>
       </div>
 
-      <figure class="portrait-window" aria-label="An original chiaroscuro study of observation, model, and inference">
-        <div class="portrait-caption">
-          <span>Study in selective light</span>
-          <p>Observation emerges where evidence is sufficient.</p>
+      <figure class="observatory" aria-label="An original rotating geometric study of observation, model, and inference">
+        <div class="observatory-caption">
+          <span>Study in motion</span>
+          <p>Proportion, iteration, and connected evidence.</p>
         </div>
-        <div class="portrait-stage">
-          <svg viewBox="0 0 480 610" role="img" aria-hidden="true">
-            <defs>
-              <radialGradient id="portraitGlow" cx="48%" cy="36%" r="58%">
-                <stop offset="0" stop-color="#f7d9aa" stop-opacity=".96"/>
-                <stop offset=".34" stop-color="#c88a5e" stop-opacity=".72"/>
-                <stop offset=".72" stop-color="#5a3020" stop-opacity=".24"/>
-                <stop offset="1" stop-color="#120b08" stop-opacity="0"/>
-              </radialGradient>
-              <linearGradient id="figureWash" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#edc899"/>
-                <stop offset=".44" stop-color="#a76146"/>
-                <stop offset="1" stop-color="#27140f"/>
-              </linearGradient>
-              <linearGradient id="velvetWash" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#8c342e"/>
-                <stop offset="1" stop-color="#32100f"/>
-              </linearGradient>
-              <filter id="softFocus">
-                <feGaussianBlur stdDeviation="5"/>
-              </filter>
-            </defs>
-
-            <rect class="window-outer" x="52" y="34" width="376" height="508" rx="188"/>
-            <ellipse class="light-field" cx="254" cy="244" rx="188" ry="226" fill="url(#portraitGlow)"/>
-            <path class="pyramid-line" d="M242 116 110 470h278Z"/>
-            <ellipse class="head-shadow" cx="255" cy="216" rx="77" ry="101"/>
-            <path class="face-light" d="M224 137c47-20 91 12 101 67 7 40-7 91-39 121-24 22-61 15-80-17-23-38-19-98 18-171Z" fill="url(#figureWash)"/>
-            <path class="hair-shadow" d="M206 142c30-42 100-35 126 16 17 34 14 85-7 123-10-67-41-105-100-115-6 38-19 72-43 101-7-48 1-93 24-125Z"/>
-            <path class="shoulders" d="M135 465c18-106 81-155 120-155 51 0 119 61 132 155Z" fill="url(#velvetWash)"/>
-            <path class="collar-light" d="M204 319c22 21 70 25 98 0l23 53c-45 27-91 24-137-1Z"/>
-            <path class="hands" d="M147 448c43-16 82-10 115 18 41-30 78-36 113-18"/>
-            <path class="red-thread" d="M167 405c32-16 68-22 103-14 35 9 64 3 91-17"/>
-            <line class="window-ledge" x1="66" y1="470" x2="414" y2="470"/>
-            <line class="window-ledge light" x1="91" y1="484" x2="389" y2="484"/>
-            <circle class="gaze" cx="237" cy="213" r="2.6"/>
-            <circle class="gaze" cx="280" cy="211" r="2.6"/>
-            <path class="mouth" d="M242 269c13 7 28 7 42-1"/>
-            <ellipse class="soft-halo" cx="247" cy="251" rx="134" ry="176" filter="url(#softFocus)"/>
-
-            <g class="study-notes">
-              <text x="48" y="76">light / evidence</text>
-              <text x="330" y="112">direct gaze</text>
-              <text x="43" y="507">the window as boundary</text>
-              <text x="295" y="564">observe · compare · interpret</text>
-            </g>
-          </svg>
-        </div>
+        <svg viewBox="0 0 560 560" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="traceGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e0a16f"/>
+              <stop offset=".48" stop-color="#bd624b"/>
+              <stop offset="1" stop-color="#7d9b8c"/>
+            </linearGradient>
+            <radialGradient id="observatoryGlow" cx="50%" cy="46%" r="56%">
+              <stop offset="0" stop-color="#dba476" stop-opacity=".16"/>
+              <stop offset=".55" stop-color="#8e4b36" stop-opacity=".07"/>
+              <stop offset="1" stop-color="#120b08" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="observatory-glow" cx="280" cy="280" r="238" fill="url(#observatoryGlow)"/>
+          <g class="construction-grid">
+            <path d="M55 280h450M280 55v450"/>
+            <path d="M88 88h384v384H88z"/>
+            <path d="M88 88l384 384M472 88 88 472"/>
+          </g>
+          <g class="orbit orbit-one">
+            <circle cx="280" cy="280" r="192"/>
+            <circle cx="280" cy="280" r="125"/>
+            <ellipse cx="280" cy="280" rx="192" ry="96" transform="rotate(-26 280 280)"/>
+          </g>
+          <g class="orbit orbit-two">
+            <ellipse cx="280" cy="280" rx="164" ry="72" transform="rotate(42 280 280)"/>
+            <path d="M150 390c34-156 157-255 300-222"/>
+            <path d="M154 392c74-12 145-70 173-144 18-48 57-89 108-105"/>
+          </g>
+          <path class="signal-trace" d="M122 404C188 373 190 249 271 280s116-93 167-137"/>
+          <g class="study-points">
+            <circle cx="122" cy="404" r="6"/>
+            <circle cx="271" cy="280" r="7"/>
+            <circle cx="438" cy="143" r="6"/>
+          </g>
+          <g class="study-notes">
+            <text x="99" y="430">observation</text>
+            <text x="294" y="269">model</text>
+            <text x="410" y="126">inference</text>
+            <text x="101" y="76">ratio 1 : 1.618</text>
+            <text x="374" y="489">iterate / compare / revise</text>
+          </g>
+        </svg>
         <figcaption>
-          An original interface study informed by Rembrandt’s chiaroscuro and
-          the quiet frontal presence associated with the “Mona Lisa of London.”
-          No artwork image is reproduced.
+          An original geometric interface study in selective light. The slow
+          rotation represents observation, comparison, and revision.
         </figcaption>
       </figure>
     </div>
