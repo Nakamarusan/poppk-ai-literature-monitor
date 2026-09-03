@@ -64,8 +64,8 @@ _CAPABILITY_CUES = (
     "enabled",
     "allows",
     "allowed",
-    "can ",
-    "could ",
+    "can",
+    "could",
     "supports",
     "supported",
     "provides",
@@ -93,7 +93,8 @@ _SIGNIFICANCE_CUES = (
     "interpretability",
     "privacy",
     "multicenter",
-    "generaliz",
+    "generalizable",
+    "generalization",
     "potential",
 )
 
@@ -125,9 +126,8 @@ def _sentences(abstract: str) -> list[str]:
     if not text:
         return []
 
-    parts = _SENTENCE_BOUNDARY.split(text)
     sentences: list[str] = []
-    for part in parts:
+    for part in _SENTENCE_BOUNDARY.split(text):
         sentence = _SECTION_PREFIX.sub("", clean(part))
         if len(sentence) >= 20:
             sentences.append(sentence)
@@ -136,11 +136,12 @@ def _sentences(abstract: str) -> list[str]:
 
 def _cue_score(sentence: str, cues: Iterable[str]) -> int:
     normalized = f" {normalize_text(sentence)} "
-    return sum(
-        1 + int(len(normalize_text(cue)) >= 12)
-        for cue in cues
-        if normalize_text(cue) in normalized
-    )
+    score = 0
+    for cue in cues:
+        needle = normalize_text(cue)
+        if needle and f" {needle} " in normalized:
+            score += 1 + int(len(needle) >= 12)
+    return score
 
 
 def _select_sentence(
@@ -152,22 +153,22 @@ def _select_sentence(
 ) -> tuple[str, int | None]:
     """Select the strongest unused sentence for one interpretive field."""
 
-    candidates: list[tuple[int, int, int, str]] = []
+    candidates: list[tuple[int, int, str, int]] = []
     for index, sentence in enumerate(sentences):
         if index in used:
             continue
         score = _cue_score(sentence, cues)
-        if not score:
-            continue
-        position = index if prefer_later else -index
-        candidates.append((score, position, -len(sentence), sentence))
+        if score:
+            position = index if prefer_later else -index
+            candidates.append((score, position, sentence, index))
 
     if not candidates:
         return _NOT_STATED, None
 
-    selected = max(candidates)
-    sentence = selected[3]
-    index = sentences.index(sentence)
+    _, _, sentence, index = max(
+        candidates,
+        key=lambda item: (item[0], item[1], -len(item[2])),
+    )
     return _clip(sentence), index
 
 
