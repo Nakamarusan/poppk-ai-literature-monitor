@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-03",
-  "last_success_utc": "2026-09-02T23:46:45.286041+00:00",
+  "last_selection_date_jst": "2026-09-04",
+  "last_success_utc": "2026-09-03T23:44:24.145261+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -13,6 +13,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.20944/preprints202609.0069.v1": {
+      "doi": "10.20944/preprints202609.0069.v1",
+      "notified_at": "2026-09-03T23:44:24.145261+00:00",
+      "selection_type": "new",
+      "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
@@ -36,6 +42,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:crossref:10.20944/preprints202609.0069.v1": {
+      "doi": "10.20944/preprints202609.0069.v1",
+      "notified_at": "2026-09-03T23:44:24.145261+00:00",
+      "selection_type": "new",
+      "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
     "source:crossref:10.64898/2026.08.25.26361215": {
       "doi": "10.64898/2026.08.25.26361215",
@@ -71,11 +83,23 @@
       "selection_type": "historical",
       "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
     },
+    "source:europe pmc:ppr:ppr1310314": {
+      "doi": "10.20944/preprints202609.0069.v1",
+      "notified_at": "2026-09-03T23:44:24.145261+00:00",
+      "selection_type": "new",
+      "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
       "notified_at": "2026-09-01T00:56:28.340578+00:00",
       "selection_type": "historical",
       "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
+    },
+    "title:95603215f77d65bd016f7b0c": {
+      "doi": "10.20944/preprints202609.0069.v1",
+      "notified_at": "2026-09-03T23:44:24.145261+00:00",
+      "selection_type": "new",
+      "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
     "title:9a33003f9f24e27860ff548c": {
       "doi": "10.64898/2026.08.25.26361215",
@@ -107,22 +131,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-03"
+    "arxiv": "2026-09-04"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
+      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
+      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-02T23:46:45.286041+00:00",
-      "records": 36,
+      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
+      "records": 41,
       "status": "ok"
     }
   }
