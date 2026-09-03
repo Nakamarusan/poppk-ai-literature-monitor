@@ -23,6 +23,7 @@ from .core import (
     fingerprint,
     load_json,
     normalize_doi,
+    normalize_text,
     parse_date,
     save_json,
     screen,
@@ -197,15 +198,68 @@ def select_historical(
     return rank_matches(candidates)[: max(0, limit)]
 
 
+def _catalog_match(
+    records: dict[str, dict[str, Any]], paper: Paper
+) -> tuple[str, dict[str, Any]] | None:
+    """Find a known catalog record by canonical ID or normalized title."""
+
+    canonical_id = article_id(paper)
+    if canonical_id in records:
+        return canonical_id, records[canonical_id]
+
+    normalized_title = normalize_text(paper.title)
+    for key, record in records.items():
+        if normalize_text(record.get("title", "")) == normalized_title:
+            return key, record
+    return None
+
+
+def _enriched_paper(record: dict[str, Any], incoming: Paper) -> Paper:
+    """Combine a source record with the richer fields already in the catalog."""
+
+    existing_authors = record.get("authors", [])
+    authors = (
+        incoming.authors
+        if len(incoming.authors) > len(existing_authors)
+        else existing_authors
+    )
+    existing_venue = record.get("venue", "")
+    venue = (
+        incoming.venue
+        if existing_venue in _GENERIC_VENUES and incoming.venue not in _GENERIC_VENUES
+        else existing_venue or incoming.venue
+    )
+    existing_abstract = clean(record.get("abstract", ""))
+    abstract = (
+        incoming.abstract
+        if len(clean(incoming.abstract)) > len(existing_abstract)
+        else record.get("abstract", "")
+    )
+
+    return Paper(
+        sources=list(dict.fromkeys([*record.get("sources", []), *incoming.sources])),
+        source_ids=incoming.source_ids,
+        title=incoming.title or record.get("title", ""),
+        authors=authors,
+        venue=venue,
+        date=record.get("publication_date", "") or incoming.date,
+        doi=record.get("doi", "") or incoming.doi,
+        url=record.get("url", "") or incoming.url,
+        abstract=abstract,
+        publication_type=incoming.publication_type,
+    )
+
+
 def refresh_catalog(
     catalog: dict[str, Any],
     papers: Sequence[Paper],
     config: dict[str, Any],
 ) -> int:
-    """Enrich known catalog entries when a source later supplies better metadata.
+    """Enrich known records when a source later supplies better information.
 
-    Previously reported papers are never alerted again. This pass only fills
-    missing fields, keeps a longer abstract, and recalculates screening evidence.
+    Previously reported papers are never alerted again. This pass only improves
+    metadata, recalculates relevance evidence, and refreshes a deterministic
+    summary when a previously missing abstract becomes available.
     """
 
     records = {
@@ -215,68 +269,56 @@ def refresh_catalog(
     }
     refreshed = 0
 
-    for paper in deduplicate(papers):
-        record = records.get(article_id(paper))
+    for incoming in deduplicate(papers):
+        located = _catalog_match(records, incoming)
+        if not located:
+            continue
+        old_id, record = located
+        paper = _enriched_paper(record, incoming)
         match = screen(paper, config)
-        if not record or not match:
+        if not match:
             continue
 
         changed = False
-        incoming_abstract = clean(paper.abstract)
-        current_abstract = clean(record.get("abstract", ""))
-        abstract_improved = len(incoming_abstract) > len(current_abstract)
-        if abstract_improved:
-            record["abstract"] = paper.abstract
+        new_id = article_id(paper)
+        if new_id != old_id and new_id not in records:
+            del records[old_id]
+            record["id"] = new_id
+            records[new_id] = record
             changed = True
 
-        incoming_authors = [author for author in paper.authors if clean(author)]
-        if len(incoming_authors) > len(record.get("authors", [])):
-            record["authors"] = incoming_authors
-            changed = True
-
-        if (
-            record.get("venue", "") in _GENERIC_VENUES
-            and paper.venue not in _GENERIC_VENUES
-        ):
-            record["venue"] = paper.venue
-            changed = True
-
-        for field_name, value in (
-            ("publication_date", paper.date),
-            ("doi", normalize_doi(paper.doi)),
-            ("url", paper.url),
-        ):
-            if not record.get(field_name) and value:
+        fields = {
+            "title": paper.title,
+            "authors": [author for author in paper.authors if clean(author)],
+            "venue": paper.venue,
+            "publication_date": paper.date,
+            "doi": normalize_doi(paper.doi),
+            "url": paper.url,
+            "sources": paper.sources,
+            "abstract": paper.abstract,
+            "score": {
+                "total": match.score.total,
+                "priority": match.priority,
+                "components": match.score.as_dict(),
+            },
+            "evidence": {
+                "basis": "abstract-only",
+                "title_terms": match.title_hits,
+                "abstract_terms": match.abstract_hits,
+                "terms": match.hits,
+            },
+        }
+        for field_name, value in fields.items():
+            if record.get(field_name) != value:
                 record[field_name] = value
                 changed = True
 
-        merged_sources = list(
-            dict.fromkeys([*record.get("sources", []), *paper.sources])
+        abstract_improved = len(clean(paper.abstract)) > len(
+            clean(located[1].get("abstract", ""))
         )
-        if merged_sources != record.get("sources", []):
-            record["sources"] = merged_sources
-            changed = True
-
-        score = {
-            "total": match.score.total,
-            "priority": match.priority,
-            "components": match.score.as_dict(),
-        }
-        evidence = {
-            "basis": "abstract-only",
-            "title_terms": match.title_hits,
-            "abstract_terms": match.abstract_hits,
-            "terms": match.hits,
-        }
-        if record.get("score") != score:
-            record["score"] = score
-            changed = True
-        if record.get("evidence") != evidence:
-            record["evidence"] = evidence
-            changed = True
-
         summary_source = record.get("summary", {}).get("source", "")
         if abstract_improved and summary_source in {
+            "",
             "No abstract available",
             "Abstract-only extractive summary",
             "Abstract-only rule-based summary",
