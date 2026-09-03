@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Program architecture, evidence policy, source handling, and relevance scoring for the PopPK × AI literature monitor.">
-  <meta name="theme-color" content="#0d0907">
-  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Method · PopPK × AI Methodology Atlas">
   <meta property="og:description" content="How the abstract-only literature monitor retrieves, screens, scores, interprets, and publishes papers.">
@@ -19,266 +19,243 @@
 <body class="method-page">
   <a class="skip-link" href="#method">Skip to the method</a>
 
-  <header class="chiaroscuro-header method-hero-shell">
-    <nav class="site-nav shell" aria-label="Primary navigation">
-      <a class="brand" href="./" aria-label="Methodology Atlas home">
-        <span class="brand-seal" aria-hidden="true">PK</span>
-        <span class="brand-copy">
-          <strong>Methodology Atlas</strong>
-          <small>Population PK × AI</small>
-        </span>
-      </a>
-      <div class="nav-links">
-        <a href="./">Library</a>
-        <a class="active" href="./method.html" aria-current="page">Method</a>
-        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Repository ↗</a>
+  <header class="method-header">
+    <nav class="global-nav" aria-label="Primary navigation">
+      <div class="shell nav-inner">
+        <a class="brand" href="./" aria-label="Methodology Atlas home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <circle cx="16" cy="16" r="5"></circle>
+              <ellipse cx="16" cy="16" rx="12" ry="5" transform="rotate(-28 16 16)"></ellipse>
+              <ellipse cx="16" cy="16" rx="11" ry="4" transform="rotate(38 16 16)"></ellipse>
+            </svg>
+          </span>
+          <span>Methodology Atlas</span>
+        </a>
+        <div class="nav-links">
+          <a href="./">Library</a>
+          <a class="active" href="./method.html" aria-current="page">Method</a>
+          <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
+             target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </div>
     </nav>
 
-    <div class="method-hero shell">
+    <section class="method-hero shell">
       <div>
-        <p class="folio-label">The instrument · Evidence brought into light</p>
-        <h1>How the monitor<br><em>defines its field of view</em></h1>
-        <p class="lead">
-          The program separates retrieval, selection, interpretation, and
-          publication. It never fetches full text. Every interpretive statement
-          is constrained to the available abstract.
+        <p class="eyebrow">Transparent by design</p>
+        <h1>Built to be <span>explicit.</span></h1>
+        <p class="hero-lead">
+          The monitor separates retrieval, screening, ranking, interpretation,
+          and publication. It never fetches full text, and every interpretive
+          statement is constrained to the available abstract.
         </p>
+        <a class="secondary-link" href="./">Return to the library <span aria-hidden="true">›</span></a>
       </div>
-
-      <div class="light-aperture" aria-hidden="true">
-        <span class="aperture-frame"></span>
-        <span class="aperture-halo"></span>
-        <span class="aperture-axis horizontal"></span>
-        <span class="aperture-axis vertical"></span>
-        <span class="aperture-core">R</span>
-        <small>observe / bound / interpret</small>
+      <div class="method-visual" aria-label="Program stages">
+        <div class="method-orb" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <strong>R</strong>
+        </div>
+        <ol>
+          <li><span>01</span>Retrieve</li>
+          <li><span>02</span>Screen</li>
+          <li><span>03</span>Interpret</li>
+          <li><span>04</span>Publish</li>
+        </ol>
       </div>
-    </div>
-
-    <div class="principle-deck shell" aria-label="Program principles">
-      <article>
-        <span>01</span>
-        <h2>Observe</h2>
-        <p>Collect bibliographic metadata and available abstracts.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>Measure</h2>
-        <p>Apply explicit eligibility rules and a bounded relevance score.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>Interpret</h2>
-        <p>Summarize only statements that the abstract can support.</p>
-      </article>
-      <article>
-        <span>04</span>
-        <h2>Publish</h2>
-        <p>Update the report, catalog, GitHub Issue, and static site.</p>
-      </article>
-    </div>
+    </section>
   </header>
 
-  <main id="method" class="method-canvas">
-    <div class="shell method-layout">
+  <main id="method" class="method-main">
+    <div class="shell method-stack">
       <section class="method-section">
-        <p class="section-number">01</p>
-        <div>
-          <p class="section-kicker">Daily pipeline</p>
-          <h2>One path from metadata to a readable study</h2>
-          <p class="section-lead">
-            GitHub Actions starts the monitor at 07:00 JST. A 07:20 fallback
-            runs only when the first run did not complete successfully.
-          </p>
-
-          <ol class="pipeline">
-            <li><span>Retrieve</span><p>Request metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
-            <li><span>Normalize</span><p>Convert source-specific records to a shared <code>Paper</code> structure.</p></li>
-            <li><span>Unify</span><p>Merge records connected by DOI, source identifier, or normalized title.</p></li>
-            <li><span>Refresh</span><p>Improve previously indexed records when a source later provides a longer abstract or richer metadata.</p></li>
-            <li><span>Screen</span><p>Require PopPK or pharmacometrics, AI or machine learning, and methodological evidence.</p></li>
-            <li><span>Select</span><p>Report new papers; otherwise choose one unreported, abstract-bearing paper published since 2020.</p></li>
-            <li><span>Interpret</span><p>Create four concise statements from the available abstract only.</p></li>
-            <li><span>Publish</span><p>Update Markdown, GitHub Issues, the canonical JSON catalog, and GitHub Pages.</p></li>
-          </ol>
+        <div class="section-heading">
+          <span>01</span>
+          <div>
+            <p class="eyebrow">Daily pipeline</p>
+            <h2>From metadata to a readable brief.</h2>
+          </div>
         </div>
+        <p class="section-lead">
+          GitHub Actions starts the monitor at 07:00 JST. A 07:20 fallback runs
+          only when the first scheduled run did not complete successfully.
+        </p>
+        <ol class="pipeline-grid">
+          <li><span>Retrieve</span><p>Request metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
+          <li><span>Normalize</span><p>Convert source-specific records into one shared <code>Paper</code> structure.</p></li>
+          <li><span>Unify</span><p>Merge records connected by DOI, source identifier, or normalized title.</p></li>
+          <li><span>Refresh</span><p>Improve indexed records when a source later provides richer metadata or a longer abstract.</p></li>
+          <li><span>Screen</span><p>Require PopPK or pharmacometrics, AI or machine learning, and methodological evidence.</p></li>
+          <li><span>Select</span><p>Report new papers; otherwise choose one unreported, abstract-bearing paper from 2020 onward.</p></li>
+          <li><span>Interpret</span><p>Create four concise fields from the available abstract only.</p></li>
+          <li><span>Publish</span><p>Update Markdown, GitHub Issues, the canonical JSON catalog, and GitHub Pages.</p></li>
+        </ol>
       </section>
 
       <section id="score" class="method-section">
-        <p class="section-number">02</p>
-        <div>
-          <p class="section-kicker">Relevance score</p>
-          <h2>A bounded measure of scope alignment</h2>
-          <p class="section-lead">
-            The score ranges from 0 to 100. It ranks eligible papers by explicit
-            alignment with this monitor. It does not assess study quality,
-            validity, novelty, risk of bias, or clinical usefulness.
-          </p>
-
-          <div class="score-composition">
-            <div class="formula">
-              <article><span>PopPK evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
-              <article><span>AI evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
-              <article><span>Method evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
-              <article><span>Intersection</span><strong>0–10</strong><p>10 points when PopPK and AI are both explicit in the title.</p></article>
-            </div>
-
-            <div class="score-orbit" aria-label="Relevance score equation">
-              <div class="score-orbit-ring outer"></div>
-              <div class="score-orbit-ring middle"></div>
-              <div class="score-orbit-core">
-                <span>R</span>
-                <small>PK + AI + M + I</small>
-              </div>
+        <div class="section-heading">
+          <span>02</span>
+          <div>
+            <p class="eyebrow">Relevance score</p>
+            <h2>A bounded measure of scope alignment.</h2>
+          </div>
+        </div>
+        <p class="section-lead">
+          The score ranges from 0 to 100. It ranks eligible papers by explicit
+          alignment with this monitor. It does not assess study quality,
+          validity, novelty, risk of bias, or clinical usefulness.
+        </p>
+        <div class="score-layout">
+          <div class="score-components">
+            <article><span>PopPK evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
+            <article><span>AI evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
+            <article><span>Method evidence</span><strong>0–30</strong><p>20 points in the title and 10 in the abstract.</p></article>
+            <article><span>Intersection</span><strong>0–10</strong><p>10 points when PopPK and AI are both explicit in the title.</p></article>
+          </div>
+          <div class="score-summary">
+            <div class="score-hero-ring"><strong>100</strong><span>maximum</span></div>
+            <div class="threshold-list">
+              <p><span>High</span><strong>70–100</strong></p>
+              <p><span>Medium</span><strong>40–69</strong></p>
+              <p><span>Low</span><strong>0–39</strong></p>
             </div>
           </div>
+        </div>
+        <aside class="info-callout">
+          A paper must pass the three-part eligibility gate before scoring.
+          Repeated synonyms do not add points; each component records whether
+          evidence is present in the title or abstract.
+        </aside>
+      </section>
 
-          <div class="thresholds">
-            <p><strong>High</strong><span>70–100</span></p>
-            <p><strong>Medium</strong><span>40–69</span></p>
-            <p><strong>Low</strong><span>0–39</span></p>
+      <section class="method-section">
+        <div class="section-heading">
+          <span>03</span>
+          <div>
+            <p class="eyebrow">Evidence boundary</p>
+            <h2>Interpretation stops at the abstract.</h2>
           </div>
+        </div>
+        <p class="section-lead">
+          Titles support discovery and scoring, but not the four interpretive
+          statements. The program does not download PDFs, visit publisher full
+          text, or inspect supplementary material.
+        </p>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Prior limitation</h3><p>What gap or problem does the abstract identify?</p></article>
+          <article><span>02</span><h3>Contribution</h3><p>What method, framework, algorithm, or comparison does it describe?</p></article>
+          <article><span>03</span><h3>New capability</h3><p>What analysis or decision becomes possible according to the abstract?</p></article>
+          <article><span>04</span><h3>Significance</h3><p>Why might it matter for PopPK, pharmacometrics, or model-informed dosing?</p></article>
+        </div>
+        <p class="body-copy">
+          With an OpenAI API key, the abstract may be paraphrased into these
+          four fields. Without one, the fallback extracts supporting sentences
+          directly. Unsupported fields are reported as not stated.
+        </p>
+      </section>
 
-          <aside class="method-note">
-            A paper must pass the three-part eligibility gate before scoring.
-            Repeated synonyms do not add points; each component records whether
-            evidence is present in the title or abstract.
-          </aside>
+      <section class="method-section">
+        <div class="section-heading">
+          <span>04</span>
+          <div>
+            <p class="eyebrow">Source policy</p>
+            <h2>Core indexes, optional preprints.</h2>
+          </div>
+        </div>
+        <div class="source-cards">
+          <article>
+            <div><strong>Europe PMC</strong><span>Core source</span></div>
+            <p>Biomedical metadata and available abstracts. A failure is reported; the run can continue if another required source succeeds.</p>
+          </article>
+          <article>
+            <div><strong>Crossref</strong><span>Core source</span></div>
+            <p>Publisher-registered articles and posted content. A failure is reported; the run can continue if another required source succeeds.</p>
+          </article>
+          <article>
+            <div><strong>arXiv</strong><span>Optional source</span></div>
+            <p>Queried at most once per JST day. Rate-limit and timeout errors are logged internally but omitted from user-facing reports.</p>
+          </article>
         </div>
       </section>
 
       <section class="method-section">
-        <p class="section-number">03</p>
-        <div>
-          <p class="section-kicker">Evidence boundary</p>
-          <h2>Interpretation stops at the abstract</h2>
-          <p class="section-lead">
-            Titles support discovery and scoring, but not the four interpretive
-            statements. The program does not download PDFs, visit publisher
-            full text, or inspect supplementary material.
-          </p>
-
-          <div class="evidence-grid">
-            <article><span>01</span><h3>Prior limitation</h3><p>What gap or problem does the abstract identify?</p></article>
-            <article><span>02</span><h3>Contribution</h3><p>What method, framework, algorithm, or comparison does it describe?</p></article>
-            <article><span>03</span><h3>New capability</h3><p>What analysis or decision becomes possible according to the abstract?</p></article>
-            <article><span>04</span><h3>Significance</h3><p>Why might it matter for PopPK, pharmacometrics, or model-informed dosing?</p></article>
+        <div class="section-heading">
+          <span>05</span>
+          <div>
+            <p class="eyebrow">Program structure</p>
+            <h2>Small modules, explicit responsibilities.</h2>
           </div>
-
-          <p>
-            With an OpenAI API key, the abstract may be paraphrased into these
-            four fields. Without one, the fallback extracts supporting
-            sentences directly. If the abstract does not support a field, the
-            monitor states that it was not reported.
-          </p>
+        </div>
+        <div class="module-grid">
+          <article><code>core.py</code><p>Data models, validation, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
+          <article><code>sources.py</code><p>Clients for Europe PMC, Crossref, and arXiv.</p></article>
+          <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and an extractive fallback.</p></article>
+          <article><code>literature_monitor.py</code><p>Retrieval orchestration, catalog refresh, selection, notifications, and state updates.</p></article>
+          <article><code>reporting.py</code><p>Canonical article records, Markdown reports, and GitHub Issues.</p></article>
+          <article><code>site_generator.py</code><p>Validates and transforms the catalog into data consumed by GitHub Pages.</p></article>
+          <article><code>data/articles.json</code><p>The canonical structured catalog used to build the site.</p></article>
+          <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p></article>
         </div>
       </section>
 
       <section class="method-section">
-        <p class="section-number">04</p>
-        <div>
-          <p class="section-kicker">Source policy</p>
-          <h2>Core indexes with an optional preprint supplement</h2>
-          <div class="source-table" role="table" aria-label="Literature source policy">
-            <div class="source-row source-head" role="row">
-              <span role="columnheader">Source</span>
-              <span role="columnheader">Role</span>
-              <span role="columnheader">Failure behavior</span>
-            </div>
-            <div class="source-row" role="row">
-              <strong role="cell">Europe PMC</strong>
-              <span role="cell">Biomedical metadata and available abstracts</span>
-              <span role="cell">A failure is reported; the run can continue if another required source succeeds</span>
-            </div>
-            <div class="source-row" role="row">
-              <strong role="cell">Crossref</strong>
-              <span role="cell">Publisher-registered articles and posted content</span>
-              <span role="cell">A failure is reported; the run can continue if another required source succeeds</span>
-            </div>
-            <div class="source-row" role="row">
-              <strong role="cell">arXiv</strong>
-              <span role="cell">Optional preprint supplement, queried at most once per JST day</span>
-              <span role="cell">Rate-limit and timeout errors are logged internally but omitted from reports</span>
-            </div>
+        <div class="section-heading">
+          <span>06</span>
+          <div>
+            <p class="eyebrow">Known limits</p>
+            <h2>A reading queue, not a systematic review.</h2>
           </div>
         </div>
+        <ul class="limitations-list">
+          <li>Keyword screening can produce false positives and false negatives.</li>
+          <li>Abstracts may omit important methods, validation details, and limitations.</li>
+          <li>The relevance score measures scope alignment, not study quality.</li>
+          <li>Source metadata may differ in dates, abstracts, and publication types.</li>
+          <li>API result limits and indexing delays prevent guaranteed completeness.</li>
+          <li>The archive fallback is a ranked convenience sample, not an exhaustive search.</li>
+        </ul>
       </section>
 
       <section class="method-section">
-        <p class="section-number">05</p>
-        <div>
-          <p class="section-kicker">Program structure</p>
-          <h2>Small modules with explicit responsibilities</h2>
-          <div class="architecture">
-            <article><code>core.py</code><p>Data models, validation, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
-            <article><code>sources.py</code><p>Clients for Europe PMC, Crossref, and arXiv.</p></article>
-            <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and an extractive fallback.</p></article>
-            <article><code>literature_monitor.py</code><p>Retrieval orchestration, catalog refresh, selection, notifications, and state updates.</p></article>
-            <article><code>reporting.py</code><p>Canonical article records, Markdown reports, and GitHub Issues.</p></article>
-            <article><code>site_generator.py</code><p>Validates and transforms the catalog into data consumed by GitHub Pages.</p></article>
-            <article><code>data/articles.json</code><p>The canonical structured catalog used to build the site.</p></article>
-            <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p></article>
+        <div class="section-heading">
+          <span>07</span>
+          <div>
+            <p class="eyebrow">Visual system</p>
+            <h2>Clarity first.</h2>
           </div>
         </div>
-      </section>
-
-      <section class="method-section">
-        <p class="section-number">06</p>
-        <div>
-          <p class="section-kicker">Known limits</p>
-          <h2>A reading queue, not a systematic review</h2>
-          <ul class="limitations">
-            <li>Keyword screening can produce false positives and false negatives.</li>
-            <li>Abstracts may omit important methods, validation details, and limitations.</li>
-            <li>The relevance score measures scope alignment, not study quality.</li>
-            <li>Source metadata may differ in dates, abstracts, and publication types.</li>
-            <li>API result limits and indexing delays prevent guaranteed completeness.</li>
-            <li>The archive fallback is a ranked convenience sample, not an exhaustive search.</li>
-          </ul>
+        <p class="section-lead">
+          The interface uses system typography, generous spacing, restrained
+          color, layered translucent materials, and optional motion. The visual
+          hierarchy keeps controls near the content they modify and gives each
+          paper enough space to be read without visual noise.
+        </p>
+        <div class="feature-grid visual-principles">
+          <article><span>01</span><h3>Readable</h3><p>Large type, strong contrast, and clear section hierarchy support fast scanning.</p></article>
+          <article><span>02</span><h3>Responsive</h3><p>Layouts collapse cleanly without horizontal scrolling, and controls remain touch-friendly.</p></article>
+          <article><span>03</span><h3>Layered</h3><p>Translucency and soft separation indicate hierarchy without obscuring content.</p></article>
+          <article><span>04</span><h3>Calm</h3><p>Motion is slow, optional, and automatically respects reduced-motion preferences.</p></article>
         </div>
-      </section>
-
-      <section class="method-section design-language-section">
-        <p class="section-number">07</p>
-        <div>
-          <p class="section-kicker">Visual language</p>
-          <h2>Chiaroscuro, geometry, and measured motion</h2>
-          <p class="section-lead">
-            The interface is an original digital design rather than a
-            reproduction of an artwork. Selective light and warm earth colors
-            organize attention, while the rotating geometric instrument
-            represents repeated observation, comparison, and revision.
-          </p>
-          <div class="design-principles">
-            <article><span>Light</span><p>Important information emerges from a restrained dark field.</p></article>
-            <article><span>Measure</span><p>Circles, axes, and score dials make the system’s boundaries visible.</p></article>
-            <article><span>Motion</span><p>Slow counter-rotation suggests iteration without competing with the content.</p></article>
-          </div>
-          <p class="reference-line">
-            No museum image, painting file, or traced composition is embedded
-            in the site. The interface uses original HTML, CSS, and SVG.
-          </p>
-        </div>
+        <p class="body-copy">All interface graphics are original HTML, CSS, and SVG. No third-party product imagery or brand assets are embedded.</p>
       </section>
 
       <div class="method-return">
-        <a class="ink-button" href="./">Return to the article library</a>
+        <a class="primary-button" href="./">Return to the library</a>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-grid">
+    <div class="shell footer-inner">
       <div>
         <strong>PopPK × AI Methodology Atlas</strong>
-        <p>A working instrument for abstract-based literature triage.</p>
+        <p>A focused instrument for abstract-based literature triage.</p>
       </div>
       <div class="footer-links">
-        <a href="./">Article library</a>
+        <a href="./">Library</a>
         <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Source code ↗</a>
+           target="_blank" rel="noopener noreferrer">Source code</a>
       </div>
     </div>
   </footer>
