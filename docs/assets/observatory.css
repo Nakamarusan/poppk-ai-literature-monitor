@@ -1,7 +1,7 @@
 /*
  * Rotating geometric hero study.
- * This file restores the earlier observation instrument while preserving the
- * current chiaroscuro layout, typography, article cards, and color system.
+ * This file preserves the current chiaroscuro layout while isolating the
+ * observation instrument, motion control, and responsive behavior.
  */
 
 .observatory {
@@ -55,7 +55,8 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 18px;
-  padding: 3px 5px 0;
+  min-height: 34px;
+  padding: 3px 112px 0 5px;
 }
 
 .observatory-caption span {
@@ -75,6 +76,36 @@
   font-size: 0.76rem;
   font-style: italic;
   text-align: right;
+}
+
+.motion-toggle {
+  position: absolute;
+  z-index: 4;
+  top: 17px;
+  right: 18px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgba(230, 185, 130, 0.36);
+  border-radius: 999px;
+  background: rgba(18, 11, 8, 0.42);
+  color: rgba(247, 226, 194, 0.72);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.motion-toggle:hover {
+  border-color: #e6b982;
+  background: rgba(230, 185, 130, 0.10);
+  color: #f7e2c2;
+}
+
+.motion-toggle:focus-visible {
+  outline: none;
+  border-color: #e6b982;
+  box-shadow: 0 0 0 3px rgba(230, 185, 130, 0.16);
 }
 
 .observatory svg {
@@ -104,6 +135,7 @@
   transform-box: fill-box;
   transform-origin: center;
   vector-effect: non-scaling-stroke;
+  will-change: transform;
 }
 
 .observatory .orbit-two {
@@ -160,6 +192,11 @@
   animation: observatory-orbit-reverse 64s linear infinite;
 }
 
+.observatory.motion-paused .orbit-one,
+.observatory.motion-paused .orbit-two {
+  animation-play-state: paused;
+}
+
 @media (max-width: 980px) {
   .observatory {
     width: min(100%, 560px);
@@ -180,13 +217,20 @@
 
   .observatory-caption {
     display: block;
-    padding-inline: 4px;
+    min-height: 0;
+    padding: 3px 4px 0;
   }
 
   .observatory-caption p {
     max-width: none;
     margin-top: 5px;
+    padding-right: 108px;
     text-align: left;
+  }
+
+  .motion-toggle {
+    top: 15px;
+    right: 14px;
   }
 
   .observatory .study-notes {
