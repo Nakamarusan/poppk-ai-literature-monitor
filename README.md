@@ -17,4 +17,6 @@ Dashboard: https://nakamarusan.github.io/poppk-ai-literature-monitor/
 
 Program and scoring method: https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html
 
+The dashboard uses an original chiaroscuro interface inspired by the visual logic of Rembrandt's *Girl at a Window*, sometimes called the “Mona Lisa of London.” No artwork image is reproduced or embedded.
+
 The relevance score measures alignment with the monitoring scope, not scientific quality, validity, or clinical usefulness.

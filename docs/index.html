@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Abstract-only monitoring of PopPK and AI methodology literature">
-  <meta name="theme-color" content="#11100d">
+  <meta name="theme-color" content="#0d0907">
   <title>PopPK × AI Methodology Atlas</title>
   <link rel="stylesheet" href="./assets/styles.css">
   <script src="./assets/app.js" defer></script>
@@ -12,10 +12,10 @@
 <body class="library-page">
   <a class="skip-link" href="#articles">Skip to the article library</a>
 
-  <header class="folio-header">
+  <header class="chiaroscuro-header">
     <nav class="site-nav shell" aria-label="Primary navigation">
-      <a class="brand" href="./" aria-label="PopPK × AI Methodology Atlas">
-        <span class="brand-seal" aria-hidden="true">P×A</span>
+      <a class="brand" href="./" aria-label="Methodology Atlas home">
+        <span class="brand-seal" aria-hidden="true">PK</span>
         <span class="brand-copy">
           <strong>Methodology Atlas</strong>
           <small>Population PK × AI</small>
@@ -25,189 +25,203 @@
         <a class="active" href="./">Library</a>
         <a href="./method.html">Method</a>
         <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Repository</a>
+           target="_blank" rel="noopener noreferrer">Repository ↗</a>
       </div>
     </nav>
 
     <div class="hero shell">
       <div class="hero-copy">
-        <p class="folio-label">Living index · abstract-only evidence</p>
+        <p class="folio-label">Chiaroscuro index · Abstract-only evidence</p>
         <h1>
-          <span class="title-line">Methods at the edge of</span>
-          <span class="title-line title-accent">population PK <i>×</i> intelligence.</span>
+          Population PK <span class="title-cross">×</span> AI
+          <em>Methodology in focus</em>
         </h1>
         <p class="lead">
-          A daily, curated view of methodological studies connecting population
-          pharmacokinetics, pharmacometrics, and artificial intelligence. Every
-          interpretation is constrained to the available abstract.
+          A daily editorial index of methodological studies connecting
+          population pharmacokinetics, pharmacometrics, and artificial
+          intelligence. The interface brings each study forward from a dark
+          field while keeping interpretation within the available abstract.
         </p>
         <div class="hero-actions">
-          <a class="ink-button" href="#articles">Explore the index <span aria-hidden="true">↘</span></a>
-          <a class="text-link" href="./method.html">How the monitor works</a>
+          <a class="ink-button" href="#articles">Enter the library</a>
+          <a class="text-link" href="./method.html">Inspect the method</a>
         </div>
-        <div class="hero-proof" aria-label="Method summary">
-          <span>Daily search</span>
+        <div class="hero-notes" aria-label="Monitoring principles">
+          <span>Daily at 07:00 JST</span>
           <span>Abstract-only interpretation</span>
-          <span>Transparent 0–100 relevance</span>
+          <span>Relevance is not quality</span>
         </div>
       </div>
 
-      <figure class="geometry-study" aria-label="A geometric study of proportion and connected systems">
-        <div class="geometry-frame">
-          <span class="geometry-caption geometry-caption-top">OBSERVATION / MODEL / INFERENCE</span>
-          <svg viewBox="0 0 520 520" role="img" aria-hidden="true">
+      <figure class="portrait-window" aria-label="An original chiaroscuro study of observation, model, and inference">
+        <div class="portrait-caption">
+          <span>Study in selective light</span>
+          <p>Observation emerges where evidence is sufficient.</p>
+        </div>
+        <div class="portrait-stage">
+          <svg viewBox="0 0 480 610" role="img" aria-hidden="true">
             <defs>
-              <radialGradient id="orbGlow" cx="50%" cy="48%" r="58%">
-                <stop offset="0" stop-color="#d3b476" stop-opacity=".24"/>
-                <stop offset=".62" stop-color="#b65d43" stop-opacity=".05"/>
-                <stop offset="1" stop-color="#0d0c0a" stop-opacity="0"/>
+              <radialGradient id="portraitGlow" cx="48%" cy="36%" r="58%">
+                <stop offset="0" stop-color="#f7d9aa" stop-opacity=".96"/>
+                <stop offset=".34" stop-color="#c88a5e" stop-opacity=".72"/>
+                <stop offset=".72" stop-color="#5a3020" stop-opacity=".24"/>
+                <stop offset="1" stop-color="#120b08" stop-opacity="0"/>
               </radialGradient>
-              <filter id="roughen">
-                <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="1" result="noise"/>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.7"/>
+              <linearGradient id="figureWash" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#edc899"/>
+                <stop offset=".44" stop-color="#a76146"/>
+                <stop offset="1" stop-color="#27140f"/>
+              </linearGradient>
+              <linearGradient id="velvetWash" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8c342e"/>
+                <stop offset="1" stop-color="#32100f"/>
+              </linearGradient>
+              <filter id="softFocus">
+                <feGaussianBlur stdDeviation="5"/>
               </filter>
             </defs>
-            <circle class="study-glow" cx="260" cy="260" r="238" fill="url(#orbGlow)"/>
-            <g class="study-lines" filter="url(#roughen)">
-              <rect x="78" y="78" width="364" height="364" rx="4"/>
-              <circle cx="260" cy="260" r="182"/>
-              <circle cx="260" cy="260" r="111"/>
-              <circle cx="260" cy="260" r="52"/>
-              <path d="M78 442 442 78M78 78l364 364"/>
-              <path d="M260 78v364M78 260h364"/>
-              <path d="M149 371c0-123 99-222 222-222"/>
-              <path d="M149 371c0-62 50-111 111-111"/>
-              <path d="M260 260c0-29 23-52 52-52"/>
-              <path d="M312 208c29 0 52 23 52 52"/>
-              <path d="M364 260c0 57-47 104-104 104"/>
-              <path class="orbit-dash" d="M118 324c48 71 135 112 225 91 51-12 92-42 118-82"/>
-            </g>
-            <g class="study-points">
-              <circle cx="260" cy="260" r="6"/>
-              <circle cx="149" cy="371" r="4"/>
-              <circle cx="371" cy="149" r="4"/>
-            </g>
+
+            <rect class="window-outer" x="52" y="34" width="376" height="508" rx="188"/>
+            <ellipse class="light-field" cx="254" cy="244" rx="188" ry="226" fill="url(#portraitGlow)"/>
+            <path class="pyramid-line" d="M242 116 110 470h278Z"/>
+            <ellipse class="head-shadow" cx="255" cy="216" rx="77" ry="101"/>
+            <path class="face-light" d="M224 137c47-20 91 12 101 67 7 40-7 91-39 121-24 22-61 15-80-17-23-38-19-98 18-171Z" fill="url(#figureWash)"/>
+            <path class="hair-shadow" d="M206 142c30-42 100-35 126 16 17 34 14 85-7 123-10-67-41-105-100-115-6 38-19 72-43 101-7-48 1-93 24-125Z"/>
+            <path class="shoulders" d="M135 465c18-106 81-155 120-155 51 0 119 61 132 155Z" fill="url(#velvetWash)"/>
+            <path class="collar-light" d="M204 319c22 21 70 25 98 0l23 53c-45 27-91 24-137-1Z"/>
+            <path class="hands" d="M147 448c43-16 82-10 115 18 41-30 78-36 113-18"/>
+            <path class="red-thread" d="M167 405c32-16 68-22 103-14 35 9 64 3 91-17"/>
+            <line class="window-ledge" x1="66" y1="470" x2="414" y2="470"/>
+            <line class="window-ledge light" x1="91" y1="484" x2="389" y2="484"/>
+            <circle class="gaze" cx="237" cy="213" r="2.6"/>
+            <circle class="gaze" cx="280" cy="211" r="2.6"/>
+            <path class="mouth" d="M242 269c13 7 28 7 42-1"/>
+            <ellipse class="soft-halo" cx="247" cy="251" rx="134" ry="176" filter="url(#softFocus)"/>
+
             <g class="study-notes">
-              <text x="84" y="62">proportion</text>
-              <text x="345" y="472">observation</text>
-              <text x="278" y="251">model</text>
-              <text x="96" y="286">data</text>
-              <text x="366" y="286">inference</text>
+              <text x="48" y="76">light / evidence</text>
+              <text x="330" y="112">direct gaze</text>
+              <text x="43" y="507">the window as boundary</text>
+              <text x="295" y="564">observe · compare · interpret</text>
             </g>
           </svg>
-          <div class="geometry-core">
-            <span>PK</span>
-            <i>×</i>
-            <span>AI</span>
-          </div>
-          <span class="geometry-caption geometry-caption-bottom">A STUDY IN PROPORTION</span>
         </div>
-        <figcaption>Observation becomes useful when its structure is visible.</figcaption>
+        <figcaption>
+          An original interface study informed by Rembrandt’s chiaroscuro and
+          the quiet frontal presence associated with the “Mona Lisa of London.”
+          No artwork image is reproduced.
+        </figcaption>
       </figure>
     </div>
 
-    <dl class="stats shell" aria-label="Dashboard statistics">
+    <dl class="stats-deck shell" aria-label="Dashboard statistics">
       <div>
         <dt>Indexed studies</dt>
         <dd id="statTotal">—</dd>
+        <span>unique papers</span>
       </div>
       <div>
         <dt>New articles</dt>
         <dd id="statNew">—</dd>
+        <span>recently detected</span>
       </div>
       <div>
         <dt>Archive selections</dt>
         <dd id="statHistorical">—</dd>
+        <span>selected since 2020</span>
       </div>
       <div>
         <dt>Last scan</dt>
         <dd id="statScan">—</dd>
+        <span>Japan Standard Time</span>
       </div>
     </dl>
   </header>
 
-  <main class="shell library-main">
-    <div class="library-heading">
-      <div>
-        <p class="folio-label">The indexed collection</p>
-        <h2>Methodological signals, arranged as working notes.</h2>
-      </div>
-      <p>
-        Search by method, author, platform, or concept. Relevance measures scope
-        alignment—not scientific quality.
-      </p>
-    </div>
-
-    <section class="instrument-panel" aria-label="Search and filter the article library">
-      <label class="search-field">
-        <span>Search the index</span>
-        <input id="searchInput" type="search"
-               placeholder="federated learning, neural ODE, model selection…"
-               autocomplete="off">
-      </label>
-
-      <label>
-        <span>Selection</span>
-        <select id="typeFilter">
-          <option value="all">All selections</option>
-          <option value="new">New articles</option>
-          <option value="historical">Archive selections</option>
-        </select>
-      </label>
-
-      <label>
-        <span>Year</span>
-        <select id="yearFilter">
-          <option value="all">All years</option>
-        </select>
-      </label>
-
-      <label>
-        <span>Order</span>
-        <select id="sortOrder">
-          <option value="reported-desc">Recently indexed</option>
-          <option value="published-desc">Recently published</option>
-          <option value="score-desc">Highest relevance</option>
-        </select>
-      </label>
-
-      <button id="clearFilters" class="clear-button" type="button">Reset</button>
-    </section>
-
-    <div class="result-bar">
-      <p id="resultCount" aria-live="polite">Loading the index…</p>
-      <p>Abstract-only evidence <span aria-hidden="true">·</span> Full text is never analyzed</p>
-    </div>
-
-    <section id="articles" class="article-list" aria-label="Article folios"></section>
-
-    <section id="emptyState" class="empty-state" hidden>
-      <p class="folio-label">No matching record</p>
-      <h2>Try another method, year, or selection type.</h2>
-    </section>
-
-    <section id="errorState" class="empty-state error-state" hidden>
-      <p class="folio-label">Catalog unavailable</p>
-      <h2>The article data could not be loaded.</h2>
-    </section>
-
-    <noscript>
-      <section class="empty-state">
-        <h2>JavaScript is required to search and render the catalog.</h2>
+  <main class="catalog-shell">
+    <div class="shell">
+      <section class="catalog-heading" aria-labelledby="catalog-title">
+        <div>
+          <p class="folio-label">Selected methods in view</p>
+          <h2 id="catalog-title">The article library</h2>
+        </div>
+        <p>
+          Search by method, author, or term. Each entry separates bibliographic
+          evidence from abstract-based interpretation.
+        </p>
       </section>
-    </noscript>
+
+      <section class="instrument-panel" aria-label="Search and filter the article library">
+        <label class="search-field">
+          <span>Search</span>
+          <input id="searchInput" type="search"
+                 placeholder="federated learning, neural ODE, model selection…"
+                 autocomplete="off">
+        </label>
+
+        <label>
+          <span>Selection</span>
+          <select id="typeFilter">
+            <option value="all">All selections</option>
+            <option value="new">New articles</option>
+            <option value="historical">Archive selections</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Publication year</span>
+          <select id="yearFilter">
+            <option value="all">All years</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Order</span>
+          <select id="sortOrder">
+            <option value="reported-desc">Most recently indexed</option>
+            <option value="published-desc">Most recently published</option>
+            <option value="score-desc">Highest relevance score</option>
+          </select>
+        </label>
+
+        <button id="clearFilters" class="clear-button" type="button">Reset</button>
+      </section>
+
+      <div class="result-bar">
+        <p id="resultCount" aria-live="polite">Loading the studies…</p>
+        <p><span class="status-dot" aria-hidden="true"></span>Abstract-only evidence</p>
+      </div>
+
+      <section id="articles" class="article-list" aria-label="Article studies"></section>
+
+      <section id="emptyState" class="empty-state" hidden>
+        <p class="folio-label">Nothing in view</p>
+        <h2>Try another term or clear the filters.</h2>
+      </section>
+
+      <section id="errorState" class="empty-state error-state" hidden>
+        <p class="folio-label">Catalog unavailable</p>
+        <h2>The article data could not be loaded.</h2>
+      </section>
+
+      <noscript>
+        <section class="empty-state">
+          <h2>JavaScript is required to search and render the catalog.</h2>
+        </section>
+      </noscript>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <p class="footer-mark">P×A / METHODOLOGY ATLAS</p>
-        <p>Bibliographic metadata and abstracts only. No full-text interpretation.</p>
+        <strong>PopPK × AI Methodology Atlas</strong>
+        <p>Bibliographic metadata and abstracts only. Full texts are not fetched or interpreted.</p>
       </div>
       <div class="footer-links">
         <a href="./method.html">Program and scoring method</a>
         <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Source code</a>
+           target="_blank" rel="noopener noreferrer">Source code ↗</a>
       </div>
     </div>
   </footer>
