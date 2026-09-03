@@ -17,6 +17,6 @@ Dashboard: https://nakamarusan.github.io/poppk-ai-literature-monitor/
 
 Program and scoring method: https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html
 
-The interface combines a chiaroscuro palette with an original rotating geometric observation instrument. No artwork image or traced composition is embedded.
+The Pages interface uses a clean, system-native visual language with generous spacing, layered translucent materials, high-contrast typography, touch-friendly controls, and optional geometric motion. All interface graphics are original; no third-party product imagery or brand assets are embedded.
 
 The 0–100 relevance score measures alignment with the monitoring scope, not scientific quality, validity, novelty, or clinical usefulness.
