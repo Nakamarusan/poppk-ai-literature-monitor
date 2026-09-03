@@ -1,0 +1,202 @@
+/*
+ * Rotating geometric hero study.
+ * This file restores the earlier observation instrument while preserving the
+ * current chiaroscuro layout, typography, article cards, and color system.
+ */
+
+.observatory {
+  position: relative;
+  align-self: center;
+  min-width: 0;
+  margin: 0;
+  padding: 22px 22px 18px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(247, 217, 170, 0.20);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 52% 42%, rgba(201, 137, 92, 0.12), transparent 44%),
+    linear-gradient(145deg, rgba(255, 239, 211, 0.055), rgba(18, 11, 8, 0.32)),
+    rgba(17, 10, 7, 0.78);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.42),
+    inset 0 0 90px rgba(201, 137, 92, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.observatory::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12px;
+  border: 1px solid rgba(247, 217, 170, 0.07);
+  border-radius: 22px;
+  content: "";
+  pointer-events: none;
+}
+
+.observatory::after {
+  position: absolute;
+  z-index: -1;
+  top: 17%;
+  left: 19%;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(219, 164, 118, 0.06);
+  filter: blur(34px);
+  content: "";
+  pointer-events: none;
+}
+
+.observatory-caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 3px 5px 0;
+}
+
+.observatory-caption span {
+  color: #e6b982;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.observatory-caption p {
+  max-width: 230px;
+  margin: 0;
+  color: rgba(247, 226, 194, 0.46);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 0.76rem;
+  font-style: italic;
+  text-align: right;
+}
+
+.observatory svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  overflow: visible;
+}
+
+.observatory .observatory-glow {
+  opacity: 0.9;
+}
+
+.observatory .construction-grid {
+  fill: none;
+  stroke: rgba(247, 226, 194, 0.13);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.observatory .orbit {
+  fill: none;
+  stroke: rgba(224, 161, 111, 0.70);
+  stroke-width: 1.15;
+  transform-box: fill-box;
+  transform-origin: center;
+  vector-effect: non-scaling-stroke;
+}
+
+.observatory .orbit-two {
+  stroke: rgba(125, 155, 140, 0.64);
+}
+
+.observatory .signal-trace {
+  fill: none;
+  stroke: url(#traceGradient);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgba(224, 161, 111, 0.22));
+  vector-effect: non-scaling-stroke;
+}
+
+.observatory .study-points {
+  fill: #e0a16f;
+  filter: drop-shadow(0 0 6px rgba(224, 161, 111, 0.44));
+}
+
+.observatory .study-notes {
+  fill: rgba(247, 226, 194, 0.57);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.observatory figcaption {
+  position: relative;
+  z-index: 2;
+  max-width: 410px;
+  margin: -2px 4px 0;
+  color: rgba(247, 226, 194, 0.43);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 0.74rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@keyframes observatory-orbit-forward {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes observatory-orbit-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+.observatory .orbit-one {
+  animation: observatory-orbit-forward 48s linear infinite;
+}
+
+.observatory .orbit-two {
+  animation: observatory-orbit-reverse 64s linear infinite;
+}
+
+@media (max-width: 980px) {
+  .observatory {
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .observatory {
+    padding: 18px 14px 15px;
+    border-radius: 24px;
+  }
+
+  .observatory::before {
+    inset: 9px;
+    border-radius: 17px;
+  }
+
+  .observatory-caption {
+    display: block;
+    padding-inline: 4px;
+  }
+
+  .observatory-caption p {
+    max-width: none;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .observatory .study-notes {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observatory .orbit-one,
+  .observatory .orbit-two {
+    animation: none;
+  }
+}
