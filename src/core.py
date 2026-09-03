@@ -1,4 +1,4 @@
-"""Shared models, matching rules, persistence, and HTTP helpers."""
+"""Shared data models, screening rules, persistence, and HTTP helpers."""
 from __future__ import annotations
 
 import datetime as dt
@@ -24,7 +24,14 @@ ARXIV_VERSION = re.compile(r"v\d+$", re.I)
 
 
 class MonitorError(RuntimeError):
-    pass
+    """Raised when a monitor operation cannot be completed safely."""
+
+
+@dataclass
+class HttpResponse:
+    body: bytes
+    content_type: str
+    final_url: str
 
 
 @dataclass
@@ -39,6 +46,13 @@ class Paper:
     url: str = ""
     abstract: str = ""
     publication_type: str = ""
+    pmcid: str = ""
+    is_open_access: bool = False
+    full_text_url: str = ""
+    full_text: str = ""
+    full_text_source: str = ""
+    full_text_sections: list[str] = field(default_factory=list)
+    full_text_license: str = ""
 
     def title_key(self) -> str:
         digest = hashlib.sha256(normalize_title(self.title).encode()).hexdigest()[:24]
@@ -49,6 +63,8 @@ class Paper:
         doi = normalize_doi(self.doi)
         if doi:
             keys.insert(0, "doi:" + doi)
+        if self.pmcid:
+            keys.append("pmcid:" + clean(self.pmcid).lower())
         for source, source_id in zip(self.sources, self.source_ids):
             if not source_id:
                 continue
@@ -77,11 +93,20 @@ def clean(value: Any) -> str:
 
 def normalize_title(value: str) -> str:
     value = unicodedata.normalize("NFKC", clean(value)).casefold()
-    return SPACE.sub(" ", re.sub(r"[^\w]+", " ", value, flags=re.UNICODE)).strip()
+    return SPACE.sub(
+        " ", re.sub(r"[^\w]+", " ", value, flags=re.UNICODE)
+    ).strip()
 
 
 def normalize_doi(value: str) -> str:
     return DOI_PREFIX.sub("", clean(value)).lower().rstrip(". ")
+
+
+def normalize_pmcid(value: str) -> str:
+    value = clean(value).upper()
+    if not value:
+        return ""
+    return value if value.startswith("PMC") else "PMC" + value
 
 
 def parse_date(value: str) -> dt.date | None:
@@ -101,12 +126,23 @@ def parse_date(value: str) -> dt.date | None:
     return None
 
 
-def request(url: str, *, method: str = "GET", payload: dict[str, Any] | None = None,
-            headers: dict[str, str] | None = None, accept: str = "application/json",
-            retries: int = 4) -> bytes:
+def request_response(
+    url: str,
+    *,
+    method: str = "GET",
+    payload: dict[str, Any] | None = None,
+    headers: dict[str, str] | None = None,
+    accept: str = "application/json",
+    retries: int = 4,
+    timeout: int = 45,
+    max_bytes: int = 20_000_000,
+) -> HttpResponse:
     request_headers = {
         "Accept": accept,
-        "User-Agent": "poppk-ai-literature-monitor/1.0 (+https://github.com/Nakamarusan/poppk-ai-literature-monitor)",
+        "User-Agent": (
+            "poppk-ai-literature-monitor/4.0 "
+            "(+https://github.com/Nakamarusan/poppk-ai-literature-monitor)"
+        ),
     }
     if headers:
         request_headers.update(headers)
@@ -118,20 +154,37 @@ def request(url: str, *, method: str = "GET", payload: dict[str, Any] | None = N
     for attempt in range(max(1, retries)):
         try:
             req = Request(url, data=body, headers=request_headers, method=method)
-            with urlopen(req, timeout=45) as response:
-                return response.read()
+            with urlopen(req, timeout=timeout) as response:
+                data = response.read(max_bytes + 1)
+                if len(data) > max_bytes:
+                    raise MonitorError(
+                        f"Response exceeded the {max_bytes}-byte safety limit"
+                    )
+                return HttpResponse(
+                    body=data,
+                    content_type=clean(response.headers.get("Content-Type")),
+                    final_url=clean(response.geturl()),
+                )
         except HTTPError as exc:
             last = exc
             retryable = exc.code == 429 or 500 <= exc.code < 600
             if not retryable or attempt + 1 == retries:
                 detail = clean(exc.read().decode(errors="replace"))[:500]
-                raise MonitorError(f"HTTP {exc.code}: {detail or exc.reason}") from exc
+                raise MonitorError(
+                    f"HTTP {exc.code}: {detail or exc.reason}"
+                ) from exc
+        except MonitorError:
+            raise
         except (URLError, TimeoutError, OSError) as exc:
             last = exc
             if attempt + 1 == retries:
                 raise MonitorError(f"Network error: {clean(exc)}") from exc
-        time.sleep(min(2 ** attempt, 20))
+        time.sleep(min(2**attempt, 20))
     raise MonitorError(str(last))
+
+
+def request(url: str, **kwargs: Any) -> bytes:
+    return request_response(url, **kwargs).body
 
 
 def request_json(url: str, **kwargs: Any) -> Any:
@@ -160,9 +213,29 @@ def merge(target: Paper, incoming: Paper) -> None:
             target.source_ids.append(pair[1])
     if len(incoming.abstract) > len(target.abstract):
         target.abstract = incoming.abstract
-    for name in ("authors", "venue", "date", "doi", "url", "publication_type"):
+    if len(incoming.full_text) > len(target.full_text):
+        target.full_text = incoming.full_text
+        target.full_text_url = incoming.full_text_url
+        target.full_text_source = incoming.full_text_source
+        target.full_text_sections = list(incoming.full_text_sections)
+        target.full_text_license = incoming.full_text_license
+    target.is_open_access = target.is_open_access or incoming.is_open_access
+    for name in (
+        "authors",
+        "venue",
+        "date",
+        "doi",
+        "url",
+        "publication_type",
+        "pmcid",
+        "full_text_url",
+        "full_text_source",
+        "full_text_license",
+    ):
         if not getattr(target, name) and getattr(incoming, name):
             setattr(target, name, getattr(incoming, name))
+    if not target.full_text_sections and incoming.full_text_sections:
+        target.full_text_sections = list(incoming.full_text_sections)
 
 
 def deduplicate(papers: Iterable[Paper]) -> list[Paper]:
@@ -184,7 +257,11 @@ def deduplicate(papers: Iterable[Paper]) -> list[Paper]:
 def term_hits(text: str, terms: Sequence[str]) -> list[str]:
     hits: list[str] = []
     for term in terms:
-        pattern = re.compile(term[3:], re.I) if term.startswith("re:") else re.compile(re.escape(term), re.I)
+        pattern = (
+            re.compile(term[3:], re.I)
+            if term.startswith("re:")
+            else re.compile(re.escape(term), re.I)
+        )
         if pattern.search(text):
             hits.append(term.removeprefix("re:"))
     return hits
@@ -196,26 +273,37 @@ def screen(paper: Paper, config: dict[str, Any]) -> Match | None:
     excluded_text = f"{paper.publication_type} {title}".lower()
     if any(term.lower() in excluded_text for term in config["exclude_terms"]):
         return None
-    pk, ai, method = (term_hits(combined, config[name])
-                      for name in ("pk_terms", "ai_terms", "method_terms"))
+    pk, ai, method = (
+        term_hits(combined, config[name])
+        for name in ("pk_terms", "ai_terms", "method_terms")
+    )
     if not pk or not ai:
         return None
-    methodological_ai = {term.lower() for term in config["methodological_ai_terms"]}
+    methodological_ai = {
+        term.lower() for term in config["methodological_ai_terms"]
+    }
     if not method and not any(hit.lower() in methodological_ai for hit in ai):
         return None
-    title_hits = sum(len(term_hits(title, config[name]))
-                     for name in ("pk_terms", "ai_terms", "method_terms"))
+    title_hits = sum(
+        len(term_hits(title, config[name]))
+        for name in ("pk_terms", "ai_terms", "method_terms")
+    )
     score = 2 * title_hits + len(pk) + len(ai) + len(method)
-    both_in_title = term_hits(title, config["pk_terms"]) and term_hits(title, config["ai_terms"])
+    both_in_title = bool(
+        term_hits(title, config["pk_terms"])
+        and term_hits(title, config["ai_terms"])
+    )
     priority = "High" if score >= 14 or both_in_title else "Medium"
     return Match(paper, score, priority, pk, ai, method)
 
 
-def load_json(path: Path, default: dict[str, Any] | None = None) -> dict[str, Any]:
+def load_json(
+    path: Path, default: dict[str, Any] | None = None
+) -> dict[str, Any]:
     if not path.exists() and default is not None:
         return default
     try:
-        value = json.loads(path.read_text())
+        value = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise MonitorError(f"Cannot read {path}: {exc}") from exc
     if not isinstance(value, dict):
@@ -226,7 +314,10 @@ def load_json(path: Path, default: dict[str, Any] | None = None) -> dict[str, An
 def save_json(path: Path, value: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + ".tmp")
-    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+    temp.write_text(
+        json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     temp.replace(path)
 
 
