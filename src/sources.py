@@ -1,4 +1,4 @@
-"""Literature-database clients."""
+"""Clients for Europe PMC, Crossref, and arXiv."""
 from __future__ import annotations
 
 import datetime as dt
@@ -14,6 +14,7 @@ from .core import (
     clean,
     date_parts,
     normalize_doi,
+    normalize_pmcid,
     parse_date,
     request,
     request_json,
@@ -57,6 +58,8 @@ def fetch_europe_pmc(
         if isinstance(pub_type, list):
             pub_type = ", ".join(map(clean, pub_type))
         source = clean(item.get("source") or "MED")
+        pmcid = normalize_pmcid(item.get("pmcid") or "")
+        open_access = clean(item.get("isOpenAccess")).upper() == "Y"
         papers.append(
             Paper(
                 ["Europe PMC"],
@@ -73,6 +76,8 @@ def fetch_europe_pmc(
                 f"https://europepmc.org/article/{quote(source)}/{quote(source_id)}",
                 clean(item.get("abstractText")),
                 clean(pub_type),
+                pmcid=pmcid,
+                is_open_access=open_access,
             )
         )
     return papers
@@ -104,9 +109,7 @@ def fetch_crossref(
             for item in data.get("message", {}).get("items", []):
                 titles = item.get("title", [])
                 title = clean(
-                    titles[0]
-                    if isinstance(titles, list) and titles
-                    else titles
+                    titles[0] if isinstance(titles, list) and titles else titles
                 )
                 doi = normalize_doi(item.get("DOI") or "")
                 if not title or not doi:
@@ -141,6 +144,14 @@ def fetch_crossref(
                         published := date_parts(item[key])
                     ):
                         break
+                licenses = item.get("license") or []
+                open_access = any(
+                    "creativecommons.org" in clean(
+                        license_item.get("URL")
+                    ).casefold()
+                    for license_item in licenses
+                    if isinstance(license_item, dict)
+                )
                 papers.append(
                     Paper(
                         ["Crossref"],
@@ -153,6 +164,7 @@ def fetch_crossref(
                         f"https://doi.org/{doi}",
                         clean(item.get("abstract")),
                         clean(item.get("type")),
+                        is_open_access=open_access,
                     )
                 )
             time.sleep(0.2)
@@ -200,15 +212,12 @@ def fetch_arxiv(
         "sortOrder": "descending",
     }
 
-    # arXiv states that the same query need not be made more than once per day.
-    # A small random delay also avoids synchronizing this request with many other
-    # scheduled jobs using shared hosted-runner infrastructure.
     jitter_seconds = max(0, int(settings.get("jitter_seconds", 60)))
     if jitter_seconds:
         time.sleep(random.uniform(0, jitter_seconds))
 
     contact = os.getenv("CONTACT_EMAIL", "").strip()
-    user_agent = "poppk-ai-literature-monitor/3.0"
+    user_agent = "poppk-ai-literature-monitor/4.0"
     if contact:
         user_agent += f" (mailto:{contact})"
     payload = request(
@@ -247,6 +256,7 @@ def fetch_arxiv(
                 url.replace("http://", "https://"),
                 clean(entry.findtext("a:summary", "", ns)),
                 "preprint",
+                is_open_access=True,
             )
         )
     return papers
