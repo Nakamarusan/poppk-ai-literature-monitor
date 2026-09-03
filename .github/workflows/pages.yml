@@ -31,6 +31,18 @@ jobs:
         with:
           ref: main
 
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Validate static site
+        shell: bash
+        run: |
+          python -m json.tool docs/articles.json > /dev/null
+          node --check docs/assets/app.js
+          python -m unittest discover -s tests -p "test_site_generator.py" -v
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
