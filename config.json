@@ -26,6 +26,7 @@
     "enabled": true,
     "start_year": 2020,
     "count": 1,
+    "require_abstract": true,
     "sources": [
       "europe_pmc",
       "crossref"
@@ -167,5 +168,5 @@
     "max_abstract_chars": 7000,
     "max_output_tokens": 700
   },
-  "schema_version": 5
+  "schema_version": 6
 }
