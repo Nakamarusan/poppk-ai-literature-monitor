@@ -274,6 +274,7 @@ def refresh_catalog(
         if not located:
             continue
         old_id, record = located
+        previous_abstract = clean(record.get("abstract", ""))
         paper = _enriched_paper(record, incoming)
         match = screen(paper, config)
         if not match:
@@ -313,9 +314,7 @@ def refresh_catalog(
                 record[field_name] = value
                 changed = True
 
-        abstract_improved = len(clean(paper.abstract)) > len(
-            clean(located[1].get("abstract", ""))
-        )
+        abstract_improved = len(clean(paper.abstract)) > len(previous_abstract)
         summary_source = record.get("summary", {}).get("source", "")
         if abstract_improved and summary_source in {
             "",
