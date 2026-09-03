@@ -1,7 +1,8 @@
-"""Article catalog, Markdown report, and GitHub Issue output."""
+"""Canonical catalog, Markdown report, and GitHub Issue output."""
 
 from __future__ import annotations
 
+import copy
 import datetime as dt
 import os
 from pathlib import Path
@@ -19,6 +20,7 @@ from .core import (
 from .insights import ResearchInsight
 
 SELECTION_MARKER = "<!-- poppk-ai-selection -->"
+_GENERIC_VENUES = {"", "Europe PMC", "Crossref", "arXiv"}
 
 
 def article_record(
@@ -27,7 +29,7 @@ def article_record(
     selection_type: str,
     now: dt.datetime,
 ) -> dict[str, Any]:
-    """Convert a selected paper into the canonical JSON catalog schema."""
+    """Convert one selected paper to the canonical catalog schema."""
 
     paper = match.paper
     return {
@@ -36,7 +38,7 @@ def article_record(
         "url": paper.url or (
             f"https://doi.org/{normalize_doi(paper.doi)}" if paper.doi else ""
         ),
-        "authors": paper.authors,
+        "authors": [author for author in paper.authors if clean(author)],
         "venue": paper.venue or ", ".join(paper.sources),
         "publication_date": paper.date,
         "doi": normalize_doi(paper.doi),
@@ -65,26 +67,101 @@ def article_record(
     }
 
 
+def _first_value(*values: Any) -> Any:
+    return next((value for value in values if value not in (None, "", [])), "")
+
+
+def _merge_catalog_record(
+    existing: dict[str, Any], incoming: dict[str, Any]
+) -> dict[str, Any]:
+    """Merge without replacing richer metadata with an incomplete record."""
+
+    merged = copy.deepcopy(existing)
+    merged["title"] = _first_value(incoming.get("title"), merged.get("title"))
+    merged["doi"] = _first_value(incoming.get("doi"), merged.get("doi"))
+    merged["url"] = _first_value(incoming.get("url"), merged.get("url"))
+    merged["publication_date"] = _first_value(
+        incoming.get("publication_date"), merged.get("publication_date")
+    )
+
+    incoming_authors = incoming.get("authors", [])
+    if len(incoming_authors) > len(merged.get("authors", [])):
+        merged["authors"] = incoming_authors
+
+    current_venue = merged.get("venue", "")
+    incoming_venue = incoming.get("venue", "")
+    if current_venue in _GENERIC_VENUES and incoming_venue not in _GENERIC_VENUES:
+        merged["venue"] = incoming_venue
+    elif not current_venue:
+        merged["venue"] = incoming_venue
+
+    if len(clean(incoming.get("abstract", ""))) > len(
+        clean(merged.get("abstract", ""))
+    ):
+        merged["abstract"] = incoming["abstract"]
+
+    merged["sources"] = list(
+        dict.fromkeys([*merged.get("sources", []), *incoming.get("sources", [])])
+    )
+    merged["selection_type"] = (
+        "new"
+        if "new" in {
+            merged.get("selection_type"),
+            incoming.get("selection_type"),
+        }
+        else incoming.get("selection_type", merged.get("selection_type", "historical"))
+    )
+
+    timestamps = [
+        value
+        for value in (merged.get("reported_at"), incoming.get("reported_at"))
+        if value
+    ]
+    if timestamps:
+        merged["reported_at"] = min(timestamps)
+
+    # Scoring and evidence reflect the current configuration. Preserve an
+    # informative summary if an incoming duplicate lacks an abstract.
+    for field_name in ("score", "evidence"):
+        if incoming.get(field_name):
+            merged[field_name] = incoming[field_name]
+    if incoming.get("summary", {}).get("source") != "No abstract available":
+        merged["summary"] = incoming.get("summary", merged.get("summary", {}))
+
+    return merged
+
+
 def update_catalog(
     catalog: dict[str, Any],
     records: Sequence[dict[str, Any]],
     scan_at: str,
 ) -> dict[str, Any]:
-    """Merge records by canonical identifier and update the last scan time."""
+    """Merge selected records by canonical identifier and update scan time."""
 
     merged = {
-        article["id"]: article for article in catalog.get("articles", [])
+        article["id"]: copy.deepcopy(article)
+        for article in catalog.get("articles", [])
+        if isinstance(article, dict) and article.get("id")
     }
     for record in records:
         existing = merged.get(record["id"])
-        if existing and len(existing.get("abstract", "")) > len(record["abstract"]):
-            record["abstract"] = existing["abstract"]
-        merged[record["id"]] = record
+        merged[record["id"]] = (
+            _merge_catalog_record(existing, record) if existing else copy.deepcopy(record)
+        )
 
+    articles = sorted(
+        merged.values(),
+        key=lambda article: (
+            article.get("reported_at", ""),
+            article.get("publication_date", ""),
+            article.get("title", "").casefold(),
+        ),
+        reverse=True,
+    )
     return {
         "schema_version": 2,
         "last_scan_at": scan_at,
-        "articles": list(merged.values()),
+        "articles": articles,
     }
 
 
@@ -97,6 +174,12 @@ def _score_line(record: dict[str, Any]) -> str:
     )
 
 
+def _markdown_text(value: str) -> str:
+    """Escape the minimal characters that can break a Markdown link label."""
+
+    return clean(value).replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]")
+
+
 def render_report(
     records: Sequence[dict[str, Any]],
     now: dt.datetime,
@@ -105,7 +188,7 @@ def render_report(
     warnings: dict[str, str],
     archive_start_year: int,
 ) -> str:
-    """Render the human-readable report used in both Markdown and Issues."""
+    """Render the report used for both Markdown files and GitHub Issues."""
 
     new_count = sum(item["selection_type"] == "new" for item in records)
     archive_count = sum(
@@ -171,10 +254,16 @@ def render_report(
             if record["selection_type"] == "new"
             else f"Archive article ({archive_start_year}+ fallback)"
         )
+        title = _markdown_text(record["title"])
+        heading = (
+            f"## {number}. [{title}]({record['url']})"
+            if record.get("url")
+            else f"## {number}. {title}"
+        )
 
         lines.extend(
             (
-                f"## {number}. [{record['title']}]({record['url']})",
+                heading,
                 "",
                 f"- **Selection:** {selection}",
                 f"- **Authors:** {authors or 'Not available'}",
