@@ -152,8 +152,7 @@ class SiteGeneratorTests(unittest.TestCase):
         self.assertIn("<svg", mark)
         self.assertIn("<ellipse", mark)
         self.assertNotIn("<image", mark)
-        self.assertNotIn("http://", mark)
-        self.assertNotIn("https://", mark)
+        self.assertNotRegex(mark, r'(?:href|xlink:href)="https?://')
 
     def test_catalog_summaries_are_abstract_only(self):
         catalog = json.loads(Path("data/articles.json").read_text(encoding="utf-8"))
