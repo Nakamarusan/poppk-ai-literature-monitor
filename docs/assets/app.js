@@ -1,4 +1,5 @@
 const catalog = { articles: [] };
+let cardObserver = null;
 
 const $ = (selector) => document.querySelector(selector);
 const ui = {
@@ -51,16 +52,18 @@ const displayDate = (value) => {
   }).format(new Date(time));
 };
 
-const authors = (article) =>
-  Array.isArray(article.authors)
-    ? article.authors.join(", ")
-    : article.authors || "Authors unavailable";
+const authors = (article) => {
+  if (Array.isArray(article.authors)) return article.authors.join(", ");
+  return article.authors || "Authors unavailable";
+};
 
 const score = (article) => {
   const raw = article.score;
-  if (typeof raw === "number") return { total: raw, priority: "", components: {} };
+  if (typeof raw === "number") {
+    return { total: raw, priority: "", components: {} };
+  }
   return {
-    total: Math.max(0, Math.min(Number(raw?.total) || 0, 100)),
+    total: Number(raw?.total) || 0,
     priority: raw?.priority || "",
     components: raw?.components || {},
   };
@@ -91,13 +94,15 @@ const articleYear = (article) => {
 
 const typeBadge = (type) =>
   type === "historical"
-    ? '<span class="badge badge-historical">Archive selection</span>'
-    : '<span class="badge badge-new">New article</span>';
+    ? '<span class="badge badge-historical"><i></i>Archive selection</span>'
+    : '<span class="badge badge-new"><i></i>New article</span>';
 
-const priorityBadge = (value) =>
-  value
-    ? `<span class="badge badge-${escapeHtml(value.toLowerCase())}">${escapeHtml(value)} relevance</span>`
-    : "";
+const priorityBadge = (value) => {
+  if (!value) return "";
+  return `<span class="badge badge-${escapeHtml(value.toLowerCase())}">
+    ${escapeHtml(value)} relevance
+  </span>`;
+};
 
 const tagList = (values) => {
   const unique = [...new Set(values.filter(Boolean))].slice(0, 18);
@@ -108,7 +113,7 @@ const tagList = (values) => {
 };
 
 const insight = (number, title, value) => `
-  <section class="insight insight-${number}">
+  <section class="insight">
     <span class="insight-number">${number}</span>
     <div>
       <h3>${escapeHtml(title)}</h3>
@@ -125,7 +130,9 @@ const scoreBreakdown = (components) => {
     ["Intersection", components.intersection],
   ];
   return `<div class="score-breakdown">${labels
-    .map(([label, value]) => `<span><b>${escapeHtml(label)}</b>${Number(value) || 0}</span>`)
+    .map(([label, value]) => `
+      <span><small>${escapeHtml(label)}</small><strong>${Number(value) || 0}</strong></span>
+    `)
     .join("")}</div>`;
 };
 
@@ -134,88 +141,105 @@ const articleCard = (article, index) => {
   const articleSummary = summary(article);
   const sourceUrl = safeUrl(article.url);
   const reported = article.reported_at || article.report_date || "Unknown";
+  const components = articleScore.components;
+  const doi = article.doi
+    ? `<span class="doi">DOI&nbsp; ${escapeHtml(article.doi)}</span>`
+    : "";
   const sourceLabel = article.venue
     || (Array.isArray(article.sources) ? article.sources.join(", ") : article.source)
     || "Source unavailable";
-  const doi = article.doi
-    ? `<span class="doi">DOI ${escapeHtml(article.doi)}</span>`
-    : "";
-  const folio = String(index + 1).padStart(2, "0");
+  const featured = index === 0 ? " paper-card-featured" : "";
+  const scoreTotal = Math.min(Math.max(articleScore.total, 0), 100);
 
   return `
-    <article class="paper-card reveal" id="${escapeHtml(article.id || article.title)}"
-             style="--score:${articleScore.total}" data-priority="${escapeHtml(articleScore.priority.toLowerCase())}">
-      <aside class="folio-rail" aria-hidden="true">
-        <span>Folio ${folio}</span>
-        <strong>R.${String(articleScore.total).padStart(2, "0")}</strong>
-      </aside>
-
-      <div class="paper-body">
-        <div class="paper-main">
-          <div class="paper-topline">
-            <div class="badge-group">
-              ${typeBadge(article.selection_type)}
-              ${priorityBadge(articleScore.priority)}
-            </div>
-            <span class="reported-date">Indexed ${escapeHtml(reported)}</span>
+    <article class="paper-card${featured}" id="${escapeHtml(article.id || article.title)}"
+             style="--card-order:${index}; --score:${scoreTotal}">
+      <span class="folio-index">${String(index + 1).padStart(2, "0")}</span>
+      <div class="paper-main">
+        <div class="paper-topline">
+          <div class="badge-row">
+            ${typeBadge(article.selection_type)}
+            ${priorityBadge(articleScore.priority)}
           </div>
+          <span class="reported-date">Indexed ${escapeHtml(reported)}</span>
+        </div>
 
-          <div class="paper-heading-grid">
-            <div>
-              <p class="paper-kicker">${escapeHtml(sourceLabel)} · ${escapeHtml(displayDate(article.publication_date))}</p>
-              <h2 class="paper-title">
-                <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">
-                  ${escapeHtml(article.title)}
-                </a>
-              </h2>
-              <p class="metadata">${escapeHtml(authors(article))}</p>
-              <div class="paper-actions">
-                <a class="source-link" href="${escapeHtml(sourceUrl)}"
-                   target="_blank" rel="noopener noreferrer">Open source record ↗</a>
-                ${doi}
-              </div>
-            </div>
+        <div class="paper-heading">
+          <div class="paper-heading-copy">
+            <h2 class="paper-title">
+              <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">
+                ${escapeHtml(article.title)}
+              </a>
+            </h2>
 
-            <div class="score-dial" role="img"
-                 aria-label="Relevance score ${articleScore.total} out of 100">
-              <div class="score-dial-core">
-                <strong>${articleScore.total}</strong>
-                <span>/100</span>
-              </div>
-              <small>scope relevance</small>
+            <p class="metadata">
+              <span>${escapeHtml(authors(article))}</span>
+              <span>${escapeHtml(sourceLabel)}</span>
+              <span>${escapeHtml(displayDate(article.publication_date))}</span>
+            </p>
+
+            <div class="paper-actions">
+              <a class="source-link" href="${escapeHtml(sourceUrl)}"
+                 target="_blank" rel="noopener noreferrer">
+                Open source record <span aria-hidden="true">↗</span>
+              </a>
+              ${doi}
             </div>
           </div>
 
-          <div class="insight-grid">
-            ${insight("01", "Prior limitation", articleSummary.prior_limitation)}
-            ${insight("02", "Methodological contribution", articleSummary.contribution)}
-            ${insight("03", "What becomes possible", articleSummary.new_capability)}
-            ${insight("04", "Why it matters", articleSummary.significance)}
+          <div class="score-orbit" role="img"
+               aria-label="Relevance score ${scoreTotal} out of 100">
+            <div class="score-orbit-ring"></div>
+            <div class="score-orbit-core">
+              <strong>${scoreTotal}</strong>
+              <span>/100</span>
+            </div>
+            <small>scope alignment</small>
           </div>
         </div>
 
-        <details class="paper-details">
-          <summary>Abstract, matched terms, and score construction</summary>
-          <div class="details-content">
-            <div class="detail-column detail-abstract">
-              <h3>Available abstract</h3>
-              <p>${escapeHtml(article.abstract || "No abstract was available.")}</p>
-            </div>
-            <div class="detail-column">
-              <h3>Matched terms</h3>
-              ${tagList(terms(article))}
-              <h3>Score construction</h3>
-              ${scoreBreakdown(articleScore.components)}
-              <p class="detail-note">
-                Relevance measures scope alignment, not scientific quality.
-                <a href="./method.html#score">View the scoring method.</a>
-              </p>
-              <h3>Interpretation basis</h3>
-              <p>${escapeHtml(articleSummary.source || "Abstract-only deterministic summary")}</p>
-            </div>
-          </div>
-        </details>
+        <div class="insight-grid">
+          ${insight("01", "Prior limitation", articleSummary.prior_limitation)}
+          ${insight("02", "Methodological contribution", articleSummary.contribution)}
+          ${insight("03", "What becomes possible", articleSummary.new_capability)}
+          ${insight("04", "Why it matters", articleSummary.significance)}
+        </div>
       </div>
+
+      <details class="paper-details">
+        <summary>
+          <span>Abstract, matched terms, and score construction</span>
+          <i aria-hidden="true"></i>
+        </summary>
+        <div class="details-content">
+          <section>
+            <h3>Available abstract</h3>
+            <p>${escapeHtml(article.abstract || "No abstract was available.")}</p>
+          </section>
+
+          <section>
+            <h3>Matched terms</h3>
+            ${tagList(terms(article))}
+          </section>
+
+          <section>
+            <h3>Relevance score</h3>
+            <p>
+              This score measures scope alignment, not scientific quality.
+              <a href="./method.html#score">See the scoring method.</a>
+            </p>
+            ${scoreBreakdown(components)}
+          </section>
+
+          <section>
+            <h3>Interpretation basis</h3>
+            <p>${escapeHtml(
+              articleSummary.source
+              || "Abstract-only deterministic summary"
+            )}</p>
+          </section>
+        </div>
+      </details>
     </article>
   `;
 };
@@ -233,23 +257,32 @@ const sortArticles = (articles, order) => [...articles].sort((a, b) => {
   return parseReported(b.reported_at) - parseReported(a.reported_at);
 });
 
-const observeCards = () => {
-  if (!("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver((entries) => {
+const revealCards = () => {
+  if (cardObserver) cardObserver.disconnect();
+  const cards = [...ui.list.querySelectorAll(".paper-card")];
+
+  if (!("IntersectionObserver" in window)
+      || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    cards.forEach((card) => card.classList.add("is-visible"));
+    return;
+  }
+
+  cardObserver = new IntersectionObserver((entries) => {
     for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add("is-visible");
+      cardObserver.unobserve(entry.target);
     }
   }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
-  document.querySelectorAll(".reveal").forEach((card) => observer.observe(card));
+
+  cards.forEach((card) => cardObserver.observe(card));
 };
 
 const render = () => {
   const query = normalize(ui.search.value);
   const selectedType = ui.type.value;
   const selectedYear = ui.year.value;
+
   const filtered = sortArticles(
     catalog.articles.filter((article) =>
       (!query || searchableText(article).includes(query))
@@ -261,8 +294,8 @@ const render = () => {
   ui.list.innerHTML = filtered.map(articleCard).join("");
   ui.list.hidden = filtered.length === 0;
   ui.empty.hidden = filtered.length !== 0;
-  ui.count.textContent = `${filtered.length} folio${filtered.length === 1 ? "" : "s"} shown`;
-  requestAnimationFrame(observeCards);
+  ui.count.textContent = `${filtered.length} ${filtered.length === 1 ? "study" : "studies"} in view`;
+  revealCards();
 };
 
 const populateYears = (years) => {
@@ -288,6 +321,26 @@ const bind = () => {
   });
 };
 
+const addGeometryMotion = () => {
+  const figure = document.querySelector(".geometry-study");
+  if (!figure || !window.matchMedia("(pointer: fine) and (prefers-reduced-motion: no-preference)").matches) {
+    return;
+  }
+
+  figure.addEventListener("pointermove", (event) => {
+    const bounds = figure.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    figure.style.setProperty("--tilt-x", `${(-y * 4).toFixed(2)}deg`);
+    figure.style.setProperty("--tilt-y", `${(x * 5).toFixed(2)}deg`);
+  });
+
+  figure.addEventListener("pointerleave", () => {
+    figure.style.setProperty("--tilt-x", "0deg");
+    figure.style.setProperty("--tilt-y", "0deg");
+  });
+};
+
 const load = async () => {
   try {
     const response = await fetch("./articles.json", { cache: "no-store" });
@@ -304,6 +357,7 @@ const load = async () => {
 
     populateYears(payload.years || []);
     bind();
+    addGeometryMotion();
     render();
   } catch (error) {
     console.error("Unable to load the article catalog", error);
