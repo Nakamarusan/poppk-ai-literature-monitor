@@ -1,0 +1,495 @@
+{
+  "schema_version": 2,
+  "last_scan_at": "2026-09-03 08:46 JST",
+  "articles": [
+    {
+      "id": "doi:10.3390/pharmaceutics18040501",
+      "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking.",
+      "url": "https://europepmc.org/article/MED/42076151",
+      "authors": [
+        "Kwack H",
+        "Kong H",
+        "Lim J",
+        "Zhang BT",
+        "Hahn J",
+        "Chang MJ"
+      ],
+      "venue": "Europe PMC",
+      "publication_date": "2026-04-18",
+      "doi": "10.3390/pharmaceutics18040501",
+      "selection_type": "historical",
+      "reported_at": "2026-09-03 08:46 JST",
+      "sources": [
+        "Europe PMC"
+      ],
+      "score": {
+        "total": 100,
+        "priority": "High",
+        "components": {
+          "pk": 30,
+          "ai": 30,
+          "method": 30,
+          "intersection": 10,
+          "total": 100
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [
+            "poppk"
+          ],
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "automated"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "pharmacometrics"
+          ],
+          "ai": [
+            "llm",
+            "agentic"
+          ],
+          "method": [
+            "optimization",
+            "model development"
+          ]
+        },
+        "terms": {
+          "pk": [
+            "poppk",
+            "population pharmacokinetic",
+            "pharmacometrics"
+          ],
+          "ai": [
+            "llm",
+            "agentic"
+          ],
+          "method": [
+            "automated",
+            "optimization",
+            "model development"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract describes NONMEM PopPK development as iterative and expertise-dependent, while naïve zero-shot LLM code often fails to run.",
+        "contribution": "It introduces a recursive, phase-specific LLM agent that coordinates several stages of NONMEM model development.",
+        "new_capability": "Multiple modeling steps can be performed through structured expert prompts rather than one-pass code generation.",
+        "significance": "The study tests whether agentic LLMs can reduce manual modeling work while remaining comparable with human experts.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "Background/Objectives: Population pharmacokinetic (PopPK) modeling in NONMEM requires iterative, expertise-dependent workflows. Naïve zero-shot prompting of general-purpose large language models (LLMs) typically produces NONMEM code that fails to execute. This study introduces PKGPT, a recursive agentic LLM system designed to automate NONMEM-based PopPK model development and benchmarks its performance against human expert models. Methods: PKGPT embeds pharmacometrics expertise into phase-specific expert-agent prompts orchestrated across five sequential phases: base model establishment, structural diagnostics, overfitting reduction, and random-effects optimization."
+    },
+    {
+      "id": "doi:10.1002/psp4.70285",
+      "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression.",
+      "url": "https://europepmc.org/article/MED/42338400",
+      "authors": [
+        "Bräm DS",
+        "Steiert B",
+        "Steffens B",
+        "Pfister M",
+        "Koch G"
+      ],
+      "venue": "Europe PMC",
+      "publication_date": "2026-07-01",
+      "doi": "10.1002/psp4.70285",
+      "selection_type": "historical",
+      "reported_at": "2026-09-02 08:44 JST",
+      "sources": [
+        "Europe PMC"
+      ],
+      "score": {
+        "total": 100,
+        "priority": "High",
+        "components": {
+          "pk": 30,
+          "ai": 30,
+          "method": 30,
+          "intersection": 10,
+          "total": 100
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [
+            "pharmacometric"
+          ],
+          "ai": [
+            "neural odes"
+          ],
+          "method": [
+            "model development",
+            "automated"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "pharmacometrics",
+            "pharmacometric",
+            "population pk pd"
+          ],
+          "ai": [
+            "neural odes"
+          ],
+          "method": [
+            "model selection",
+            "model development",
+            "workflow",
+            "automated"
+          ]
+        },
+        "terms": {
+          "pk": [
+            "pharmacometric",
+            "pharmacometrics",
+            "population pk pd"
+          ],
+          "ai": [
+            "neural odes"
+          ],
+          "method": [
+            "model development",
+            "automated",
+            "model selection",
+            "workflow"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract describes conventional model development as iterative and resource-intensive, and neural ODEs as difficult to interpret.",
+        "contribution": "It combines low-dimensional neural ODEs with LASSO-based structure selection for automated pharmacometric model development.",
+        "new_capability": "Complex PK or PD dynamics can be learned from data and reduced to a more interpretable model structure.",
+        "significance": "The method connects automated structure discovery with interpretable pharmacometric modeling instead of leaving a black-box result.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "Current pharmacometrics model development is a manual process with iterative model building, fitting, and evaluation, which can be resource-intensive and time-consuming. Existing automated approaches still rely on iterative processes and goodness-of-fit model selection. Neural ordinary differential equations can characterize complex pharmacokinetic and pharmacodynamic dynamics directly from data, but their black-box nature limits interpretability. The study combines low-dimensional neural ODEs and LASSO regression for automated pharmacometric model development. The resulting structure is evaluated as a population PK/PD modeling workflow."
+    },
+    {
+      "id": "doi:10.64898/2026.05.05.26352278",
+      "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance",
+      "url": "https://europepmc.org/article/PPR/PPR1265248",
+      "authors": [
+        "Du S",
+        "Liu D"
+      ],
+      "venue": "Europe PMC",
+      "publication_date": "2026-05-06",
+      "doi": "10.64898/2026.05.05.26352278",
+      "selection_type": "historical",
+      "reported_at": "2026-09-01 09:56 JST",
+      "sources": [
+        "Europe PMC"
+      ],
+      "score": {
+        "total": 70,
+        "priority": "High",
+        "components": {
+          "pk": 10,
+          "ai": 30,
+          "method": 30,
+          "intersection": 0,
+          "total": 70
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "automated"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "population pk pd"
+          ],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "model selection",
+            "automated",
+            "automation"
+          ]
+        },
+        "terms": {
+          "pk": [
+            "population pk pd"
+          ],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "automated",
+            "model selection",
+            "automation"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract identifies manual model selection, repeated equation rewriting, and empirical adjustment as barriers to reproducible PD modeling.",
+        "contribution": "It proposes a unified mechanistic skeleton with machine-learning assistance for automated PD model construction.",
+        "new_capability": "A common model structure can be adapted across PD scenarios without rebuilding the workflow from the beginning.",
+        "significance": "The framework aims to reduce scenario-specific coding and improve reproducibility in mechanistic PD analysis.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "Conventional pharmacodynamic modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility. This study develops PD Union, a unified, automated, and interpretable framework for mechanistic PD modeling. PD Union is built on a unified continuous dynamical skeleton and uses machine learning assistance. The framework organizes population PK/PD exposure and response modules."
+    },
+    {
+      "id": "doi:10.64898/2026.05.30.26354512",
+      "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model",
+      "url": "https://europepmc.org/article/PPR/PPR1244176",
+      "authors": [
+        "Destere A",
+        "Lombardi R",
+        "Labriffe M",
+        "Benoist C",
+        "Marquet P",
+        "Lavrut T",
+        "Gérard A",
+        "Bouveyron C",
+        "et al."
+      ],
+      "venue": "Europe PMC",
+      "publication_date": "2026-06-02",
+      "doi": "10.64898/2026.05.30.26354512",
+      "selection_type": "historical",
+      "reported_at": "2026-08-31 09:09 JST",
+      "sources": [
+        "Europe PMC"
+      ],
+      "score": {
+        "total": 60,
+        "priority": "Medium",
+        "components": {
+          "pk": 30,
+          "ai": 10,
+          "method": 20,
+          "intersection": 0,
+          "total": 60
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [
+            "population pharmacokinetic",
+            "pharmacometrics"
+          ],
+          "ai": [],
+          "method": [
+            "benchmark"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "poppk",
+            "pharmacometrics",
+            "nonlinear mixed effects"
+          ],
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": []
+        },
+        "terms": {
+          "pk": [
+            "population pharmacokinetic",
+            "pharmacometrics",
+            "poppk",
+            "nonlinear mixed effects"
+          ],
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "benchmark"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract states that privacy rules restrict patient-level data sharing and that synthetic-data effects on NLME structure remain uncertain.",
+        "contribution": "It benchmarks five generative algorithms against a two-compartment daptomycin PopPK reference.",
+        "new_capability": "Synthetic datasets can be compared on both privacy protection and preservation of PK structure and dosing guidance.",
+        "significance": "The benchmark makes the privacy-fidelity trade-off explicit for pharmacometric data sharing.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "The sharing of individual patient data is essential for advancing pharmacometrics but is limited by privacy regulations. Synthetic data generation offers an alternative, but its structural impact on nonlinear mixed-effects modeling remains largely unexplored. This study benchmarks five generative artificial intelligence algorithms by evaluating privacy and preservation of structural PK properties and clinical dosing guidance using a two-compartment daptomycin PopPK model."
+    },
+    {
+      "id": "doi:10.64898/2026.08.25.26361215",
+      "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies",
+      "url": "https://doi.org/10.64898/2026.08.25.26361215",
+      "authors": [
+        "Elisa Pettinà",
+        "Frederick Abi Chahine",
+        "Elio Campanile",
+        "Stefano Giampiccolo",
+        "Luca Marchetti"
+      ],
+      "venue": "Crossref",
+      "publication_date": "2026-08-28",
+      "doi": "10.64898/2026.08.25.26361215",
+      "selection_type": "new",
+      "reported_at": "2026-08-29 12:26 JST",
+      "sources": [
+        "Crossref"
+      ],
+      "score": {
+        "total": 100,
+        "priority": "High",
+        "components": {
+          "pk": 30,
+          "ai": 30,
+          "method": 30,
+          "intersection": 10,
+          "total": 100
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [
+            "qsp"
+          ],
+          "ai": [
+            "ml powered"
+          ],
+          "method": [
+            "platform"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "quantitative systems pharmacology"
+          ],
+          "ai": [
+            "ml powered"
+          ],
+          "method": [
+            "framework",
+            "platform"
+          ]
+        },
+        "terms": {
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ],
+          "ai": [
+            "ml powered"
+          ],
+          "method": [
+            "platform",
+            "framework"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract identifies the absence of an integrated framework for the lipid nanoparticle, mRNA, and expressed-protein components.",
+        "contribution": "It presents a modular multiscale platform that combines QSP and PBPK models with machine-learning support.",
+        "new_capability": "The pharmacological cascade of mRNA therapies can be represented within a connected computational workflow.",
+        "significance": "The platform offers a route to connect delivery, expression, immune response, and exposure during model-informed development.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "mRNA-based therapeutics are challenged by the absence of an integrated pharmacological framework accounting for the lipid nanoparticle, the mRNA, and the expressed protein. The study presents a modular, ML-powered multiscale computational platform integrating Quantitative Systems Pharmacology and PBPK models across the pharmacological cascade of mRNA therapies."
+    },
+    {
+      "id": "doi:10.1016/j.jiac.2026.103058",
+      "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin.",
+      "url": "https://europepmc.org/article/MED/42648633",
+      "authors": [
+        "Akamatsu H",
+        "Kodama Y",
+        "Terai A",
+        "Imamura M",
+        "Oda K",
+        "Jono H",
+        "Ohyama K"
+      ],
+      "venue": "Europe PMC",
+      "publication_date": "2026-08-26",
+      "doi": "10.1016/j.jiac.2026.103058",
+      "selection_type": "new",
+      "reported_at": "2026-08-28 19:06 JST",
+      "sources": [
+        "Europe PMC"
+      ],
+      "score": {
+        "total": 100,
+        "priority": "High",
+        "components": {
+          "pk": 30,
+          "ai": 30,
+          "method": 30,
+          "intersection": 10,
+          "total": 100
+        }
+      },
+      "evidence": {
+        "basis": "abstract-only",
+        "title_terms": {
+          "pk": [
+            "population pharmacokinetic"
+          ],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ]
+        },
+        "abstract_terms": {
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection",
+            "software"
+          ]
+        },
+        "terms": {
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ],
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation",
+            "model selection",
+            "software"
+          ]
+        }
+      },
+      "summary": {
+        "prior_limitation": "The abstract states that objective criteria were lacking for choosing between two vancomycin PopPK models.",
+        "contribution": "It develops and validates a machine-learning model that predicts which PopPK model will yield the lower AUC prediction error.",
+        "new_capability": "Model choice can become a patient-specific step before initial vancomycin dose calculation.",
+        "significance": "The method reduces dependence on a single fixed PopPK model when several candidate models are available.",
+        "source": "Abstract-only curated summary"
+      },
+      "abstract": "Therapeutic drug monitoring of vancomycin is recommended based on AUC. The PAT software contains two population pharmacokinetic models, but no objective criteria for model selection have been established. This study develops and validates a machine learning model to optimize PopPK model selection for initial vancomycin dosing. The outcome compares models by absolute relative prediction error for AUC, with clinical variables screened using LASSO regression."
+    }
+  ]
+}
