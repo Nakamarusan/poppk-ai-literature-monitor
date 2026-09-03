@@ -198,14 +198,14 @@ class MonitorTests(unittest.TestCase):
         no_abstract = Paper(
             ["test"],
             ["a"],
-            "Machine learning framework for population pharmacokinetics",
+            "Machine learning framework without an abstract for population pharmacokinetics",
             date="2022-01-01",
             doi="10.1/no-abstract",
         )
         with_abstract = Paper(
             ["test"],
             ["b"],
-            "Machine learning framework for population pharmacokinetics",
+            "Machine learning framework with an abstract for population pharmacokinetics",
             abstract="An automated model selection algorithm for PopPK analysis.",
             date="2021-05-01",
             doi="10.1/with-abstract",
