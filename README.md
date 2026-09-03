@@ -12,6 +12,8 @@ For each selected paper, the workflow creates a GitHub Issue and stores a report
 - What the study makes newly possible
 - Its relevance to population PK and pharmacometrics research
 
-The reports are also compiled into static HTML dashboard files in `docs/`. GitHub Pages deployment is currently disabled; the HTML files are retained for local inspection and possible future deployment.
+The reports are also compiled into a searchable HTML dashboard in `docs/` and published through GitHub Pages:
+
+https://nakamarusan.github.io/poppk-ai-literature-monitor/
 
 Screening and summarization are automated, so the results should be verified against the original paper.
