@@ -1,168 +1,171 @@
 {
-  "lookback_days": 8,
-  "state_retention_days": 730,
-  "max_alerts": 30,
-  "sources": {
-    "europe_pmc": true,
-    "crossref": true,
-    "arxiv": true
+  "monitor": {
+    "lookback_days": 8,
+    "max_new_articles": 30
   },
-  "source_policies": {
+  "sources": {
+    "europe_pmc": {
+      "enabled": true,
+      "optional": false
+    },
+    "crossref": {
+      "enabled": true,
+      "optional": false,
+      "rows_per_query": 150
+    },
     "arxiv": {
+      "enabled": true,
       "optional": true,
       "silent_errors": true,
-      "once_per_day": true
+      "once_per_day": true,
+      "max_results": 50,
+      "jitter_seconds": 60
     }
-  },
-  "arxiv_query": {
-    "max_results": 50,
-    "jitter_seconds": 60,
-    "ai_terms": [
-      "machine learning",
-      "artificial intelligence",
-      "federated learning",
-      "privacy preserving",
-      "differential privacy",
-      "deep learning",
-      "reinforcement learning",
-      "neural network",
-      "neural ODE",
-      "normalizing flow",
-      "scientific machine learning",
-      "physics-informed",
-      "automated covariate selection",
-      "mechanistic machine learning"
-    ]
   },
   "historical_fallback": {
     "enabled": true,
     "start_year": 2020,
     "count": 1,
-    "sources": {
-      "europe_pmc": true,
-      "crossref": true,
-      "arxiv": false
-    }
+    "sources": [
+      "europe_pmc",
+      "crossref"
+    ]
   },
-  "search_terms": [
-    "population pharmacokinetic",
-    "population pharmacokinetics",
-    "pharmacometrics",
-    "nonlinear mixed effects",
-    "model-informed precision dosing",
-    "quantitative systems pharmacology",
-    "population PK/PD"
-  ],
-  "crossref_queries": [
-    "population pharmacokinetic machine learning",
-    "population pharmacokinetics artificial intelligence",
-    "pharmacometrics machine learning",
-    "nonlinear mixed effects neural network pharmacokinetics",
-    "model informed precision dosing artificial intelligence",
-    "federated learning pharmacokinetics",
-    "quantitative systems pharmacology machine learning",
-    "neural ordinary differential equation pharmacokinetics",
-    "mechanistic machine learning pharmacometrics"
-  ],
-  "pk_terms": [
-    "population pharmacokinetic",
-    "population pharmacokinetics",
-    "re:\\bpop[- ]?pk\\b",
-    "pharmacometrics",
-    "pharmacometric",
-    "nonlinear mixed effects",
-    "nonlinear mixed-effects",
-    "re:\\bnlme\\b",
-    "model-informed precision dosing",
-    "model informed precision dosing",
-    "re:\\bmipd\\b",
-    "quantitative systems pharmacology",
-    "population pk/pd",
-    "population pkpd",
-    "mixed-effects pharmacokinetic"
-  ],
-  "ai_terms": [
-    "federated learning",
-    "privacy-preserving",
-    "privacy preserving",
-    "differential privacy",
-    "machine learning",
-    "artificial intelligence",
-    "deep learning",
-    "reinforcement learning",
-    "neural network",
-    "neural ordinary differential equation",
-    "neural ode",
-    "neural differential equation",
-    "normalizing flow",
-    "graph neural network",
-    "gaussian process",
-    "bayesian optimization",
-    "large language model",
-    "scientific machine learning",
-    "physics-informed",
-    "physics informed",
-    "distributed optimization",
-    "automated covariate selection",
-    "neural mixed effects",
-    "deep compartment model",
-    "mechanistic machine learning",
-    "hybrid mechanistic machine learning"
-  ],
-  "method_terms": [
-    "methodology",
-    "framework",
-    "algorithm",
-    "estimation",
-    "inference",
-    "optimization",
-    "benchmark",
-    "model selection",
-    "covariate selection",
-    "model evaluation",
-    "software",
-    "workflow",
-    "architecture",
-    "novel approach",
-    "new approach",
-    "automated"
-  ],
-  "methodological_ai_terms": [
-    "federated learning",
-    "privacy-preserving",
-    "privacy preserving",
-    "differential privacy",
-    "reinforcement learning",
-    "neural ordinary differential equation",
-    "neural ode",
-    "neural differential equation",
-    "normalizing flow",
-    "scientific machine learning",
-    "physics-informed",
-    "physics informed",
-    "bayesian optimization",
-    "distributed optimization",
-    "automated covariate selection",
-    "neural mixed effects",
-    "deep compartment model",
-    "mechanistic machine learning",
-    "hybrid mechanistic machine learning"
-  ],
-  "exclude_terms": [
-    "review",
-    "meta-analysis",
-    "meta analysis",
-    "editorial",
-    "commentary",
-    "perspective",
-    "case report",
-    "letter to the editor"
-  ],
-  "monitor_version": 4,
-  "insights": {
-    "enabled": true,
+  "search": {
+    "database_terms": [
+      "population pharmacokinetic",
+      "population pharmacokinetics",
+      "pharmacometrics",
+      "nonlinear mixed effects",
+      "model-informed precision dosing",
+      "quantitative systems pharmacology",
+      "population PK/PD"
+    ],
+    "crossref_queries": [
+      "population pharmacokinetic machine learning",
+      "population pharmacokinetics artificial intelligence",
+      "pharmacometrics machine learning",
+      "nonlinear mixed effects neural network pharmacokinetics",
+      "model informed precision dosing artificial intelligence",
+      "federated learning pharmacokinetics",
+      "quantitative systems pharmacology machine learning",
+      "neural ordinary differential equation pharmacokinetics",
+      "mechanistic machine learning pharmacometrics"
+    ]
+  },
+  "terms": {
+    "pk": [
+      "population pharmacokinetic",
+      "population pharmacokinetics",
+      "poppk",
+      "pop pk",
+      "pharmacometrics",
+      "pharmacometric",
+      "nonlinear mixed effects",
+      "nlme",
+      "model informed precision dosing",
+      "mipd",
+      "quantitative systems pharmacology",
+      "qsp",
+      "population pk pd",
+      "mixed effects pharmacokinetic"
+    ],
+    "ai": [
+      "federated learning",
+      "privacy preserving",
+      "differential privacy",
+      "machine learning",
+      "artificial intelligence",
+      "deep learning",
+      "reinforcement learning",
+      "neural network",
+      "neural ordinary differential equation",
+      "neural ode",
+      "neural differential equation",
+      "normalizing flow",
+      "graph neural network",
+      "gaussian process",
+      "bayesian optimization",
+      "large language model",
+      "llm",
+      "agentic",
+      "scientific machine learning",
+      "physics informed",
+      "distributed optimization",
+      "automated covariate selection",
+      "neural mixed effects",
+      "deep compartment model",
+      "mechanistic machine learning",
+      "hybrid mechanistic machine learning",
+      "ml powered",
+      "neural odes"
+    ],
+    "method": [
+      "methodology",
+      "framework",
+      "algorithm",
+      "estimation",
+      "inference",
+      "optimization",
+      "benchmark",
+      "model selection",
+      "covariate selection",
+      "model evaluation",
+      "model development",
+      "software",
+      "workflow",
+      "architecture",
+      "platform",
+      "automated",
+      "automation",
+      "validation"
+    ],
+    "methodological_ai": [
+      "federated learning",
+      "privacy preserving",
+      "differential privacy",
+      "reinforcement learning",
+      "neural ordinary differential equation",
+      "neural ode",
+      "neural differential equation",
+      "normalizing flow",
+      "scientific machine learning",
+      "physics informed",
+      "bayesian optimization",
+      "distributed optimization",
+      "automated covariate selection",
+      "neural mixed effects",
+      "deep compartment model",
+      "mechanistic machine learning",
+      "hybrid mechanistic machine learning",
+      "agentic"
+    ],
+    "exclude": [
+      "review",
+      "meta analysis",
+      "editorial",
+      "commentary",
+      "perspective",
+      "case report",
+      "letter to the editor"
+    ]
+  },
+  "scoring": {
+    "pk_title": 20,
+    "pk_abstract": 10,
+    "ai_title": 20,
+    "ai_abstract": 10,
+    "method_title": 20,
+    "method_abstract": 10,
+    "intersection_bonus": 10,
+    "high_threshold": 70,
+    "medium_threshold": 40
+  },
+  "summaries": {
+    "use_openai_when_available": true,
     "model": "gpt-5.6-luna",
     "max_abstract_chars": 7000,
     "max_output_tokens": 700
-  }
+  },
+  "schema_version": 5
 }
