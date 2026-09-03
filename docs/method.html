@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Program architecture and relevance scoring for the PopPK × AI literature monitor">
+  <meta name="theme-color" content="#efe4c8">
+  <title>Method · PopPK × AI Methodology Atlas</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#method">Skip to the method</a>
+
+  <header class="folio-header compact-header">
+    <nav class="site-nav shell" aria-label="Primary navigation">
+      <a class="brand" href="./">
+        <span class="brand-seal" aria-hidden="true">PK</span>
+        <span>Methodology Atlas</span>
+      </a>
+      <div class="nav-links">
+        <a href="./">Library</a>
+        <a class="active" href="./method.html">Method</a>
+        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
+           target="_blank" rel="noopener noreferrer">Repository</a>
+      </div>
+    </nav>
+
+    <div class="method-hero shell">
+      <div>
+        <p class="folio-label">Folio II · Construction and measure</p>
+        <h1>How the monitor works</h1>
+        <p class="lead">
+          The program separates observation, selection, interpretation, and
+          publication. Full text is never fetched. Interpretive statements are
+          generated from the available abstract only.
+        </p>
+      </div>
+      <div class="margin-note">
+        <p>Scope</p>
+        <strong>Discovery:</strong> title + abstract<br>
+        <strong>Interpretation:</strong> abstract only<br>
+        <strong>Output:</strong> Issue, Markdown, JSON, HTML
+      </div>
+    </div>
+  </header>
+
+  <main id="method" class="shell method-layout">
+    <section class="method-section">
+      <p class="section-number">01</p>
+      <div>
+        <h2>Daily pipeline</h2>
+        <p>
+          GitHub Actions starts the monitor at 07:00 JST. A 07:20 fallback runs
+          only when the first run did not complete successfully.
+        </p>
+
+        <ol class="pipeline">
+          <li>
+            <span>Observe</span>
+            <p>Retrieve bibliographic metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p>
+          </li>
+          <li>
+            <span>Normalize</span>
+            <p>Convert source-specific records into one <code>Paper</code> structure and normalize DOI and title text.</p>
+          </li>
+          <li>
+            <span>Unify</span>
+            <p>Merge duplicate records that share a DOI, source identifier, or normalized title.</p>
+          </li>
+          <li>
+            <span>Screen</span>
+            <p>Require PopPK/pharmacometrics, AI/ML, and methodological evidence.</p>
+          </li>
+          <li>
+            <span>Select</span>
+            <p>Report new eligible papers; when none are found, select one unreported paper published since 2020.</p>
+          </li>
+          <li>
+            <span>Interpret</span>
+            <p>Summarize the prior limitation, contribution, new capability, and significance from the abstract only.</p>
+          </li>
+          <li>
+            <span>Publish</span>
+            <p>Write a Markdown report, create a GitHub Issue, update the JSON catalog, and rebuild this site.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="score" class="method-section">
+      <p class="section-number">02</p>
+      <div>
+        <h2>Relevance score</h2>
+        <p>
+          The score is a transparent 0–100 measure of topical and
+          methodological alignment. It does not evaluate scientific quality,
+          risk of bias, validity, novelty, or clinical usefulness.
+        </p>
+
+        <div class="formula">
+          <div>
+            <span>PopPK evidence</span>
+            <strong>0–30</strong>
+            <p>20 points when a PopPK/pharmacometrics term occurs in the title, plus 10 when it occurs in the abstract.</p>
+          </div>
+          <div>
+            <span>AI evidence</span>
+            <strong>0–30</strong>
+            <p>20 points for an AI/ML term in the title, plus 10 for evidence in the abstract.</p>
+          </div>
+          <div>
+            <span>Method evidence</span>
+            <strong>0–30</strong>
+            <p>20 points for a method term in the title, plus 10 in the abstract. Inherently methodological AI terms also count.</p>
+          </div>
+          <div>
+            <span>Intersection bonus</span>
+            <strong>0–10</strong>
+            <p>10 points when both PopPK/pharmacometrics and AI/ML are explicit in the title.</p>
+          </div>
+        </div>
+
+        <div class="equation" aria-label="Relevance score equation">
+          <span>R</span>
+          <b>=</b>
+          <em>PK</em>
+          <b>+</b>
+          <em>AI</em>
+          <b>+</b>
+          <em>Method</em>
+          <b>+</b>
+          <em>Intersection</em>
+        </div>
+
+        <div class="thresholds">
+          <p><strong>High</strong><span>70–100</span></p>
+          <p><strong>Medium</strong><span>40–69</span></p>
+          <p><strong>Low</strong><span>0–39</span></p>
+        </div>
+
+        <aside class="method-note">
+          A paper must first pass the three eligibility conditions. The score
+          then ranks eligible papers. Repeated synonyms do not add extra
+          points; each component is based on presence or absence.
+        </aside>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="section-number">03</p>
+      <div>
+        <h2>Abstract-only interpretation</h2>
+        <p>
+          The title may help discovery and scoring, but it is not used as
+          evidence for the four interpretive statements. The program does not
+          download PDFs, visit publisher full text, or inspect supplementary
+          material.
+        </p>
+        <div class="evidence-grid">
+          <article>
+            <h3>Prior limitation</h3>
+            <p>What problem or gap does the abstract identify?</p>
+          </article>
+          <article>
+            <h3>Contribution</h3>
+            <p>What method, framework, algorithm, or comparison does the abstract describe?</p>
+          </article>
+          <article>
+            <h3>New capability</h3>
+            <p>What analysis or decision becomes possible according to the abstract?</p>
+          </article>
+          <article>
+            <h3>Significance</h3>
+            <p>Why might the method matter for PopPK, pharmacometrics, or model-informed dosing?</p>
+          </article>
+        </div>
+        <p>
+          When no abstract is available, the program states that the evidence
+          is unavailable instead of inferring a conclusion from the title.
+        </p>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="section-number">04</p>
+      <div>
+        <h2>Source policy</h2>
+        <div class="source-table" role="table" aria-label="Literature source policy">
+          <div class="source-row source-head" role="row">
+            <span role="columnheader">Source</span>
+            <span role="columnheader">Role</span>
+            <span role="columnheader">Failure behavior</span>
+          </div>
+          <div class="source-row" role="row">
+            <strong role="cell">Europe PMC</strong>
+            <span role="cell">Primary biomedical metadata and abstracts</span>
+            <span role="cell">Displayed as a warning; required for normal operation</span>
+          </div>
+          <div class="source-row" role="row">
+            <strong role="cell">Crossref</strong>
+            <span role="cell">Publisher-registered articles and posted content</span>
+            <span role="cell">Displayed as a warning; required for normal operation</span>
+          </div>
+          <div class="source-row" role="row">
+            <strong role="cell">arXiv</strong>
+            <span role="cell">Optional preprint supplement</span>
+            <span role="cell">HTTP 429 and timeout errors are logged internally but omitted from reports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="section-number">05</p>
+      <div>
+        <h2>Program structure</h2>
+        <div class="architecture">
+          <article>
+            <code>core.py</code>
+            <p>Data models, text normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p>
+          </article>
+          <article>
+            <code>sources.py</code>
+            <p>Europe PMC, Crossref, and arXiv clients.</p>
+          </article>
+          <article>
+            <code>insights.py</code>
+            <p>Abstract-only interpretation, with an optional AI paraphrase and a deterministic fallback.</p>
+          </article>
+          <article>
+            <code>literature_monitor.py</code>
+            <p>Source orchestration, recent and archive selection, notifications, and state updates.</p>
+          </article>
+          <article>
+            <code>reporting.py</code>
+            <p>Canonical article records, Markdown reports, and GitHub Issues.</p>
+          </article>
+          <article>
+            <code>site_generator.py</code>
+            <p>Transforms the structured catalog into the JSON used by GitHub Pages.</p>
+          </article>
+          <article>
+            <code>data/articles.json</code>
+            <p>The canonical structured catalog. The site no longer parses its own Markdown reports.</p>
+          </article>
+          <article>
+            <code>state/seen.json</code>
+            <p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="section-number">06</p>
+      <div>
+        <h2>Known limitations</h2>
+        <ul class="limitations">
+          <li>Keyword screening can produce false positives and false negatives.</li>
+          <li>Abstracts may omit important methods, validation details, and limitations.</li>
+          <li>The relevance score measures alignment with the search scope, not study quality.</li>
+          <li>Crossref and Europe PMC metadata may differ in dates, abstracts, and publication types.</li>
+          <li>The archive fallback is a ranked convenience sample, not a systematic review.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="section-number">07</p>
+      <div>
+        <h2>Visual language</h2>
+        <p>
+          The interface is an original interpretation of Leonardo da Vinci's
+          working notebooks rather than a reproduction of any artwork. Warm
+          paper, brown ink, red-chalk accents, measured grids, and geometric
+          studies express observation, proportion, and the union of visual and
+          scientific reasoning.
+        </p>
+        <p class="reference-line">
+          Design references:
+          <a href="https://www.rct.uk/collection/stories/leonardo-in-the-royal-collection/leonardos-study-of-anatomy"
+             target="_blank" rel="noopener noreferrer">Royal Collection Trust — anatomy, proportion, and measurement</a>;
+          <a href="https://www.metmuseum.org/art/collection/search/337494"
+             target="_blank" rel="noopener noreferrer">The Met — compositional and perspectival geometry</a>.
+        </p>
+      </div>
+    </section>
+
+    <div class="method-return">
+      <a class="ink-button" href="./">Return to the article library</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <p>
+        Designed as a working notebook: observation, proportion, and the
+        integration of scientific and visual reasoning.
+      </p>
+      <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
+         target="_blank" rel="noopener noreferrer">View source code</a>
+    </div>
+  </footer>
+</body>
+</html>
