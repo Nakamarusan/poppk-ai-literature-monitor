@@ -5,7 +5,30 @@ import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 
+from src.core import MonitorError
 from src.site_generator import build_payload, write_site_data
+
+
+def article(
+    identifier: str,
+    title: str,
+    *,
+    publication_date: str = "",
+    reported_at: str = "",
+    selection_type: str = "historical",
+    score: int = 50,
+) -> dict:
+    """Return the smallest valid canonical article used in site tests."""
+
+    return {
+        "id": identifier,
+        "title": title,
+        "publication_date": publication_date,
+        "reported_at": reported_at,
+        "selection_type": selection_type,
+        "score": {"total": score},
+        "evidence": {"basis": "abstract-only"},
+    }
 
 
 class _StrictEnoughHTMLParser(HTMLParser):
@@ -17,20 +40,19 @@ class SiteGeneratorTests(unittest.TestCase):
         catalog = {
             "last_scan_at": "2026-09-03 07:00 JST",
             "articles": [
-                {
-                    "id": "doi:10.1/old",
-                    "title": "Older",
-                    "publication_date": "2021-01-01",
-                    "reported_at": "2026-09-01 07:00 JST",
-                    "selection_type": "historical",
-                },
-                {
-                    "id": "doi:10.1/new",
-                    "title": "Newer",
-                    "publication_date": "2026-01-01",
-                    "reported_at": "2026-09-03 07:00 JST",
-                    "selection_type": "new",
-                },
+                article(
+                    "doi:10.1/old",
+                    "Older",
+                    publication_date="2021-01-01",
+                    reported_at="2026-09-01 07:00 JST",
+                ),
+                article(
+                    "doi:10.1/new",
+                    "Newer",
+                    publication_date="2026-01-01",
+                    reported_at="2026-09-03 07:00 JST",
+                    selection_type="new",
+                ),
             ],
         }
         payload = build_payload(catalog)
@@ -43,12 +65,27 @@ class SiteGeneratorTests(unittest.TestCase):
     def test_duplicate_ids_are_collapsed(self):
         payload = build_payload({
             "articles": [
-                {"id": "doi:10.1/a", "title": "First"},
-                {"id": "doi:10.1/a", "title": "Second"},
+                article("doi:10.1/a", "First"),
+                article("doi:10.1/a", "Second"),
             ]
         })
         self.assertEqual(payload["article_count"], 1)
         self.assertEqual(payload["articles"][0]["title"], "Second")
+
+    def test_invalid_catalog_record_is_rejected(self):
+        with self.assertRaises(MonitorError):
+            build_payload({
+                "articles": [{
+                    "id": "doi:10.1/a",
+                    "title": "Invalid evidence boundary",
+                    "score": {"total": 50},
+                    "evidence": {"basis": "full-text"},
+                }]
+            })
+        with self.assertRaises(MonitorError):
+            build_payload({
+                "articles": [article("doi:10.1/b", "Invalid score", score=101)]
+            })
 
     def test_write_site_data_is_valid_json(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -120,9 +157,9 @@ class SiteGeneratorTests(unittest.TestCase):
 
     def test_catalog_summaries_are_abstract_only(self):
         catalog = json.loads(Path("data/articles.json").read_text(encoding="utf-8"))
-        for article in catalog["articles"]:
-            self.assertEqual(article["evidence"]["basis"], "abstract-only")
-            self.assertIn("Abstract-only", article["summary"]["source"])
+        for item in catalog["articles"]:
+            self.assertEqual(item["evidence"]["basis"], "abstract-only")
+            self.assertIn("Abstract-only", item["summary"]["source"])
 
 
 if __name__ == "__main__":
