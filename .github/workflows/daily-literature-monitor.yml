@@ -9,11 +9,17 @@ on:
   workflow_dispatch:
     inputs:
       lookback_days:
-        description: "Number of days to search (1-90)"
+        description: "Number of recent days to search (1-90)"
         required: false
         default: "8"
   push:
     branches: [main]
+    paths:
+      - ".github/workflows/daily-literature-monitor.yml"
+      - "config.json"
+      - "src/**"
+      - "tests/**"
+  pull_request:
     paths:
       - ".github/workflows/daily-literature-monitor.yml"
       - "config.json"
@@ -25,13 +31,14 @@ permissions:
   issues: write
 
 concurrency:
-  group: poppk-ai-daily-literature-monitor
+  group: poppk-ai-literature-monitor
   cancel-in-progress: false
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
     steps:
       - name: Check out repository
         id: checkout
@@ -39,7 +46,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Scheduled and manual runs must start from the newest main branch.
       - name: Sync latest main branch
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         shell: bash
         run: |
           git fetch origin main
@@ -54,8 +63,9 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
 
+      # Pushes and pull requests validate code without creating alerts.
       - name: Search, summarize, and notify
-        if: ${{ github.event_name != 'push' }}
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
@@ -65,23 +75,27 @@ jobs:
           SKIP_IF_SUCCESS_TODAY: ${{ github.event_name == 'schedule' && github.event.schedule == '20 7 * * *' && 'true' || 'false' }}
         run: python -m src.literature_monitor
 
-      - name: Build HTML dashboard data
+      - name: Build GitHub Pages data
         run: python -m src.site_generator
 
-      - name: Commit state, reports, and dashboard data
-        if: ${{ always() && steps.checkout.outcome == 'success' }}
+      - name: Commit generated outputs
+        if: ${{ github.event_name != 'pull_request' && always() && steps.checkout.outcome == 'success' }}
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- state reports docs)" ]; then
-            echo "No state, report, or dashboard changes."
+          if [ -z "$(git status --porcelain -- data state reports docs)" ]; then
+            echo "No generated changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state reports docs
+          git add data state reports docs
           git commit -m "Update literature monitor outputs"
+
           for attempt in 1 2 3; do
-            if git push origin HEAD:main; then exit 0; fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
             git pull --rebase origin main
             sleep $((attempt * 3))
           done

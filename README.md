@@ -1,19 +1,20 @@
 # PopPK × AI Literature Monitor
 
-This repository is a proof-of-concept built through vibe coding to test an automated literature-monitoring workflow.
+This repository is a vibe-coded proof of concept for automated literature monitoring.
 
-A GitHub Actions workflow runs every day at 7:00 AM JST and searches Europe PMC, Crossref, and arXiv for methodological studies at the intersection of population pharmacokinetics, pharmacometrics, and artificial intelligence or machine learning. When no newly published eligible paper is found, the workflow selects one previously unreported eligible paper published in 2020 or later.
+Every day at 07:00 JST, GitHub Actions searches Europe PMC, Crossref, and optionally arXiv for methodological studies connecting population pharmacokinetics, pharmacometrics, and AI or machine learning. If no new eligible paper is found, the monitor selects one previously unreported paper published in 2020 or later.
 
-For each selected paper, the workflow creates a GitHub Issue and stores a report in `reports/` containing:
+Screening uses titles and abstracts. All interpretive statements are based on the available abstract only; the program does not fetch or analyze full text.
 
-- Bibliographic information and a link to the paper
-- The limitation of previous approaches
-- The methodological contribution
-- What the study makes newly possible
-- Its relevance to population PK and pharmacometrics research
+For each selected paper, the workflow:
 
-The reports are also compiled into a searchable HTML dashboard in `docs/` and published through GitHub Pages:
+- creates a GitHub Issue;
+- writes a Markdown report in `reports/`;
+- updates the structured catalog in `data/articles.json`; and
+- rebuilds the GitHub Pages dashboard.
 
-https://nakamarusan.github.io/poppk-ai-literature-monitor/
+Dashboard: https://nakamarusan.github.io/poppk-ai-literature-monitor/
 
-Screening and summarization are automated, so the results should be verified against the original paper.
+Program and scoring method: https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html
+
+The relevance score measures alignment with the monitoring scope, not scientific quality, validity, or clinical usefulness.

@@ -1,13 +1,6 @@
 {
   "schema_version": 2,
-  "evidence_basis": "abstract-only",
   "last_scan_at": "2026-09-03 08:46 JST",
-  "article_count": 6,
-  "new_count": 2,
-  "historical_count": 4,
-  "years": [
-    "2026"
-  ],
   "articles": [
     {
       "id": "doi:10.3390/pharmaceutics18040501",
