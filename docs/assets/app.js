@@ -15,6 +15,8 @@ const ui = {
   newCount: $("#statNew"),
   archiveCount: $("#statHistorical"),
   scan: $("#statScan"),
+  motion: $("#motionToggle"),
+  observatory: $(".observatory"),
 };
 
 // Escape catalog text before inserting it into generated HTML.
@@ -59,7 +61,9 @@ const authors = (article) =>
 
 const score = (article) => {
   const raw = article.score;
-  if (typeof raw === "number") return { total: raw, priority: "", components: {} };
+  if (typeof raw === "number") {
+    return { total: Math.max(0, Math.min(raw, 100)), priority: "", components: {} };
+  }
   return {
     total: Math.max(0, Math.min(Number(raw?.total) || 0, 100)),
     priority: raw?.priority || "",
@@ -211,7 +215,7 @@ const articleCard = (article, index) => {
                 <a href="./method.html#score">View the scoring method.</a>
               </p>
               <h3>Interpretation basis</h3>
-              <p>${escapeHtml(articleSummary.source || "Abstract-only deterministic summary")}</p>
+              <p>${escapeHtml(articleSummary.source || "Abstract-only extractive summary")}</p>
             </div>
           </div>
         </details>
@@ -233,8 +237,13 @@ const sortArticles = (articles, order) => [...articles].sort((a, b) => {
   return parseReported(b.reported_at) - parseReported(a.reported_at);
 });
 
-const observeCards = () => {
-  if (!("IntersectionObserver" in window)) return;
+const revealCards = () => {
+  const cards = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    cards.forEach((card) => card.classList.add("is-visible"));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -243,7 +252,31 @@ const observeCards = () => {
       }
     }
   }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
-  document.querySelectorAll(".reveal").forEach((card) => observer.observe(card));
+  cards.forEach((card) => observer.observe(card));
+};
+
+const setMotionPaused = (paused) => {
+  if (!ui.motion || !ui.observatory) return;
+  ui.observatory.classList.toggle("motion-paused", paused);
+  ui.motion.setAttribute("aria-pressed", String(paused));
+  ui.motion.textContent = paused ? "Resume motion" : "Pause motion";
+};
+
+const bindMotionControl = () => {
+  if (!ui.motion || !ui.observatory) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  setMotionPaused(reducedMotion.matches);
+  ui.motion.addEventListener("click", () => {
+    setMotionPaused(ui.motion.getAttribute("aria-pressed") !== "true");
+  });
+
+  const followPreference = (event) => setMotionPaused(event.matches);
+  if (typeof reducedMotion.addEventListener === "function") {
+    reducedMotion.addEventListener("change", followPreference);
+  } else if (typeof reducedMotion.addListener === "function") {
+    reducedMotion.addListener(followPreference);
+  }
 };
 
 const render = () => {
@@ -262,7 +295,7 @@ const render = () => {
   ui.list.hidden = filtered.length === 0;
   ui.empty.hidden = filtered.length !== 0;
   ui.count.textContent = `${filtered.length} stud${filtered.length === 1 ? "y" : "ies"} in view`;
-  requestAnimationFrame(observeCards);
+  requestAnimationFrame(revealCards);
 };
 
 const populateYears = (years) => {
@@ -274,7 +307,7 @@ const populateYears = (years) => {
   }
 };
 
-const bind = () => {
+const bindFilters = () => {
   for (const element of [ui.search, ui.type, ui.year, ui.sort]) {
     element.addEventListener(element === ui.search ? "input" : "change", render);
   }
@@ -303,7 +336,7 @@ const load = async () => {
     ui.scan.textContent = payload.last_scan_at || "—";
 
     populateYears(payload.years || []);
-    bind();
+    bindFilters();
     render();
   } catch (error) {
     console.error("Unable to load the article catalog", error);
@@ -313,4 +346,5 @@ const load = async () => {
   }
 };
 
+bindMotionControl();
 load();
