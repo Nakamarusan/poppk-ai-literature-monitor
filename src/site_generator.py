@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the GitHub Pages data file from the canonical article catalog."""
+"""Build GitHub Pages data from the canonical article catalog."""
 
 from __future__ import annotations
 
@@ -11,33 +11,57 @@ from typing import Any, Sequence
 from .core import MonitorError, load_json
 
 
-def build_payload(catalog: dict[str, Any]) -> dict[str, Any]:
-    """Validate, sort, and add dashboard statistics."""
+def _validate_article(article: Any, position: int) -> dict[str, Any]:
+    """Validate fields required by the static dashboard."""
 
-    articles = catalog.get("articles", [])
-    if not isinstance(articles, list):
+    if not isinstance(article, dict):
+        raise MonitorError(f"Catalog article {position} must be an object")
+    if not article.get("id") or not article.get("title"):
+        raise MonitorError(f"Catalog article {position} requires id and title")
+    if article.get("evidence", {}).get("basis") != "abstract-only":
+        raise MonitorError(
+            f"Catalog article {position} does not declare abstract-only evidence"
+        )
+
+    score = article.get("score", {})
+    try:
+        total = int(score.get("total"))
+    except (AttributeError, TypeError, ValueError) as exc:
+        raise MonitorError(f"Catalog article {position} has an invalid score") from exc
+    if not 0 <= total <= 100:
+        raise MonitorError(
+            f"Catalog article {position} has a score outside 0-100"
+        )
+    return article
+
+
+def build_payload(catalog: dict[str, Any]) -> dict[str, Any]:
+    """Validate, de-duplicate, sort, and add dashboard statistics."""
+
+    raw_articles = catalog.get("articles", [])
+    if not isinstance(raw_articles, list):
         raise MonitorError("Catalog field 'articles' must be a list")
 
-    # One canonical identifier per card prevents duplicates on the dashboard.
+    # The last occurrence wins if an interrupted migration left duplicate IDs.
     unique = {
         article["id"]: article
-        for article in articles
-        if isinstance(article, dict) and article.get("id")
+        for position, raw in enumerate(raw_articles, 1)
+        if (article := _validate_article(raw, position))
     }
     ordered = sorted(
         unique.values(),
         key=lambda article: (
-            article.get("reported_at", ""),
-            article.get("publication_date", ""),
-            article.get("title", "").casefold(),
+            str(article.get("reported_at", "")),
+            str(article.get("publication_date", "")),
+            str(article.get("title", "")).casefold(),
         ),
         reverse=True,
     )
     years = sorted(
         {
-            article.get("publication_date", "")[:4]
+            str(article.get("publication_date", ""))[:4]
             for article in ordered
-            if article.get("publication_date", "")[:4].isdigit()
+            if str(article.get("publication_date", ""))[:4].isdigit()
         },
         reverse=True,
     )
@@ -60,6 +84,8 @@ def build_payload(catalog: dict[str, Any]) -> dict[str, Any]:
 
 
 def write_site_data(catalog_path: Path, output_path: Path) -> dict[str, Any]:
+    """Write the generated dashboard payload only when its content changes."""
+
     payload = build_payload(load_json(catalog_path))
     output_path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"

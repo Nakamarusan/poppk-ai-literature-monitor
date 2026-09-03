@@ -64,6 +64,14 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Run static checks
+        shell: bash
+        run: |
+          python -m compileall -q src tests
+          python -m json.tool config.json > /dev/null
+          python -m json.tool data/articles.json > /dev/null
+          node --check docs/assets/app.js
+
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
 

@@ -23,12 +23,14 @@ from .core import (
     fingerprint,
     load_json,
     normalize_doi,
+    normalize_text,
     parse_date,
     save_json,
     screen,
     succeeded_on_jst_date,
+    validate_config,
 )
-from .insights import summarize_research
+from .insights import rule_based_summary, summarize_research
 from .reporting import (
     article_record,
     create_issue,
@@ -45,11 +47,12 @@ _SOURCE_FETCHERS: dict[str, tuple[str, Fetcher]] = {
     "crossref": ("Crossref", fetch_crossref),
     "arxiv": ("arXiv", fetch_arxiv),
 }
+_GENERIC_VENUES = {"", "Europe PMC", "Crossref", "arXiv"}
 
 
 @dataclass
 class FetchResult:
-    """Results from one pass over configured literature sources."""
+    """Results from one pass over the configured literature sources."""
 
     papers: list[Paper] = field(default_factory=list)
     counts: dict[str, int] = field(default_factory=dict)
@@ -74,18 +77,18 @@ def fetch_sources(
     *,
     historical: bool = False,
 ) -> FetchResult:
-    """Fetch enabled sources through one shared error-handling path."""
+    """Fetch sources through one shared error-handling path."""
 
     result = FetchResult()
     attempt_dates = state.setdefault("source_attempt_dates", {})
     health = state.setdefault("source_health", {})
-    keys = (
+    source_keys = (
         config["historical_fallback"]["sources"]
         if historical
-        else _SOURCE_FETCHERS
+        else _SOURCE_FETCHERS.keys()
     )
 
-    for key in keys:
+    for key in source_keys:
         label, fetcher = _SOURCE_FETCHERS[key]
         settings = config["sources"][key]
         if not settings.get("enabled", True):
@@ -117,10 +120,7 @@ def fetch_sources(
             }
             if optional and settings.get("silent_errors", True):
                 result.hidden_errors[label] = message
-                print(
-                    f"Optional source {label} unavailable: {message}",
-                    file=sys.stderr,
-                )
+                print(f"Optional source {label} unavailable: {message}", file=sys.stderr)
             else:
                 result.warnings[label] = message
                 print(f"{label} failed: {message}", file=sys.stderr)
@@ -138,7 +138,7 @@ def _known(match: Match, seen: dict[str, Any], catalog_ids: set[str]) -> bool:
 
 
 def rank_matches(matches: Sequence[Match]) -> list[Match]:
-    """Sort by relevance, then recency."""
+    """Rank by relevance, abstract availability, and publication date."""
 
     priority = {"High": 0, "Medium": 1, "Low": 2}
     return sorted(
@@ -146,6 +146,7 @@ def rank_matches(matches: Sequence[Match]) -> list[Match]:
         key=lambda item: (
             priority.get(item.priority, 3),
             -item.score.total,
+            not bool(clean(item.paper.abstract)),
             -(parse_date(item.paper.date) or dt.date.min).toordinal(),
             item.paper.title.casefold(),
         ),
@@ -179,17 +180,162 @@ def select_historical(
     until: dt.date,
     limit: int,
 ) -> list[Match]:
-    """Restrict archive candidates to the configured date window."""
+    """Select useful archive candidates within the configured date window."""
 
     candidates = select_unseen(
         papers, config, seen, catalog_ids, limit=10_000
     )
+    require_abstract = bool(
+        config["historical_fallback"].get("require_abstract", True)
+    )
     candidates = [
         match
         for match in candidates
-        if (date := parse_date(match.paper.date)) and start <= date <= until
+        if (date := parse_date(match.paper.date))
+        and start <= date <= until
+        and (not require_abstract or bool(clean(match.paper.abstract)))
     ]
     return rank_matches(candidates)[: max(0, limit)]
+
+
+def _catalog_match(
+    records: dict[str, dict[str, Any]], paper: Paper
+) -> tuple[str, dict[str, Any]] | None:
+    """Find a known catalog record by canonical ID or normalized title."""
+
+    canonical_id = article_id(paper)
+    if canonical_id in records:
+        return canonical_id, records[canonical_id]
+
+    normalized_title = normalize_text(paper.title)
+    for key, record in records.items():
+        if normalize_text(record.get("title", "")) == normalized_title:
+            return key, record
+    return None
+
+
+def _enriched_paper(record: dict[str, Any], incoming: Paper) -> Paper:
+    """Combine a source record with the richer fields already in the catalog."""
+
+    existing_authors = record.get("authors", [])
+    authors = (
+        incoming.authors
+        if len(incoming.authors) > len(existing_authors)
+        else existing_authors
+    )
+    existing_venue = record.get("venue", "")
+    venue = (
+        incoming.venue
+        if existing_venue in _GENERIC_VENUES and incoming.venue not in _GENERIC_VENUES
+        else existing_venue or incoming.venue
+    )
+    existing_abstract = clean(record.get("abstract", ""))
+    abstract = (
+        incoming.abstract
+        if len(clean(incoming.abstract)) > len(existing_abstract)
+        else record.get("abstract", "")
+    )
+
+    return Paper(
+        sources=list(dict.fromkeys([*record.get("sources", []), *incoming.sources])),
+        source_ids=incoming.source_ids,
+        title=incoming.title or record.get("title", ""),
+        authors=authors,
+        venue=venue,
+        date=record.get("publication_date", "") or incoming.date,
+        doi=record.get("doi", "") or incoming.doi,
+        url=record.get("url", "") or incoming.url,
+        abstract=abstract,
+        publication_type=incoming.publication_type,
+    )
+
+
+def refresh_catalog(
+    catalog: dict[str, Any],
+    papers: Sequence[Paper],
+    config: dict[str, Any],
+) -> int:
+    """Enrich known records when a source later supplies better information.
+
+    Previously reported papers are never alerted again. This pass only improves
+    metadata, recalculates relevance evidence, and refreshes a deterministic
+    summary when a previously missing abstract becomes available.
+    """
+
+    records = {
+        record.get("id"): record
+        for record in catalog.get("articles", [])
+        if isinstance(record, dict) and record.get("id")
+    }
+    refreshed = 0
+
+    for incoming in deduplicate(papers):
+        located = _catalog_match(records, incoming)
+        if not located:
+            continue
+        old_id, record = located
+        previous_abstract = clean(record.get("abstract", ""))
+        paper = _enriched_paper(record, incoming)
+        match = screen(paper, config)
+        if not match:
+            continue
+
+        changed = False
+        new_id = article_id(paper)
+        if new_id != old_id and new_id not in records:
+            del records[old_id]
+            record["id"] = new_id
+            records[new_id] = record
+            changed = True
+
+        fields = {
+            "title": paper.title,
+            "authors": [author for author in paper.authors if clean(author)],
+            "venue": paper.venue,
+            "publication_date": paper.date,
+            "doi": normalize_doi(paper.doi),
+            "url": paper.url,
+            "sources": paper.sources,
+            "abstract": paper.abstract,
+            "score": {
+                "total": match.score.total,
+                "priority": match.priority,
+                "components": match.score.as_dict(),
+            },
+            "evidence": {
+                "basis": "abstract-only",
+                "title_terms": match.title_hits,
+                "abstract_terms": match.abstract_hits,
+                "terms": match.hits,
+            },
+        }
+        for field_name, value in fields.items():
+            if record.get(field_name) != value:
+                record[field_name] = value
+                changed = True
+
+        abstract_improved = len(clean(paper.abstract)) > len(previous_abstract)
+        summary_source = record.get("summary", {}).get("source", "")
+        if abstract_improved and summary_source in {
+            "",
+            "No abstract available",
+            "Abstract-only extractive summary",
+            "Abstract-only rule-based summary",
+        }:
+            insight = rule_based_summary(match)
+            record["summary"] = {
+                "prior_limitation": insight.prior_limitation,
+                "contribution": insight.contribution,
+                "new_capability": insight.new_capability,
+                "significance": insight.significance,
+                "source": insight.source,
+            }
+            changed = True
+
+        refreshed += int(changed)
+
+    catalog["articles"] = list(records.values())
+    return refreshed
 
 
 def update_state(
@@ -244,6 +390,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     config = load_json(args.config)
+    validate_config(config)
     state = load_json(args.state, {"schema_version": 2, "seen": {}})
     catalog = load_json(
         args.catalog, {"schema_version": 2, "last_scan_at": "", "articles": []}
@@ -260,8 +407,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
 
     lookback = args.lookback_days or int(
-        os.getenv("LOOKBACK_DAYS")
-        or config["monitor"]["lookback_days"]
+        os.getenv("LOOKBACK_DAYS") or config["monitor"]["lookback_days"]
     )
     if not 1 <= lookback <= 90:
         raise MonitorError("lookback_days must be between 1 and 90")
@@ -273,6 +419,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         today,
         now,
     )
+    refreshed = refresh_catalog(catalog, recent.papers, config)
     catalog_ids = {
         article["id"] for article in catalog.get("articles", [])
     }
@@ -293,7 +440,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         state.get("last_selection_date_jst") == today.isoformat()
     )
 
-    # Only search the archive when the recent search found nothing.
+    # Search the archive only when the recent pass produced no new article.
     if (
         recent.required_successes > 0
         and not selected
@@ -306,6 +453,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         archive_counts = archive.counts
         archive_warnings = archive.warnings
+        refreshed += refresh_catalog(catalog, archive.papers, config)
+        catalog_ids = {
+            article["id"] for article in catalog.get("articles", [])
+        }
         selected = select_historical(
             archive.papers,
             config,
@@ -394,7 +545,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     print(
         f"Report: {report_path}; recent records {len(recent.papers)}, "
-        f"selected {len(selected)} ({selection_type})"
+        f"selected {len(selected)} ({selection_type}), refreshed {refreshed}"
     )
     return 0
 

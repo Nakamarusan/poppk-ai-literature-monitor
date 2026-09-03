@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Program architecture and relevance scoring for the PopPK × AI literature monitor">
+  <meta name="description" content="Program architecture, evidence policy, source handling, and relevance scoring for the PopPK × AI literature monitor.">
   <meta name="theme-color" content="#0d0907">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Method · PopPK × AI Methodology Atlas">
+  <meta property="og:description" content="How the abstract-only literature monitor retrieves, screens, scores, interprets, and publishes papers.">
+  <meta property="og:url" content="https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <title>Method · PopPK × AI Methodology Atlas</title>
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
@@ -22,7 +30,7 @@
       </a>
       <div class="nav-links">
         <a href="./">Library</a>
-        <a class="active" href="./method.html">Method</a>
+        <a class="active" href="./method.html" aria-current="page">Method</a>
         <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
            target="_blank" rel="noopener noreferrer">Repository ↗</a>
       </div>
@@ -33,8 +41,8 @@
         <p class="folio-label">The instrument · Evidence brought into light</p>
         <h1>How the monitor<br><em>defines its field of view</em></h1>
         <p class="lead">
-          The program separates observation, selection, interpretation, and
-          publication. Full text is never fetched. Every interpretive statement
+          The program separates retrieval, selection, interpretation, and
+          publication. It never fetches full text. Every interpretive statement
           is constrained to the available abstract.
         </p>
       </div>
@@ -53,22 +61,22 @@
       <article>
         <span>01</span>
         <h2>Observe</h2>
-        <p>Collect bibliographic metadata and the available abstract.</p>
+        <p>Collect bibliographic metadata and available abstracts.</p>
       </article>
       <article>
         <span>02</span>
         <h2>Measure</h2>
-        <p>Apply eligibility rules and a transparent relevance score.</p>
+        <p>Apply explicit eligibility rules and a bounded relevance score.</p>
       </article>
       <article>
         <span>03</span>
         <h2>Interpret</h2>
-        <p>Summarize only what the abstract can support.</p>
+        <p>Summarize only statements that the abstract can support.</p>
       </article>
       <article>
         <span>04</span>
         <h2>Publish</h2>
-        <p>Write the report, catalog, Issue, and static site.</p>
+        <p>Update the report, catalog, GitHub Issue, and static site.</p>
       </article>
     </div>
   </header>
@@ -86,13 +94,14 @@
           </p>
 
           <ol class="pipeline">
-            <li><span>Observe</span><p>Retrieve metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
+            <li><span>Retrieve</span><p>Request metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
             <li><span>Normalize</span><p>Convert source-specific records to a shared <code>Paper</code> structure.</p></li>
-            <li><span>Unify</span><p>Merge records that share a DOI, source identifier, or normalized title.</p></li>
+            <li><span>Unify</span><p>Merge records connected by DOI, source identifier, or normalized title.</p></li>
+            <li><span>Refresh</span><p>Improve previously indexed records when a source later provides a longer abstract or richer metadata.</p></li>
             <li><span>Screen</span><p>Require PopPK or pharmacometrics, AI or machine learning, and methodological evidence.</p></li>
-            <li><span>Select</span><p>Report new eligible papers; otherwise choose one unreported paper published since 2020.</p></li>
-            <li><span>Interpret</span><p>Generate four concise statements from the available abstract only.</p></li>
-            <li><span>Publish</span><p>Update Markdown, GitHub Issues, the JSON catalog, and GitHub Pages.</p></li>
+            <li><span>Select</span><p>Report new papers; otherwise choose one unreported, abstract-bearing paper published since 2020.</p></li>
+            <li><span>Interpret</span><p>Create four concise statements from the available abstract only.</p></li>
+            <li><span>Publish</span><p>Update Markdown, GitHub Issues, the canonical JSON catalog, and GitHub Pages.</p></li>
           </ol>
         </div>
       </section>
@@ -104,8 +113,8 @@
           <h2>A bounded measure of scope alignment</h2>
           <p class="section-lead">
             The score ranges from 0 to 100. It ranks eligible papers by explicit
-            alignment with this monitor; it does not assess scientific quality,
-            validity, novelty, or clinical usefulness.
+            alignment with this monitor. It does not assess study quality,
+            validity, novelty, risk of bias, or clinical usefulness.
           </p>
 
           <div class="score-composition">
@@ -133,8 +142,9 @@
           </div>
 
           <aside class="method-note">
-            Repeated synonyms do not add extra points. Each component is based
-            on presence or absence in the title and abstract.
+            A paper must pass the three-part eligibility gate before scoring.
+            Repeated synonyms do not add points; each component records whether
+            evidence is present in the title or abstract.
           </aside>
         </div>
       </section>
@@ -152,14 +162,16 @@
 
           <div class="evidence-grid">
             <article><span>01</span><h3>Prior limitation</h3><p>What gap or problem does the abstract identify?</p></article>
-            <article><span>02</span><h3>Contribution</h3><p>What method, framework, or comparison does it describe?</p></article>
+            <article><span>02</span><h3>Contribution</h3><p>What method, framework, algorithm, or comparison does it describe?</p></article>
             <article><span>03</span><h3>New capability</h3><p>What analysis or decision becomes possible according to the abstract?</p></article>
             <article><span>04</span><h3>Significance</h3><p>Why might it matter for PopPK, pharmacometrics, or model-informed dosing?</p></article>
           </div>
 
           <p>
-            When no abstract is available, the monitor states that evidence is
-            unavailable instead of inferring a conclusion from the title.
+            With an OpenAI API key, the abstract may be paraphrased into these
+            four fields. Without one, the fallback extracts supporting
+            sentences directly. If the abstract does not support a field, the
+            monitor states that it was not reported.
           </p>
         </div>
       </section>
@@ -168,7 +180,7 @@
         <p class="section-number">04</p>
         <div>
           <p class="section-kicker">Source policy</p>
-          <h2>Primary sources, optional preprints</h2>
+          <h2>Core indexes with an optional preprint supplement</h2>
           <div class="source-table" role="table" aria-label="Literature source policy">
             <div class="source-row source-head" role="row">
               <span role="columnheader">Source</span>
@@ -177,17 +189,17 @@
             </div>
             <div class="source-row" role="row">
               <strong role="cell">Europe PMC</strong>
-              <span role="cell">Primary biomedical metadata and abstracts</span>
-              <span role="cell">Displayed as a warning; required for normal operation</span>
+              <span role="cell">Biomedical metadata and available abstracts</span>
+              <span role="cell">A failure is reported; the run can continue if another required source succeeds</span>
             </div>
             <div class="source-row" role="row">
               <strong role="cell">Crossref</strong>
               <span role="cell">Publisher-registered articles and posted content</span>
-              <span role="cell">Displayed as a warning; required for normal operation</span>
+              <span role="cell">A failure is reported; the run can continue if another required source succeeds</span>
             </div>
             <div class="source-row" role="row">
               <strong role="cell">arXiv</strong>
-              <span role="cell">Optional preprint supplement</span>
+              <span role="cell">Optional preprint supplement, queried at most once per JST day</span>
               <span role="cell">Rate-limit and timeout errors are logged internally but omitted from reports</span>
             </div>
           </div>
@@ -200,14 +212,14 @@
           <p class="section-kicker">Program structure</p>
           <h2>Small modules with explicit responsibilities</h2>
           <div class="architecture">
-            <article><code>core.py</code><p>Data models, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
+            <article><code>core.py</code><p>Data models, validation, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
             <article><code>sources.py</code><p>Clients for Europe PMC, Crossref, and arXiv.</p></article>
-            <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and a deterministic fallback.</p></article>
-            <article><code>literature_monitor.py</code><p>Source orchestration, new and archive selection, notifications, and state updates.</p></article>
+            <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and an extractive fallback.</p></article>
+            <article><code>literature_monitor.py</code><p>Retrieval orchestration, catalog refresh, selection, notifications, and state updates.</p></article>
             <article><code>reporting.py</code><p>Canonical article records, Markdown reports, and GitHub Issues.</p></article>
-            <article><code>site_generator.py</code><p>Transforms the canonical catalog into data consumed by GitHub Pages.</p></article>
-            <article><code>data/articles.json</code><p>The canonical structured catalog.</p></article>
-            <article><code>state/seen.json</code><p>Seen identifiers, source health, and dates used to prevent duplicate alerts.</p></article>
+            <article><code>site_generator.py</code><p>Validates and transforms the catalog into data consumed by GitHub Pages.</p></article>
+            <article><code>data/articles.json</code><p>The canonical structured catalog used to build the site.</p></article>
+            <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p></article>
           </div>
         </div>
       </section>
@@ -222,7 +234,8 @@
             <li>Abstracts may omit important methods, validation details, and limitations.</li>
             <li>The relevance score measures scope alignment, not study quality.</li>
             <li>Source metadata may differ in dates, abstracts, and publication types.</li>
-            <li>The archive fallback is a ranked convenience sample.</li>
+            <li>API result limits and indexing delays prevent guaranteed completeness.</li>
+            <li>The archive fallback is a ranked convenience sample, not an exhaustive search.</li>
           </ul>
         </div>
       </section>
@@ -231,25 +244,21 @@
         <p class="section-number">07</p>
         <div>
           <p class="section-kicker">Visual language</p>
-          <h2>Selective light, quiet presence, and the window as boundary</h2>
+          <h2>Chiaroscuro, geometry, and measured motion</h2>
           <p class="section-lead">
             The interface is an original digital design rather than a
-            reproduction of a painting. It translates Rembrandt’s chiaroscuro,
-            warm earth pigments, intimate frontal presence, and the framing
-            logic of <em>Girl at a Window</em> into a restrained research
-            interface. The window becomes a metaphor for the evidence boundary:
-            only what the abstract illuminates is interpreted.
+            reproduction of an artwork. Selective light and warm earth colors
+            organize attention, while the rotating geometric instrument
+            represents repeated observation, comparison, and revision.
           </p>
           <div class="design-principles">
-            <article><span>Light</span><p>Warm information surfaces emerge from deep umber rather than uniform brightness.</p></article>
-            <article><span>Frame</span><p>Rules, ledges, and dark margins create a clear field of attention.</p></article>
-            <article><span>Presence</span><p>Centered titles and measured pauses favor calm focus over visual noise.</p></article>
+            <article><span>Light</span><p>Important information emerges from a restrained dark field.</p></article>
+            <article><span>Measure</span><p>Circles, axes, and score dials make the system’s boundaries visible.</p></article>
+            <article><span>Motion</span><p>Slow counter-rotation suggests iteration without competing with the content.</p></article>
           </div>
           <p class="reference-line">
-            Design reference:
-            <a href="https://www.dulwichpicturegallery.org.uk/explore/news-stories/rembrandt-van-rijn-at-dulwich-picture-gallery/"
-               target="_blank" rel="noopener noreferrer">Dulwich Picture Gallery on Rembrandt’s <em>Girl at a Window</em>, described as the “Mona Lisa of London”</a>.
-            No museum image or artwork file is embedded in this site.
+            No museum image, painting file, or traced composition is embedded
+            in the site. The interface uses original HTML, CSS, and SVG.
           </p>
         </div>
       </section>

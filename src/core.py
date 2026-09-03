@@ -1,7 +1,8 @@
-"""Core data models, scoring, normalization, and HTTP helpers."""
+"""Core models, validation, scoring, de-duplication, and HTTP helpers."""
 
 from __future__ import annotations
 
+import copy
 import datetime as dt
 import hashlib
 import html
@@ -23,6 +24,8 @@ _SPACE = re.compile(r"\s+")
 _HTML_TAG = re.compile(r"<[^>]+>")
 _DOI_PREFIX = re.compile(r"^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)", re.I)
 _ARXIV_VERSION = re.compile(r"v\d+$", re.I)
+_SOURCE_NAMES = {"europe_pmc", "crossref", "arxiv"}
+_GENERIC_VENUES = {"", "Europe PMC", "Crossref", "arXiv"}
 
 
 class MonitorError(RuntimeError):
@@ -31,7 +34,7 @@ class MonitorError(RuntimeError):
 
 @dataclass
 class Paper:
-    """Normalized bibliographic metadata returned by any source."""
+    """Source-independent bibliographic record."""
 
     sources: list[str]
     source_ids: list[str]
@@ -49,7 +52,7 @@ class Paper:
         return f"title:{digest}"
 
     def keys(self) -> list[str]:
-        """Return stable identifiers used for de-duplication and seen-state checks."""
+        """Return stable identifiers for de-duplication and seen-state checks."""
 
         keys: list[str] = []
         if doi := normalize_doi(self.doi):
@@ -69,7 +72,7 @@ class Paper:
 
 @dataclass(frozen=True)
 class Score:
-    """Transparent 0-100 relevance score."""
+    """Bounded relevance score with four transparent components."""
 
     pk: int
     ai: int
@@ -92,7 +95,7 @@ class Score:
 
 @dataclass(frozen=True)
 class Match:
-    """A paper that passed screening, including evidence and score details."""
+    """An eligible paper plus the evidence used for its relevance score."""
 
     paper: Paper
     score: Score
@@ -111,7 +114,7 @@ class Match:
 
 
 def clean(value: Any) -> str:
-    """Remove HTML tags and collapse whitespace."""
+    """Remove markup and collapse whitespace."""
 
     if value is None:
         return ""
@@ -120,7 +123,7 @@ def clean(value: Any) -> str:
 
 
 def normalize_text(value: str) -> str:
-    """Normalize text for stable matching across punctuation and Unicode variants."""
+    """Normalize punctuation and Unicode variants for phrase matching."""
 
     value = unicodedata.normalize("NFKC", clean(value)).casefold()
     return _SPACE.sub(" ", re.sub(r"[^\w]+", " ", value)).strip()
@@ -131,7 +134,7 @@ def normalize_doi(value: str) -> str:
 
 
 def parse_date(value: str) -> dt.date | None:
-    """Parse common date formats returned by the literature APIs."""
+    """Parse the date formats commonly returned by the literature APIs."""
 
     value = clean(value)
     if not value:
@@ -152,7 +155,7 @@ def parse_date(value: str) -> dt.date | None:
 
 
 def phrase_hits(text: str, terms: Sequence[str]) -> list[str]:
-    """Find configured phrases after punctuation-insensitive normalization."""
+    """Find configured phrases without counting punctuation variants twice."""
 
     haystack = f" {normalize_text(text)} "
     hits: list[str] = []
@@ -163,25 +166,84 @@ def phrase_hits(text: str, terms: Sequence[str]) -> list[str]:
     return hits
 
 
+def validate_config(config: dict[str, Any]) -> None:
+    """Fail early with a readable message when the configuration is invalid."""
+
+    required_sections = {
+        "monitor",
+        "sources",
+        "historical_fallback",
+        "search",
+        "terms",
+        "scoring",
+        "summaries",
+    }
+    missing = sorted(required_sections - config.keys())
+    if missing:
+        raise MonitorError(f"Missing config sections: {', '.join(missing)}")
+
+    source_names = set(config["sources"])
+    if unknown := sorted(source_names - _SOURCE_NAMES):
+        raise MonitorError(f"Unknown literature sources: {', '.join(unknown)}")
+
+    fallback_sources = set(config["historical_fallback"].get("sources", []))
+    if unknown := sorted(fallback_sources - source_names):
+        raise MonitorError(f"Unknown historical sources: {', '.join(unknown)}")
+
+    term_groups = config["terms"]
+    required_term_groups = {"pk", "ai", "method", "methodological_ai", "exclude"}
+    if missing_groups := sorted(required_term_groups - term_groups.keys()):
+        raise MonitorError(f"Missing term groups: {', '.join(missing_groups)}")
+
+    scoring = config["scoring"]
+    weight_names = (
+        "pk_title",
+        "pk_abstract",
+        "ai_title",
+        "ai_abstract",
+        "method_title",
+        "method_abstract",
+        "intersection_bonus",
+    )
+    try:
+        weights = [int(scoring[name]) for name in weight_names]
+        medium = int(scoring["medium_threshold"])
+        high = int(scoring["high_threshold"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise MonitorError("Scoring weights and thresholds must be integers") from exc
+
+    if any(weight < 0 for weight in weights):
+        raise MonitorError("Scoring weights cannot be negative")
+    maximum = sum(weights)
+    if maximum != 100:
+        raise MonitorError(f"Scoring weights must total 100, not {maximum}")
+    if not 0 <= medium <= high <= maximum:
+        raise MonitorError("Relevance thresholds must satisfy 0 <= medium <= high <= 100")
+
+    lookback = int(config["monitor"].get("lookback_days", 0))
+    if not 1 <= lookback <= 90:
+        raise MonitorError("monitor.lookback_days must be between 1 and 90")
+
+
 def _method_signal(
     method_hits: Sequence[str],
     ai_hits: Sequence[str],
     methodological_ai: set[str],
 ) -> bool:
-    return bool(method_hits) or any(normalize_text(hit) in methodological_ai for hit in ai_hits)
+    return bool(method_hits) or any(
+        normalize_text(hit) in methodological_ai for hit in ai_hits
+    )
 
 
 def screen(paper: Paper, config: dict[str, Any]) -> Match | None:
-    """Screen one paper and calculate a bounded relevance score.
+    """Apply the eligibility gate and calculate the 0-100 relevance score.
 
-    Eligibility requires evidence for all three concepts:
-    PopPK/pharmacometrics, AI/ML, and methodology. The score measures topical
-    relevance only; it is not a quality or validity rating.
+    Eligibility requires PopPK/pharmacometrics, AI/ML, and methodological
+    evidence. The score measures scope alignment, not study quality.
     """
 
     terms = config["terms"]
-    excluded_text = normalize_text(f"{paper.publication_type} {paper.title}")
-    if any(normalize_text(term) in excluded_text for term in terms["exclude"]):
+    if phrase_hits(f"{paper.publication_type} {paper.title}", terms["exclude"]):
         return None
 
     title_hits = {
@@ -193,9 +255,11 @@ def screen(paper: Paper, config: dict[str, Any]) -> Match | None:
         for group in ("pk", "ai", "method")
     }
 
+    methodological_ai = {
+        normalize_text(term) for term in terms["methodological_ai"]
+    }
     pk_present = bool(title_hits["pk"] or abstract_hits["pk"])
     ai_present = bool(title_hits["ai"] or abstract_hits["ai"])
-    methodological_ai = {normalize_text(term) for term in terms["methodological_ai"]}
     method_present = _method_signal(
         title_hits["method"] + abstract_hits["method"],
         title_hits["ai"] + abstract_hits["ai"],
@@ -211,7 +275,6 @@ def screen(paper: Paper, config: dict[str, Any]) -> Match | None:
     method_in_abstract = _method_signal(
         abstract_hits["method"], abstract_hits["ai"], methodological_ai
     )
-
     score = Score(
         pk=(weights["pk_title"] if title_hits["pk"] else 0)
         + (weights["pk_abstract"] if abstract_hits["pk"] else 0),
@@ -232,54 +295,86 @@ def screen(paper: Paper, config: dict[str, Any]) -> Match | None:
         priority = "Medium"
     else:
         priority = "Low"
-
     return Match(paper, score, priority, title_hits, abstract_hits)
 
 
+def _date_precision(value: str) -> int:
+    normalized = clean(value)
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}(?:T.*)?", normalized):
+        return 3
+    if re.fullmatch(r"\d{4}-\d{2}", normalized):
+        return 2
+    if re.fullmatch(r"\d{4}", normalized):
+        return 1
+    return 0
+
+
 def _merge(target: Paper, incoming: Paper) -> None:
-    """Fill missing metadata and retain the longest available abstract."""
+    """Merge richer metadata into one normalized record."""
 
     existing_pairs = set(zip(target.sources, target.source_ids))
     for pair in zip(incoming.sources, incoming.source_ids):
         if pair not in existing_pairs:
             target.sources.append(pair[0])
             target.source_ids.append(pair[1])
+            existing_pairs.add(pair)
 
-    if len(incoming.abstract) > len(target.abstract):
+    if len(clean(incoming.abstract)) > len(clean(target.abstract)):
         target.abstract = incoming.abstract
+    if len([author for author in incoming.authors if clean(author)]) > len(
+        [author for author in target.authors if clean(author)]
+    ):
+        target.authors = [author for author in incoming.authors if clean(author)]
+    if target.venue in _GENERIC_VENUES and incoming.venue not in _GENERIC_VENUES:
+        target.venue = incoming.venue
+    if _date_precision(incoming.date) > _date_precision(target.date):
+        target.date = incoming.date
 
-    for field_name in ("authors", "venue", "date", "doi", "url", "publication_type"):
+    for field_name in ("doi", "url", "publication_type"):
         if not getattr(target, field_name) and getattr(incoming, field_name):
             setattr(target, field_name, getattr(incoming, field_name))
 
 
 def deduplicate(papers: Iterable[Paper]) -> list[Paper]:
-    """Merge records that share a DOI, source identifier, or normalized title."""
+    """Merge records connected by DOI, source identifier, or normalized title.
+
+    All matching records are collapsed, including transitive matches such as a
+    title-only record that later connects two DOI/source records.
+    """
 
     records: list[Paper] = []
-    key_to_record: dict[str, int] = {}
+    key_to_position: dict[str, int] = {}
 
-    for paper in papers:
-        positions = {key_to_record[key] for key in paper.keys() if key in key_to_record}
-        if positions:
-            position = min(positions)
-            _merge(records[position], paper)
-        else:
-            position = len(records)
+    for incoming in papers:
+        paper = copy.deepcopy(incoming)
+        positions = sorted(
+            {key_to_position[key] for key in paper.keys() if key in key_to_position}
+        )
+
+        if not positions:
             records.append(paper)
+        else:
+            primary = positions[0]
+            _merge(records[primary], paper)
+            for position in reversed(positions[1:]):
+                _merge(records[primary], records[position])
+                del records[position]
 
-        for key in records[position].keys():
-            key_to_record[key] = position
+        # Rebuild the small index after each insertion. This keeps positions
+        # correct after transitive merges remove records from the list.
+        key_to_position = {
+            key: position
+            for position, record in enumerate(records)
+            for key in record.keys()
+        }
 
     return records
 
 
 def article_id(paper: Paper) -> str:
-    """Return the canonical article identifier used in the HTML catalog."""
+    """Return the canonical identifier used by the catalog and dashboard."""
 
-    if doi := normalize_doi(paper.doi):
-        return f"doi:{doi}"
-    return paper.title_key()
+    return f"doi:{doi}" if (doi := normalize_doi(paper.doi)) else paper.title_key()
 
 
 def fingerprint(matches: Sequence[Match]) -> str:
@@ -328,12 +423,12 @@ def request(
     accept: str = "application/json",
     retries: int = 4,
 ) -> bytes:
-    """Make an HTTP request with bounded retries for transient errors."""
+    """Make an HTTP request with bounded retries for transient failures."""
 
     request_headers = {
         "Accept": accept,
         "User-Agent": (
-            "poppk-ai-literature-monitor/5.0 "
+            "poppk-ai-literature-monitor/6.0 "
             "(+https://github.com/Nakamarusan/poppk-ai-literature-monitor)"
         ),
     }
@@ -348,10 +443,10 @@ def request(
     last_error: Exception | None = None
     for attempt in range(max(1, retries)):
         try:
-            with urlopen(
-                Request(url, data=body, headers=request_headers, method=method),
-                timeout=45,
-            ) as response:
+            request_object = Request(
+                url, data=body, headers=request_headers, method=method
+            )
+            with urlopen(request_object, timeout=45) as response:
                 return response.read()
         except HTTPError as exc:
             last_error = exc
