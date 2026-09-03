@@ -19,7 +19,7 @@ const ui = {
   observatory: $(".observatory"),
 };
 
-// Escape catalog text before inserting it into generated HTML.
+// Catalog values come from external metadata, so escape them before rendering.
 const escapeHtml = (value) =>
   String(value ?? "").replace(/[&<>"']/g, (character) => ({
     "&": "&amp;",
@@ -30,7 +30,7 @@ const escapeHtml = (value) =>
   })[character]);
 
 const safeUrl = (value) =>
-  /^https?:\/\//i.test(String(value ?? "")) ? String(value) : "#";
+  /^https?:\/\//i.test(String(value ?? "")) ? String(value) : "";
 
 const normalize = (value) =>
   String(value ?? "")
@@ -96,7 +96,7 @@ const articleYear = (article) => {
 
 const typeBadge = (type) =>
   type === "historical"
-    ? '<span class="badge badge-historical">Archive selection</span>'
+    ? '<span class="badge badge-archive">Archive selection</span>'
     : '<span class="badge badge-new">New article</span>';
 
 const priorityBadge = (value) =>
@@ -113,26 +113,33 @@ const tagList = (values) => {
 };
 
 const insight = (number, title, value) => `
-  <section class="insight">
+  <section class="insight insight-${number}">
     <span class="insight-number">${number}</span>
-    <div>
-      <h3>${escapeHtml(title)}</h3>
-      <p>${escapeHtml(value || "Not stated in the available abstract.")}</p>
-    </div>
+    <h3>${escapeHtml(title)}</h3>
+    <p>${escapeHtml(value || "Not stated in the available abstract.")}</p>
   </section>
 `;
 
 const scoreBreakdown = (components) => {
   const labels = [
-    ["PK", components.pk],
+    ["PopPK", components.pk],
     ["AI", components.ai],
     ["Method", components.method],
     ["Intersection", components.intersection],
   ];
   return `<div class="score-breakdown">${labels
-    .map(([label, value]) => `<span><b>${escapeHtml(label)}</b>${Number(value) || 0}</span>`)
+    .map(([label, value]) => `
+      <div>
+        <span>${escapeHtml(label)}</span>
+        <strong>${Number(value) || 0}</strong>
+      </div>
+    `)
     .join("")}</div>`;
 };
+
+const sourceAction = (url) => url
+  ? `<a class="source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>`
+  : '<span class="source-link source-link-disabled">Source unavailable</span>';
 
 const articleCard = (article, index) => {
   const articleScore = score(article);
@@ -145,81 +152,73 @@ const articleCard = (article, index) => {
   const doi = article.doi
     ? `<span class="doi">DOI ${escapeHtml(article.doi)}</span>`
     : "";
-  const study = String(index + 1).padStart(2, "0");
+  const number = String(index + 1).padStart(2, "0");
+  const featured = index === 0 ? " featured" : "";
 
   return `
-    <article class="paper-card reveal" id="${escapeHtml(article.id || article.title)}">
-      <aside class="study-rail" aria-hidden="true">
-        <span>Study ${study}</span>
-        <strong>R.${String(articleScore.total).padStart(2, "0")}</strong>
-      </aside>
+    <article class="paper-card reveal${featured}" id="${escapeHtml(article.id || article.title)}">
+      <div class="paper-topline">
+        <div class="badge-group">
+          ${typeBadge(article.selection_type)}
+          ${priorityBadge(articleScore.priority)}
+        </div>
+        <span class="study-number">${number}</span>
+      </div>
 
-      <div class="paper-body">
-        <div class="paper-main">
-          <div class="paper-topline">
-            <div class="badge-group">
-              ${typeBadge(article.selection_type)}
-              ${priorityBadge(articleScore.priority)}
-            </div>
+      <div class="paper-heading-grid">
+        <div class="paper-heading">
+          <p class="paper-kicker">${escapeHtml(sourceLabel)} · ${escapeHtml(displayDate(article.publication_date))}</p>
+          <h2 class="paper-title">
+            ${sourceUrl
+              ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(article.title)}</a>`
+              : escapeHtml(article.title)}
+          </h2>
+          <p class="metadata">${escapeHtml(authors(article))}</p>
+          <div class="paper-actions">
+            ${sourceAction(sourceUrl)}
+            ${doi}
             <span class="reported-date">Indexed ${escapeHtml(reported)}</span>
-          </div>
-
-          <div class="paper-heading-grid">
-            <div>
-              <p class="paper-kicker">${escapeHtml(sourceLabel)} · ${escapeHtml(displayDate(article.publication_date))}</p>
-              <h2 class="paper-title">
-                <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">
-                  ${escapeHtml(article.title)}
-                </a>
-              </h2>
-              <p class="metadata">${escapeHtml(authors(article))}</p>
-              <div class="paper-actions">
-                <a class="source-link" href="${escapeHtml(sourceUrl)}"
-                   target="_blank" rel="noopener noreferrer">Open source record ↗</a>
-                ${doi}
-              </div>
-            </div>
-
-            <div class="score-dial" style="--score:${articleScore.total}"
-                 role="img" aria-label="Relevance score ${articleScore.total} out of 100">
-              <div class="score-dial-core">
-                <strong>${articleScore.total}</strong>
-                <span>/100</span>
-              </div>
-              <small>scope relevance</small>
-            </div>
-          </div>
-
-          <div class="insight-grid">
-            ${insight("01", "Prior limitation", articleSummary.prior_limitation)}
-            ${insight("02", "Methodological contribution", articleSummary.contribution)}
-            ${insight("03", "What becomes possible", articleSummary.new_capability)}
-            ${insight("04", "Why it matters", articleSummary.significance)}
           </div>
         </div>
 
-        <details class="paper-details">
-          <summary>Abstract, matched terms, and score construction</summary>
-          <div class="details-content">
-            <div class="detail-column detail-abstract">
-              <h3>Available abstract</h3>
-              <p>${escapeHtml(article.abstract || "No abstract was available.")}</p>
-            </div>
-            <div class="detail-column">
-              <h3>Matched terms</h3>
-              ${tagList(terms(article))}
-              <h3>Score construction</h3>
-              ${scoreBreakdown(articleScore.components)}
-              <p class="detail-note">
-                Relevance measures scope alignment, not scientific quality.
-                <a href="./method.html#score">View the scoring method.</a>
-              </p>
-              <h3>Interpretation basis</h3>
-              <p>${escapeHtml(articleSummary.source || "Abstract-only extractive summary")}</p>
-            </div>
+        <div class="score-ring" style="--score:${articleScore.total}"
+             role="img" aria-label="Relevance score ${articleScore.total} out of 100">
+          <div>
+            <strong>${articleScore.total}</strong>
+            <span>/100</span>
           </div>
-        </details>
+          <small>Relevance</small>
+        </div>
       </div>
+
+      <div class="insight-grid">
+        ${insight("01", "Prior limitation", articleSummary.prior_limitation)}
+        ${insight("02", "Methodological contribution", articleSummary.contribution)}
+        ${insight("03", "What becomes possible", articleSummary.new_capability)}
+        ${insight("04", "Why it matters", articleSummary.significance)}
+      </div>
+
+      <details class="paper-details">
+        <summary>Abstract, matched terms, and score construction</summary>
+        <div class="details-content">
+          <section class="detail-abstract">
+            <h3>Available abstract</h3>
+            <p>${escapeHtml(article.abstract || "No abstract was available.")}</p>
+          </section>
+          <aside>
+            <h3>Matched terms</h3>
+            ${tagList(terms(article))}
+            <h3>Score construction</h3>
+            ${scoreBreakdown(articleScore.components)}
+            <p class="detail-note">
+              Relevance measures scope alignment, not scientific quality.
+              <a href="./method.html#score">View the scoring method.</a>
+            </p>
+            <h3>Interpretation basis</h3>
+            <p>${escapeHtml(articleSummary.source || "Abstract-only extractive summary")}</p>
+          </aside>
+        </div>
+      </details>
     </article>
   `;
 };
@@ -251,7 +250,7 @@ const revealCards = () => {
         observer.unobserve(entry.target);
       }
     }
-  }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+  }, { rootMargin: "0px 0px -7%", threshold: 0.08 });
   cards.forEach((card) => observer.observe(card));
 };
 
@@ -294,7 +293,7 @@ const render = () => {
   ui.list.innerHTML = filtered.map(articleCard).join("");
   ui.list.hidden = filtered.length === 0;
   ui.empty.hidden = filtered.length !== 0;
-  ui.count.textContent = `${filtered.length} stud${filtered.length === 1 ? "y" : "ies"} in view`;
+  ui.count.textContent = `${filtered.length} ${filtered.length === 1 ? "study" : "studies"}`;
   requestAnimationFrame(revealCards);
 };
 
@@ -340,7 +339,7 @@ const load = async () => {
     render();
   } catch (error) {
     console.error("Unable to load the article catalog", error);
-    ui.count.textContent = "Catalog loading failed.";
+    ui.count.textContent = "Catalog loading failed";
     ui.error.hidden = false;
     ui.list.hidden = true;
   }
