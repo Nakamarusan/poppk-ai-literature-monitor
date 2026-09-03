@@ -1,18 +1,106 @@
-"""Create concise summaries using only the available abstract."""
+"""Create concise interpretations from the available abstract only."""
 
 from __future__ import annotations
 
 import json
 import os
+import re
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Iterable
 
 from .core import Match, MonitorError, clean, normalize_text, request_json
+
+_SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9(\[\"'])")
+_SECTION_PREFIX = re.compile(
+    r"^(?:abstract\s+)?(?:background|objectives?|aims?|methods?|results?|"
+    r"conclusions?)\s*:\s*",
+    re.I,
+)
+_NOT_STATED = "Not stated in the available abstract."
+
+_LIMITATION_CUES = (
+    "however",
+    "although",
+    "but",
+    "remains",
+    "remain",
+    "lack",
+    "limited",
+    "limitation",
+    "challenge",
+    "difficult",
+    "manual",
+    "resource intensive",
+    "time consuming",
+    "fails",
+    "failed",
+    "unable",
+    "not established",
+    "unknown",
+    "barrier",
+    "bottleneck",
+    "insufficient",
+    "restricted",
+)
+_CONTRIBUTION_CUES = (
+    "this study",
+    "we propose",
+    "we present",
+    "we develop",
+    "we developed",
+    "we introduce",
+    "we evaluate",
+    "we evaluated",
+    "we benchmark",
+    "aimed to",
+    "objective was",
+    "framework",
+    "algorithm",
+    "method",
+    "approach",
+)
+_CAPABILITY_CUES = (
+    "enables",
+    "enabled",
+    "allows",
+    "allowed",
+    "can ",
+    "could ",
+    "supports",
+    "supported",
+    "provides",
+    "improved",
+    "outperformed",
+    "reduced",
+    "achieved",
+    "demonstrated",
+    "showed",
+    "feasible",
+    "accurately",
+)
+_SIGNIFICANCE_CUES = (
+    "conclusion",
+    "these findings",
+    "this approach",
+    "this method",
+    "may support",
+    "could support",
+    "clinical",
+    "dosing",
+    "precision dosing",
+    "model informed",
+    "reproducibility",
+    "interpretability",
+    "privacy",
+    "multicenter",
+    "generaliz",
+    "potential",
+)
 
 
 @dataclass(frozen=True)
 class ResearchInsight:
-    """Four questions used in every report and dashboard card."""
+    """Four questions presented for every selected paper."""
 
     prior_limitation: str
     contribution: str
@@ -25,135 +113,105 @@ _NO_ABSTRACT = ResearchInsight(
     prior_limitation="Not stated because no abstract was available.",
     contribution="Not stated because no abstract was available.",
     new_capability="Not stated because no abstract was available.",
-    significance="The paper requires manual review before its relevance can be interpreted.",
+    significance="Manual review is required before the paper can be interpreted.",
     source="No abstract available",
 )
 
 
-# Category templates are deliberately cautious. They describe what the abstract
-# supports, not what the full paper may contain.
-_TEMPLATES: dict[str, tuple[str, str, str, str]] = {
-    "federated": (
-        "The abstract addresses the inability to pool patient-level data across institutions.",
-        "It describes a federated or distributed method for PopPK or pharmacometric analysis.",
-        "Institutions can contribute to a joint analysis without transferring individual records.",
-        "The approach may extend multicenter modeling to settings with data-sharing restrictions.",
-    ),
-    "synthetic_data": (
-        "The abstract identifies a trade-off between protecting patient data and preserving pharmacometric structure.",
-        "It evaluates synthetic-data methods against pharmacometric privacy and fidelity criteria.",
-        "Synthetic datasets can be compared on both disclosure risk and preservation of PK or dosing properties.",
-        "The work makes the privacy-fidelity trade-off explicit for pharmacometric data sharing.",
-    ),
-    "privacy": (
-        "The abstract identifies privacy constraints as a barrier to combining pharmacometric data.",
-        "It applies a privacy-preserving method to PopPK or pharmacometric analysis.",
-        "Cross-site analysis may be performed with lower exposure of patient-level information.",
-        "The method may support broader data use while retaining explicit privacy controls.",
-    ),
-    "llm_automation": (
-        "The abstract describes model development as iterative, expertise-dependent, or difficult to automate with a single prompt.",
-        "It introduces an agentic or staged LLM workflow for pharmacometric model development.",
-        "Multiple modeling steps can be coordinated through structured expert prompts rather than one-pass code generation.",
-        "The study tests whether LLM agents can reduce manual work while remaining auditable against expert practice.",
-    ),
-    "neural_ode": (
-        "The abstract contrasts labor-intensive model building with the limited interpretability of black-box neural ODEs.",
-        "It combines neural ODE learning with a procedure that selects or simplifies an interpretable model structure.",
-        "Complex PK or PD dynamics can be learned from data and translated into a more interpretable representation.",
-        "The method connects automated structure discovery with conventional pharmacometric interpretation.",
-    ),
-    "reinforcement_learning": (
-        "The abstract addresses treatment decisions that must adapt over time rather than at a single dosing step.",
-        "It applies reinforcement learning to sequential dosing or treatment decisions.",
-        "Dose changes, switching, or combination choices can be evaluated as a time-dependent policy.",
-        "The approach extends precision dosing from static prediction to sequential decision making.",
-    ),
-    "model_selection": (
-        "The abstract identifies a lack of objective criteria for choosing among candidate pharmacometric models.",
-        "It uses machine learning to select the model expected to perform best for a patient or dataset.",
-        "Model choice can become an explicit, data-driven step before prediction or dose calculation.",
-        "The method reduces reliance on a single fixed model when several plausible models are available.",
-    ),
-    "automated_modeling": (
-        "The abstract describes manual model selection, equation rewriting, or repeated parameter adjustment as a reproducibility burden.",
-        "It proposes a reusable framework that automates parts of mechanistic PK or PD model development.",
-        "A common modeling structure can be adapted across scenarios with less repeated implementation work.",
-        "The framework may reduce analyst-dependent steps and improve reproducibility.",
-    ),
-    "hybrid": (
-        "The abstract identifies a gap between mechanistic coverage and data-driven flexibility.",
-        "It links mechanistic QSP, PBPK, PK/PD, or related models with machine-learning components.",
-        "Several biological or pharmacological scales can be analyzed within one connected computational workflow.",
-        "The approach may support model-informed development while retaining mechanistic structure.",
-    ),
-    "generic": (
-        "The abstract identifies a modeling task that remains manual, inflexible, or difficult to generalize.",
-        "It introduces an AI-assisted method within PopPK or pharmacometrics.",
-        "The targeted modeling task can be supported by a more automated or data-driven procedure.",
-        "The work is relevant as a methodological extension, although its practical value requires review of the full study.",
-    ),
-}
+def _sentences(abstract: str) -> list[str]:
+    """Split a structured abstract into readable candidate sentences."""
+
+    text = clean(abstract)
+    if not text:
+        return []
+
+    parts = _SENTENCE_BOUNDARY.split(text)
+    sentences: list[str] = []
+    for part in parts:
+        sentence = _SECTION_PREFIX.sub("", clean(part))
+        if len(sentence) >= 20:
+            sentences.append(sentence)
+    return sentences
 
 
-def _category(abstract: str) -> str:
-    """Assign a template from abstract text only."""
-
-    text = normalize_text(abstract)
-    rules = (
-        ("synthetic_data", ("synthetic data", "generative algorithm")),
-        ("federated", ("federated learning", "distributed optimization")),
-        ("privacy", ("differential privacy", "privacy preserving")),
-        ("llm_automation", ("large language model", "llm", "agentic")),
-        (
-            "neural_ode",
-            (
-                "neural ordinary differential equation",
-                "neural ode",
-                "neural differential equation",
-            ),
-        ),
-        ("reinforcement_learning", ("reinforcement learning",)),
-        (
-            "automated_modeling",
-            (
-                "automated model development",
-                "automated pharmacodynamic",
-                "automated pharmacometric",
-                "unified mechanistic",
-            ),
-        ),
-        ("model_selection", ("model selection",)),
-        (
-            "hybrid",
-            (
-                "quantitative systems pharmacology",
-                "mechanistic machine learning",
-                "physics informed",
-                "multiscale computational platform",
-            ),
-        ),
+def _cue_score(sentence: str, cues: Iterable[str]) -> int:
+    normalized = f" {normalize_text(sentence)} "
+    return sum(
+        1 + int(len(normalize_text(cue)) >= 12)
+        for cue in cues
+        if normalize_text(cue) in normalized
     )
-    for category, phrases in rules:
-        if any(normalize_text(phrase) in text for phrase in phrases):
-            return category
-    return "generic"
+
+
+def _select_sentence(
+    sentences: list[str],
+    cues: tuple[str, ...],
+    used: set[int],
+    *,
+    prefer_later: bool = False,
+) -> tuple[str, int | None]:
+    """Select the strongest unused sentence for one interpretive field."""
+
+    candidates: list[tuple[int, int, int, str]] = []
+    for index, sentence in enumerate(sentences):
+        if index in used:
+            continue
+        score = _cue_score(sentence, cues)
+        if not score:
+            continue
+        position = index if prefer_later else -index
+        candidates.append((score, position, -len(sentence), sentence))
+
+    if not candidates:
+        return _NOT_STATED, None
+
+    selected = max(candidates)
+    sentence = selected[3]
+    index = sentences.index(sentence)
+    return _clip(sentence), index
+
+
+def _clip(value: str, limit: int = 320) -> str:
+    """Keep extracted evidence readable in Issues and article cards."""
+
+    value = clean(value)
+    if len(value) <= limit:
+        return value
+    return value[: limit - 1].rstrip(" ,;:") + "…"
 
 
 def rule_based_summary(match: Match) -> ResearchInsight:
-    """Return a deterministic, abstract-only summary."""
+    """Extract four evidence-bearing sentences without adding new claims."""
 
-    abstract = clean(match.paper.abstract)
-    if not abstract:
+    sentences = _sentences(match.paper.abstract)
+    if not sentences:
         return _NO_ABSTRACT
 
-    values = _TEMPLATES[_category(abstract)]
+    used: set[int] = set()
+    limitation, index = _select_sentence(sentences, _LIMITATION_CUES, used)
+    if index is not None:
+        used.add(index)
+
+    contribution, index = _select_sentence(sentences, _CONTRIBUTION_CUES, used)
+    if index is not None:
+        used.add(index)
+
+    capability, index = _select_sentence(
+        sentences, _CAPABILITY_CUES, used, prefer_later=True
+    )
+    if index is not None:
+        used.add(index)
+
+    significance, _ = _select_sentence(
+        sentences, _SIGNIFICANCE_CUES, used, prefer_later=True
+    )
+
     return ResearchInsight(
-        prior_limitation=values[0],
-        contribution=values[1],
-        new_capability=values[2],
-        significance=values[3],
-        source="Abstract-only rule-based summary",
+        prior_limitation=limitation,
+        contribution=contribution,
+        new_capability=capability,
+        significance=significance,
+        source="Abstract-only extractive summary",
     )
 
 
@@ -190,10 +248,10 @@ def _parse_json_summary(text: str, model: str) -> ResearchInsight:
         raise MonitorError("Summary response was missing a required field")
 
     return ResearchInsight(
-        prior_limitation=clean(data["prior_limitation"]),
-        contribution=clean(data["contribution"]),
-        new_capability=clean(data["new_capability"]),
-        significance=clean(data["significance"]),
+        prior_limitation=_clip(data["prior_limitation"]),
+        contribution=_clip(data["contribution"]),
+        new_capability=_clip(data["new_capability"]),
+        significance=_clip(data["significance"]),
         source=f"Abstract-only AI summary ({model})",
     )
 
@@ -201,7 +259,7 @@ def _parse_json_summary(text: str, model: str) -> ResearchInsight:
 def ai_summary(
     match: Match, config: dict[str, Any], api_key: str
 ) -> ResearchInsight:
-    """Ask the Responses API to paraphrase the abstract into four short fields."""
+    """Paraphrase only the supplied abstract through the Responses API."""
 
     settings = config["summaries"]
     model = os.getenv("OPENAI_MODEL", "").strip() or settings["model"]
@@ -237,7 +295,7 @@ def ai_summary(
 def summarize_research(
     match: Match, config: dict[str, Any]
 ) -> ResearchInsight:
-    """Use the optional AI summary, then fall back to deterministic rules."""
+    """Use the optional AI paraphrase, then the extractive fallback."""
 
     settings = config["summaries"]
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
@@ -247,6 +305,6 @@ def summarize_research(
         except Exception as exc:
             print(
                 f"AI summary failed for {match.paper.title}: {clean(exc)}; "
-                "using the abstract-only rule-based summary."
+                "using the abstract-only extractive summary."
             )
     return rule_based_summary(match)
