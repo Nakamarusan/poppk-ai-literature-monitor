@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-04",
-  "last_success_utc": "2026-09-03T23:44:24.145261+00:00",
+  "last_selection_date_jst": "2026-09-05",
+  "last_success_utc": "2026-09-04T23:38:17.948862+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -13,6 +13,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.1097/mcc.0000000000001428": {
+      "doi": "10.1097/mcc.0000000000001428",
+      "notified_at": "2026-09-04T23:38:17.948862+00:00",
+      "selection_type": "new",
+      "title": "Antimicrobial dosing in patients with renal dysfunction."
     },
     "doi:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -71,6 +77,12 @@
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
     },
+    "source:europe pmc:med:42689391": {
+      "doi": "10.1097/mcc.0000000000001428",
+      "notified_at": "2026-09-04T23:38:17.948862+00:00",
+      "selection_type": "new",
+      "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
     "source:europe pmc:ppr:ppr1244176": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -88,6 +100,12 @@
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
+    "title:0955b5be003e5b492c773da7": {
+      "doi": "10.1097/mcc.0000000000001428",
+      "notified_at": "2026-09-04T23:38:17.948862+00:00",
+      "selection_type": "new",
+      "title": "Antimicrobial dosing in patients with renal dysfunction."
     },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
@@ -131,22 +149,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-04"
+    "arxiv": "2026-09-05"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
+      "last_attempt_utc": "2026-09-04T23:38:17.948862+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
+      "last_attempt_utc": "2026-09-04T23:38:17.948862+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-03T23:44:24.145261+00:00",
-      "records": 41,
+      "last_attempt_utc": "2026-09-04T23:38:17.948862+00:00",
+      "records": 52,
       "status": "ok"
     }
   }

@@ -1,14 +1,83 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-04 08:44 JST",
-  "article_count": 7,
-  "new_count": 3,
+  "last_scan_at": "2026-09-05 08:38 JST",
+  "article_count": 8,
+  "new_count": 4,
   "historical_count": 4,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Purpose of review Many antimicrobials used in critically ill patients are predominantly eliminated by the kidneys. Optimizing dosing in this population is challenging as renal clearance is often altered by changes in organ function and presence of extracorporeal circuits. Extrapolating dosing recommendations derived from noncritically ill populations to these patients may not adequately account for these pharmacokinetic changes, increasing the risk of subtherapeutic or toxic drug exposures. This review summarizes contemporary strategies for optimizing antimicrobial dosing in critically ill patients, with a focus on renal dysfunction. Recent findings In resource-limited settings, dosing nomograms developed from critically ill populations provide a practical and effective approach to improving antimicrobial target attainment. Therapeutic drug monitoring is increasingly recommended for a wider range of antimicrobials and can identify patients who require dose optimization. Model-informed precision dosing software has shown promise in improving antimicrobial exposures, although data supporting its impact on clinical outcomes are lacking. Emerging technologies for optimizing antimicrobial dosing include dosing software with artificial-intelligence and real-time monitoring of antimicrobial concentrations with biosensors. Summary Alterations in renal clearance are a major contributor to suboptimal antimicrobial exposure in critical illness. Selection of dose optimization strategies should be guided by local resources and expertise (see Graphical Abstract).",
+      "authors": [
+        "Chai MG",
+        "Smareglia LV",
+        "Udy AA"
+      ],
+      "doi": "10.1097/mcc.0000000000001428",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization",
+            "software"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization",
+            "software"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1097/mcc.0000000000001428",
+      "publication_date": "2026-09-02",
+      "reported_at": "2026-09-05 08:38 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Therapeutic drug monitoring is increasingly recommended for a wider range of antimicrobials and can identify patients who require dose optimization.",
+        "prior_limitation": "Recent findings In resource-limited settings, dosing nomograms developed from critically ill populations provide a practical and effective approach to improving antimicrobial target attainment.",
+        "significance": "Model-informed precision dosing software has shown promise in improving antimicrobial exposures, although data supporting its impact on clinical outcomes are lacking.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Antimicrobial dosing in patients with renal dysfunction.",
+      "url": "https://europepmc.org/article/MED/42689391",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Background: Antimicrobial resistance (AMR) is a major global health threat, while conventional diagnostic, stewardship, dosing, and drug-development strategies remain limited by diagnostic delays, population-level decision-making, and a shrinking antibiotic pipeline. Artificial intelligence (AI) may help address these gaps by integrating complex clinical, microbiological, genomic, pharmacological, and chemical data. Methods: We conducted a narrative review of English-language publications issued between January 2010 and March 2026. PubMed/MEDLINE, Scopus, and Web of Science were searched using terms related to AI, machine learning, AMR, antimicrobial stewardship, diagnosis, susceptibility prediction, antibiotic dosing, pharmacokinetics, pharmacodynamics, and antibiotic discovery. ClinicalTrials.gov, the World Health Organization International Clinical Trials Registry Platform, and ISRCTN were additionally searched on 27 August 2026 for prospective interventional studies registered or publicly available by 31 March 2026. Results: AI-based systems demonstrated promising performance in differentiating bacterial from viral infections, predicting bacteremia and sepsis, enhancing matrix-assisted laser desorption/ionization time-of-flight interpretation, estimating antimicrobial susceptibility, supporting individualized empirical therapy, optimizing antibiotic dosing, and accelerating compound discovery. However, external and temporal validation frequently produced substantially poorer performance than internal validation. In representative resistance-prediction studies, AUROC declined from 0.94 internally to 0.55 during temporally independent external validation and by 0.10–0.25 over 18 months. Moreover, only six eligible prospective interventional studies were identified across the four domains examined: two concerning AI-assisted diagnosis or antibiotic-use decisions, three concerning resistance prediction or stewardship, one concerning model-informed precision dosing, and none concerning AI-assisted antibiotic discovery. Conclusions: Current evidence demonstrates that AI can generate technically promising predictions, but it does not yet establish consistent clinical or economic benefit. Discrimination alone is insufficient to demonstrate clinical usefulness. Prospective multicenter trials, clinically meaningful outcome measures, external validation, continuous monitoring for model drift, and formal implementation and cost-effectiveness evaluations are required before widespread adoption.",
       "authors": [
