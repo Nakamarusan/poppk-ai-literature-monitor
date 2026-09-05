@@ -1,6 +1,90 @@
 {
   "articles": [
     {
+      "abstract": "Model-informed precision dosing is often constrained by the limited generalizability of traditional population pharmacokinetic models, especially in critically ill patients. A hybrid machine learning-population pharmacokinetic framework is proposed to improve a priori pharmacokinetic predictions by integrating real-world clinical data. This approach was applied to vancomycin trough concentration prediction. Two widely used two-compartment population pharmacokinetic models provided individual pharmacokinetic parameter estimates. Maximum a posteriori Bayesian estimation was used to adjust population parameters for individual patients based on drug administration records, therapeutic drug monitoring values, and patient-specific covariates from the MIMIC-IV database. The resulting clearance and central volume of distribution estimates served as training targets for XGBoost and symbolic regression models. Machine learning-predicted parameters were reinserted into the original pharmacokinetic equations to generate a priori vancomycin trough concentrations without reliance on therapeutic drug monitoring input. The hybrid models demonstrated improved prediction accuracy over traditional population pharmacokinetic covariate models and reduced vancomycin trough concentration prediction error by up to ~20%. XGBoost generally provided the highest predictive performance, while symbolic regression produced interpretable mathematical expressions revealing associations between non-traditional clinical predictors and pharmacokinetic parameters, highlighting a trade-off between accuracy and interpretability. This framework illustrates the potential of combining machine learning with population pharmacokinetic modeling to refine pharmacokinetic parameter estimation and support more precise, individualized dosing. The workflow is adaptable to other drugs and patient populations, offering a generalizable methodological strategy to identify non-traditional predictors and enhance existing pharmacometric model performance in real-world clinical settings.",
+      "authors": [
+        "Relouw FJA",
+        "Lokers JJMT",
+        "Preijers T",
+        "Sassen SDT",
+        "van Riel NAW",
+        "Koch BCP"
+      ],
+      "doi": "10.1002/psp4.70313",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation",
+            "workflow"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "pharmacometric",
+            "model informed precision dosing"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "workflow",
+            "framework",
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometric",
+            "population pharmacokinetic",
+            "model informed precision dosing"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70313",
+      "publication_date": "2026-08-01",
+      "reported_at": "2026-09-06 08:29 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "A hybrid machine learning-population pharmacokinetic framework is proposed to improve a priori pharmacokinetic predictions by integrating real-world clinical data.",
+        "new_capability": "The hybrid models demonstrated improved prediction accuracy over traditional population pharmacokinetic covariate models and reduced vancomycin trough concentration prediction error by up to ~20%.",
+        "prior_limitation": "Model-informed precision dosing is often constrained by the limited generalizability of traditional population pharmacokinetic models, especially in critically ill patients.",
+        "significance": "The workflow is adaptable to other drugs and patient populations, offering a generalizable methodological strategy to identify non-traditional predictors and enhance existing pharmacometric model performance in real-world clinical settings.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling.",
+      "url": "https://europepmc.org/article/MED/42549629",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Purpose of review Many antimicrobials used in critically ill patients are predominantly eliminated by the kidneys. Optimizing dosing in this population is challenging as renal clearance is often altered by changes in organ function and presence of extracorporeal circuits. Extrapolating dosing recommendations derived from noncritically ill populations to these patients may not adequately account for these pharmacokinetic changes, increasing the risk of subtherapeutic or toxic drug exposures. This review summarizes contemporary strategies for optimizing antimicrobial dosing in critically ill patients, with a focus on renal dysfunction. Recent findings In resource-limited settings, dosing nomograms developed from critically ill populations provide a practical and effective approach to improving antimicrobial target attainment. Therapeutic drug monitoring is increasingly recommended for a wider range of antimicrobials and can identify patients who require dose optimization. Model-informed precision dosing software has shown promise in improving antimicrobial exposures, although data supporting its impact on clinical outcomes are lacking. Emerging technologies for optimizing antimicrobial dosing include dosing software with artificial-intelligence and real-time monitoring of antimicrobial concentrations with biosensors. Summary Alterations in renal clearance are a major contributor to suboptimal antimicrobial exposure in critical illness. Selection of dose optimization strategies should be guided by local resources and expertise (see Graphical Abstract).",
       "authors": [
         "Chai MG",
@@ -231,7 +315,7 @@
       "venue": "Europe PMC"
     },
     {
-      "abstract": "Current pharmacometrics model development is a manual process with iterative model building, fitting, and evaluation, which can be resource-intensive and time-consuming. Existing automated approaches still rely on iterative processes and goodness-of-fit model selection. Neural ordinary differential equations can characterize complex pharmacokinetic and pharmacodynamic dynamics directly from data, but their black-box nature limits interpretability. The study combines low-dimensional neural ODEs and LASSO regression for automated pharmacometric model development. The resulting structure is evaluated as a population PK/PD modeling workflow.",
+      "abstract": "Current pharmacometrics (PMX) model development is a manual process with iterative model building, fitting, and evaluation, which can be resource-intensive and time-consuming. Existing automated model development approaches utilize algorithms that still rely on iterative processes and perform model selection based on goodness-of-fit criteria. Recent advances in machine learning and artificial intelligence, particularly neural ordinary differential equations (NODEs), have demonstrated strong potential for characterizing complex pharmacokinetic (PK) and pharmacodynamic (PD) dynamics directly from data. However, NODEs are inherently black-box models, which limits their interpretability and their ability to provide mechanistic insights, both of which are essential in PMX. We recently presented a promising concept that proposes interpretable ODE-based structural models from NODEs but relied on manually identifying functional relationships, which can be challenging and prevents full automation. In this work, we present an automated model development approach that combines NODEs with least absolute shrinkage and selection operator (LASSO) regression to automatically propose structural models based on the dynamics learned by NODEs. The approach leverages LASSO's feature selection capability, thereby linking data-driven modeling with interpretable mechanistic structures. We demonstrate the applicability of this automated NODE-LASSO model development approach in three different scenarios: neonatal weight development, bi-exponential PK data, and warfarin PK/PD data. The results indicate that our automated NODE-LASSO model development approach can recover meaningful, mechanism-based structures while reducing the need for extensive iterative and manual model development. This highlights its potential as a resource-efficient and interpretable modeling strategy for PMX and its applications in model-informed drug development and clinical research.",
       "authors": [
         "Bräm DS",
         "Steiert B",
@@ -243,35 +327,35 @@
       "evidence": {
         "abstract_terms": {
           "ai": [
-            "neural odes"
+            "machine learning",
+            "artificial intelligence"
           ],
           "method": [
             "model selection",
             "model development",
-            "workflow",
-            "automated"
+            "automated",
+            "automation"
           ],
           "pk": [
-            "pharmacometrics",
-            "pharmacometric",
-            "population pk pd"
+            "pharmacometrics"
           ]
         },
         "basis": "abstract-only",
         "terms": {
           "ai": [
-            "neural odes"
+            "neural odes",
+            "machine learning",
+            "artificial intelligence"
           ],
           "method": [
             "model development",
             "automated",
             "model selection",
-            "workflow"
+            "automation"
           ],
           "pk": [
             "pharmacometric",
-            "pharmacometrics",
-            "population pk pd"
+            "pharmacometrics"
           ]
         },
         "title_terms": {
@@ -317,7 +401,7 @@
       "venue": "Europe PMC"
     },
     {
-      "abstract": "Conventional pharmacodynamic modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility. This study develops PD Union, a unified, automated, and interpretable framework for mechanistic PD modeling. PD Union is built on a unified continuous dynamical skeleton and uses machine learning assistance. The framework organizes population PK/PD exposure and response modules.",
+      "abstract": "Abstract Objective: Conventional pharmacodynamic (PD) modeling workflows require manual model selection, repeated equation rewriting, and empirical parameter adjustment, resulting in limited automation, high cross-scenario migration costs, and insufficient reproducibility. This study aims to develop PD Union, a unified, automated, and interpretable framework for mechanistic PD modeling. Methods: PD Union is built upon a unified continuous dynamical skeleton that organizes absorption and systemic exposure module, the receptor module, the drug input module, the first delay module, the primary pharmacodynamic function module, the primary pharmacodynamic state module, the downstream pharmacodynamic state module, the second delay module, the feedback module, the circadian modulation module, the biophase module, the direct effect module, the disease state module, the second PD axis first delay module, the second PD axis primary pharmacodynamic function module, the second PD axis primary pharmacodynamic state module, the second PD axis downstream pharmacodynamic state module, the second PD axis second delay module, and the second PD axis feedback module. A machine learning-based structure identification module is incorporated to recognize drug input modes and mechanism labels from population PK/PD time series, followed by constrained population parameter optimization, forming an integrated pipeline of structure identification, candidate generation, and parameter fitting. Results: Validation was conducted at two levels. In standardized synthetic benchmarking across 14 representative single-endpoint scenarios, the structure identification model achieved an output mode accuracy(NRMSE) of 0.7600 and macro-average F1 of 0.6307; parameter fitting yielded an NRMSE mean of 0.146 and median of 0.117. In the unified reconstruction validation based on 15 population pharmacokinetics/pharmacodynamics (PK/PD) literature data, the mean NRMSE of PDUnion model for PD was 0.261, and the median was 0.228. Among the 15 studies, 14 performed better than the models provided in the original literature. Conclusions: PD Union demonstrates that interpretable mechanistic modularization combined with machine learning-assisted structure identification is feasible for automated PD modeling. The framework provides an executable methodological foundation for unified, reproducible, and extensible mechanistic PD modeling, with potential applicability to multi-endpoint and complex disease-state modeling scenarios.",
       "authors": [
         "Du S",
         "Liu D"
@@ -330,11 +414,14 @@
           ],
           "method": [
             "framework",
+            "optimization",
             "model selection",
             "automated",
-            "automation"
+            "automation",
+            "validation"
           ],
           "pk": [
+            "population pharmacokinetics",
             "population pk pd"
           ]
         },
@@ -346,10 +433,13 @@
           "method": [
             "framework",
             "automated",
+            "optimization",
             "model selection",
-            "automation"
+            "automation",
+            "validation"
           ],
           "pk": [
+            "population pharmacokinetics",
             "population pk pd"
           ]
         },
@@ -394,7 +484,7 @@
       "venue": "Europe PMC"
     },
     {
-      "abstract": "The sharing of individual patient data is essential for advancing pharmacometrics but is limited by privacy regulations. Synthetic data generation offers an alternative, but its structural impact on nonlinear mixed-effects modeling remains largely unexplored. This study benchmarks five generative artificial intelligence algorithms by evaluating privacy and preservation of structural PK properties and clinical dosing guidance using a two-compartment daptomycin PopPK model.",
+      "abstract": "Introduction The sharing of individual patient data is essential for advancing pharmacometrics but is strictly limited by privacy regulations (e.g., GDPR). While synthetic data generation offers a legally compliant alternative, its structural impact on complex nonlinear mixed-effects (NLME) modelling remains largely unexplored. This study aimed to benchmark five generative artificial intelligence algorithms by evaluating the balance between data privacy and the preservation of structural PK properties and clinical dosing guidance. Material & methods A daptomycin two-compartment PopPK model was used to simulate a reference cohort of 500 patients. Five generative algorithms (Modified AVATAR, Gaussian Copula, Synthpop, TVAE, and CTGAN) produced 100 independent synthetic datasets each. A two-stage evaluation framework was applied: first, a statistical indistinguishability test based on logistic regression (AUC ROC) was used as a macroscopic pre-selection criterion to determine algorithm eligibility for NLME modelling and privacy risk assessment. Privacy risk was independently quantified using the Anonymeter framework (Singling Out and Linkability attacks). Eligible algorithms were further evaluated on PK parameter recovery bias and clinical dosing simulations. Results Deep learning architectures (TVAE, CTGAN) were excluded at the pre-selection stage due to both biologically implausible covariate generation and high macroscopic detectability (mean AUC ROC = 0.837 and 0.986, respectively). Synthpop, AVATAR, and Gaussian Copula all passed the indistinguishability threshold (AUC ROC = 0.475 ± 0.033, 0.490 ± 0.013, and 0.619 ± 0.031, respectively) and proceeded to NLME evaluation. However, attack-based privacy assessment revealed that Synthpop carried an unacceptable singling-out risk (0.035), disqualifying it from privacy-preserving data sharing. AVATAR and Gaussian Copula demonstrated acceptable privacy profiles (singling-out = 0.004 and 0.001; linkability = 0.010 and 0.003, respectively). At the structural level, Gaussian Copula injected stochastic noise inflating residual error (+157.0%) and VLJ (+25.9%), blunting predicted Cmax and predisposing to empirical dose escalation and risk of toxicity. AVATAR acted aSs a smoothing filter, deflating VLJ (−48.3%) and underestimating CL (−12.9%). Forward clinical simulations confirmed directionally opposed prediction errors: Gaussian Copula consistently underestimated Cmax across standard and renally impaired profiles (−14.5% and -16.0%, respectively), predisposing to empirical dose escalation, whereas AVATAR- and Synthpop-derived models overestimated Cmax and Cmin in the obese infected patient (+14.7% and +8.2%, respectively), compounding the accumulation risk already present in this profile. Conclusion While no generative algorithm currently offers a perfect solution, AVATAR and Gaussian Copula represent the most viable candidates, being the only methods to satisfy both macroscopic indistinguishability and attack-based privacy criteria. These findings highlight the necessity of a structured, two-stage validation framework and suggest that, when coupled with therapeutic drug monitoring, synthetic datasets could significantly enhance multicentre collaboration while maintaining strict regulatory compliance.",
       "authors": [
         "Destere A",
         "Lombardi R",
@@ -410,28 +500,42 @@
       "evidence": {
         "abstract_terms": {
           "ai": [
-            "artificial intelligence"
+            "privacy preserving",
+            "artificial intelligence",
+            "deep learning"
           ],
-          "method": [],
+          "method": [
+            "framework",
+            "algorithm",
+            "benchmark",
+            "validation"
+          ],
           "pk": [
             "poppk",
             "pharmacometrics",
-            "nonlinear mixed effects"
+            "nonlinear mixed effects",
+            "nlme"
           ]
         },
         "basis": "abstract-only",
         "terms": {
           "ai": [
-            "artificial intelligence"
+            "privacy preserving",
+            "artificial intelligence",
+            "deep learning"
           ],
           "method": [
-            "benchmark"
+            "benchmark",
+            "framework",
+            "algorithm",
+            "validation"
           ],
           "pk": [
             "population pharmacokinetic",
             "pharmacometrics",
             "poppk",
-            "nonlinear mixed effects"
+            "nonlinear mixed effects",
+            "nlme"
           ]
         },
         "title_terms": {
@@ -452,12 +556,12 @@
         "components": {
           "ai": 10,
           "intersection": 0,
-          "method": 20,
+          "method": 30,
           "pk": 30,
-          "total": 60
+          "total": 70
         },
-        "priority": "Medium",
-        "total": 60
+        "priority": "High",
+        "total": 70
       },
       "selection_type": "historical",
       "sources": [
@@ -556,7 +660,7 @@
       "venue": "Crossref"
     },
     {
-      "abstract": "Therapeutic drug monitoring of vancomycin is recommended based on AUC. The PAT software contains two population pharmacokinetic models, but no objective criteria for model selection have been established. This study develops and validates a machine learning model to optimize PopPK model selection for initial vancomycin dosing. The outcome compares models by absolute relative prediction error for AUC, with clinical variables screened using LASSO regression.",
+      "abstract": "Introduction Therapeutic drug monitoring (TDM) of vancomycin is recommended based on the area under the concentration-time curve (AUC). The Practical Antimicrobial TDM (PAT) software incorporates two population pharmacokinetic (popPK) models developed by Oda et al. and Yasuhara et al.; however, no objective criteria for model selection have been established. This study aimed to develop and validate a machine learning (ML) model to optimize popPK model selection for initial vancomycin dosing. Methods The primary outcome was comparison of the two models to identify which yielded a lower absolute relative prediction error for AUC in each patient. Thirty-three clinical variables were screened using Lasso regression to select predictors. Six ML algorithms were compared using nested cross-validation. Performance was evaluated using the area under the receiver operating characteristic curve (AUROC), accuracy, sensitivity, specificity, calibration plots, and decision curve analysis (DCA). Results Among 531 patients, Oda et al.'s model was more accurate in 60.1% of cases. Lasso selected 22 predictors. Among the algorithms, logistic regression showed the highest mean AUROC (0.720 ± 0.084), whereas the support vector machine demonstrated favorable calibration performance (intercept = 0.01, slope = 0.97). The multi-layer perceptron achieved the lowest Brier score (0.307). Longer hospitalization, lower C-reactive protein (CRP), and female sex were associated with a high predictive probability of accuracy for Oda et al.'s model. DCA suggested the clinical utility of ML-based model selection. Conclusion We developed an ML model for selecting between two popPK models for planning vancomycin dosing regimens in PAT. Considering length of hospital stay, CRP levels, and sex may aid accurate popPK model selection.",
       "authors": [
         "Akamatsu H",
         "Kodama Y",
@@ -574,7 +678,8 @@
           ],
           "method": [
             "model selection",
-            "software"
+            "software",
+            "validation"
           ],
           "pk": [
             "population pharmacokinetic",
@@ -638,6 +743,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-05 08:38 JST",
+  "last_scan_at": "2026-09-06 08:29 JST",
   "schema_version": 2
 }
