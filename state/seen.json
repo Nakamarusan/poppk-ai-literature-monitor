@@ -1,6 +1,6 @@
 {
-  "last_partial_utc": "2026-09-05T23:29:24.639976+00:00",
   "last_selection_date_jst": "2026-09-06",
+  "last_success_utc": "2026-09-05T23:53:59.660811+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -176,13 +176,13 @@
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-05T23:29:24.639976+00:00",
+      "last_attempt_utc": "2026-09-05T23:53:59.660811+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-05T23:29:24.639976+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-05T23:53:59.660811+00:00",
+      "records": 61,
       "status": "ok"
     }
   }
