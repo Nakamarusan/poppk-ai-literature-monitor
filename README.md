@@ -11,7 +11,9 @@ For each selected paper, the workflow:
 - creates a GitHub Issue;
 - writes a Markdown report in `reports/`;
 - updates the canonical catalog in `data/articles.json`; and
-- rebuilds the GitHub Pages dashboard.
+- rebuilds `docs/articles.json` for the GitHub Pages dashboard.
+
+After every successful monitor run on `main`, a separate `workflow_run` deployment checks out the latest `main` branch and publishes the current `docs/` directory. This ensures that commits created by the monitor's `GITHUB_TOKEN` also reach GitHub Pages.
 
 Transient HTTP 429 and 5xx responses are retried with bounded exponential backoff and `Retry-After` handling. When a later retry succeeds, the daily report replaces stale source warnings while retaining papers already reported on the same JST date.
 
