@@ -13,6 +13,7 @@ from src.core import (
     article_id,
     deduplicate,
     normalize_doi,
+    retry_after_seconds,
     screen,
     succeeded_on_jst_date,
     validate_config,
@@ -136,6 +137,17 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(normalize_doi(result[0].doi), "10.1/shared")
         self.assertEqual(set(result[0].sources), {"source-a", "source-b", "source-c"})
+
+    def test_retry_after_parses_seconds_and_http_date(self):
+        reference = dt.datetime(2026, 9, 6, tzinfo=dt.timezone.utc)
+        self.assertEqual(retry_after_seconds("30", now=reference), 30.0)
+        self.assertEqual(
+            retry_after_seconds(
+                "Sun, 06 Sep 2026 00:00:45 GMT", now=reference
+            ),
+            45.0,
+        )
+        self.assertIsNone(retry_after_seconds("not-a-delay", now=reference))
 
     def test_summary_does_not_infer_when_abstract_is_missing(self):
         match = Match(
@@ -314,6 +326,7 @@ class MonitorTests(unittest.TestCase):
             {},
             2020,
         )
+        self.assertIn("Run status: **Complete**", report)
         self.assertIn("Abstract-only interpretation", report)
         self.assertIn("100/100", report)
         self.assertIn("Full text is not fetched", report)
@@ -329,17 +342,64 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(len(updated["articles"]), 1)
         self.assertEqual(updated["articles"][0]["abstract"], "new and longer")
 
-    def test_fallback_report_does_not_overwrite_selection(self):
+    def test_retry_refreshes_status_without_losing_daily_selection(self):
         now = dt.datetime(2026, 8, 28, tzinfo=dt.timezone.utc)
+        later = now + dt.timedelta(minutes=20)
+        paper = Paper(
+            ["test"],
+            ["1"],
+            "A retained methodology paper",
+            authors=["A Author"],
+            venue="Journal",
+            date="2026-08-28",
+            doi="10.1/retained",
+            url="https://example.org/retained",
+            abstract="An abstract describing a machine learning framework.",
+        )
+        match = Match(
+            paper,
+            Score(30, 30, 30, 10),
+            "High",
+            {"pk": ["poppk"], "ai": ["machine learning"], "method": ["framework"]},
+            {"pk": [], "ai": [], "method": []},
+        )
+        insight = ResearchInsight(
+            "Prior limitation.",
+            "Contribution.",
+            "New capability.",
+            "Significance.",
+            "Abstract-only test",
+        )
+        record = article_record(match, insight, "new", now)
+        partial = render_report(
+            [record],
+            now,
+            {"Crossref": 1},
+            {},
+            {"Europe PMC": "HTTP 503: temporarily unavailable"},
+            2020,
+        )
+        recovered = render_report(
+            [],
+            later,
+            {"Crossref": 1, "Europe PMC": 1},
+            {},
+            {},
+            2020,
+        )
+
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
-            selected = "<!-- poppk-ai-selection -->\nSelected paper"
-            empty = "No eligible paper"
-            write_report(path, selected, now, 1)
-            write_report(path, empty, now + dt.timedelta(minutes=20), 0)
-            self.assertEqual(
-                (path / "2026-08-28.md").read_text(encoding="utf-8"), selected
-            )
+            write_report(path, partial, now, 1)
+            write_report(path, recovered, later, 0)
+            stored = (path / "2026-08-28.md").read_text(encoding="utf-8")
+
+        self.assertIn("A retained methodology paper", stored)
+        self.assertIn("Run status: **Complete**", stored)
+        self.assertIn("New articles: **1**", stored)
+        self.assertIn("Europe PMC 1", stored)
+        self.assertNotIn("HTTP 503", stored)
+        self.assertNotIn("No eligible, unreported paper", stored)
 
 
 if __name__ == "__main__":
