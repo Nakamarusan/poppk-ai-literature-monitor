@@ -13,6 +13,8 @@ For each selected paper, the workflow:
 - updates the canonical catalog in `data/articles.json`; and
 - rebuilds the GitHub Pages dashboard.
 
+Transient HTTP 429 and 5xx responses are retried with bounded exponential backoff and `Retry-After` handling. When a later retry succeeds, the daily report replaces stale source warnings while retaining papers already reported on the same JST date.
+
 Dashboard: https://nakamarusan.github.io/poppk-ai-literature-monitor/
 
 Program and scoring method: https://nakamarusan.github.io/poppk-ai-literature-monitor/method.html
