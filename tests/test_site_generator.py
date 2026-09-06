@@ -135,6 +135,13 @@ class SiteGeneratorTests(unittest.TestCase):
         self.assertIn('if (!("IntersectionObserver" in window))', javascript)
         self.assertIn('card.classList.add("is-visible")', javascript)
 
+    def test_pages_deploys_after_successful_monitor_run(self):
+        workflow = Path(".github/workflows/pages.yml").read_text(encoding="utf-8")
+        self.assertIn("workflow_run:", workflow)
+        self.assertIn('"Daily PopPK × AI literature monitor"', workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("github.event.workflow_run.head_branch == 'main'", workflow)
+
     def test_stylesheets_have_balanced_braces(self):
         for path in (
             Path("docs/assets/styles.css"),
