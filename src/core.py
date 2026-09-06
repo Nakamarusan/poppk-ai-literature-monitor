@@ -7,10 +7,12 @@ import datetime as dt
 import hashlib
 import html
 import json
+import random
 import re
 import time
 import unicodedata
 from dataclasses import dataclass, field
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 from urllib.error import HTTPError, URLError
@@ -26,6 +28,8 @@ _DOI_PREFIX = re.compile(r"^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)", re.I)
 _ARXIV_VERSION = re.compile(r"v\d+$", re.I)
 _SOURCE_NAMES = {"europe_pmc", "crossref", "arxiv"}
 _GENERIC_VENUES = {"", "Europe PMC", "Crossref", "arXiv"}
+_BASE_RETRY_DELAY = 2.0
+_MAX_RETRY_DELAY = 120.0
 
 
 class MonitorError(RuntimeError):
@@ -120,6 +124,43 @@ def clean(value: Any) -> str:
         return ""
     plain = _HTML_TAG.sub(" ", html.unescape(str(value)))
     return _SPACE.sub(" ", plain).strip()
+
+
+def retry_after_seconds(
+    value: str,
+    *,
+    now: dt.datetime | None = None,
+) -> float | None:
+    """Parse an HTTP Retry-After value expressed as seconds or an HTTP date."""
+
+    value = clean(value)
+    if not value:
+        return None
+    if value.isdigit():
+        return float(value)
+
+    try:
+        retry_at = parsedate_to_datetime(value)
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+    if retry_at.tzinfo is None:
+        retry_at = retry_at.replace(tzinfo=UTC)
+    reference = now or dt.datetime.now(UTC)
+    if reference.tzinfo is None:
+        reference = reference.replace(tzinfo=UTC)
+    return max(0.0, (retry_at.astimezone(UTC) - reference.astimezone(UTC)).total_seconds())
+
+
+def _retry_delay(attempt: int, retry_after: str = "") -> float:
+    """Return a bounded delay, preferring the server's Retry-After value."""
+
+    if (server_delay := retry_after_seconds(retry_after)) is not None:
+        return min(max(server_delay, 1.0), _MAX_RETRY_DELAY)
+
+    backoff = _BASE_RETRY_DELAY * (2**attempt)
+    jitter = random.uniform(0.0, 1.0)
+    return min(backoff + jitter, _MAX_RETRY_DELAY)
 
 
 def normalize_text(value: str) -> str:
@@ -423,7 +464,12 @@ def request(
     accept: str = "application/json",
     retries: int = 4,
 ) -> bytes:
-    """Make an HTTP request with bounded retries for transient failures."""
+    """Make an HTTP request with bounded retries for transient failures.
+
+    HTTP 429 and 5xx responses are retried. Retry-After is honored for both
+    delay-seconds and HTTP-date forms, with a two-minute upper bound so one
+    source cannot consume the entire workflow timeout.
+    """
 
     request_headers = {
         "Accept": accept,
@@ -454,14 +500,16 @@ def request(
             if not retryable or attempt + 1 == retries:
                 detail = clean(exc.read().decode(errors="replace"))[:500]
                 raise MonitorError(f"HTTP {exc.code}: {detail or exc.reason}") from exc
-            retry_after = exc.headers.get("Retry-After", "")
-            delay = float(retry_after) if retry_after.isdigit() else 2**attempt
+            delay = _retry_delay(
+                attempt,
+                exc.headers.get("Retry-After", "") if exc.headers else "",
+            )
         except (URLError, TimeoutError, OSError) as exc:
             last_error = exc
             if attempt + 1 == retries:
                 raise MonitorError(f"Network error: {clean(exc)}") from exc
-            delay = 2**attempt
-        time.sleep(min(delay, 20))
+            delay = _retry_delay(attempt)
+        time.sleep(delay)
 
     raise MonitorError(str(last_error))
 
