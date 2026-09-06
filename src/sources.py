@@ -10,7 +10,15 @@ from typing import Any
 from urllib.parse import quote, urlencode
 from xml.etree import ElementTree as ET
 
-from .core import Paper, clean, crossref_date, normalize_doi, parse_date, request, request_json
+from .core import (
+    Paper,
+    clean,
+    crossref_date,
+    normalize_doi,
+    parse_date,
+    request,
+    request_json,
+)
 
 
 def _contact_email() -> str:
@@ -40,7 +48,10 @@ def fetch_europe_pmc(
         "https://www.ebi.ac.uk/europepmc/webservices/rest/search?"
         + urlencode(params)
     )
-    results = request_json(url).get("resultList", {}).get("result", [])
+    # Europe PMC occasionally returns a short-lived 503. A fifth attempt, with
+    # the shared Retry-After-aware backoff, avoids treating a brief outage as a
+    # persistent source failure.
+    results = request_json(url, retries=5).get("resultList", {}).get("result", [])
 
     papers: list[Paper] = []
     for item in results:
@@ -214,7 +225,7 @@ def fetch_arxiv(
     if jitter:
         time.sleep(random.uniform(0, jitter))
 
-    user_agent = "poppk-ai-literature-monitor/5.0"
+    user_agent = "poppk-ai-literature-monitor/6.0"
     if email := _contact_email():
         user_agent += f" (mailto:{email})"
 

@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import datetime as dt
 import os
+import re
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -21,6 +22,10 @@ from .insights import ResearchInsight
 
 SELECTION_MARKER = "<!-- poppk-ai-selection -->"
 _GENERIC_VENUES = {"", "Europe PMC", "Crossref", "arXiv"}
+_ARTICLE_BLOCK = re.compile(
+    r"(?ms)^##\s+\d+\.\s+.*?(?=^##\s+\d+\.\s+|\n---\n|\Z)"
+)
+_REPORT_FOOTER = "\n---\n"
 
 
 def article_record(
@@ -194,18 +199,23 @@ def render_report(
     archive_count = sum(
         item["selection_type"] == "historical" for item in records
     )
+    status = "Partial" if warnings else "Complete"
     lines: list[str] = [SELECTION_MARKER, ""] if records else []
     lines.extend(
         (
             "# PopPK × AI Methodology Literature Report",
             "",
             f"Run time: {now.astimezone(JST):%Y-%m-%d %H:%M JST}",
+            f"Run status: **{status}**",
             f"New articles: **{new_count}**",
             f"Archive selections: **{archive_count}** "
             f"(unreported papers published since {archive_start_year})",
             "",
             "Evidence basis: titles and abstracts are used for screening; "
             "all interpretations use the abstract only. Full text is not fetched.",
+            "",
+            "Source counts and warnings describe this run. Daily selections are "
+            "retained when a later retry refreshes the report status.",
             "",
             "Recent-search records: "
             + ", ".join(
@@ -237,7 +247,7 @@ def render_report(
         lines.append("")
 
     if not records:
-        lines.extend(("No eligible, unreported paper was selected.", ""))
+        lines.extend(("No eligible, unreported paper was selected in this run.", ""))
 
     for number, record in enumerate(records, 1):
         summary = record["summary"]
@@ -307,10 +317,103 @@ def render_report(
     return "\n".join(lines)
 
 
+def _article_blocks(body: str) -> list[str]:
+    """Extract and de-duplicate article sections from a daily report."""
+
+    blocks: list[str] = []
+    seen: set[str] = set()
+    for match in _ARTICLE_BLOCK.finditer(body):
+        block = match.group(0).strip()
+        heading = block.splitlines()[0]
+        key = re.sub(r"^##\s+\d+\.\s+", "", heading).casefold()
+        if key not in seen:
+            seen.add(key)
+            blocks.append(block)
+    return blocks
+
+
+def _report_header(body: str) -> str:
+    """Return run metadata without article sections or the empty-selection note."""
+
+    text = body.replace(SELECTION_MARKER, "", 1).lstrip()
+    article = _ARTICLE_BLOCK.search(text)
+    footer = text.rfind(_REPORT_FOOTER)
+    end = article.start() if article else footer if footer >= 0 else len(text)
+    header = text[:end]
+    header = re.sub(
+        r"\n?No eligible, unreported paper was selected(?: in this run)?\.\n?",
+        "\n",
+        header,
+    )
+    return header.strip()
+
+
+def _report_footer(body: str) -> str:
+    position = body.rfind(_REPORT_FOOTER)
+    return body[position + 1 :].strip() if position >= 0 else ""
+
+
+def _renumber_blocks(blocks: Sequence[str]) -> list[str]:
+    numbered: list[str] = []
+    for number, block in enumerate(blocks, 1):
+        numbered.append(
+            re.sub(r"^##\s+\d+\.", f"## {number}.", block, count=1)
+        )
+    return numbered
+
+
+def _update_selection_counts(header: str, blocks: Sequence[str]) -> str:
+    new_count = sum("- **Selection:** New article" in block for block in blocks)
+    archive_count = sum(
+        "- **Selection:** Archive article" in block for block in blocks
+    )
+    header = re.sub(
+        r"New articles: \*\*\d+\*\*",
+        f"New articles: **{new_count}**",
+        header,
+    )
+    return re.sub(
+        r"Archive selections: \*\*\d+\*\*",
+        f"Archive selections: **{archive_count}**",
+        header,
+    )
+
+
+def _merge_daily_snapshot(previous: str, current: str) -> str:
+    """Keep daily selections while replacing stale run status and warnings."""
+
+    blocks = _article_blocks(previous)
+    known = {
+        re.sub(r"^##\s+\d+\.\s+", "", block.splitlines()[0]).casefold()
+        for block in blocks
+    }
+    for block in _article_blocks(current):
+        key = re.sub(r"^##\s+\d+\.\s+", "", block.splitlines()[0]).casefold()
+        if key not in known:
+            known.add(key)
+            blocks.append(block)
+
+    if not blocks:
+        return current
+
+    blocks = _renumber_blocks(blocks)
+    header = _update_selection_counts(_report_header(current), blocks)
+    footer = _report_footer(current)
+    parts = [SELECTION_MARKER, "", header, "", "\n\n".join(blocks)]
+    if footer:
+        parts.extend(("", footer))
+    return "\n".join(parts).rstrip() + "\n"
+
+
 def write_report(
     report_dir: Path, body: str, now: dt.datetime, selected_count: int
 ) -> Path:
-    """Write one report per day without losing a 07:00 selection at 07:20."""
+    """Write a current daily snapshot while preserving same-day selections.
+
+    A retry replaces the run time, source counts, status, and warnings. Article
+    sections already reported that day remain in the snapshot, so a recovery
+    does not erase the paper that triggered the first notification.
+    """
 
     report_dir.mkdir(parents=True, exist_ok=True)
     date = now.astimezone(JST).date().isoformat()
@@ -319,15 +422,9 @@ def write_report(
 
     if archive.exists():
         previous = archive.read_text(encoding="utf-8")
-        if selected_count == 0:
-            stored = previous
-        elif SELECTION_MARKER in previous:
-            stored = (
-                previous.rstrip()
-                + f"\n\n---\n\n## Additional selection "
-                f"({now.astimezone(JST):%H:%M JST})\n\n"
-                + body
-            )
+        stored = _merge_daily_snapshot(previous, body)
+    elif selected_count and not body.startswith(SELECTION_MARKER):
+        stored = f"{SELECTION_MARKER}\n\n{body}"
 
     archive.write_text(stored, encoding="utf-8")
     (report_dir / "latest.md").write_text(stored, encoding="utf-8")
