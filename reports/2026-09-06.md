@@ -2,19 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-09-06 08:29 JST
+Run time: 2026-09-06 08:53 JST
+Run status: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
-Recent-search records: Crossref 2700, arXiv 0
+Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Archive-search records: Crossref 2700, Europe PMC 877
-
-## Source warnings
-
-- **Europe PMC:** HTTP 503: 503 Service Temporarily Unavailable 503 Service Temporarily Unavailable nginx/1.17.7
+Recent-search records: Crossref 2700, Europe PMC 61
 
 ## 1. [Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling.](https://europepmc.org/article/MED/42549629)
 
