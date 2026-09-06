@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-06",
-  "last_success_utc": "2026-09-05T23:53:59.660811+00:00",
+  "last_selection_date_jst": "2026-09-07",
+  "last_success_utc": "2026-09-06T23:24:22.047637+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -25,6 +25,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "doi:10.1208/s12248-026-01255-6": {
+      "doi": "10.1208/s12248-026-01255-6",
+      "notified_at": "2026-09-06T23:24:22.047637+00:00",
+      "selection_type": "historical",
+      "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
     },
     "doi:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -72,6 +78,12 @@
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
     },
+    "source:europe pmc:med:42174295": {
+      "doi": "10.1208/s12248-026-01255-6",
+      "notified_at": "2026-09-06T23:24:22.047637+00:00",
+      "selection_type": "historical",
+      "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
     "source:europe pmc:med:42338400": {
       "doi": "10.1002/psp4.70285",
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
@@ -112,6 +124,12 @@
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
+    "title:0881c9bc9af76b779f89d637": {
+      "doi": "10.1208/s12248-026-01255-6",
+      "notified_at": "2026-09-06T23:24:22.047637+00:00",
+      "selection_type": "historical",
+      "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
     },
     "title:0955b5be003e5b492c773da7": {
       "doi": "10.1097/mcc.0000000000001428",
@@ -167,22 +185,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-06"
+    "arxiv": "2026-09-07"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-05T23:29:24.639976+00:00",
+      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-05T23:53:59.660811+00:00",
+      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-05T23:53:59.660811+00:00",
-      "records": 61,
+      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
+      "records": 877,
       "status": "ok"
     }
   }

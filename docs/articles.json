@@ -1,14 +1,96 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-06 08:53 JST",
-  "article_count": 9,
+  "last_scan_at": "2026-09-07 08:24 JST",
+  "article_count": 10,
   "new_count": 4,
-  "historical_count": 5,
+  "historical_count": 6,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Diuretic resistance represents a major source of heterogeneity in loop diuretic response and remains a key barrier to effective decongestion in heart failure. A key clinical challenge is the early identification of patients at high risk of an inadequate response to standard-dose furosemide in order to inform timely treatment intensification or alternative decongestive strategies. However, current approaches remain reactive and rely on post-treatment response, limiting prospective risk stratification and treatment decision-making. To address this problem, we integrated a mechanistic renal quantitative systems pharmacology (QSP) model with furosemide pharmacokinetics and pharmacodynamics to enable baseline-informed risk stratification of diuretic resistance. The model was calibrated using published clinical pharmacokinetic and renal response data and applied to generate a physiologically constrained virtual patient population capturing heterogeneity in renal function, tubular sodium handling, and neurohormonal activation. Machine learning methods were incorporated as complementary analytical tools to identify and validate baseline physiological determinants that define risk categories of diuretic response within the mechanistic simulation framework. Model-based analyses indicated that diuretic resistance arises from the combined effects of reduced filtration capacity, enhanced tubular sodium avidity, diminished pharmacodynamic sensitivity and sustained neurohormonal activation. Across analytical approaches, baseline fractional excretion of sodium and glomerular filtration rate emerged as integrative biomarkers that stratify patients into distinct risk categories of diuretic response, reflecting a mechanism-informed reduction of underlying physiological variability. These findings provide a mechanistically grounded framework for baseline-informed risk stratification and may inform earlier identification of patients at risk of inadequate response, supporting model-informed evaluation of treatment intensification or alternative decongestive strategies.",
+      "authors": [
+        "Zhou J",
+        "Lou V",
+        "Zhao Y",
+        "Tang L",
+        "Hu Z",
+        "Sun J",
+        "Chen J",
+        "Cheng P",
+        "Cheng Y",
+        "He H"
+      ],
+      "doi": "10.1208/s12248-026-01255-6",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        }
+      },
+      "id": "doi:10.1208/s12248-026-01255-6",
+      "publication_date": "2026-05-23",
+      "reported_at": "2026-09-07 08:24 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Machine learning methods were incorporated as complementary analytical tools to identify and validate baseline physiological determinants that define risk categories of diuretic response within the mechanistic simulation framework.",
+        "new_capability": "Model-based analyses indicated that diuretic resistance arises from the combined effects of reduced filtration capacity, enhanced tubular sodium avidity, diminished pharmacodynamic sensitivity and sustained neurohormonal activation.",
+        "prior_limitation": "Diuretic resistance represents a major source of heterogeneity in loop diuretic response and remains a key barrier to effective decongestion in heart failure.",
+        "significance": "These findings provide a mechanistically grounded framework for baseline-informed risk stratification and may inform earlier identification of patients at risk of inadequate response, supporting model-informed evaluation of treatment intensification or alternative decongestive strategies.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance.",
+      "url": "https://europepmc.org/article/MED/42174295",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Model-informed precision dosing is often constrained by the limited generalizability of traditional population pharmacokinetic models, especially in critically ill patients. A hybrid machine learning-population pharmacokinetic framework is proposed to improve a priori pharmacokinetic predictions by integrating real-world clinical data. This approach was applied to vancomycin trough concentration prediction. Two widely used two-compartment population pharmacokinetic models provided individual pharmacokinetic parameter estimates. Maximum a posteriori Bayesian estimation was used to adjust population parameters for individual patients based on drug administration records, therapeutic drug monitoring values, and patient-specific covariates from the MIMIC-IV database. The resulting clearance and central volume of distribution estimates served as training targets for XGBoost and symbolic regression models. Machine learning-predicted parameters were reinserted into the original pharmacokinetic equations to generate a priori vancomycin trough concentrations without reliance on therapeutic drug monitoring input. The hybrid models demonstrated improved prediction accuracy over traditional population pharmacokinetic covariate models and reduced vancomycin trough concentration prediction error by up to ~20%. XGBoost generally provided the highest predictive performance, while symbolic regression produced interpretable mathematical expressions revealing associations between non-traditional clinical predictors and pharmacokinetic parameters, highlighting a trade-off between accuracy and interpretability. This framework illustrates the potential of combining machine learning with population pharmacokinetic modeling to refine pharmacokinetic parameter estimation and support more precise, individualized dosing. The workflow is adaptable to other drugs and patient populations, offering a generalizable methodological strategy to identify non-traditional predictors and enhance existing pharmacometric model performance in real-world clinical settings.",
       "authors": [
