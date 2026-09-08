@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-08",
-  "last_success_utc": "2026-09-07T23:53:47.086499+00:00",
+  "last_selection_date_jst": "2026-09-09",
+  "last_success_utc": "2026-09-08T23:47:25.225052+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -8,6 +8,12 @@
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
+    },
+    "doi:10.1002/psp4.70306": {
+      "doi": "10.1002/psp4.70306",
+      "notified_at": "2026-09-08T23:47:25.225052+00:00",
+      "selection_type": "historical",
+      "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration."
     },
     "doi:10.1002/psp4.70313": {
       "doi": "10.1002/psp4.70313",
@@ -96,6 +102,12 @@
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
     },
+    "source:europe pmc:med:42535762": {
+      "doi": "10.1002/psp4.70306",
+      "notified_at": "2026-09-08T23:47:25.225052+00:00",
+      "selection_type": "historical",
+      "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration."
+    },
     "source:europe pmc:med:42549629": {
       "doi": "10.1002/psp4.70313",
       "notified_at": "2026-09-05T23:29:24.639976+00:00",
@@ -118,6 +130,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "source:europe pmc:ppr:ppr1220746": {
+      "doi": "10.1002/psp4.70306",
+      "notified_at": "2026-09-08T23:47:25.225052+00:00",
+      "selection_type": "historical",
+      "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration."
     },
     "source:europe pmc:ppr:ppr1244176": {
       "doi": "10.64898/2026.05.30.26354512",
@@ -178,6 +196,12 @@
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
     },
+    "title:c302859c0079a8301022d03a": {
+      "doi": "10.1002/psp4.70306",
+      "notified_at": "2026-09-08T23:47:25.225052+00:00",
+      "selection_type": "historical",
+      "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration."
+    },
     "title:d2a7662c504dab804f6756e1": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -203,21 +227,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-08"
+    "arxiv": "2026-09-09"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
+      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
+      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
+      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
       "records": 877,
       "status": "ok"
     }
