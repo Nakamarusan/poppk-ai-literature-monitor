@@ -1,0 +1,28 @@
+/* The spotlight inherits the site's system-native light/dark color tokens. */
+.flagship-section { margin-bottom: 88px; min-width: 0; scroll-margin-top: 90px; }
+.flagship-section .catalog-intro h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.flagship-section .catalog-intro { margin-bottom: 22px; }
+.spotlight-history { display: grid; gap: 8px; margin: 18px 0 24px; color: var(--secondary); font-size: .85rem; }
+.spotlight-history[hidden] { display: none; }
+.spotlight-history select {
+  width: 100%; min-width: 0; min-height: 48px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: 14px;
+  color: var(--text); background: var(--surface-solid); font: inherit;
+  text-overflow: ellipsis;
+}
+.spotlight-history select:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.spotlight-status { margin: 0; color: var(--secondary); font-size: .85rem; }
+.spotlight-card { overflow-wrap: anywhere; }
+.spotlight-card .insight h4 { margin: 0 0 8px; font-size: .92rem; color: var(--text); }
+.spotlight-connections { margin: 28px 0; padding: 24px; background: var(--background); border: 1px solid var(--line); border-radius: 18px; }
+.spotlight-connections > h4 { margin: 0 0 6px; font-size: 1rem; }
+.spotlight-connections p { color: var(--secondary); line-height: 1.6; }
+.spotlight-connection { margin-top: 20px; }
+.spotlight-connection strong { color: var(--text); font-size: .92rem; }
+.spotlight-connection p { margin: 8px 0; font-size: .92rem; }
+.spotlight-connection small { color: var(--secondary); }
+.spotlight-abstract { padding: 12px 0; line-height: 1.7; color: var(--secondary); }
+@media (max-width: 760px) {
+  .flagship-section { margin-bottom: 56px; }
+  .spotlight-connections { padding: 18px; }
+}
