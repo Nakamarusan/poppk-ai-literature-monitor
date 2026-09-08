@@ -16,7 +16,9 @@
   <title>PopPK × AI Methodology Atlas</title>
   <link rel="stylesheet" href="./assets/styles.css">
   <link rel="stylesheet" href="./assets/observatory.css">
+  <link rel="stylesheet" href="./assets/flagship.css">
   <script src="./assets/app.js" defer></script>
+  <script src="./assets/flagship.js" defer></script>
 </head>
 <body class="library-page">
   <a class="skip-link" href="#articles">Skip to the article library</a>
@@ -60,6 +62,7 @@
           <li>Daily at 07:00 JST</li>
           <li>Abstract-only interpretation</li>
           <li>Relevance is not quality</li>
+          <li><a href="#research-spotlight">Science · Cell · Nature spotlight</a></li>
         </ul>
       </div>
 
@@ -147,6 +150,20 @@
 
   <main class="catalog-section">
     <div class="shell">
+      <section id="research-spotlight" class="flagship-section" aria-labelledby="spotlightTitle">
+        <div class="catalog-intro">
+          <div><p class="eyebrow">Science · Cell · Nature — flagship journals only</p>
+            <h2 id="spotlightTitle">One more perspective.</h2></div>
+          <p>One additional research paper each day, matched to federated analysis, mechanistic modeling, treatment decisions, or vascular-disease biology. Separate from the main methodology library.</p>
+        </div>
+        <p id="spotlightStatus" class="spotlight-status" aria-live="polite">Loading the research spotlight…</p>
+        <label class="spotlight-history" hidden>
+          <span>Browse spotlight selections</span>
+          <select id="spotlightHistory" aria-label="Choose a research spotlight"></select>
+        </label>
+        <div id="spotlightArticle"></div>
+      </section>
+
       <div class="catalog-intro">
         <div>
           <p class="eyebrow">Curated for method development</p>
