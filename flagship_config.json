@@ -47,13 +47,6 @@
       "terms": ["single cell", "spatial transcriptomics", "virtual cell", "foundation model", "cellular model"],
       "context_terms": ["perturbation", "perturbations", "drug response", "signaling", "signalling", "trajectory", "dynamics"],
       "potential_use": "Explore whether the measurement or perturbation model could help connect cell-level experiments to latent disease states or drug-response components in QSP. A cell model is not automatically a validated virtual-patient model."
-    },
-    {
-      "name": "Antibody disposition and delivery",
-      "priority": 40,
-      "terms": ["FcRn", "neonatal Fc receptor", "subcutaneous", "target mediated drug disposition", "antibody pharmacokinetics"],
-      "context_terms": ["antibody", "antibodies", "monoclonal", "immunoglobulin", "pharmacokinetic", "pharmacokinetics", "bioavailability"],
-      "potential_use": "Assess whether the mechanism could inform antibody clearance, absorption, or bioavailability assumptions in IV-to-SC bridging. Drug-specific parameterization and trial-design validation would be separate steps."
     }
   ]
 }
