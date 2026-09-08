@@ -1,14 +1,92 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-08 08:53 JST",
-  "article_count": 11,
+  "last_scan_at": "2026-09-09 08:47 JST",
+  "article_count": 12,
   "new_count": 4,
-  "historical_count": 7,
+  "historical_count": 8,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Quantitative systems pharmacology (QSP) models require calibration data from literature, yet manual curation is inconsistently documented and large language model (LLM) extraction can hallucinate values and fabricate citations. We present MAPLE (Model-Aware Parameterization from Literature Evidence), which uses structured validation schemas as a collaboration interface between LLMs and modelers. Two schemas span two scales: the SubmodelTarget schema for isolated experiments constraining individual parameters, and the CalibrationTarget schema for clinical and in vivo endpoints constraining the full model. Both separate data extraction from modeling decisions, recording every value with full provenance. Targeted validators catch characteristic LLM errors by matching values to source snippets, resolving DOIs, and executing code. For a pancreatic ductal adenocarcinoma QSP model, we used MAPLE to extract and curate 37 SubmodelTargets and 45 CalibrationTargets. Before any human review, the validators triggered 50 automated retries; every value carries a direct quote from its source and a verified citation; and 11 of 19 parameters are supported by more than one independent source. The LLM drafted usable forward models and code from context, while the modeler supplied the context and scientific judgment it cannot infer, revising forward-model choices in 65% of SubmodelTargets, priors in 46%, and source relevance in all files. This evaluation covers one model in one disease area, by a single group, so it characterizes the framework rather than establishing how broadly it generalizes. MAPLE records the modeler's reasoning in a form that can be re-run and independently checked, so it is not lost when the modeling team changes.",
+      "authors": [
+        "Eliason J",
+        "Popel AS"
+      ],
+      "doi": "10.1002/psp4.70306",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "large language model",
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "automated",
+            "validation"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "llm",
+            "large language model"
+          ],
+          "method": [
+            "framework",
+            "automated",
+            "validation"
+          ],
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [],
+          "pk": [
+            "qsp"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70306",
+      "publication_date": "2026-08-01",
+      "reported_at": "2026-09-09 08:47 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We present MAPLE (Model-Aware Parameterization from Literature Evidence), which uses structured validation schemas as a collaboration interface between LLMs and modelers.",
+        "new_capability": "MAPLE records the modeler's reasoning in a form that can be re-run and independently checked, so it is not lost when the modeling team changes.",
+        "prior_limitation": "Quantitative systems pharmacology (QSP) models require calibration data from literature, yet manual curation is inconsistently documented and large language model (LLM) extraction can hallucinate values and fabricate citations.",
+        "significance": "Two schemas span two scales: the SubmodelTarget schema for isolated experiments constraining individual parameters, and the CalibrationTarget schema for clinical and in vivo endpoints constraining the full model.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration.",
+      "url": "https://europepmc.org/article/MED/42535762",
+      "venue": "Europe PMC, Europe PMC"
+    },
     {
       "abstract": "Phase 2a trials in tuberculosis patients traditionally assess early bactericidal activity over two weeks, often using the time-to-positivity biomarker, followed by a phase 2b study typically lasting 8-week with time-to-event of culture conversion as the endpoint. This study investigated different machine learning models to predict the time-to-event of 2-month culture conversion in the REMoxTB trial with phase 2a time-to-positivity biomarker data and the impact of different phase 2a study lengths. Time-to-positivity at baseline and up to 14 days or 28 days after two moxifloxacin-containing regimens and one control regimen were analyzed using nonlinear mixed-effects modeling. The final models were used to predict individual baseline time-to-positivity and time-to-positivity differences between 0 and 14 days or 0 and 28 days. The individual predictions served as features in the following machine learning analysis. Statistical metrics and Kaplan-Meier plots informed model selection. Bi-exponential and exponential decay models described the 14-day and 28-day time-to-positivity data, respectively. In the machine learning analysis, baseline time-to-positivity and/or time-to-positivity differences were ranked as the most important features in all models. Statistical metrics and Kaplan-Meier plots indicated a good fit to culture conversion at 8 weeks using 4-week phase 2a information with a C-support vector classification model. Four-week time-to-positivity phase 2a data provided more information compared to the 2-week time-to-positivity data for the prediction of culture conversion. The workflow demonstrated the potential of machine learning to predict the time-to-event of phase 2b culture conversion up to 8 weeks using time-to-positivity phase 2a biomarker information in a clinical trial assessed with pharmacometric analysis.",
       "authors": [

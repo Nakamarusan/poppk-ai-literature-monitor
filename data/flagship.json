@@ -1,5 +1,4 @@
 {
-  "article_count": 1,
   "articles": [
     {
       "abstract": "While machine learning models offer potential for predicting transcriptomic effects of perturbation, they currently struggle to generalize across cellular contexts. Here, we introduce State, a machine learning model that predicts perturbation effects while accounting for cellular heterogeneity within and across experiments. State is trained using single-cell gene expression data to predict perturbation effects across sets of cells. State improved discrimination of effects on large datasets by more than 30% and identified differentially expressed genes across genetic, signaling, and chemical perturbations with significantly improved accuracy compared with baselines. Its cell embeddings trained on observational data from 167 million cells enable the identification of strong perturbations in cellular contexts where no perturbations were observed during training. We further introduce Cell-Eval, a comprehensive evaluation framework that can be used to evaluate future models. Overall, the performance and flexibility of State set the stage for scaling the development of AI models of cell state.",
