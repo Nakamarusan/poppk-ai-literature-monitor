@@ -72,14 +72,12 @@
       <section class="method-section">
         <div class="section-heading">
           <span>01</span>
-          <div>
-            <p class="eyebrow">Daily pipeline</p>
-            <h2>From metadata to a readable brief.</h2>
-          </div>
+          <div><p class="eyebrow">Daily pipeline</p><h2>From metadata to a readable brief.</h2></div>
         </div>
         <p class="section-lead">
-          GitHub Actions starts the monitor at 07:00 JST. A 07:20 fallback runs
-          only when the first scheduled run did not complete successfully.
+          GitHub Actions is scheduled at 07:00 JST, with a 07:20 fallback for
+          incomplete primary runs. Actual start times may be delayed. The additional
+          flagship spotlight has an independent once-per-day selection guard.
         </p>
         <ol class="pipeline-grid">
           <li><span>Retrieve</span><p>Request metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
@@ -95,15 +93,11 @@
 
       <section id="score" class="method-section">
         <div class="section-heading">
-          <span>02</span>
-          <div>
-            <p class="eyebrow">Relevance score</p>
-            <h2>A bounded measure of scope alignment.</h2>
-          </div>
+          <span>02</span><div><p class="eyebrow">Relevance score</p><h2>A bounded measure of scope alignment.</h2></div>
         </div>
         <p class="section-lead">
-          The score ranges from 0 to 100. It ranks eligible papers by explicit
-          alignment with this monitor. It does not assess study quality,
+          The score ranges from 0 to 100. It ranks eligible primary-library papers
+          by explicit alignment with this monitor. It does not assess study quality,
           validity, novelty, risk of bias, or clinical usefulness.
         </p>
         <div class="score-layout">
@@ -125,17 +119,14 @@
         <aside class="info-callout">
           A paper must pass the three-part eligibility gate before scoring.
           Repeated synonyms do not add points; each component records whether
-          evidence is present in the title or abstract.
+          evidence is present in the title or abstract. The broader flagship
+          spotlight below does not use this score.
         </aside>
       </section>
 
       <section class="method-section">
         <div class="section-heading">
-          <span>03</span>
-          <div>
-            <p class="eyebrow">Evidence boundary</p>
-            <h2>Interpretation stops at the abstract.</h2>
-          </div>
+          <span>03</span><div><p class="eyebrow">Evidence boundary</p><h2>Interpretation stops at the abstract.</h2></div>
         </div>
         <p class="section-lead">
           Titles support discovery and scoring, but not the four interpretive
@@ -157,11 +148,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>04</span>
-          <div>
-            <p class="eyebrow">Source policy</p>
-            <h2>Core indexes, optional preprints.</h2>
-          </div>
+          <span>04</span><div><p class="eyebrow">Source policy</p><h2>Core indexes, optional preprints.</h2></div>
         </div>
         <div class="source-cards">
           <article>
@@ -181,11 +168,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>05</span>
-          <div>
-            <p class="eyebrow">Program structure</p>
-            <h2>Small modules, explicit responsibilities.</h2>
-          </div>
+          <span>05</span><div><p class="eyebrow">Program structure</p><h2>Small modules, explicit responsibilities.</h2></div>
         </div>
         <div class="module-grid">
           <article><code>core.py</code><p>Data models, validation, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
@@ -193,19 +176,17 @@
           <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and an extractive fallback.</p></article>
           <article><code>literature_monitor.py</code><p>Retrieval orchestration, catalog refresh, selection, notifications, and state updates.</p></article>
           <article><code>reporting.py</code><p>Canonical article records, Markdown reports, and GitHub Issues.</p></article>
-          <article><code>site_generator.py</code><p>Validates and transforms the catalog into data consumed by GitHub Pages.</p></article>
-          <article><code>data/articles.json</code><p>The canonical structured catalog used to build the site.</p></article>
-          <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p></article>
+          <article><code>site_generator.py</code><p>Validates and transforms the primary catalog into data consumed by GitHub Pages.</p></article>
+          <article><code>data/articles.json</code><p>The canonical primary catalog used to build the site.</p></article>
+          <article><code>state/seen.json</code><p>Shared seen identifiers, primary source health, and primary run dates.</p></article>
+          <article><code>flagship.py</code><p>Exact journal checks, research-profile matching, the additional daily selection, and its separate report and catalog.</p></article>
+          <article><code>flagship_config.json</code><p>Research topics, contextual constraints, priorities, date windows, and API result limits.</p></article>
         </div>
       </section>
 
       <section class="method-section">
         <div class="section-heading">
-          <span>06</span>
-          <div>
-            <p class="eyebrow">Known limits</p>
-            <h2>A reading queue, not a systematic review.</h2>
-          </div>
+          <span>06</span><div><p class="eyebrow">Known limits</p><h2>A reading queue, not a systematic review.</h2></div>
         </div>
         <ul class="limitations-list">
           <li>Keyword screening can produce false positives and false negatives.</li>
@@ -219,11 +200,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>07</span>
-          <div>
-            <p class="eyebrow">Visual system</p>
-            <h2>Clarity first.</h2>
-          </div>
+          <span>07</span><div><p class="eyebrow">Visual system</p><h2>Clarity first.</h2></div>
         </div>
         <p class="section-lead">
           The interface uses system typography, generous spacing, restrained
@@ -240,22 +217,69 @@
         <p class="body-copy">All interface graphics are original HTML, CSS, and SVG. No third-party product imagery or brand assets are embedded.</p>
       </section>
 
-      <div class="method-return">
-        <a class="primary-button" href="./">Return to the library</a>
-      </div>
+      <section id="flagship" class="method-section">
+        <div class="section-heading">
+          <span>08</span><div><p class="eyebrow">Science · Cell · Nature</p><h2>One additional research connection.</h2></div>
+        </div>
+        <p class="section-lead">
+          The Research Spotlight selects one paper across all three flagship
+          journals per JST day, in addition to the primary monitor. It runs even
+          when the primary search already selected new or archive papers.
+          It is not a requirement that every spotlight combine PopPK and AI.
+        </p>
+        <div class="source-cards">
+          <article><div><strong>Science</strong><span>Flagship only</span></div><p>Print ISSN 0036-8075; electronic ISSN 1095-9203.</p></article>
+          <article><div><strong>Cell</strong><span>Flagship only</span></div><p>Print ISSN 0092-8674; electronic ISSN 1097-4172.</p></article>
+          <article><div><strong>Nature</strong><span>Flagship only</span></div><p>Print ISSN 0028-0836; electronic ISSN 1476-4687.</p></article>
+        </div>
+        <p class="body-copy">
+          Both the journal title and an approved ISSN must match. Sister journals,
+          reviews, news, editorials, corrections, and records without an abstract
+          or research-article metadata are excluded. Europe PMC supplies indexed
+          metadata and abstracts; no publisher full text is requested.
+        </p>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Research profile</h3><p>Federated and privacy-preserving analysis; mechanistic inference; lymphatic and vascular biology; endothelial signaling; sequential treatment decisions; virtual cells and perturbations; antibody disposition.</p></article>
+          <article><span>02</span><h3>Evidence of a connection</h3><p>At least one topic must match the abstract. Broad terms such as mTOR require vascular or endothelial context. A generic AI mention or a journal's reputation is insufficient.</p></article>
+          <article><span>03</span><h3>Recency and ranking</h3><p>Search the last 30 publication days first. If no unreported match is available, use the 2020+ archive. Topic priority, up to three matched topics, publication date, and stable ID determine the order.</p></article>
+          <article><span>04</span><h3>No invented findings</h3><p>The same four abstract-only findings are reported. Potential uses in the research profile appear separately and are explicitly suggestions, not demonstrated applications or clinical recommendations.</p></article>
+        </div>
+        <p class="body-copy">
+          Topic priorities are configurable: federated analysis 60; lymphatic or
+          vascular biology 55; mechanistic inference and endothelial signaling 50;
+          treatment decisions 45; virtual-cell methods and antibody disposition 40.
+          These are reading preferences, not quality scores. The primary library's
+          0–100 relevance score is not assigned to spotlights.
+        </p>
+        <aside class="info-callout">
+          This separate section maintains its own daily history in
+          <code>data/flagship.json</code>, a report in <code>reports/flagship/</code>,
+          and a GitHub Issue. Its validated Pages data is written to
+          <code>docs/flagship.json</code> and published through the existing
+          monitor-to-Pages deployment chain. Shared identifiers prevent a paper
+          already introduced in either stream from being introduced again.
+        </aside>
+        <p class="body-copy">
+          Searches retrieve at most three pages of 200 records per pass. Archive
+          results are cached for up to seven days, with earlier refresh when the
+          usable pool is exhausted. Cached abstracts may be used during an outage.
+          If no eligible paper is available, the monitor reports that condition
+          rather than substituting an unrelated paper. The original literature
+          monitor and its catalog are retained.
+        </p>
+        <a class="secondary-link" href="./#research-spotlight">View the research spotlight <span aria-hidden="true">›</span></a>
+      </section>
+
+      <div class="method-return"><a class="primary-button" href="./">Return to the library</a></div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div>
-        <strong>PopPK × AI Methodology Atlas</strong>
-        <p>A focused instrument for abstract-based literature triage.</p>
-      </div>
+      <div><strong>PopPK × AI Methodology Atlas</strong><p>A focused instrument for abstract-based literature triage.</p></div>
       <div class="footer-links">
         <a href="./">Library</a>
-        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Source code</a>
+        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor" target="_blank" rel="noopener noreferrer">Source code</a>
       </div>
     </div>
   </footer>

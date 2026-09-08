@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "recent_days": 30,
+  "start_year": 2020,
+  "page_size": 200,
+  "max_pages": 3,
+  "archive_refresh_days": 7,
+  "topics": [
+    {
+      "name": "Federated and privacy-preserving analysis",
+      "priority": 60,
+      "terms": ["federated learning", "swarm learning", "secure aggregation", "differential privacy", "decentralized machine learning", "privacy preserving learning"],
+      "context_terms": [],
+      "potential_use": "Assess whether the distributed learning or privacy mechanism could inform multi-site PopPK estimation or model evaluation without exchanging patient-level data. Equivalence to pooled NLME estimation would require a separate test."
+    },
+    {
+      "name": "Lymphatic and vascular disease biology",
+      "priority": 55,
+      "terms": ["vascular malformation", "vascular malformations", "vascular anomalies", "lymphatic malformation", "lymphatic malformations", "lymphangiogenesis", "lymphatic endothelial", "kaposiform lymphangiomatosis"],
+      "context_terms": [],
+      "potential_use": "Examine whether the reported mechanism or measurement could inform a disease-state variable, parameter, or experimental endpoint in a QSP model of pediatric vascular anomalies. Transfer to KLA must be established separately."
+    },
+    {
+      "name": "Mechanistic modeling and inference",
+      "priority": 50,
+      "terms": ["population pharmacokinetic", "population pharmacokinetics", "pharmacometrics", "quantitative systems pharmacology", "neural ordinary differential", "neural differential equation", "neural ODE", "simulation based inference", "physics informed", "mechanistic machine learning"],
+      "context_terms": [],
+      "potential_use": "Evaluate the method as a candidate for mechanistic PK/PD or QSP inference with sparse observations, focusing on identifiability, uncertainty, and out-of-sample prediction rather than assuming direct applicability."
+    },
+    {
+      "name": "Endothelial signaling and targeted therapy",
+      "priority": 50,
+      "terms": ["NRAS", "PIK3CA", "mTOR", "MAPK", "MEK", "RAS signaling", "RAS signalling", "angiopoietin"],
+      "context_terms": ["endothelial", "vascular", "lymphatic"],
+      "potential_use": "Consider the reported signaling relationship as a hypothesis for a vascular-disease QSP model or a targeted-therapy experiment. The connection is a research suggestion, not evidence for clinical benefit in KLA."
+    },
+    {
+      "name": "Sequential treatment decisions",
+      "priority": 45,
+      "terms": ["reinforcement learning", "optimal control", "adaptive treatment", "dynamic treatment regime", "model informed precision dosing", "therapeutic drug monitoring"],
+      "context_terms": ["patient", "patients", "clinical", "drug", "drugs", "treatment", "therapy", "therapeutic", "dosing"],
+      "potential_use": "Assess whether the state representation, decision rule, or safety constraint could support longitudinal dose adaptation under partial observation. Clinical validation and a disease-specific objective would still be needed."
+    },
+    {
+      "name": "Virtual cells and perturbation modeling",
+      "priority": 40,
+      "terms": ["single cell", "spatial transcriptomics", "virtual cell", "foundation model", "cellular model"],
+      "context_terms": ["perturbation", "perturbations", "drug response", "signaling", "signalling", "trajectory", "dynamics"],
+      "potential_use": "Explore whether the measurement or perturbation model could help connect cell-level experiments to latent disease states or drug-response components in QSP. A cell model is not automatically a validated virtual-patient model."
+    },
+    {
+      "name": "Antibody disposition and delivery",
+      "priority": 40,
+      "terms": ["FcRn", "neonatal Fc receptor", "subcutaneous", "target mediated drug disposition", "antibody pharmacokinetics"],
+      "context_terms": ["antibody", "antibodies", "monoclonal", "immunoglobulin", "pharmacokinetic", "pharmacokinetics", "bioavailability"],
+      "potential_use": "Assess whether the mechanism could inform antibody clearance, absorption, or bioavailability assumptions in IV-to-SC bridging. Drug-specific parameterization and trial-design validation would be separate steps."
+    }
+  ]
+}

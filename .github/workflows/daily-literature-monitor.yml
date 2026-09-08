@@ -18,6 +18,7 @@ on:
       - ".github/workflows/daily-literature-monitor.yml"
       - "README.md"
       - "config.json"
+      - "flagship_config.json"
       - "docs/**"
       - "src/**"
       - "tests/**"
@@ -26,6 +27,7 @@ on:
       - ".github/workflows/daily-literature-monitor.yml"
       - "README.md"
       - "config.json"
+      - "flagship_config.json"
       - "docs/**"
       - "src/**"
       - "tests/**"
@@ -69,8 +71,10 @@ jobs:
         run: |
           python -m compileall -q src tests
           python -m json.tool config.json > /dev/null
+          python -m json.tool flagship_config.json > /dev/null
           python -m json.tool data/articles.json > /dev/null
           node --check docs/assets/app.js
+          node --check docs/assets/flagship.js
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
@@ -87,8 +91,23 @@ jobs:
           SKIP_IF_SUCCESS_TODAY: ${{ github.event_name == 'schedule' && github.event.schedule == '20 7 * * *' && 'true' || 'false' }}
         run: python -m src.literature_monitor
 
+      # This has its own JST day guard and runs even when the primary monitor
+      # selected a paper or skipped its already-successful 07:20 retry.
+      - name: Additional Science, Cell, or Nature research spotlight
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        continue-on-error: true
+        timeout-minutes: 8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python -m src.flagship
+
       - name: Build GitHub Pages data
-        run: python -m src.site_generator
+        run: |
+          python -m src.site_generator
+          python -m src.flagship --build-only
 
       - name: Commit generated outputs
         if: ${{ github.event_name != 'pull_request' && always() && steps.checkout.outcome == 'success' }}
