@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-07",
-  "last_success_utc": "2026-09-06T23:24:22.047637+00:00",
+  "last_selection_date_jst": "2026-09-08",
+  "last_success_utc": "2026-09-07T23:53:47.086499+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -25,6 +25,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "doi:10.1111/cts.70694": {
+      "doi": "10.1111/cts.70694",
+      "notified_at": "2026-09-07T23:53:47.086499+00:00",
+      "selection_type": "historical",
+      "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
     },
     "doi:10.1208/s12248-026-01255-6": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -96,6 +102,12 @@
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
     },
+    "source:europe pmc:med:42576151": {
+      "doi": "10.1111/cts.70694",
+      "notified_at": "2026-09-07T23:53:47.086499+00:00",
+      "selection_type": "historical",
+      "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
+    },
     "source:europe pmc:med:42648633": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
@@ -143,6 +155,12 @@
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
     },
+    "title:5526aff5fe0d48b4a6b6a01f": {
+      "doi": "10.1111/cts.70694",
+      "notified_at": "2026-09-07T23:53:47.086499+00:00",
+      "selection_type": "historical",
+      "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
+    },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
       "notified_at": "2026-09-01T00:56:28.340578+00:00",
@@ -185,21 +203,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-07"
+    "arxiv": "2026-09-08"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
+      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
+      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-06T23:24:22.047637+00:00",
+      "last_attempt_utc": "2026-09-07T23:53:47.086499+00:00",
       "records": 877,
       "status": "ok"
     }

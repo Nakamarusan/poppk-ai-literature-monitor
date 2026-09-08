@@ -1,14 +1,89 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-07 08:24 JST",
-  "article_count": 10,
+  "last_scan_at": "2026-09-08 08:53 JST",
+  "article_count": 11,
   "new_count": 4,
-  "historical_count": 6,
+  "historical_count": 7,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Phase 2a trials in tuberculosis patients traditionally assess early bactericidal activity over two weeks, often using the time-to-positivity biomarker, followed by a phase 2b study typically lasting 8-week with time-to-event of culture conversion as the endpoint. This study investigated different machine learning models to predict the time-to-event of 2-month culture conversion in the REMoxTB trial with phase 2a time-to-positivity biomarker data and the impact of different phase 2a study lengths. Time-to-positivity at baseline and up to 14 days or 28 days after two moxifloxacin-containing regimens and one control regimen were analyzed using nonlinear mixed-effects modeling. The final models were used to predict individual baseline time-to-positivity and time-to-positivity differences between 0 and 14 days or 0 and 28 days. The individual predictions served as features in the following machine learning analysis. Statistical metrics and Kaplan-Meier plots informed model selection. Bi-exponential and exponential decay models described the 14-day and 28-day time-to-positivity data, respectively. In the machine learning analysis, baseline time-to-positivity and/or time-to-positivity differences were ranked as the most important features in all models. Statistical metrics and Kaplan-Meier plots indicated a good fit to culture conversion at 8 weeks using 4-week phase 2a information with a C-support vector classification model. Four-week time-to-positivity phase 2a data provided more information compared to the 2-week time-to-positivity data for the prediction of culture conversion. The workflow demonstrated the potential of machine learning to predict the time-to-event of phase 2b culture conversion up to 8 weeks using time-to-positivity phase 2a biomarker information in a clinical trial assessed with pharmacometric analysis.",
+      "authors": [
+        "You H",
+        "Simonsson USH"
+      ],
+      "doi": "10.1111/cts.70694",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometric",
+            "nonlinear mixed effects"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "pharmacometric",
+            "nonlinear mixed effects"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.1111/cts.70694",
+      "publication_date": "2026-08-01",
+      "reported_at": "2026-09-08 08:53 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study investigated different machine learning models to predict the time-to-event of 2-month culture conversion in the REMoxTB trial with phase 2a time-to-positivity biomarker data and the impact of different phase 2a study lengths.",
+        "new_capability": "The workflow demonstrated the potential of machine learning to predict the time-to-event of phase 2b culture conversion up to 8 weeks using time-to-positivity phase 2a biomarker information in a clinical trial assessed with pharmacometric analysis.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial.",
+      "url": "https://europepmc.org/article/MED/42576151",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Diuretic resistance represents a major source of heterogeneity in loop diuretic response and remains a key barrier to effective decongestion in heart failure. A key clinical challenge is the early identification of patients at high risk of an inadequate response to standard-dose furosemide in order to inform timely treatment intensification or alternative decongestive strategies. However, current approaches remain reactive and rely on post-treatment response, limiting prospective risk stratification and treatment decision-making. To address this problem, we integrated a mechanistic renal quantitative systems pharmacology (QSP) model with furosemide pharmacokinetics and pharmacodynamics to enable baseline-informed risk stratification of diuretic resistance. The model was calibrated using published clinical pharmacokinetic and renal response data and applied to generate a physiologically constrained virtual patient population capturing heterogeneity in renal function, tubular sodium handling, and neurohormonal activation. Machine learning methods were incorporated as complementary analytical tools to identify and validate baseline physiological determinants that define risk categories of diuretic response within the mechanistic simulation framework. Model-based analyses indicated that diuretic resistance arises from the combined effects of reduced filtration capacity, enhanced tubular sodium avidity, diminished pharmacodynamic sensitivity and sustained neurohormonal activation. Across analytical approaches, baseline fractional excretion of sodium and glomerular filtration rate emerged as integrative biomarkers that stratify patients into distinct risk categories of diuretic response, reflecting a mechanism-informed reduction of underlying physiological variability. These findings provide a mechanistically grounded framework for baseline-informed risk stratification and may inform earlier identification of patients at risk of inadequate response, supporting model-informed evaluation of treatment intensification or alternative decongestive strategies.",
       "authors": [
