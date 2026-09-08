@@ -72,14 +72,11 @@
       <section class="method-section">
         <div class="section-heading">
           <span>01</span>
-          <div>
-            <p class="eyebrow">Daily pipeline</p>
-            <h2>From metadata to a readable brief.</h2>
-          </div>
+          <div><p class="eyebrow">Daily pipeline</p><h2>From metadata to a readable brief.</h2></div>
         </div>
         <p class="section-lead">
-          GitHub Actions starts the monitor at 07:00 JST. A 07:20 fallback runs
-          only when the first scheduled run did not complete successfully.
+          GitHub Actions is scheduled at 07:00 JST, with a 07:20 fallback for
+          incomplete primary runs. Actual start times may be delayed.
         </p>
         <ol class="pipeline-grid">
           <li><span>Retrieve</span><p>Request metadata and abstracts from Europe PMC, Crossref, and optionally arXiv.</p></li>
@@ -95,15 +92,11 @@
 
       <section id="score" class="method-section">
         <div class="section-heading">
-          <span>02</span>
-          <div>
-            <p class="eyebrow">Relevance score</p>
-            <h2>A bounded measure of scope alignment.</h2>
-          </div>
+          <span>02</span><div><p class="eyebrow">Relevance score</p><h2>A bounded measure of scope alignment.</h2></div>
         </div>
         <p class="section-lead">
-          The score ranges from 0 to 100. It ranks eligible papers by explicit
-          alignment with this monitor. It does not assess study quality,
+          The score ranges from 0 to 100. It ranks eligible primary-library papers
+          by explicit alignment with this monitor. It does not assess study quality,
           validity, novelty, risk of bias, or clinical usefulness.
         </p>
         <div class="score-layout">
@@ -131,11 +124,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>03</span>
-          <div>
-            <p class="eyebrow">Evidence boundary</p>
-            <h2>Interpretation stops at the abstract.</h2>
-          </div>
+          <span>03</span><div><p class="eyebrow">Evidence boundary</p><h2>Interpretation stops at the abstract.</h2></div>
         </div>
         <p class="section-lead">
           Titles support discovery and scoring, but not the four interpretive
@@ -157,11 +146,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>04</span>
-          <div>
-            <p class="eyebrow">Source policy</p>
-            <h2>Core indexes, optional preprints.</h2>
-          </div>
+          <span>04</span><div><p class="eyebrow">Source policy</p><h2>Core indexes, optional preprints.</h2></div>
         </div>
         <div class="source-cards">
           <article>
@@ -181,11 +166,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>05</span>
-          <div>
-            <p class="eyebrow">Program structure</p>
-            <h2>Small modules, explicit responsibilities.</h2>
-          </div>
+          <span>05</span><div><p class="eyebrow">Program structure</p><h2>Small modules, explicit responsibilities.</h2></div>
         </div>
         <div class="module-grid">
           <article><code>core.py</code><p>Data models, validation, normalization, de-duplication, scoring, JSON I/O, and HTTP requests.</p></article>
@@ -193,19 +174,15 @@
           <article><code>insights.py</code><p>Abstract-only interpretation with optional AI paraphrasing and an extractive fallback.</p></article>
           <article><code>literature_monitor.py</code><p>Retrieval orchestration, catalog refresh, selection, notifications, and state updates.</p></article>
           <article><code>reporting.py</code><p>Canonical article records, Markdown reports, and GitHub Issues.</p></article>
-          <article><code>site_generator.py</code><p>Validates and transforms the catalog into data consumed by GitHub Pages.</p></article>
-          <article><code>data/articles.json</code><p>The canonical structured catalog used to build the site.</p></article>
-          <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates used to prevent duplicate alerts.</p></article>
+          <article><code>site_generator.py</code><p>Validates and transforms the primary catalog into data consumed by GitHub Pages.</p></article>
+          <article><code>data/articles.json</code><p>The canonical primary catalog used to build the site.</p></article>
+          <article><code>state/seen.json</code><p>Seen identifiers, source health, and run dates.</p></article>
         </div>
       </section>
 
       <section class="method-section">
         <div class="section-heading">
-          <span>06</span>
-          <div>
-            <p class="eyebrow">Known limits</p>
-            <h2>A reading queue, not a systematic review.</h2>
-          </div>
+          <span>06</span><div><p class="eyebrow">Known limits</p><h2>A reading queue, not a systematic review.</h2></div>
         </div>
         <ul class="limitations-list">
           <li>Keyword screening can produce false positives and false negatives.</li>
@@ -219,11 +196,7 @@
 
       <section class="method-section">
         <div class="section-heading">
-          <span>07</span>
-          <div>
-            <p class="eyebrow">Visual system</p>
-            <h2>Clarity first.</h2>
-          </div>
+          <span>07</span><div><p class="eyebrow">Visual system</p><h2>Clarity first.</h2></div>
         </div>
         <p class="section-lead">
           The interface uses system typography, generous spacing, restrained
@@ -240,22 +213,16 @@
         <p class="body-copy">All interface graphics are original HTML, CSS, and SVG. No third-party product imagery or brand assets are embedded.</p>
       </section>
 
-      <div class="method-return">
-        <a class="primary-button" href="./">Return to the library</a>
-      </div>
+<div class="method-return"><a class="primary-button" href="./">Return to the library</a></div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div>
-        <strong>PopPK × AI Methodology Atlas</strong>
-        <p>A focused instrument for abstract-based literature triage.</p>
-      </div>
+      <div><strong>PopPK × AI Methodology Atlas</strong><p>A focused instrument for abstract-based literature triage.</p></div>
       <div class="footer-links">
         <a href="./">Library</a>
-        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor"
-           target="_blank" rel="noopener noreferrer">Source code</a>
+        <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor" target="_blank" rel="noopener noreferrer">Source code</a>
       </div>
     </div>
   </footer>
