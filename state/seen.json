@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-09",
-  "last_success_utc": "2026-09-08T23:47:25.225052+00:00",
+  "last_selection_date_jst": "2026-09-10",
+  "last_success_utc": "2026-09-09T23:46:05.045780+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -37,6 +37,12 @@
       "notified_at": "2026-09-07T23:53:47.086499+00:00",
       "selection_type": "historical",
       "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
+    },
+    "doi:10.1177/00368504261486163": {
+      "doi": "10.1177/00368504261486163",
+      "notified_at": "2026-09-09T23:46:05.045780+00:00",
+      "selection_type": "new",
+      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
     "doi:10.1208/s12248-026-01255-6": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -131,6 +137,12 @@
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
     },
+    "source:europe pmc:med:42711757": {
+      "doi": "10.1177/00368504261486163",
+      "notified_at": "2026-09-09T23:46:05.045780+00:00",
+      "selection_type": "new",
+      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -178,6 +190,12 @@
       "notified_at": "2026-09-07T23:53:47.086499+00:00",
       "selection_type": "historical",
       "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
+    },
+    "title:5a1cbc98dc822e8d8541049c": {
+      "doi": "10.1177/00368504261486163",
+      "notified_at": "2026-09-09T23:46:05.045780+00:00",
+      "selection_type": "new",
+      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
@@ -227,22 +245,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-09"
+    "arxiv": "2026-09-10"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
+      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
+      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-08T23:47:25.225052+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
+      "records": 44,
       "status": "ok"
     }
   }
