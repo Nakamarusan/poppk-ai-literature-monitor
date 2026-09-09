@@ -1,14 +1,89 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-09 08:47 JST",
-  "article_count": 12,
-  "new_count": 4,
+  "last_scan_at": "2026-09-10 08:46 JST",
+  "article_count": 13,
+  "new_count": 5,
   "historical_count": 8,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "ObjectiveThe present study aimed to develop and evaluate machine learning-based predictive models for acute kidney injury (AKI) and all-cause mortality in patients treated with imipenem or meropenem, integrating pharmacokinetic (PK) parameters with routine clinical features.MethodsA total of 235 patients who received imipenem (n = 121) or meropenem (n = 114) between May 2021 and November 2023 were included. Elimination phase and trough concentrations were quantified by UPLC-MS/MS, and a nonlinear mixed-effects model was applied to derive PK/PD parameters. Linear regression was performed to examine associations between baseline characteristics and trough concentrations. Logistic regression was used for initial feature screening, after which 13 machine learning classifiers were developed to predict AKI and mortality. Model discrimination was evaluated using bootstrap internal validation, calibration was assessed via calibration curves, feature importance was examined using SHAP values, and clinical utility was evaluated through decision curve analysis.ResultsThe incidence of AKI was 25.6% (31/121) in the imipenem group and 10.5% (12/114) in the meropenem group. For imipenem-related AKI, the Random Forest classifier yielded the highest discriminative performance (AUC: 0.996, 95% CI: 0.988-1.000); XGBoost performed optimally for meropenem-related AKI (AUC: 0.938, 95% CI: 0.876-1.000). For mortality prediction, Random Forest achieved the best performance for the imipenem group (AUC: 0.963, 95% CI: 0.923-1.000) and XGBoost for the meropenem group (AUC: 0.983, 95% CI: 0.957-1.000). SHAP analysis identified renal function indicators and PK parameters as the predominant contributors to model predictions. Decision curve analysis confirmed favorable net benefit across all optimal models.ConclusionsMachine learning models integrating PK parameters with clinical features demonstrated discriminative ability for predicting carbapenem-associated AKI and mortality. These findings support further investigation into the combination of therapeutic drug monitoring and machine learning analytics for risk stratification, though prospective external validation is required.",
+      "authors": [
+        "Chen Y",
+        "Zheng D",
+        "Zhao C",
+        "Li S",
+        "Xu C",
+        "Huang Z",
+        "Zhang L",
+        "Wu X",
+        "Zhang S"
+      ],
+      "doi": "10.1177/00368504261486163",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "nonlinear mixed effects"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "nonlinear mixed effects"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1177/00368504261486163",
+      "publication_date": "2026-07-01",
+      "reported_at": "2026-09-10 08:46 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "ObjectiveThe present study aimed to develop and evaluate machine learning-based predictive models for acute kidney injury (AKI) and all-cause mortality in patients treated with imipenem or meropenem, integrating pharmacokinetic (PK) parameters with routine clinical features.MethodsA total of 235 patients who received…",
+        "new_capability": "Decision curve analysis confirmed favorable net benefit across all optimal models.ConclusionsMachine learning models integrating PK parameters with clinical features demonstrated discriminative ability for predicting carbapenem-associated AKI and mortality.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "These findings support further investigation into the combination of therapeutic drug monitoring and machine learning analytics for risk stratification, though prospective external validation is required.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study.",
+      "url": "https://europepmc.org/article/MED/42711757",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Quantitative systems pharmacology (QSP) models require calibration data from literature, yet manual curation is inconsistently documented and large language model (LLM) extraction can hallucinate values and fabricate citations. We present MAPLE (Model-Aware Parameterization from Literature Evidence), which uses structured validation schemas as a collaboration interface between LLMs and modelers. Two schemas span two scales: the SubmodelTarget schema for isolated experiments constraining individual parameters, and the CalibrationTarget schema for clinical and in vivo endpoints constraining the full model. Both separate data extraction from modeling decisions, recording every value with full provenance. Targeted validators catch characteristic LLM errors by matching values to source snippets, resolving DOIs, and executing code. For a pancreatic ductal adenocarcinoma QSP model, we used MAPLE to extract and curate 37 SubmodelTargets and 45 CalibrationTargets. Before any human review, the validators triggered 50 automated retries; every value carries a direct quote from its source and a verified citation; and 11 of 19 parameters are supported by more than one independent source. The LLM drafted usable forward models and code from context, while the modeler supplied the context and scientific judgment it cannot infer, revising forward-model choices in 65% of SubmodelTargets, priors in 46%, and source relevance in all files. This evaluation covers one model in one disease area, by a single group, so it characterizes the framework rather than establishing how broadly it generalizes. MAPLE records the modeler's reasoning in a form that can be re-run and independently checked, so it is not lost when the modeling team changes.",
       "authors": [

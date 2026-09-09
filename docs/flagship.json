@@ -1,6 +1,52 @@
 {
-  "article_count": 1,
+  "article_count": 2,
   "articles": [
+    {
+      "abstract": "Radial glial progenitors (RGPs) produce all excitatory neurons in the developing cerebral cortex. Mosaic analysis with double markers (MADM)-based lineage tracing in vivo has revealed a quantitative framework of RGP lineage progression 1 . Here we established MADM technology 2,3 in mouse embryonic stem cells to probe RGP lineage progression in a self-organizing cortical organoid system. We found that RGPs exhibit a high level of plasticity in proliferative potential in organoids rather than strict temporally stereotyped lineage progression as observed in vivo. RGPs in organoids showed increased lineage restriction, diminishing cell-type diversity in clones of cortical projection neurons, despite uniform single-cell transcriptional signatures of RGPs and a unitary lineage trajectory. Thus, critical non-cell-autonomous cues that are absent in self-organizing systems and/or the genuine stem cell niche are essential for faithful temporal control of RGP lineage progression and the generation of clonal cortical cell-type diversity.",
+      "authors": [
+        "Stouffer M",
+        "Miranda OA",
+        "Pauler FM",
+        "Pipicelli F",
+        "Streicher C",
+        "Cheung G",
+        "Hippenmeyer S"
+      ],
+      "connections": [
+        {
+          "matched_terms": [
+            "single cell",
+            "trajectory"
+          ],
+          "potential_use": "Explore whether the measurement or perturbation model could help connect cell-level experiments to latent disease states or drug-response components in QSP. A cell model is not automatically a validated virtual-patient model.",
+          "priority": 40,
+          "topic": "Virtual cells and perturbation modeling"
+        }
+      ],
+      "doi": "10.1038/s41586-026-10916-7",
+      "evidence_basis": "abstract-only",
+      "id": "doi:10.1038/s41586-026-10916-7",
+      "issns": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issue_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/25",
+      "journal": "Nature",
+      "publication_date": "2026-08-12",
+      "publication_type": "Journal Article",
+      "reported_at": "2026-09-10 08:48 JST",
+      "selection_type": "recent",
+      "source_id": "MED:42587153",
+      "summary": {
+        "contribution": "Mosaic analysis with double markers (MADM)-based lineage tracing in vivo has revealed a quantitative framework of RGP lineage progression 1 .",
+        "new_capability": "RGPs in organoids showed increased lineage restriction, diminishing cell-type diversity in clones of cortical projection neurons, despite uniform single-cell transcriptional signatures of RGPs and a unitary lineage trajectory.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "We found that RGPs exhibit a high level of plasticity in proliferative potential in organoids rather than strict temporally stereotyped lineage progression as observed in vivo.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Temporal uncoupling of radial glia lineage progression in cortical organoids.",
+      "url": "https://doi.org/10.1038/s41586-026-10916-7"
+    },
     {
       "abstract": "While machine learning models offer potential for predicting transcriptomic effects of perturbation, they currently struggle to generalize across cellular contexts. Here, we introduce State, a machine learning model that predicts perturbation effects while accounting for cellular heterogeneity within and across experiments. State is trained using single-cell gene expression data to predict perturbation effects across sets of cells. State improved discrimination of effects on large datasets by more than 30% and identified differentially expressed genes across genetic, signaling, and chemical perturbations with significantly improved accuracy compared with baselines. Its cell embeddings trained on observational data from 167 million cells enable the identification of strong perturbations in cellular contexts where no perturbations were observed during training. We further introduce Cell-Eval, a comprehensive evaluation framework that can be used to evaluate future models. Overall, the performance and flexibility of State set the stage for scaling the development of AI models of cell state.",
       "authors": [
@@ -75,7 +121,7 @@
       "url": "https://doi.org/10.1016/j.cell.2026.07.052"
     }
   ],
-  "last_checked_at": "2026-09-09 08:54 JST",
+  "last_checked_at": "2026-09-10 08:48 JST",
   "schema_version": 1,
   "status": "selected"
 }
