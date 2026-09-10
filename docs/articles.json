@@ -1,14 +1,96 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-10 08:46 JST",
-  "article_count": 13,
+  "last_scan_at": "2026-09-11 08:37 JST",
+  "article_count": 14,
   "new_count": 5,
-  "historical_count": 8,
+  "historical_count": 9,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Objective Linezolid is a crucial agent for treating drug-resistant Gram-positive bacterial infections in critically ill pediatric patients. However, its pharmacokinetics exhibit high inter-individual variability, making standard dosing regimens susceptible to underexposure or overexposure. This study aimed to explore the integration of population pharmacokinetics (PopPK) and machine learning (ML) algorithms to build a best-performing model for predicting individual linezolid plasma concentrations in critically ill children, thereby guiding personalized dosing. Methods Based on data from a retrospective cohort of 145 critically ill pediatric patients (213 samples), 32 features (including PK parameters) and the target variable (linezolid plasma concentration) were included. A PopPK model was established, and Monte Carlo simulations were conducted to optimize dosing regimens. After systematically evaluating 7 ML algorithms, the best predictive model was identified. Its interpretation was then performed with SHapley Additive exPlanations (SHAP). Results A one-compartment model with first-order elimination adequately described the pharmacokinetics of linezolid. Monte Carlo simulations for minimum inhibitory concentration (MIC) values between 0.5 and 2 mg/L, most renal function levels achieved a probability of target attainment (PTA) > 90% through dose adjustments. When MIC reached 4 mg/L, a PTA > 90% was achieved only in patients with severe renal impairment using 20 mg/kg q8h, yet with high safety risk, indicating the need for alternative antimicrobial agents. The LightGBM algorithm was best-performing among the seven algorithms evaluated, with testing set R 2 = 0.777 and external validation set R 2 = 0.686. However, these R 2 values were optimistic, biased estimates inflated by the EBE-derived CL and V, which have been estimated using all available concentrations per patient, rather than conventional predictive performance. SHAP analysis revealed that clearance, time after dose, daily dose, weight, and serum creatinine were the top five most important features. Conclusion This exploratory study integrated PK parameters into ML models for predicting linezolid plasma concentrations in critically ill pediatric patients, providing preliminary insights for future research as a proof of concept. However, the reported metrics could not support clinical deployment without leakage-free re-estimation using time-constrained or sequential validation.",
+      "authors": [
+        "Zhang Y",
+        "Zhu L",
+        "Shen L",
+        "Wang G",
+        "Zhang J",
+        "Chen Y",
+        "Wang Y",
+        "Li Z"
+      ],
+      "doi": "10.3389/fphar.2026.1817282",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        }
+      },
+      "id": "doi:10.3389/fphar.2026.1817282",
+      "publication_date": "2026-06-02",
+      "reported_at": "2026-09-11 08:37 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to explore the integration of population pharmacokinetics (PopPK) and machine learning (ML) algorithms to build a best-performing model for predicting individual linezolid plasma concentrations in critically ill children, thereby guiding personalized dosing.",
+        "new_capability": "However, the reported metrics could not support clinical deployment without leakage-free re-estimation using time-constrained or sequential validation.",
+        "prior_limitation": "However, its pharmacokinetics exhibit high inter-individual variability, making standard dosing regimens susceptible to underexposure or overexposure.",
+        "significance": "Conclusion This exploratory study integrated PK parameters into ML models for predicting linezolid plasma concentrations in critically ill pediatric patients, providing preliminary insights for future research as a proof of concept.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients.",
+      "url": "https://europepmc.org/article/MED/42311409",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "ObjectiveThe present study aimed to develop and evaluate machine learning-based predictive models for acute kidney injury (AKI) and all-cause mortality in patients treated with imipenem or meropenem, integrating pharmacokinetic (PK) parameters with routine clinical features.MethodsA total of 235 patients who received imipenem (n = 121) or meropenem (n = 114) between May 2021 and November 2023 were included. Elimination phase and trough concentrations were quantified by UPLC-MS/MS, and a nonlinear mixed-effects model was applied to derive PK/PD parameters. Linear regression was performed to examine associations between baseline characteristics and trough concentrations. Logistic regression was used for initial feature screening, after which 13 machine learning classifiers were developed to predict AKI and mortality. Model discrimination was evaluated using bootstrap internal validation, calibration was assessed via calibration curves, feature importance was examined using SHAP values, and clinical utility was evaluated through decision curve analysis.ResultsThe incidence of AKI was 25.6% (31/121) in the imipenem group and 10.5% (12/114) in the meropenem group. For imipenem-related AKI, the Random Forest classifier yielded the highest discriminative performance (AUC: 0.996, 95% CI: 0.988-1.000); XGBoost performed optimally for meropenem-related AKI (AUC: 0.938, 95% CI: 0.876-1.000). For mortality prediction, Random Forest achieved the best performance for the imipenem group (AUC: 0.963, 95% CI: 0.923-1.000) and XGBoost for the meropenem group (AUC: 0.983, 95% CI: 0.957-1.000). SHAP analysis identified renal function indicators and PK parameters as the predominant contributors to model predictions. Decision curve analysis confirmed favorable net benefit across all optimal models.ConclusionsMachine learning models integrating PK parameters with clinical features demonstrated discriminative ability for predicting carbapenem-associated AKI and mortality. These findings support further investigation into the combination of therapeutic drug monitoring and machine learning analytics for risk stratification, though prospective external validation is required.",
       "authors": [

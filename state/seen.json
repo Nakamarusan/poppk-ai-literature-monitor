@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-10",
-  "last_success_utc": "2026-09-09T23:46:05.045780+00:00",
+  "last_selection_date_jst": "2026-09-11",
+  "last_success_utc": "2026-09-10T23:37:46.352364+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -38,6 +38,12 @@
       "selection_type": "flagship",
       "title": "Temporal uncoupling of radial glia lineage progression in cortical organoids."
     },
+    "doi:10.1038/s41586-026-11001-9": {
+      "doi": "10.1038/s41586-026-11001-9",
+      "notified_at": "2026-09-10T23:44:42.839592+00:00",
+      "selection_type": "flagship",
+      "title": "An operational perturbation proteomics-based virtual cell model."
+    },
     "doi:10.1097/mcc.0000000000001428": {
       "doi": "10.1097/mcc.0000000000001428",
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
@@ -67,6 +73,12 @@
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
+    "doi:10.3389/fphar.2026.1817282": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
     },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
@@ -113,6 +125,12 @@
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
       "selection_type": "historical",
       "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
+    "source:europe pmc:med:42311409": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
     },
     "source:europe pmc:med:42338400": {
       "doi": "10.1002/psp4.70285",
@@ -167,6 +185,12 @@
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
+    "source:europe pmc:med:42717098": {
+      "doi": "10.1038/s41586-026-11001-9",
+      "notified_at": "2026-09-10T23:44:42.839592+00:00",
+      "selection_type": "flagship",
+      "title": "An operational perturbation proteomics-based virtual cell model."
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -202,6 +226,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "title:0fab3b12452b41057d8e7487": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
     },
     "title:3bdf2e2be0fa86aca7bb81d4": {
       "doi": "10.1002/psp4.70313",
@@ -256,6 +286,12 @@
       "selection_type": "flagship",
       "title": "Temporal uncoupling of radial glia lineage progression in cortical organoids."
     },
+    "title:cf490753cad7612bfd18a970": {
+      "doi": "10.1038/s41586-026-11001-9",
+      "notified_at": "2026-09-10T23:44:42.839592+00:00",
+      "selection_type": "flagship",
+      "title": "An operational perturbation proteomics-based virtual cell model."
+    },
     "title:d2a7662c504dab804f6756e1": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -281,22 +317,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-10"
+    "arxiv": "2026-09-11"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
-      "records": 44,
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
+      "records": 877,
       "status": "ok"
     }
   }

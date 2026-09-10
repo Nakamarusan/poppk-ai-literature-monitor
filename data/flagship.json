@@ -1,6 +1,80 @@
 {
   "articles": [
     {
+      "abstract": "Artificial intelligence-empowered virtual cell models represent an emerging approach for in silico drug discovery1-3, yet most existing approaches lack large-scale, time-resolved perturbation proteomics data and interpretable frameworks for predicting therapeutic responses. Here we generated more than 38 million temporal protein-abundance measurements from systematically perturbed breast cancer cell lines, and developed ProteinTalks, a virtual cell model. Central to ProteinTalks is the synergy of this large-scale dynamic proteomic resource and the model architecture, enabling a new pretraining framework that learns transferable dynamical latent representations from temporal proteome trajectories. By modelling how proteins respond conditionally to different perturbations, this approach enables the model to function as an operational tool for diverse drug discovery tasks: predicting drug efficacy and synergy, discovering new drug combinations, probing proteins associated with drug resistance, stratifying patient responses and prioritizing drug candidates for patient organoids. It also shows robust transferability, extending beyond cell lines to patient-derived organoids and clinical biopsies, generally achieving higher performance than the selected benchmark implementations under the evaluated protocols. Together, ProteinTalks shows how scalable pretraining of transferable dynamic representations enables operational, dynamics-aware, proteomics-based virtual cell models to advance in silico drug discovery.",
+      "authors": [
+        "Sun R",
+        "Qian L",
+        "Li Y",
+        "Liu T",
+        "Cheng H",
+        "Zhang X",
+        "Zhou X",
+        "Zhan Y",
+        "Zhang G",
+        "Luo Z",
+        "Ma K",
+        "Wu C",
+        "Ji D",
+        "Xue Z",
+        "Meng H",
+        "Xiang Y",
+        "Lei D",
+        "Zhou Q",
+        "Hu W",
+        "Deng Y",
+        "Tan L",
+        "Xiao Q",
+        "Liu Z",
+        "Zeng L",
+        "Qian L",
+        "Zheng X",
+        "Hu Q",
+        "Luo N",
+        "E W",
+        "Zhou P",
+        "Wen H",
+        "Zhu Y",
+        "Guo T"
+      ],
+      "connections": [
+        {
+          "matched_terms": [
+            "virtual cell",
+            "perturbation",
+            "perturbations",
+            "dynamics"
+          ],
+          "potential_use": "Explore whether the measurement or perturbation model could help connect cell-level experiments to latent disease states or drug-response components in QSP. A cell model is not automatically a validated virtual-patient model.",
+          "priority": 40,
+          "topic": "Virtual cells and perturbation modeling"
+        }
+      ],
+      "doi": "10.1038/s41586-026-11001-9",
+      "evidence_basis": "abstract-only",
+      "id": "doi:10.1038/s41586-026-11001-9",
+      "issns": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issue_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/27",
+      "journal": "Nature",
+      "publication_date": "2026-09-09",
+      "publication_type": "IM Journal Article",
+      "reported_at": "2026-09-11 08:44 JST",
+      "selection_type": "recent",
+      "source_id": "MED:42717098",
+      "summary": {
+        "contribution": "Central to ProteinTalks is the synergy of this large-scale dynamic proteomic resource and the model architecture, enabling a new pretraining framework that learns transferable dynamical latent representations from temporal proteome trajectories.",
+        "new_capability": "Together, ProteinTalks shows how scalable pretraining of transferable dynamic representations enables operational, dynamics-aware, proteomics-based virtual cell models to advance in silico drug discovery.",
+        "prior_limitation": "Artificial intelligence-empowered virtual cell models represent an emerging approach for in silico drug discovery1-3, yet most existing approaches lack large-scale, time-resolved perturbation proteomics data and interpretable frameworks for predicting therapeutic responses.",
+        "significance": "By modelling how proteins respond conditionally to different perturbations, this approach enables the model to function as an operational tool for diverse drug discovery tasks: predicting drug efficacy and synergy, discovering new drug combinations, probing proteins associated with drug resistance, stratifying patient…",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "An operational perturbation proteomics-based virtual cell model.",
+      "url": "https://doi.org/10.1038/s41586-026-11001-9"
+    },
+    {
       "abstract": "Radial glial progenitors (RGPs) produce all excitatory neurons in the developing cerebral cortex. Mosaic analysis with double markers (MADM)-based lineage tracing in vivo has revealed a quantitative framework of RGP lineage progression 1 . Here we established MADM technology 2,3 in mouse embryonic stem cells to probe RGP lineage progression in a self-organizing cortical organoid system. We found that RGPs exhibit a high level of plasticity in proliferative potential in organoids rather than strict temporally stereotyped lineage progression as observed in vivo. RGPs in organoids showed increased lineage restriction, diminishing cell-type diversity in clones of cortical projection neurons, despite uniform single-cell transcriptional signatures of RGPs and a unitary lineage trajectory. Thus, critical non-cell-autonomous cues that are absent in self-organizing systems and/or the genuine stem cell niche are essential for faithful temporal control of RGP lineage progression and the generation of clonal cortical cell-type diversity.",
       "authors": [
         "Stouffer M",
@@ -120,7 +194,7 @@
       "url": "https://doi.org/10.1016/j.cell.2026.07.052"
     }
   ],
-  "last_checked_at": "2026-09-10 08:48 JST",
+  "last_checked_at": "2026-09-11 08:44 JST",
   "schema_version": 1,
   "status": "selected"
 }
