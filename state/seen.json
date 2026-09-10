@@ -1,6 +1,6 @@
 {
-  "last_selection_date_jst": "2026-09-10",
-  "last_success_utc": "2026-09-09T23:46:05.045780+00:00",
+  "last_selection_date_jst": "2026-09-11",
+  "last_success_utc": "2026-09-10T23:37:46.352364+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -56,6 +56,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "doi:10.3389/fphar.2026.1817282": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -101,6 +107,12 @@
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
       "selection_type": "historical",
       "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
+    "source:europe pmc:med:42311409": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
     },
     "source:europe pmc:med:42338400": {
       "doi": "10.1002/psp4.70285",
@@ -179,6 +191,12 @@
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
     },
+    "title:0fab3b12452b41057d8e7487": {
+      "doi": "10.3389/fphar.2026.1817282",
+      "notified_at": "2026-09-10T23:37:46.352364+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
     "title:3bdf2e2be0fa86aca7bb81d4": {
       "doi": "10.1002/psp4.70313",
       "notified_at": "2026-09-05T23:29:24.639976+00:00",
@@ -245,22 +263,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-10"
+    "arxiv": "2026-09-11"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-09T23:46:05.045780+00:00",
-      "records": 44,
+      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
+      "records": 877,
       "status": "ok"
     }
   }
