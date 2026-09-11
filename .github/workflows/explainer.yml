@@ -6,12 +6,14 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/explainer.yml'
+      - 'explainer/**'
 
 permissions:
-  contents: read
+  contents: write
 
+# Serialize output commits with the daily monitor rather than racing its state.
 concurrency:
-  group: site-explainer-media
+  group: poppk-ai-literature-monitor
   cancel-in-progress: false
 
 jobs:
@@ -22,13 +24,16 @@ jobs:
       OMP_NUM_THREADS: '2'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install media dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg espeak-ng
+          sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
           python -m pip install 'kokoro-onnx==0.4.9' 'soundfile>=0.12,<0.14' 'numpy>=2,<3' 'Pillow>=11,<13'
       - name: Download open speech model and stock voices
         shell: bash
@@ -37,12 +42,57 @@ jobs:
           base=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
           curl --fail --location --retry 3 "$base/kokoro-v1.0.onnx" -o .models/kokoro-v1.0.onnx
           curl --fail --location --retry 3 "$base/voices-v1.0.bin" -o .models/voices-v1.0.bin
-      - name: Synthesize distinct English dialogue
-        run: python explainer/voiceover.py
-      - name: Save timed narration for video composition
+      - name: Render dialogue and illustrated video
+        run: |
+          python -m compileall -q explainer
+          python explainer/voiceover.py
+          python explainer/render.py
+      - name: Validate the finished media
+        shell: bash
+        run: |
+          ffmpeg -v error -i docs/media/atlas-explainer.mp4 -f null -
+          ffprobe -v error -show_format -show_streams -of json docs/media/atlas-explainer.mp4 > build/explainer/probe.json
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          manifest = json.loads(Path('docs/media/manifest.json').read_text())
+          video = Path('docs/media/atlas-explainer.mp4')
+          assert video.stat().st_size > 100000
+          assert hashlib.sha256(video.read_bytes()).hexdigest() == manifest['video_sha256']
+          assert 20 < manifest['duration_seconds'] < 70
+          assert manifest['resolution'] == [1280, 720]
+          assert manifest['voices'] == {'left': 'am_michael', 'right': 'af_heart'}
+          assert Path('docs/media/atlas-explainer.vtt').read_text().startswith('WEBVTT')
+          # The verified binary still replaces one-time transport fragments.
+          for path in Path('explainer').glob('art.part*.b64'):
+              path.unlink()
+          print(manifest)
+          PY
+      - name: Publish video and poster to the repository
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- docs/media explainer
+          if git diff --cached --quiet; then
+            echo 'Media are already current.'
+            exit 0
+          fi
+          git commit -m 'Publish the illustrated English site walkthrough'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt * 3))
+          done
+          exit 1
+      - name: Save finished video and timed narration
         uses: actions/upload-artifact@v4
         with:
-          name: site-explainer-media
-          path: build/explainer/
-          retention-days: 7
+          name: site-explainer-final
+          path: |
+            docs/media/
+            build/explainer/timeline.json
+            build/explainer/narration.wav
+            build/explainer/probe.json
+          retention-days: 14
           if-no-files-found: error
