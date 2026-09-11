@@ -1,6 +1,57 @@
 {
   "articles": [
     {
+      "abstract": "Mitochondria are four-dimensional (4D: x, y, z, and time) organelles essential for cellular function. Characterizing their 4D phenotypic landscape across diverse cellular states requires both 4D imaging and analytical frameworks. We present MitoSpace, a self-supervised deep learning model trained without labels on terabytes of single-cell lattice light-sheet microscopy data of mitochondria under mechanistically distinct perturbations. MitoSpace learns latent representations that outperform predefined features in drug classification and capture interpretable variation in mitochondrial morphology and dynamics. Regression probes predict mitochondrial membrane potential from the learned representations (R2 = 0.91), establishing a quantitative mapping between form and function at the single-cell level. MitoSpace also generalizes zero-shot to unseen perturbations and human lung organoids. Dimensionality ablation reveals that representation quality improves monotonically from 2D to 3D to 4D, demonstrating the importance of volumetric and temporal information. The model, dataset, and interactive explorer are publicly available, providing a foundation for 4D phenotypic screening.",
+      "authors": [
+        "Agarwal D",
+        "Wang Z",
+        "Arkfeld E",
+        "Modolo A",
+        "Natekar P",
+        "Hakozaki H",
+        "Arora M",
+        "McMahon G",
+        "Nahar S",
+        "Doshi M",
+        "Schöneberg J"
+      ],
+      "connections": [
+        {
+          "matched_terms": [
+            "single cell",
+            "perturbations",
+            "dynamics"
+          ],
+          "potential_use": "Explore whether the measurement or perturbation model could help connect cell-level experiments to latent disease states or drug-response components in QSP. A cell model is not automatically a validated virtual-patient model.",
+          "priority": 40,
+          "topic": "Virtual cells and perturbation modeling"
+        }
+      ],
+      "doi": "10.1016/j.cell.2026.08.028",
+      "evidence_basis": "abstract-only",
+      "id": "doi:10.1016/j.cell.2026.08.028",
+      "issns": [
+        "0092-8674",
+        "1097-4172"
+      ],
+      "issue_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/29",
+      "journal": "Cell",
+      "publication_date": "2026-09-10",
+      "publication_type": "IM Journal Article",
+      "reported_at": "2026-09-12 08:54 JST",
+      "selection_type": "recent",
+      "source_id": "MED:42721963",
+      "summary": {
+        "contribution": "We present MitoSpace, a self-supervised deep learning model trained without labels on terabytes of single-cell lattice light-sheet microscopy data of mitochondria under mechanistically distinct perturbations.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Regression probes predict mitochondrial membrane potential from the learned representations (R2 = 0.91), establishing a quantitative mapping between form and function at the single-cell level.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "4D spatiotemporal landscape of mitochondrial phenotypes across cellular states unlocked through representation learning.",
+      "url": "https://doi.org/10.1016/j.cell.2026.08.028"
+    },
+    {
       "abstract": "Artificial intelligence-empowered virtual cell models represent an emerging approach for in silico drug discovery1-3, yet most existing approaches lack large-scale, time-resolved perturbation proteomics data and interpretable frameworks for predicting therapeutic responses. Here we generated more than 38 million temporal protein-abundance measurements from systematically perturbed breast cancer cell lines, and developed ProteinTalks, a virtual cell model. Central to ProteinTalks is the synergy of this large-scale dynamic proteomic resource and the model architecture, enabling a new pretraining framework that learns transferable dynamical latent representations from temporal proteome trajectories. By modelling how proteins respond conditionally to different perturbations, this approach enables the model to function as an operational tool for diverse drug discovery tasks: predicting drug efficacy and synergy, discovering new drug combinations, probing proteins associated with drug resistance, stratifying patient responses and prioritizing drug candidates for patient organoids. It also shows robust transferability, extending beyond cell lines to patient-derived organoids and clinical biopsies, generally achieving higher performance than the selected benchmark implementations under the evaluated protocols. Together, ProteinTalks shows how scalable pretraining of transferable dynamic representations enables operational, dynamics-aware, proteomics-based virtual cell models to advance in silico drug discovery.",
       "authors": [
         "Sun R",
@@ -194,7 +245,7 @@
       "url": "https://doi.org/10.1016/j.cell.2026.07.052"
     }
   ],
-  "last_checked_at": "2026-09-11 08:44 JST",
+  "last_checked_at": "2026-09-12 08:54 JST",
   "schema_version": 1,
   "status": "selected"
 }
