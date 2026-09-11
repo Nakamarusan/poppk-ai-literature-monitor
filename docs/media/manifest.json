@@ -1,0 +1,18 @@
+{
+  "duration_seconds": 44.06,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "voices": {
+    "left": "am_michael",
+    "right": "af_heart"
+  },
+  "audio": "mono; both speakers centered",
+  "captions": "English; burned in; SRT and VTT supplied",
+  "video_sha256": "5b5cb5faafe3b3df031b98e4cd385954623043fc08ea60bf3e5b1088d1f29ce2",
+  "video_bytes": 1686364,
+  "scene_sha256": "e4f640d6b26eb223742ccbbf0b4b207373c30ac8aa694f69c29b1c687459168f",
+  "evidence_policy": "Site functionality only. No fabricated paper examples or scientific quality claims."
+}
