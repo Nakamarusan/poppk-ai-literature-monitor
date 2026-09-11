@@ -1,12 +1,12 @@
 name: Deploy literature dashboard to GitHub Pages
 
 on:
-  # The daily monitor commits generated files with GITHUB_TOKEN. GitHub does
-  # not emit a new push-triggered workflow for that commit, so deploy from the
-  # monitor's completed workflow instead.
+  # Generated files are committed with GITHUB_TOKEN, so publish from the
+  # completed producer workflow rather than depending on its push event.
   workflow_run:
     workflows:
       - "Daily PopPK × AI literature monitor"
+      - "Build site explainer video"
     types:
       - completed
   push:
