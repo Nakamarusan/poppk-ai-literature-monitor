@@ -2,6 +2,16 @@
 
 This repository is a vibe-coded proof of concept for automated literature monitoring.
 
+## Watch the overview
+
+[![Watch the 44-second illustrated overview: two medicine characters in white lab coats introduce the PopPK × AI Methodology Atlas](docs/media/atlas-explainer-poster.jpg)](https://nakamarusan.github.io/poppk-ai-literature-monitor/explainer.html)
+
+**[Play the video](https://nakamarusan.github.io/poppk-ai-literature-monitor/explainer.html)** · [MP4](https://nakamarusan.github.io/poppk-ai-literature-monitor/media/atlas-explainer.mp4) · [English transcript](docs/media/transcript.md)
+
+A 44-second illustrated walkthrough with English captions. The left capsule speaks in a low, measured male voice; the right tablet answers in a bright female voice. Both are stock synthetic voices, not imitations of real people. Click the thumbnail to open the video player. [Production and source notes](docs/media/README.md).
+
+## What it does
+
 Every day at 07:00 JST, GitHub Actions searches Europe PMC, Crossref, and optionally arXiv for methodology papers connecting population pharmacokinetics, pharmacometrics, and AI or machine learning. If no new eligible paper is found, the monitor selects one previously unreported, abstract-bearing paper published in 2020 or later.
 
 An independent **Research Spotlight** adds one paper across the flagship journals **Science, Cell, and Nature**, not one per journal. It favors papers published in the last 30 days and falls back to unreported papers from 2020 onward. Exact journal titles and ISSNs exclude sister journals; an available abstract and research-article metadata are required. `flagship_config.json` defines connections to federated analysis, mechanistic modeling, vascular and lymphatic biology, sequential treatment decisions, and perturbation modeling. Potential research uses are labeled as suggestions, not findings established by the paper. No unrelated paper is substituted when no eligible candidate is available.
