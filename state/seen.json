@@ -1,6 +1,12 @@
 {
-  "last_selection_date_jst": "2026-09-11",
-  "last_success_utc": "2026-09-10T23:37:46.352364+00:00",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-09-11T23:48:19.363976+00:00",
+      "message": "Network error: The read operation timed out"
+    }
+  },
+  "last_selection_date_jst": "2026-09-12",
+  "last_success_utc": "2026-09-11T23:48:19.363976+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -55,6 +61,12 @@
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
+    "doi:10.21203/rs.3.rs-10620781/v1": {
+      "doi": "10.21203/rs.3.rs-10620781/v1",
+      "notified_at": "2026-09-11T23:48:19.363976+00:00",
+      "selection_type": "historical",
+      "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
     },
     "doi:10.3389/fphar.2026.1817282": {
       "doi": "10.3389/fphar.2026.1817282",
@@ -173,6 +185,12 @@
       "selection_type": "historical",
       "title": "PD Union An Automated Pharmacodynamic Modeling Framework Based on a Unified Mechanistic Skeleton and Machine Learning Assistance"
     },
+    "source:europe pmc:ppr:ppr1295089": {
+      "doi": "10.21203/rs.3.rs-10620781/v1",
+      "notified_at": "2026-09-11T23:48:19.363976+00:00",
+      "selection_type": "historical",
+      "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
+    },
     "source:europe pmc:ppr:ppr1310314": {
       "doi": "10.20944/preprints202609.0069.v1",
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
@@ -250,6 +268,12 @@
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
     },
+    "title:e4203f2842db62824cc1df92": {
+      "doi": "10.21203/rs.3.rs-10620781/v1",
+      "notified_at": "2026-09-11T23:48:19.363976+00:00",
+      "selection_type": "historical",
+      "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
+    },
     "title:ea6bb6a4bf42c674d6856f1c": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -263,21 +287,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-11"
+    "arxiv": "2026-09-12"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
+      "message": "Network error: The read operation timed out",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
+      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-10T23:37:46.352364+00:00",
+      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
       "records": 877,
       "status": "ok"
     }
