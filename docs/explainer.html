@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="An illustrated, two-voice English walkthrough of the PopPK × AI Methodology Atlas.">
+  <title>Watch the overview · PopPK × AI Methodology Atlas</title>
+  <link rel="canonical" href="https://nakamarusan.github.io/poppk-ai-literature-monitor/explainer.html">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <style>
+    .video-main { max-width: 1120px; margin: 0 auto; padding: 72px 24px 64px; }
+    .video-nav { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; margin-bottom: 64px; }
+    .video-nav a { color: var(--secondary); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+    .video-nav a:first-child { margin-right: auto; color: var(--text); font-weight: 650; }
+    h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -.055em; margin: 0 0 18px; }
+    .video-lead { max-width: 760px; color: var(--secondary); line-height: 1.65; margin: 0 0 30px; }
+    .video-frame { margin: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: #202526; box-shadow: var(--shadow-medium); }
+    video { display: block; width: 100%; aspect-ratio: 16/9; background: #202526; }
+    .video-caption { padding: 16px 22px; color: #e2e6e5; font-size: .85rem; line-height: 1.5; }
+    .video-actions { display: flex; gap: 16px 28px; flex-wrap: wrap; margin: 26px 0 44px; align-items: center; }
+    .video-actions a { min-height: 44px; display: inline-flex; align-items: center; }
+    .video-actions a:not(.primary-button) { color: var(--blue); text-underline-offset: 4px; }
+    .video-transcript { border: 1px solid var(--line); padding: 22px; border-radius: 18px; background: var(--surface-solid); }
+    .video-transcript summary { cursor: pointer; font-weight: 650; min-height: 30px; }
+    .video-transcript p { color: var(--secondary); line-height: 1.75; }
+    .video-transcript strong { color: var(--text); }
+    .video-notes { color: var(--secondary); font-size: .85rem; line-height: 1.65; margin-top: 28px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    @media (max-width: 600px) { .video-main { padding: 24px 16px 40px; } .video-nav { margin-bottom: 40px; gap: 18px; } .video-frame { border-radius: 14px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to the video</a>
+  <main class="video-main">
+    <nav class="video-nav" aria-label="Primary navigation">
+      <a href="./">Methodology Atlas</a><a href="./">Library</a><a href="./method.html">Method</a>
+      <a href="./explainer.html" aria-current="page">Video</a>
+    </nav>
+    <p class="eyebrow">An illustrated overview</p>
+    <h1 id="overview">A focused reading queue.<br>A clearer place to start.</h1>
+    <p class="video-lead">Meet the Atlas with two original medicine characters in white lab coats. The capsule on the left has a low, measured male English voice; the tablet on the right has a bright female English voice. They share one scene and take turns speaking.</p>
+    <figure class="video-frame">
+      <video controls playsinline preload="metadata" poster="./media/atlas-explainer-poster.jpg" aria-label="PopPK and AI Atlas illustrated overview with two English voices">
+        <source src="./media/atlas-explainer.mp4" type="video/mp4">
+        <track kind="captions" src="./media/atlas-explainer.vtt" srclang="en" label="English — speaker labels">
+        Your browser does not support embedded video. <a href="./media/atlas-explainer.mp4">Open the MP4.</a>
+      </video>
+      <figcaption class="video-caption">English synthetic voices · English captions included in the image · Illustrated interface, not a live screen recording. No autoplay.</figcaption>
+    </figure>
+    <div class="video-actions">
+      <a class="primary-button" href="./">Explore the Atlas <span aria-hidden="true"> →</span></a>
+      <a href="./media/atlas-explainer.mp4" download>Download MP4</a>
+      <a href="./media/atlas-explainer.srt" download>English subtitles</a>
+      <a href="./method.html">How the monitor works</a>
+    </div>
+    <details class="video-transcript">
+      <summary>Read the English transcript</summary>
+      <p><strong>Capsule:</strong> Meet the PopPK and AI Methodology Atlas. A focused reading queue for pharmacometrics and artificial intelligence.</p>
+      <p><strong>Tablet:</strong> It searches daily. No new match? Discover an unreported paper from 2020 onward.</p>
+      <p><strong>Capsule:</strong> Each brief covers the problem, contribution, new possibilities, and significance. Interpretations use abstracts only.</p>
+      <p><strong>Tablet:</strong> Search, filter, and compare. Relevance measures topic fit, not scientific quality.</p>
+      <p><strong>Capsule:</strong> Research Spotlight adds a relevant paper from Science, Cell, or Nature. Proposed uses stay separate from findings.</p>
+      <p><strong>Tablet:</strong> Read. Compare. Verify. Open the Atlas, find your next paper, and explore the method.</p>
+    </details>
+    <p class="video-notes">Selections depend on eligible, available records. The video does not replace the <a href="./method.html">current selection policy</a> or reading the original research. Its characters are fictional, and its stock synthetic voices are not impersonations. <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor/blob/main/docs/media/README.md">Production and source notes</a>.</p>
+  </main>
+</body>
+</html>
