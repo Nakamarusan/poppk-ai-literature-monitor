@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "cast": {
+    "left": {"label": "CAPSULE", "voice": "am_michael", "speed": 1.0, "description": "Low, measured male English voice"},
+    "right": {"label": "TABLET", "voice": "af_heart", "speed": 1.06, "description": "Bright, friendly female English voice"}
+  },
+  "lines": [
+    {"speaker": "left", "text": "Meet the Pop P K and A I Methodology Atlas. A focused reading queue for pharmacometrics and artificial intelligence.", "captions": ["Meet the PopPK and AI Methodology Atlas.", "A focused reading queue for pharmacometrics", "and artificial intelligence."]},
+    {"speaker": "right", "text": "It searches daily. No new match? Discover an unreported paper from twenty twenty onward.", "captions": ["It searches daily. No new match?", "Discover an unreported paper from 2020 onward."]},
+    {"speaker": "left", "text": "Each brief covers the problem, contribution, new possibilities, and significance. Interpretations use abstracts only.", "captions": ["Each brief covers the problem, contribution,", "new possibilities, and significance.", "Interpretations use abstracts only."]},
+    {"speaker": "right", "text": "Search, filter, and compare. Relevance measures topic fit, not scientific quality.", "captions": ["Search, filter, and compare.", "Relevance measures topic fit, not scientific quality."]},
+    {"speaker": "left", "text": "Research Spotlight adds a relevant paper from Science, Cell, or Nature. Proposed uses stay separate from findings.", "captions": ["Research Spotlight adds a relevant paper", "from Science, Cell, or Nature.", "Proposed uses stay separate from findings."]},
+    {"speaker": "right", "text": "Read. Compare. Verify. Open the Atlas, find your next paper, and explore the method.", "captions": ["Read. Compare. Verify.", "Open the Atlas, find your next paper,", "and explore the method."]}
+  ]
+}
