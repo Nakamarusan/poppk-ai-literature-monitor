@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-11T23:48:19.363976+00:00",
-      "message": "Network error: The read operation timed out"
+      "at_utc": "2026-09-12T23:39:28.292017+00:00",
+      "message": "HTTP 429: Rate exceeded."
     }
   },
-  "last_selection_date_jst": "2026-09-12",
-  "last_success_utc": "2026-09-11T23:48:19.363976+00:00",
+  "last_selection_date_jst": "2026-09-13",
+  "last_success_utc": "2026-09-12T23:39:28.292017+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70285": {
@@ -38,6 +38,12 @@
       "notified_at": "2026-09-11T23:54:11.194880+00:00",
       "selection_type": "flagship",
       "title": "4D spatiotemporal landscape of mitochondrial phenotypes across cellular states unlocked through representation learning."
+    },
+    "doi:10.1016/j.ejps.2026.107609": {
+      "doi": "10.1016/j.ejps.2026.107609",
+      "notified_at": "2026-09-12T23:39:28.292017+00:00",
+      "selection_type": "historical",
+      "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
     "doi:10.1016/j.jiac.2026.103058": {
       "doi": "10.1016/j.jiac.2026.103058",
@@ -155,6 +161,12 @@
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
+    },
+    "source:europe pmc:med:42463031": {
+      "doi": "10.1016/j.ejps.2026.107609",
+      "notified_at": "2026-09-12T23:39:28.292017+00:00",
+      "selection_type": "historical",
+      "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
     "source:europe pmc:med:42535762": {
       "doi": "10.1002/psp4.70306",
@@ -304,6 +316,12 @@
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
     },
+    "title:a7be8b67fff02f88d5fe790b": {
+      "doi": "10.1016/j.ejps.2026.107609",
+      "notified_at": "2026-09-12T23:39:28.292017+00:00",
+      "selection_type": "historical",
+      "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
+    },
     "title:ad1fe3c65d5cafd3a19bb839": {
       "doi": "10.1016/j.cell.2026.07.052",
       "notified_at": "2026-09-08T23:54:27.437681+00:00",
@@ -359,21 +377,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-12"
+    "arxiv": "2026-09-13"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
-      "message": "Network error: The read operation timed out",
+      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
+      "message": "HTTP 429: Rate exceeded.",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
+      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-11T23:48:19.363976+00:00",
+      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
       "records": 877,
       "status": "ok"
     }

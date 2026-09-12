@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-09-12 08:54 JST",
-  "last_source_error": "",
-  "last_status": "selected"
+  "last_checked_at": "2026-09-13 08:46 JST",
+  "last_source_error": "HTTP 503: 503 Service Temporarily Unavailable 503 Service Temporarily Unavailable nginx",
+  "last_status": "source unavailable"
 }

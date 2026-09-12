@@ -1,6 +1,92 @@
 {
   "articles": [
     {
+      "abstract": "Polymyxin B represents a critical last-resort antibiotic for carbapenem-resistant Gram-negative infections, yet its narrow therapeutic window and substantial inter-individual pharmacokinetic variability present significant challenges for optimal dosing in critically ill patients. Population pharmacokinetic (PopPK) models based on nonlinear mixed-effects modeling (NLMEM) are well-established, flexible frameworks for dose individualization that are fully capable of incorporating complex, nonlinear, and time-varying covariate relationships; however, their individual-level prediction accuracy is fundamentally governed by data availability and model specification, and substantial eta-shrinkage may occur when per-subject observations are sparse. As a complementary approach, we developed a novel physics-informed long short-term memory (PI-LSTM) neural network that synergistically integrates mechanistic pharmacokinetic principles with deep learning for personalized concentration prediction, intended as a complementary approach to established PopPK methods. The model was trained and validated using simulated data from 1,000 septic patients incorporating time-varying renal function and individualized dosing regimens. The PI-LSTM architecture combines bidirectional LSTM layers for temporal modeling, multi-head attention for adaptive covariate weighting, and physics-based constraints enforcing fundamental pharmacokinetic relationships (kel = CL/V). The model achieved good predictive performance with R² = 0.694 for concentration prediction (MAE = 1.398 mg/L, RMSE = 2.211 mg/L), accurately estimating population-level parameters (mean CL: 2.02 vs. 2.03 L/h true; mean V: 44.7 vs. 41.1 L true) with well-calibrated uncertainty quantification (91.5% prediction interval coverage). An ablation study demonstrated that each physics-informed loss component contributed to maintaining pharmacological interpretability, and a head-to-head comparison with a standard PopPK model on the same data provided context for the relative strengths of each approach. This hybrid framework successfully maintains pharmacological interpretability while leveraging deep learning's capacity to model complex nonlinear relationships, offering a promising complementary approach for therapeutic drug monitoring and individualized dosing optimization in precision antimicrobial therapy.",
+      "authors": [
+        "Ma P",
+        "Zhang X",
+        "Xiao Q",
+        "Li Y",
+        "Huang Y",
+        "Wen Y",
+        "Liao Y"
+      ],
+      "doi": "10.1016/j.ejps.2026.107609",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "deep learning",
+            "neural network",
+            "physics informed"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "architecture"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "nonlinear mixed effects"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "neural network",
+            "physics informed",
+            "deep learning"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "architecture"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "nonlinear mixed effects"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "neural network",
+            "physics informed"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1016/j.ejps.2026.107609",
+      "publication_date": "2026-07-16",
+      "reported_at": "2026-09-13 08:39 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "As a complementary approach, we developed a novel physics-informed long short-term memory (PI-LSTM) neural network that synergistically integrates mechanistic pharmacokinetic principles with deep learning for personalized concentration prediction, intended as a complementary approach to established PopPK methods.",
+        "new_capability": "An ablation study demonstrated that each physics-informed loss component contributed to maintaining pharmacological interpretability, and a head-to-head comparison with a standard PopPK model on the same data provided context for the relative strengths of each approach.",
+        "prior_limitation": "Population pharmacokinetic (PopPK) models based on nonlinear mixed-effects modeling (NLMEM) are well-established, flexible frameworks for dose individualization that are fully capable of incorporating complex, nonlinear, and time-varying covariate relationships; however, their individual-level prediction accuracy is f…",
+        "significance": "This hybrid framework successfully maintains pharmacological interpretability while leveraging deep learning's capacity to model complex nonlinear relationships, offering a promising complementary approach for therapeutic drug monitoring and individualized dosing optimization in precision antimicrobial therapy.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients.",
+      "url": "https://europepmc.org/article/MED/42463031",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Abstract Introduction: Metabolic dysfunction-associated steatotic liver disease (MASLD) is the leading cause of chronic liver disease worldwide and is characterized by complex interactions among metabolic, inflammatory, and fibrogenic pathways. Current pharmacological strategies predominantly target single molecular mechanisms, limiting their ability to address the multifactorial nature of the disease. Objective : To develop an integrative computational framework for rational multi-target drug discovery in MASLD and evaluate its feasibility through the de novo design of a candidate small molecule. Methods : An end-to-end computational pipeline integrating systems biology, network pharmacology, machine learning, generative artificial intelligence, molecular docking, molecular dynamics, quantitative systems pharmacology, and virtual-patient simulation was developed to identify key regulatory networks, prioritize therapeutic targets, design a novel multi-target compound, and predict its pharmacological profile. Results: The framework identified a complementary therapeutic network involving SREBP1, AMPKα1, PPARδ, NLRP3, and FXR. The de novo generated molecule, Hepatocyte Precision Metabolic Modulator-001 (HPM-001), demonstrated consistent predicted binding across all prioritized targets, stable protein-ligand interactions during molecular dynamics simulations, and favorable in silico pharmacokinetic and safety profiles. Systems pharmacology and digital-twin simulations predicted coordinated modulation of lipid metabolism and inflammatory pathways, supporting the biological plausibility of the proposed multi-target strategy. Conclusions : This study establishes a reproducible computational framework for AI-guided multi-target drug discovery in MASLD and identifies HPM-001 as a proof-of-concept candidate for further experimental validation. These findings support the use of integrated computational approaches to accelerate the prioritization of polypharmacological therapies for complex metabolic diseases.",
       "authors": [
         "Andrade LJdO",
@@ -1210,6 +1296,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-12 08:48 JST",
+  "last_scan_at": "2026-09-13 08:39 JST",
   "schema_version": 2
 }
