@@ -1,6 +1,83 @@
 {
   "articles": [
     {
+      "abstract": "Variational autoencoders (VAEs) combined with neural ordinary differential equations provide a flexible framework for exploring neural latent-variable models in population pharmacokinetics. In this work, we investigate an empirical Bayes VAE formulation that integrates encoder-decoder architectures with covariate-dependent population priors, enabling correlated latent representations and probabilistic inference. We evaluate the proposed framework using controlled simulation studies and a small clinical benchmark dataset. The simulation experiments assess the ability to recover known population structures and covariate effects, while the clinical study evaluates subject-specific prediction and model diagnostics. In simulation studies with correlated individual parameters, the empirical Bayes VAE consistently captured population-level variability, whereas a fixed-prior VAE baseline exhibited systematic biases. In our experiments, extrapolation beyond the training dosing schedules showed more stable predictive behavior when using the proposed input-response normalization, relative to models trained without normalization, within a limited range. Diagnostic analyses indicated clear relationships between inferred latent variables and true parameters, and estimated observation noise was consistent with simulated values. In the clinical case study, cross-validation experiments suggested predictive performance comparable to previously reported neural ODE-based approaches. Overall, the results illustrate the feasibility of combining empirical Bayes inference with neural ODE-based decoders for population modeling. The proposed framework should be viewed as a methodological proof-of-concept, highlighting both the potential and the current limitations of variational neural approaches in pharmacometric applications.",
+      "authors": [
+        "Baaz M",
+        "Sjöberg A",
+        "Jirstrand M"
+      ],
+      "doi": "10.1002/psp4.70280",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "neural ode"
+          ],
+          "method": [
+            "framework",
+            "inference",
+            "benchmark",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "neural ode"
+          ],
+          "method": [
+            "framework",
+            "inference",
+            "benchmark",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "neural ode"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70280",
+      "publication_date": "2026-07-01",
+      "reported_at": "2026-09-14 08:50 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We evaluate the proposed framework using controlled simulation studies and a small clinical benchmark dataset.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "In our experiments, extrapolation beyond the training dosing schedules showed more stable predictive behavior when using the proposed input-response normalization, relative to models trained without normalization, within a limited range.",
+        "significance": "The proposed framework should be viewed as a methodological proof-of-concept, highlighting both the potential and the current limitations of variational neural approaches in pharmacometric applications.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "The Empirical Bayes Variational Autoencoder-A Neural ODE Approach for Population Modeling in Pharmacology.",
+      "url": "https://europepmc.org/article/MED/42310401",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Polymyxin B represents a critical last-resort antibiotic for carbapenem-resistant Gram-negative infections, yet its narrow therapeutic window and substantial inter-individual pharmacokinetic variability present significant challenges for optimal dosing in critically ill patients. Population pharmacokinetic (PopPK) models based on nonlinear mixed-effects modeling (NLMEM) are well-established, flexible frameworks for dose individualization that are fully capable of incorporating complex, nonlinear, and time-varying covariate relationships; however, their individual-level prediction accuracy is fundamentally governed by data availability and model specification, and substantial eta-shrinkage may occur when per-subject observations are sparse. As a complementary approach, we developed a novel physics-informed long short-term memory (PI-LSTM) neural network that synergistically integrates mechanistic pharmacokinetic principles with deep learning for personalized concentration prediction, intended as a complementary approach to established PopPK methods. The model was trained and validated using simulated data from 1,000 septic patients incorporating time-varying renal function and individualized dosing regimens. The PI-LSTM architecture combines bidirectional LSTM layers for temporal modeling, multi-head attention for adaptive covariate weighting, and physics-based constraints enforcing fundamental pharmacokinetic relationships (kel = CL/V). The model achieved good predictive performance with R² = 0.694 for concentration prediction (MAE = 1.398 mg/L, RMSE = 2.211 mg/L), accurately estimating population-level parameters (mean CL: 2.02 vs. 2.03 L/h true; mean V: 44.7 vs. 41.1 L true) with well-calibrated uncertainty quantification (91.5% prediction interval coverage). An ablation study demonstrated that each physics-informed loss component contributed to maintaining pharmacological interpretability, and a head-to-head comparison with a standard PopPK model on the same data provided context for the relative strengths of each approach. This hybrid framework successfully maintains pharmacological interpretability while leveraging deep learning's capacity to model complex nonlinear relationships, offering a promising complementary approach for therapeutic drug monitoring and individualized dosing optimization in precision antimicrobial therapy.",
       "authors": [
         "Ma P",
@@ -314,7 +391,7 @@
         "significance": "These findings support further investigation into the combination of therapeutic drug monitoring and machine learning analytics for risk stratification, though prospective external validation is required.",
         "source": "Abstract-only extractive summary"
       },
-      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study.",
+      "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study",
       "url": "https://europepmc.org/article/MED/42711757",
       "venue": "Europe PMC"
     },
@@ -1296,6 +1373,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-13 08:39 JST",
+  "last_scan_at": "2026-09-14 08:50 JST",
   "schema_version": 2
 }

@@ -1,14 +1,20 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-12T23:39:28.292017+00:00",
+      "at_utc": "2026-09-13T23:50:54.201620+00:00",
       "message": "HTTP 429: Rate exceeded."
     }
   },
-  "last_selection_date_jst": "2026-09-13",
-  "last_success_utc": "2026-09-12T23:39:28.292017+00:00",
+  "last_selection_date_jst": "2026-09-14",
+  "last_success_utc": "2026-09-13T23:50:54.201620+00:00",
   "schema_version": 1,
   "seen": {
+    "doi:10.1002/psp4.70280": {
+      "doi": "10.1002/psp4.70280",
+      "notified_at": "2026-09-13T23:50:54.201620+00:00",
+      "selection_type": "historical",
+      "title": "The Empirical Bayes Variational Autoencoder-A Neural ODE Approach for Population Modeling in Pharmacology."
+    },
     "doi:10.1002/psp4.70285": {
       "doi": "10.1002/psp4.70285",
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
@@ -125,6 +131,12 @@
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
       "selection_type": "historical",
       "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
+    "source:europe pmc:med:42310401": {
+      "doi": "10.1002/psp4.70280",
+      "notified_at": "2026-09-13T23:50:54.201620+00:00",
+      "selection_type": "historical",
+      "title": "The Empirical Bayes Variational Autoencoder-A Neural ODE Approach for Population Modeling in Pharmacology."
     },
     "source:europe pmc:med:42311409": {
       "doi": "10.3389/fphar.2026.1817282",
@@ -245,6 +257,12 @@
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
+    "title:792fefe8a0fc829963209b38": {
+      "doi": "10.1002/psp4.70280",
+      "notified_at": "2026-09-13T23:50:54.201620+00:00",
+      "selection_type": "historical",
+      "title": "The Empirical Bayes Variational Autoencoder-A Neural ODE Approach for Population Modeling in Pharmacology."
+    },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
       "notified_at": "2026-09-01T00:56:28.340578+00:00",
@@ -305,21 +323,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-13"
+    "arxiv": "2026-09-14"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
+      "last_attempt_utc": "2026-09-13T23:50:54.201620+00:00",
       "message": "HTTP 429: Rate exceeded.",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
+      "last_attempt_utc": "2026-09-13T23:50:54.201620+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-12T23:39:28.292017+00:00",
+      "last_attempt_utc": "2026-09-13T23:50:54.201620+00:00",
       "records": 877,
       "status": "ok"
     }
