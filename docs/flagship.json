@@ -1,6 +1,48 @@
 {
-  "article_count": 4,
+  "article_count": 5,
   "articles": [
+    {
+      "abstract": "Chest radiography frequently serves as baseline imaging for most lung diseases 1 . Deep learning has great potential for automating the interpretation of chest radiography 2 . However, existing chest radiographic deep learning models are limited in diagnostic scope, generalizability, adaptability, robustness and extensibility. To overcome these limitations, we have developed Ark + , a foundation model applied to chest radiography and pretrained by cyclically accruing and reusing the knowledge from heterogeneous expert labels in numerous datasets. Ark + excels in diagnosing thoracic diseases. It expands the diagnostic scope and addresses potential misdiagnosis. It can adapt to evolving diagnostic needs and respond to novel diseases. It can learn rare conditions from a few samples and transfer to new diagnostic settings without training. It tolerates data biases and long-tailed distributions, and it supports federated learning to preserve privacy. All codes and pretrained models have been released, so that Ark + is open for fine-tuning, local adaptation and improvement. It is extensible to several modalities. Thus, it is a foundation model for medical imaging. The exceptional capabilities of Ark + stem from our insight: aggregating various datasets diversifies the patient populations and accrues knowledge from many experts to yield unprecedented performance while reducing annotation costs 3 . The development of Ark + reveals that open models trained by accruing and reusing knowledge from heterogeneous expert annotations with a multitude of public (big or small) datasets can surpass the performance of proprietary models trained on large data. We hope that our findings will inspire more researchers to share code and datasets or federate privacy-preserving data to create open foundation models with diverse, global expertise and patient populations, thus accelerating open science and democratizing AI for medicine.",
+      "authors": [
+        "Ma D",
+        "Pang J",
+        "Gotway MB",
+        "Liang J"
+      ],
+      "connections": [
+        {
+          "matched_terms": [
+            "federated learning"
+          ],
+          "potential_use": "Assess whether the distributed learning or privacy mechanism could inform multi-site PopPK estimation or model evaluation without exchanging patient-level data. Equivalence to pooled NLME estimation would require a separate test.",
+          "priority": 60,
+          "topic": "Federated and privacy-preserving analysis"
+        }
+      ],
+      "doi": "10.1038/s41586-025-09079-8",
+      "evidence_basis": "abstract-only",
+      "id": "doi:10.1038/s41586-025-09079-8",
+      "issns": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issue_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/31",
+      "journal": "Nature",
+      "publication_date": "2025-06-11",
+      "publication_type": "Journal Article",
+      "reported_at": "2026-09-13 09:00 JST",
+      "selection_type": "archive",
+      "source_id": "MED:40500447",
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "The development of Ark + reveals that open models trained by accruing and reusing knowledge from heterogeneous expert annotations with a multitude of public (big or small) datasets can surpass the performance of proprietary models trained on large data.",
+        "prior_limitation": "However, existing chest radiographic deep learning models are limited in diagnostic scope, generalizability, adaptability, robustness and extensibility.",
+        "significance": "We hope that our findings will inspire more researchers to share code and datasets or federate privacy-preserving data to create open foundation models with diverse, global expertise and patient populations, thus accelerating open science and democratizing AI for medicine.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A fully open AI foundation model applied to chest radiography.",
+      "url": "https://doi.org/10.1038/s41586-025-09079-8"
+    },
     {
       "abstract": "Mitochondria are four-dimensional (4D: x, y, z, and time) organelles essential for cellular function. Characterizing their 4D phenotypic landscape across diverse cellular states requires both 4D imaging and analytical frameworks. We present MitoSpace, a self-supervised deep learning model trained without labels on terabytes of single-cell lattice light-sheet microscopy data of mitochondria under mechanistically distinct perturbations. MitoSpace learns latent representations that outperform predefined features in drug classification and capture interpretable variation in mitochondrial morphology and dynamics. Regression probes predict mitochondrial membrane potential from the learned representations (R2 = 0.91), establishing a quantitative mapping between form and function at the single-cell level. MitoSpace also generalizes zero-shot to unseen perturbations and human lung organoids. Dimensionality ablation reveals that representation quality improves monotonically from 2D to 3D to 4D, demonstrating the importance of volumetric and temporal information. The model, dataset, and interactive explorer are publicly available, providing a foundation for 4D phenotypic screening.",
       "authors": [
@@ -246,7 +288,7 @@
       "url": "https://doi.org/10.1016/j.cell.2026.07.052"
     }
   ],
-  "last_checked_at": "2026-09-13 08:46 JST",
+  "last_checked_at": "2026-09-13 09:00 JST",
   "schema_version": 1,
-  "status": "source unavailable"
+  "status": "selected"
 }

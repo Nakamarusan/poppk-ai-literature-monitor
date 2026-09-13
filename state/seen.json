@@ -50,6 +50,12 @@
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
     },
+    "doi:10.1038/s41586-025-09079-8": {
+      "doi": "10.1038/s41586-025-09079-8",
+      "notified_at": "2026-09-13T00:00:04.704147+00:00",
+      "selection_type": "flagship",
+      "title": "A fully open AI foundation model applied to chest radiography."
+    },
     "doi:10.1038/s41586-026-10916-7": {
       "doi": "10.1038/s41586-026-10916-7",
       "notified_at": "2026-09-09T23:48:50.279777+00:00",
@@ -137,6 +143,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:europe pmc:med:40500447": {
+      "doi": "10.1038/s41586-025-09079-8",
+      "notified_at": "2026-09-13T00:00:04.704147+00:00",
+      "selection_type": "flagship",
+      "title": "A fully open AI foundation model applied to chest radiography."
     },
     "source:europe pmc:med:42076151": {
       "doi": "10.3390/pharmaceutics18040501",
@@ -374,6 +386,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "title:f7735611e3ed3e0c49786845": {
+      "doi": "10.1038/s41586-025-09079-8",
+      "notified_at": "2026-09-13T00:00:04.704147+00:00",
+      "selection_type": "flagship",
+      "title": "A fully open AI foundation model applied to chest radiography."
     }
   },
   "source_attempt_dates": {
