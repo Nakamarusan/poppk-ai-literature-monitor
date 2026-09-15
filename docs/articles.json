@@ -1,14 +1,97 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-14 08:50 JST",
-  "article_count": 17,
+  "last_scan_at": "2026-09-15 09:10 JST",
+  "article_count": 18,
   "new_count": 5,
-  "historical_count": 12,
+  "historical_count": 13,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Dalbavancin is increasingly used off-label for prolonged therapy in gram-positive infections, but optimal repeat-dosing strategies remain undefined, and published population pharmacokinetic (popPK) models lack external validation in real-world cohorts. A popPK model was developed using routine therapeutic drug monitoring (TDM) data from 183 adults (406 concentrations) with gram-positive infections and externally validated in an independent cohort ( n = 30, 92 concentrations). Predictive performance was benchmarked against five published models and a model averaging (MA) approach under three scenarios: a priori prediction and Bayesian forecasting with one or two TDM measurements. Monte Carlo simulations assessed the probability of target attainment ( f AUC 24 /MIC ≥111.1) for repeat-dose regimens (1,500 mg D1/D8 and D1/D15) at MICs 0.125 and 0.250 mg/L. A two-compartment model with eGFR (clearance) and body weight (clearance and volumes) best described the data. In a priori external validation, it achieved the lowest rRMSE (49.8%) among published models. MA with two TDM measurements yielded optimal performance (rRMSE 26.9%), closely followed by our model (31.4%). Simulations showed that empirical regimens maintained target attainment of ≥90% for 3-7 weeks, heavily dependent on PD targets and patient characteristics. A third 1,500 mg dose, timed to target decline, restored prolonged coverage across all strata. This externally validated popPK model, complemented by MA, provides robust pharmacokinetic foundations for precision dosing in gram-positive infections requiring prolonged therapy. Based on these findings, we propose an investigational sequential precision dosing workflow integrating machine learning with Bayesian forecasting; prospective validation is required before clinical implementation.",
+      "authors": [
+        "Sayadi H",
+        "Gregoire M",
+        "Fromage Y",
+        "Labriffe M",
+        "Maizaud F",
+        "Monchaud C",
+        "Codde C",
+        "Boutoille D",
+        "Marquet P",
+        "Woillard J-B"
+      ],
+      "doi": "10.1128/aac.00665-26",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "workflow",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation",
+            "workflow"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        }
+      },
+      "id": "doi:10.1128/aac.00665-26",
+      "publication_date": "2026-06-22",
+      "reported_at": "2026-09-15 09:10 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 30,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Predictive performance was benchmarked against five published models and a model averaging (MA) approach under three scenarios: a priori prediction and Bayesian forecasting with one or two TDM measurements.",
+        "new_capability": "This externally validated popPK model, complemented by MA, provides robust pharmacokinetic foundations for precision dosing in gram-positive infections requiring prolonged therapy.",
+        "prior_limitation": "Dalbavancin is increasingly used off-label for prolonged therapy in gram-positive infections, but optimal repeat-dosing strategies remain undefined, and published population pharmacokinetic (popPK) models lack external validation in real-world cohorts.",
+        "significance": "Based on these findings, we propose an investigational sequential precision dosing workflow integrating machine learning with Bayesian forecasting; prospective validation is required before clinical implementation.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Population pharmacokinetics of dalbavancin: external validation, model averaging, and implications for precision dosing in prolonged therapy.",
+      "url": "https://europepmc.org/article/MED/42363831",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Variational autoencoders (VAEs) combined with neural ordinary differential equations provide a flexible framework for exploring neural latent-variable models in population pharmacokinetics. In this work, we investigate an empirical Bayes VAE formulation that integrates encoder-decoder architectures with covariate-dependent population priors, enabling correlated latent representations and probabilistic inference. We evaluate the proposed framework using controlled simulation studies and a small clinical benchmark dataset. The simulation experiments assess the ability to recover known population structures and covariate effects, while the clinical study evaluates subject-specific prediction and model diagnostics. In simulation studies with correlated individual parameters, the empirical Bayes VAE consistently captured population-level variability, whereas a fixed-prior VAE baseline exhibited systematic biases. In our experiments, extrapolation beyond the training dosing schedules showed more stable predictive behavior when using the proposed input-response normalization, relative to models trained without normalization, within a limited range. Diagnostic analyses indicated clear relationships between inferred latent variables and true parameters, and estimated observation noise was consistent with simulated values. In the clinical case study, cross-validation experiments suggested predictive performance comparable to previously reported neural ODE-based approaches. Overall, the results illustrate the feasibility of combining empirical Bayes inference with neural ODE-based decoders for population modeling. The proposed framework should be viewed as a methodological proof-of-concept, highlighting both the potential and the current limitations of variational neural approaches in pharmacometric applications.",
       "authors": [
