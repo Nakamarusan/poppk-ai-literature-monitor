@@ -1,12 +1,6 @@
 {
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-09-15T00:10:00.399871+00:00",
-      "message": "HTTP 429: Rate exceeded."
-    }
-  },
-  "last_selection_date_jst": "2026-09-15",
-  "last_success_utc": "2026-09-15T00:10:00.399871+00:00",
+  "last_selection_date_jst": "2026-09-16",
+  "last_success_utc": "2026-09-15T23:53:57.491735+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70280": {
@@ -73,6 +67,12 @@
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
       "selection_type": "historical",
       "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
+    "doi:10.1248/bpb.b26-00183": {
+      "doi": "10.1248/bpb.b26-00183",
+      "notified_at": "2026-09-15T23:53:57.491735+00:00",
+      "selection_type": "historical",
+      "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
     },
     "doi:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -162,6 +162,12 @@
       "selection_type": "historical",
       "title": "Population pharmacokinetics of dalbavancin: external validation, model averaging, and implications for precision dosing in prolonged therapy."
     },
+    "source:europe pmc:med:42419926": {
+      "doi": "10.1248/bpb.b26-00183",
+      "notified_at": "2026-09-15T23:53:57.491735+00:00",
+      "selection_type": "historical",
+      "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
+    },
     "source:europe pmc:med:42463031": {
       "doi": "10.1016/j.ejps.2026.107609",
       "notified_at": "2026-09-12T23:39:28.292017+00:00",
@@ -250,6 +256,12 @@
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
       "selection_type": "historical",
       "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
+    "title:23cb7aa8f15bf07288ac43cf": {
+      "doi": "10.1248/bpb.b26-00183",
+      "notified_at": "2026-09-15T23:53:57.491735+00:00",
+      "selection_type": "historical",
+      "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
     },
     "title:3bdf2e2be0fa86aca7bb81d4": {
       "doi": "10.1002/psp4.70313",
@@ -341,21 +353,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-15"
+    "arxiv": "2026-09-16"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-15T00:10:00.399871+00:00",
-      "message": "HTTP 429: Rate exceeded.",
-      "status": "error"
+      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
+      "records": 0,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-15T00:10:00.399871+00:00",
+      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-15T00:10:00.399871+00:00",
+      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
       "records": 877,
       "status": "ok"
     }

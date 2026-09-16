@@ -1,14 +1,88 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-15 09:10 JST",
-  "article_count": 18,
+  "last_scan_at": "2026-09-16 08:53 JST",
+  "article_count": 19,
   "new_count": 5,
-  "historical_count": 13,
+  "historical_count": 14,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Voriconazole (VRCZ) exhibits highly variable pharmacokinetics. Although CYP2C19 poor metabolizers are common in Japan, routine genetic testing is rarely performed in daily clinical practice. Consequently, existing population pharmacokinetic (Pop-PK) models that lack genetic data require external validation in Japanese clinical settings. This study aimed to identify the most accurate nongenetic Pop-PK model for this population and elucidate the factors influencing prediction errors. We retrospectively analyzed 174 adult inpatients who received VRCZ within the first 14 d of therapy. Eight Pop-PK models were evaluated using prediction error metrics and specific clinical criteria. For the best-performing model, normalized prediction distribution error (NPDE) analysis was conducted. Subsequently, a classification and regression tree (CART) analysis with leave-one-out cross-validation (LOOCV) was performed to identify factors associated with prediction accuracy. Model H, incorporating the albumin-bilirubin (ALBI) score, performed best (relative root mean square error 2.97, criteria 33.91%, median prediction error (MDPE) -29.06%). However, NPDE analysis (mean 0.774, variance 2.394) revealed residual systematic underprediction and substantial unmodeled variability. CART analysis identified C-reactive protein (CRP) as the primary determinant of accuracy. While the best model (age, platelet count, serum creatinine, and CRP) achieved a training accuracy of 69.5%, internal validation via LOOCV yielded an accuracy of 56.9% and a multi-class area under the receiver operating characteristic curve of 0.568. While the ALBI-score-based Model H is the most accurate, predictions remain limited in high-inflammation states due to inherent stochastic variability. Stratifying patients by baseline CRP level is crucial for optimizing the initial VRCZ dosing.",
+      "authors": [
+        "Uemura Y",
+        "Komatsu T",
+        "Suzuki A",
+        "Akamada Y",
+        "Otori K"
+      ],
+      "doi": "10.1248/bpb.b26-00183",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "pop pk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "population pharmacokinetic",
+            "pop pk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        }
+      },
+      "id": "doi:10.1248/bpb.b26-00183",
+      "publication_date": "2026-01-01",
+      "reported_at": "2026-09-16 08:53 JST",
+      "score": {
+        "components": {
+          "ai": 20,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to identify the most accurate nongenetic Pop-PK model for this population and elucidate the factors influencing prediction errors.",
+        "new_capability": "While the best model (age, platelet count, serum creatinine, and CRP) achieved a training accuracy of 69.5%, internal validation via LOOCV yielded an accuracy of 56.9% and a multi-class area under the receiver operating characteristic curve of 0.568.",
+        "prior_limitation": "While the ALBI-score-based Model H is the most accurate, predictions remain limited in high-inflammation states due to inherent stochastic variability.",
+        "significance": "Stratifying patients by baseline CRP level is crucial for optimizing the initial VRCZ dosing.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach.",
+      "url": "https://europepmc.org/article/MED/42419926",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Dalbavancin is increasingly used off-label for prolonged therapy in gram-positive infections, but optimal repeat-dosing strategies remain undefined, and published population pharmacokinetic (popPK) models lack external validation in real-world cohorts. A popPK model was developed using routine therapeutic drug monitoring (TDM) data from 183 adults (406 concentrations) with gram-positive infections and externally validated in an independent cohort ( n = 30, 92 concentrations). Predictive performance was benchmarked against five published models and a model averaging (MA) approach under three scenarios: a priori prediction and Bayesian forecasting with one or two TDM measurements. Monte Carlo simulations assessed the probability of target attainment ( f AUC 24 /MIC ≥111.1) for repeat-dose regimens (1,500 mg D1/D8 and D1/D15) at MICs 0.125 and 0.250 mg/L. A two-compartment model with eGFR (clearance) and body weight (clearance and volumes) best described the data. In a priori external validation, it achieved the lowest rRMSE (49.8%) among published models. MA with two TDM measurements yielded optimal performance (rRMSE 26.9%), closely followed by our model (31.4%). Simulations showed that empirical regimens maintained target attainment of ≥90% for 3-7 weeks, heavily dependent on PD targets and patient characteristics. A third 1,500 mg dose, timed to target decline, restored prolonged coverage across all strata. This externally validated popPK model, complemented by MA, provides robust pharmacokinetic foundations for precision dosing in gram-positive infections requiring prolonged therapy. Based on these findings, we propose an investigational sequential precision dosing workflow integrating machine learning with Bayesian forecasting; prospective validation is required before clinical implementation.",
       "authors": [
