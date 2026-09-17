@@ -1,6 +1,12 @@
 {
-  "last_selection_date_jst": "2026-09-16",
-  "last_success_utc": "2026-09-15T23:53:57.491735+00:00",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-09-17T00:00:55.144300+00:00",
+      "message": "HTTP 406: Not Acceptable"
+    }
+  },
+  "last_selection_date_jst": "2026-09-17",
+  "last_success_utc": "2026-09-17T00:00:55.144300+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70280": {
@@ -92,6 +98,12 @@
       "selection_type": "historical",
       "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
     },
+    "doi:10.3389/fphar.2026.1859709": {
+      "doi": "10.3389/fphar.2026.1859709",
+      "notified_at": "2026-09-17T00:00:55.144300+00:00",
+      "selection_type": "historical",
+      "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
+    },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -167,6 +179,12 @@
       "notified_at": "2026-09-15T23:53:57.491735+00:00",
       "selection_type": "historical",
       "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
+    },
+    "source:europe pmc:med:42434134": {
+      "doi": "10.3389/fphar.2026.1859709",
+      "notified_at": "2026-09-17T00:00:55.144300+00:00",
+      "selection_type": "historical",
+      "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
     },
     "source:europe pmc:med:42463031": {
       "doi": "10.1016/j.ejps.2026.107609",
@@ -256,6 +274,12 @@
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
       "selection_type": "historical",
       "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
+    "title:17c3b60bda1d0ed2f95640f6": {
+      "doi": "10.3389/fphar.2026.1859709",
+      "notified_at": "2026-09-17T00:00:55.144300+00:00",
+      "selection_type": "historical",
+      "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
     },
     "title:23cb7aa8f15bf07288ac43cf": {
       "doi": "10.1248/bpb.b26-00183",
@@ -353,21 +377,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-16"
+    "arxiv": "2026-09-17"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
+      "message": "HTTP 406: Not Acceptable",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
+      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-15T23:53:57.491735+00:00",
+      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
       "records": 877,
       "status": "ok"
     }
