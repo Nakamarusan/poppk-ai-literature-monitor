@@ -1,14 +1,87 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-17 09:00 JST",
-  "article_count": 20,
+  "last_scan_at": "2026-09-18 08:51 JST",
+  "article_count": 21,
   "new_count": 5,
-  "historical_count": 15,
+  "historical_count": 16,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Large language models can execute pharmacometric workflows, but they make consequential domain-specific errors when task instructions lack adequate details. This tutorial teaches pharmacometricians how to define self-contained tasks that embed domain-specific rules, verification criteria, and worked examples into each step of a pharmacometric workflow. These individual tasks are then organized into a structured task library where each task runs in a fresh LLM instance (with clean context), with information passed between tasks through shared workspace files. The tutorial covers context engineering, controlling what information reaches the LLM at each decision point, along with verification layers and methods to iteratively refine the task library. We demonstrate the approach on a synthetic population PK/PD scenario and provide the task library and implementation guide in the Supplementary Material.",
+      "authors": [
+        "Pritchard-Bell A",
+        "Lin CW",
+        "Holmes W",
+        "Doshi S"
+      ],
+      "doi": "10.1002/psp4.70317",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometric",
+            "population pk pd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "pharmacometric",
+            "population pk pd"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70317",
+      "publication_date": "2026-08-01",
+      "reported_at": "2026-09-18 08:51 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 30,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We demonstrate the approach on a synthetic population PK/PD scenario and provide the task library and implementation guide in the Supplementary Material.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Large language models can execute pharmacometric workflows, but they make consequential domain-specific errors when task instructions lack adequate details.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial.",
+      "url": "https://europepmc.org/article/MED/42557662",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Objectives To explore the application scenarios of maximum a posteriori Bayesian estimation (MAP-BE) and eXtreme Gradient Boosting (XGBoost) in the prediction of polymyxin B (PMB) exposure. Methods Two sets of simulations based on the population pharmacokinetic (PopPK) model developed for PMB were used for the development and testing of Bayesian and XGBoost models in four scenarios. The predictive performances of MAP-BE and XGBoost for the area under the concentration-time curve (AUC) over 12-h intervals at steady state were evaluated using root mean square error (RMSE), mean absolute error (MAE), and coefficient of determination ( R 2 ). Results Both MAP-BE and XGBoost accurately estimate the AUC 0-12h under a single sampling strategy using a dense point model (median [range] (mg·h/L): 3.32 [0.78-7.39] vs. 3.30 [0.95-7.04] for RMSE, 2.41 [0.54-5.53] vs. 2.61 [0.72-5.46] for MAE for MAP-BE and XGBoost, respectively). A single 6-h sampling strategy achieved the best prediction with negligible bias (RMSE R 2 > 0.99). XGBoost was more accurate and efficient than MAP-BE for fitting single-trough concentrations. The performance of the 12-h XGBoost model allowed for temporal fluctuations in the 6-h range. Conclusion This study provides evidence for the application scenario of MAP-BE and XGBoost for predicting the AUC of PMB, which assists in selecting better approaches when predicting drug exposure with available therapeutic drug monitoring information to guide the adjustment of dosing regimens in the clinic.",
       "authors": [

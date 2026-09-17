@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-17T00:00:55.144300+00:00",
+      "at_utc": "2026-09-17T23:51:02.191246+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-17",
-  "last_success_utc": "2026-09-17T00:00:55.144300+00:00",
+  "last_selection_date_jst": "2026-09-18",
+  "last_success_utc": "2026-09-17T23:51:02.191246+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70280": {
@@ -32,6 +32,12 @@
       "notified_at": "2026-09-05T23:29:24.639976+00:00",
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
+    },
+    "doi:10.1002/psp4.70317": {
+      "doi": "10.1002/psp4.70317",
+      "notified_at": "2026-09-17T23:51:02.191246+00:00",
+      "selection_type": "historical",
+      "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
     },
     "doi:10.1016/j.ejps.2026.107609": {
       "doi": "10.1016/j.ejps.2026.107609",
@@ -204,6 +210,12 @@
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
     },
+    "source:europe pmc:med:42557662": {
+      "doi": "10.1002/psp4.70317",
+      "notified_at": "2026-09-17T23:51:02.191246+00:00",
+      "selection_type": "historical",
+      "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
+    },
     "source:europe pmc:med:42576151": {
       "doi": "10.1111/cts.70694",
       "notified_at": "2026-09-07T23:53:47.086499+00:00",
@@ -280,6 +292,12 @@
       "notified_at": "2026-09-17T00:00:55.144300+00:00",
       "selection_type": "historical",
       "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
+    },
+    "title:1a43827934572562626d6829": {
+      "doi": "10.1002/psp4.70317",
+      "notified_at": "2026-09-17T23:51:02.191246+00:00",
+      "selection_type": "historical",
+      "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
     },
     "title:23cb7aa8f15bf07288ac43cf": {
       "doi": "10.1248/bpb.b26-00183",
@@ -377,21 +395,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-17"
+    "arxiv": "2026-09-18"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
+      "last_attempt_utc": "2026-09-17T23:51:02.191246+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
+      "last_attempt_utc": "2026-09-17T23:51:02.191246+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-17T00:00:55.144300+00:00",
+      "last_attempt_utc": "2026-09-17T23:51:02.191246+00:00",
       "records": 877,
       "status": "ok"
     }
