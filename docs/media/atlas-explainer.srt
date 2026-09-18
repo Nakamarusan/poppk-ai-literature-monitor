@@ -1,63 +1,63 @@
 1
-00:00:00,450 --> 00:00:04,152
+00:00:00,450 --> 00:00:04,151
 CAPSULE: Meet the PopPK and AI Methodology Atlas.
 
 2
-00:00:04,152 --> 00:00:07,324
+00:00:04,151 --> 00:00:07,324
 CAPSULE: A focused reading queue for pharmacometrics
 
 3
-00:00:07,324 --> 00:00:08,911
+00:00:07,324 --> 00:00:08,910
 CAPSULE: and artificial intelligence.
 
 4
-00:00:09,261 --> 00:00:11,634
+00:00:09,260 --> 00:00:11,633
 TABLET: It searches daily. No new match?
 
 5
-00:00:11,634 --> 00:00:14,402
+00:00:11,633 --> 00:00:14,401
 TABLET: Discover an unreported paper from 2020 onward.
 
 6
-00:00:14,752 --> 00:00:18,386
+00:00:14,751 --> 00:00:18,386
 CAPSULE: Each brief covers the problem, contribution,
 
 7
-00:00:18,386 --> 00:00:20,809
+00:00:18,386 --> 00:00:20,810
 CAPSULE: new possibilities, and significance.
 
 8
-00:00:20,809 --> 00:00:23,232
+00:00:20,810 --> 00:00:23,233
 CAPSULE: Interpretations use abstracts only.
 
 9
-00:00:23,582 --> 00:00:25,444
+00:00:23,583 --> 00:00:25,445
 TABLET: Search, filter, and compare.
 
 10
-00:00:25,444 --> 00:00:28,702
+00:00:25,445 --> 00:00:28,703
 TABLET: Relevance measures topic fit, not scientific quality.
 
 11
-00:00:29,052 --> 00:00:32,381
+00:00:29,053 --> 00:00:32,386
 CAPSULE: Every selected paper is saved in the library.
 
 12
-00:00:32,381 --> 00:00:35,293
+00:00:32,386 --> 00:00:35,302
 CAPSULE: GitHub notifications, daily reports, and the website
 
 13
-00:00:35,293 --> 00:00:38,206
+00:00:35,302 --> 00:00:38,218
 CAPSULE: keep your reading queue up to date.
 
 14
-00:00:38,556 --> 00:00:39,635
+00:00:38,568 --> 00:00:39,647
 TABLET: Read. Compare. Verify.
 
 15
-00:00:39,635 --> 00:00:42,152
+00:00:39,647 --> 00:00:42,164
 TABLET: Open the Atlas, find your next paper,
 
 16
-00:00:42,152 --> 00:00:43,591
+00:00:42,164 --> 00:00:43,602
 TABLET: and explore the method.
