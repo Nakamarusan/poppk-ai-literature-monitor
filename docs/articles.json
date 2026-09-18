@@ -1,14 +1,84 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-18 08:51 JST",
-  "article_count": 21,
+  "last_scan_at": "2026-09-19 08:48 JST",
+  "article_count": 22,
   "new_count": 5,
-  "historical_count": 16,
+  "historical_count": 17,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "To evaluate diffusion model-based artificial intelligence approaches for generating virtual populations with physiological determinants of drug dosing (PDODD) and pharmacokinetic (PK) profiles. A denoising diffusion probabilistic model (DDPM) was applied to a 31-variable dataset of PDODD covariates (18 continuous, 13 binary) from the National Health and Nutrition Examination Survey and compared to a tabular variational autoencoder (TVAE). For nivolumab PK data (12,000 patients, 13 time points, 5 covariates), sequence-based diffusion model (SDM) and a time-aware diffusion model (TDM) with temporal self-attention were evaluated. The predictive performance of the TDM was evaluated by imputing masked time points. All models were trained and tested on 80%:20% partitions of the data using univariate, bivariate, and multivariate distributional similarity metrics. The diffusion model satisfactorily approximated the univariate distributions of continuous PDODD biomarkers (mean Kolmogorov-Smirnov D-statistic, KSD = 0.014), disease status frequencies (mean absolute error, MAE = 0.31%), and preserved bivariate correlations (MAE = 0.033). DDPM outperformed TVAE for categorical variables (0.31% vs. 1.07% MAE) and correlation (0.033 vs. 0.091 MAE). For nivolumab PK, SDM has KSD of 0.047 and a relative error of 1.36%. TDM accurately imputed missing PK timepoints (KSD = 0.014), reconstructing masked Day 1, Peak concentration (Cmax) Dose-9, and Terminal phase concentrations with MAE of 0.43%, 0.25%, and 0.76%, and correlations ≥ 0.999. Diffusion models demonstrated strong performance in generating cross-sectional PK covariate data and longitudinal PK profiles, capturing complex distributional and temporal dependencies. Diffusion-based approaches provide a flexible and robust framework for virtual simulations in pharmacometrics.",
+      "authors": [
+        "Gadgil PK",
+        "Poojari SM",
+        "Ramanathan M"
+      ],
+      "doi": "10.1007/s10928-026-10054-7",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "pharmacometric",
+            "pharmacometrics"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": [
+            "pharmacometric"
+          ]
+        }
+      },
+      "id": "doi:10.1007/s10928-026-10054-7",
+      "publication_date": "2026-07-29",
+      "reported_at": "2026-09-19 08:48 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 30,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Diffusion-based approaches provide a flexible and robust framework for virtual simulations in pharmacometrics.",
+        "new_capability": "Diffusion models demonstrated strong performance in generating cross-sectional PK covariate data and longitudinal PK profiles, capturing complex distributional and temporal dependencies.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "To evaluate diffusion model-based artificial intelligence approaches for generating virtual populations with physiological determinants of drug dosing (PDODD) and pharmacokinetic (PK) profiles.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Diffusion models for virtual populations and pharmacometric simulations.",
+      "url": "https://europepmc.org/article/MED/42527765",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Large language models can execute pharmacometric workflows, but they make consequential domain-specific errors when task instructions lack adequate details. This tutorial teaches pharmacometricians how to define self-contained tasks that embed domain-specific rules, verification criteria, and worked examples into each step of a pharmacometric workflow. These individual tasks are then organized into a structured task library where each task runs in a fresh LLM instance (with clean context), with information passed between tasks through shared workspace files. The tutorial covers context engineering, controlling what information reaches the LLM at each decision point, along with verification layers and methods to iteratively refine the task library. We demonstrate the approach on a synthetic population PK/PD scenario and provide the task library and implementation guide in the Supplementary Material.",
       "authors": [
