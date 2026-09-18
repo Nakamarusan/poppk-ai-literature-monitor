@@ -1,0 +1,80 @@
+name: Verify retained site
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-site-cleanup.yml']
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate retained functionality
+        run: |
+          python -m compileall -q src tests explainer
+          node --check docs/assets/app.js
+          python -m unittest discover -s tests -v
+      - name: Verify the public site matches the cleaned files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+          base = 'https://nakamarusan.github.io/poppk-ai-literature-monitor/'
+          files = ('index.html', 'method.html', 'explainer.html', 'articles.json',
+                   'media/transcript.md', 'media/atlas-explainer.mp4')
+          results = {}
+          for name in files:
+              expected = hashlib.sha256((Path('docs') / name).read_bytes()).hexdigest()
+              for attempt in range(6):
+                  try:
+                      url = base + name + '?verification=' + os.environ['GITHUB_RUN_ID']
+                      request = Request(url, headers={'Cache-Control': 'no-cache'})
+                      with urlopen(request, timeout=30) as response:
+                          actual = hashlib.sha256(response.read()).hexdigest()
+                      if actual == expected:
+                          results[name] = 'matches'
+                          break
+                  except Exception:
+                      pass
+                  time.sleep(5)
+              else:
+                  results[name] = 'not confirmed'
+          # Remove the completed preparation run only; do not delete other runs.
+          url = 'https://api.github.com/repos/Nakamarusan/poppk-ai-literature-monitor/actions/runs/35292377444'
+          request = Request(url, method='DELETE', headers={
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'Accept': 'application/vnd.github+json',
+          })
+          try:
+              with urlopen(request, timeout=30) as response:
+                  deleted = response.status == 204
+          except HTTPError as error:
+              deleted = error.code == 404
+          report = {'published_files': results, 'maintenance_run_removed': deleted,
+                    'primary_article_count': json.loads(Path('docs/articles.json').read_text())['article_count']}
+          Path('verification.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps(report, indent=2))
+          assert all(value == 'matches' for value in results.values()), 'Some public files could not be confirmed'
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: retained-site-verification
+          path: verification.json
+          retention-days: 7
+          if-no-files-found: warn
