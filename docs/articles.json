@@ -1,14 +1,93 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-19 08:48 JST",
-  "article_count": 22,
+  "last_scan_at": "2026-09-20 08:50 JST",
+  "article_count": 23,
   "new_count": 5,
-  "historical_count": 17,
+  "historical_count": 18,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "A priori model-informed precision dosing (MIPD) recommends an appropriate first dose based solely on the patient's covariates enabling faster target attainment without required concentration measurements. Population pharmacokinetic (PopPK) model ensembling and machine learning (ML) approaches were developed and evaluated to predict a first dose of amoxicillin in intensive care. Following a bibliographic review, a virtual patient population was simulated based on cohorts from four published adult amoxicillin PopPK models. Steady-state trough concentrations were simulated using cohort-specific dosing regimens. As reference methods, weighed model ensembling (WME) and classification tree (CT)-informed ensembling were implemented. Two novel ensembling strategies were developed: regression tree (RT)-informed ensembling, using RT to predict the log individual prediction/observation ratio, and factor analysis of mixed data (FAMD), assigning model weights based on patient similarity to original model cohorts. In parallel, four ML algorithms (support vector machine, k-nearest neighbors, random forest, and XGBoost) were trained to predict the dose achieving target concentrations based on covariates and dosing scheme. All approaches were compared with single-model PopPK dosing, standard dosing, a nomogram, and externally validated using clinical data. Most MIPD methods outperformed standard dosing. On simulated data, ensembling (24%-40% correct predictions) and ML (36%-39%) exceeded single-model approaches (17%-32%). ML-based ensembling eliminates the need for model selection and increases target attainment in both simulated and clinical data. However, the generalizability of such results remains hampered by the lack of high-quality clinical datasets to support model training.",
+      "authors": [
+        "Leiwolf M",
+        "Gregoire N",
+        "Magréault S",
+        "Franck B",
+        "Krekounian O",
+        "Woillard JB",
+        "Aranzana-Climent V"
+      ],
+      "doi": "10.1002/psp4.70296",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70296",
+      "publication_date": "2026-07-01",
+      "reported_at": "2026-09-20 08:50 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Most MIPD methods outperformed standard dosing.",
+        "prior_limitation": "However, the generalizability of such results remains hampered by the lack of high-quality clinical datasets to support model training.",
+        "significance": "A priori model-informed precision dosing (MIPD) recommends an appropriate first dose based solely on the patient's covariates enabling faster target attainment without required concentration measurements.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Model Ensembling and Machine Learning Approaches to Predict the First Dose of Amoxicillin in Intensive Care.",
+      "url": "https://europepmc.org/article/MED/42446268",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "To evaluate diffusion model-based artificial intelligence approaches for generating virtual populations with physiological determinants of drug dosing (PDODD) and pharmacokinetic (PK) profiles. A denoising diffusion probabilistic model (DDPM) was applied to a 31-variable dataset of PDODD covariates (18 continuous, 13 binary) from the National Health and Nutrition Examination Survey and compared to a tabular variational autoencoder (TVAE). For nivolumab PK data (12,000 patients, 13 time points, 5 covariates), sequence-based diffusion model (SDM) and a time-aware diffusion model (TDM) with temporal self-attention were evaluated. The predictive performance of the TDM was evaluated by imputing masked time points. All models were trained and tested on 80%:20% partitions of the data using univariate, bivariate, and multivariate distributional similarity metrics. The diffusion model satisfactorily approximated the univariate distributions of continuous PDODD biomarkers (mean Kolmogorov-Smirnov D-statistic, KSD = 0.014), disease status frequencies (mean absolute error, MAE = 0.31%), and preserved bivariate correlations (MAE = 0.033). DDPM outperformed TVAE for categorical variables (0.31% vs. 1.07% MAE) and correlation (0.033 vs. 0.091 MAE). For nivolumab PK, SDM has KSD of 0.047 and a relative error of 1.36%. TDM accurately imputed missing PK timepoints (KSD = 0.014), reconstructing masked Day 1, Peak concentration (Cmax) Dose-9, and Terminal phase concentrations with MAE of 0.43%, 0.25%, and 0.76%, and correlations ≥ 0.999. Diffusion models demonstrated strong performance in generating cross-sectional PK covariate data and longitudinal PK profiles, capturing complex distributional and temporal dependencies. Diffusion-based approaches provide a flexible and robust framework for virtual simulations in pharmacometrics.",
       "authors": [

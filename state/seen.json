@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-18T23:48:45.150035+00:00",
+      "at_utc": "2026-09-19T23:50:01.090073+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-19",
-  "last_success_utc": "2026-09-18T23:48:45.150035+00:00",
+  "last_selection_date_jst": "2026-09-20",
+  "last_success_utc": "2026-09-19T23:50:01.090073+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70280": {
@@ -20,6 +20,12 @@
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
+    },
+    "doi:10.1002/psp4.70296": {
+      "doi": "10.1002/psp4.70296",
+      "notified_at": "2026-09-19T23:50:01.090073+00:00",
+      "selection_type": "historical",
+      "title": "Model Ensembling and Machine Learning Approaches to Predict the First Dose of Amoxicillin in Intensive Care."
     },
     "doi:10.1002/psp4.70306": {
       "doi": "10.1002/psp4.70306",
@@ -198,6 +204,12 @@
       "selection_type": "historical",
       "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
     },
+    "source:europe pmc:med:42446268": {
+      "doi": "10.1002/psp4.70296",
+      "notified_at": "2026-09-19T23:50:01.090073+00:00",
+      "selection_type": "historical",
+      "title": "Model Ensembling and Machine Learning Approaches to Predict the First Dose of Amoxicillin in Intensive Care."
+    },
     "source:europe pmc:med:42463031": {
       "doi": "10.1016/j.ejps.2026.107609",
       "notified_at": "2026-09-12T23:39:28.292017+00:00",
@@ -298,6 +310,12 @@
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
       "selection_type": "historical",
       "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
+    "title:12c3224334e98e9585b3b9b0": {
+      "doi": "10.1002/psp4.70296",
+      "notified_at": "2026-09-19T23:50:01.090073+00:00",
+      "selection_type": "historical",
+      "title": "Model Ensembling and Machine Learning Approaches to Predict the First Dose of Amoxicillin in Intensive Care."
     },
     "title:17c3b60bda1d0ed2f95640f6": {
       "doi": "10.3389/fphar.2026.1859709",
@@ -413,21 +431,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-19"
+    "arxiv": "2026-09-20"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-18T23:48:45.150035+00:00",
+      "last_attempt_utc": "2026-09-19T23:50:01.090073+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-18T23:48:45.150035+00:00",
+      "last_attempt_utc": "2026-09-19T23:50:01.090073+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-18T23:48:45.150035+00:00",
+      "last_attempt_utc": "2026-09-19T23:50:01.090073+00:00",
       "records": 877,
       "status": "ok"
     }
