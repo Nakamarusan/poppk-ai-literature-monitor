@@ -1,6 +1,89 @@
 {
   "articles": [
     {
+      "abstract": "Objectives To develop and validate a machine-learning/population-pharmacokinetic (ML-PPK) hybrid model that predicts individual vancomycin clearance (CL) and volume of distribution (V d ) before the first dose, thereby informing initial dosing in critically ill children. Patients and methods We retrospectively analysed children from two tertiary centers in China (2013-2023). A previously published one-compartment PPK model was re-estimated with the pooled dataset and used as a Bayesian prior to derive individual CL and V d as training targets. Ten machine-learning and deep-learning algorithms were trained, and an XGBoost-based sequential forward-selection procedure was applied to identify a minimal predictor set. Model performance was evaluated on a held-out test set and an external cohort. Results Data from 821 children and 1,767 vancomycin concentrations were included. 29 candidate variables were screened, and six high-impact predictors - body weight, cardiothoracic surgery, estimated glomerular filtration rate, sex, ICU admission, and post-menstrual-age class - maximized performance. CatBoost outperformed the other evaluated algorithms and, under this study design, more closely approximated PPK-Bayesian posterior PK estimates than the original parametric PPK covariate model, yielding for CL: R 2 = 0.89, and 81.8% of predictions within ±30%; and for V d : R 2 = 0.95, with 92.1% within ±30%. Performance remained robust in both the test set and the external validation cohort, with external validation R 2 values of 0.85 for CL and 0.95 for V d . SHAP analysis highlighted body weight, renal function, and cardiothoracic surgery status as the main determinants of CL, consistent with covariate effects in the PPK model. Conclusion An interpretable CatBoost-based ML-PPK hybrid can estimate CL and V d pre-dose using routinely available data, enabling patient-specific initial vancomycin regimens and reducing early under- or overexposure in pediatric critical care.",
+      "authors": [
+        "Chen J",
+        "Dai L",
+        "Xu H",
+        "Yao Y",
+        "Huang X",
+        "Ma J",
+        "Liu X",
+        "Yao H",
+        "Li J",
+        "Wu D",
+        "Sun J",
+        "Yu Z",
+        "Li Y",
+        "Yang H",
+        "Bu S"
+      ],
+      "doi": "10.3389/fphar.2026.1839423",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "deep learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "deep learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.3389/fphar.2026.1839423",
+      "publication_date": "2026-05-26",
+      "reported_at": "2026-09-21 08:47 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "CatBoost outperformed the other evaluated algorithms and, under this study design, more closely approximated PPK-Bayesian posterior PK estimates than the original parametric PPK covariate model, yielding for CL: R 2 = 0.89, and 81.8% of predictions within ±30%; and for V d : R 2 = 0.95, with 92.1% within ±30%.",
+        "new_capability": "Conclusion An interpretable CatBoost-based ML-PPK hybrid can estimate CL and V d pre-dose using routinely available data, enabling patient-specific initial vancomycin regimens and reducing early under- or overexposure in pediatric critical care.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Objectives To develop and validate a machine-learning/population-pharmacokinetic (ML-PPK) hybrid model that predicts individual vancomycin clearance (CL) and volume of distribution (V d ) before the first dose, thereby informing initial dosing in critically ill children.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine-learning prediction of pre-dose pharmacokinetics optimizes initial vancomycin dosing in critically ill children.",
+      "url": "https://europepmc.org/article/MED/42272833",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "A priori model-informed precision dosing (MIPD) recommends an appropriate first dose based solely on the patient's covariates enabling faster target attainment without required concentration measurements. Population pharmacokinetic (PopPK) model ensembling and machine learning (ML) approaches were developed and evaluated to predict a first dose of amoxicillin in intensive care. Following a bibliographic review, a virtual patient population was simulated based on cohorts from four published adult amoxicillin PopPK models. Steady-state trough concentrations were simulated using cohort-specific dosing regimens. As reference methods, weighed model ensembling (WME) and classification tree (CT)-informed ensembling were implemented. Two novel ensembling strategies were developed: regression tree (RT)-informed ensembling, using RT to predict the log individual prediction/observation ratio, and factor analysis of mixed data (FAMD), assigning model weights based on patient similarity to original model cohorts. In parallel, four ML algorithms (support vector machine, k-nearest neighbors, random forest, and XGBoost) were trained to predict the dose achieving target concentrations based on covariates and dosing scheme. All approaches were compared with single-model PopPK dosing, standard dosing, a nomogram, and externally validated using clinical data. Most MIPD methods outperformed standard dosing. On simulated data, ensembling (24%-40% correct predictions) and ML (36%-39%) exceeded single-model approaches (17%-32%). ML-based ensembling eliminates the need for model selection and increases target attainment in both simulated and clinical data. However, the generalizability of such results remains hampered by the lack of high-quality clinical datasets to support model training.",
       "authors": [
         "Leiwolf M",
@@ -1831,6 +1914,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-20 08:50 JST",
+  "last_scan_at": "2026-09-21 08:47 JST",
   "schema_version": 2
 }
