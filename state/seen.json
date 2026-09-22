@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-20T23:47:04.387197+00:00",
+      "at_utc": "2026-09-22T00:30:38.255968+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
   "last_selection_date_jst": "2026-09-21",
-  "last_success_utc": "2026-09-20T23:47:04.387197+00:00",
+  "last_success_utc": "2026-09-22T00:30:38.255968+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/psp4.70280": {
@@ -449,22 +449,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-21"
+    "arxiv": "2026-09-22"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-20T23:47:04.387197+00:00",
+      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-20T23:47:04.387197+00:00",
+      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-20T23:47:04.387197+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
+      "records": 0,
       "status": "ok"
     }
   }
