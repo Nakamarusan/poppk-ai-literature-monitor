@@ -1,14 +1,20 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-22T00:30:38.255968+00:00",
+      "at_utc": "2026-09-22T23:57:21.885737+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-21",
-  "last_success_utc": "2026-09-22T00:30:38.255968+00:00",
+  "last_selection_date_jst": "2026-09-23",
+  "last_success_utc": "2026-09-22T23:57:21.885737+00:00",
   "schema_version": 1,
   "seen": {
+    "doi:10.1002/pds.70442": {
+      "doi": "10.1002/pds.70442",
+      "notified_at": "2026-09-22T23:57:21.885737+00:00",
+      "selection_type": "historical",
+      "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation."
+    },
     "doi:10.1002/psp4.70280": {
       "doi": "10.1002/psp4.70280",
       "notified_at": "2026-09-13T23:50:54.201620+00:00",
@@ -228,6 +234,12 @@
       "selection_type": "historical",
       "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
+    "source:europe pmc:med:42494189": {
+      "doi": "10.1002/pds.70442",
+      "notified_at": "2026-09-22T23:57:21.885737+00:00",
+      "selection_type": "historical",
+      "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation."
+    },
     "source:europe pmc:med:42527765": {
       "doi": "10.1007/s10928-026-10054-7",
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
@@ -424,6 +436,12 @@
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
     },
+    "title:e169ef724f21f6d12529f02d": {
+      "doi": "10.1002/pds.70442",
+      "notified_at": "2026-09-22T23:57:21.885737+00:00",
+      "selection_type": "historical",
+      "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation."
+    },
     "title:e4203f2842db62824cc1df92": {
       "doi": "10.21203/rs.3.rs-10620781/v1",
       "notified_at": "2026-09-11T23:48:19.363976+00:00",
@@ -449,22 +467,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-22"
+    "arxiv": "2026-09-23"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
+      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
+      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-22T00:30:38.255968+00:00",
-      "records": 0,
+      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
+      "records": 877,
       "status": "ok"
     }
   }

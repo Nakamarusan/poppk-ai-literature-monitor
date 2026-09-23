@@ -1,14 +1,86 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-22 09:30 JST",
-  "article_count": 24,
+  "last_scan_at": "2026-09-23 08:57 JST",
+  "article_count": 25,
   "new_count": 5,
-  "historical_count": 19,
+  "historical_count": 20,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Objectives The pharmaco-epidemiological research program in kidney transplantation (PERP-KT) aims to evaluate, for the principal maintenance immunosuppressive drugs (MISDs): the influence of model-informed precision dosing on graft and patient survival; long-term exposure-effects relationships; and the benefit-harm balance of their combinations and time sequences in patient groups or clinical settings not adequately evaluated in comparative randomized clinical trials. It also aims to develop a hybrid, dynamic, deep learning model capable of predicting the rate of renal graft function decline, thereby providing a platform for individualized prediction of the benefits and risks associated with MISDs. Patients and methods After obtaining all regulatory andd ethical approvals, de-identified extracts of three national databases were linked to create the nationwide PERP-KT dataset, which is hosted within the highly secure environment of the French Health Data Hub. Results CRISTAL (the exhaustive registry of the French Agence de la Biomédecine) comprises data from 49 886 kidney donors and the corresponding 47 842 transplant recipients between 2005 and 2020. Following iterative deterministic matching and extensive quality control procedures, CRISTAL data were successfully linked to: the French national Health Data System (SNDS), which records reimbursed healthcare utilization, for 30 782 kidney transplant recipients; and to ISBA, a web-based platform for Bayesian dose adjustment of MISDs that contains pharmacological data, for 17 700 kidney grafts and 17 576 recipients. Perspectives More than 20 pharmaco-epidemiological studies will leverage the database's extensive follow-up, large population size and richness of clinical, healtcare-utilization, and pharmacological data.",
+      "authors": [
+        "Marquet P",
+        "Humeau A",
+        "Crépin S",
+        "Benoist C",
+        "Couderc S",
+        "Monchaud C",
+        "Labriffe M",
+        "Saint-Marcoux F"
+      ],
+      "doi": "10.1002/pds.70442",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [
+            "platform"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [
+            "platform"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/pds.70442",
+      "publication_date": "2026-08-01",
+      "reported_at": "2026-09-23 08:57 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Objectives The pharmaco-epidemiological research program in kidney transplantation (PERP-KT) aims to evaluate, for the principal maintenance immunosuppressive drugs (MISDs): the influence of model-informed precision dosing on graft and patient survival; long-term exposure-effects relationships; and the benefit-harm ba…",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation.",
+      "url": "https://europepmc.org/article/MED/42494189",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Objectives To develop and validate a machine-learning/population-pharmacokinetic (ML-PPK) hybrid model that predicts individual vancomycin clearance (CL) and volume of distribution (V d ) before the first dose, thereby informing initial dosing in critically ill children. Patients and methods We retrospectively analysed children from two tertiary centers in China (2013-2023). A previously published one-compartment PPK model was re-estimated with the pooled dataset and used as a Bayesian prior to derive individual CL and V d as training targets. Ten machine-learning and deep-learning algorithms were trained, and an XGBoost-based sequential forward-selection procedure was applied to identify a minimal predictor set. Model performance was evaluated on a held-out test set and an external cohort. Results Data from 821 children and 1,767 vancomycin concentrations were included. 29 candidate variables were screened, and six high-impact predictors - body weight, cardiothoracic surgery, estimated glomerular filtration rate, sex, ICU admission, and post-menstrual-age class - maximized performance. CatBoost outperformed the other evaluated algorithms and, under this study design, more closely approximated PPK-Bayesian posterior PK estimates than the original parametric PPK covariate model, yielding for CL: R 2 = 0.89, and 81.8% of predictions within ±30%; and for V d : R 2 = 0.95, with 92.1% within ±30%. Performance remained robust in both the test set and the external validation cohort, with external validation R 2 values of 0.85 for CL and 0.95 for V d . SHAP analysis highlighted body weight, renal function, and cardiothoracic surgery status as the main determinants of CL, consistent with covariate effects in the PPK model. Conclusion An interpretable CatBoost-based ML-PPK hybrid can estimate CL and V d pre-dose using routinely available data, enabling patient-specific initial vancomycin regimens and reducing early under- or overexposure in pediatric critical care.",
       "authors": [
