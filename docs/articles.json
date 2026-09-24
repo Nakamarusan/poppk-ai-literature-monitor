@@ -1,14 +1,95 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-23 08:57 JST",
-  "article_count": 25,
-  "new_count": 5,
+  "last_scan_at": "2026-09-24 09:10 JST",
+  "article_count": 26,
+  "new_count": 6,
   "historical_count": 20,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Inverse problems in pharmacometrics and quantitative systems pharmacology (QSP) often involve sparse, noisy data, limited measurable states, and complex dynamical systems. Traditional parameter estimation methods can struggle with ill-posed problems, stiffness, discontinuities, and gray-box scenarios where only part of the system dynamics is known or observable. This tutorial provides an end-to-end, reproducible workflow for applying physics-informed neural networks (PINNs) to PK/PD/QSP inverse problems and gray-box discovery tasks. We present three worked case studies: (1) constant parameter recovery in a three-state compartmental system, (2) gray-box discovery of an unknown right-hand-side function, and (3) inference of a time-varying chemotherapy efficacy function under partial observation. For each, we provide implementation guidance, validation checks, and practical advice on collocation design, feature expansion, optimizer selection, numerical precision, constraint enforcement, loss weighting, and residual-based attention. We also discuss when to consider newer architectures such as Kolmogorov-Arnold networks (KANs) as drop-in alternatives to standard multilayer perceptrons. All code and notebooks are provided through our PhINs library, short for Pharmacometrics-Informed Networks, and are publicly available at https://github.com/NazAhmadi/PhINs/.",
+      "authors": [
+        "Ahmadi Daryakenari N",
+        "Kohandel M"
+      ],
+      "doi": "10.1002/psp4.70343",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [
+            "estimation",
+            "inference",
+            "workflow",
+            "validation"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [
+            "estimation",
+            "inference",
+            "workflow",
+            "validation"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometrics",
+            "quantitative systems pharmacology"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70343",
+      "publication_date": "2026-10-01",
+      "reported_at": "2026-09-24 09:10 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We present three worked case studies: (1) constant parameter recovery in a three-state compartmental system, (2) gray-box discovery of an unknown right-hand-side function, and (3) inference of a time-varying chemotherapy efficacy function under partial observation.",
+        "new_capability": "This tutorial provides an end-to-end, reproducible workflow for applying physics-informed neural networks (PINNs) to PK/PD/QSP inverse problems and gray-box discovery tasks.",
+        "prior_limitation": "Inverse problems in pharmacometrics and quantitative systems pharmacology (QSP) often involve sparse, noisy data, limited measurable states, and complex dynamical systems.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology.",
+      "url": "https://europepmc.org/article/MED/42773537",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Objectives The pharmaco-epidemiological research program in kidney transplantation (PERP-KT) aims to evaluate, for the principal maintenance immunosuppressive drugs (MISDs): the influence of model-informed precision dosing on graft and patient survival; long-term exposure-effects relationships; and the benefit-harm balance of their combinations and time sequences in patient groups or clinical settings not adequately evaluated in comparative randomized clinical trials. It also aims to develop a hybrid, dynamic, deep learning model capable of predicting the rate of renal graft function decline, thereby providing a platform for individualized prediction of the benefits and risks associated with MISDs. Patients and methods After obtaining all regulatory andd ethical approvals, de-identified extracts of three national databases were linked to create the nationwide PERP-KT dataset, which is hosted within the highly secure environment of the French Health Data Hub. Results CRISTAL (the exhaustive registry of the French Agence de la Biomédecine) comprises data from 49 886 kidney donors and the corresponding 47 842 transplant recipients between 2005 and 2020. Following iterative deterministic matching and extensive quality control procedures, CRISTAL data were successfully linked to: the French national Health Data System (SNDS), which records reimbursed healthcare utilization, for 30 782 kidney transplant recipients; and to ISBA, a web-based platform for Bayesian dose adjustment of MISDs that contains pharmacological data, for 17 700 kidney grafts and 17 576 recipients. Perspectives More than 20 pharmaco-epidemiological studies will leverage the database's extensive follow-up, large population size and richness of clinical, healtcare-utilization, and pharmacological data.",
       "authors": [

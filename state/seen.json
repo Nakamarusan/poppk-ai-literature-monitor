@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-22T23:57:21.885737+00:00",
+      "at_utc": "2026-09-24T00:10:54.130426+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-23",
-  "last_success_utc": "2026-09-22T23:57:21.885737+00:00",
+  "last_selection_date_jst": "2026-09-24",
+  "last_success_utc": "2026-09-24T00:10:54.130426+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -50,6 +50,12 @@
       "notified_at": "2026-09-17T23:51:02.191246+00:00",
       "selection_type": "historical",
       "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
+    },
+    "doi:10.1002/psp4.70343": {
+      "doi": "10.1002/psp4.70343",
+      "notified_at": "2026-09-24T00:10:54.130426+00:00",
+      "selection_type": "new",
+      "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology."
     },
     "doi:10.1007/s10928-026-10054-7": {
       "doi": "10.1007/s10928-026-10054-7",
@@ -287,6 +293,12 @@
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
+    "source:europe pmc:med:42773537": {
+      "doi": "10.1002/psp4.70343",
+      "notified_at": "2026-09-24T00:10:54.130426+00:00",
+      "selection_type": "new",
+      "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology."
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -412,6 +424,12 @@
       "selection_type": "historical",
       "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
+    "title:c168174775e56aa00a63acf8": {
+      "doi": "10.1002/psp4.70343",
+      "notified_at": "2026-09-24T00:10:54.130426+00:00",
+      "selection_type": "new",
+      "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology."
+    },
     "title:c302859c0079a8301022d03a": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -467,22 +485,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-23"
+    "arxiv": "2026-09-24"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
+      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
+      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-22T23:57:21.885737+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
+      "records": 49,
       "status": "ok"
     }
   }
