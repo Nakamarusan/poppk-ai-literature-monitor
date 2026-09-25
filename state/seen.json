@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-24T00:10:54.130426+00:00",
+      "at_utc": "2026-09-25T00:12:21.948293+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-24",
-  "last_success_utc": "2026-09-24T00:10:54.130426+00:00",
+  "last_selection_date_jst": "2026-09-25",
+  "last_success_utc": "2026-09-25T00:12:21.948293+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -140,6 +140,12 @@
       "selection_type": "historical",
       "title": "Exposure prediction and dose optimization of polymyxin B based on bayesian and machine learning."
     },
+    "doi:10.3389/fphar.2026.1877947": {
+      "doi": "10.3389/fphar.2026.1877947",
+      "notified_at": "2026-09-25T00:12:21.948293+00:00",
+      "selection_type": "historical",
+      "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver."
+    },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -246,6 +252,12 @@
       "selection_type": "historical",
       "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation."
     },
+    "source:europe pmc:med:42499501": {
+      "doi": "10.3389/fphar.2026.1877947",
+      "notified_at": "2026-09-25T00:12:21.948293+00:00",
+      "selection_type": "historical",
+      "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver."
+    },
     "source:europe pmc:med:42527765": {
       "doi": "10.1007/s10928-026-10054-7",
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
@@ -340,6 +352,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "title:095b6033d7b9a3996752ba11": {
+      "doi": "10.3389/fphar.2026.1877947",
+      "notified_at": "2026-09-25T00:12:21.948293+00:00",
+      "selection_type": "historical",
+      "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver."
     },
     "title:0fab3b12452b41057d8e7487": {
       "doi": "10.3389/fphar.2026.1817282",
@@ -485,22 +503,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-24"
+    "arxiv": "2026-09-25"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
+      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
+      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-24T00:10:54.130426+00:00",
-      "records": 49,
+      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
+      "records": 877,
       "status": "ok"
     }
   }

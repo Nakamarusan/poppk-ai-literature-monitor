@@ -1,14 +1,82 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-24 09:10 JST",
-  "article_count": 26,
+  "last_scan_at": "2026-09-25 09:12 JST",
+  "article_count": 27,
   "new_count": 6,
-  "historical_count": 20,
+  "historical_count": 21,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "The transition from animal-based experimentation toward New Approach Methodologies (NAMs) requires not only technological innovation but also regulatory frameworks that enable evidence-based decision-making. We discuss how the European Medicines Agency's evolving strategy for regulatory acceptance of NAMs, combined with the ICH M15 guideline on Model-Informed Drug Development (MIDD), can support the integration of mechanistic pharmacokinetic/pharmacodynamic modeling, physiologically based pharmacokinetic models, quantitative systems pharmacology, and artificial intelligence-driven approaches into medicines development. We argue that NAMs and MIDD are complementary: NAMs generate human-relevant experimental and computational evidence, whereas MIDD provides a quantitative framework to integrate and evaluate this evidence for defined regulatory questions and contexts of use. We further propose that routine MIDD planning, context-of-use-based case studies, regulatory-grade models and data infrastructures, and shared regulatory expertise are needed to move NAMs toward more central regulatory evidence. Rather than implying an immediate replacement of animal studies, this approach could progressively support a more simulation-informed, human-relevant, and risk-based drug development paradigm.",
+      "authors": [
+        "Dogné JM",
+        "Locquet M",
+        "Musuamba F",
+        "Beken S"
+      ],
+      "doi": "10.3389/fphar.2026.1877947",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.3389/fphar.2026.1877947",
+      "publication_date": "2026-07-10",
+      "reported_at": "2026-09-25 09:12 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We argue that NAMs and MIDD are complementary: NAMs generate human-relevant experimental and computational evidence, whereas MIDD provides a quantitative framework to integrate and evaluate this evidence for defined regulatory questions and contexts of use.",
+        "new_capability": "Rather than implying an immediate replacement of animal studies, this approach could progressively support a more simulation-informed, human-relevant, and risk-based drug development paradigm.",
+        "prior_limitation": "The transition from animal-based experimentation toward New Approach Methodologies (NAMs) requires not only technological innovation but also regulatory frameworks that enable evidence-based decision-making.",
+        "significance": "We discuss how the European Medicines Agency's evolving strategy for regulatory acceptance of NAMs, combined with the ICH M15 guideline on Model-Informed Drug Development (MIDD), can support the integration of mechanistic pharmacokinetic/pharmacodynamic modeling, physiologically based pharmacokinetic models, quantitat…",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver.",
+      "url": "https://europepmc.org/article/MED/42499501",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Inverse problems in pharmacometrics and quantitative systems pharmacology (QSP) often involve sparse, noisy data, limited measurable states, and complex dynamical systems. Traditional parameter estimation methods can struggle with ill-posed problems, stiffness, discontinuities, and gray-box scenarios where only part of the system dynamics is known or observable. This tutorial provides an end-to-end, reproducible workflow for applying physics-informed neural networks (PINNs) to PK/PD/QSP inverse problems and gray-box discovery tasks. We present three worked case studies: (1) constant parameter recovery in a three-state compartmental system, (2) gray-box discovery of an unknown right-hand-side function, and (3) inference of a time-varying chemotherapy efficacy function under partial observation. For each, we provide implementation guidance, validation checks, and practical advice on collocation design, feature expansion, optimizer selection, numerical precision, constraint enforcement, loss weighting, and residual-based attention. We also discuss when to consider newer architectures such as Kolmogorov-Arnold networks (KANs) as drop-in alternatives to standard multilayer perceptrons. All code and notebooks are provided through our PhINs library, short for Pharmacometrics-Informed Networks, and are publicly available at https://github.com/NazAhmadi/PhINs/.",
       "authors": [
