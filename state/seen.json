@@ -1,12 +1,12 @@
 {
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-09-25T00:12:21.948293+00:00",
+      "at_utc": "2026-09-26T00:19:20.751920+00:00",
       "message": "HTTP 406: Not Acceptable"
     }
   },
-  "last_selection_date_jst": "2026-09-25",
-  "last_success_utc": "2026-09-25T00:12:21.948293+00:00",
+  "last_selection_date_jst": "2026-09-26",
+  "last_success_utc": "2026-09-26T00:19:20.751920+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -62,6 +62,12 @@
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
       "selection_type": "historical",
       "title": "Diffusion models for virtual populations and pharmacometric simulations."
+    },
+    "doi:10.1016/j.cmpb.2026.109511": {
+      "doi": "10.1016/j.cmpb.2026.109511",
+      "notified_at": "2026-09-26T00:19:20.751920+00:00",
+      "selection_type": "historical",
+      "title": "Data-driven system identification in cancer systems biology: A multiscale modeling approach to melanoma."
     },
     "doi:10.1016/j.ejps.2026.107609": {
       "doi": "10.1016/j.ejps.2026.107609",
@@ -209,6 +215,12 @@
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
       "selection_type": "historical",
       "title": "Machine learning combined with population pharmacokinetics: a hybrid model for predicting the plasma concentration of linezolid in critically ill pediatric patients."
+    },
+    "source:europe pmc:med:42322753": {
+      "doi": "10.1016/j.cmpb.2026.109511",
+      "notified_at": "2026-09-26T00:19:20.751920+00:00",
+      "selection_type": "historical",
+      "title": "Data-driven system identification in cancer systems biology: A multiscale modeling approach to melanoma."
     },
     "source:europe pmc:med:42338400": {
       "doi": "10.1002/psp4.70285",
@@ -436,6 +448,12 @@
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
     },
+    "title:a368e71c93b019bd151abe41": {
+      "doi": "10.1016/j.cmpb.2026.109511",
+      "notified_at": "2026-09-26T00:19:20.751920+00:00",
+      "selection_type": "historical",
+      "title": "Data-driven system identification in cancer systems biology: A multiscale modeling approach to melanoma."
+    },
     "title:a7be8b67fff02f88d5fe790b": {
       "doi": "10.1016/j.ejps.2026.107609",
       "notified_at": "2026-09-12T23:39:28.292017+00:00",
@@ -503,21 +521,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-25"
+    "arxiv": "2026-09-26"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
+      "last_attempt_utc": "2026-09-26T00:19:20.751920+00:00",
       "message": "HTTP 406: Not Acceptable",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
+      "last_attempt_utc": "2026-09-26T00:19:20.751920+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-25T00:12:21.948293+00:00",
+      "last_attempt_utc": "2026-09-26T00:19:20.751920+00:00",
       "records": 877,
       "status": "ok"
     }

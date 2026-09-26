@@ -1,14 +1,86 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-25 09:12 JST",
-  "article_count": 27,
+  "last_scan_at": "2026-09-26 09:19 JST",
+  "article_count": 28,
   "new_count": 6,
-  "historical_count": 21,
+  "historical_count": 22,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Background and objective Developing systems biology models of cancer is critical for improving understanding of complex biological interactions and advancing appropriate therapeutic strategies. However, constructing complex, multiscale models that are easily parameterized by the available data can be difficult. Advances in computational methods have provided data-driven frameworks utilizing machine learning approaches to build predictive systems biology models. These methods display a strong ability to fit data and predict cellular and molecular trajectories but can be limited by either poor mechanistic interpretations or require a large prior understanding of the system of interest. In many cases, such as cancer, the systems are highly complex, resulting in limited availability of prior knowledge and a strong need for mechanistic insight from the developed models. This work builds upon recent developments in system identification to construct fully mechanistic models directly from the available data, serving as a proof-of-concept study for multi-scale system identification with synthetic data. Methods We utilize ADAM-SINDy (sparse identification of nonlinear dynamics with ADAM) to accomplish this objective, a recently developed differentiable optimization method for the identification of nonlinear, parameterized dynamical systems, with advancements to facilitate its use in systems biology settings. Specifically, we focus on the usage of prior biological knowledge and the subsequent finetuning through a two-stage identification process. We apply the framework in the context of melanoma (a dangerous skin cancer) and quantitative systems pharmacology, developing a benchmark multiscale model connecting sub-cellular signaling and cell scale dynamics in response to therapy. Results The ADAM-SINDy framework is shown to be capable of identifying a ground truth system of equations directly from synthetically generated data. Coupling mechanisms between scales (subcellular and cellular) are also identifiable with this framework. At high temporal resolutions, the method achieves 100% reconstruction accuracy, dropping to 89.9% with a two times coarser resolution. Conclusions The framework presented in this work is capable of constructing systems biology networks and mathematical models directly from data, while maintaining clear mechanistic interpretations. This system identification paradigm in systems biology can help remove the need for extensive biological insight into the network of interest a priori, which can be exceedingly difficult in the context of cancer.",
+      "authors": [
+        "Christenson C",
+        "Viknesh S",
+        "Judson-Torres RL",
+        "Arzani A"
+      ],
+      "doi": "10.1016/j.cmpb.2026.109511",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "benchmark"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "benchmark"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1016/j.cmpb.2026.109511",
+      "publication_date": "2026-06-18",
+      "reported_at": "2026-09-26 09:19 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Methods We utilize ADAM-SINDy (sparse identification of nonlinear dynamics with ADAM) to accomplish this objective, a recently developed differentiable optimization method for the identification of nonlinear, parameterized dynamical systems, with advancements to facilitate its use in systems biology settings.",
+        "new_capability": "This system identification paradigm in systems biology can help remove the need for extensive biological insight into the network of interest a priori, which can be exceedingly difficult in the context of cancer.",
+        "prior_limitation": "However, constructing complex, multiscale models that are easily parameterized by the available data can be difficult.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Data-driven system identification in cancer systems biology: A multiscale modeling approach to melanoma.",
+      "url": "https://europepmc.org/article/MED/42322753",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "The transition from animal-based experimentation toward New Approach Methodologies (NAMs) requires not only technological innovation but also regulatory frameworks that enable evidence-based decision-making. We discuss how the European Medicines Agency's evolving strategy for regulatory acceptance of NAMs, combined with the ICH M15 guideline on Model-Informed Drug Development (MIDD), can support the integration of mechanistic pharmacokinetic/pharmacodynamic modeling, physiologically based pharmacokinetic models, quantitative systems pharmacology, and artificial intelligence-driven approaches into medicines development. We argue that NAMs and MIDD are complementary: NAMs generate human-relevant experimental and computational evidence, whereas MIDD provides a quantitative framework to integrate and evaluate this evidence for defined regulatory questions and contexts of use. We further propose that routine MIDD planning, context-of-use-based case studies, regulatory-grade models and data infrastructures, and shared regulatory expertise are needed to move NAMs toward more central regulatory evidence. Rather than implying an immediate replacement of animal studies, this approach could progressively support a more simulation-informed, human-relevant, and risk-based drug development paradigm.",
       "authors": [
