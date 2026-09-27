@@ -1,6 +1,81 @@
 {
   "articles": [
     {
+      "abstract": "Optimizing dose and schedule remains a central challenge in oncology drug development, particularly for immunotherapies where fixed dosing regimens often fail to account for patient specific heterogeneity in tumor–immune dynamics. Here, we present a hybrid quantitative systems pharmacology–reinforcement learning–Monte Carlo Tree Search (QSP–RL–MCTS) framework for personalized immunotherapy dosing that formulates dose selection as a sequential decision-making problem. The approach integrates a mechanistic QSP model of prostate cancer immunotherapy, transcriptomics informed virtual patient populations and data driven AI system comprising reinforcement learning and Monte Carlo tree search. Reinforcement learning is used to learn adaptive generalized dosing policies that optimize treatment outcomes across the population, while Monte Carlo Tree Search provides forward-looking evaluation of RL predicted dosing trajectories to refine patient-specific decisions. On benchmarking against fixed dosing regimens of ipilimumab , the remission rate of the proposed model (95.2%) was comparable to the highest fixed dosing regimen of 10 mg/kg per dose while the median total dose (72 mg/kg) of the proposed model designed regimen was comparable to the lowest fixed dosing regimen of 3 mg/kg per dose. The model is generalizable across different dosing protocols and can be extended to predict optimal dose under different therapeutic scenarios. Analysis of the learned dosing trajectories enables stratification of patients into distinct response groups and identifies drug activity rate as the dominant determinant of long-term treatment outcome. These results demonstrate how mechanistically guided artificial intelligence can transform population-level dose optimization into patient-specific, biologically interpretable treatment strategies for precision immuno-oncology.",
+      "authors": [
+        "Garg A",
+        "Das SS",
+        "Sivadasan N",
+        "Roy A",
+        "Chakrabarty B"
+      ],
+      "doi": "10.64898/2026.06.09.730783",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence",
+            "reinforcement learning"
+          ],
+          "method": [
+            "framework",
+            "optimization"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence",
+            "reinforcement learning"
+          ],
+          "method": [
+            "framework",
+            "optimization"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.64898/2026.06.09.730783",
+      "publication_date": "2026-06-12",
+      "reported_at": "2026-09-27 09:06 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here, we present a hybrid quantitative systems pharmacology–reinforcement learning–Monte Carlo Tree Search (QSP–RL–MCTS) framework for personalized immunotherapy dosing that formulates dose selection as a sequential decision-making problem.",
+        "new_capability": "These results demonstrate how mechanistically guided artificial intelligence can transform population-level dose optimization into patient-specific, biologically interpretable treatment strategies for precision immuno-oncology.",
+        "prior_limitation": "Optimizing dose and schedule remains a central challenge in oncology drug development, particularly for immunotherapies where fixed dosing regimens often fail to account for patient specific heterogeneity in tumor–immune dynamics.",
+        "significance": "The model is generalizable across different dosing protocols and can be extended to predict optimal dose under different therapeutic scenarios.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Mechanistically informed adaptive dosing for cancer immunotherapy using AI-guided decision making",
+      "url": "https://europepmc.org/article/PPR/PPR1251673",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Background and objective Developing systems biology models of cancer is critical for improving understanding of complex biological interactions and advancing appropriate therapeutic strategies. However, constructing complex, multiscale models that are easily parameterized by the available data can be difficult. Advances in computational methods have provided data-driven frameworks utilizing machine learning approaches to build predictive systems biology models. These methods display a strong ability to fit data and predict cellular and molecular trajectories but can be limited by either poor mechanistic interpretations or require a large prior understanding of the system of interest. In many cases, such as cancer, the systems are highly complex, resulting in limited availability of prior knowledge and a strong need for mechanistic insight from the developed models. This work builds upon recent developments in system identification to construct fully mechanistic models directly from the available data, serving as a proof-of-concept study for multi-scale system identification with synthetic data. Methods We utilize ADAM-SINDy (sparse identification of nonlinear dynamics with ADAM) to accomplish this objective, a recently developed differentiable optimization method for the identification of nonlinear, parameterized dynamical systems, with advancements to facilitate its use in systems biology settings. Specifically, we focus on the usage of prior biological knowledge and the subsequent finetuning through a two-stage identification process. We apply the framework in the context of melanoma (a dangerous skin cancer) and quantitative systems pharmacology, developing a benchmark multiscale model connecting sub-cellular signaling and cell scale dynamics in response to therapy. Results The ADAM-SINDy framework is shown to be capable of identifying a ground truth system of equations directly from synthetically generated data. Coupling mechanisms between scales (subcellular and cellular) are also identifiable with this framework. At high temporal resolutions, the method achieves 100% reconstruction accuracy, dropping to 89.9% with a two times coarser resolution. Conclusions The framework presented in this work is capable of constructing systems biology networks and mathematical models directly from data, while maintaining clear mechanistic interpretations. This system identification paradigm in systems biology can help remove the need for extensive biological insight into the network of interest a priori, which can be exceedingly difficult in the context of cancer.",
       "authors": [
         "Christenson C",
@@ -2207,6 +2282,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-26 09:19 JST",
+  "last_scan_at": "2026-09-27 09:06 JST",
   "schema_version": 2
 }
