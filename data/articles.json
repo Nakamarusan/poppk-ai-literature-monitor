@@ -1,6 +1,84 @@
 {
   "articles": [
     {
+      "abstract": "Patient-reported outcomes (PROs) capture the patient voice and have been associated with improved clinical outcomes in oncology, but their prognostic and predictive value remains underutilized due to challenges in interpreting these highly variable and noisy PRO data. Here, we developed a quantitative modeling framework integrating nonlinear mixed-effects (NLME) and item response theory (IRT) to characterize symptom-level PRO trajectories and transform them into clinically actionable predictors. Using longitudinal PRO data from 589 patients with metastatic cancers in the PRO-TECT trial, we modeled 332,920 symptom responses to estimate patient-specific PRO trajectory parameters while accounting for variability and noise. IRT-NLME modeling captured heterogeneous symptom-level PRO dynamics and is more informative than modeling with composite PRO scores. PRO trajectory parameters were strongly associated with overall survival, acute care utilization, and treatment modifications. Machine learning models leveraging these parameters achieved robust prediction of survival (AUC-ROC 0.80) and retained prognostic performance using the first 30 – 180 days of PRO observations, with AUCs of 0.69-0.78. Similar predictive performance was observed for hospitalization (AUC 0.75), emergency department visit (AUC 0.65), treatment discontinuation (AUC 0.71), and dose reduction (AUC 0.67). These findings demonstrate that longitudinal PRO trajectories can serve as early, patient-centered biomarkers of clinical risk. By converting complex symptom data into interpretable and predictive metrics, this quantitative framework provides a practical pathway to integrate the patient voice into clinical decision-making and advance precision oncology. ClinicalTrials.gov registration: NCT03249090",
+      "authors": [
+        "Zhang C",
+        "Xia P",
+        "Wang W",
+        "Slim G",
+        "Muluneh B",
+        "Jansen J",
+        "Wagner LI",
+        "Wood WA",
+        "Yao H",
+        "Hughes JH",
+        "Basch E",
+        "Zhou J"
+      ],
+      "doi": "10.64898/2026.04.30.26352154",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "nonlinear mixed effects",
+            "nlme"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "nonlinear mixed effects",
+            "nlme"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.64898/2026.04.30.26352154",
+      "publication_date": "2026-05-03",
+      "reported_at": "2026-09-28 09:15 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here, we developed a quantitative modeling framework integrating nonlinear mixed-effects (NLME) and item response theory (IRT) to characterize symptom-level PRO trajectories and transform them into clinically actionable predictors.",
+        "new_capability": "By converting complex symptom data into interpretable and predictive metrics, this quantitative framework provides a practical pathway to integrate the patient voice into clinical decision-making and advance precision oncology.",
+        "prior_limitation": "Patient-reported outcomes (PROs) capture the patient voice and have been associated with improved clinical outcomes in oncology, but their prognostic and predictive value remains underutilized due to challenges in interpreting these highly variable and noisy PRO data.",
+        "significance": "These findings demonstrate that longitudinal PRO trajectories can serve as early, patient-centered biomarkers of clinical risk.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Transforming Patient Voices into Early Predictors of Survival Using Nonlinear Mixed-Effect Models and AI/ML for Patient-Centered Decision-Making",
+      "url": "https://europepmc.org/article/PPR/PPR1265293",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Optimizing dose and schedule remains a central challenge in oncology drug development, particularly for immunotherapies where fixed dosing regimens often fail to account for patient specific heterogeneity in tumor–immune dynamics. Here, we present a hybrid quantitative systems pharmacology–reinforcement learning–Monte Carlo Tree Search (QSP–RL–MCTS) framework for personalized immunotherapy dosing that formulates dose selection as a sequential decision-making problem. The approach integrates a mechanistic QSP model of prostate cancer immunotherapy, transcriptomics informed virtual patient populations and data driven AI system comprising reinforcement learning and Monte Carlo tree search. Reinforcement learning is used to learn adaptive generalized dosing policies that optimize treatment outcomes across the population, while Monte Carlo Tree Search provides forward-looking evaluation of RL predicted dosing trajectories to refine patient-specific decisions. On benchmarking against fixed dosing regimens of ipilimumab , the remission rate of the proposed model (95.2%) was comparable to the highest fixed dosing regimen of 10 mg/kg per dose while the median total dose (72 mg/kg) of the proposed model designed regimen was comparable to the lowest fixed dosing regimen of 3 mg/kg per dose. The model is generalizable across different dosing protocols and can be extended to predict optimal dose under different therapeutic scenarios. Analysis of the learned dosing trajectories enables stratification of patients into distinct response groups and identifies drug activity rate as the dominant determinant of long-term treatment outcome. These results demonstrate how mechanistically guided artificial intelligence can transform population-level dose optimization into patient-specific, biologically interpretable treatment strategies for precision immuno-oncology.",
       "authors": [
         "Garg A",
@@ -2282,6 +2360,6 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-09-27 09:06 JST",
+  "last_scan_at": "2026-09-28 09:15 JST",
   "schema_version": 2
 }
