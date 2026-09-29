@@ -1,12 +1,6 @@
 {
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-09-28T00:15:09.879864+00:00",
-      "message": "HTTP 406: Not Acceptable"
-    }
-  },
-  "last_selection_date_jst": "2026-09-28",
-  "last_success_utc": "2026-09-28T00:15:09.879864+00:00",
+  "last_selection_date_jst": "2026-09-29",
+  "last_success_utc": "2026-09-29T01:24:35.574854+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -51,6 +45,12 @@
       "selection_type": "historical",
       "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
     },
+    "doi:10.1002/psp4.70325": {
+      "doi": "10.1002/psp4.70325",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
+    },
     "doi:10.1002/psp4.70343": {
       "doi": "10.1002/psp4.70343",
       "notified_at": "2026-09-24T00:10:54.130426+00:00",
@@ -62,6 +62,12 @@
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
       "selection_type": "historical",
       "title": "Diffusion models for virtual populations and pharmacometric simulations."
+    },
+    "doi:10.1007/s11095-026-04206-0": {
+      "doi": "10.1007/s11095-026-04206-0",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
     },
     "doi:10.1016/j.cmpb.2026.109511": {
       "doi": "10.1016/j.cmpb.2026.109511",
@@ -103,6 +109,18 @@
       "notified_at": "2026-09-09T23:46:05.045780+00:00",
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
+    },
+    "doi:10.1177/02611929261492225": {
+      "doi": "10.1177/02611929261492225",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
+    },
+    "doi:10.1186/s40635-026-00973-7": {
+      "doi": "10.1186/s40635-026-00973-7",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data."
     },
     "doi:10.1208/s12248-026-01255-6": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -335,6 +353,30 @@
       "selection_type": "new",
       "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology."
     },
+    "source:europe pmc:med:42776357": {
+      "doi": "10.1186/s40635-026-00973-7",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data."
+    },
+    "source:europe pmc:med:42778827": {
+      "doi": "10.1007/s11095-026-04206-0",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
+    },
+    "source:europe pmc:med:42781735": {
+      "doi": "10.1002/psp4.70325",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
+    },
+    "source:europe pmc:med:42788857": {
+      "doi": "10.1177/02611929261492225",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -437,6 +479,12 @@
       "selection_type": "historical",
       "title": "Applying a Pharmacometrics-Enabled Machine Learning Analysis to Predict 2-Month Culture Conversion Using Phase 2a Data in a Tuberculosis Clinical Trial."
     },
+    "title:56a5fcb80fafece996dd3c7d": {
+      "doi": "10.1186/s40635-026-00973-7",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data."
+    },
     "title:59240fdbb94c1167d7f4a208": {
       "doi": "10.1128/aac.00665-26",
       "notified_at": "2026-09-15T00:10:00.399871+00:00",
@@ -449,11 +497,23 @@
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
+    "title:5ff74044bdddda3069368e3b": {
+      "doi": "10.1002/psp4.70325",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
+    },
     "title:792fefe8a0fc829963209b38": {
       "doi": "10.1002/psp4.70280",
       "notified_at": "2026-09-13T23:50:54.201620+00:00",
       "selection_type": "historical",
       "title": "The Empirical Bayes Variational Autoencoder-A Neural ODE Approach for Population Modeling in Pharmacology."
+    },
+    "title:8184547a7ff29c98b9247ffc": {
+      "doi": "10.1177/02611929261492225",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
     },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
@@ -508,6 +568,12 @@
       "selection_type": "historical",
       "title": "Machine-learning prediction of pre-dose pharmacokinetics optimizes initial vancomycin dosing in critically ill children."
     },
+    "title:cca2708e3939a3267ca3eaee": {
+      "doi": "10.1007/s11095-026-04206-0",
+      "notified_at": "2026-09-29T01:24:35.574854+00:00",
+      "selection_type": "new",
+      "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
+    },
     "title:d2a7662c504dab804f6756e1": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -557,22 +623,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-28"
+    "arxiv": "2026-09-29"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-28T00:15:09.879864+00:00",
-      "message": "HTTP 406: Not Acceptable",
-      "status": "error"
+      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
+      "records": 0,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-28T00:15:09.879864+00:00",
+      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-28T00:15:09.879864+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
+      "records": 86,
       "status": "ok"
     }
   }

@@ -1,14 +1,305 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-09-28 09:15 JST",
-  "article_count": 30,
-  "new_count": 6,
+  "last_scan_at": "2026-09-29 10:24 JST",
+  "article_count": 34,
+  "new_count": 10,
   "historical_count": 24,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "AI agents are transforming computational workflows, yet pharmacometric analyses remain manual, relying on significant data wrangling, custom scripts, and specialized software. We present PMxAgent, an open-source agentic platform for developing and deploying specialized agent-callable pharmacometric tools. The platform uses Docker to orchestrate an R-based API server alongside a Python-based model context protocol (MCP) server, which automatically generates agent-callable tools from OpenAPI specifications, making pharmacometric functions discoverable and usable by AI agents. To exemplify pharmacometric applications, five tools were developed: non-compartmental analysis (NCA) using PKNCA, exposure-response (ER) modeling, pharmacokinetic (PK) simulation using mrgsolve, data standardization (DATA), and generation of population PK datasets from the nlmixr2lib model library (LIBRARY). As a proof-of-concept case study, PMxAgent orchestrated a multistep pharmacometric workflow, consisting of a PK simulation of 60 subjects across three dose groups, NCA to derive individual exposure metrics, and ER analysis. To evaluate analytical accuracy and reproducibility, the agentic NCA workflow was benchmarked against four frontier AI agents across 182 drugs and 1820 simulated subjects, using PKanalix as reference. PMxAgent's NCA accuracy (98.3%) matched or exceeded that of all frontier agents evaluated. PMxAgent produced deterministic, reproducible results in contrast to GPT and Claude agents that performed NCA by generating new code each run. PMxAgent was demonstrated using two MCP-compatible AI agents (Cursor and Claude Code) and is designed to integrate with any AI agent supporting the MCP protocol. PMxAgent provides an extensible foundation for integrating pharmacometric tools into human-supervised AI-driven workflows while ensuring reproducibility, transparency, and detailed documentation required for model-informed drug development.",
+      "authors": [
+        "Bloomingdale P",
+        "Khot A"
+      ],
+      "doi": "10.1002/psp4.70325",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [
+            "software",
+            "workflow",
+            "platform"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [
+            "platform",
+            "software",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [
+            "platform"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70325",
+      "publication_date": "2026-10-01",
+      "reported_at": "2026-09-29 10:24 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We present PMxAgent, an open-source agentic platform for developing and deploying specialized agent-callable pharmacometric tools.",
+        "new_capability": "PMxAgent was demonstrated using two MCP-compatible AI agents (Cursor and Claude Code) and is designed to integrate with any AI agent supporting the MCP protocol.",
+        "prior_limitation": "AI agents are transforming computational workflows, yet pharmacometric analyses remain manual, relying on significant data wrangling, custom scripts, and specialized software.",
+        "significance": "PMxAgent provides an extensible foundation for integrating pharmacometric tools into human-supervised AI-driven workflows while ensuring reproducibility, transparency, and detailed documentation required for model-informed drug development.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "PMxAgent: An Agentic Platform for Pharmacometrics.",
+      "url": "https://europepmc.org/article/MED/42781735",
+      "venue": "Europe PMC"
+    },
+    {
+      "abstract": "Animal experimentation has long been associated with biomedical research and drug development. However, ethical concerns, limited translatability to humans and high clinical attrition rates (> 90%) necessitate a transition toward human-relevant approaches. Although diverse in vitro , in silico and artificial intelligence (AI)-enabled methodologies have emerged, their integration into a unified, regulatory-acceptable framework remains limited. This review proposes an AI-centred, multi-tier decision-support framework, to enable a phased shift toward animal-reduced and, ultimately, animal-free drug development. Human-relevant platforms (e.g. organoids, microphysiological systems (MPS) and 3D bioprinting), are evaluated for their potential to reproduce selected aspects of human pharmacokinetics, toxicity and disease phenotypes. AI-driven strategies, including pharmacokinetic/pharmacodynamic modelling, quantitative systems pharmacology, digital twins and virtual clinical simulations, support the prediction of individualised responses with multi-omics, imaging and real-world data. Special emphasis is placed on neuropharmacology, where AI-integrated human neural models enhance mechanistic understanding and therapeutic optimisation. Human-based approaches, such as microdosing, non-invasive imaging and real-world evidence, provide validation pathways and strengthen translational reliability. Despite progress, challenges related to technical limitations, data integration, cost and regulatory acceptance persist. To address these gaps, we propose the 'AI-orchestrated Human-Relevant Translational Ecosystem' (AI-HRTE), a conceptual framework integrating experimental, computational and clinical data, to support iterative, AI-assisted decision-making. While this framework offers a structured approach to enhance predictive modelling and reduce animal use in line with the Three Rs principles (i.e. replacement , reduction and refinement ), its effectiveness remains hypothetical and requires prospective validation.",
+      "authors": [
+        "Amale PN",
+        "Tiwari DH"
+      ],
+      "doi": "10.1177/02611929261492225",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1177/02611929261492225",
+      "publication_date": "2026-09-25",
+      "reported_at": "2026-09-29 10:24 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "To address these gaps, we propose the 'AI-orchestrated Human-Relevant Translational Ecosystem' (AI-HRTE), a conceptual framework integrating experimental, computational and clinical data, to support iterative, AI-assisted decision-making.",
+        "new_capability": "This review proposes an AI-centred, multi-tier decision-support framework, to enable a phased shift toward animal-reduced and, ultimately, animal-free drug development.",
+        "prior_limitation": "Although diverse in vitro , in silico and artificial intelligence (AI)-enabled methodologies have emerged, their integration into a unified, regulatory-acceptable framework remains limited.",
+        "significance": "AI-driven strategies, including pharmacokinetic/pharmacodynamic modelling, quantitative systems pharmacology, digital twins and virtual clinical simulations, support the prediction of individualised responses with multi-omics, imaging and real-world data.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence.",
+      "url": "https://europepmc.org/article/MED/42788857",
+      "venue": "Europe PMC"
+    },
+    {
+      "abstract": "Background Sepsis remains a life-threatening condition with highly heterogeneous and dynamic pathophysiology, limiting the effectiveness of uniform therapeutic strategies. Beyond timely source control, antimicrobial therapy represents the only causal treatment option. Vancomycin is widely used for treatment of Gram-positive infections; however, optimal dosing in septic patients is challenging due to pronounced pharmacokinetic variability and substantial interindividual heterogeneity. Underdosing may promote antimicrobial resistance, whereas overdosing increases the risk of toxicity. This study aimed to develop and validate a machine learning-based prediction model to support individualized vancomycin dosing using routinely available clinical data. Methods This single-center retrospective study included adult sepsis patients admitted to the intensive care unit, using routinely collected data from the hospital's electronic medical records. Patients were eligible if they received a vancomycin loading dose followed by continuous infusion and had at least one measured serum concentration. Three machine learning models-elastic net regression, random forest, and XGBoost-were developed to predict the initial vancomycin serum concentration. To minimize bias and enhance generalizability, model training, hyperparameter tuning, and performance evaluation were conducted using a stratified nested cross-validation approach. Model performance was compared with seven commonly used population pharmacokinetic models. Results The developed best performing elastic net model achieved a notable improvement with an average RMSE of 6.19, compared to 7.83 for the best pharmacokinetic model highlighting the potential of early and individualized dosing supported by a machine learning model. Final model analysis revealed that noradrenaline administration, together with classical pharmacokinetic parameters including body weight, serum creatinine, and the presence of chronic kidney disease, significantly influenced predictive performance. Conclusions This machine learning-based approach for predicting initial vancomycin serum concentrations outperforms conventional PK models and enables more precise, individualized dosing prior to the availability of therapeutic drug monitoring results. By integrating key clinical variables, the model facilitates data-driven decision-making in sepsis care and underscores the potential of machine learning to advance personalized antimicrobial therapy.",
+      "authors": [
+        "Grugel R",
+        "Westhus B",
+        "Nowak H",
+        "Adamzik M",
+        "Rahmel T",
+        "Eisenacher M"
+      ],
+      "doi": "10.1186/s40635-026-00973-7",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1186/s40635-026-00973-7",
+      "publication_date": "2026-09-23",
+      "reported_at": "2026-09-29 10:24 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to develop and validate a machine learning-based prediction model to support individualized vancomycin dosing using routinely available clinical data.",
+        "new_capability": "Results The developed best performing elastic net model achieved a notable improvement with an average RMSE of 6.19, compared to 7.83 for the best pharmacokinetic model highlighting the potential of early and individualized dosing supported by a machine learning model.",
+        "prior_limitation": "Background Sepsis remains a life-threatening condition with highly heterogeneous and dynamic pathophysiology, limiting the effectiveness of uniform therapeutic strategies.",
+        "significance": "By integrating key clinical variables, the model facilitates data-driven decision-making in sepsis care and underscores the potential of machine learning to advance personalized antimicrobial therapy.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data.",
+      "url": "https://europepmc.org/article/MED/42776357",
+      "venue": "Europe PMC"
+    },
+    {
+      "abstract": "Purpose While population pharmacokinetic (PopPK) models traditionally guide valproic acid (VPA) dosing, machine learning (ML) may better capture complex, nonlinear relationships. A direct comparison of their predictive performances remains poorly defined. This study compared the predictive performance of ML and PopPK models for VPA clearance and trough concentrations. Methods PopPK and ML models were developed and validated using two independent simulated datasets. Trough concentration and clearance were each evaluated under a priori and a posteriori conditions and were compared against matched PopPK references. Results For trough concentration, most ML models significantly outperformed PopPK population prediction (PRED) under a priori condition, while individual prediction (IPRED) significantly outperformed all ML models under a posteriori condition. For clearance, the best-performing ML model (kNN) significantly outperformed a population-typical prediction (CL PRED) under a priori condition, whereas the best-performing ML model (CatBoost) showed a small but statistically significant advantage over the empirical Bayes estimate for clearance (CL EBE) under a posteriori condition. Conclusions Relative performance depended on the prediction target and available data. Under a priori condition, ML outperformed PopPK for both endpoints. Under a posteriori condition, PopPK remained superior for trough concentration, while ML performed comparably for clearance. Further real-world validation is needed.",
+      "authors": [
+        "Methaneethorn J",
+        "Aramvith S",
+        "Duangchaemkarn K",
+        "Reisfeld B"
+      ],
+      "doi": "10.1007/s11095-026-04206-0",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1007/s11095-026-04206-0",
+      "publication_date": "2026-09-23",
+      "reported_at": "2026-09-29 10:24 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study compared the predictive performance of ML and PopPK models for VPA clearance and trough concentrations.",
+        "new_capability": "For clearance, the best-performing ML model (kNN) significantly outperformed a population-typical prediction (CL PRED) under a priori condition, whereas the best-performing ML model (CatBoost) showed a small but statistically significant advantage over the empirical Bayes estimate for clearance (CL EBE) under a poster…",
+        "prior_limitation": "A direct comparison of their predictive performances remains poorly defined.",
+        "significance": "Purpose While population pharmacokinetic (PopPK) models traditionally guide valproic acid (VPA) dosing, machine learning (ML) may better capture complex, nonlinear relationships.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios.",
+      "url": "https://europepmc.org/article/MED/42778827",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Patient-reported outcomes (PROs) capture the patient voice and have been associated with improved clinical outcomes in oncology, but their prognostic and predictive value remains underutilized due to challenges in interpreting these highly variable and noisy PRO data. Here, we developed a quantitative modeling framework integrating nonlinear mixed-effects (NLME) and item response theory (IRT) to characterize symptom-level PRO trajectories and transform them into clinically actionable predictors. Using longitudinal PRO data from 589 patients with metastatic cancers in the PRO-TECT trial, we modeled 332,920 symptom responses to estimate patient-specific PRO trajectory parameters while accounting for variability and noise. IRT-NLME modeling captured heterogeneous symptom-level PRO dynamics and is more informative than modeling with composite PRO scores. PRO trajectory parameters were strongly associated with overall survival, acute care utilization, and treatment modifications. Machine learning models leveraging these parameters achieved robust prediction of survival (AUC-ROC 0.80) and retained prognostic performance using the first 30 – 180 days of PRO observations, with AUCs of 0.69-0.78. Similar predictive performance was observed for hospitalization (AUC 0.75), emergency department visit (AUC 0.65), treatment discontinuation (AUC 0.71), and dose reduction (AUC 0.67). These findings demonstrate that longitudinal PRO trajectories can serve as early, patient-centered biomarkers of clinical risk. By converting complex symptom data into interpretable and predictive metrics, this quantitative framework provides a practical pathway to integrate the patient voice into clinical decision-making and advance precision oncology. ClinicalTrials.gov registration: NCT03249090",
       "authors": [
