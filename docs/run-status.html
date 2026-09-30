@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Run status · PopPK × AI Methodology Atlas</title>
+  <meta name="description" content="Retrieval, selection, archive coverage, and delivery status for the literature monitor.">
+  <link rel="canonical" href="https://nakamarusan.github.io/poppk-ai-literature-monitor/run-status.html">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <style>
+    main { max-width: 960px; padding: 48px 24px; margin: auto; }
+    nav { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 40px; }
+    h1 { font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -.04em; }
+    p, li { line-height: 1.7; }
+    .status-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface-solid); margin: 24px 0; }
+    dl { display: grid; grid-template-columns: minmax(120px, 1fr) 2fr; gap: 12px; }
+    dt { color: var(--secondary); } dd { margin: 0; overflow-wrap: anywhere; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; line-height: 1.6; }
+    summary { cursor: pointer; padding: 12px 0; } a { text-underline-offset: 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav aria-label="Primary navigation"><a href="./">Library</a><a href="./method.html">Method</a><a href="./run-status.html" aria-current="page">Run status</a></nav>
+  <p class="eyebrow">Operational transparency</p><h1>What happened today?</h1>
+  <p>A successful API response is not the same as a selected paper or a delivered notification. This page reports these outcomes separately.</p>
+  <section class="status-card" aria-live="polite"><p id="message">Loading the latest run…</p><dl id="status"></dl></section>
+  <details class="status-card"><summary>Search and exclusion counts</summary><pre id="details">No details loaded.</pre></details>
+  <h2>How archive recovery works</h2>
+  <p>Recent searches use index or registration dates. Archive searches use publication dates from 2020 onward. The monitor checks an existing queue of unreported, abstract-bearing candidates before requesting more metadata. It does not relax the PopPK, AI, or methodology eligibility gate to fill an empty day.</p>
+  <p>Archive work is partitioned by year, source, and query. Each API session follows page cursors within its budget. An unfinished date range is split into smaller ranges and retained for the next run; short-lived cursor tokens are not stored overnight. Candidates remain in the queue until selected. “Pending windows” means that the configured search has not finished, not that the literature contains no eligible papers.</p>
+  <p>The default refill budget is eight API requests, two pages per date window, 200 records per page, and approximately eight minutes between request starts. Requests already in flight may finish after this budget. Searches refill when fewer than five eligible candidates remain. These are workload limits, not a guarantee of complete coverage.</p>
+  <p>When no paper is selected, one status Issue is sent for that Japan Standard Time date. The 07:20 retry continues if no paper has been delivered or a notice remains pending. Failed notices are retained and retried with stable identifiers. A later recovery can generate a paper notification in addition to that day's earlier status notice.</p>
+  <p>The main run remains scheduled for 07:00 JST. GitHub's scheduled jobs can start late; this system does not guarantee delivery at exactly 07:00. The displayed time is the actual scan start, not the scheduled time.</p>
+  <p><a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor/blob/main/reports/latest.md">Latest report</a> · <a href="https://github.com/Nakamarusan/poppk-ai-literature-monitor/actions">Execution logs</a></p>
+</main>
+<script>
+(async () => {
+  const message = document.getElementById('message');
+  try {
+    const response = await fetch('./articles.json', {cache: 'no-store'});
+    if (!response.ok) throw new Error('The catalog could not be retrieved.');
+    const catalog = await response.json();
+    const run = catalog.run_status || {};
+    if (!run.checked_at) { message.textContent = 'Detailed run status will appear after the next monitor execution.'; return; }
+    const outcomes = {selected: 'A paper was selected.', already_selected_today: 'Today’s previously selected papers are retained.', search_pending: 'No paper selected yet; archive exploration will continue.', no_eligible_candidate: 'No unreported eligible candidate in the completed search.', source_error: 'Some sources failed; see the execution details.'};
+    message.textContent = outcomes[run.selection_status] || run.selection_status;
+    const entries = [['Actual scan start', run.checked_at], ['Source retrieval', run.source_status],
+      ['Papers selected in this run', run.selected_count], ['Notification delivery', run.delivery_status],
+      ['Total articles in the library', catalog.article_count],
+      ['Archive candidates available at selection', run.archive?.eligible_candidates ?? 'Not needed'],
+      ['Unfinished archive windows', run.archive?.pending_windows ?? 'Not checked in this run']];
+    const list = document.getElementById('status');
+    for (const [key, value] of entries) {
+      const term = document.createElement('dt'); term.textContent = key;
+      const definition = document.createElement('dd'); definition.textContent = String(value);
+      list.append(term, definition);
+    }
+    // API-derived strings are rendered as text, never as executable markup.
+    document.getElementById('details').textContent = JSON.stringify(run, null, 2);
+  } catch (error) { message.textContent = 'Run details could not be loaded. The execution logs are available below.'; }
+})();
+</script>
+</body>
+</html>
