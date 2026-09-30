@@ -1,275 +1,212 @@
-"""Clients for Europe PMC, Crossref, and arXiv."""
-
+"""Metadata-only clients with explicit pagination and retrieval limits."""
 from __future__ import annotations
 
 import datetime as dt
 import os
 import random
 import time
+from dataclasses import dataclass
 from typing import Any
 from urllib.parse import quote, urlencode
 from xml.etree import ElementTree as ET
 
-from .core import (
-    Paper,
-    clean,
-    crossref_date,
-    normalize_doi,
-    parse_date,
-    request,
-    request_json,
-)
+from .core import (MonitorError, Paper, clean, crossref_date, normalize_doi,
+                   parse_date, request, request_json)
+
+
+@dataclass
+class SourcePage:
+    """One API page. A full page is not evidence that a search is exhausted."""
+    papers: list[Paper]
+    raw_count: int
+    total: int
+    next_cursor: str | None
+
+
+class Records(list):
+    """Remain compatible with list-based callers while exposing coverage."""
+    def __init__(self):
+        super().__init__()
+        self.pages = 0
+        self.raw_count = 0
+        self.limited_queries = 0
+        self.errors: list[str] = []
 
 
 def _contact_email() -> str:
     return os.getenv("CONTACT_EMAIL", "").strip()
 
 
-def fetch_europe_pmc(
-    config: dict[str, Any], since: dt.date, until: dt.date
-) -> list[Paper]:
-    """Fetch bibliographic metadata and abstracts from Europe PMC."""
-
-    terms = " OR ".join(
-        f'"{term}"' for term in config["search"]["database_terms"]
+def _epmc_paper(item: dict[str, Any]) -> Paper | None:
+    title = clean(item.get("title"))
+    source_id = clean(item.get("id") or item.get("pmid"))
+    if not title or not source_id:
+        return None
+    types = item.get("pubType") or item.get("pubTypeList", {}).get("pubType", [])
+    if isinstance(types, list):
+        types = ", ".join(map(clean, types))
+    source = clean(item.get("source") or "MED")
+    # Core responses nest the journal name; journalTitle alone often is absent.
+    journal = (item.get("journalInfo", {}).get("journal", {})
+               or item.get("journalIssue", {}).get("journal", {}))
+    return Paper(
+        sources=["Europe PMC"], source_ids=[f"{source}:{source_id}"], title=title,
+        authors=[clean(a.get("fullName")) for a in item.get("authorList", {}).get("author", []) if clean(a.get("fullName"))],
+        venue=clean(item.get("journalTitle") or journal.get("title")),
+        date=clean(item.get("firstPublicationDate") or item.get("electronicPublicationDate") or item.get("pubYear")),
+        doi=normalize_doi(item.get("doi") or ""),
+        url=f"https://europepmc.org/article/{quote(source)}/{quote(source_id)}",
+        abstract=clean(item.get("abstractText")), publication_type=clean(types),
     )
-    query = f"({terms}) AND FIRST_IDATE:[{since} TO {until}]"
-    params = {
-        "query": query,
-        "format": "json",
-        "resultType": "core",
-        "pageSize": "1000",
-        "sort": "FIRST_IDATE_D desc",
-    }
+
+
+def _crossref_paper(item: dict[str, Any]) -> Paper | None:
+    titles = item.get("title", [])
+    title = clean(titles[0] if isinstance(titles, list) and titles else titles)
+    doi = normalize_doi(item.get("DOI") or "")
+    if not title or not doi:
+        return None
+    venues = item.get("container-title", [])
+    published = next((crossref_date(item[key]) for key in
+        ("published-online", "published", "published-print")
+        if isinstance(item.get(key), dict) and crossref_date(item[key])), "")
+    # Registration dates are not publication dates. Do not substitute 'created'.
+    return Paper(
+        sources=["Crossref"], source_ids=[doi], title=title,
+        authors=[clean(" ".join(filter(None, (a.get("given"), a.get("family"))))) for a in item.get("author", [])],
+        venue=clean(venues[0] if isinstance(venues, list) and venues else venues),
+        date=published, doi=doi, url=f"https://doi.org/{doi}",
+        abstract=clean(item.get("abstract")), publication_type=clean(item.get("type")),
+    )
+
+
+def europe_pmc_page(config: dict[str, Any], since: dt.date, until: dt.date,
+                    *, cursor: str = "*", historical: bool = False,
+                    size: int = 200) -> SourcePage:
+    """Use index dates for discovery, publication dates for archive coverage."""
+    clauses = [" OR ".join('TITLE_ABS:"' + term.replace('"', '') + '"'
+                           for term in config["terms"][group]) for group in ("pk", "ai")]
+    field = "FIRST_PDATE" if historical else "FIRST_IDATE"
+    query = f"({clauses[0]}) AND ({clauses[1]}) AND {field}:[{since} TO {until}]"
+    params = {"query": query, "format": "json", "resultType": "core",
+              "pageSize": str(size), "cursorMark": cursor,
+              "sort": f"{field}_D desc"}
     if email := _contact_email():
         params["email"] = email
-
-    url = (
-        "https://www.ebi.ac.uk/europepmc/webservices/rest/search?"
-        + urlencode(params)
-    )
-    # Europe PMC occasionally returns a short-lived 503. A fifth attempt, with
-    # the shared Retry-After-aware backoff, avoids treating a brief outage as a
-    # persistent source failure.
-    results = request_json(url, retries=5).get("resultList", {}).get("result", [])
-
-    papers: list[Paper] = []
-    for item in results:
-        title = clean(item.get("title"))
-        source_id = clean(item.get("id") or item.get("pmid"))
-        if not title or not source_id:
-            continue
-
-        authors = [
-            clean(author.get("fullName"))
-            for author in item.get("authorList", {}).get("author", [])
-            if clean(author.get("fullName"))
-        ]
-        publication_type = item.get("pubType") or item.get(
-            "pubTypeList", {}
-        ).get("pubType", [])
-        if isinstance(publication_type, list):
-            publication_type = ", ".join(map(clean, publication_type))
-
-        source = clean(item.get("source") or "MED")
-        papers.append(
-            Paper(
-                sources=["Europe PMC"],
-                source_ids=[f"{source}:{source_id}"],
-                title=title,
-                authors=authors,
-                venue=clean(item.get("journalTitle")),
-                date=clean(
-                    item.get("firstPublicationDate")
-                    or item.get("electronicPublicationDate")
-                    or item.get("pubYear")
-                ),
-                doi=normalize_doi(item.get("doi") or ""),
-                url=(
-                    f"https://europepmc.org/article/"
-                    f"{quote(source)}/{quote(source_id)}"
-                ),
-                abstract=clean(item.get("abstractText")),
-                publication_type=clean(publication_type),
-            )
-        )
-    return papers
+    payload = request_json("https://www.ebi.ac.uk/europepmc/webservices/rest/search?" + urlencode(params), retries=2)
+    raw = payload.get("resultList", {}).get("result")
+    if not isinstance(raw, list) or "hitCount" not in payload:
+        raise MonitorError("Europe PMC returned an invalid search response")
+    total = int(payload["hitCount"])
+    next_cursor = payload.get("nextCursorMark") if len(raw) >= size else None
+    return SourcePage([p for item in raw if (p := _epmc_paper(item))],
+                      len(raw), total, next_cursor)
 
 
-def fetch_crossref(
-    config: dict[str, Any], since: dt.date, until: dt.date
-) -> list[Paper]:
-    """Fetch journal articles and posted content registered with Crossref."""
+def crossref_page(config: dict[str, Any], since: dt.date, until: dt.date,
+                  query: str, content_type: str, *, cursor: str = "*",
+                  historical: bool = False, size: int = 150) -> SourcePage:
+    field = "pub" if historical else "created"
+    params = {"query.bibliographic": query,
+              "filter": f"from-{field}-date:{since},until-{field}-date:{until},type:{content_type}",
+              "rows": str(size), "cursor": cursor, "sort": "score", "order": "desc"}
+    if email := _contact_email():
+        params["mailto"] = email
+    message = request_json("https://api.crossref.org/works?" + urlencode(params), retries=2).get("message", {})
+    raw = message.get("items")
+    if not isinstance(raw, list) or "total-results" not in message:
+        raise MonitorError("Crossref returned an invalid search response")
+    total = int(message["total-results"])
+    # Some Crossref cursors do not change between pages. Detect repeated DATA
+    # in the caller, rather than incorrectly treating a repeated token as EOF.
+    next_cursor = message.get("next-cursor") if len(raw) >= size else None
+    time.sleep(0.2)
+    return SourcePage([p for item in raw if (p := _crossref_paper(item))],
+                      len(raw), total, next_cursor)
 
-    source_config = config["sources"]["crossref"]
-    rows = max(1, min(int(source_config.get("rows_per_query", 150)), 1000))
-    date_filter = f"from-created-date:{since},until-created-date:{until}"
-    papers: list[Paper] = []
 
+def _collect(result: Records, fetch_page, max_pages: int) -> None:
+    cursor, received, signatures = "*", 0, set()
+    for _ in range(max_pages):
+        try:
+            page = fetch_page(cursor)
+        except Exception as exc:
+            result.errors.append(clean(exc))
+            return
+        result.pages += 1
+        result.raw_count += page.raw_count
+        received += page.raw_count
+        signature = tuple((p.doi, p.title, tuple(p.source_ids)) for p in page.papers)
+        if page.raw_count and signature in signatures:
+            result.limited_queries += 1
+            return
+        signatures.add(signature)
+        result.extend(page.papers)
+        if not page.raw_count or received >= page.total:
+            return
+        if not page.next_cursor:
+            if received < page.total:
+                result.limited_queries += 1
+            return
+        cursor = page.next_cursor
+    result.limited_queries += 1
+
+
+def fetch_europe_pmc(config: dict[str, Any], since: dt.date, until: dt.date) -> Records:
+    result = Records()
+    limit = int(config["sources"]["europe_pmc"].get("max_pages", 5))
+    _collect(result, lambda cursor: europe_pmc_page(config, since, until, cursor=cursor), limit)
+    if not result.pages and result.errors:
+        raise MonitorError(result.errors[0])
+    return result
+
+
+def fetch_crossref(config: dict[str, Any], since: dt.date, until: dt.date) -> Records:
+    settings = config["sources"]["crossref"]
+    size = max(1, min(int(settings.get("rows_per_query", 150)), 1000))
+    limit = int(settings.get("max_pages", 2))
+    result = Records()
     for query in config["search"]["crossref_queries"]:
         for content_type in ("journal-article", "posted-content"):
-            params = {
-                "query.bibliographic": query,
-                "filter": f"{date_filter},type:{content_type}",
-                "rows": str(rows),
-                "sort": "created",
-                "order": "desc",
-            }
-            if email := _contact_email():
-                params["mailto"] = email
-
-            data = request_json(
-                "https://api.crossref.org/works?" + urlencode(params)
-            )
-            for item in data.get("message", {}).get("items", []):
-                title_values = item.get("title", [])
-                title = clean(
-                    title_values[0]
-                    if isinstance(title_values, list) and title_values
-                    else title_values
-                )
-                doi = normalize_doi(item.get("DOI") or "")
-                if not title or not doi:
-                    continue
-
-                authors = [
-                    clean(
-                        " ".join(
-                            part
-                            for part in (
-                                author.get("given", ""),
-                                author.get("family", ""),
-                            )
-                            if part
-                        )
-                    )
-                    for author in item.get("author", [])
-                ]
-                venues = item.get("container-title", [])
-                venue = clean(
-                    venues[0] if isinstance(venues, list) and venues else venues
-                )
-                published = next(
-                    (
-                        crossref_date(item[field])
-                        for field in (
-                            "published-online",
-                            "published",
-                            "published-print",
-                            "created",
-                        )
-                        if isinstance(item.get(field), dict)
-                        and crossref_date(item[field])
-                    ),
-                    "",
-                )
-
-                papers.append(
-                    Paper(
-                        sources=["Crossref"],
-                        source_ids=[doi],
-                        title=title,
-                        authors=authors,
-                        venue=venue,
-                        date=published,
-                        doi=doi,
-                        url=f"https://doi.org/{doi}",
-                        abstract=clean(item.get("abstract")),
-                        publication_type=clean(item.get("type")),
-                    )
-                )
-            # Stay below Crossref's polite request rate.
-            time.sleep(0.2)
-
-    return papers
+            _collect(result, lambda cursor: crossref_page(
+                config, since, until, query, content_type, cursor=cursor, size=size), limit)
+    if not result.pages and result.errors:
+        raise MonitorError(result.errors[0])
+    return result
 
 
-def build_arxiv_query(
-    config: dict[str, Any], since: dt.date, until: dt.date
-) -> str:
-    """Build a narrow query that is filtered on the arXiv server."""
-
-    pk_terms = config["search"]["database_terms"]
-    ai_terms = config["terms"]["ai"]
-    pk_clause = " OR ".join(f'all:"{term}"' for term in pk_terms)
-    ai_clause = " OR ".join(f'all:"{term}"' for term in ai_terms)
-    date_clause = (
-        f"submittedDate:[{since:%Y%m%d}0000 TO {until:%Y%m%d}2359]"
-    )
-    return f"({pk_clause}) AND ({ai_clause}) AND {date_clause}"
+def build_arxiv_query(config: dict[str, Any], since: dt.date, until: dt.date) -> str:
+    pk = " OR ".join(f'all:"{term}"' for term in config["search"]["database_terms"])
+    ai = " OR ".join(f'all:"{term}"' for term in config["terms"]["ai"])
+    return f"({pk}) AND ({ai}) AND submittedDate:[{since:%Y%m%d}0000 TO {until:%Y%m%d}2359]"
 
 
-def fetch_arxiv(
-    config: dict[str, Any], since: dt.date, until: dt.date
-) -> list[Paper]:
-    """Fetch abstracts from arXiv.
-
-    arXiv is optional because shared GitHub-hosted runner IPs can receive HTTP
-    429 responses. The monitor records such failures internally without adding
-    them to the user-facing report.
-    """
-
-    source_config = config["sources"]["arxiv"]
-    max_results = max(
-        1, min(int(source_config.get("max_results", 50)), 200)
-    )
-    params = {
-        "search_query": build_arxiv_query(config, since, until),
-        "start": "0",
-        "max_results": str(max_results),
-        "sortBy": "submittedDate",
-        "sortOrder": "descending",
-    }
-
-    jitter = max(0, int(source_config.get("jitter_seconds", 60)))
-    if jitter:
+def fetch_arxiv(config: dict[str, Any], since: dt.date, until: dt.date) -> list[Paper]:
+    """Optional preprints; transient failures remain internal to the monitor."""
+    settings = config["sources"]["arxiv"]
+    params = {"search_query": build_arxiv_query(config, since, until), "start": "0",
+              "max_results": str(max(1, min(int(settings.get("max_results", 50)), 200))),
+              "sortBy": "submittedDate", "sortOrder": "descending"}
+    if jitter := max(0, int(settings.get("jitter_seconds", 60))):
         time.sleep(random.uniform(0, jitter))
-
-    user_agent = "poppk-ai-literature-monitor/6.0"
+    agent = "poppk-ai-literature-monitor/7.0"
     if email := _contact_email():
-        user_agent += f" (mailto:{email})"
-
-    payload = request(
-        "https://export.arxiv.org/api/query?" + urlencode(params),
-        accept="application/atom+xml",
-        headers={"User-Agent": user_agent},
-        retries=1,
-    )
-    root = ET.fromstring(payload)
-    namespace = {
-        "atom": "http://www.w3.org/2005/Atom",
-        "arxiv": "http://arxiv.org/schemas/atom",
-    }
-
-    papers: list[Paper] = []
-    for entry in root.findall("atom:entry", namespace):
-        title = clean(entry.findtext("atom:title", "", namespace))
-        url = clean(entry.findtext("atom:id", "", namespace))
-        published = clean(entry.findtext("atom:published", "", namespace))
+        agent += f" (mailto:{email})"
+    root = ET.fromstring(request("https://export.arxiv.org/api/query?" + urlencode(params),
+        accept="application/atom+xml", headers={"User-Agent": agent}, retries=1))
+    ns = {"atom": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+    papers = []
+    for entry in root.findall("atom:entry", ns):
+        title = clean(entry.findtext("atom:title", "", ns))
+        url = clean(entry.findtext("atom:id", "", ns))
+        published = clean(entry.findtext("atom:published", "", ns))
         date = parse_date(published)
         if not title or not url or (date and not since <= date <= until):
             continue
-
-        arxiv_id = url.rstrip("/").split("/")[-1]
-        papers.append(
-            Paper(
-                sources=["arXiv"],
-                source_ids=[arxiv_id],
-                title=title,
-                authors=[
-                    clean(author.findtext("atom:name", "", namespace))
-                    for author in entry.findall("atom:author", namespace)
-                ],
-                venue="arXiv",
-                date=published,
-                doi=normalize_doi(
-                    entry.findtext("arxiv:doi", "", namespace)
-                ),
-                url=url.replace("http://", "https://"),
-                abstract=clean(
-                    entry.findtext("atom:summary", "", namespace)
-                ),
-                publication_type="preprint",
-            )
-        )
+        papers.append(Paper(
+            sources=["arXiv"], source_ids=[url.rstrip("/").split("/")[-1]], title=title,
+            authors=[clean(a.findtext("atom:name", "", ns)) for a in entry.findall("atom:author", ns)],
+            venue="arXiv", date=published, doi=normalize_doi(entry.findtext("arxiv:doi", "", ns)),
+            url=url.replace("http://", "https://"), abstract=clean(entry.findtext("atom:summary", "", ns)),
+            publication_type="preprint"))
     return papers
