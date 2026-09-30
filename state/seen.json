@@ -1,6 +1,68 @@
 {
-  "last_selection_date_jst": "2026-09-29",
-  "last_success_utc": "2026-09-30T00:57:26.894119+00:00",
+  "last_delivery_date_jst": "2026-10-01",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/54",
+  "last_run": {
+    "archive": {
+      "cached_candidates_before": 0,
+      "completed_windows": 1,
+      "eligible_candidates": 24,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 132,
+      "repeated_pages": 0,
+      "requests": 1,
+      "screening": {
+        "already_reported": 34,
+        "duplicates": 2,
+        "eligible_unreported": 24,
+        "excluded_publication_type": 40,
+        "missing_method_evidence": 11,
+        "retrieved": 111,
+        "unique": 109
+      },
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-01 01:02 JST",
+    "delivery_status": "sent",
+    "notification_urls": [
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/54"
+    ],
+    "recent_coverage": {
+      "Crossref": {
+        "failed_queries": 0,
+        "limited_queries": 17,
+        "pages": 36
+      },
+      "Europe PMC": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
+      }
+    },
+    "recent_screening": {
+      "already_reported": 4,
+      "duplicates": 2433,
+      "excluded_publication_type": 138,
+      "missing_ai_evidence": 15,
+      "missing_method_evidence": 1,
+      "missing_pk_evidence": 2689,
+      "retrieved": 5280,
+      "unique": 2847
+    },
+    "selected_count": 1,
+    "selection_status": "selected",
+    "selection_type": "historical",
+    "source_status": "ok",
+    "warnings": {}
+  },
+  "last_selection_date_jst": "2026-10-01",
+  "last_success_utc": "2026-09-30T16:02:12.388200+00:00",
+  "pending_notifications": [],
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -8,6 +70,12 @@
       "notified_at": "2026-09-22T23:57:21.885737+00:00",
       "selection_type": "historical",
       "title": "A Pharmaco-Epidemiological Research Program Leveraging a Nationwide Database of Kidney Transplantation."
+    },
+    "doi:10.1002/prp2.70241": {
+      "doi": "10.1002/prp2.70241",
+      "selected_at": "2026-09-30T16:02:12.388200+00:00",
+      "selection_type": "historical",
+      "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
     },
     "doi:10.1002/psp4.70280": {
       "doi": "10.1002/psp4.70280",
@@ -215,6 +283,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:europe pmc:med:41928707": {
+      "doi": "10.1002/prp2.70241",
+      "selected_at": "2026-09-30T16:02:12.388200+00:00",
+      "selection_type": "historical",
+      "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
     },
     "source:europe pmc:med:42076151": {
       "doi": "10.3390/pharmaceutics18040501",
@@ -515,6 +589,12 @@
       "selection_type": "new",
       "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
     },
+    "title:850e5863b9d0238d349d1290": {
+      "doi": "10.1002/prp2.70241",
+      "selected_at": "2026-09-30T16:02:12.388200+00:00",
+      "selection_type": "historical",
+      "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
+    },
     "title:866e560f6e23d545f013fcfd": {
       "doi": "10.64898/2026.05.05.26352278",
       "notified_at": "2026-09-01T00:56:28.340578+00:00",
@@ -623,22 +703,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-30"
+    "arxiv": "2026-10-01"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
+      "last_attempt_utc": "2026-09-30T16:02:12.388200+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
-      "records": 2700,
+      "last_attempt_utc": "2026-09-30T16:02:12.388200+00:00",
+      "records": 5273,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
-      "records": 877,
+      "last_attempt_utc": "2026-09-30T16:02:12.388200+00:00",
+      "records": 7,
       "status": "ok"
     }
   }

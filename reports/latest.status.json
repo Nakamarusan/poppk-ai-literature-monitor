@@ -1,0 +1,59 @@
+{
+  "archive": {
+    "cached_candidates_before": 0,
+    "completed_windows": 1,
+    "eligible_candidates": 24,
+    "exhausted": false,
+    "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+    "pending_windows": 132,
+    "repeated_pages": 0,
+    "requests": 1,
+    "screening": {
+      "already_reported": 34,
+      "duplicates": 2,
+      "eligible_unreported": 24,
+      "excluded_publication_type": 40,
+      "missing_method_evidence": 11,
+      "retrieved": 111,
+      "unique": 109
+    },
+    "split_windows": 0
+  },
+  "checked_at": "2026-10-01 01:02 JST",
+  "delivery_status": "sent",
+  "notification_urls": [
+    "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/54"
+  ],
+  "recent_coverage": {
+    "Crossref": {
+      "failed_queries": 0,
+      "limited_queries": 17,
+      "pages": 36
+    },
+    "Europe PMC": {
+      "failed_queries": 0,
+      "limited_queries": 0,
+      "pages": 1
+    },
+    "arXiv": {
+      "failed_queries": 0,
+      "limited_queries": 0,
+      "pages": 1
+    }
+  },
+  "recent_screening": {
+    "already_reported": 4,
+    "duplicates": 2433,
+    "excluded_publication_type": 138,
+    "missing_ai_evidence": 15,
+    "missing_method_evidence": 1,
+    "missing_pk_evidence": 2689,
+    "retrieved": 5280,
+    "unique": 2847
+  },
+  "selected_count": 1,
+  "selection_status": "selected",
+  "selection_type": "historical",
+  "source_status": "ok",
+  "warnings": {}
+}

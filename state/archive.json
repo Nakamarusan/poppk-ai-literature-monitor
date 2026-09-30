@@ -1,0 +1,1565 @@
+{
+  "completed_windows": 1,
+  "cycle_started": "2026-10-01",
+  "last_check": "2026-10-01",
+  "last_run": {
+    "cached_candidates_before": 0,
+    "completed_windows": 1,
+    "eligible_candidates": 24,
+    "exhausted": false,
+    "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+    "pending_windows": 132,
+    "repeated_pages": 0,
+    "requests": 1,
+    "screening": {
+      "already_reported": 34,
+      "duplicates": 2,
+      "eligible_unreported": 24,
+      "excluded_publication_type": 40,
+      "missing_method_evidence": 11,
+      "retrieved": 111,
+      "unique": 109
+    },
+    "split_windows": 0
+  },
+  "pending": [
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2025-01-01",
+      "source": "europe_pmc",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2024-01-01",
+      "source": "europe_pmc",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2023-01-01",
+      "source": "europe_pmc",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2022-01-01",
+      "source": "europe_pmc",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2021-01-01",
+      "source": "europe_pmc",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2020-01-01",
+      "source": "europe_pmc",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-01-01",
+      "source": "crossref",
+      "until": "2026-10-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2025-01-01",
+      "source": "crossref",
+      "until": "2025-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2024-01-01",
+      "source": "crossref",
+      "until": "2024-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2023-01-01",
+      "source": "crossref",
+      "until": "2023-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2022-01-01",
+      "source": "crossref",
+      "until": "2022-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2021-01-01",
+      "source": "crossref",
+      "until": "2021-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2020-01-01",
+      "source": "crossref",
+      "until": "2020-12-31"
+    }
+  ],
+  "pool": [
+    {
+      "abstract": "Abstract The human gut microbiome encodes a large spectrum of quorum sensing peptides (QSPs) playing a vital role in microbial communication and host-microbial interactions, yet discovery and functional characterization of novel QSPs are still limited. Here, we developed an integrated artificial intelligence (AI)-driven pipeline combining large-scale genome mining, machine learning-based screening, Alphafold3 structural modelling, and molecular dynamics simulations to systematically identify 1,670 novel candidate QSPs (cQSPs) from 12,488 human gut microbial genomes. Subsequent experimental screening identified 29 cQSPs with α-glucosidase inhibitory activities. Notably, GIVLVPTSLVSG (GIVL), an Agr-derived QSP from Clostridium tyrobutyricum, not only exhibited canonical quorum-sensing functions, but also demonstrated a stable interaction with and strong inhibitory activity against α-glucosidase. In diabetic mice, administration of GIVL significantly improved glucose homeostasis and insulin sensitivity accompanied by increased production of short-chain fatty acids (SCFAs) in the gut microbiome. Our findings expand the QSP database and establish a generalizable, AI-enabled framework for the systematic discovery of microbiome-derived peptides with therapeutic potential in metabolic disease, positioning QSPs as promising sources of therapeutics for diabetes and other chronic metabolic disorders.",
+      "authors": [
+        "Kristiansen K",
+        "Xue c",
+        "Chen J",
+        "Kang W",
+        "Peng L",
+        "Liu J",
+        "Zhou X",
+        "Liu Y",
+        "Wang D",
+        "Chen X",
+        "Yang Y",
+        "Feng Y",
+        "Wang M",
+        "Yao Z",
+        "Wan H",
+        "Ma X",
+        "Zhu C",
+        "Liu G",
+        "Wu R",
+        "Li H",
+        "Wu S",
+        "Liu R",
+        "Lee SM",
+        "Yang H",
+        "Fan G",
+        "Yin Y",
+        "Xue C"
+      ],
+      "date": "2026-09-01",
+      "doi": "10.21203/rs.3.rs-9855030/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1309953"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome",
+      "url": "https://europepmc.org/article/PPR/PPR1309953",
+      "venue": ""
+    },
+    {
+      "abstract": "Hemophilia A is a genetic bleeding disorder caused by a deficiency or absence of Factor VIII, leading to recurrent and spontaneous hemorrhages. Standard treatment typically involves regular prophylactic infusions of clotting factors to prevent bleeding episodes. However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk. This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment. Within this framework, the control policy is learned using a Deep Q‑Network (DQN), enabling the agent to adapt treatment decisions through interaction with the simulated physiological environment. Unlike conventional methods, this framework allows the agent to observe continuous physiological states via Endogenous Thrombin Potential (ETP) and learn optimal dosing policies through trial-and-error. The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy. Simulation results from a virtual cohort (N = 200) demonstrate that the DQN agent achieves a safety profile comparable to Bayesian MIPD while significantly improving factor utilization efficiency. Notably, in patients with low bleeding‑risk phenotypes, the DRL‑based approach achieved a similar bleeding rate to MIPD while reducing annual factor VIII consumption by approximately 39% relative to MIPD and by up to 70% compared to the reference prophylaxis protocol adopted as the simulation baseline. These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.",
+      "authors": [
+        "Rabbani M",
+        "Razavi SE",
+        "Goharimanesh M",
+        "Razavi SE"
+      ],
+      "date": "2026-06-04",
+      "doi": "10.1007/s10928-026-10041-y",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:42243590"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL.",
+      "url": "https://europepmc.org/article/MED/42243590",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
+    {
+      "abstract": "The selection of a \"good\" model usually involves a combination of objective and subjective criteria. Although many aspects of model quality can be expressed numerically, certain desirable characteristics remain difficult-or even impossible-to quantify precisely. Multi-objective optimization (MOO) provides a systematic way to handle this challenge by explicitly incorporating and balancing both objective (measurable) and subjective (judgment-based) considerations when choosing among candidate solutions. The generated Pareto front represents a set of non-dominated models where no single solution can be improved in one objective without sacrificing the performance in another objective. Using the non-dominated sorting genetic algorithm II (NSGA-II), an implementation of MOO, we simultaneously considered objective function value and number of estimated parameters as competing criteria. Concentration measurements of 17-DMAG, quetiapine, clozapine and ziprasidone were applied to build population pharmacokinetic models through traditional stepwise search, machine learning based single-objective hybrid genetic algorithm (SOHGA) and MOO. Local downhill search with MOO was also assessed in this study. While both objectives improved, models with lower objective function value generally contained more estimated parameters. The number of non-dominated solutions for DMAG, ziprasidone, clozapine, and quetiapine was 17, 9, 9, and 13, respectively. The optimal model selected by SOHGA appeared on the Pareto front for DMAG, ziprasidone and clozapine datasets. Overall, MOO provides objective transparency to the cost of tradeoffs between competing model objectives, allowing researchers to better contextualize subjective criteria (e.g., biological plausibility, improvements in diagnostic plots) when aligning model selection with clinical context.",
+      "authors": [
+        "Li X",
+        "Sale M",
+        "Craig J",
+        "Nieforth K",
+        "Mazur A",
+        "Bies RR"
+      ],
+      "date": "2026-05-16",
+      "doi": "10.1007/s10928-026-10036-9",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:42143189"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin.",
+      "url": "https://europepmc.org/article/MED/42143189",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
+    {
+      "abstract": "Quantitative Systems Pharmacology (QSP) models play an inherently interventional role in pharmaceutical research and development, functioning as executable causal systems for designing, evaluating, and replacing clinical trials. However, deploying QSP as an experimental planning engine remains constrained by the difficulty of translating unstructured literature descriptions of clinical or preclinical scenarios into reproducible, simulation-ready model interventions. Motivated by this issue, we propose an agent-based framework that operationalizes QSP models as intervention-ready experimental systems by automatically extracting and executing literature-derived scenarios. The framework combines semantic grounding of model entities with a large language model (LLM)-driven Scenario Extractor and a dual-agent Scenario Mapper . Rather than relying on opaque, single-shot reasoning, our pipeline converts free-text interventions into precise parameter configurations through discrete, verifiable work orders. Moreover, our dynamic Human-in-the-Loop (HITL) strategy empowers modelers to resolve biological ambiguities interactively. Across four diverse kinetic ordinary differential equation (ODE)/QSP models and seven Subject Matter Expert (SME)-curated literature scenarios, our model resolved all selected scenarios into correct executable parameter changes, including multi-dose interventions, unit conversions, no-op scenarios, and ambiguity-triggered HITL cases, demonstrating that structured collaboration between experts and agentic systems can resolve scenarios that standalone Systems Biology Markup Language (SBML) reasoning LLM calls or prior agentic efforts operating on processed SBML data handle unreliably.",
+      "authors": [
+        "Kazemeini A",
+        "Prieto J",
+        "Balaji Kuttae S",
+        "Siokis A",
+        "Singh G",
+        "Passban P",
+        "Andreani T"
+      ],
+      "date": "2026-05-11",
+      "doi": "10.64898/2026.05.06.723244",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1209291"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Talk2QSP: Deriving Executable Scenarios from Unstructured Literature via Human-in-the-Loop Agents",
+      "url": "https://europepmc.org/article/PPR/PPR1209291",
+      "venue": ""
+    },
+    {
+      "abstract": "Purpose Voriconazole (VCZ) exhibits nonlinear pharmacokinetics, a narrow therapeutic window, and substantial interindividual variability. Inaccurate dosing may lead to underexposure or overexposure, causing treatment failure or toxicity. Existing population pharmacokinetic (PPK)-machine learning (ML) models either lack mechanistic interpretability or inadequately characterize VCZ exposure. Therefore, we propose a hybrid model embedding ML within a PPK framework to associate clinical covariates with VCZ exposure. Patients and methods A total of 489 inpatients receiving VCZ at the Third Affiliated Hospital of Soochow University between March 2020 and May 2024 were included. We identified candidate predictors of CL/F using dual-feature selection with Boruta and LASSO. Overlapping features were used to train four ML algorithms to estimate CL/F. The predicted CL/F values were incorporated into a steady-state PPK equation to back-calculate VCZ concentrations, followed by quadratic calibration to reduce bias. Causal mediation analysis assessed pathways from key covariates to VCZ concentration via CL/F, and Shapley Additive exPlanations (SHAP) values were used to quantify feature contributions. Results Under the PK-informed hybrid strategy, XGBoost achieved the best concentration prediction (R 2 = 0.739, MAE = 0.357, RMSE = 0.526, MAPE = 7.78%), outperforming a direct ML approach treating PK-related variables as inputs (CatBoost: R 2 = 0.459). The temporal external validation performance of the hybrid model remained stable (R 2 = 0.661, MAE = 0.473, RMSE = 0.651, MAPE = 14.71%). Mediation analysis demonstrated that CRP affected VCZ exposure primarily through CL/F, whereas albumin and age acted as modifiers. A web-based calculator was developed for real-time individualized prediction and assistance with clinical-dose adjustment. Conclusion The hybrid model improved VCZ concentration prediction versus direct ML modeling while preserving CL/F-centered mechanistic interpretability. It may help guide dose adjustment and reduce clinically relevant misdosing. This framework may be generalizable to other narrow-therapeutic-window drugs.",
+      "authors": [
+        "Zhou Y",
+        "Yun Y",
+        "Chen S",
+        "Liu X",
+        "Liu H",
+        "Ren J",
+        "Lu M",
+        "Ling J",
+        "Yang X",
+        "Zhou Z",
+        "Osei JA",
+        "Soheili R",
+        "Zou J",
+        "Hu N"
+      ],
+      "date": "2026-05-07",
+      "doi": "10.2147/dddt.s489712",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:42137118"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "An Interpretable PK-Informed Hybrid Model for Voriconazole Exposure Prediction: Roles of CYP2C19 Genotype and Inflammation.",
+      "url": "https://europepmc.org/article/MED/42137118",
+      "venue": "Drug design, development and therapy"
+    },
+    {
+      "abstract": "Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolating predictions to populations whose characteristics differ from those represented in the training datasets. A machine learning model using only three sampling timepoints has been developed and validated in different datasets, enabling accurate estimation of RAL AUC₀-₁₂. This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.",
+      "authors": [
+        "De Lucca Thomaz M",
+        "de Azevedo KLR",
+        "Paz TA",
+        "Nardotto GHB",
+        "de Lima Moreira F",
+        "Duarte G",
+        "Woillard JB",
+        "Lanchote VL",
+        "Ximenez JPB"
+      ],
+      "date": "2026-05-06",
+      "doi": "10.1208/s12248-026-01248-5",
+      "publication_type": "Research Support, Non-U.S. Gov't, Journal Article",
+      "source_ids": [
+        "MED:42091773"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy.",
+      "url": "https://europepmc.org/article/MED/42091773",
+      "venue": "The AAPS journal"
+    },
+    {
+      "abstract": "Heterogeneity in sporadic Parkinson’s Disease (PD) is a critical problem that drives variable rates of progression and treatment response and complicates clinical trials. Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints. Simulated patients or digital twins may offer a solution. We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model. Using a relational, tree-structured representation and domain-specific fine-tuning, the model produces patient-level records with longitudinal clinical, imaging, and biomarker data. Fidelity was assessed through distributional similarity, correlation structure, and neurologist review. Utility was tested by training diagnostic classifiers, reproducing a published pharmacometric disease progression model applied to in silico trials, and by extracting a stringent dopamine–motor impairment relationship at early PD stages. Privacy was evaluated via identical match share, distance-to-closest-record, and membership inference attacks. These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.",
+      "authors": [
+        "Merlo Pich E",
+        "Pomponio O",
+        "Magno MA",
+        "Berti M",
+        "Li Lu L",
+        "Coser A",
+        "Cani I",
+        "Calandra Buonaura G",
+        "Valenti M",
+        "Cividini C",
+        "Semenzato N",
+        "Baggi A",
+        "Saccani S",
+        "Franzini JM"
+      ],
+      "date": "2026-04-29",
+      "doi": "10.64898/2026.04.28.26351471",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1265459"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Artificial Intelligence, LLM-based generation of synthetic patients with Parkinson’s Disease: towards a digital twin paradigm for in silico studies",
+      "url": "https://europepmc.org/article/PPR/PPR1265459",
+      "venue": ""
+    },
+    {
+      "abstract": "Ion channels are essential for signal processing and propagation in neural cells. Voltage-gated ion channels permeable to potassium (Kv) form one of the most prominent channel families. Techniques used to model the voltage-dependent gating of Kv channels date back to Hodgkin and Huxley (1952). Different Kv types can display radically different kinetic properties, requiring different mathematical models. However, the construction of Hodgkin-Huxley-like (HH-like) models is generally complex and time consuming due to the number of parameters, their tuning and having to choose functional forms to model gating. In addition to the between-Kv type heterogeneity, there can be significant within-Kv type kinetic heterogeneity between different cells with genetically identical channels. Since HH-like models do not account for such variability, extensions to it are necessary. We use scientific machine learning (SciML), the integration of machine learning methodologies with existing scientific models, and non-linear mixed effects (NLME) modelling to bypass the limitations of HH-like modelling. NLME is a modelling methodology that takes into account both within- and between-subject variability. These tools allowed us to complement the HH-like modelling and construct a unified SciML HH-like model that fits the recordings from 20 different Kv types. The unified SciML HH-like model produced closer fits to the data compared to a set of seven previous HH-like models and was able to represent the highly heterogeneous data from different cells. Our model may be the first step in producing a SciML foundation model for ion channels that would be capable of modelling the gating kinetics of any ion channel type.",
+      "authors": [
+        "Linkevicius D",
+        "Chadwick A",
+        "Stefan MI",
+        "Sterratt DC"
+      ],
+      "date": "2026-04-27",
+      "doi": "10.1371/journal.pcbi.1013078",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:42044162"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "One model to rule them all: Unification of voltage-gated potassium channel models via deep non-linear mixed effects modelling.",
+      "url": "https://europepmc.org/article/MED/42044162",
+      "venue": "PLoS computational biology"
+    },
+    {
+      "abstract": "Abstract Precision dosing is a cornerstone of individualized therapeutics, yet its implementation is frequently hindered by clinical pharmacokinetic data that are characteristically sparse, irregularly sampled, and highly heterogeneous. Traditional mechanistic models provide structural interpretability but often lack the flexibility to capture complex patient-specific deviations, whereas purely data-driven deep learning models are prone to pharmacological inconsistency and poor generalization in low-data regimes. Here we present Sim2Real-PK, a hybrid neural-mechanistic framework that reconceptualizes pharmacokinetic forecasting as a time-aware latent state-space trajectory inference task. Sim2Real-PK first pretrains a neural dynamics core on massive synthetic datasets derived from mechanistic ordinary differential equation systems to internalize universal kinetic laws, then adapts to real-world clinical heterogeneity through a constrained residual correction pathway. Validated on individual participant data from the YODA Project for two drugs representing distinct pharmacological regimes—ibrutinib and daratumumab—Sim2Real-PK significantly outperformed conventional population-level baselines. The framework improved the F50 for ibrutinib from 32.1% to 39.9% and the F20 for daratumumab from 38.8% to 51.1%, while faithfully recovering expected linear and nonlinear pharmacological behaviors. Crucially, the model successfully resolved latent pharmacokinetic heterogeneity within patient cohorts that remained obscured under traditional analytical frameworks. These results demonstrate that mechanistically-anchored neural adaptation can bridge the gap between biological rigor and predictive agility, providing a robust foundation for next-generation model-informed precision dosing.",
+      "authors": [
+        "Han L",
+        "Chen X",
+        "Wang H",
+        "Zhang Z",
+        "Liu T",
+        "Wu M",
+        "Wang Z",
+        "Pang W",
+        "Li J",
+        "Wang J",
+        "Kong D",
+        "Jia M",
+        "Hao H",
+        "Yu Y",
+        "Yu G"
+      ],
+      "date": "2026-04-24",
+      "doi": "10.21203/rs.3.rs-9308510/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1182052"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data",
+      "url": "https://europepmc.org/article/PPR/PPR1182052",
+      "venue": ""
+    },
+    {
+      "abstract": "The double hidden-layer neural network has increasingly been applied in tree height modeling due to its superior performance. To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction. Taking the Larix olgensis forest plantation in Jilin Province as the research object, a double hidden-layer back propagation (BP) neural network was established for tree height prediction by adopting trial and error, k-fold cross-validation, and near-domain optimization strategies. In constructing the nonlinear mixed-effects model, the overall and local differences in forest growth data, as well as the autocorrelation among the various levels of data, were considered. Accordingly, after determining the base model, random effects were introduced, the correlation variance-covariance matrix was calculated, and random parameters were estimated to compare the predictive performance of the two aforementioned models. For the mixed-effects model, the coefficient of determination R 2 was 0.8590, the root mean square error (RMSE) was 1.6230, and the mean absolute error (MAE) was 2.2658. For the double hidden-layer BP neural network, the R 2 reached 0.9068 (an increase of 5.56%), the RMSE was 1.3197 (a decrease of 18.69%), and the MAE was 1.2736 (a decrease of 43.79%). The results demonstrate that the double hidden-layer BP neural network is superior to the nonlinear mixed-effects model for tree height prediction. Therefore, the results provide a more accurate method for tree height prediction.",
+      "authors": [
+        "Shen J",
+        "Lei X",
+        "Li Y",
+        "Pan Y",
+        "Wang G"
+      ],
+      "date": "2026-04-10",
+      "doi": "10.3390/plants15081176",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:42075378"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model.",
+      "url": "https://europepmc.org/article/MED/42075378",
+      "venue": "Plants (Basel, Switzerland)"
+    },
+    {
+      "abstract": "Abstracts Background Quantitative systems pharmacology (QSP) models provide mechanistic insight into drug response but are limited by labor-intensive, expert-driven workflows. We developed an AI-assisted QSP (AI-QSP) framework that integrates large language models (LLMs) with SBML-based modeling to enable automated reconstruction, extension, and calibration of mechanistic models. Methods The framework was applied to a published CAR-T QSP model. The model was reconstructed in SBML and extended via LLM-guided prompts to incorporate key resistance mechanisms: T-cell exhaustion, PD-1/PD-L1 checkpoint regulation, and tumor antigen escape. Model development followed an iterative expert-in-the-loop workflow. The resulting model (21 reactions, 9 species) was calibrated to synthetic benchmark data using 19-parameter optimization. Model credibility was assessed using ASME V&V 40 and ICH M15 principles, including global sensitivity and profile-likelihood analyses. Results The calibrated model reproduced benchmark dynamics with high accuracy (mean log-RMSE = 0.132). Sensitivity analysis identified CAR-T killing and bystander cytotoxicity as dominant drivers of tumor response. Profile-likelihood analysis showed 71% of parameters were practically identifiable, with remaining parameters prioritised for future data-driven refinement. Conclusions AI-assisted QSP modeling enables reproducible, scalable model reconstruction and evolution while maintaining mechanistic transparency and regulatory alignment. This framework provides a foundation for accelerating model-informed drug development in cell and gene therapies.",
+      "authors": [
+        "Goryanin I",
+        "Demin O",
+        "Goryanin I"
+      ],
+      "date": "2026-04-07",
+      "doi": "10.64898/2026.04.05.716273",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1216046"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "An AI-Assisted Workflow for Reconstruction, Extension, and Calibration of Quantitative Systems Pharmacology Models",
+      "url": "https://europepmc.org/article/PPR/PPR1216046",
+      "venue": ""
+    },
+    {
+      "abstract": "Background and objective Status epilepticus is a life-threatening neurological emergency. Ketamine combined with levetiracetam is a promising therapy being investigated for established status epilepticus. Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints. Existing population pharmacokinetic methods with Bayesian forecasting require multiple samples per individual, which is difficult in this context. The objective of this work was to develop a framework that utilizes population pharmacokinetic-simulated datasets as inputs for machine learning models to predict early ketamine exposure in pediatric status epilepticus. Methods We simulated 100,000 concentration-time profiles with covariates using a published population pharmacokinetic model. Additional predictor variables were simulated using distributions from a previously published status epilepticus trial. The simulated data were used to train machine learning algorithms to predict early exposure (AUC 0-2h ) using two samples per individual. The machine learning models were validated internally. Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM). The ensemble models (GBM and RF) achieved superior performance, with internal validation results indicating no overfitting. The root mean square errors for RF and GBM were 0.183 mg h/L and 0.185 mg h/L respectively, while mean absolute errors of RF and GBM were 0.103 mg h/L and 0.102 mg h/L, respectively CONCLUSIONS: We demonstrate the feasibility of developing population pharmacokinetic-informed machine learning models to accurately predict early ketamine exposures in pediatric status, where pharmacokinetic sampling is a challenge.",
+      "authors": [
+        "Bamgboye AO",
+        "Coles LD",
+        "Illamola SM",
+        "Wolfson J",
+        "Cloyd JC"
+      ],
+      "date": "2026-04-03",
+      "doi": "10.1007/s13318-026-00996-1",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41933112"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach.",
+      "url": "https://europepmc.org/article/MED/41933112",
+      "venue": "European journal of drug metabolism and pharmacokinetics"
+    },
+    {
+      "abstract": "In population pharmacokinetics (PopPK), non-linear mixed effects (NLME) models are used to simultaneously describe a drug's pharmacokinetics (PK) and dynamics (PD) in a patient population using systems of ordinary differential equations. In this field, machine learning is mainly used for data preparation, hypothesis generation, predictive modeling, and model validation. Some approaches to integrate artificially generated information have already been explored, but real-world application is still limited. We therefore conducted a proof-of-concept study to analyze the ability of generative artificial intelligence (AI) to create artificial patient profiles to augment PopPK data sets and assess their influence on parameter estimates. We defined the pharmacokinetic parameters of a hypothetical drug and simulated the concentration curves of 20 patients. We then trained Wasserstein Generative Adversarial Networks (WGANs) with gradient penalty (GP) to generate artificial patients. The data distribution of original and artificial patients was statistically indistinguishable as shown by the Maximum Mean Discrepancy test. Therefore, the WGAN-GP is neither overfitted, that is producing only single instances of artificial patients, nor underfitted, that is producing unrealistic artificial patients. We then combined different shares of original and artificial patients in separate data sets to build and compare PopPK model estimates. Addition of artificial patients led to narrower confidence intervals, indicating more robust parameter estimates, and accentuated the allometric effect of weight on the volume of distribution. In conclusion, we provide a proof-of-concept that generative AI can be used to augment pharmacokinetic data sets, with preliminary evidence suggesting improved parameter estimation.",
+      "authors": [
+        "Schöning V",
+        "Hammann F"
+      ],
+      "date": "2026-04-01",
+      "doi": "10.1002/prp2.70241",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41928707"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence.",
+      "url": "https://europepmc.org/article/MED/41928707",
+      "venue": "Pharmacology research & perspectives"
+    },
+    {
+      "abstract": "Tumor dynamic models are vital for evaluating oncology treatments and guiding clinical drug development decisions. However, few studies rigorously assess their predictive capabilities, especially when forecasting tumor trajectories from clinical trials with short or inconsistent follow-up across treatment arms. Poor predictive performance or biases related to follow-up time could potentially limit the general utility of tumor growth inhibition (TGI) models. This study quantitatively evaluates prediction bias across several established tumor dynamic models, comparing five classical pharmacometric TGI models with the deep learning-based Tumor Dynamic Neural-ODE (TDNODE) framework. Using time-truncated clinical trial data from 3106 patients with non-small cell lung cancer (NSCLC) across four completed atezolizumab phase III studies, we consistently observed moderate-to-high positive bias in the predictions from pharmacometric models, particularly with more limited follow-up. By examining the structures of these models and comparing them to observed data, we highlight how the assumed kinetic patterns potentially lead to biased parameter estimation and systemic overestimation of tumor size when applied to immature datasets. In contrast, the TDNODE framework, using deep learning, demonstrated promising early results, exhibiting improved predictive performance in the same evaluations. These findings underscore the critical need to address prediction bias in tumor dynamic modeling with immature data and to consider alternative approaches to established paradigms for certain drug development applications. This study also generally demonstrates the potential of novel methods, such as deep learning, to potentially enhance the reliability of tumor dynamics modeling, especially in challenging early-phase clinical decision-making scenarios.",
+      "authors": [
+        "Turner DC",
+        "Laurie M",
+        "Li S",
+        "Ngo HX",
+        "Li C",
+        "Jin JY",
+        "Lu J",
+        "Brooks L"
+      ],
+      "date": "2026-04-01",
+      "doi": "10.1002/psp4.70239",
+      "publication_type": "Comparative Study, research-article, Journal Article",
+      "source_ids": [
+        "MED:41919988"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Follow-Up Bias in Tumor Dynamic Modeling: A Comparison of Classical and Neural-ODE Approaches.",
+      "url": "https://europepmc.org/article/MED/41919988",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Purpose Tacrolimus (TAC) is a calcineurin inhibitor widely used for immunosuppressive therapy. It has a narrow therapeutic window and substantial interindividual variability, making therapeutic drug monitoring (TDM) essential. Traditional population pharmacokinetic (PPK) models have limited capacity to capture complex nonlinear relationships and multifactorial interactions. This study aimed to integrate PPK and machine learning (ML) to predict TAC plasma concentration. Patients and methods A total of 182 consecutive patients with nephrotic syndrome (NS) who received oral TAC therapy and underwent TDM and CYP3A5 genotyping at the First Affiliated Hospital of Xinjiang Medical University between January 2018 and December 2023 were enrolled. Individual PK parameters derived from the PPK model were incorporated as new features into ML models. Feature selection was performed using recursive feature elimination with cross-validation (RFECV), and the union of features selected by the three models with the highest R 2 was used to construct the final feature set. Nine ML models were then developed, and the three best-performing models were combined into a weighted ensemble. Model performance was assessed by R 2 , mean absolute error (MAE), and root mean square error (RMSE). SHAP (SHapley Additive exPlanations) was used to interpret feature contributions. Results Incorporating PK parameters resulted in a consistent improvement in predictive performance compared with the model without PK parameters (R 2 : 0.633 vs. 0.602). The weighted ensemble of CatBoost, AdaBoost, and GraBoost (5:3:2) achieved the best performance (R 2 = 0.633, MAE = 1.081, RMSE = 1.377), whereas the optimal weighting without PK parameters was 3:6:1 (R 2 = 0.602, MAE = 1.139, RMSE = 1.432). SHAP analysis indicated that PK parameters was the most influential feature, exceeding conventional biochemical indicators. Conclusion Incorporating PK parameters enhanced model predictive performance, providing quantitative support for individualized TAC dosing and facilitating safer and more precise clinical applications.",
+      "authors": [
+        "Zhou Y",
+        "Zhou Z",
+        "Chen S",
+        "Zhu L",
+        "Yun Y",
+        "Yuan Y",
+        "Chen C",
+        "Zou J",
+        "Zhao J"
+      ],
+      "date": "2026-03-23",
+      "doi": "10.2147/dddt.s576598",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41908942"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome.",
+      "url": "https://europepmc.org/article/MED/41908942",
+      "venue": "Drug design, development and therapy"
+    },
+    {
+      "abstract": "Background: Antiviral therapies are widely used during pregnancy and are generally considered safe, pregnancy-specific severe safety signals continue to be observed in post-marketing pharmacovigilance data. These signals are rarely interpreted within an integrated mechanistic framework. Methods: We analysed pregnancy-related EudraVigilance reports (2015-2025) using a previously network-based pharmacovigilance framework. Established ADR clusters were treated as fixed phenotypes and integrated with in silico ADMET liabilities, literature-derived pregnancy pharmacokinetic/pharmacodynamic (PK/PD) parameters, polypharmacy and co-medication network metrics, and exploratory statistical, machine-learning, and exposure-liability analyses for mechanistic prioritisation. Results: Phenotype membership explained 22.3% of the variance in composite ADMET risk (intraclass correlation coefficient = 0.223; p p -10 ). One phenotype showed pronounced enrichment, with 13 antivirals over-represented. Polypharmacy strongly modified seriousness, with odds of serious outcomes increasing by ~5% per additional co-reported active drug (OR 1.05, 95% CI 1.04-1.05). A composite mechanistic vulnerability index showed moderate concordance with empirical burden (Spearman's ρ = 0.65), while regimen-level prioritisation of drug-drug interactions (DDIs) identified no high-priority combinations. Conclusions: Pregnancy-related antiviral ADRs cluster into reproducible phenotypes driven by mechanistic liability and system-level complexity, supporting mechanistically informed prioritisation and targeted pharmacometric follow-up.",
+      "authors": [
+        "Costa B",
+        "Vale N"
+      ],
+      "date": "2026-03-11",
+      "doi": "10.3390/ph19030450",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41901296"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "From Pharmacovigilance Signals to Mechanistic Phenotypes: Integrating ADMET, PK/PD, and Network Context to Interpret Antiviral Safety in Pregnancy.",
+      "url": "https://europepmc.org/article/MED/41901296",
+      "venue": "Pharmaceuticals (Basel, Switzerland)"
+    },
+    {
+      "abstract": "Optimizing meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains challenging due to significant pharmacokinetic variability. This study aimed to develop and validate a machine learning (ML)-based clinical decision support system (CDSS) for individualizing meropenem dosing in this population. A large-scale virtual cohort (n = 48,000) was generated using a published population pharmacokinetic (POPPK) model to simulate diverse dosing regimens. Various ML models were trained to predict the probability of achieving two stringent pharmacodynamic (PD) targets: 100% fT>MIC and 100% fT>4×MIC. Feature importance was interpreted using SHAP (Shapley Additive exPlanations) analysis. External validation was conducted using clinical CRRT patient data, and predictive performance was compared with that of the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose\" for clinical use. The ML models exhibited excellent predictive performance on the simulated test set, with accuracy and F1 scores predominantly above 0.95. Notably, in the external validation cohort, the Gradient Boosting (GB) model robustly outperformed the conventional POPPK model across stringent pharmacodynamic targets (100% fT>MIC and 100% fT>4×MIC), achieving AUC values of 0.884 and 0.929, respectively, versus 0.823 and 0.871 for the POPPK model. Interpretation via SHAP analysis confirmed that the minimum inhibitory concentration (MIC), dosing interval, dose amount, CRRT clearance (CL CRRT ), and creatinine clearance (CRCL) were the primary determinants of target attainment. This high-performing, interpretable GB model was subsequently integrated into the \"MeroDose\" CDSS. This web-based tool translates the model's predictive capability into clinically actionable decision support for initial dose selection. The ML-driven CDSS 'MerDose' provides a clinically applicable tool for optimizing meropenem dosing in CRRT patients, potentially overcoming limitations of conventional approaches.",
+      "authors": [
+        "Li D",
+        "Qiao Z",
+        "Xiong X",
+        "Zhang Q",
+        "He Y",
+        "Yu Z",
+        "Zheng X",
+        "Zheng X"
+      ],
+      "date": "2026-03-06",
+      "doi": "10.1038/s41598-026-43012-x",
+      "publication_type": "research-article, Validation Study, Journal Article",
+      "source_ids": [
+        "MED:41792368"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Development and validation of a machine learning model for individualised meropenem dosing in CRRT patients.",
+      "url": "https://europepmc.org/article/MED/41792368",
+      "venue": "Scientific reports"
+    },
+    {
+      "abstract": "Hemophilia A is a rare inherited bleeding disorder typically managed with coagulation factor VIII (FVIII) replacement therapy. Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements and practical considerations in data collection and analysis. Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients. Using minimal sampling and routinely collected clinical data, our approach achieves superior performance over the widely adopted WAPPS-Hemo platform in predicting in vivo recovery (IVR) and FVIII half-life. These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.",
+      "authors": [
+        "Wang Y",
+        "Ai D",
+        "Wang S",
+        "Li Z",
+        "Li G",
+        "Zhu Y",
+        "Zhong Y",
+        "Zhang W",
+        "Wu R",
+        "Chen Z",
+        "Tang Y"
+      ],
+      "date": "2026-02-27",
+      "doi": "10.1038/s41540-026-00674-7",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41760637"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A.",
+      "url": "https://europepmc.org/article/MED/41760637",
+      "venue": "NPJ systems biology and applications"
+    },
+    {
+      "abstract": "Decision-making in drug development spans heterogeneous stages from molecular design to clinical optimization, yet computer-aided workflows across stages remain fragmented, limiting traceability from evidence-derived clinical questions to simulation scenarios and decision endpoints. We present a model-driven hybrid AI framework for end-to-end decision support that treats PICO (Participants, Intervention, Comparison, Outcome) as a machine-actionable specification to define scenarios and align endpoints across modules. Given a PICO-defined clinical question and a drug SMILES, the framework infers PBPK-ready parameters from structure, generates exposure via mechanistic PBPK simulation, and links exposure outputs to clinic-facing therapeutic drug monitoring (TDM) decision support using an open-source NLME-based Clinical Pharmacokinetic Consultant Service (CPCS). We additionally implement an LLM-based PICO extraction layer to structure clinical abstracts into P/I/C/O elements for systematic evidence ingestion. Results include backbone verification for DTI-guided intrinsic clearance prediction under fold-error bounds and PBPK trajectory plausibility, and external validation of the hybrid AI–PBPK pipeline showing substantial dispersion for several endpoints. An input-controlled comparison between PhysioSim and PK-Sim on N = 9 drugs yields similarly degraded accuracy under identical AI-predicted inputs, suggesting upstream parameter quality as a dominant constraint. For evidence ingestion, prompting-only PICO extraction achieves F1 of 0.687 on EBM-NLP and 0.552 on TB-PICO. For clinical utility, CPCS improves TDM performance over a PKS baseline on phenobarbital and vancomycin, reducing MAPE by approximately 26–60% depending on configuration. Overall, the framework provides a modular, traceable blueprint linking evidence-defined questions to exposure simulation and TDM decision support while preserving mechanistic interpretability. Future work will integrate outcome-aligned time-to-event modeling and federated learning to close the PICO-to-outcome loop and improve parameter inference under multi-site governance.",
+      "authors": [
+        "Lee H",
+        "Kang H",
+        "Jung W",
+        "Cho H",
+        "Goo S",
+        "Yun H",
+        "Kim M",
+        "Chae J",
+        "Park S",
+        "Lee S",
+        "Kim JH",
+        "Jung S"
+      ],
+      "date": "2026-02-06",
+      "doi": "10.64898/2026.02.03.703154",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1225063"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Model-Driven Hybrid AI Framework for End-to-End Autonomous Decision-Making in Drug Development",
+      "url": "https://europepmc.org/article/PPR/PPR1225063",
+      "venue": ""
+    },
+    {
+      "abstract": "Covariate selection in population pharmacokinetics modeling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modeling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of neural networks with stochastic gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets, the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability, and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate preselection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios.",
+      "authors": [
+        "Kekic M",
+        "Stepanov O",
+        "Wang W",
+        "Richardson S",
+        "Olabode D",
+        "Traynor C",
+        "Dearden R",
+        "Zhou D",
+        "Tang W",
+        "Gibbs M",
+        "Nowojewski A"
+      ],
+      "date": "2026-02-01",
+      "doi": "10.1002/psp4.70147",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41637692"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Stochastic Gates for Covariate Selection in Population Pharmacokinetics Modeling.",
+      "url": "https://europepmc.org/article/MED/41637692",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming. Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy. Methods A total of 1,806 infliximab and ADA concentration measurements were prospectively collected from 149 IBD patients. Recurrent neural networks (RNN)-based models, including long short-term memory (LSTM) and gated recurrent unit (GRU) architectures, as well as regression-based models such as Elastic Net, Support Vector Regression, Random Forest (RF), and extreme gradient boosting (XGBoost), were developed. Recursive multi-step prediction was applied to evaluate short-term forecasting performance. Results RF outperformed in predicting infliximab concentrations, and XGBoost yielded the best performance in predicting ADA levels (2-fold accuracy, 86.67% and 96.67%, respectively). The infliximab prediction model maintained acceptable accuracy up to two recursive predictions steps but exhibited a notable performance decline at the third step. In contrast, the ADA model showed robust performance across all three recursive steps, maintaining 2-fold accuracy exceeding 96%. Conclusion ML models were developed to predict infliximab and ADA concentrations, with RF and XGBoost showing the best performance for infliximab and ADA prediction, respectively. The ADA model demonstrated stable multi-step forecasting capability. These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
+      "authors": [
+        "Kim M",
+        "Song JH",
+        "Hong SN",
+        "Kim MG",
+        "Kim ER",
+        "Chang DK",
+        "Kim YH"
+      ],
+      "date": "2026-01-28",
+      "doi": "10.3389/fphar.2026.1731193",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41685197"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study.",
+      "url": "https://europepmc.org/article/MED/41685197",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
+      "abstract": "Background Computed tomography (CT) and magnetic resonance imaging (MRI) are essential in clinical diagnosis and treatment planning, but their images are often compromised by limited contrast and insufficient detail, reducing diagnostic clarity. Traditional enhancement methods-such as histogram equalization (HE) can improve visibility but may introduce noise, over-enhancement, or structural distortion. Quantum-inspired computational techniques have recently emerged as promising tools for nonlinear and adaptive image processing. Building on the quantum signal processing (QSP) framework, this study proposes a quantum-inspired enhancement (QIE) algorithm designed to improve medical image contrast while preserving structural details. Methods We propose a QIE algorithm that embeds a three-pixel quantum-correlation system within a QSP framework. After normalizing grayscale values, each 3×3 neighborhood is mapped to superposition states; edge-sensitive basis states are selectively accumulated in four orientations to produce the enhanced output. The algorithm was evaluated using T2-weighted magnetic resonance (MR) brain images and CT lung images obtained from 10 different patients. Its performance was compared with four representative classical enhancement methods: HE, contrast-limited adaptive HE (CLAHE), fuzzy HE (FHE), and wavelet-based enhancement (WBE), employing quantitative metrics such as entropy, peak signal-to-noise ratio (PSNR), structural similarity index (SSIM), and contrast-to-noise ratio (CNR). Paired two-sided t -tests (α=0.05) were used. Results QIE reached the highest mean entropy on both datasets (CT: 4.37±0.31; MR: 6.45±0.16) vs . HE 4.00±0.25 (P=2.8×10 -4 ) and 5.67±0.16 (P=2.3×10 -7 ) respectively, indicating superior information retention and detail enhancement. Its PSNR and SSIM were significantly better than HE, FHE, and WBE (all P vs . CLAHE, QIE PSNR was -3.4 dB lower on CT and -3.3 dB lower on MR (both P Conclusions The proposed QIE algorithm demonstrates superior performance in enhancing the contrast and preserving the structural details of medical images. By leveraging quantum-inspired mechanisms, the algorithm shows potential for improving diagnostic accuracy and supporting clinical treatment planning. Future work will explore the application of this algorithm to other imaging modalities, investigate its effectiveness as a preprocessing step for commercial artificial intelligence (AI) models, and study the integration with actual quantum computing platforms.",
+      "authors": [
+        "Zhu H",
+        "Su J",
+        "Meng X",
+        "Li W",
+        "Yang B",
+        "Qiu J"
+      ],
+      "date": "2026-01-21",
+      "doi": "10.21037/qims-2025-1474",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41669435"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm.",
+      "url": "https://europepmc.org/article/MED/41669435",
+      "venue": "Quantitative imaging in medicine and surgery"
+    },
+    {
+      "abstract": "Aim Tacrolimus dosing in the early post-kidney transplant period is challenging due to a narrow therapeutic index and substantial interindividual pharmacokinetic (PK) variability. This study aimed to develop and validate mechanism-informed machine learning (ML) models to support individualized tacrolimus dosing during this critical period. Methods A total of 4311 tacrolimus trough concentrations (C trough ) within 7 days post-transplant were obtained from 1624 kidney transplant recipients. Two ML models, Gated Recurrent Unit (GRU) and eXtreme Gradient Boosting (XGBoost), were developed to predict C trough and recommend doses to achieve target levels. Both models incorporated PK principles based on linear pharmacokinetics. Model performance was compared to a traditional Bayesian population PK (PopPK) model and purely data-driven ML models via internal cross-validation and external validation. Results The mechanism-informed GRU model outperformed the Bayesian PopPK model in both internal validation (MSE = 7.81 vs. 9.27 ng 2 /mL 2 , R 2 = 0.537 vs. 0.450) and external validation (MSE = 6.09 vs. 8.96 ng 2 /mL 2 , R 2 = 0.397 vs. 0.211). The mechanism-informed XGBoost model performed comparably to the GRU model. The incorporation of PK principles enhanced model interpretability and generalizability without reducing accuracy. When clinically administered doses, determined by conventional therapeutic drug monitoring, fell within the GRU model's recommended range, subsequent C trough reached the therapeutic target (8-12 ng/mL) in 51.3% of cases, compared to 37.0% overall (p Conclusion Mechanism-informed ML models offer a robust and interpretable approach for individualized tacrolimus dosing, with the potential to improve therapeutic target attainment by enabling accurate dose adjustments in the early post-transplant period.",
+      "authors": [
+        "Yu H",
+        "Qin Z",
+        "Smith LS",
+        "Park JM",
+        "Zhu HJ"
+      ],
+      "date": "2026-01-13",
+      "doi": "10.1002/bcp.70448",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41531243"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period.",
+      "url": "https://europepmc.org/article/MED/41531243",
+      "venue": "British journal of clinical pharmacology"
+    },
+    {
+      "abstract": "This study presents an integrated computational modeling framework combining deep learning and Quantitative Systems Pharmacology (QSP) to predict the efficacy of PROTAC (PROteolysis Targeting Chimera) molecules. PROTACs have emerged as promising therapeutics for targeted protein degradation (TPD), offering significant advantages in addressing proteins that traditional small-molecule inhibitors cannot target. However, experimental evaluation of PROTAC efficacy is hindered by extensive variability in molecular configurations, necessitating efficient computational prediction methods. The proposed model integrates binding affinity predictions from DeepCalici, a convolutional neural network-based deep learning model, with a mechanistic QSP Hook model to estimate key pharmacodynamic parameters, notably half-maximal degradation concentration( DC50 ) and maximal degradation( Dmax ). This study utilized curated experimental data from PROTAC-DB, including experimentally validated DC50 and Dmax values. The dissociation constants ( Kd ) between PROTAC molecules and their protein targets (POI) or E3 ligases were predicted using DeepCalici and, then incorporated into the Hook model. To enhance the prediction accuracy, a supplementary deep neural network adjusted the hook model parameters based on chemical and biochemical features. The integrated modeling approach achieved a strong predictive performance for DC50 , demonstrating its practical value in prioritizing effective PROTAC candidates. However, the predictions for Dmax were less accurate, likely reflecting the variability in the experimental conditions not captured in the current dataset. This study highlights the critical importance of comprehensive structural data for accurate modeling of PROTAC efficacy and suggests future improvements using standardized experimental data. Such integrative modeling approaches promise to accelerate the discovery and optimization of PROTAC therapeutics.",
+      "authors": [
+        "Goo S",
+        "Kim J",
+        "Lee S",
+        "Jung S",
+        "Chae JW",
+        "Choi JM",
+        "Yun HY"
+      ],
+      "date": "2026-01-12",
+      "doi": "10.1186/s13321-026-01152-2",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41521293"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model.",
+      "url": "https://europepmc.org/article/MED/41521293",
+      "venue": "Journal of cheminformatics"
+    }
+  ],
+  "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
+  "schema_version": 1,
+  "through": "2026-10-01"
+}
