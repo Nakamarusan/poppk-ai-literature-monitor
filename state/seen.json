@@ -1,6 +1,6 @@
 {
   "last_selection_date_jst": "2026-09-29",
-  "last_success_utc": "2026-09-29T01:24:35.574854+00:00",
+  "last_success_utc": "2026-09-30T00:57:26.894119+00:00",
   "schema_version": 1,
   "seen": {
     "doi:10.1002/pds.70442": {
@@ -623,22 +623,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-09-29"
+    "arxiv": "2026-09-30"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
+      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
+      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
       "records": 2700,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-09-29T01:24:35.574854+00:00",
-      "records": 86,
+      "last_attempt_utc": "2026-09-30T00:57:26.894119+00:00",
+      "records": 877,
       "status": "ok"
     }
   }
