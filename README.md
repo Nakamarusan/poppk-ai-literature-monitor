@@ -20,7 +20,7 @@ For each selection, the workflow writes a report in `reports/`, updates `data/ar
 
 ## Recovery and empty days
 
-Archive retrieval uses publication dates rather than registration dates. `src/archive.py` retains eligible candidates and unfinished source/query/date partitions in `state/archive.json`. API pagination follows cursors within each bounded session. Full date partitions are split and resumed instead of repeatedly requesting the same first page. Short-lived API cursors are not stored across days.
+Archive retrieval uses publication dates rather than registration dates. `src/archive.py` retains eligible candidates and unfinished source/query/date partitions in `state/archive.json`. API pagination follows cursors within each bounded session. Full date partitions are split and resumed instead of repeatedly requesting the same first page. Cross-run coverage uses date partitions rather than depending on a provider's cursor lifetime. Completed archive coverage is periodically rechecked when the candidate queue is empty, to pick up later metadata improvements.
 
 Retrieval success, paper selection, and notification delivery are separate states. The 07:20 fallback is skipped only after a paper has been delivered successfully and no notices remain pending. An empty day produces one status Issue with screening counts and search coverage; it does not fabricate a paper or weaken the eligibility criteria. A failed Issue request stays in a durable outbox for retry.
 
