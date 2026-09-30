@@ -1,7 +1,7 @@
-"""Resumable archive search with a small, durable queue of eligible abstracts.
+"""Resumable archive search with a durable queue of eligible abstracts.
 
-Cursors live only during an API session. Across runs we retain date partitions,
-not expiring cursor tokens. Full partitions are split rather than declared done.
+API cursors stay within a session. Date partitions record cross-run progress
+independently of provider-specific cursor lifetimes and indexing changes.
 """
 from __future__ import annotations
 
@@ -66,7 +66,6 @@ def _tasks(config: dict[str, Any], start: dt.date, until: dt.date) -> list[dict[
     tasks = []
     enabled = [s for s in config["historical_fallback"]["sources"]
                if config["sources"][s].get("enabled", True)]
-    # Biomedical abstracts first; all years and both indexes remain in the plan.
     for source in enabled:
         for low, high in windows:
             queries = ([("", "")] if source == "europe_pmc" else
@@ -114,28 +113,30 @@ def search_archive(config: dict[str, Any], path: Path, known: set[str],
         state = {"schema_version": 1, "query_signature": signature, "pool": [],
                  "pending": _tasks(config, start, today), "through": str(today),
                  "completed_windows": 0, "cycle_started": str(today)}
-    # New dates are added without abandoning the older unvisited partitions.
-    through = dt.date.fromisoformat(state["through"])
-    if through < today:
-        state["pending"].extend(_tasks(config, through + dt.timedelta(days=1), today))
-        state["through"] = str(today)
     pool = [Paper(**p) for p in state["pool"]]
     pool = [p for p in deduplicate(pool) if exclusion_reason(
         p, config, known, start, today, require_abstract=True) == "eligible_unreported"]
     completed = parse_date(state.get("cycle_completed", ""))
-    if not state["pending"] and not pool and completed and (today - completed).days >= recheck_days:
+    if not pool and completed and (today - completed).days >= recheck_days:
         state.update(pending=_tasks(config, start, today), completed_windows=0,
-                     cycle_started=str(today), cycle_completed="")
+                     cycle_started=str(today), cycle_completed="", through=str(today))
+    # Daily tail checks must not reset the age of the completed full cycle.
+    through = dt.date.fromisoformat(state["through"])
+    if through < today:
+        state["pending"].extend(_tasks(config, through + dt.timedelta(days=1), today))
+        state["through"] = str(today)
     result = ArchiveResult()
     counts, reasons = Counter(), Counter()
     calls, splits, repeated_pages = 0, 0, 0
     cached_before = len(pool)
     deadline = time.monotonic() + seconds
-    failed_tasks = []
+    deferred = []
 
     def checkpoint():
+        # Include deferred work on disk, but do not immediately retry it in
+        # this session. A crash can replay work; it cannot lose a partition.
         state["pool"] = [asdict(p) for p in deduplicate(pool)]
-        save_json(path, state)
+        save_json(path, {**state, "pending": [*state["pending"], *deferred]})
 
     while state["pending"] and len(pool) < target and calls < max_requests and time.monotonic() < deadline:
         task = state["pending"].pop(0)
@@ -143,8 +144,6 @@ def search_archive(config: dict[str, Any], path: Path, known: set[str],
         low, high = dt.date.fromisoformat(task["since"]), dt.date.fromisoformat(task["until"])
         cursor, received, complete, failed = "*", 0, False, False
         signatures = set()
-        # For a dense one-day partition, allow an explicit larger page budget
-        # on the next run. Never mark an unvisited tail as exhausted.
         allowance = min(int(task.get("page_limit", page_limit)), max_requests)
         for _ in range(allowance):
             if calls >= max_requests or time.monotonic() >= deadline:
@@ -168,43 +167,39 @@ def search_archive(config: dict[str, Any], path: Path, known: set[str],
                 repeated_pages += 1
                 break
             signatures.add(key)
-            diagnostic = diagnose(page.papers, config, known, start, today, require_abstract=True)
-            reasons.update(diagnostic)
+            reasons.update(diagnose(page.papers, config, known, start, today, require_abstract=True))
             pool.extend(p for p in page.papers if exclusion_reason(
                 p, config, known, start, today, require_abstract=True) == "eligible_unreported")
             pool = deduplicate(pool)
-            if received >= page.total or (not page.raw_count and not page.next_cursor):
+            if received >= page.total:
                 complete = True
                 break
-            if not page.next_cursor:
+            if not page.raw_count or not page.next_cursor:
+                # Empty data while the API reports more hits is not EOF.
                 break
             cursor = page.next_cursor
         if complete:
             state["completed_windows"] += 1
         elif failed:
-            failed_tasks.append(task)  # Do not retry the same outage in this run.
+            deferred.append(task)
         elif children := _split(task):
             state["pending"][0:0] = children
             splits += 1
         else:
             task["page_limit"] = min(allowance * 2, max_requests)
-            failed_tasks.append(task)
-            result.warnings[label] = "A dense one-day archive window remains unsearched beyond the page budget."
-        # Keep failed work in persistent state even if the process is interrupted.
-        state["pending"].extend(failed_tasks)
+            deferred.append(task)
+            result.warnings[label] = "A dense or incomplete one-day archive window remains beyond the page budget."
         checkpoint()
-        for old in failed_tasks:
-            state["pending"].remove(old)
-    state["pending"].extend(failed_tasks)
-    if not state["pending"]:
+    remaining = len(state["pending"]) + len(deferred)
+    if not remaining and not state.get("cycle_completed"):
         state["cycle_completed"] = str(today)
     result.papers = deduplicate(pool)
     result.counts = dict(counts)
     result.diagnostics = {
         "requests": calls, "cached_candidates_before": cached_before,
-        "eligible_candidates": len(result.papers), "pending_windows": len(state["pending"]),
+        "eligible_candidates": len(result.papers), "pending_windows": remaining,
         "completed_windows": state["completed_windows"], "split_windows": splits,
-        "repeated_pages": repeated_pages, "exhausted": not state["pending"] and not pool,
+        "repeated_pages": repeated_pages, "exhausted": not remaining and not pool,
         "screening": dict(reasons),
         "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
     }
