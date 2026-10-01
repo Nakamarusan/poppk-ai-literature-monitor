@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-01 01:02 JST
+Run time: 2026-10-01 10:00 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,42 +11,27 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5273, Europe PMC 7, arXiv 0
+Recent-search records: Crossref 5290, Europe PMC 7
 
-Archive-search records: Europe PMC 111
 
 ## Selection and search coverage
 
-Selection outcome: **selected**
-Papers selected in this run: **1**
+Selection outcome: **already_selected_today**
+Papers selected in this run: **0**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
 - Crossref: 36 pages; 17 capped queries; 0 failed queries.
-- arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5280
-- unique: 2847
-- duplicates: 2433
-- excluded publication type: 138
+- retrieved: 5297
+- unique: 2887
+- duplicates: 2410
+- excluded publication type: 136
 - already reported: 4
 - missing method evidence: 1
-- missing ai evidence: 15
-- missing pk evidence: 2689
-
-Archive candidates available: 24; unvisited/unfinished windows: 132; completed windows: 1.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
-
-Archive screening (per page; records can recur between queries):
-- retrieved: 111
-- unique: 109
-- duplicates: 2
-- already reported: 34
-- missing method evidence: 11
-- excluded publication type: 40
-- eligible unreported: 24
-
+- missing ai evidence: 16
+- missing pk evidence: 2730
 
 ## 1. [Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence.](https://europepmc.org/article/MED/41928707)
 

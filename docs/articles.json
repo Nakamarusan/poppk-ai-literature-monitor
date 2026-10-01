@@ -1,33 +1,12 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-01 01:02 JST",
+  "last_scan_at": "2026-10-01 10:00 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 0,
-      "completed_windows": 1,
-      "eligible_candidates": 24,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 132,
-      "repeated_pages": 0,
-      "requests": 1,
-      "screening": {
-        "already_reported": 34,
-        "duplicates": 2,
-        "eligible_unreported": 24,
-        "excluded_publication_type": 40,
-        "missing_method_evidence": 11,
-        "retrieved": 111,
-        "unique": 109
-      },
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-01 01:02 JST",
-    "delivery_status": "sent",
-    "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/54"
-    ],
+    "archive": {},
+    "checked_at": "2026-10-01 10:00 JST",
+    "delivery_status": "no_new_notice",
+    "notification_urls": [],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
@@ -38,26 +17,21 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2433,
-      "excluded_publication_type": 138,
-      "missing_ai_evidence": 15,
+      "duplicates": 2410,
+      "excluded_publication_type": 136,
+      "missing_ai_evidence": 16,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2689,
-      "retrieved": 5280,
-      "unique": 2847
+      "missing_pk_evidence": 2730,
+      "retrieved": 5297,
+      "unique": 2887
     },
-    "selected_count": 1,
-    "selection_status": "selected",
-    "selection_type": "historical",
+    "selected_count": 0,
+    "selection_status": "already_selected_today",
+    "selection_type": "none",
     "source_status": "ok",
     "warnings": {}
   },
