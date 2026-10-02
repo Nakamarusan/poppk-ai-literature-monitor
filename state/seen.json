@@ -1,11 +1,30 @@
 {
-  "last_delivery_date_jst": "2026-10-01",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/54",
+  "last_delivery_date_jst": "2026-10-02",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-10-02T01:14:35.775711+00:00",
+      "message": "Network error: The read operation timed out"
+    }
+  },
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-10-01 10:00 JST",
-    "delivery_status": "no_new_notice",
-    "notification_urls": [],
+    "archive": {
+      "cached_candidates_before": 23,
+      "completed_windows": 1,
+      "eligible_candidates": 23,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 151,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-02 10:14 JST",
+    "delivery_status": "sent",
+    "notification_urls": [
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55"
+    ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
@@ -20,22 +39,22 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2410,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 16,
+      "duplicates": 2404,
+      "excluded_publication_type": 153,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2730,
-      "retrieved": 5297,
-      "unique": 2887
+      "missing_pk_evidence": 2727,
+      "retrieved": 5304,
+      "unique": 2900
     },
-    "selected_count": 0,
-    "selection_status": "already_selected_today",
-    "selection_type": "none",
+    "selected_count": 1,
+    "selection_status": "selected",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-01",
-  "last_success_utc": "2026-10-01T01:00:53.470088+00:00",
+  "last_selection_date_jst": "2026-10-02",
+  "last_success_utc": "2026-10-02T01:14:35.775711+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -188,6 +207,12 @@
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
     },
+    "doi:10.2147/dddt.s576598": {
+      "doi": "10.2147/dddt.s576598",
+      "selected_at": "2026-10-02T01:14:35.775711+00:00",
+      "selection_type": "historical",
+      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome."
+    },
     "doi:10.3389/fphar.2026.1817282": {
       "doi": "10.3389/fphar.2026.1817282",
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
@@ -257,6 +282,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:europe pmc:med:41908942": {
+      "doi": "10.2147/dddt.s576598",
+      "selected_at": "2026-10-02T01:14:35.775711+00:00",
+      "selection_type": "historical",
+      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome."
     },
     "source:europe pmc:med:41928707": {
       "doi": "10.1002/prp2.70241",
@@ -628,6 +659,12 @@
       "selection_type": "new",
       "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
     },
+    "title:cff8f348b475ee64a38f4161": {
+      "doi": "10.2147/dddt.s576598",
+      "selected_at": "2026-10-02T01:14:35.775711+00:00",
+      "selection_type": "historical",
+      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome."
+    },
     "title:d2a7662c504dab804f6756e1": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -677,22 +714,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-01"
+    "arxiv": "2026-10-02"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-09-30T16:02:12.388200+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
+      "message": "Network error: The read operation timed out",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-01T01:00:53.470088+00:00",
-      "records": 5290,
+      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
+      "records": 5296,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-01T01:00:53.470088+00:00",
-      "records": 7,
+      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
+      "records": 8,
       "status": "ok"
     }
   }

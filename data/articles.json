@@ -1,6 +1,83 @@
 {
   "articles": [
     {
+      "abstract": "Purpose Tacrolimus (TAC) is a calcineurin inhibitor widely used for immunosuppressive therapy. It has a narrow therapeutic window and substantial interindividual variability, making therapeutic drug monitoring (TDM) essential. Traditional population pharmacokinetic (PPK) models have limited capacity to capture complex nonlinear relationships and multifactorial interactions. This study aimed to integrate PPK and machine learning (ML) to predict TAC plasma concentration. Patients and methods A total of 182 consecutive patients with nephrotic syndrome (NS) who received oral TAC therapy and underwent TDM and CYP3A5 genotyping at the First Affiliated Hospital of Xinjiang Medical University between January 2018 and December 2023 were enrolled. Individual PK parameters derived from the PPK model were incorporated as new features into ML models. Feature selection was performed using recursive feature elimination with cross-validation (RFECV), and the union of features selected by the three models with the highest R 2 was used to construct the final feature set. Nine ML models were then developed, and the three best-performing models were combined into a weighted ensemble. Model performance was assessed by R 2 , mean absolute error (MAE), and root mean square error (RMSE). SHAP (SHapley Additive exPlanations) was used to interpret feature contributions. Results Incorporating PK parameters resulted in a consistent improvement in predictive performance compared with the model without PK parameters (R 2 : 0.633 vs. 0.602). The weighted ensemble of CatBoost, AdaBoost, and GraBoost (5:3:2) achieved the best performance (R 2 = 0.633, MAE = 1.081, RMSE = 1.377), whereas the optimal weighting without PK parameters was 3:6:1 (R 2 = 0.602, MAE = 1.139, RMSE = 1.432). SHAP analysis indicated that PK parameters was the most influential feature, exceeding conventional biochemical indicators. Conclusion Incorporating PK parameters enhanced model predictive performance, providing quantitative support for individualized TAC dosing and facilitating safer and more precise clinical applications.",
+      "authors": [
+        "Zhou Y",
+        "Zhou Z",
+        "Chen S",
+        "Zhu L",
+        "Yun Y",
+        "Yuan Y",
+        "Chen C",
+        "Zou J",
+        "Zhao J"
+      ],
+      "doi": "10.2147/dddt.s576598",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.2147/dddt.s576598",
+      "publication_date": "2026-03-23",
+      "reported_at": "2026-10-02 10:14 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to integrate PPK and machine learning (ML) to predict TAC plasma concentration.",
+        "new_capability": "The weighted ensemble of CatBoost, AdaBoost, and GraBoost (5:3:2) achieved the best performance (R 2 = 0.633, MAE = 1.081, RMSE = 1.377), whereas the optimal weighting without PK parameters was 3:6:1 (R 2 = 0.602, MAE = 1.139, RMSE = 1.432).",
+        "prior_limitation": "Traditional population pharmacokinetic (PPK) models have limited capacity to capture complex nonlinear relationships and multifactorial interactions.",
+        "significance": "Conclusion Incorporating PK parameters enhanced model predictive performance, providing quantitative support for individualized TAC dosing and facilitating safer and more precise clinical applications.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome.",
+      "url": "https://europepmc.org/article/MED/41908942",
+      "venue": "Drug design, development and therapy"
+    },
+    {
       "abstract": "In population pharmacokinetics (PopPK), non-linear mixed effects (NLME) models are used to simultaneously describe a drug's pharmacokinetics (PK) and dynamics (PD) in a patient population using systems of ordinary differential equations. In this field, machine learning is mainly used for data preparation, hypothesis generation, predictive modeling, and model validation. Some approaches to integrate artificially generated information have already been explored, but real-world application is still limited. We therefore conducted a proof-of-concept study to analyze the ability of generative artificial intelligence (AI) to create artificial patient profiles to augment PopPK data sets and assess their influence on parameter estimates. We defined the pharmacokinetic parameters of a hypothetical drug and simulated the concentration curves of 20 patients. We then trained Wasserstein Generative Adversarial Networks (WGANs) with gradient penalty (GP) to generate artificial patients. The data distribution of original and artificial patients was statistically indistinguishable as shown by the Maximum Mean Discrepancy test. Therefore, the WGAN-GP is neither overfitted, that is producing only single instances of artificial patients, nor underfitted, that is producing unrealistic artificial patients. We then combined different shares of original and artificial patients in separate data sets to build and compare PopPK model estimates. Addition of artificial patients led to narrower confidence intervals, indicating more robust parameter estimates, and accentuated the allometric effect of weight on the volume of distribution. In conclusion, we provide a proof-of-concept that generative AI can be used to augment pharmacokinetic data sets, with preliminary evidence suggesting improved parameter estimation.",
       "authors": [
         "Schöning V",
@@ -2731,12 +2808,25 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-01 10:00 JST",
+  "last_scan_at": "2026-10-02 10:14 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-01 10:00 JST",
-    "delivery_status": "no_new_notice",
-    "notification_urls": [],
+    "archive": {
+      "cached_candidates_before": 23,
+      "completed_windows": 1,
+      "eligible_candidates": 23,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 151,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-02 10:14 JST",
+    "delivery_status": "sent",
+    "notification_urls": [
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55"
+    ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
@@ -2751,17 +2841,17 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2410,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 16,
+      "duplicates": 2404,
+      "excluded_publication_type": 153,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2730,
-      "retrieved": 5297,
-      "unique": 2887
+      "missing_pk_evidence": 2727,
+      "retrieved": 5304,
+      "unique": 2900
     },
-    "selected_count": 0,
-    "selection_status": "already_selected_today",
-    "selection_type": "none",
+    "selected_count": 1,
+    "selection_status": "selected",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
