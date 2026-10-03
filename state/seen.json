@@ -1,29 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-10-02",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55",
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-10-02T01:14:35.775711+00:00",
-      "message": "Network error: The read operation timed out"
-    }
-  },
+  "last_delivery_date_jst": "2026-10-03",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 23,
-      "completed_windows": 1,
-      "eligible_candidates": 23,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 151,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-02 10:14 JST",
+    "archive": {},
+    "checked_at": "2026-10-03 09:52 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -35,26 +18,31 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2404,
-      "excluded_publication_type": 153,
-      "missing_ai_evidence": 15,
-      "missing_method_evidence": 1,
-      "missing_pk_evidence": 2727,
-      "retrieved": 5304,
-      "unique": 2900
+      "already_reported": 1,
+      "duplicates": 2408,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 158,
+      "missing_ai_evidence": 18,
+      "missing_pk_evidence": 2721,
+      "retrieved": 5307,
+      "unique": 2899
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-02",
-  "last_success_utc": "2026-10-02T01:14:35.775711+00:00",
+  "last_selection_date_jst": "2026-10-03",
+  "last_success_utc": "2026-10-03T00:52:50.227445+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -271,6 +259,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "doi:10.64898/2026.09.29.755460": {
+      "doi": "10.64898/2026.09.29.755460",
+      "selected_at": "2026-10-03T00:52:50.227445+00:00",
+      "selection_type": "new",
+      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
     },
     "source:crossref:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -498,6 +492,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "source:europe pmc:ppr:ppr1332621": {
+      "doi": "10.64898/2026.09.29.755460",
+      "selected_at": "2026-10-03T00:52:50.227445+00:00",
+      "selection_type": "new",
+      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
+    },
     "title:0881c9bc9af76b779f89d637": {
       "doi": "10.1208/s12248-026-01255-6",
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
@@ -581,6 +581,12 @@
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
       "selection_type": "new",
       "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
+    },
+    "title:779b4671ae7d80177f71f576": {
+      "doi": "10.64898/2026.09.29.755460",
+      "selected_at": "2026-10-03T00:52:50.227445+00:00",
+      "selection_type": "new",
+      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
     },
     "title:792fefe8a0fc829963209b38": {
       "doi": "10.1002/psp4.70280",
@@ -714,22 +720,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-02"
+    "arxiv": "2026-10-03"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
-      "message": "Network error: The read operation timed out",
-      "status": "error"
+      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
+      "records": 0,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
-      "records": 5296,
+      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
+      "records": 5302,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-02T01:14:35.775711+00:00",
-      "records": 8,
+      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
+      "records": 5,
       "status": "ok"
     }
   }

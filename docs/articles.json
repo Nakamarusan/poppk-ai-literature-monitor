@@ -1,24 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-02 10:14 JST",
+  "last_scan_at": "2026-10-03 09:52 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 23,
-      "completed_windows": 1,
-      "eligible_candidates": 23,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 151,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-02 10:14 JST",
+    "archive": {},
+    "checked_at": "2026-10-03 09:52 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/55"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -30,31 +19,115 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2404,
-      "excluded_publication_type": 153,
-      "missing_ai_evidence": 15,
-      "missing_method_evidence": 1,
-      "missing_pk_evidence": 2727,
-      "retrieved": 5304,
-      "unique": 2900
+      "already_reported": 1,
+      "duplicates": 2408,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 158,
+      "missing_ai_evidence": 18,
+      "missing_pk_evidence": 2721,
+      "retrieved": 5307,
+      "unique": 2899
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 36,
-  "new_count": 10,
+  "article_count": 37,
+  "new_count": 11,
   "historical_count": 26,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Large language model (LLM) agents can propose combination therapies and construct supporting mechanistic models far quicker than either can be verified. To address this gap, we built a gated agentic AI quantitative systems pharmacology (Ai QSP) workflow where no hypothesis reaches a report until it clears strict hurdles for precedent, evidence, structural integrity, and release. We applied this pipeline end to end to healthy-ageing interventions. It began with a 34 state model calibrated on clinical trial data for semaglutide and metformin. Locked and evaluated against an independent post hoc DNA methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about 0.14 years per year where 1.6 were observed, halting tier promotion. The workflow then generated seven nutritional combination hypotheses (H1H7) with 48 new parameters encoded in SBML. Identifiability analysis showed that 37 of these were completely unconstrained by available data. Trimming the model down to its lead pairing - a food derived bioactive (Agent A) plus a single-strain probiotic (Agent B left six identifiable parameters and locked the uncalibrated interaction term at zero. From this reduced model, we derived an 84 day trial with a 28 day washout, requiring 356 participants for 80% power at an interaction ratio of 0.75. A 9,000 person virtual trial confirmed the design (80.5% power), but revealed an operational trap: an assay floor at 24 mg/kg slashed power to 33% and skewed estimates toward the null, forcing a protocol-level censoring condition before study lock. Testing the pipeline across downstream operational stages and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides. Ultimately, the workflow delivered no silver bullet: its output is a single testable interaction, an assay hardened trial design, and an audit trail documenting why the other six hypotheses were shelved. Agent identities, doses, and agent specific sources are withheld in this version pending patent filing.",
+      "authors": [
+        "Goryanin I",
+        "Goryanin I",
+        "Damms B"
+      ],
+      "doi": "10.64898/2026.09.29.755460",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "large language model",
+            "llm",
+            "agentic"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "agentic",
+            "large language model",
+            "llm"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        }
+      },
+      "id": "doi:10.64898/2026.09.29.755460",
+      "publication_date": "2026-10-01",
+      "reported_at": "2026-10-03 09:52 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Testing the pipeline across downstream operational stages and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides.",
+        "prior_limitation": "Locked and evaluated against an independent post hoc DNA methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about 0.14 years per year where 1.6 were observed, halting tier promotion.",
+        "significance": "It began with a 34 state model calibrated on clinical trial data for semaglutide and metformin.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions",
+      "url": "https://europepmc.org/article/PPR/PPR1332621",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Purpose Tacrolimus (TAC) is a calcineurin inhibitor widely used for immunosuppressive therapy. It has a narrow therapeutic window and substantial interindividual variability, making therapeutic drug monitoring (TDM) essential. Traditional population pharmacokinetic (PPK) models have limited capacity to capture complex nonlinear relationships and multifactorial interactions. This study aimed to integrate PPK and machine learning (ML) to predict TAC plasma concentration. Patients and methods A total of 182 consecutive patients with nephrotic syndrome (NS) who received oral TAC therapy and underwent TDM and CYP3A5 genotyping at the First Affiliated Hospital of Xinjiang Medical University between January 2018 and December 2023 were enrolled. Individual PK parameters derived from the PPK model were incorporated as new features into ML models. Feature selection was performed using recursive feature elimination with cross-validation (RFECV), and the union of features selected by the three models with the highest R 2 was used to construct the final feature set. Nine ML models were then developed, and the three best-performing models were combined into a weighted ensemble. Model performance was assessed by R 2 , mean absolute error (MAE), and root mean square error (RMSE). SHAP (SHapley Additive exPlanations) was used to interpret feature contributions. Results Incorporating PK parameters resulted in a consistent improvement in predictive performance compared with the model without PK parameters (R 2 : 0.633 vs. 0.602). The weighted ensemble of CatBoost, AdaBoost, and GraBoost (5:3:2) achieved the best performance (R 2 = 0.633, MAE = 1.081, RMSE = 1.377), whereas the optimal weighting without PK parameters was 3:6:1 (R 2 = 0.602, MAE = 1.139, RMSE = 1.432). SHAP analysis indicated that PK parameters was the most influential feature, exceeding conventional biochemical indicators. Conclusion Incorporating PK parameters enhanced model predictive performance, providing quantitative support for individualized TAC dosing and facilitating safer and more precise clinical applications.",
       "authors": [
