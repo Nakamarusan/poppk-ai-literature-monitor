@@ -1,12 +1,18 @@
 {
-  "last_delivery_date_jst": "2026-10-03",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56",
+  "last_delivery_date_jst": "2026-10-04",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-10-04T00:18:17.062144+00:00",
+      "message": "HTTP 429: Rate exceeded."
+    }
+  },
   "last_run": {
     "archive": {},
-    "checked_at": "2026-10-03 09:52 JST",
+    "checked_at": "2026-10-04 09:18 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -18,22 +24,17 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 1,
-      "duplicates": 2408,
+      "duplicates": 2413,
       "eligible_unreported": 1,
-      "excluded_publication_type": 158,
+      "excluded_publication_type": 166,
       "missing_ai_evidence": 18,
-      "missing_pk_evidence": 2721,
-      "retrieved": 5307,
-      "unique": 2899
+      "missing_pk_evidence": 2710,
+      "retrieved": 5309,
+      "unique": 2896
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -41,11 +42,17 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-03",
-  "last_success_utc": "2026-10-03T00:52:50.227445+00:00",
+  "last_selection_date_jst": "2026-10-04",
+  "last_success_utc": "2026-10-04T00:18:17.062144+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
+    "doi:10.1002/cpt.70499": {
+      "doi": "10.1002/cpt.70499",
+      "selected_at": "2026-10-04T00:18:17.062144+00:00",
+      "selection_type": "new",
+      "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
+    },
     "doi:10.1002/pds.70442": {
       "doi": "10.1002/pds.70442",
       "notified_at": "2026-09-22T23:57:21.885737+00:00",
@@ -266,6 +273,12 @@
       "selection_type": "new",
       "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
     },
+    "source:crossref:10.1002/cpt.70499": {
+      "doi": "10.1002/cpt.70499",
+      "selected_at": "2026-10-04T00:18:17.062144+00:00",
+      "selection_type": "new",
+      "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
+    },
     "source:crossref:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
@@ -450,6 +463,12 @@
       "selection_type": "new",
       "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
     },
+    "source:europe pmc:med:42827404": {
+      "doi": "10.1002/cpt.70499",
+      "selected_at": "2026-10-04T00:18:17.062144+00:00",
+      "selection_type": "new",
+      "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -539,6 +558,12 @@
       "notified_at": "2026-09-17T23:51:02.191246+00:00",
       "selection_type": "historical",
       "title": "Context Engineering for AI-Assisted Pharmacometrics: A Practical Tutorial."
+    },
+    "title:1de7709afd3cef88636e84e2": {
+      "doi": "10.1002/cpt.70499",
+      "selected_at": "2026-10-04T00:18:17.062144+00:00",
+      "selection_type": "new",
+      "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
     },
     "title:23cb7aa8f15bf07288ac43cf": {
       "doi": "10.1248/bpb.b26-00183",
@@ -720,21 +745,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-03"
+    "arxiv": "2026-10-04"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
+      "message": "HTTP 429: Rate exceeded.",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
-      "records": 5302,
+      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
+      "records": 5304,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-03T00:52:50.227445+00:00",
+      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
       "records": 5,
       "status": "ok"
     }

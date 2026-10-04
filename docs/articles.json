@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-03 09:52 JST",
+  "last_scan_at": "2026-10-04 09:18 JST",
   "run_status": {
     "archive": {},
-    "checked_at": "2026-10-03 09:52 JST",
+    "checked_at": "2026-10-04 09:18 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/56"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -19,22 +19,17 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 1,
-      "duplicates": 2408,
+      "duplicates": 2413,
       "eligible_unreported": 1,
-      "excluded_publication_type": 158,
+      "excluded_publication_type": 166,
       "missing_ai_evidence": 18,
-      "missing_pk_evidence": 2721,
-      "retrieved": 5307,
-      "unique": 2899
+      "missing_pk_evidence": 2710,
+      "retrieved": 5309,
+      "unique": 2896
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -42,13 +37,94 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 37,
-  "new_count": 11,
+  "article_count": 38,
+  "new_count": 12,
   "historical_count": 26,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Antiretroviral pre‐exposure prophylaxis (PrEP) is less effective in women than expected, partly because drug exposure within the female genital tract is variable and may be influenced by the vaginal microbiome. We developed an integrated pharmacometrics and machine learning framework to evaluate associations between vaginal microbiome composition and cervical antiretroviral exposure in women with human immunodeficiency virus (HIV) receiving tenofovir (TFV)‐, lamivudine (3TC)‐, or emtricitabine (FTC)‐containing regimens. Pharmacokinetic and microbiome data were obtained from two single‐center studies in Uganda and the United States. Published population pharmacokinetic models were used to estimate individual parameters by maximum a posteriori Bayesian estimation and to simulate plasma and cervical tissue exposure metrics under sexual‐activity‐driven dosing that were not studied in these trials. Microbiome diversity was assessed using alpha and beta diversity analyses. Associations between microbial genera and cervical drug exposure were evaluated using correlation analysis, differential abundance testing, and three machine learning approaches: LASSO, random forest, and XGBoost. Overall vaginal microbiome diversity was not associated with cervical exposure to TFV, 3TC, or FTC. In contrast, specific taxa‐level associations with cervical drug exposure were identified. For TFV, Gemella was positively associated with cervical TFV‐diphosphate exposure, whereas Megasphaera and Falsiporphyromonas were negatively associated across multiple models. For 3TC, Dialister, Prevotella, Atopobium, Streptobacillus , and Gardnerella were repeatedly identified. For FTC, Bifidobacteriaceae was consistently selected, with Lachnospiraceae and Prevotellaceae also implicated. This pharmacometrics‐machine learning framework identified specific vaginal taxa associated with cervical antiretroviral exposure, supporting the future development of microbiome‐based biomarkers and precision PrEP strategies for women.",
+      "authors": [
+        "Yan D",
+        "Collins LB",
+        "Staley C",
+        "Matovu FK",
+        "Jacobson P",
+        "Nicol M",
+        "Cheng S"
+      ],
+      "doi": "10.1002/cpt.70499",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "pharmacometrics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometric",
+            "population pharmacokinetic",
+            "pharmacometrics"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometric"
+          ]
+        }
+      },
+      "id": "doi:10.1002/cpt.70499",
+      "publication_date": "2026-10-03",
+      "reported_at": "2026-10-04 09:18 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC",
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "We developed an integrated pharmacometrics and machine learning framework to evaluate associations between vaginal microbiome composition and cervical antiretroviral exposure in women with human immunodeficiency virus (HIV) receiving tenofovir (TFV)‐, lamivudine (3TC)‐, or emtricitabine (FTC)‐containing regimens.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Published population pharmacokinetic models were used to estimate individual parameters by maximum a posteriori Bayesian estimation and to simulate plasma and cervical tissue exposure metrics under sexual‐activity‐driven dosing that were not studied in these trials.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches.",
+      "url": "https://europepmc.org/article/MED/42827404",
+      "venue": "Clinical pharmacology and therapeutics"
+    },
     {
       "abstract": "Large language model (LLM) agents can propose combination therapies and construct supporting mechanistic models far quicker than either can be verified. To address this gap, we built a gated agentic AI quantitative systems pharmacology (Ai QSP) workflow where no hypothesis reaches a report until it clears strict hurdles for precedent, evidence, structural integrity, and release. We applied this pipeline end to end to healthy-ageing interventions. It began with a 34 state model calibrated on clinical trial data for semaglutide and metformin. Locked and evaluated against an independent post hoc DNA methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about 0.14 years per year where 1.6 were observed, halting tier promotion. The workflow then generated seven nutritional combination hypotheses (H1H7) with 48 new parameters encoded in SBML. Identifiability analysis showed that 37 of these were completely unconstrained by available data. Trimming the model down to its lead pairing - a food derived bioactive (Agent A) plus a single-strain probiotic (Agent B left six identifiable parameters and locked the uncalibrated interaction term at zero. From this reduced model, we derived an 84 day trial with a 28 day washout, requiring 356 participants for 80% power at an interaction ratio of 0.75. A 9,000 person virtual trial confirmed the design (80.5% power), but revealed an operational trap: an assay floor at 24 mg/kg slashed power to 33% and skewed estimates toward the null, forcing a protocol-level censoring condition before study lock. Testing the pipeline across downstream operational stages and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides. Ultimately, the workflow delivered no silver bullet: its output is a single testable interaction, an assay hardened trial design, and an audit trail documenting why the other six hypotheses were shelved. Agent identities, doses, and agent specific sources are withheld in this version pending patent filing.",
       "authors": [
