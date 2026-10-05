@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-02",
+  "last_check": "2026-10-05",
   "last_run": {
-    "cached_candidates_before": 23,
+    "cached_candidates_before": 22,
     "completed_windows": 1,
-    "eligible_candidates": 23,
+    "eligible_candidates": 22,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 151,
+    "pending_windows": 170,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -1071,6 +1071,139 @@
       "since": "2026-10-02",
       "source": "crossref",
       "until": "2026-10-02"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-03",
+      "source": "europe_pmc",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-03",
+      "source": "crossref",
+      "until": "2026-10-05"
     }
   ],
   "pool": [
@@ -1417,32 +1550,6 @@
       "venue": "CPT: pharmacometrics & systems pharmacology"
     },
     {
-      "abstract": "Purpose Tacrolimus (TAC) is a calcineurin inhibitor widely used for immunosuppressive therapy. It has a narrow therapeutic window and substantial interindividual variability, making therapeutic drug monitoring (TDM) essential. Traditional population pharmacokinetic (PPK) models have limited capacity to capture complex nonlinear relationships and multifactorial interactions. This study aimed to integrate PPK and machine learning (ML) to predict TAC plasma concentration. Patients and methods A total of 182 consecutive patients with nephrotic syndrome (NS) who received oral TAC therapy and underwent TDM and CYP3A5 genotyping at the First Affiliated Hospital of Xinjiang Medical University between January 2018 and December 2023 were enrolled. Individual PK parameters derived from the PPK model were incorporated as new features into ML models. Feature selection was performed using recursive feature elimination with cross-validation (RFECV), and the union of features selected by the three models with the highest R 2 was used to construct the final feature set. Nine ML models were then developed, and the three best-performing models were combined into a weighted ensemble. Model performance was assessed by R 2 , mean absolute error (MAE), and root mean square error (RMSE). SHAP (SHapley Additive exPlanations) was used to interpret feature contributions. Results Incorporating PK parameters resulted in a consistent improvement in predictive performance compared with the model without PK parameters (R 2 : 0.633 vs. 0.602). The weighted ensemble of CatBoost, AdaBoost, and GraBoost (5:3:2) achieved the best performance (R 2 = 0.633, MAE = 1.081, RMSE = 1.377), whereas the optimal weighting without PK parameters was 3:6:1 (R 2 = 0.602, MAE = 1.139, RMSE = 1.432). SHAP analysis indicated that PK parameters was the most influential feature, exceeding conventional biochemical indicators. Conclusion Incorporating PK parameters enhanced model predictive performance, providing quantitative support for individualized TAC dosing and facilitating safer and more precise clinical applications.",
-      "authors": [
-        "Zhou Y",
-        "Zhou Z",
-        "Chen S",
-        "Zhu L",
-        "Yun Y",
-        "Yuan Y",
-        "Chen C",
-        "Zou J",
-        "Zhao J"
-      ],
-      "date": "2026-03-23",
-      "doi": "10.2147/dddt.s576598",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41908942"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome.",
-      "url": "https://europepmc.org/article/MED/41908942",
-      "venue": "Drug design, development and therapy"
-    },
-    {
       "abstract": "Background: Antiviral therapies are widely used during pregnancy and are generally considered safe, pregnancy-specific severe safety signals continue to be observed in post-marketing pharmacovigilance data. These signals are rarely interpreted within an integrated mechanistic framework. Methods: We analysed pregnancy-related EudraVigilance reports (2015-2025) using a previously network-based pharmacovigilance framework. Established ADR clusters were treated as fixed phenotypes and integrated with in silico ADMET liabilities, literature-derived pregnancy pharmacokinetic/pharmacodynamic (PK/PD) parameters, polypharmacy and co-medication network metrics, and exploratory statistical, machine-learning, and exposure-liability analyses for mechanistic prioritisation. Results: Phenotype membership explained 22.3% of the variance in composite ADMET risk (intraclass correlation coefficient = 0.223; p p -10 ). One phenotype showed pronounced enrichment, with 13 antivirals over-represented. Polypharmacy strongly modified seriousness, with odds of serious outcomes increasing by ~5% per additional co-reported active drug (OR 1.05, 95% CI 1.04-1.05). A composite mechanistic vulnerability index showed moderate concordance with empirical burden (Spearman's ρ = 0.65), while regimen-level prioritisation of drug-drug interactions (DDIs) identified no high-priority combinations. Conclusions: Pregnancy-related antiviral ADRs cluster into reproducible phenotypes driven by mechanistic liability and system-level complexity, supporting mechanistically informed prioritisation and targeted pharmacometric follow-up.",
       "authors": [
         "Costa B",
@@ -1667,5 +1774,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-02"
+  "through": "2026-10-05"
 }

@@ -1,6 +1,87 @@
 {
   "articles": [
     {
+      "abstract": "This study presents an integrated computational modeling framework combining deep learning and Quantitative Systems Pharmacology (QSP) to predict the efficacy of PROTAC (PROteolysis Targeting Chimera) molecules. PROTACs have emerged as promising therapeutics for targeted protein degradation (TPD), offering significant advantages in addressing proteins that traditional small-molecule inhibitors cannot target. However, experimental evaluation of PROTAC efficacy is hindered by extensive variability in molecular configurations, necessitating efficient computational prediction methods. The proposed model integrates binding affinity predictions from DeepCalici, a convolutional neural network-based deep learning model, with a mechanistic QSP Hook model to estimate key pharmacodynamic parameters, notably half-maximal degradation concentration( DC50 ) and maximal degradation( Dmax ). This study utilized curated experimental data from PROTAC-DB, including experimentally validated DC50 and Dmax values. The dissociation constants ( Kd ) between PROTAC molecules and their protein targets (POI) or E3 ligases were predicted using DeepCalici and, then incorporated into the Hook model. To enhance the prediction accuracy, a supplementary deep neural network adjusted the hook model parameters based on chemical and biochemical features. The integrated modeling approach achieved a strong predictive performance for DC50 , demonstrating its practical value in prioritizing effective PROTAC candidates. However, the predictions for Dmax were less accurate, likely reflecting the variability in the experimental conditions not captured in the current dataset. This study highlights the critical importance of comprehensive structural data for accurate modeling of PROTAC efficacy and suggests future improvements using standardized experimental data. Such integrative modeling approaches promise to accelerate the discovery and optimization of PROTAC therapeutics.",
+      "authors": [
+        "Goo S",
+        "Kim J",
+        "Lee S",
+        "Jung S",
+        "Chae JW",
+        "Choi JM",
+        "Yun HY"
+      ],
+      "doi": "10.1186/s13321-026-01152-2",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "deep learning",
+            "neural network"
+          ],
+          "method": [
+            "framework",
+            "optimization"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "deep learning",
+            "neural network"
+          ],
+          "method": [
+            "framework",
+            "optimization"
+          ],
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [],
+          "pk": [
+            "qsp"
+          ]
+        }
+      },
+      "id": "doi:10.1186/s13321-026-01152-2",
+      "publication_date": "2026-01-12",
+      "reported_at": "2026-10-05 09:22 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study presents an integrated computational modeling framework combining deep learning and Quantitative Systems Pharmacology (QSP) to predict the efficacy of PROTAC (PROteolysis Targeting Chimera) molecules.",
+        "new_capability": "The integrated modeling approach achieved a strong predictive performance for DC50 , demonstrating its practical value in prioritizing effective PROTAC candidates.",
+        "prior_limitation": "However, experimental evaluation of PROTAC efficacy is hindered by extensive variability in molecular configurations, necessitating efficient computational prediction methods.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model.",
+      "url": "https://europepmc.org/article/MED/41521293",
+      "venue": "Journal of cheminformatics"
+    },
+    {
       "abstract": "Antiretroviral pre‐exposure prophylaxis (PrEP) is less effective in women than expected, partly because drug exposure within the female genital tract is variable and may be influenced by the vaginal microbiome. We developed an integrated pharmacometrics and machine learning framework to evaluate associations between vaginal microbiome composition and cervical antiretroviral exposure in women with human immunodeficiency virus (HIV) receiving tenofovir (TFV)‐, lamivudine (3TC)‐, or emtricitabine (FTC)‐containing regimens. Pharmacokinetic and microbiome data were obtained from two single‐center studies in Uganda and the United States. Published population pharmacokinetic models were used to estimate individual parameters by maximum a posteriori Bayesian estimation and to simulate plasma and cervical tissue exposure metrics under sexual‐activity‐driven dosing that were not studied in these trials. Microbiome diversity was assessed using alpha and beta diversity analyses. Associations between microbial genera and cervical drug exposure were evaluated using correlation analysis, differential abundance testing, and three machine learning approaches: LASSO, random forest, and XGBoost. Overall vaginal microbiome diversity was not associated with cervical exposure to TFV, 3TC, or FTC. In contrast, specific taxa‐level associations with cervical drug exposure were identified. For TFV, Gemella was positively associated with cervical TFV‐diphosphate exposure, whereas Megasphaera and Falsiporphyromonas were negatively associated across multiple models. For 3TC, Dialister, Prevotella, Atopobium, Streptobacillus , and Gardnerella were repeatedly identified. For FTC, Bifidobacteriaceae was consistently selected, with Lachnospiraceae and Prevotellaceae also implicated. This pharmacometrics‐machine learning framework identified specific vaginal taxa associated with cervical antiretroviral exposure, supporting the future development of microbiome‐based biomarkers and precision PrEP strategies for women.",
       "authors": [
         "Yan D",
@@ -2968,13 +3049,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-04 09:18 JST",
+  "last_scan_at": "2026-10-05 09:22 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-04 09:18 JST",
+    "archive": {
+      "cached_candidates_before": 22,
+      "completed_windows": 1,
+      "eligible_candidates": 22,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 170,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-05 09:22 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/58"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -2989,18 +3081,17 @@
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2413,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 166,
+      "already_reported": 2,
+      "duplicates": 2429,
+      "excluded_publication_type": 153,
       "missing_ai_evidence": 18,
-      "missing_pk_evidence": 2710,
+      "missing_pk_evidence": 2707,
       "retrieved": 5309,
-      "unique": 2896
+      "unique": 2880
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },

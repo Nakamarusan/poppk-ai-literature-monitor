@@ -1,18 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-10-04",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57",
+  "last_delivery_date_jst": "2026-10-05",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/58",
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-10-04T00:18:17.062144+00:00",
+      "at_utc": "2026-10-05T00:22:56.559712+00:00",
       "message": "HTTP 429: Rate exceeded."
     }
   },
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-10-04 09:18 JST",
+    "archive": {
+      "cached_candidates_before": 22,
+      "completed_windows": 1,
+      "eligible_candidates": 22,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 170,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-05 09:22 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/57"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/58"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -27,23 +38,22 @@
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2413,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 166,
+      "already_reported": 2,
+      "duplicates": 2429,
+      "excluded_publication_type": 153,
       "missing_ai_evidence": 18,
-      "missing_pk_evidence": 2710,
+      "missing_pk_evidence": 2707,
       "retrieved": 5309,
-      "unique": 2896
+      "unique": 2880
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-04",
-  "last_success_utc": "2026-10-04T00:18:17.062144+00:00",
+  "last_selection_date_jst": "2026-10-05",
+  "last_success_utc": "2026-10-05T00:22:56.559712+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -172,6 +182,12 @@
       "selection_type": "new",
       "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
     },
+    "doi:10.1186/s13321-026-01152-2": {
+      "doi": "10.1186/s13321-026-01152-2",
+      "selected_at": "2026-10-05T00:22:56.559712+00:00",
+      "selection_type": "historical",
+      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model."
+    },
     "doi:10.1186/s40635-026-00973-7": {
       "doi": "10.1186/s40635-026-00973-7",
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
@@ -289,6 +305,12 @@
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
+    },
+    "source:europe pmc:med:41521293": {
+      "doi": "10.1186/s13321-026-01152-2",
+      "selected_at": "2026-10-05T00:22:56.559712+00:00",
+      "selection_type": "historical",
+      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model."
     },
     "source:europe pmc:med:41908942": {
       "doi": "10.2147/dddt.s576598",
@@ -643,6 +665,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "title:992fb50ebf9de82b90e1157a": {
+      "doi": "10.1186/s13321-026-01152-2",
+      "selected_at": "2026-10-05T00:22:56.559712+00:00",
+      "selection_type": "historical",
+      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model."
+    },
     "title:9a33003f9f24e27860ff548c": {
       "doi": "10.64898/2026.08.25.26361215",
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
@@ -745,21 +773,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-04"
+    "arxiv": "2026-10-05"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
+      "last_attempt_utc": "2026-10-05T00:22:56.559712+00:00",
       "message": "HTTP 429: Rate exceeded.",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
+      "last_attempt_utc": "2026-10-05T00:22:56.559712+00:00",
       "records": 5304,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-04T00:18:17.062144+00:00",
+      "last_attempt_utc": "2026-10-05T00:22:56.559712+00:00",
       "records": 5,
       "status": "ok"
     }
