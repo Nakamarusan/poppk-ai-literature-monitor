@@ -1,18 +1,29 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-06 11:01 JST",
+  "last_scan_at": "2026-10-07 10:10 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-06 11:01 JST",
+    "archive": {
+      "cached_candidates_before": 21,
+      "completed_windows": 1,
+      "eligible_candidates": 21,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 189,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-07 10:10 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/59"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -22,30 +33,108 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2433,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 163,
+      "already_reported": 4,
+      "duplicates": 2443,
+      "excluded_publication_type": 158,
       "missing_abstract": 1,
-      "missing_ai_evidence": 18,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2676,
-      "retrieved": 5295,
-      "unique": 2862
+      "missing_pk_evidence": 2627,
+      "retrieved": 5253,
+      "unique": 2810
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 40,
+  "article_count": 41,
   "new_count": 13,
-  "historical_count": 27,
+  "historical_count": 28,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "The selection of a \"good\" model usually involves a combination of objective and subjective criteria. Although many aspects of model quality can be expressed numerically, certain desirable characteristics remain difficult-or even impossible-to quantify precisely. Multi-objective optimization (MOO) provides a systematic way to handle this challenge by explicitly incorporating and balancing both objective (measurable) and subjective (judgment-based) considerations when choosing among candidate solutions. The generated Pareto front represents a set of non-dominated models where no single solution can be improved in one objective without sacrificing the performance in another objective. Using the non-dominated sorting genetic algorithm II (NSGA-II), an implementation of MOO, we simultaneously considered objective function value and number of estimated parameters as competing criteria. Concentration measurements of 17-DMAG, quetiapine, clozapine and ziprasidone were applied to build population pharmacokinetic models through traditional stepwise search, machine learning based single-objective hybrid genetic algorithm (SOHGA) and MOO. Local downhill search with MOO was also assessed in this study. While both objectives improved, models with lower objective function value generally contained more estimated parameters. The number of non-dominated solutions for DMAG, ziprasidone, clozapine, and quetiapine was 17, 9, 9, and 13, respectively. The optimal model selected by SOHGA appeared on the Pareto front for DMAG, ziprasidone and clozapine datasets. Overall, MOO provides objective transparency to the cost of tradeoffs between competing model objectives, allowing researchers to better contextualize subjective criteria (e.g., biological plausibility, improvements in diagnostic plots) when aligning model selection with clinical context.",
+      "authors": [
+        "Li X",
+        "Sale M",
+        "Craig J",
+        "Nieforth K",
+        "Mazur A",
+        "Bies RR"
+      ],
+      "doi": "10.1007/s10928-026-10036-9",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "optimization",
+            "model selection"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "optimization",
+            "model selection",
+            "algorithm"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "optimization",
+            "model selection"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1007/s10928-026-10036-9",
+      "publication_date": "2026-05-16",
+      "reported_at": "2026-10-07 10:10 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 30,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Using the non-dominated sorting genetic algorithm II (NSGA-II), an implementation of MOO, we simultaneously considered objective function value and number of estimated parameters as competing criteria.",
+        "new_capability": "The generated Pareto front represents a set of non-dominated models where no single solution can be improved in one objective without sacrificing the performance in another objective.",
+        "prior_limitation": "Although many aspects of model quality can be expressed numerically, certain desirable characteristics remain difficult-or even impossible-to quantify precisely.",
+        "significance": "Overall, MOO provides objective transparency to the cost of tradeoffs between competing model objectives, allowing researchers to better contextualize subjective criteria (e.g., biological plausibility, improvements in diagnostic plots) when aligning model selection with clinical context.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin.",
+      "url": "https://europepmc.org/article/MED/42143189",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
     {
       "abstract": "ABSTRACT Nonlinear mixed-effects (NLME) models are essential for analyzing hierarchical and longitudinal data, particularly in pharmacometrics. This paper presents deep nonlinear mixed effects (DeepNLME) models and applications thereof in the DeepPumas software framework. DeepNLME integrates neural networks with scientific and NLME modeling, where the neural network component enhances flexibility and predictive performance, the scientific component enhances interpretability, generalization ability and data efficiency, and the use of random effects enables capturing unexplained individual variability in hierarchical data. This combination exemplifies what we term (Conditional) Generative Scientific Machine Learning (GenSciML), bridging scientific knowledge, data-driven flexibility, and hierarchical probabilistic modeling with generative capacity. We demonstrate DeepNLME’s efficacy on two practically important tasks: discovery of missing dynamical terms and data-driven covariate modeling. Using synthetic data of drug kinetics and response, we show that a DeepNLME model can fit missing dynamical terms, accurately predict individual time-courses, and generalize to novel dosing regimens when trained on a dataset of only 60 patients. Furthermore, we demonstrate how DeepNLME can be used to fit a covariate model, producing individualized prior distributions conditioned on baseline covariates using a dataset of 300 patients. Our findings highlight DeepNLME’s potential for drug development, personalized medicine, and applications requiring interpretable probabilistic modeling of longitudinal data.",
       "authors": [

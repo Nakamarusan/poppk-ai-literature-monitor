@@ -1,23 +1,34 @@
 {
-  "last_delivery_date_jst": "2026-10-06",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/59",
+  "last_delivery_date_jst": "2026-10-07",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60",
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-10-06T02:01:15.287149+00:00",
+      "at_utc": "2026-10-07T01:10:44.537962+00:00",
       "message": "Network error: The read operation timed out"
     }
   },
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-10-06 11:01 JST",
+    "archive": {
+      "cached_candidates_before": 21,
+      "completed_windows": 1,
+      "eligible_candidates": 21,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 189,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-07 10:10 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/59"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -27,25 +38,24 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2433,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 163,
+      "already_reported": 4,
+      "duplicates": 2443,
+      "excluded_publication_type": 158,
       "missing_abstract": 1,
-      "missing_ai_evidence": 18,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2676,
-      "retrieved": 5295,
-      "unique": 2862
+      "missing_pk_evidence": 2627,
+      "retrieved": 5253,
+      "unique": 2810
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-06",
-  "last_success_utc": "2026-10-06T02:01:15.287149+00:00",
+  "last_selection_date_jst": "2026-10-07",
+  "last_success_utc": "2026-10-07T01:10:44.537962+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -114,6 +124,12 @@
       "notified_at": "2026-09-24T00:10:54.130426+00:00",
       "selection_type": "new",
       "title": "A Practical Tutorial on Physics-Informed Networks for Pharmacometrics and Quantitative Systems Pharmacology."
+    },
+    "doi:10.1007/s10928-026-10036-9": {
+      "doi": "10.1007/s10928-026-10036-9",
+      "selected_at": "2026-10-07T01:10:44.537962+00:00",
+      "selection_type": "historical",
+      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin."
     },
     "doi:10.1007/s10928-026-10054-7": {
       "doi": "10.1007/s10928-026-10054-7",
@@ -333,6 +349,12 @@
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
+    },
+    "source:europe pmc:med:42143189": {
+      "doi": "10.1007/s10928-026-10036-9",
+      "selected_at": "2026-10-07T01:10:44.537962+00:00",
+      "selection_type": "historical",
+      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin."
     },
     "source:europe pmc:med:42174295": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -603,6 +625,12 @@
       "selection_type": "new",
       "title": "DeepNLME - Conditional Generative Scientific Machine Learning with Applications in Pharmacology"
     },
+    "title:35b42827c15d8a27c74b7ab8": {
+      "doi": "10.1007/s10928-026-10036-9",
+      "selected_at": "2026-10-07T01:10:44.537962+00:00",
+      "selection_type": "historical",
+      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin."
+    },
     "title:3bdf2e2be0fa86aca7bb81d4": {
       "doi": "10.1002/psp4.70313",
       "notified_at": "2026-09-05T23:29:24.639976+00:00",
@@ -783,22 +811,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-06"
+    "arxiv": "2026-10-07"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-06T02:01:15.287149+00:00",
+      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
       "message": "Network error: The read operation timed out",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-06T02:01:15.287149+00:00",
-      "records": 5292,
+      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
+      "records": 5251,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-06T02:01:15.287149+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
+      "records": 2,
       "status": "ok"
     }
   }

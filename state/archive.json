@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-05",
+  "last_check": "2026-10-07",
   "last_run": {
-    "cached_candidates_before": 22,
+    "cached_candidates_before": 21,
     "completed_windows": 1,
-    "eligible_candidates": 22,
+    "eligible_candidates": 21,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 170,
+    "pending_windows": 189,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -1204,6 +1204,139 @@
       "since": "2026-10-03",
       "source": "crossref",
       "until": "2026-10-05"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-06",
+      "source": "europe_pmc",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-06",
+      "source": "crossref",
+      "until": "2026-10-07"
     }
   ],
   "pool": [
@@ -1746,33 +1879,9 @@
       "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period.",
       "url": "https://europepmc.org/article/MED/41531243",
       "venue": "British journal of clinical pharmacology"
-    },
-    {
-      "abstract": "This study presents an integrated computational modeling framework combining deep learning and Quantitative Systems Pharmacology (QSP) to predict the efficacy of PROTAC (PROteolysis Targeting Chimera) molecules. PROTACs have emerged as promising therapeutics for targeted protein degradation (TPD), offering significant advantages in addressing proteins that traditional small-molecule inhibitors cannot target. However, experimental evaluation of PROTAC efficacy is hindered by extensive variability in molecular configurations, necessitating efficient computational prediction methods. The proposed model integrates binding affinity predictions from DeepCalici, a convolutional neural network-based deep learning model, with a mechanistic QSP Hook model to estimate key pharmacodynamic parameters, notably half-maximal degradation concentration( DC50 ) and maximal degradation( Dmax ). This study utilized curated experimental data from PROTAC-DB, including experimentally validated DC50 and Dmax values. The dissociation constants ( Kd ) between PROTAC molecules and their protein targets (POI) or E3 ligases were predicted using DeepCalici and, then incorporated into the Hook model. To enhance the prediction accuracy, a supplementary deep neural network adjusted the hook model parameters based on chemical and biochemical features. The integrated modeling approach achieved a strong predictive performance for DC50 , demonstrating its practical value in prioritizing effective PROTAC candidates. However, the predictions for Dmax were less accurate, likely reflecting the variability in the experimental conditions not captured in the current dataset. This study highlights the critical importance of comprehensive structural data for accurate modeling of PROTAC efficacy and suggests future improvements using standardized experimental data. Such integrative modeling approaches promise to accelerate the discovery and optimization of PROTAC therapeutics.",
-      "authors": [
-        "Goo S",
-        "Kim J",
-        "Lee S",
-        "Jung S",
-        "Chae JW",
-        "Choi JM",
-        "Yun HY"
-      ],
-      "date": "2026-01-12",
-      "doi": "10.1186/s13321-026-01152-2",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41521293"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model.",
-      "url": "https://europepmc.org/article/MED/41521293",
-      "venue": "Journal of cheminformatics"
     }
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-05"
+  "through": "2026-10-07"
 }
