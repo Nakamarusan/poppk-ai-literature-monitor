@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-07",
+  "last_check": "2026-10-08",
   "last_run": {
-    "cached_candidates_before": 21,
+    "cached_candidates_before": 20,
     "completed_windows": 1,
-    "eligible_candidates": 21,
+    "eligible_candidates": 20,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 189,
+    "pending_windows": 208,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -1337,6 +1337,139 @@
       "since": "2026-10-06",
       "source": "crossref",
       "until": "2026-10-07"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-08",
+      "source": "europe_pmc",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-08",
+      "source": "crossref",
+      "until": "2026-10-08"
     }
   ],
   "pool": [
@@ -1403,29 +1536,6 @@
       ],
       "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL.",
       "url": "https://europepmc.org/article/MED/42243590",
-      "venue": "Journal of pharmacokinetics and pharmacodynamics"
-    },
-    {
-      "abstract": "The selection of a \"good\" model usually involves a combination of objective and subjective criteria. Although many aspects of model quality can be expressed numerically, certain desirable characteristics remain difficult-or even impossible-to quantify precisely. Multi-objective optimization (MOO) provides a systematic way to handle this challenge by explicitly incorporating and balancing both objective (measurable) and subjective (judgment-based) considerations when choosing among candidate solutions. The generated Pareto front represents a set of non-dominated models where no single solution can be improved in one objective without sacrificing the performance in another objective. Using the non-dominated sorting genetic algorithm II (NSGA-II), an implementation of MOO, we simultaneously considered objective function value and number of estimated parameters as competing criteria. Concentration measurements of 17-DMAG, quetiapine, clozapine and ziprasidone were applied to build population pharmacokinetic models through traditional stepwise search, machine learning based single-objective hybrid genetic algorithm (SOHGA) and MOO. Local downhill search with MOO was also assessed in this study. While both objectives improved, models with lower objective function value generally contained more estimated parameters. The number of non-dominated solutions for DMAG, ziprasidone, clozapine, and quetiapine was 17, 9, 9, and 13, respectively. The optimal model selected by SOHGA appeared on the Pareto front for DMAG, ziprasidone and clozapine datasets. Overall, MOO provides objective transparency to the cost of tradeoffs between competing model objectives, allowing researchers to better contextualize subjective criteria (e.g., biological plausibility, improvements in diagnostic plots) when aligning model selection with clinical context.",
-      "authors": [
-        "Li X",
-        "Sale M",
-        "Craig J",
-        "Nieforth K",
-        "Mazur A",
-        "Bies RR"
-      ],
-      "date": "2026-05-16",
-      "doi": "10.1007/s10928-026-10036-9",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:42143189"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin.",
-      "url": "https://europepmc.org/article/MED/42143189",
       "venue": "Journal of pharmacokinetics and pharmacodynamics"
     },
     {
@@ -1883,5 +1993,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-07"
+  "through": "2026-10-08"
 }

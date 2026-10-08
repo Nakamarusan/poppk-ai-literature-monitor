@@ -1,29 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-07",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60",
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-10-07T01:10:44.537962+00:00",
-      "message": "Network error: The read operation timed out"
-    }
-  },
+  "last_delivery_date_jst": "2026-10-08",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 21,
+      "cached_candidates_before": 20,
       "completed_windows": 1,
-      "eligible_candidates": 21,
+      "eligible_candidates": 20,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 189,
+      "pending_windows": 208,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-07 10:10 JST",
+    "checked_at": "2026-10-08 10:30 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -35,18 +29,23 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2443,
-      "excluded_publication_type": 158,
+      "duplicates": 2416,
+      "excluded_publication_type": 160,
       "missing_abstract": 1,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2627,
-      "retrieved": 5253,
-      "unique": 2810
+      "missing_pk_evidence": 2625,
+      "retrieved": 5222,
+      "unique": 2806
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -54,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-07",
-  "last_success_utc": "2026-10-07T01:10:44.537962+00:00",
+  "last_selection_date_jst": "2026-10-08",
+  "last_success_utc": "2026-10-08T01:30:24.721404+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -225,6 +224,12 @@
       "notified_at": "2026-09-11T23:48:19.363976+00:00",
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
+    },
+    "doi:10.21203/rs.3.rs-9308510/v1": {
+      "doi": "10.21203/rs.3.rs-9308510/v1",
+      "selected_at": "2026-10-08T01:30:24.721404+00:00",
+      "selection_type": "historical",
+      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data"
     },
     "doi:10.2147/dddt.s576598": {
       "doi": "10.2147/dddt.s576598",
@@ -517,6 +522,12 @@
       "selection_type": "new",
       "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
     },
+    "source:europe pmc:ppr:ppr1182052": {
+      "doi": "10.21203/rs.3.rs-9308510/v1",
+      "selected_at": "2026-10-08T01:30:24.721404+00:00",
+      "selection_type": "historical",
+      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data"
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -726,6 +737,12 @@
       "selection_type": "historical",
       "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
+    "title:c0a9b57ec095d6d23d971f7c": {
+      "doi": "10.21203/rs.3.rs-9308510/v1",
+      "selected_at": "2026-10-08T01:30:24.721404+00:00",
+      "selection_type": "historical",
+      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data"
+    },
     "title:c168174775e56aa00a63acf8": {
       "doi": "10.1002/psp4.70343",
       "notified_at": "2026-09-24T00:10:54.130426+00:00",
@@ -811,22 +828,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-07"
+    "arxiv": "2026-10-08"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
-      "message": "Network error: The read operation timed out",
-      "status": "error"
+      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
+      "records": 0,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
-      "records": 5251,
+      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
+      "records": 5219,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-07T01:10:44.537962+00:00",
-      "records": 2,
+      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
+      "records": 3,
       "status": "ok"
     }
   }

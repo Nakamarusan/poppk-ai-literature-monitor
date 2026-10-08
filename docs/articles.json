@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-07 10:10 JST",
+  "last_scan_at": "2026-10-08 10:30 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 21,
+      "cached_candidates_before": 20,
       "completed_windows": 1,
-      "eligible_candidates": 21,
+      "eligible_candidates": 20,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 189,
+      "pending_windows": 208,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-07 10:10 JST",
+    "checked_at": "2026-10-08 10:30 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/60"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -30,18 +30,23 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2443,
-      "excluded_publication_type": 158,
+      "duplicates": 2416,
+      "excluded_publication_type": 160,
       "missing_abstract": 1,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2627,
-      "retrieved": 5253,
-      "unique": 2810
+      "missing_pk_evidence": 2625,
+      "retrieved": 5222,
+      "unique": 2806
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -49,13 +54,98 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 41,
+  "article_count": 42,
   "new_count": 13,
-  "historical_count": 28,
+  "historical_count": 29,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Abstract Precision dosing is a cornerstone of individualized therapeutics, yet its implementation is frequently hindered by clinical pharmacokinetic data that are characteristically sparse, irregularly sampled, and highly heterogeneous. Traditional mechanistic models provide structural interpretability but often lack the flexibility to capture complex patient-specific deviations, whereas purely data-driven deep learning models are prone to pharmacological inconsistency and poor generalization in low-data regimes. Here we present Sim2Real-PK, a hybrid neural-mechanistic framework that reconceptualizes pharmacokinetic forecasting as a time-aware latent state-space trajectory inference task. Sim2Real-PK first pretrains a neural dynamics core on massive synthetic datasets derived from mechanistic ordinary differential equation systems to internalize universal kinetic laws, then adapts to real-world clinical heterogeneity through a constrained residual correction pathway. Validated on individual participant data from the YODA Project for two drugs representing distinct pharmacological regimes—ibrutinib and daratumumab—Sim2Real-PK significantly outperformed conventional population-level baselines. The framework improved the F50 for ibrutinib from 32.1% to 39.9% and the F20 for daratumumab from 38.8% to 51.1%, while faithfully recovering expected linear and nonlinear pharmacological behaviors. Crucially, the model successfully resolved latent pharmacokinetic heterogeneity within patient cohorts that remained obscured under traditional analytical frameworks. These results demonstrate that mechanistically-anchored neural adaptation can bridge the gap between biological rigor and predictive agility, providing a robust foundation for next-generation model-informed precision dosing.",
+      "authors": [
+        "Han L",
+        "Chen X",
+        "Wang H",
+        "Zhang Z",
+        "Liu T",
+        "Wu M",
+        "Wang Z",
+        "Pang W",
+        "Li J",
+        "Wang J",
+        "Kong D",
+        "Jia M",
+        "Hao H",
+        "Yu Y",
+        "Yu G"
+      ],
+      "doi": "10.21203/rs.3.rs-9308510/v1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [
+            "framework",
+            "inference"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [
+            "framework",
+            "inference"
+          ],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "deep learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.21203/rs.3.rs-9308510/v1",
+      "publication_date": "2026-04-24",
+      "reported_at": "2026-10-08 10:30 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here we present Sim2Real-PK, a hybrid neural-mechanistic framework that reconceptualizes pharmacokinetic forecasting as a time-aware latent state-space trajectory inference task.",
+        "new_capability": "Validated on individual participant data from the YODA Project for two drugs representing distinct pharmacological regimes—ibrutinib and daratumumab—Sim2Real-PK significantly outperformed conventional population-level baselines.",
+        "prior_limitation": "Traditional mechanistic models provide structural interpretability but often lack the flexibility to capture complex patient-specific deviations, whereas purely data-driven deep learning models are prone to pharmacological inconsistency and poor generalization in low-data regimes.",
+        "significance": "These results demonstrate that mechanistically-anchored neural adaptation can bridge the gap between biological rigor and predictive agility, providing a robust foundation for next-generation model-informed precision dosing.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data",
+      "url": "https://europepmc.org/article/PPR/PPR1182052",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "The selection of a \"good\" model usually involves a combination of objective and subjective criteria. Although many aspects of model quality can be expressed numerically, certain desirable characteristics remain difficult-or even impossible-to quantify precisely. Multi-objective optimization (MOO) provides a systematic way to handle this challenge by explicitly incorporating and balancing both objective (measurable) and subjective (judgment-based) considerations when choosing among candidate solutions. The generated Pareto front represents a set of non-dominated models where no single solution can be improved in one objective without sacrificing the performance in another objective. Using the non-dominated sorting genetic algorithm II (NSGA-II), an implementation of MOO, we simultaneously considered objective function value and number of estimated parameters as competing criteria. Concentration measurements of 17-DMAG, quetiapine, clozapine and ziprasidone were applied to build population pharmacokinetic models through traditional stepwise search, machine learning based single-objective hybrid genetic algorithm (SOHGA) and MOO. Local downhill search with MOO was also assessed in this study. While both objectives improved, models with lower objective function value generally contained more estimated parameters. The number of non-dominated solutions for DMAG, ziprasidone, clozapine, and quetiapine was 17, 9, 9, and 13, respectively. The optimal model selected by SOHGA appeared on the Pareto front for DMAG, ziprasidone and clozapine datasets. Overall, MOO provides objective transparency to the cost of tradeoffs between competing model objectives, allowing researchers to better contextualize subjective criteria (e.g., biological plausibility, improvements in diagnostic plots) when aligning model selection with clinical context.",
       "authors": [
@@ -381,7 +471,7 @@
       "venue": "Clinical pharmacology and therapeutics"
     },
     {
-      "abstract": "Large language model (LLM) agents can propose combination therapies and construct supporting mechanistic models far quicker than either can be verified. To address this gap, we built a gated agentic AI quantitative systems pharmacology (Ai QSP) workflow where no hypothesis reaches a report until it clears strict hurdles for precedent, evidence, structural integrity, and release. We applied this pipeline end to end to healthy-ageing interventions. It began with a 34 state model calibrated on clinical trial data for semaglutide and metformin. Locked and evaluated against an independent post hoc DNA methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about 0.14 years per year where 1.6 were observed, halting tier promotion. The workflow then generated seven nutritional combination hypotheses (H1H7) with 48 new parameters encoded in SBML. Identifiability analysis showed that 37 of these were completely unconstrained by available data. Trimming the model down to its lead pairing - a food derived bioactive (Agent A) plus a single-strain probiotic (Agent B left six identifiable parameters and locked the uncalibrated interaction term at zero. From this reduced model, we derived an 84 day trial with a 28 day washout, requiring 356 participants for 80% power at an interaction ratio of 0.75. A 9,000 person virtual trial confirmed the design (80.5% power), but revealed an operational trap: an assay floor at 24 mg/kg slashed power to 33% and skewed estimates toward the null, forcing a protocol-level censoring condition before study lock. Testing the pipeline across downstream operational stages and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides. Ultimately, the workflow delivered no silver bullet: its output is a single testable interaction, an assay hardened trial design, and an audit trail documenting why the other six hypotheses were shelved. Agent identities, doses, and agent specific sources are withheld in this version pending patent filing.",
+      "abstract": "Large language model (LLM) agents can propose combination therapies and construct supporting mechanistic models far quicker than either can be verified. To address this gap, we built a gated agentic AI–quantitative systems pharmacology (QSP) workflow where no hypothesis reaches a report until it clears strict hurdles for precedent, evidence, structural integrity, and release. We applied this pipeline end to end to healthy-ageing interventions. It began with a 34-state model calibrated on clinical trial data for semaglutide and metformin. Locked and evaluated against an independent post hoc DNA-methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about −0.14 years per year where −1.6 to −5.0 were observed, halting tier promotion. The workflow then generated seven nutritional combination hypotheses (H1–H7) with 48 new parameters encoded in SBML. Identifiability analysis showed that 37 of these were completely unconstrained by available data. Trimming the model down to its lead pairing—a food-derived bioactive (Agent A) plus a single-strain probiotic (Agent B)—left six identifiable parameters and locked the uncalibrated interaction term at zero. From this reduced model, we derived an 84-day $2 \\times 2$ factorial trial with a 28-day washout, requiring 356 participants for 80% power at an interaction ratio of 0.75. A 9,000-person virtual trial confirmed the design (80.5% power), but revealed an operational trap: an assay floor at 24 mg/kg slashed power to 33% and skewed estimates toward the null, forcing a protocol-level censoring condition before study lock. Testing the pipeline across downstream operational stages (10–42) and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides. Ultimately, the workflow delivered no silver bullet: its output is a single testable interaction, an assay-hardened trial design, and an audit trail documenting why the other six hypotheses were shelved. (Agent identities, doses, and agent-specific sources are withheld in this version pending patent filing).",
       "authors": [
         "Goryanin I",
         "Goryanin I",
@@ -450,12 +540,12 @@
       ],
       "summary": {
         "contribution": "Not stated in the available abstract.",
-        "new_capability": "Testing the pipeline across downstream operational stages and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides.",
-        "prior_limitation": "Locked and evaluated against an independent post hoc DNA methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about 0.14 years per year where 1.6 were observed, halting tier promotion.",
-        "significance": "It began with a 34 state model calibrated on clinical trial data for semaglutide and metformin.",
+        "new_capability": "Testing the pipeline across downstream operational stages (10–42) and comparative oncology programmes showed that unconstrained generation consistently over-reports novelty, topological entry points can masquerade as biological mechanism, and governance gates remain vulnerable to operator overrides.",
+        "prior_limitation": "Locked and evaluated against an independent post hoc DNA-methylation trial, the model captured the direction of change across all 9 organ and system clocks, but the magnitude was far too small: it predicted about −0.14 years per year where −1.6 to −5.0 were observed, halting tier promotion.",
+        "significance": "It began with a 34-state model calibrated on clinical trial data for semaglutide and metformin.",
         "source": "Abstract-only extractive summary"
       },
-      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions",
+      "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI–QSP workflow applied to healthy-ageing interventions",
       "url": "https://europepmc.org/article/PPR/PPR1332621",
       "venue": "Europe PMC"
     },
