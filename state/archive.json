@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-08",
+  "last_check": "2026-10-09",
   "last_run": {
-    "cached_candidates_before": 20,
+    "cached_candidates_before": 19,
     "completed_windows": 1,
-    "eligible_candidates": 20,
+    "eligible_candidates": 19,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 208,
+    "pending_windows": 227,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -1470,6 +1470,139 @@
       "since": "2026-10-08",
       "source": "crossref",
       "until": "2026-10-08"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-09",
+      "source": "europe_pmc",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-09",
+      "source": "crossref",
+      "until": "2026-10-09"
     }
   ],
   "pool": [
@@ -1670,38 +1803,6 @@
       "title": "One model to rule them all: Unification of voltage-gated potassium channel models via deep non-linear mixed effects modelling.",
       "url": "https://europepmc.org/article/MED/42044162",
       "venue": "PLoS computational biology"
-    },
-    {
-      "abstract": "Abstract Precision dosing is a cornerstone of individualized therapeutics, yet its implementation is frequently hindered by clinical pharmacokinetic data that are characteristically sparse, irregularly sampled, and highly heterogeneous. Traditional mechanistic models provide structural interpretability but often lack the flexibility to capture complex patient-specific deviations, whereas purely data-driven deep learning models are prone to pharmacological inconsistency and poor generalization in low-data regimes. Here we present Sim2Real-PK, a hybrid neural-mechanistic framework that reconceptualizes pharmacokinetic forecasting as a time-aware latent state-space trajectory inference task. Sim2Real-PK first pretrains a neural dynamics core on massive synthetic datasets derived from mechanistic ordinary differential equation systems to internalize universal kinetic laws, then adapts to real-world clinical heterogeneity through a constrained residual correction pathway. Validated on individual participant data from the YODA Project for two drugs representing distinct pharmacological regimes—ibrutinib and daratumumab—Sim2Real-PK significantly outperformed conventional population-level baselines. The framework improved the F50 for ibrutinib from 32.1% to 39.9% and the F20 for daratumumab from 38.8% to 51.1%, while faithfully recovering expected linear and nonlinear pharmacological behaviors. Crucially, the model successfully resolved latent pharmacokinetic heterogeneity within patient cohorts that remained obscured under traditional analytical frameworks. These results demonstrate that mechanistically-anchored neural adaptation can bridge the gap between biological rigor and predictive agility, providing a robust foundation for next-generation model-informed precision dosing.",
-      "authors": [
-        "Han L",
-        "Chen X",
-        "Wang H",
-        "Zhang Z",
-        "Liu T",
-        "Wu M",
-        "Wang Z",
-        "Pang W",
-        "Li J",
-        "Wang J",
-        "Kong D",
-        "Jia M",
-        "Hao H",
-        "Yu Y",
-        "Yu G"
-      ],
-      "date": "2026-04-24",
-      "doi": "10.21203/rs.3.rs-9308510/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1182052"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data",
-      "url": "https://europepmc.org/article/PPR/PPR1182052",
-      "venue": ""
     },
     {
       "abstract": "The double hidden-layer neural network has increasingly been applied in tree height modeling due to its superior performance. To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction. Taking the Larix olgensis forest plantation in Jilin Province as the research object, a double hidden-layer back propagation (BP) neural network was established for tree height prediction by adopting trial and error, k-fold cross-validation, and near-domain optimization strategies. In constructing the nonlinear mixed-effects model, the overall and local differences in forest growth data, as well as the autocorrelation among the various levels of data, were considered. Accordingly, after determining the base model, random effects were introduced, the correlation variance-covariance matrix was calculated, and random parameters were estimated to compare the predictive performance of the two aforementioned models. For the mixed-effects model, the coefficient of determination R 2 was 0.8590, the root mean square error (RMSE) was 1.6230, and the mean absolute error (MAE) was 2.2658. For the double hidden-layer BP neural network, the R 2 reached 0.9068 (an increase of 5.56%), the RMSE was 1.3197 (a decrease of 18.69%), and the MAE was 1.2736 (a decrease of 43.79%). The results demonstrate that the double hidden-layer BP neural network is superior to the nonlinear mixed-effects model for tree height prediction. Therefore, the results provide a more accurate method for tree height prediction.",
@@ -1993,5 +2094,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-08"
+  "through": "2026-10-09"
 }

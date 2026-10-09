@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-08 10:30 JST",
+  "last_scan_at": "2026-10-09 10:39 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 20,
+      "cached_candidates_before": 19,
       "completed_windows": 1,
-      "eligible_candidates": 20,
+      "eligible_candidates": 19,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 208,
+      "pending_windows": 227,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-08 10:30 JST",
+    "checked_at": "2026-10-09 10:39 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -39,14 +39,14 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2416,
-      "excluded_publication_type": 160,
+      "duplicates": 2447,
+      "excluded_publication_type": 145,
       "missing_abstract": 1,
-      "missing_ai_evidence": 15,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2625,
-      "retrieved": 5222,
-      "unique": 2806
+      "missing_pk_evidence": 2610,
+      "retrieved": 5227,
+      "unique": 2780
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -54,13 +54,96 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 42,
+  "article_count": 43,
   "new_count": 13,
-  "historical_count": 29,
+  "historical_count": 30,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Abstracts Background Quantitative systems pharmacology (QSP) models provide mechanistic insight into drug response but are limited by labor-intensive, expert-driven workflows. We developed an AI-assisted QSP (AI-QSP) framework that integrates large language models (LLMs) with SBML-based modeling to enable automated reconstruction, extension, and calibration of mechanistic models. Methods The framework was applied to a published CAR-T QSP model. The model was reconstructed in SBML and extended via LLM-guided prompts to incorporate key resistance mechanisms: T-cell exhaustion, PD-1/PD-L1 checkpoint regulation, and tumor antigen escape. Model development followed an iterative expert-in-the-loop workflow. The resulting model (21 reactions, 9 species) was calibrated to synthetic benchmark data using 19-parameter optimization. Model credibility was assessed using ASME V&V 40 and ICH M15 principles, including global sensitivity and profile-likelihood analyses. Results The calibrated model reproduced benchmark dynamics with high accuracy (mean log-RMSE = 0.132). Sensitivity analysis identified CAR-T killing and bystander cytotoxicity as dominant drivers of tumor response. Profile-likelihood analysis showed 71% of parameters were practically identifiable, with remaining parameters prioritised for future data-driven refinement. Conclusions AI-assisted QSP modeling enables reproducible, scalable model reconstruction and evolution while maintaining mechanistic transparency and regulatory alignment. This framework provides a foundation for accelerating model-informed drug development in cell and gene therapies.",
+      "authors": [
+        "Goryanin I",
+        "Demin O",
+        "Goryanin I"
+      ],
+      "doi": "10.64898/2026.04.05.716273",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "benchmark",
+            "model development",
+            "workflow",
+            "automated"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "workflow",
+            "framework",
+            "optimization",
+            "benchmark",
+            "model development",
+            "automated"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "workflow"
+          ],
+          "pk": [
+            "quantitative systems pharmacology"
+          ]
+        }
+      },
+      "id": "doi:10.64898/2026.04.05.716273",
+      "publication_date": "2026-04-07",
+      "reported_at": "2026-10-09 10:39 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 30,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We developed an AI-assisted QSP (AI-QSP) framework that integrates large language models (LLMs) with SBML-based modeling to enable automated reconstruction, extension, and calibration of mechanistic models.",
+        "new_capability": "This framework provides a foundation for accelerating model-informed drug development in cell and gene therapies.",
+        "prior_limitation": "Abstracts Background Quantitative systems pharmacology (QSP) models provide mechanistic insight into drug response but are limited by labor-intensive, expert-driven workflows.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "An AI-Assisted Workflow for Reconstruction, Extension, and Calibration of Quantitative Systems Pharmacology Models",
+      "url": "https://europepmc.org/article/PPR/PPR1216046",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Abstract Precision dosing is a cornerstone of individualized therapeutics, yet its implementation is frequently hindered by clinical pharmacokinetic data that are characteristically sparse, irregularly sampled, and highly heterogeneous. Traditional mechanistic models provide structural interpretability but often lack the flexibility to capture complex patient-specific deviations, whereas purely data-driven deep learning models are prone to pharmacological inconsistency and poor generalization in low-data regimes. Here we present Sim2Real-PK, a hybrid neural-mechanistic framework that reconceptualizes pharmacokinetic forecasting as a time-aware latent state-space trajectory inference task. Sim2Real-PK first pretrains a neural dynamics core on massive synthetic datasets derived from mechanistic ordinary differential equation systems to internalize universal kinetic laws, then adapts to real-world clinical heterogeneity through a constrained residual correction pathway. Validated on individual participant data from the YODA Project for two drugs representing distinct pharmacological regimes—ibrutinib and daratumumab—Sim2Real-PK significantly outperformed conventional population-level baselines. The framework improved the F50 for ibrutinib from 32.1% to 39.9% and the F20 for daratumumab from 38.8% to 51.1%, while faithfully recovering expected linear and nonlinear pharmacological behaviors. Crucially, the model successfully resolved latent pharmacokinetic heterogeneity within patient cohorts that remained obscured under traditional analytical frameworks. These results demonstrate that mechanistically-anchored neural adaptation can bridge the gap between biological rigor and predictive agility, providing a robust foundation for next-generation model-informed precision dosing.",
       "authors": [

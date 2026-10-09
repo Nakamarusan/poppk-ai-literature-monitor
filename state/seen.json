@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-08",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61",
+  "last_delivery_date_jst": "2026-10-09",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 20,
+      "cached_candidates_before": 19,
       "completed_windows": 1,
-      "eligible_candidates": 20,
+      "eligible_candidates": 19,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 208,
+      "pending_windows": 227,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-08 10:30 JST",
+    "checked_at": "2026-10-09 10:39 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/61"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,14 +38,14 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2416,
-      "excluded_publication_type": 160,
+      "duplicates": 2447,
+      "excluded_publication_type": 145,
       "missing_abstract": 1,
-      "missing_ai_evidence": 15,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2625,
-      "retrieved": 5222,
-      "unique": 2806
+      "missing_pk_evidence": 2610,
+      "retrieved": 5227,
+      "unique": 2780
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-08",
-  "last_success_utc": "2026-10-08T01:30:24.721404+00:00",
+  "last_selection_date_jst": "2026-10-09",
+  "last_success_utc": "2026-10-09T01:39:34.115054+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -266,6 +266,12 @@
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
+    },
+    "doi:10.64898/2026.04.05.716273": {
+      "doi": "10.64898/2026.04.05.716273",
+      "selected_at": "2026-10-09T01:39:34.115054+00:00",
+      "selection_type": "historical",
+      "title": "An AI-Assisted Workflow for Reconstruction, Extension, and Calibration of Quantitative Systems Pharmacology Models"
     },
     "doi:10.64898/2026.04.30.26352154": {
       "doi": "10.64898/2026.04.30.26352154",
@@ -528,6 +534,12 @@
       "selection_type": "historical",
       "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data"
     },
+    "source:europe pmc:ppr:ppr1216046": {
+      "doi": "10.64898/2026.04.05.716273",
+      "selected_at": "2026-10-09T01:39:34.115054+00:00",
+      "selection_type": "historical",
+      "title": "An AI-Assisted Workflow for Reconstruction, Extension, and Calibration of Quantitative Systems Pharmacology Models"
+    },
     "source:europe pmc:ppr:ppr1220746": {
       "doi": "10.1002/psp4.70306",
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
@@ -684,6 +696,12 @@
       "selection_type": "new",
       "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
     },
+    "title:78727b0c9777ec0f17abfdb3": {
+      "doi": "10.64898/2026.04.05.716273",
+      "selected_at": "2026-10-09T01:39:34.115054+00:00",
+      "selection_type": "historical",
+      "title": "An AI-Assisted Workflow for Reconstruction, Extension, and Calibration of Quantitative Systems Pharmacology Models"
+    },
     "title:792fefe8a0fc829963209b38": {
       "doi": "10.1002/psp4.70280",
       "notified_at": "2026-09-13T23:50:54.201620+00:00",
@@ -828,21 +846,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-08"
+    "arxiv": "2026-10-09"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
+      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
-      "records": 5219,
+      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
+      "records": 5224,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-08T01:30:24.721404+00:00",
+      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
       "records": 3,
       "status": "ok"
     }
