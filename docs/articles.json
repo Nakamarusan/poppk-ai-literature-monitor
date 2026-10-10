@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-09 10:39 JST",
+  "last_scan_at": "2026-10-10 10:26 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 19,
+      "cached_candidates_before": 18,
       "completed_windows": 1,
-      "eligible_candidates": 19,
+      "eligible_candidates": 18,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 227,
+      "pending_windows": 246,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-09 10:39 JST",
+    "checked_at": "2026-10-10 10:26 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/63"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,15 +38,15 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2447,
+      "already_reported": 3,
+      "duplicates": 2448,
       "excluded_publication_type": 145,
       "missing_abstract": 1,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 21,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2610,
-      "retrieved": 5227,
-      "unique": 2780
+      "missing_pk_evidence": 2633,
+      "retrieved": 5252,
+      "unique": 2804
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -54,13 +54,91 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 43,
+  "article_count": 44,
   "new_count": 13,
-  "historical_count": 30,
+  "historical_count": 31,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Tumor dynamic models are vital for evaluating oncology treatments and guiding clinical drug development decisions. However, few studies rigorously assess their predictive capabilities, especially when forecasting tumor trajectories from clinical trials with short or inconsistent follow-up across treatment arms. Poor predictive performance or biases related to follow-up time could potentially limit the general utility of tumor growth inhibition (TGI) models. This study quantitatively evaluates prediction bias across several established tumor dynamic models, comparing five classical pharmacometric TGI models with the deep learning-based Tumor Dynamic Neural-ODE (TDNODE) framework. Using time-truncated clinical trial data from 3106 patients with non-small cell lung cancer (NSCLC) across four completed atezolizumab phase III studies, we consistently observed moderate-to-high positive bias in the predictions from pharmacometric models, particularly with more limited follow-up. By examining the structures of these models and comparing them to observed data, we highlight how the assumed kinetic patterns potentially lead to biased parameter estimation and systemic overestimation of tumor size when applied to immature datasets. In contrast, the TDNODE framework, using deep learning, demonstrated promising early results, exhibiting improved predictive performance in the same evaluations. These findings underscore the critical need to address prediction bias in tumor dynamic modeling with immature data and to consider alternative approaches to established paradigms for certain drug development applications. This study also generally demonstrates the potential of novel methods, such as deep learning, to potentially enhance the reliability of tumor dynamics modeling, especially in challenging early-phase clinical decision-making scenarios.",
+      "authors": [
+        "Turner DC",
+        "Laurie M",
+        "Li S",
+        "Ngo HX",
+        "Li C",
+        "Jin JY",
+        "Lu J",
+        "Brooks L"
+      ],
+      "doi": "10.1002/psp4.70239",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "deep learning",
+            "neural ode"
+          ],
+          "method": [
+            "framework",
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "neural ode",
+            "deep learning"
+          ],
+          "method": [
+            "framework",
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "neural ode"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70239",
+      "publication_date": "2026-04-01",
+      "reported_at": "2026-10-10 10:26 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study quantitatively evaluates prediction bias across several established tumor dynamic models, comparing five classical pharmacometric TGI models with the deep learning-based Tumor Dynamic Neural-ODE (TDNODE) framework.",
+        "new_capability": "In contrast, the TDNODE framework, using deep learning, demonstrated promising early results, exhibiting improved predictive performance in the same evaluations.",
+        "prior_limitation": "However, few studies rigorously assess their predictive capabilities, especially when forecasting tumor trajectories from clinical trials with short or inconsistent follow-up across treatment arms.",
+        "significance": "This study also generally demonstrates the potential of novel methods, such as deep learning, to potentially enhance the reliability of tumor dynamics modeling, especially in challenging early-phase clinical decision-making scenarios.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Follow-Up Bias in Tumor Dynamic Modeling: A Comparison of Classical and Neural-ODE Approaches.",
+      "url": "https://europepmc.org/article/MED/41919988",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
     {
       "abstract": "Abstracts Background Quantitative systems pharmacology (QSP) models provide mechanistic insight into drug response but are limited by labor-intensive, expert-driven workflows. We developed an AI-assisted QSP (AI-QSP) framework that integrates large language models (LLMs) with SBML-based modeling to enable automated reconstruction, extension, and calibration of mechanistic models. Methods The framework was applied to a published CAR-T QSP model. The model was reconstructed in SBML and extended via LLM-guided prompts to incorporate key resistance mechanisms: T-cell exhaustion, PD-1/PD-L1 checkpoint regulation, and tumor antigen escape. Model development followed an iterative expert-in-the-loop workflow. The resulting model (21 reactions, 9 species) was calibrated to synthetic benchmark data using 19-parameter optimization. Model credibility was assessed using ASME V&V 40 and ICH M15 principles, including global sensitivity and profile-likelihood analyses. Results The calibrated model reproduced benchmark dynamics with high accuracy (mean log-RMSE = 0.132). Sensitivity analysis identified CAR-T killing and bystander cytotoxicity as dominant drivers of tumor response. Profile-likelihood analysis showed 71% of parameters were practically identifiable, with remaining parameters prioritised for future data-driven refinement. Conclusions AI-assisted QSP modeling enables reproducible, scalable model reconstruction and evolution while maintaining mechanistic transparency and regulatory alignment. This framework provides a foundation for accelerating model-informed drug development in cell and gene therapies.",
       "authors": [

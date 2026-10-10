@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-09",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62",
+  "last_delivery_date_jst": "2026-10-10",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/63",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 19,
+      "cached_candidates_before": 18,
       "completed_windows": 1,
-      "eligible_candidates": 19,
+      "eligible_candidates": 18,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 227,
+      "pending_windows": 246,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-09 10:39 JST",
+    "checked_at": "2026-10-10 10:26 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/62"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/63"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,15 +37,15 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2447,
+      "already_reported": 3,
+      "duplicates": 2448,
       "excluded_publication_type": 145,
       "missing_abstract": 1,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 21,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2610,
-      "retrieved": 5227,
-      "unique": 2780
+      "missing_pk_evidence": 2633,
+      "retrieved": 5252,
+      "unique": 2804
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-09",
-  "last_success_utc": "2026-10-09T01:39:34.115054+00:00",
+  "last_selection_date_jst": "2026-10-10",
+  "last_success_utc": "2026-10-10T01:26:31.002513+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -75,6 +75,12 @@
       "selected_at": "2026-09-30T16:02:12.388200+00:00",
       "selection_type": "historical",
       "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
+    },
+    "doi:10.1002/psp4.70239": {
+      "doi": "10.1002/psp4.70239",
+      "selected_at": "2026-10-10T01:26:31.002513+00:00",
+      "selection_type": "historical",
+      "title": "Follow-Up Bias in Tumor Dynamic Modeling: A Comparison of Classical and Neural-ODE Approaches."
     },
     "doi:10.1002/psp4.70280": {
       "doi": "10.1002/psp4.70280",
@@ -348,6 +354,12 @@
       "selected_at": "2026-10-02T01:14:35.775711+00:00",
       "selection_type": "historical",
       "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome."
+    },
+    "source:europe pmc:med:41919988": {
+      "doi": "10.1002/psp4.70239",
+      "selected_at": "2026-10-10T01:26:31.002513+00:00",
+      "selection_type": "historical",
+      "title": "Follow-Up Bias in Tumor Dynamic Modeling: A Comparison of Classical and Neural-ODE Approaches."
     },
     "source:europe pmc:med:41928707": {
       "doi": "10.1002/prp2.70241",
@@ -755,6 +767,12 @@
       "selection_type": "historical",
       "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
+    "title:b940fa785af583e96d32a3c3": {
+      "doi": "10.1002/psp4.70239",
+      "selected_at": "2026-10-10T01:26:31.002513+00:00",
+      "selection_type": "historical",
+      "title": "Follow-Up Bias in Tumor Dynamic Modeling: A Comparison of Classical and Neural-ODE Approaches."
+    },
     "title:c0a9b57ec095d6d23d971f7c": {
       "doi": "10.21203/rs.3.rs-9308510/v1",
       "selected_at": "2026-10-08T01:30:24.721404+00:00",
@@ -846,22 +864,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-09"
+    "arxiv": "2026-10-10"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
+      "last_attempt_utc": "2026-10-10T01:26:31.002513+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
-      "records": 5224,
+      "last_attempt_utc": "2026-10-10T01:26:31.002513+00:00",
+      "records": 5250,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-09T01:39:34.115054+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-10-10T01:26:31.002513+00:00",
+      "records": 2,
       "status": "ok"
     }
   }
