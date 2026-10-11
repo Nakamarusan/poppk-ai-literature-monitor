@@ -1,29 +1,29 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-10 10:26 JST",
+  "last_scan_at": "2026-10-11 09:37 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 18,
+      "cached_candidates_before": 17,
       "completed_windows": 1,
-      "eligible_candidates": 18,
+      "eligible_candidates": 17,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 246,
+      "pending_windows": 265,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-10 10:26 JST",
+    "checked_at": "2026-10-11 09:37 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/63"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/64"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,15 +38,15 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2448,
-      "excluded_publication_type": 145,
+      "already_reported": 2,
+      "duplicates": 2438,
+      "excluded_publication_type": 138,
       "missing_abstract": 1,
-      "missing_ai_evidence": 21,
+      "missing_ai_evidence": 22,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2633,
-      "retrieved": 5252,
-      "unique": 2804
+      "missing_pk_evidence": 2660,
+      "retrieved": 5262,
+      "unique": 2824
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -54,13 +54,91 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 44,
+  "article_count": 45,
   "new_count": 13,
-  "historical_count": 31,
+  "historical_count": 32,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Optimizing meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains challenging due to significant pharmacokinetic variability. This study aimed to develop and validate a machine learning (ML)-based clinical decision support system (CDSS) for individualizing meropenem dosing in this population. A large-scale virtual cohort (n = 48,000) was generated using a published population pharmacokinetic (POPPK) model to simulate diverse dosing regimens. Various ML models were trained to predict the probability of achieving two stringent pharmacodynamic (PD) targets: 100% fT>MIC and 100% fT>4×MIC. Feature importance was interpreted using SHAP (Shapley Additive exPlanations) analysis. External validation was conducted using clinical CRRT patient data, and predictive performance was compared with that of the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose\" for clinical use. The ML models exhibited excellent predictive performance on the simulated test set, with accuracy and F1 scores predominantly above 0.95. Notably, in the external validation cohort, the Gradient Boosting (GB) model robustly outperformed the conventional POPPK model across stringent pharmacodynamic targets (100% fT>MIC and 100% fT>4×MIC), achieving AUC values of 0.884 and 0.929, respectively, versus 0.823 and 0.871 for the POPPK model. Interpretation via SHAP analysis confirmed that the minimum inhibitory concentration (MIC), dosing interval, dose amount, CRRT clearance (CL CRRT ), and creatinine clearance (CRCL) were the primary determinants of target attainment. This high-performing, interpretable GB model was subsequently integrated into the \"MeroDose\" CDSS. This web-based tool translates the model's predictive capability into clinically actionable decision support for initial dose selection. The ML-driven CDSS 'MerDose' provides a clinically applicable tool for optimizing meropenem dosing in CRRT patients, potentially overcoming limitations of conventional approaches.",
+      "authors": [
+        "Li D",
+        "Qiao Z",
+        "Xiong X",
+        "Zhang Q",
+        "He Y",
+        "Yu Z",
+        "Zheng X",
+        "Zheng X"
+      ],
+      "doi": "10.1038/s41598-026-43012-x",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1038/s41598-026-43012-x",
+      "publication_date": "2026-03-06",
+      "reported_at": "2026-10-11 09:37 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to develop and validate a machine learning (ML)-based clinical decision support system (CDSS) for individualizing meropenem dosing in this population.",
+        "new_capability": "Notably, in the external validation cohort, the Gradient Boosting (GB) model robustly outperformed the conventional POPPK model across stringent pharmacodynamic targets (100% fT>MIC and 100% fT>4×MIC), achieving AUC values of 0.884 and 0.929, respectively, versus 0.823 and 0.871 for the POPPK model.",
+        "prior_limitation": "Optimizing meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains challenging due to significant pharmacokinetic variability.",
+        "significance": "The ML-driven CDSS 'MerDose' provides a clinically applicable tool for optimizing meropenem dosing in CRRT patients, potentially overcoming limitations of conventional approaches.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Development and validation of a machine learning model for individualised meropenem dosing in CRRT patients.",
+      "url": "https://europepmc.org/article/MED/41792368",
+      "venue": "Scientific reports"
+    },
     {
       "abstract": "Tumor dynamic models are vital for evaluating oncology treatments and guiding clinical drug development decisions. However, few studies rigorously assess their predictive capabilities, especially when forecasting tumor trajectories from clinical trials with short or inconsistent follow-up across treatment arms. Poor predictive performance or biases related to follow-up time could potentially limit the general utility of tumor growth inhibition (TGI) models. This study quantitatively evaluates prediction bias across several established tumor dynamic models, comparing five classical pharmacometric TGI models with the deep learning-based Tumor Dynamic Neural-ODE (TDNODE) framework. Using time-truncated clinical trial data from 3106 patients with non-small cell lung cancer (NSCLC) across four completed atezolizumab phase III studies, we consistently observed moderate-to-high positive bias in the predictions from pharmacometric models, particularly with more limited follow-up. By examining the structures of these models and comparing them to observed data, we highlight how the assumed kinetic patterns potentially lead to biased parameter estimation and systemic overestimation of tumor size when applied to immature datasets. In contrast, the TDNODE framework, using deep learning, demonstrated promising early results, exhibiting improved predictive performance in the same evaluations. These findings underscore the critical need to address prediction bias in tumor dynamic modeling with immature data and to consider alternative approaches to established paradigms for certain drug development applications. This study also generally demonstrates the potential of novel methods, such as deep learning, to potentially enhance the reliability of tumor dynamics modeling, especially in challenging early-phase clinical decision-making scenarios.",
       "authors": [
