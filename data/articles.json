@@ -1,6 +1,88 @@
 {
   "articles": [
     {
+      "abstract": "Hemophilia A is a rare inherited bleeding disorder typically managed with coagulation factor VIII (FVIII) replacement therapy. Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements and practical considerations in data collection and analysis. Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients. Using minimal sampling and routinely collected clinical data, our approach achieves superior performance over the widely adopted WAPPS-Hemo platform in predicting in vivo recovery (IVR) and FVIII half-life. These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.",
+      "authors": [
+        "Wang Y",
+        "Ai D",
+        "Wang S",
+        "Li Z",
+        "Li G",
+        "Zhu Y",
+        "Zhong Y",
+        "Zhang W",
+        "Wu R",
+        "Chen Z",
+        "Tang Y"
+      ],
+      "doi": "10.1038/s41540-026-00674-7",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "platform"
+          ],
+          "pk": [
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "framework",
+            "platform"
+          ],
+          "pk": [
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1038/s41540-026-00674-7",
+      "publication_date": "2026-02-27",
+      "reported_at": "2026-10-12 09:54 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements an…",
+        "significance": "These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A.",
+      "url": "https://europepmc.org/article/MED/41760637",
+      "venue": "NPJ systems biology and applications"
+    },
+    {
       "abstract": "Optimizing meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains challenging due to significant pharmacokinetic variability. This study aimed to develop and validate a machine learning (ML)-based clinical decision support system (CDSS) for individualizing meropenem dosing in this population. A large-scale virtual cohort (n = 48,000) was generated using a published population pharmacokinetic (POPPK) model to simulate diverse dosing regimens. Various ML models were trained to predict the probability of achieving two stringent pharmacodynamic (PD) targets: 100% fT>MIC and 100% fT>4×MIC. Feature importance was interpreted using SHAP (Shapley Additive exPlanations) analysis. External validation was conducted using clinical CRRT patient data, and predictive performance was compared with that of the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose\" for clinical use. The ML models exhibited excellent predictive performance on the simulated test set, with accuracy and F1 scores predominantly above 0.95. Notably, in the external validation cohort, the Gradient Boosting (GB) model robustly outperformed the conventional POPPK model across stringent pharmacodynamic targets (100% fT>MIC and 100% fT>4×MIC), achieving AUC values of 0.884 and 0.929, respectively, versus 0.823 and 0.871 for the POPPK model. Interpretation via SHAP analysis confirmed that the minimum inhibitory concentration (MIC), dosing interval, dose amount, CRRT clearance (CL CRRT ), and creatinine clearance (CRCL) were the primary determinants of target attainment. This high-performing, interpretable GB model was subsequently integrated into the \"MeroDose\" CDSS. This web-based tool translates the model's predictive capability into clinically actionable decision support for initial dose selection. The ML-driven CDSS 'MerDose' provides a clinically applicable tool for optimizing meropenem dosing in CRRT patients, potentially overcoming limitations of conventional approaches.",
       "authors": [
         "Li D",
@@ -3535,24 +3617,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-11 09:37 JST",
+  "last_scan_at": "2026-10-12 09:54 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 17,
+      "cached_candidates_before": 16,
       "completed_windows": 1,
-      "eligible_candidates": 17,
+      "eligible_candidates": 16,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 265,
+      "pending_windows": 284,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-11 09:37 JST",
+    "checked_at": "2026-10-12 09:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/64"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/65"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -3573,14 +3655,14 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2438,
-      "excluded_publication_type": 138,
+      "duplicates": 2425,
+      "excluded_publication_type": 142,
       "missing_abstract": 1,
-      "missing_ai_evidence": 22,
+      "missing_ai_evidence": 23,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2660,
-      "retrieved": 5262,
-      "unique": 2824
+      "missing_pk_evidence": 2677,
+      "retrieved": 5271,
+      "unique": 2846
     },
     "selected_count": 1,
     "selection_status": "selected",

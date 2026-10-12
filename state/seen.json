@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-11",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/64",
+  "last_delivery_date_jst": "2026-10-12",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/65",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 17,
+      "cached_candidates_before": 16,
       "completed_windows": 1,
-      "eligible_candidates": 17,
+      "eligible_candidates": 16,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 265,
+      "pending_windows": 284,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-11 09:37 JST",
+    "checked_at": "2026-10-12 09:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/64"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/65"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,14 +38,14 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2438,
-      "excluded_publication_type": 138,
+      "duplicates": 2425,
+      "excluded_publication_type": 142,
       "missing_abstract": 1,
-      "missing_ai_evidence": 22,
+      "missing_ai_evidence": 23,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2660,
-      "retrieved": 5262,
-      "unique": 2824
+      "missing_pk_evidence": 2677,
+      "retrieved": 5271,
+      "unique": 2846
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-11",
-  "last_success_utc": "2026-10-11T00:37:47.090142+00:00",
+  "last_selection_date_jst": "2026-10-12",
+  "last_success_utc": "2026-10-12T00:54:27.782851+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -164,6 +164,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.1038/s41540-026-00674-7": {
+      "doi": "10.1038/s41540-026-00674-7",
+      "selected_at": "2026-10-12T00:54:27.782851+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A."
     },
     "doi:10.1038/s41598-026-43012-x": {
       "doi": "10.1038/s41598-026-43012-x",
@@ -354,6 +360,12 @@
       "selected_at": "2026-10-05T00:22:56.559712+00:00",
       "selection_type": "historical",
       "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model."
+    },
+    "source:europe pmc:med:41760637": {
+      "doi": "10.1038/s41540-026-00674-7",
+      "selected_at": "2026-10-12T00:54:27.782851+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A."
     },
     "source:europe pmc:med:41792368": {
       "doi": "10.1038/s41598-026-43012-x",
@@ -611,6 +623,12 @@
       "selected_at": "2026-10-03T00:52:50.227445+00:00",
       "selection_type": "new",
       "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
+    },
+    "title:021f455ebe957744e5b13d70": {
+      "doi": "10.1038/s41540-026-00674-7",
+      "selected_at": "2026-10-12T00:54:27.782851+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A."
     },
     "title:0881c9bc9af76b779f89d637": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -882,21 +900,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-11"
+    "arxiv": "2026-10-12"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-11T00:37:47.090142+00:00",
+      "last_attempt_utc": "2026-10-12T00:54:27.782851+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-11T00:37:47.090142+00:00",
-      "records": 5261,
+      "last_attempt_utc": "2026-10-12T00:54:27.782851+00:00",
+      "records": 5270,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-11T00:37:47.090142+00:00",
+      "last_attempt_utc": "2026-10-12T00:54:27.782851+00:00",
       "records": 1,
       "status": "ok"
     }
