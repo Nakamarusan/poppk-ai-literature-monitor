@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-12",
+  "last_check": "2026-10-13",
   "last_run": {
-    "cached_candidates_before": 16,
+    "cached_candidates_before": 15,
     "completed_windows": 1,
-    "eligible_candidates": 16,
+    "eligible_candidates": 15,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 284,
+    "pending_windows": 303,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -2002,6 +2002,139 @@
       "since": "2026-10-12",
       "source": "crossref",
       "until": "2026-10-12"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-13",
+      "source": "europe_pmc",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-13",
+      "source": "crossref",
+      "until": "2026-10-13"
     }
   ],
   "pool": [
@@ -2267,34 +2400,6 @@
       "venue": "Pharmaceuticals (Basel, Switzerland)"
     },
     {
-      "abstract": "Hemophilia A is a rare inherited bleeding disorder typically managed with coagulation factor VIII (FVIII) replacement therapy. Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements and practical considerations in data collection and analysis. Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients. Using minimal sampling and routinely collected clinical data, our approach achieves superior performance over the widely adopted WAPPS-Hemo platform in predicting in vivo recovery (IVR) and FVIII half-life. These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.",
-      "authors": [
-        "Wang Y",
-        "Ai D",
-        "Wang S",
-        "Li Z",
-        "Li G",
-        "Zhu Y",
-        "Zhong Y",
-        "Zhang W",
-        "Wu R",
-        "Chen Z",
-        "Tang Y"
-      ],
-      "date": "2026-02-27",
-      "doi": "10.1038/s41540-026-00674-7",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41760637"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A.",
-      "url": "https://europepmc.org/article/MED/41760637",
-      "venue": "NPJ systems biology and applications"
-    },
-    {
       "abstract": "Decision-making in drug development spans heterogeneous stages from molecular design to clinical optimization, yet computer-aided workflows across stages remain fragmented, limiting traceability from evidence-derived clinical questions to simulation scenarios and decision endpoints. We present a model-driven hybrid AI framework for end-to-end decision support that treats PICO (Participants, Intervention, Comparison, Outcome) as a machine-actionable specification to define scenarios and align endpoints across modules. Given a PICO-defined clinical question and a drug SMILES, the framework infers PBPK-ready parameters from structure, generates exposure via mechanistic PBPK simulation, and links exposure outputs to clinic-facing therapeutic drug monitoring (TDM) decision support using an open-source NLME-based Clinical Pharmacokinetic Consultant Service (CPCS). We additionally implement an LLM-based PICO extraction layer to structure clinical abstracts into P/I/C/O elements for systematic evidence ingestion. Results include backbone verification for DTI-guided intrinsic clearance prediction under fold-error bounds and PBPK trajectory plausibility, and external validation of the hybrid AI–PBPK pipeline showing substantial dispersion for several endpoints. An input-controlled comparison between PhysioSim and PK-Sim on N = 9 drugs yields similarly degraded accuracy under identical AI-predicted inputs, suggesting upstream parameter quality as a dominant constraint. For evidence ingestion, prompting-only PICO extraction achieves F1 of 0.687 on EBM-NLP and 0.552 on TB-PICO. For clinical utility, CPCS improves TDM performance over a PKS baseline on phenobarbital and vancomycin, reducing MAPE by approximately 26–60% depending on configuration. Overall, the framework provides a modular, traceable blueprint linking evidence-defined questions to exposure simulation and TDM decision support while preserving mechanistic interpretability. Future work will integrate outcome-aligned time-to-event modeling and federated learning to close the PICO-to-outcome loop and improve parameter inference under multi-site governance.",
       "authors": [
         "Lee H",
@@ -2423,5 +2528,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-12"
+  "through": "2026-10-13"
 }

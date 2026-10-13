@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-12 09:54 JST
+Run time: 2026-10-13 11:48 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5270, Europe PMC 1, arXiv 0
+Recent-search records: Crossref 5289, Europe PMC 1, arXiv 0
 
 ## Selection and search coverage
 
@@ -20,49 +20,47 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 17 capped queries; 0 failed queries.
+- Crossref: 36 pages; 16 capped queries; 0 failed queries.
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5271
-- unique: 2846
-- duplicates: 2425
-- excluded publication type: 142
-- missing pk evidence: 2677
+- retrieved: 5290
+- unique: 2839
+- duplicates: 2451
+- excluded publication type: 126
+- missing pk evidence: 2689
 - missing ai evidence: 23
-- already reported: 2
-- missing abstract: 1
-- missing method evidence: 1
+- already reported: 1
 
-Archive candidates available: 16; unvisited/unfinished windows: 284; completed windows: 1.
+Archive candidates available: 15; unvisited/unfinished windows: 303; completed windows: 1.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Machine learning estimation of FVIII pharmacokinetic parameters in Chinese children with severe Hemophilia A.](https://europepmc.org/article/MED/41760637)
+## 1. [Stochastic Gates for Covariate Selection in Population Pharmacokinetics Modeling.](https://europepmc.org/article/MED/41637692)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** Wang Y, Ai D, Wang S, Li Z, Li G, Zhu Y, Zhong Y, Zhang W, et al.
-- **Venue/source:** NPJ systems biology and applications
-- **Publication date:** 2026-02-27
-- **DOI:** 10.1038/s41540-026-00674-7
+- **Authors:** Kekic M, Stepanov O, Wang W, Richardson S, Olabode D, Traynor C, Dearden R, Zhou D, et al.
+- **Venue/source:** CPT: pharmacometrics & systems pharmacology
+- **Publication date:** 2026-02-01
+- **DOI:** 10.1002/psp4.70147
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements an…
-- **Methodological contribution:** Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients.
-- **What becomes possible:** Not stated in the available abstract.
-- **Why it matters:** These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.
+- **Prior limitation:** Traditional stepwise covariate modeling is often time-consuming, compared to the new machine learning alternatives.
+- **Methodological contribution:** This study investigates the use of neural networks with stochastic gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion.
+- **What becomes possible:** On various synthetic datasets, the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability, and complex covariate dependencies.
+- **Why it matters:** However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning.
 
-- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
+- **Relevance score:** 70/100 — PK 30, AI 10, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Hemophilia A is a rare inherited bleeding disorder typically managed with coagulation factor VIII (FVIII) replacement therapy. Designing personalized prophylactic regimens requires accurate pharmacokinetic (PK) characterization; current population PK (popPK) and Bayesian approaches provide a principled framework for individualized dosing, but their routine clinical implementation may still be constrained by model specification requirements and practical considerations in data collection and analysis. Here we present a machine learning (ML) framework, incorporating state-of-the-art language models, to predict individual FVIII PK parameters in pediatric patients. Using minimal sampling and routinely collected clinical data, our approach achieves superior performance over the widely adopted WAPPS-Hemo platform in predicting in vivo recovery (IVR) and FVIII half-life. These findings highlight the potential of AI-driven methods to reduce patient burden while improving accuracy in individualized treatment planning for children with severe hemophilia A.
-- **PopPK/pharmacometrics terms:** poppk
-- **AI/ML terms:** machine learning
-- **Method terms:** estimation, framework, platform
+- **Abstract:** Covariate selection in population pharmacokinetics modeling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modeling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of neural networks with stochastic gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets, the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability, and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate preselection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios.
+- **PopPK/pharmacometrics terms:** population pharmacokinetics
+- **AI/ML terms:** machine learning, automated covariate selection
+- **Method terms:** covariate selection, model development, automated
 
 </details>
 
