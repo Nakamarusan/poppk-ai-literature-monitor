@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-13",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/66",
+  "last_delivery_date_jst": "2026-10-14",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 15,
+      "cached_candidates_before": 14,
       "completed_windows": 1,
-      "eligible_candidates": 15,
+      "eligible_candidates": 14,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 303,
+      "pending_windows": 322,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-13 11:48 JST",
+    "checked_at": "2026-10-14 09:48 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/66"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -37,13 +37,12 @@
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2451,
+      "duplicates": 2439,
       "excluded_publication_type": 126,
       "missing_ai_evidence": 23,
-      "missing_pk_evidence": 2689,
-      "retrieved": 5290,
-      "unique": 2839
+      "missing_pk_evidence": 2729,
+      "retrieved": 5317,
+      "unique": 2878
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +50,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-13",
-  "last_success_utc": "2026-10-13T02:48:06.795623+00:00",
+  "last_selection_date_jst": "2026-10-14",
+  "last_success_utc": "2026-10-14T00:48:47.140699+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -139,6 +138,12 @@
       "selected_at": "2026-10-07T01:10:44.537962+00:00",
       "selection_type": "historical",
       "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin."
+    },
+    "doi:10.1007/s10928-026-10041-y": {
+      "doi": "10.1007/s10928-026-10041-y",
+      "selected_at": "2026-10-14T00:48:47.140699+00:00",
+      "selection_type": "historical",
+      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL."
     },
     "doi:10.1007/s10928-026-10054-7": {
       "doi": "10.1007/s10928-026-10054-7",
@@ -418,6 +423,12 @@
       "notified_at": "2026-09-06T23:24:22.047637+00:00",
       "selection_type": "historical",
       "title": "A Mechanistic Framework Integrating Renal QSP-PK-PD and Machine Learning for Baseline-Informed Stratification of Diuretic Resistance."
+    },
+    "source:europe pmc:med:42243590": {
+      "doi": "10.1007/s10928-026-10041-y",
+      "selected_at": "2026-10-14T00:48:47.140699+00:00",
+      "selection_type": "historical",
+      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL."
     },
     "source:europe pmc:med:42272833": {
       "doi": "10.3389/fphar.2026.1839423",
@@ -867,6 +878,12 @@
       "selection_type": "historical",
       "title": "An Integrated Population Pharmacokinetic and Machine Learning Model for Predicting Tacrolimus Exposure in Adult Patients with Nephrotic Syndrome."
     },
+    "title:d0a3d394cf14d635d347a4ee": {
+      "doi": "10.1007/s10928-026-10041-y",
+      "selected_at": "2026-10-14T00:48:47.140699+00:00",
+      "selection_type": "historical",
+      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL."
+    },
     "title:d2a7662c504dab804f6756e1": {
       "doi": "10.64898/2026.05.30.26354512",
       "notified_at": "2026-08-31T00:09:01.329370+00:00",
@@ -916,21 +933,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-13"
+    "arxiv": "2026-10-14"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-13T02:48:06.795623+00:00",
+      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-13T02:48:06.795623+00:00",
-      "records": 5289,
+      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
+      "records": 5316,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-13T02:48:06.795623+00:00",
+      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
       "records": 1,
       "status": "ok"
     }

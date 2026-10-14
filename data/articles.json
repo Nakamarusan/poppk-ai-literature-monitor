@@ -1,6 +1,79 @@
 {
   "articles": [
     {
+      "abstract": "Hemophilia A is a genetic bleeding disorder caused by a deficiency or absence of Factor VIII, leading to recurrent and spontaneous hemorrhages. Standard treatment typically involves regular prophylactic infusions of clotting factors to prevent bleeding episodes. However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk. This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment. Within this framework, the control policy is learned using a Deep Q‑Network (DQN), enabling the agent to adapt treatment decisions through interaction with the simulated physiological environment. Unlike conventional methods, this framework allows the agent to observe continuous physiological states via Endogenous Thrombin Potential (ETP) and learn optimal dosing policies through trial-and-error. The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy. Simulation results from a virtual cohort (N = 200) demonstrate that the DQN agent achieves a safety profile comparable to Bayesian MIPD while significantly improving factor utilization efficiency. Notably, in patients with low bleeding‑risk phenotypes, the DRL‑based approach achieved a similar bleeding rate to MIPD while reducing annual factor VIII consumption by approximately 39% relative to MIPD and by up to 70% compared to the reference prophylaxis protocol adopted as the simulation baseline. These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.",
+      "authors": [
+        "Rabbani M",
+        "Razavi SE",
+        "Goharimanesh M",
+        "Razavi SE"
+      ],
+      "doi": "10.1007/s10928-026-10041-y",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "optimization",
+            "framework"
+          ],
+          "pk": [
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "optimization"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1007/s10928-026-10041-y",
+      "publication_date": "2026-06-04",
+      "reported_at": "2026-10-14 09:48 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment.",
+        "new_capability": "These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.",
+        "prior_limitation": "However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk.",
+        "significance": "The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL.",
+      "url": "https://europepmc.org/article/MED/42243590",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
+    {
       "abstract": "Covariate selection in population pharmacokinetics modeling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modeling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of neural networks with stochastic gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets, the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability, and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate preselection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios.",
       "authors": [
         "Kekic M",
@@ -3702,29 +3775,29 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-13 11:48 JST",
+  "last_scan_at": "2026-10-14 09:48 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 15,
+      "cached_candidates_before": 14,
       "completed_windows": 1,
-      "eligible_candidates": 15,
+      "eligible_candidates": 14,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 303,
+      "pending_windows": 322,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-13 11:48 JST",
+    "checked_at": "2026-10-14 09:48 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/66"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -3739,13 +3812,12 @@
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2451,
+      "duplicates": 2439,
       "excluded_publication_type": 126,
       "missing_ai_evidence": 23,
-      "missing_pk_evidence": 2689,
-      "retrieved": 5290,
-      "unique": 2839
+      "missing_pk_evidence": 2729,
+      "retrieved": 5317,
+      "unique": 2878
     },
     "selected_count": 1,
     "selection_status": "selected",

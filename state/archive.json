@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-13",
+  "last_check": "2026-10-14",
   "last_run": {
-    "cached_candidates_before": 15,
+    "cached_candidates_before": 14,
     "completed_windows": 1,
-    "eligible_candidates": 15,
+    "eligible_candidates": 14,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 303,
+    "pending_windows": 322,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -2135,6 +2135,139 @@
       "since": "2026-10-13",
       "source": "crossref",
       "until": "2026-10-13"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-14",
+      "source": "europe_pmc",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-14",
+      "source": "crossref",
+      "until": "2026-10-14"
     }
   ],
   "pool": [
@@ -2429,34 +2562,6 @@
       "venue": ""
     },
     {
-      "abstract": "Covariate selection in population pharmacokinetics modeling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modeling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of neural networks with stochastic gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets, the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability, and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate preselection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios.",
-      "authors": [
-        "Kekic M",
-        "Stepanov O",
-        "Wang W",
-        "Richardson S",
-        "Olabode D",
-        "Traynor C",
-        "Dearden R",
-        "Zhou D",
-        "Tang W",
-        "Gibbs M",
-        "Nowojewski A"
-      ],
-      "date": "2026-02-01",
-      "doi": "10.1002/psp4.70147",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41637692"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Stochastic Gates for Covariate Selection in Population Pharmacokinetics Modeling.",
-      "url": "https://europepmc.org/article/MED/41637692",
-      "venue": "CPT: pharmacometrics & systems pharmacology"
-    },
-    {
       "abstract": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming. Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy. Methods A total of 1,806 infliximab and ADA concentration measurements were prospectively collected from 149 IBD patients. Recurrent neural networks (RNN)-based models, including long short-term memory (LSTM) and gated recurrent unit (GRU) architectures, as well as regression-based models such as Elastic Net, Support Vector Regression, Random Forest (RF), and extreme gradient boosting (XGBoost), were developed. Recursive multi-step prediction was applied to evaluate short-term forecasting performance. Results RF outperformed in predicting infliximab concentrations, and XGBoost yielded the best performance in predicting ADA levels (2-fold accuracy, 86.67% and 96.67%, respectively). The infliximab prediction model maintained acceptable accuracy up to two recursive predictions steps but exhibited a notable performance decline at the third step. In contrast, the ADA model showed robust performance across all three recursive steps, maintaining 2-fold accuracy exceeding 96%. Conclusion ML models were developed to predict infliximab and ADA concentrations, with RF and XGBoost showing the best performance for infliximab and ADA prediction, respectively. The ADA model demonstrated stable multi-step forecasting capability. These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
       "authors": [
         "Kim M",
@@ -2528,5 +2633,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-13"
+  "through": "2026-10-14"
 }
