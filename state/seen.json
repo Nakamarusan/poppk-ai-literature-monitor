@@ -1,28 +1,17 @@
 {
-  "last_delivery_date_jst": "2026-10-14",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67",
+  "last_delivery_date_jst": "2026-10-15",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 14,
-      "completed_windows": 1,
-      "eligible_candidates": 14,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 322,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-14 09:48 JST",
+    "archive": {},
+    "checked_at": "2026-10-15 09:15 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 18,
         "pages": 36
       },
       "Europe PMC": {
@@ -37,21 +26,22 @@
       }
     },
     "recent_screening": {
-      "duplicates": 2439,
-      "excluded_publication_type": 126,
-      "missing_ai_evidence": 23,
-      "missing_pk_evidence": 2729,
-      "retrieved": 5317,
-      "unique": 2878
+      "duplicates": 2436,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 125,
+      "missing_ai_evidence": 27,
+      "missing_pk_evidence": 2749,
+      "retrieved": 5338,
+      "unique": 2902
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-14",
-  "last_success_utc": "2026-10-14T00:48:47.140699+00:00",
+  "last_selection_date_jst": "2026-10-15",
+  "last_success_utc": "2026-10-15T00:15:07.112834+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -204,6 +194,12 @@
       "selection_type": "historical",
       "title": "Population pharmacokinetics of dalbavancin: external validation, model averaging, and implications for precision dosing in prolonged therapy."
     },
+    "doi:10.1128/aac.01089-26": {
+      "doi": "10.1128/aac.01089-26",
+      "selected_at": "2026-10-15T00:15:07.112834+00:00",
+      "selection_type": "new",
+      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states"
+    },
     "doi:10.1177/00368504261486163": {
       "doi": "10.1177/00368504261486163",
       "notified_at": "2026-09-09T23:46:05.045780+00:00",
@@ -346,6 +342,12 @@
       "selected_at": "2026-10-04T00:18:17.062144+00:00",
       "selection_type": "new",
       "title": "Evaluating Vaginal Microbiome Effects on Antiretroviral Exposure in the Female Genital Tract Using Pharmacometric and Machine Learning Approaches."
+    },
+    "source:crossref:10.1128/aac.01089-26": {
+      "doi": "10.1128/aac.01089-26",
+      "selected_at": "2026-10-15T00:15:07.112834+00:00",
+      "selection_type": "new",
+      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states"
     },
     "source:crossref:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -890,6 +892,12 @@
       "selection_type": "historical",
       "title": "Can synthetic data overcome the privacy and fidelity bottleneck in Pharmacometrics? A comparative benchmark using a daptomycin population pharmacokinetic model"
     },
+    "title:d7de68941dffaf3aa240df37": {
+      "doi": "10.1128/aac.01089-26",
+      "selected_at": "2026-10-15T00:15:07.112834+00:00",
+      "selection_type": "new",
+      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states"
+    },
     "title:d91544e06f1a9a12eec9a185": {
       "doi": "10.64898/2026.04.30.26352154",
       "notified_at": "2026-09-28T00:15:09.879864+00:00",
@@ -933,22 +941,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-14"
+    "arxiv": "2026-10-15"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
+      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
-      "records": 5316,
+      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
+      "records": 5338,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-14T00:48:47.140699+00:00",
-      "records": 1,
+      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
+      "records": 0,
       "status": "ok"
     }
   }

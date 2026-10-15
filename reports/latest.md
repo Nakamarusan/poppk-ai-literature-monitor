@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-14 09:48 JST
+Run time: 2026-10-15 09:15 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5316, Europe PMC 1, arXiv 0
+Recent-search records: Crossref 5338, Europe PMC 0, arXiv 0
 
 ## Selection and search coverage
 
@@ -20,46 +20,44 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 17 capped queries; 0 failed queries.
+- Crossref: 36 pages; 18 capped queries; 0 failed queries.
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5317
-- unique: 2878
-- duplicates: 2439
-- excluded publication type: 126
-- missing pk evidence: 2729
-- missing ai evidence: 23
-
-Archive candidates available: 14; unvisited/unfinished windows: 322; completed windows: 1.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
+- retrieved: 5338
+- unique: 2902
+- duplicates: 2436
+- missing pk evidence: 2749
+- missing ai evidence: 27
+- excluded publication type: 125
+- eligible unreported: 1
 
 
-## 1. [Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL.](https://europepmc.org/article/MED/42243590)
+## 1. [A machine learning framework for precision dosing of daptomycin across diverse disease states](https://doi.org/10.1128/aac.01089-26)
 
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** Rabbani M, Razavi SE, Goharimanesh M, Razavi SE
-- **Venue/source:** Journal of pharmacokinetics and pharmacodynamics
-- **Publication date:** 2026-06-04
-- **DOI:** 10.1007/s10928-026-10041-y
+- **Selection:** New article
+- **Authors:** Xin-Fang Zhang, Jing Sun, Guo-Xiang Hao, Xiao-Mei Chen, Yue Zhou, Xiao-Jie Wang, John van den Anker, Wei Zhao, et al.
+- **Venue/source:** Antimicrobial Agents and Chemotherapy
+- **Publication date:** 2026-10-14
+- **DOI:** 10.1128/aac.01089-26
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk.
-- **Methodological contribution:** This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment.
-- **What becomes possible:** These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.
-- **Why it matters:** The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy.
+- **Prior limitation:** ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing.
+- **Methodological contribution:** This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations.
+- **What becomes possible:** The ML model demonstrated accurate prediction of steady-state daptomycin AUC in heterogeneous clinical populations and was successfully validated using real-world data.
+- **Why it matters:** By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.
 
-- **Relevance score:** 50/100 — PK 10, AI 10, method 30, title intersection 0
+- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Hemophilia A is a genetic bleeding disorder caused by a deficiency or absence of Factor VIII, leading to recurrent and spontaneous hemorrhages. Standard treatment typically involves regular prophylactic infusions of clotting factors to prevent bleeding episodes. However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk. This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment. Within this framework, the control policy is learned using a Deep Q‑Network (DQN), enabling the agent to adapt treatment decisions through interaction with the simulated physiological environment. Unlike conventional methods, this framework allows the agent to observe continuous physiological states via Endogenous Thrombin Potential (ETP) and learn optimal dosing policies through trial-and-error. The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy. Simulation results from a virtual cohort (N = 200) demonstrate that the DQN agent achieves a safety profile comparable to Bayesian MIPD while significantly improving factor utilization efficiency. Notably, in patients wit…
-- **PopPK/pharmacometrics terms:** model informed precision dosing, mipd
-- **AI/ML terms:** reinforcement learning
-- **Method terms:** optimization, framework
+- **Abstract:** ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing. Conventional population pharmacokinetic (PopPK) models are often limited to specific conditions, lacking generalizability. This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations. Nine published PopPK models were used to generate 90,000 simulated profiles across patients with infections and/or patients treated with renal transplantation and/or renal replacement therapy. Seven ML algorithms were trained to predict the 24 h area under the concentration–time curve (AUC 0–24 ). Model performance was evaluated using statistical metrics and clinical scenario assessments, and comparison with PopPK models. External validation was conducted with real-world data. CatBoost demonstrated the highest predictive accuracy, identifying dose, creatinine clearance, disease state, and weight as key predictors. The validation cohort comprised 20 patients with infections (501 concentration measurements) and 19 patients receiving renal replacement therapy (513 concentration measurements). In infected patients, the prediction error of AUC 0–24 was reduced by 60.1% compared with existing PopPK models (root mean square error [RMSE], 141 vs 353 mg·h/L; mean absolute prediction error, 23.5% vs…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic, poppk
+- **AI/ML terms:** machine learning
+- **Method terms:** framework, optimization, validation
 
 </details>
 

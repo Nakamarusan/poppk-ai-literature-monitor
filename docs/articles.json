@@ -1,29 +1,18 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-14 09:48 JST",
+  "last_scan_at": "2026-10-15 09:15 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 14,
-      "completed_windows": 1,
-      "eligible_candidates": 14,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 322,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-14 09:48 JST",
+    "archive": {},
+    "checked_at": "2026-10-15 09:15 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/67"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 18,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,26 +27,111 @@
       }
     },
     "recent_screening": {
-      "duplicates": 2439,
-      "excluded_publication_type": 126,
-      "missing_ai_evidence": 23,
-      "missing_pk_evidence": 2729,
-      "retrieved": 5317,
-      "unique": 2878
+      "duplicates": 2436,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 125,
+      "missing_ai_evidence": 27,
+      "missing_pk_evidence": 2749,
+      "retrieved": 5338,
+      "unique": 2902
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 48,
-  "new_count": 13,
+  "article_count": 49,
+  "new_count": 14,
   "historical_count": 35,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing. Conventional population pharmacokinetic (PopPK) models are often limited to specific conditions, lacking generalizability. This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations. Nine published PopPK models were used to generate 90,000 simulated profiles across patients with infections and/or patients treated with renal transplantation and/or renal replacement therapy. Seven ML algorithms were trained to predict the 24 h area under the concentration–time curve (AUC 0–24 ). Model performance was evaluated using statistical metrics and clinical scenario assessments, and comparison with PopPK models. External validation was conducted with real-world data. CatBoost demonstrated the highest predictive accuracy, identifying dose, creatinine clearance, disease state, and weight as key predictors. The validation cohort comprised 20 patients with infections (501 concentration measurements) and 19 patients receiving renal replacement therapy (513 concentration measurements). In infected patients, the prediction error of AUC 0–24 was reduced by 60.1% compared with existing PopPK models (root mean square error [RMSE], 141 vs 353 mg·h/L; mean absolute prediction error, 23.5% vs 58.1%). The ML model correctly classified 75.0% of patients into the appropriate clinical AUC categories ( 939 mg·h/L), outperforming PopPK models (average overall accuracy: 30.0%). In patients undergoing renal replacement therapy, ML also improved performance (RMSE, 197 vs 218 mg·h/L; overall accuracy, 52.6% vs 31.6%). The ML model demonstrated accurate prediction of steady-state daptomycin AUC in heterogeneous clinical populations and was successfully validated using real-world data. By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.",
+      "authors": [
+        "Xin-Fang Zhang",
+        "Jing Sun",
+        "Guo-Xiang Hao",
+        "Xiao-Mei Chen",
+        "Yue Zhou",
+        "Xiao-Jie Wang",
+        "John van den Anker",
+        "Wei Zhao",
+        "De-Qing Sun",
+        "Bo-Hao Tang"
+      ],
+      "doi": "10.1128/aac.01089-26",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1128/aac.01089-26",
+      "publication_date": "2026-10-14",
+      "reported_at": "2026-10-15 09:15 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations.",
+        "new_capability": "The ML model demonstrated accurate prediction of steady-state daptomycin AUC in heterogeneous clinical populations and was successfully validated using real-world data.",
+        "prior_limitation": "ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing.",
+        "significance": "By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states",
+      "url": "https://doi.org/10.1128/aac.01089-26",
+      "venue": "Antimicrobial Agents and Chemotherapy"
+    },
     {
       "abstract": "Hemophilia A is a genetic bleeding disorder caused by a deficiency or absence of Factor VIII, leading to recurrent and spontaneous hemorrhages. Standard treatment typically involves regular prophylactic infusions of clotting factors to prevent bleeding episodes. However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk. This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment. Within this framework, the control policy is learned using a Deep Q‑Network (DQN), enabling the agent to adapt treatment decisions through interaction with the simulated physiological environment. Unlike conventional methods, this framework allows the agent to observe continuous physiological states via Endogenous Thrombin Potential (ETP) and learn optimal dosing policies through trial-and-error. The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy. Simulation results from a virtual cohort (N = 200) demonstrate that the DQN agent achieves a safety profile comparable to Bayesian MIPD while significantly improving factor utilization efficiency. Notably, in patients with low bleeding‑risk phenotypes, the DRL‑based approach achieved a similar bleeding rate to MIPD while reducing annual factor VIII consumption by approximately 39% relative to MIPD and by up to 70% compared to the reference prophylaxis protocol adopted as the simulation baseline. These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.",
       "authors": [
