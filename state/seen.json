@@ -1,47 +1,59 @@
 {
-  "last_delivery_date_jst": "2026-10-15",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68",
+  "last_delivery_date_jst": "2026-10-16",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-10-16T00:00:26.876833+00:00",
+      "message": "HTTP 429: Rate exceeded."
+    }
+  },
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-10-15 09:15 JST",
+    "archive": {
+      "cached_candidates_before": 13,
+      "completed_windows": 1,
+      "eligible_candidates": 13,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 341,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-16 09:00 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 18,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
-      "duplicates": 2436,
-      "eligible_unreported": 1,
+      "already_reported": 1,
+      "duplicates": 2451,
       "excluded_publication_type": 125,
-      "missing_ai_evidence": 27,
-      "missing_pk_evidence": 2749,
-      "retrieved": 5338,
-      "unique": 2902
+      "missing_ai_evidence": 22,
+      "missing_pk_evidence": 2738,
+      "retrieved": 5337,
+      "unique": 2886
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-15",
-  "last_success_utc": "2026-10-15T00:15:07.112834+00:00",
+  "last_selection_date_jst": "2026-10-16",
+  "last_success_utc": "2026-10-16T00:00:26.876833+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -223,6 +235,12 @@
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
       "selection_type": "new",
       "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data."
+    },
+    "doi:10.1208/s12248-026-01248-5": {
+      "doi": "10.1208/s12248-026-01248-5",
+      "selected_at": "2026-10-16T00:00:26.876833+00:00",
+      "selection_type": "historical",
+      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy."
     },
     "doi:10.1208/s12248-026-01255-6": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -413,6 +431,12 @@
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
+    },
+    "source:europe pmc:med:42091773": {
+      "doi": "10.1208/s12248-026-01248-5",
+      "selected_at": "2026-10-16T00:00:26.876833+00:00",
+      "selection_type": "historical",
+      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy."
     },
     "source:europe pmc:med:42143189": {
       "doi": "10.1007/s10928-026-10036-9",
@@ -707,6 +731,12 @@
       "selection_type": "historical",
       "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
     },
+    "title:2c36164f9efec9445c942fe0": {
+      "doi": "10.1208/s12248-026-01248-5",
+      "selected_at": "2026-10-16T00:00:26.876833+00:00",
+      "selection_type": "historical",
+      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy."
+    },
     "title:303f9ae91ede682fab2a0339": {
       "doi": "10.1002/psp4.70147",
       "selected_at": "2026-10-13T02:48:06.795623+00:00",
@@ -941,21 +971,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-15"
+    "arxiv": "2026-10-16"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
+      "message": "HTTP 429: Rate exceeded.",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
-      "records": 5338,
+      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
+      "records": 5337,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-15T00:15:07.112834+00:00",
+      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
       "records": 0,
       "status": "ok"
     }

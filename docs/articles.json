@@ -1,53 +1,140 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-15 09:15 JST",
+  "last_scan_at": "2026-10-16 09:00 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-15 09:15 JST",
+    "archive": {
+      "cached_candidates_before": 13,
+      "completed_windows": 1,
+      "eligible_candidates": 13,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 341,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-16 09:00 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/68"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 18,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
-      "duplicates": 2436,
-      "eligible_unreported": 1,
+      "already_reported": 1,
+      "duplicates": 2451,
       "excluded_publication_type": 125,
-      "missing_ai_evidence": 27,
-      "missing_pk_evidence": 2749,
-      "retrieved": 5338,
-      "unique": 2902
+      "missing_ai_evidence": 22,
+      "missing_pk_evidence": 2738,
+      "retrieved": 5337,
+      "unique": 2886
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 49,
+  "article_count": 50,
   "new_count": 14,
-  "historical_count": 35,
+  "historical_count": 36,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolating predictions to populations whose characteristics differ from those represented in the training datasets. A machine learning model using only three sampling timepoints has been developed and validated in different datasets, enabling accurate estimation of RAL AUC₀-₁₂. This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.",
+      "authors": [
+        "De Lucca Thomaz M",
+        "de Azevedo KLR",
+        "Paz TA",
+        "Nardotto GHB",
+        "de Lima Moreira F",
+        "Duarte G",
+        "Woillard JB",
+        "Lanchote VL",
+        "Ximenez JPB"
+      ],
+      "doi": "10.1208/s12248-026-01248-5",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1208/s12248-026-01248-5",
+      "publication_date": "2026-05-06",
+      "reported_at": "2026-10-16 09:00 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure.",
+        "new_capability": "This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.",
+        "prior_limitation": "Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS.",
+        "significance": "Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy.",
+      "url": "https://europepmc.org/article/MED/42091773",
+      "venue": "The AAPS journal"
+    },
     {
       "abstract": "ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing. Conventional population pharmacokinetic (PopPK) models are often limited to specific conditions, lacking generalizability. This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations. Nine published PopPK models were used to generate 90,000 simulated profiles across patients with infections and/or patients treated with renal transplantation and/or renal replacement therapy. Seven ML algorithms were trained to predict the 24 h area under the concentration–time curve (AUC 0–24 ). Model performance was evaluated using statistical metrics and clinical scenario assessments, and comparison with PopPK models. External validation was conducted with real-world data. CatBoost demonstrated the highest predictive accuracy, identifying dose, creatinine clearance, disease state, and weight as key predictors. The validation cohort comprised 20 patients with infections (501 concentration measurements) and 19 patients receiving renal replacement therapy (513 concentration measurements). In infected patients, the prediction error of AUC 0–24 was reduced by 60.1% compared with existing PopPK models (root mean square error [RMSE], 141 vs 353 mg·h/L; mean absolute prediction error, 23.5% vs 58.1%). The ML model correctly classified 75.0% of patients into the appropriate clinical AUC categories ( 939 mg·h/L), outperforming PopPK models (average overall accuracy: 30.0%). In patients undergoing renal replacement therapy, ML also improved performance (RMSE, 197 vs 218 mg·h/L; overall accuracy, 52.6% vs 31.6%). The ML model demonstrated accurate prediction of steady-state daptomycin AUC in heterogeneous clinical populations and was successfully validated using real-world data. By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.",
       "authors": [

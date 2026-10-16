@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-14",
+  "last_check": "2026-10-16",
   "last_run": {
-    "cached_candidates_before": 14,
+    "cached_candidates_before": 13,
     "completed_windows": 1,
-    "eligible_candidates": 14,
+    "eligible_candidates": 13,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 322,
+    "pending_windows": 341,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -2268,6 +2268,139 @@
       "since": "2026-10-14",
       "source": "crossref",
       "until": "2026-10-14"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-15",
+      "source": "europe_pmc",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-15",
+      "source": "crossref",
+      "until": "2026-10-16"
     }
   ],
   "pool": [
@@ -2314,27 +2447,6 @@
       "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome",
       "url": "https://europepmc.org/article/PPR/PPR1309953",
       "venue": ""
-    },
-    {
-      "abstract": "Hemophilia A is a genetic bleeding disorder caused by a deficiency or absence of Factor VIII, leading to recurrent and spontaneous hemorrhages. Standard treatment typically involves regular prophylactic infusions of clotting factors to prevent bleeding episodes. However, individual variations in treatment response and reliance solely on plasma Factor VIII levels provide an imprecise assessment of bleeding risk. This study presents an intelligent dose-control system utilizing Deep Reinforcement Learning (DRL) integrated with a hybrid Pharmacokinetic-Pharmacodynamic Time-to-Event (PK-PD-TTE) environment. Within this framework, the control policy is learned using a Deep Q‑Network (DQN), enabling the agent to adapt treatment decisions through interaction with the simulated physiological environment. Unlike conventional methods, this framework allows the agent to observe continuous physiological states via Endogenous Thrombin Potential (ETP) and learn optimal dosing policies through trial-and-error. The proposed DQN agent was benchmarked against standard prophylaxis, a Fuzzy Logic controller, and a Bayesian Adaptive Model-Informed Precision Dosing (MIPD) strategy. Simulation results from a virtual cohort (N = 200) demonstrate that the DQN agent achieves a safety profile comparable to Bayesian MIPD while significantly improving factor utilization efficiency. Notably, in patients with low bleeding‑risk phenotypes, the DRL‑based approach achieved a similar bleeding rate to MIPD while reducing annual factor VIII consumption by approximately 39% relative to MIPD and by up to 70% compared to the reference prophylaxis protocol adopted as the simulation baseline. These findings suggest that incorporating reinforcement learning with mechanistic PD feedback can act as a powerful complementary layer to established clinical protocols, facilitating personalized and cost-effective hemophilia management.",
-      "authors": [
-        "Rabbani M",
-        "Razavi SE",
-        "Goharimanesh M",
-        "Razavi SE"
-      ],
-      "date": "2026-06-04",
-      "doi": "10.1007/s10928-026-10041-y",
-      "publication_type": "Journal Article",
-      "source_ids": [
-        "MED:42243590"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Personalized prophylactic therapy optimization in hemophilia A using a hybrid PK-PD-TTE model and deep RL.",
-      "url": "https://europepmc.org/article/MED/42243590",
-      "venue": "Journal of pharmacokinetics and pharmacodynamics"
     },
     {
       "abstract": "Quantitative Systems Pharmacology (QSP) models play an inherently interventional role in pharmaceutical research and development, functioning as executable causal systems for designing, evaluating, and replacing clinical trials. However, deploying QSP as an experimental planning engine remains constrained by the difficulty of translating unstructured literature descriptions of clinical or preclinical scenarios into reproducible, simulation-ready model interventions. Motivated by this issue, we propose an agent-based framework that operationalizes QSP models as intervention-ready experimental systems by automatically extracting and executing literature-derived scenarios. The framework combines semantic grounding of model entities with a large language model (LLM)-driven Scenario Extractor and a dual-agent Scenario Mapper . Rather than relying on opaque, single-shot reasoning, our pipeline converts free-text interventions into precise parameter configurations through discrete, verifiable work orders. Moreover, our dynamic Human-in-the-Loop (HITL) strategy empowers modelers to resolve biological ambiguities interactively. Across four diverse kinetic ordinary differential equation (ODE)/QSP models and seven Subject Matter Expert (SME)-curated literature scenarios, our model resolved all selected scenarios into correct executable parameter changes, including multi-dose interventions, unit conversions, no-op scenarios, and ambiguity-triggered HITL cases, demonstrating that structured collaboration between experts and agentic systems can resolve scenarios that standalone Systems Biology Markup Language (SBML) reasoning LLM calls or prior agentic efforts operating on processed SBML data handle unreliably.",
@@ -2633,5 +2745,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-14"
+  "through": "2026-10-16"
 }

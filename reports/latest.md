@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-15 09:15 JST
+Run time: 2026-10-16 09:00 JST
 Source retrieval: **Complete**
-New articles: **1**
-Archive selections: **0** (unreported papers published since 2020)
+New articles: **0**
+Archive selections: **1** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5338, Europe PMC 0, arXiv 0
+Recent-search records: Crossref 5337, Europe PMC 0
 
 ## Selection and search coverage
 
@@ -20,44 +20,46 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 18 capped queries; 0 failed queries.
-- arXiv: 1 pages; 0 capped queries; 0 failed queries.
+- Crossref: 36 pages; 16 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5338
-- unique: 2902
-- duplicates: 2436
-- missing pk evidence: 2749
-- missing ai evidence: 27
+- retrieved: 5337
+- unique: 2886
+- duplicates: 2451
+- missing pk evidence: 2738
 - excluded publication type: 125
-- eligible unreported: 1
+- missing ai evidence: 22
+- already reported: 1
+
+Archive candidates available: 13; unvisited/unfinished windows: 341; completed windows: 1.
+Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [A machine learning framework for precision dosing of daptomycin across diverse disease states](https://doi.org/10.1128/aac.01089-26)
+## 1. [Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy.](https://europepmc.org/article/MED/42091773)
 
-- **Selection:** New article
-- **Authors:** Xin-Fang Zhang, Jing Sun, Guo-Xiang Hao, Xiao-Mei Chen, Yue Zhou, Xiao-Jie Wang, John van den Anker, Wei Zhao, et al.
-- **Venue/source:** Antimicrobial Agents and Chemotherapy
-- **Publication date:** 2026-10-14
-- **DOI:** 10.1128/aac.01089-26
+- **Selection:** Archive article (2020+ fallback)
+- **Authors:** De Lucca Thomaz M, de Azevedo KLR, Paz TA, Nardotto GHB, de Lima Moreira F, Duarte G, Woillard JB, Lanchote VL, et al.
+- **Venue/source:** The AAPS journal
+- **Publication date:** 2026-05-06
+- **DOI:** 10.1208/s12248-026-01248-5
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing.
-- **Methodological contribution:** This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations.
-- **What becomes possible:** The ML model demonstrated accurate prediction of steady-state daptomycin AUC in heterogeneous clinical populations and was successfully validated using real-world data.
-- **Why it matters:** By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.
+- **Prior limitation:** Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS.
+- **Methodological contribution:** This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure.
+- **What becomes possible:** This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.
+- **Why it matters:** Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study.
 
-- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
+- **Relevance score:** 50/100 — PK 10, AI 30, method 10, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** ABSTRACT The large pharmacokinetic variability of daptomycin across disease states poses a challenge for individualized dosing. Conventional population pharmacokinetic (PopPK) models are often limited to specific conditions, lacking generalizability. This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations. Nine published PopPK models were used to generate 90,000 simulated profiles across patients with infections and/or patients treated with renal transplantation and/or renal replacement therapy. Seven ML algorithms were trained to predict the 24 h area under the concentration–time curve (AUC 0–24 ). Model performance was evaluated using statistical metrics and clinical scenario assessments, and comparison with PopPK models. External validation was conducted with real-world data. CatBoost demonstrated the highest predictive accuracy, identifying dose, creatinine clearance, disease state, and weight as key predictors. The validation cohort comprised 20 patients with infections (501 concentration measurements) and 19 patients receiving renal replacement therapy (513 concentration measurements). In infected patients, the prediction error of AUC 0–24 was reduced by 60.1% compared with existing PopPK models (root mean square error [RMSE], 141 vs 353 mg·h/L; mean absolute prediction error, 23.5% vs…
-- **PopPK/pharmacometrics terms:** population pharmacokinetic, poppk
+- **Abstract:** Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolati…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic, population pharmacokinetics, poppk
 - **AI/ML terms:** machine learning
-- **Method terms:** framework, optimization, validation
+- **Method terms:** estimation, validation
 
 </details>
 
