@@ -1,34 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-16",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69",
+  "last_delivery_date_jst": "2026-10-17",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/70",
   "last_optional_source_errors": {
     "arXiv": {
-      "at_utc": "2026-10-16T00:00:26.876833+00:00",
+      "at_utc": "2026-10-17T00:06:14.428879+00:00",
       "message": "HTTP 429: Rate exceeded."
     }
   },
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 13,
-      "completed_windows": 1,
-      "eligible_candidates": 13,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 341,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-16 09:00 JST",
+    "archive": {},
+    "checked_at": "2026-10-17 09:06 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/70"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -40,20 +29,21 @@
     "recent_screening": {
       "already_reported": 1,
       "duplicates": 2451,
-      "excluded_publication_type": 125,
-      "missing_ai_evidence": 22,
-      "missing_pk_evidence": 2738,
-      "retrieved": 5337,
-      "unique": 2886
+      "eligible_unreported": 1,
+      "excluded_publication_type": 133,
+      "missing_ai_evidence": 20,
+      "missing_pk_evidence": 2713,
+      "retrieved": 5319,
+      "unique": 2868
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-16",
-  "last_success_utc": "2026-10-16T00:00:26.876833+00:00",
+  "last_selection_date_jst": "2026-10-17",
+  "last_success_utc": "2026-10-17T00:06:14.428879+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -253,6 +243,12 @@
       "notified_at": "2026-09-15T23:53:57.491735+00:00",
       "selection_type": "historical",
       "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
+    },
+    "doi:10.12688/f1000research.186702.1": {
+      "doi": "10.12688/f1000research.186702.1",
+      "selected_at": "2026-10-17T00:06:14.428879+00:00",
+      "selection_type": "new",
+      "title": "Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes"
     },
     "doi:10.20944/preprints202609.0069.v1": {
       "doi": "10.20944/preprints202609.0069.v1",
@@ -671,6 +667,12 @@
       "selection_type": "new",
       "title": "From seven combination hypotheses to one testable interaction: a gated agentic AI QSP workflow applied to healthy ageing interventions"
     },
+    "source:europe pmc:ppr:ppr1339076": {
+      "doi": "10.12688/f1000research.186702.1",
+      "selected_at": "2026-10-17T00:06:14.428879+00:00",
+      "selection_type": "new",
+      "title": "Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes"
+    },
     "title:021f455ebe957744e5b13d70": {
       "doi": "10.1038/s41540-026-00674-7",
       "selected_at": "2026-10-12T00:54:27.782851+00:00",
@@ -963,6 +965,12 @@
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
     },
+    "title:f7da8454a4d96dcee63ef2f1": {
+      "doi": "10.12688/f1000research.186702.1",
+      "selected_at": "2026-10-17T00:06:14.428879+00:00",
+      "selection_type": "new",
+      "title": "Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes"
+    },
     "title:fe0e77b52459230107896ee5": {
       "doi": "10.1007/s10928-026-10054-7",
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
@@ -971,22 +979,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-16"
+    "arxiv": "2026-10-17"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
+      "last_attempt_utc": "2026-10-17T00:06:14.428879+00:00",
       "message": "HTTP 429: Rate exceeded.",
       "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
-      "records": 5337,
+      "last_attempt_utc": "2026-10-17T00:06:14.428879+00:00",
+      "records": 5317,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-16T00:00:26.876833+00:00",
-      "records": 0,
+      "last_attempt_utc": "2026-10-17T00:06:14.428879+00:00",
+      "records": 2,
       "status": "ok"
     }
   }

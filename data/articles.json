@@ -1,6 +1,80 @@
 {
   "articles": [
     {
+      "abstract": "Background: The growing availability of multi-omics data and machine learning methods creates both an opportunity and a challenge for the systems pharmacology community: the opportunity to model drug action at unprecedented mechanistic resolution, and the challenge of equipping a new generation of researchers with the computational literacy to do so. There is a particular need for training formats that bridge classical pharmacometrics with omics data science, and that foster interdisciplinary community building. Methods We organised a 4-day intensive hackathon on Predictive Modelling in Systems Pharmacology, bringing together 16 early-career researchers from the Horizon Europe CANVAS and French PEPR DIGPHAT consortia, spanning biology, bioinformatics, and computational science. The event pursued the dual aim of fostering a multidisciplinary consortium community and providing hands-on training that bridges classical pharmacometrics with omics data science. Three scientific tracks were delivered: (i) pharmacokinetic/pharmacodynamic (PK/PD) modelling, (ii) drug perturbation modelling through network diffusion in gene regulatory networks (GRN), and (iii) machine learning for pharmacogenomics. A theory-to-practice pedagogical framework structured each day, with morning workshops grounding participants in methodological foundations followed by afternoon coding sprints on real-world datasets. Results All three tracks produced working computational outputs within the hackathon timeframe. In the PK/PD track, all teams successfully identified a two-compartment structural model and key covariate effects. In the GRN track, participants implemented a network diffusion algorithm on gene regulatory networks, yielding patient-stratified therapy recommendations. In the pharmacogenomics track, four out of seven teams surpassed the logistic regression baseline in Matthews Correlation Coefficient on an external validation set. Conclusions The hackathon demonstrated that a structured multi-track format combining community-targeted outreach, theory-to-practice pedagogy, and real-world datasets constitutes a replicable model for interdisciplinary computational pharmacology training at the European level.",
+      "authors": [
+        "Marku M",
+        "Trinh T",
+        "Berrah R",
+        "Uguzzoni G",
+        "Ursino M",
+        "Battail C"
+      ],
+      "doi": "10.12688/f1000research.186702.1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "algorithm",
+            "validation"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "algorithm",
+            "validation"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.12688/f1000research.186702.1",
+      "publication_date": "2026-10-12",
+      "reported_at": "2026-10-17 09:06 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "A theory-to-practice pedagogical framework structured each day, with morning workshops grounding participants in methodological foundations followed by afternoon coding sprints on real-world datasets.",
+        "new_capability": "Conclusions The hackathon demonstrated that a structured multi-track format combining community-targeted outreach, theory-to-practice pedagogy, and real-world datasets constitutes a replicable model for interdisciplinary computational pharmacology training at the European level.",
+        "prior_limitation": "The growing availability of multi-omics data and machine learning methods creates both an opportunity and a challenge for the systems pharmacology community: the opportunity to model drug action at unprecedented mechanistic resolution, and the challenge of equipping a new generation of researchers with the computation…",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes",
+      "url": "https://europepmc.org/article/PPR/PPR1339076",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolating predictions to populations whose characteristics differ from those represented in the training datasets. A machine learning model using only three sampling timepoints has been developed and validated in different datasets, enabling accurate estimation of RAL AUC₀-₁₂. This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.",
       "authors": [
         "De Lucca Thomaz M",
@@ -3940,29 +4014,18 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-16 09:00 JST",
+  "last_scan_at": "2026-10-17 09:06 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 13,
-      "completed_windows": 1,
-      "eligible_candidates": 13,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 341,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-16 09:00 JST",
+    "archive": {},
+    "checked_at": "2026-10-17 09:06 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/69"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/70"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -3974,15 +4037,16 @@
     "recent_screening": {
       "already_reported": 1,
       "duplicates": 2451,
-      "excluded_publication_type": 125,
-      "missing_ai_evidence": 22,
-      "missing_pk_evidence": 2738,
-      "retrieved": 5337,
-      "unique": 2886
+      "eligible_unreported": 1,
+      "excluded_publication_type": 133,
+      "missing_ai_evidence": 20,
+      "missing_pk_evidence": 2713,
+      "retrieved": 5319,
+      "unique": 2868
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },

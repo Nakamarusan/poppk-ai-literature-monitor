@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-16 09:00 JST
+Run time: 2026-10-17 09:06 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5337, Europe PMC 0
+Recent-search records: Crossref 5317, Europe PMC 2
 
 ## Selection and search coverage
 
@@ -20,46 +20,44 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 16 capped queries; 0 failed queries.
+- Crossref: 36 pages; 17 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5337
-- unique: 2886
+- retrieved: 5319
+- unique: 2868
 - duplicates: 2451
-- missing pk evidence: 2738
-- excluded publication type: 125
-- missing ai evidence: 22
+- excluded publication type: 133
+- eligible unreported: 1
+- missing pk evidence: 2713
+- missing ai evidence: 20
 - already reported: 1
 
-Archive candidates available: 13; unvisited/unfinished windows: 341; completed windows: 1.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
+## 1. [Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes](https://europepmc.org/article/PPR/PPR1339076)
 
-## 1. [Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy.](https://europepmc.org/article/MED/42091773)
-
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** De Lucca Thomaz M, de Azevedo KLR, Paz TA, Nardotto GHB, de Lima Moreira F, Duarte G, Woillard JB, Lanchote VL, et al.
-- **Venue/source:** The AAPS journal
-- **Publication date:** 2026-05-06
-- **DOI:** 10.1208/s12248-026-01248-5
+- **Selection:** New article
+- **Authors:** Marku M, Trinh T, Berrah R, Uguzzoni G, Ursino M, Battail C
+- **Venue/source:** Europe PMC
+- **Publication date:** 2026-10-12
+- **DOI:** 10.12688/f1000research.186702.1
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS.
-- **Methodological contribution:** This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure.
-- **What becomes possible:** This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.
-- **Why it matters:** Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study.
+- **Prior limitation:** The growing availability of multi-omics data and machine learning methods creates both an opportunity and a challenge for the systems pharmacology community: the opportunity to model drug action at unprecedented mechanistic resolution, and the challenge of equipping a new generation of researchers with the computation…
+- **Methodological contribution:** A theory-to-practice pedagogical framework structured each day, with morning workshops grounding participants in methodological foundations followed by afternoon coding sprints on real-world datasets.
+- **What becomes possible:** Conclusions The hackathon demonstrated that a structured multi-track format combining community-targeted outreach, theory-to-practice pedagogy, and real-world datasets constitutes a replicable model for interdisciplinary computational pharmacology training at the European level.
+- **Why it matters:** Not stated in the available abstract.
 
-- **Relevance score:** 50/100 — PK 10, AI 30, method 10, title intersection 0
+- **Relevance score:** 30/100 — PK 10, AI 10, method 10, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolati…
-- **PopPK/pharmacometrics terms:** population pharmacokinetic, population pharmacokinetics, poppk
+- **Abstract:** Background: The growing availability of multi-omics data and machine learning methods creates both an opportunity and a challenge for the systems pharmacology community: the opportunity to model drug action at unprecedented mechanistic resolution, and the challenge of equipping a new generation of researchers with the computational literacy to do so. There is a particular need for training formats that bridge classical pharmacometrics with omics data science, and that foster interdisciplinary community building. Methods We organised a 4-day intensive hackathon on Predictive Modelling in Systems Pharmacology, bringing together 16 early-career researchers from the Horizon Europe CANVAS and French PEPR DIGPHAT consortia, spanning biology, bioinformatics, and computational science. The event pursued the dual aim of fostering a multidisciplinary consortium community and providing hands-on training that bridges classical pharmacometrics with omics data science. Three scientific tracks were delivered: (i) pharmacokinetic/pharmacodynamic (PK/PD) modelling, (ii) drug perturbation modelling through network diffusion in gene regulatory networks (GRN), and (iii) machine learning for pharmacogenomics. A theory-to-practice pedagogical framework structured each day, with morning workshops grounding participants in methodological foundations followed by afternoon coding sprints on real-world…
+- **PopPK/pharmacometrics terms:** pharmacometrics
 - **AI/ML terms:** machine learning
-- **Method terms:** estimation, validation
+- **Method terms:** framework, algorithm, validation
 
 </details>
 
