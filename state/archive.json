@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-16",
+  "last_check": "2026-10-18",
   "last_run": {
-    "cached_candidates_before": 13,
+    "cached_candidates_before": 12,
     "completed_windows": 1,
-    "eligible_candidates": 13,
+    "eligible_candidates": 12,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 341,
+    "pending_windows": 360,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -2401,6 +2401,139 @@
       "since": "2026-10-15",
       "source": "crossref",
       "until": "2026-10-16"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-17",
+      "source": "europe_pmc",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-17",
+      "source": "crossref",
+      "until": "2026-10-18"
     }
   ],
   "pool": [
@@ -2502,32 +2635,6 @@
       "title": "An Interpretable PK-Informed Hybrid Model for Voriconazole Exposure Prediction: Roles of CYP2C19 Genotype and Inflammation.",
       "url": "https://europepmc.org/article/MED/42137118",
       "venue": "Drug design, development and therapy"
-    },
-    {
-      "abstract": "Recent studies have applied machine learning (ML)-based limited sampling strategies (LSS) to predict drug exposure (AUC), achieving low prediction error and performance comparable to or better than multiple linear regression and population pharmacokinetics LSS. This study aimed to develop and validate a machine learning-based limited sampling strategy capable of predicting raltegravir (RAL) exposure. Four machine learning algorithms (XGBoost, Random Forest, GLMNet, and SVM) were trained using pharmacokinetic profiles generated via Monte Carlo simulation from a population pharmacokinetic (POPPK) model. Data were divided into training (75%) and test (25%) sets. All possible combinations of sampling times, pairs and triplets, in steady-state, up to 12 h post-dose were evaluated. Model performance was assessed by the lowest root mean square error (RMSE) in the cross-validation, and the best performing model was evaluated in the test set and externally validated using simulated PK profiles from an independent POPPK model and patient data from a clinical study. XGBoost trained with concentrations at 0.5, 2, and 4 h showed the best predictive performance. The model achieved excellent accuracy in the test set (bias/RMSE: 0.8%/8.7%) and in the independent simulation (1.9%/14.3%). Performance decreased in real patient data (5.0%/24.1%), highlighting the need for caution when extrapolating predictions to populations whose characteristics differ from those represented in the training datasets. A machine learning model using only three sampling timepoints has been developed and validated in different datasets, enabling accurate estimation of RAL AUC₀-₁₂. This approach provides a tool for pharmacokinetic and PK/PD studies and reduces intensive sampling need in clinical settings.",
-      "authors": [
-        "De Lucca Thomaz M",
-        "de Azevedo KLR",
-        "Paz TA",
-        "Nardotto GHB",
-        "de Lima Moreira F",
-        "Duarte G",
-        "Woillard JB",
-        "Lanchote VL",
-        "Ximenez JPB"
-      ],
-      "date": "2026-05-06",
-      "doi": "10.1208/s12248-026-01248-5",
-      "publication_type": "Research Support, Non-U.S. Gov't, Journal Article",
-      "source_ids": [
-        "MED:42091773"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Raltegravir Plasma Exposure: A Machine Learning-Based Model for its Prediction Using Limited Sampling Strategy.",
-      "url": "https://europepmc.org/article/MED/42091773",
-      "venue": "The AAPS journal"
     },
     {
       "abstract": "Heterogeneity in sporadic Parkinson’s Disease (PD) is a critical problem that drives variable rates of progression and treatment response and complicates clinical trials. Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints. Simulated patients or digital twins may offer a solution. We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model. Using a relational, tree-structured representation and domain-specific fine-tuning, the model produces patient-level records with longitudinal clinical, imaging, and biomarker data. Fidelity was assessed through distributional similarity, correlation structure, and neurologist review. Utility was tested by training diagnostic classifiers, reproducing a published pharmacometric disease progression model applied to in silico trials, and by extracting a stringent dopamine–motor impairment relationship at early PD stages. Privacy was evaluated via identical match share, distance-to-closest-record, and membership inference attacks. These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.",
@@ -2745,5 +2852,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-16"
+  "through": "2026-10-18"
 }

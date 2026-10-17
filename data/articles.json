@@ -1,6 +1,92 @@
 {
   "articles": [
     {
+      "abstract": "Heterogeneity in sporadic Parkinson’s Disease (PD) is a critical problem that drives variable rates of progression and treatment response and complicates clinical trials. Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints. Simulated patients or digital twins may offer a solution. We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model. Using a relational, tree-structured representation and domain-specific fine-tuning, the model produces patient-level records with longitudinal clinical, imaging, and biomarker data. Fidelity was assessed through distributional similarity, correlation structure, and neurologist review. Utility was tested by training diagnostic classifiers, reproducing a published pharmacometric disease progression model applied to in silico trials, and by extracting a stringent dopamine–motor impairment relationship at early PD stages. Privacy was evaluated via identical match share, distance-to-closest-record, and membership inference attacks. These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.",
+      "authors": [
+        "Merlo Pich E",
+        "Pomponio O",
+        "Magno MA",
+        "Berti M",
+        "Li Lu L",
+        "Coser A",
+        "Cani I",
+        "Calandra Buonaura G",
+        "Valenti M",
+        "Cividini C",
+        "Semenzato N",
+        "Baggi A",
+        "Saccani S",
+        "Franzini JM"
+      ],
+      "doi": "10.64898/2026.04.28.26351471",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "large language model",
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "inference"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence",
+            "llm",
+            "large language model"
+          ],
+          "method": [
+            "framework",
+            "inference"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "artificial intelligence",
+            "llm"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.64898/2026.04.28.26351471",
+      "publication_date": "2026-04-29",
+      "reported_at": "2026-10-18 08:42 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints.",
+        "significance": "These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Artificial Intelligence, LLM-based generation of synthetic patients with Parkinson’s Disease: towards a digital twin paradigm for in silico studies",
+      "url": "https://europepmc.org/article/PPR/PPR1265459",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Background: The growing availability of multi-omics data and machine learning methods creates both an opportunity and a challenge for the systems pharmacology community: the opportunity to model drug action at unprecedented mechanistic resolution, and the challenge of equipping a new generation of researchers with the computational literacy to do so. There is a particular need for training formats that bridge classical pharmacometrics with omics data science, and that foster interdisciplinary community building. Methods We organised a 4-day intensive hackathon on Predictive Modelling in Systems Pharmacology, bringing together 16 early-career researchers from the Horizon Europe CANVAS and French PEPR DIGPHAT consortia, spanning biology, bioinformatics, and computational science. The event pursued the dual aim of fostering a multidisciplinary consortium community and providing hands-on training that bridges classical pharmacometrics with omics data science. Three scientific tracks were delivered: (i) pharmacokinetic/pharmacodynamic (PK/PD) modelling, (ii) drug perturbation modelling through network diffusion in gene regulatory networks (GRN), and (iii) machine learning for pharmacogenomics. A theory-to-practice pedagogical framework structured each day, with morning workshops grounding participants in methodological foundations followed by afternoon coding sprints on real-world datasets. Results All three tracks produced working computational outputs within the hackathon timeframe. In the PK/PD track, all teams successfully identified a two-compartment structural model and key covariate effects. In the GRN track, participants implemented a network diffusion algorithm on gene regulatory networks, yielding patient-stratified therapy recommendations. In the pharmacogenomics track, four out of seven teams surpassed the logistic regression baseline in Matthews Correlation Coefficient on an external validation set. Conclusions The hackathon demonstrated that a structured multi-track format combining community-targeted outreach, theory-to-practice pedagogy, and real-world datasets constitutes a replicable model for interdisciplinary computational pharmacology training at the European level.",
       "authors": [
         "Marku M",
@@ -4014,13 +4100,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-17 09:06 JST",
+  "last_scan_at": "2026-10-18 08:42 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-17 09:06 JST",
+    "archive": {
+      "cached_candidates_before": 12,
+      "completed_windows": 1,
+      "eligible_candidates": 12,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 360,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-18 08:42 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/70"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/71"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -4032,21 +4129,25 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2451,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 133,
+      "already_reported": 2,
+      "duplicates": 2434,
+      "excluded_publication_type": 145,
       "missing_ai_evidence": 20,
-      "missing_pk_evidence": 2713,
-      "retrieved": 5319,
-      "unique": 2868
+      "missing_pk_evidence": 2708,
+      "retrieved": 5309,
+      "unique": 2875
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
