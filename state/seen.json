@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-18",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/71",
+  "last_delivery_date_jst": "2026-10-19",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/72",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 12,
+      "cached_candidates_before": 11,
       "completed_windows": 1,
-      "eligible_candidates": 12,
+      "eligible_candidates": 11,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 360,
+      "pending_windows": 379,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-18 08:42 JST",
+    "checked_at": "2026-10-19 08:51 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/71"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/72"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,12 +38,12 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2434,
-      "excluded_publication_type": 145,
-      "missing_ai_evidence": 20,
-      "missing_pk_evidence": 2708,
-      "retrieved": 5309,
-      "unique": 2875
+      "duplicates": 2455,
+      "excluded_publication_type": 151,
+      "missing_ai_evidence": 19,
+      "missing_pk_evidence": 2667,
+      "retrieved": 5294,
+      "unique": 2839
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-18",
-  "last_success_utc": "2026-10-17T23:42:14.066193+00:00",
+  "last_selection_date_jst": "2026-10-19",
+  "last_success_utc": "2026-10-18T23:51:53.926881+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -313,6 +313,12 @@
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
     },
+    "doi:10.3390/plants15081176": {
+      "doi": "10.3390/plants15081176",
+      "selected_at": "2026-10-18T23:51:53.926881+00:00",
+      "selection_type": "historical",
+      "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
+    },
     "doi:10.64898/2026.04.05.716273": {
       "doi": "10.64898/2026.04.05.716273",
       "selected_at": "2026-10-09T01:39:34.115054+00:00",
@@ -436,6 +442,12 @@
       "selected_at": "2026-09-30T16:02:12.388200+00:00",
       "selection_type": "historical",
       "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
+    },
+    "source:europe pmc:med:42075378": {
+      "doi": "10.3390/plants15081176",
+      "selected_at": "2026-10-18T23:51:53.926881+00:00",
+      "selection_type": "historical",
+      "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
     },
     "source:europe pmc:med:42076151": {
       "doi": "10.3390/pharmaceutics18040501",
@@ -820,6 +832,12 @@
       "selection_type": "new",
       "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
     },
+    "title:6d34584626133d97a4fc919e": {
+      "doi": "10.3390/plants15081176",
+      "selected_at": "2026-10-18T23:51:53.926881+00:00",
+      "selection_type": "historical",
+      "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
+    },
     "title:779b4671ae7d80177f71f576": {
       "doi": "10.64898/2026.09.29.755460",
       "selected_at": "2026-10-03T00:52:50.227445+00:00",
@@ -1006,21 +1024,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-18"
+    "arxiv": "2026-10-19"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-17T23:42:14.066193+00:00",
+      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-17T23:42:14.066193+00:00",
-      "records": 5306,
+      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
+      "records": 5291,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-17T23:42:14.066193+00:00",
+      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
       "records": 3,
       "status": "ok"
     }

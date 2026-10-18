@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-18 08:42 JST
+Run time: 2026-10-19 08:51 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5306, Europe PMC 3, arXiv 0
+Recent-search records: Crossref 5291, Europe PMC 3, arXiv 0
 
 ## Selection and search coverage
 
@@ -20,36 +20,36 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 17 capped queries; 0 failed queries.
+- Crossref: 36 pages; 16 capped queries; 0 failed queries.
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5309
-- unique: 2875
-- duplicates: 2434
-- excluded publication type: 145
+- retrieved: 5294
+- unique: 2839
+- duplicates: 2455
+- excluded publication type: 151
 - already reported: 2
-- missing pk evidence: 2708
-- missing ai evidence: 20
+- missing pk evidence: 2667
+- missing ai evidence: 19
 
-Archive candidates available: 12; unvisited/unfinished windows: 360; completed windows: 1.
+Archive candidates available: 11; unvisited/unfinished windows: 379; completed windows: 1.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Artificial Intelligence, LLM-based generation of synthetic patients with Parkinson’s Disease: towards a digital twin paradigm for in silico studies](https://europepmc.org/article/PPR/PPR1265459)
+## 1. [Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model.](https://europepmc.org/article/MED/42075378)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** Merlo Pich E, Pomponio O, Magno MA, Berti M, Li Lu L, Coser A, Cani I, Calandra Buonaura G, et al.
-- **Venue/source:** Europe PMC
-- **Publication date:** 2026-04-29
-- **DOI:** 10.64898/2026.04.28.26351471
+- **Authors:** Shen J, Lei X, Li Y, Pan Y, Wang G
+- **Venue/source:** Plants (Basel, Switzerland)
+- **Publication date:** 2026-04-10
+- **DOI:** 10.3390/plants15081176
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints.
-- **Methodological contribution:** We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model.
+- **Prior limitation:** Not stated in the available abstract.
+- **Methodological contribution:** To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction.
 - **What becomes possible:** Not stated in the available abstract.
-- **Why it matters:** These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.
+- **Why it matters:** Not stated in the available abstract.
 
 - **Relevance score:** 50/100 — PK 10, AI 30, method 10, title intersection 0
 - **Summary method:** Abstract-only extractive summary
@@ -57,10 +57,10 @@ Unfinished date windows are resumed on the next eligible run. API cursors are no
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Heterogeneity in sporadic Parkinson’s Disease (PD) is a critical problem that drives variable rates of progression and treatment response and complicates clinical trials. Access to large PD datasets that may help in clustering this heterogeneity is restricted by privacy and regulatory constraints. Simulated patients or digital twins may offer a solution. We developed a large language model (LLM)-framework to generate high-fidelity synthetic PD patients from the Parkinson’s Progression Markers Initiative (PPMI) dataset based on the open-source Qwen3-8B-Base model. Using a relational, tree-structured representation and domain-specific fine-tuning, the model produces patient-level records with longitudinal clinical, imaging, and biomarker data. Fidelity was assessed through distributional similarity, correlation structure, and neurologist review. Utility was tested by training diagnostic classifiers, reproducing a published pharmacometric disease progression model applied to in silico trials, and by extracting a stringent dopamine–motor impairment relationship at early PD stages. Privacy was evaluated via identical match share, distance-to-closest-record, and membership inference attacks. These findings support the use of a dedicated LLM framework for patient simulation, contributing to the foundations of digital twins for PD in silico trials.
-- **PopPK/pharmacometrics terms:** pharmacometric
-- **AI/ML terms:** artificial intelligence, llm, large language model
-- **Method terms:** framework, inference
+- **Abstract:** The double hidden-layer neural network has increasingly been applied in tree height modeling due to its superior performance. To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction. Taking the Larix olgensis forest plantation in Jilin Province as the research object, a double hidden-layer back propagation (BP) neural network was established for tree height prediction by adopting trial and error, k-fold cross-validation, and near-domain optimization strategies. In constructing the nonlinear mixed-effects model, the overall and local differences in forest growth data, as well as the autocorrelation among the various levels of data, were considered. Accordingly, after determining the base model, random effects were introduced, the correlation variance-covariance matrix was calculated, and random parameters were estimated to compare the predictive performance of the two aforementioned models. For the mixed-effects model, the coefficient of determination R 2 was 0.8590, the root mean square error (RMSE) was 1.6230, and the mean absolute error (MAE) was 2.2658. For the double hidden-layer BP neural network, the R 2 reached 0.9068 (an increase of 5.56%), the RMSE was 1.3197 (a decrease of 18.69%), and the MAE…
+- **PopPK/pharmacometrics terms:** nonlinear mixed effects
+- **AI/ML terms:** neural network
+- **Method terms:** estimation, optimization, validation
 
 </details>
 
