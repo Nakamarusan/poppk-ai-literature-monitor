@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-19",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/72",
+  "last_delivery_date_jst": "2026-10-20",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 11,
+      "cached_candidates_before": 10,
       "completed_windows": 1,
-      "eligible_candidates": 11,
+      "eligible_candidates": 10,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 379,
+      "pending_windows": 398,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-19 08:51 JST",
+    "checked_at": "2026-10-20 09:52 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/72"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,12 +38,12 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2455,
-      "excluded_publication_type": 151,
-      "missing_ai_evidence": 19,
-      "missing_pk_evidence": 2667,
-      "retrieved": 5294,
-      "unique": 2839
+      "duplicates": 2438,
+      "excluded_publication_type": 155,
+      "missing_ai_evidence": 15,
+      "missing_pk_evidence": 2669,
+      "retrieved": 5279,
+      "unique": 2841
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-19",
-  "last_success_utc": "2026-10-18T23:51:53.926881+00:00",
+  "last_selection_date_jst": "2026-10-20",
+  "last_success_utc": "2026-10-20T00:52:28.580070+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -157,6 +157,12 @@
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
       "selection_type": "new",
       "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
+    },
+    "doi:10.1007/s13318-026-00996-1": {
+      "doi": "10.1007/s13318-026-00996-1",
+      "selected_at": "2026-10-20T00:52:28.580070+00:00",
+      "selection_type": "historical",
+      "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach."
     },
     "doi:10.1016/j.cmpb.2026.109511": {
       "doi": "10.1016/j.cmpb.2026.109511",
@@ -442,6 +448,12 @@
       "selected_at": "2026-09-30T16:02:12.388200+00:00",
       "selection_type": "historical",
       "title": "Improving Population Pharmacokinetic Modelling with Artificial Patients using Generative Artificial Intelligence."
+    },
+    "source:europe pmc:med:41933112": {
+      "doi": "10.1007/s13318-026-00996-1",
+      "selected_at": "2026-10-20T00:52:28.580070+00:00",
+      "selection_type": "historical",
+      "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach."
     },
     "source:europe pmc:med:42075378": {
       "doi": "10.3390/plants15081176",
@@ -790,6 +802,12 @@
       "selection_type": "new",
       "title": "DeepNLME - Conditional Generative Scientific Machine Learning with Applications in Pharmacology"
     },
+    "title:334f3f06f63ba2400f22f008": {
+      "doi": "10.1007/s13318-026-00996-1",
+      "selected_at": "2026-10-20T00:52:28.580070+00:00",
+      "selection_type": "historical",
+      "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach."
+    },
     "title:35b42827c15d8a27c74b7ab8": {
       "doi": "10.1007/s10928-026-10036-9",
       "selected_at": "2026-10-07T01:10:44.537962+00:00",
@@ -1024,22 +1042,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-19"
+    "arxiv": "2026-10-20"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
+      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
-      "records": 5291,
+      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
+      "records": 5274,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-18T23:51:53.926881+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
+      "records": 5,
       "status": "ok"
     }
   }

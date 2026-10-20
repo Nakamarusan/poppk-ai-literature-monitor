@@ -1,29 +1,29 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-19 08:51 JST",
+  "last_scan_at": "2026-10-20 09:52 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 11,
+      "cached_candidates_before": 10,
       "completed_windows": 1,
-      "eligible_candidates": 11,
+      "eligible_candidates": 10,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 379,
+      "pending_windows": 398,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-19 08:51 JST",
+    "checked_at": "2026-10-20 09:52 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/72"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -39,12 +39,12 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2455,
-      "excluded_publication_type": 151,
-      "missing_ai_evidence": 19,
-      "missing_pk_evidence": 2667,
-      "retrieved": 5294,
-      "unique": 2839
+      "duplicates": 2438,
+      "excluded_publication_type": 155,
+      "missing_ai_evidence": 15,
+      "missing_pk_evidence": 2669,
+      "retrieved": 5279,
+      "unique": 2841
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,13 +52,86 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 53,
+  "article_count": 54,
   "new_count": 15,
-  "historical_count": 38,
+  "historical_count": 39,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Background and objective Status epilepticus is a life-threatening neurological emergency. Ketamine combined with levetiracetam is a promising therapy being investigated for established status epilepticus. Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints. Existing population pharmacokinetic methods with Bayesian forecasting require multiple samples per individual, which is difficult in this context. The objective of this work was to develop a framework that utilizes population pharmacokinetic-simulated datasets as inputs for machine learning models to predict early ketamine exposure in pediatric status epilepticus. Methods We simulated 100,000 concentration-time profiles with covariates using a published population pharmacokinetic model. Additional predictor variables were simulated using distributions from a previously published status epilepticus trial. The simulated data were used to train machine learning algorithms to predict early exposure (AUC 0-2h ) using two samples per individual. The machine learning models were validated internally. Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM). The ensemble models (GBM and RF) achieved superior performance, with internal validation results indicating no overfitting. The root mean square errors for RF and GBM were 0.183 mg h/L and 0.185 mg h/L respectively, while mean absolute errors of RF and GBM were 0.103 mg h/L and 0.102 mg h/L, respectively CONCLUSIONS: We demonstrate the feasibility of developing population pharmacokinetic-informed machine learning models to accurately predict early ketamine exposures in pediatric status, where pharmacokinetic sampling is a challenge.",
+      "authors": [
+        "Bamgboye AO",
+        "Coles LD",
+        "Illamola SM",
+        "Wolfson J",
+        "Cloyd JC"
+      ],
+      "doi": "10.1007/s13318-026-00996-1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1007/s13318-026-00996-1",
+      "publication_date": "2026-04-03",
+      "reported_at": "2026-10-20 09:52 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM).",
+        "new_capability": "The root mean square errors for RF and GBM were 0.183 mg h/L and 0.185 mg h/L respectively, while mean absolute errors of RF and GBM were 0.103 mg h/L and 0.102 mg h/L, respectively CONCLUSIONS: We demonstrate the feasibility of developing population pharmacokinetic-informed machine learning models to accurately predi…",
+        "prior_limitation": "Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach.",
+      "url": "https://europepmc.org/article/MED/41933112",
+      "venue": "European journal of drug metabolism and pharmacokinetics"
+    },
     {
       "abstract": "The double hidden-layer neural network has increasingly been applied in tree height modeling due to its superior performance. To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction. Taking the Larix olgensis forest plantation in Jilin Province as the research object, a double hidden-layer back propagation (BP) neural network was established for tree height prediction by adopting trial and error, k-fold cross-validation, and near-domain optimization strategies. In constructing the nonlinear mixed-effects model, the overall and local differences in forest growth data, as well as the autocorrelation among the various levels of data, were considered. Accordingly, after determining the base model, random effects were introduced, the correlation variance-covariance matrix was calculated, and random parameters were estimated to compare the predictive performance of the two aforementioned models. For the mixed-effects model, the coefficient of determination R 2 was 0.8590, the root mean square error (RMSE) was 1.6230, and the mean absolute error (MAE) was 2.2658. For the double hidden-layer BP neural network, the R 2 reached 0.9068 (an increase of 5.56%), the RMSE was 1.3197 (a decrease of 18.69%), and the MAE was 1.2736 (a decrease of 43.79%). The results demonstrate that the double hidden-layer BP neural network is superior to the nonlinear mixed-effects model for tree height prediction. Therefore, the results provide a more accurate method for tree height prediction.",
       "authors": [
@@ -446,7 +519,8 @@
       },
       "selection_type": "new",
       "sources": [
-        "Crossref"
+        "Crossref",
+        "Europe PMC"
       ],
       "summary": {
         "contribution": "This study used a machine learning (ML) framework to predict daptomycin exposure and guide dose optimization across heterogeneous populations.",
@@ -455,7 +529,7 @@
         "significance": "By enabling accurate pre-treatment exposure prediction, it provides a flexible and clinically useful pathway toward precision dosing of daptomycin.",
         "source": "Abstract-only extractive summary"
       },
-      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states",
+      "title": "A machine learning framework for precision dosing of daptomycin across diverse disease states.",
       "url": "https://doi.org/10.1128/aac.01089-26",
       "venue": "Antimicrobial Agents and Chemotherapy"
     },

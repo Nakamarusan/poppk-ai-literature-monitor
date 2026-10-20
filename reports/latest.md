@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-19 08:51 JST
+Run time: 2026-10-20 09:52 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5291, Europe PMC 3, arXiv 0
+Recent-search records: Crossref 5274, Europe PMC 5, arXiv 0
 
 ## Selection and search coverage
 
@@ -20,35 +20,35 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 16 capped queries; 0 failed queries.
+- Crossref: 36 pages; 17 capped queries; 0 failed queries.
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5294
-- unique: 2839
-- duplicates: 2455
-- excluded publication type: 151
+- retrieved: 5279
+- unique: 2841
+- duplicates: 2438
 - already reported: 2
-- missing pk evidence: 2667
-- missing ai evidence: 19
+- excluded publication type: 155
+- missing pk evidence: 2669
+- missing ai evidence: 15
 
-Archive candidates available: 11; unvisited/unfinished windows: 379; completed windows: 1.
+Archive candidates available: 10; unvisited/unfinished windows: 398; completed windows: 1.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model.](https://europepmc.org/article/MED/42075378)
+## 1. [Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach.](https://europepmc.org/article/MED/41933112)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** Shen J, Lei X, Li Y, Pan Y, Wang G
-- **Venue/source:** Plants (Basel, Switzerland)
-- **Publication date:** 2026-04-10
-- **DOI:** 10.3390/plants15081176
+- **Authors:** Bamgboye AO, Coles LD, Illamola SM, Wolfson J, Cloyd JC
+- **Venue/source:** European journal of drug metabolism and pharmacokinetics
+- **Publication date:** 2026-04-03
+- **DOI:** 10.1007/s13318-026-00996-1
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Not stated in the available abstract.
-- **Methodological contribution:** To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction.
-- **What becomes possible:** Not stated in the available abstract.
+- **Prior limitation:** Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints.
+- **Methodological contribution:** Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM).
+- **What becomes possible:** The root mean square errors for RF and GBM were 0.183 mg h/L and 0.185 mg h/L respectively, while mean absolute errors of RF and GBM were 0.103 mg h/L and 0.102 mg h/L, respectively CONCLUSIONS: We demonstrate the feasibility of developing population pharmacokinetic-informed machine learning models to accurately predi…
 - **Why it matters:** Not stated in the available abstract.
 
 - **Relevance score:** 50/100 — PK 10, AI 30, method 10, title intersection 0
@@ -57,10 +57,10 @@ Unfinished date windows are resumed on the next eligible run. API cursors are no
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** The double hidden-layer neural network has increasingly been applied in tree height modeling due to its superior performance. To improve the precision of tree height estimation, this study compared the performance of a double hidden-layer neural network with that of a nonlinear mixed-effects model, aiming to provide a new method for tree height prediction. Taking the Larix olgensis forest plantation in Jilin Province as the research object, a double hidden-layer back propagation (BP) neural network was established for tree height prediction by adopting trial and error, k-fold cross-validation, and near-domain optimization strategies. In constructing the nonlinear mixed-effects model, the overall and local differences in forest growth data, as well as the autocorrelation among the various levels of data, were considered. Accordingly, after determining the base model, random effects were introduced, the correlation variance-covariance matrix was calculated, and random parameters were estimated to compare the predictive performance of the two aforementioned models. For the mixed-effects model, the coefficient of determination R 2 was 0.8590, the root mean square error (RMSE) was 1.6230, and the mean absolute error (MAE) was 2.2658. For the double hidden-layer BP neural network, the R 2 reached 0.9068 (an increase of 5.56%), the RMSE was 1.3197 (a decrease of 18.69%), and the MAE…
-- **PopPK/pharmacometrics terms:** nonlinear mixed effects
-- **AI/ML terms:** neural network
-- **Method terms:** estimation, optimization, validation
+- **Abstract:** Background and objective Status epilepticus is a life-threatening neurological emergency. Ketamine combined with levetiracetam is a promising therapy being investigated for established status epilepticus. Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints. Existing population pharmacokinetic methods with Bayesian forecasting require multiple samples per individual, which is difficult in this context. The objective of this work was to develop a framework that utilizes population pharmacokinetic-simulated datasets as inputs for machine learning models to predict early ketamine exposure in pediatric status epilepticus. Methods We simulated 100,000 concentration-time profiles with covariates using a published population pharmacokinetic model. Additional predictor variables were simulated using distributions from a previously published status epilepticus trial. The simulated data were used to train machine learning algorithms to predict early exposure (AUC 0-2h ) using two samples per individual. The machine learning models were validated internally. Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM). The ensemble models (GBM and RF) achieved superior perf…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic
+- **AI/ML terms:** machine learning
+- **Method terms:** framework, validation
 
 </details>
 
