@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-20",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73",
+  "last_delivery_date_jst": "2026-10-21",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/74",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 10,
+      "cached_candidates_before": 9,
       "completed_windows": 1,
-      "eligible_candidates": 10,
+      "eligible_candidates": 9,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 398,
+      "pending_windows": 417,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-20 09:52 JST",
+    "checked_at": "2026-10-21 09:20 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/74"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,12 +38,12 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2438,
-      "excluded_publication_type": 155,
-      "missing_ai_evidence": 15,
-      "missing_pk_evidence": 2669,
-      "retrieved": 5279,
-      "unique": 2841
+      "duplicates": 2443,
+      "excluded_publication_type": 158,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2645,
+      "retrieved": 5262,
+      "unique": 2819
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-20",
-  "last_success_utc": "2026-10-20T00:52:28.580070+00:00",
+  "last_selection_date_jst": "2026-10-21",
+  "last_success_utc": "2026-10-21T00:20:02.153120+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -324,6 +324,12 @@
       "selected_at": "2026-10-18T23:51:53.926881+00:00",
       "selection_type": "historical",
       "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
+    },
+    "doi:10.64898/2026.02.03.703154": {
+      "doi": "10.64898/2026.02.03.703154",
+      "selected_at": "2026-10-21T00:20:02.153120+00:00",
+      "selection_type": "historical",
+      "title": "Model-Driven Hybrid AI Framework for End-to-End Autonomous Decision-Making in Drug Development"
     },
     "doi:10.64898/2026.04.05.716273": {
       "doi": "10.64898/2026.04.05.716273",
@@ -663,6 +669,12 @@
       "notified_at": "2026-09-08T23:47:25.225052+00:00",
       "selection_type": "historical",
       "title": "Structured Schemas for Provenance-Rich, LLM-Assisted QSP Model Calibration."
+    },
+    "source:europe pmc:ppr:ppr1225063": {
+      "doi": "10.64898/2026.02.03.703154",
+      "selected_at": "2026-10-21T00:20:02.153120+00:00",
+      "selection_type": "historical",
+      "title": "Model-Driven Hybrid AI Framework for End-to-End Autonomous Decision-Making in Drug Development"
     },
     "source:europe pmc:ppr:ppr1244176": {
       "doi": "10.64898/2026.05.30.26354512",
@@ -1005,6 +1017,12 @@
       "selection_type": "historical",
       "title": "Automated Pharmacometric Model Development by Leveraging Low-Dimensional Neural ODEs and LASSO Regression."
     },
+    "title:de567b52177d05a61073083f": {
+      "doi": "10.64898/2026.02.03.703154",
+      "selected_at": "2026-10-21T00:20:02.153120+00:00",
+      "selection_type": "historical",
+      "title": "Model-Driven Hybrid AI Framework for End-to-End Autonomous Decision-Making in Drug Development"
+    },
     "title:e169ef724f21f6d12529f02d": {
       "doi": "10.1002/pds.70442",
       "notified_at": "2026-09-22T23:57:21.885737+00:00",
@@ -1042,21 +1060,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-20"
+    "arxiv": "2026-10-21"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
+      "last_attempt_utc": "2026-10-21T00:20:02.153120+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
-      "records": 5274,
+      "last_attempt_utc": "2026-10-21T00:20:02.153120+00:00",
+      "records": 5257,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-20T00:52:28.580070+00:00",
+      "last_attempt_utc": "2026-10-21T00:20:02.153120+00:00",
       "records": 5,
       "status": "ok"
     }

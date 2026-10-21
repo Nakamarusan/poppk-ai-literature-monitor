@@ -1,6 +1,92 @@
 {
   "articles": [
     {
+      "abstract": "Decision-making in drug development spans heterogeneous stages from molecular design to clinical optimization, yet computer-aided workflows across stages remain fragmented, limiting traceability from evidence-derived clinical questions to simulation scenarios and decision endpoints. We present a model-driven hybrid AI framework for end-to-end decision support that treats PICO (Participants, Intervention, Comparison, Outcome) as a machine-actionable specification to define scenarios and align endpoints across modules. Given a PICO-defined clinical question and a drug SMILES, the framework infers PBPK-ready parameters from structure, generates exposure via mechanistic PBPK simulation, and links exposure outputs to clinic-facing therapeutic drug monitoring (TDM) decision support using an open-source NLME-based Clinical Pharmacokinetic Consultant Service (CPCS). We additionally implement an LLM-based PICO extraction layer to structure clinical abstracts into P/I/C/O elements for systematic evidence ingestion. Results include backbone verification for DTI-guided intrinsic clearance prediction under fold-error bounds and PBPK trajectory plausibility, and external validation of the hybrid AI–PBPK pipeline showing substantial dispersion for several endpoints. An input-controlled comparison between PhysioSim and PK-Sim on N = 9 drugs yields similarly degraded accuracy under identical AI-predicted inputs, suggesting upstream parameter quality as a dominant constraint. For evidence ingestion, prompting-only PICO extraction achieves F1 of 0.687 on EBM-NLP and 0.552 on TB-PICO. For clinical utility, CPCS improves TDM performance over a PKS baseline on phenobarbital and vancomycin, reducing MAPE by approximately 26–60% depending on configuration. Overall, the framework provides a modular, traceable blueprint linking evidence-defined questions to exposure simulation and TDM decision support while preserving mechanistic interpretability. Future work will integrate outcome-aligned time-to-event modeling and federated learning to close the PICO-to-outcome loop and improve parameter inference under multi-site governance.",
+      "authors": [
+        "Lee H",
+        "Kang H",
+        "Jung W",
+        "Cho H",
+        "Goo S",
+        "Yun H",
+        "Kim M",
+        "Chae J",
+        "Park S",
+        "Lee S",
+        "Kim JH",
+        "Jung S"
+      ],
+      "doi": "10.64898/2026.02.03.703154",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "federated learning",
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "inference",
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "nlme"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "federated learning",
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "inference",
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "nlme"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "framework"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.64898/2026.02.03.703154",
+      "publication_date": "2026-02-06",
+      "reported_at": "2026-10-21 09:20 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We present a model-driven hybrid AI framework for end-to-end decision support that treats PICO (Participants, Intervention, Comparison, Outcome) as a machine-actionable specification to define scenarios and align endpoints across modules.",
+        "new_capability": "Overall, the framework provides a modular, traceable blueprint linking evidence-defined questions to exposure simulation and TDM decision support while preserving mechanistic interpretability.",
+        "prior_limitation": "Decision-making in drug development spans heterogeneous stages from molecular design to clinical optimization, yet computer-aided workflows across stages remain fragmented, limiting traceability from evidence-derived clinical questions to simulation scenarios and decision endpoints.",
+        "significance": "For clinical utility, CPCS improves TDM performance over a PKS baseline on phenobarbital and vancomycin, reducing MAPE by approximately 26–60% depending on configuration.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Model-Driven Hybrid AI Framework for End-to-End Autonomous Decision-Making in Drug Development",
+      "url": "https://europepmc.org/article/PPR/PPR1225063",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Background and objective Status epilepticus is a life-threatening neurological emergency. Ketamine combined with levetiracetam is a promising therapy being investigated for established status epilepticus. Early drug exposure estimates could inform dosing, but intensive pharmacokinetic sampling is challenging in pediatric emergency settings due to logistical and ethical constraints. Existing population pharmacokinetic methods with Bayesian forecasting require multiple samples per individual, which is difficult in this context. The objective of this work was to develop a framework that utilizes population pharmacokinetic-simulated datasets as inputs for machine learning models to predict early ketamine exposure in pediatric status epilepticus. Methods We simulated 100,000 concentration-time profiles with covariates using a published population pharmacokinetic model. Additional predictor variables were simulated using distributions from a previously published status epilepticus trial. The simulated data were used to train machine learning algorithms to predict early exposure (AUC 0-2h ) using two samples per individual. The machine learning models were validated internally. Results We evaluated four machine learning algorithms, including LASSO, random forest (RF), K-nearest neighbor (KNN), and gradient boosted machine (GBM). The ensemble models (GBM and RF) achieved superior performance, with internal validation results indicating no overfitting. The root mean square errors for RF and GBM were 0.183 mg h/L and 0.185 mg h/L respectively, while mean absolute errors of RF and GBM were 0.103 mg h/L and 0.102 mg h/L, respectively CONCLUSIONS: We demonstrate the feasibility of developing population pharmacokinetic-informed machine learning models to accurately predict early ketamine exposures in pediatric status, where pharmacokinetic sampling is a challenge.",
       "authors": [
         "Bamgboye AO",
@@ -4249,29 +4335,29 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-20 09:52 JST",
+  "last_scan_at": "2026-10-21 09:20 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 10,
+      "cached_candidates_before": 9,
       "completed_windows": 1,
-      "eligible_candidates": 10,
+      "eligible_candidates": 9,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 398,
+      "pending_windows": 417,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-20 09:52 JST",
+    "checked_at": "2026-10-21 09:20 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/73"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/74"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -4287,12 +4373,12 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2438,
-      "excluded_publication_type": 155,
-      "missing_ai_evidence": 15,
-      "missing_pk_evidence": 2669,
-      "retrieved": 5279,
-      "unique": 2841
+      "duplicates": 2443,
+      "excluded_publication_type": 158,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2645,
+      "retrieved": 5262,
+      "unique": 2819
     },
     "selected_count": 1,
     "selection_status": "selected",
