@@ -1,0 +1,35 @@
+{
+  "archive": {},
+  "checked_at": "2026-10-22 09:21 JST",
+  "delivery_status": "sent",
+  "notification_urls": [
+    "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/75"
+  ],
+  "recent_coverage": {
+    "Crossref": {
+      "failed_queries": 0,
+      "limited_queries": 16,
+      "pages": 36
+    },
+    "Europe PMC": {
+      "failed_queries": 0,
+      "limited_queries": 0,
+      "pages": 1
+    }
+  },
+  "recent_screening": {
+    "already_reported": 2,
+    "duplicates": 2436,
+    "eligible_unreported": 4,
+    "excluded_publication_type": 157,
+    "missing_ai_evidence": 11,
+    "missing_pk_evidence": 2643,
+    "retrieved": 5253,
+    "unique": 2817
+  },
+  "selected_count": 4,
+  "selection_status": "selected",
+  "selection_type": "new",
+  "source_status": "ok",
+  "warnings": {}
+}

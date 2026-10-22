@@ -1,24 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-21 09:20 JST",
+  "last_scan_at": "2026-10-22 09:21 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 9,
-      "completed_windows": 1,
-      "eligible_candidates": 9,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 417,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-21 09:20 JST",
+    "archive": {},
+    "checked_at": "2026-10-22 09:21 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/74"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/75"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -30,35 +19,377 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2443,
-      "excluded_publication_type": 158,
-      "missing_ai_evidence": 14,
-      "missing_pk_evidence": 2645,
-      "retrieved": 5262,
-      "unique": 2819
+      "duplicates": 2436,
+      "eligible_unreported": 4,
+      "excluded_publication_type": 157,
+      "missing_ai_evidence": 11,
+      "missing_pk_evidence": 2643,
+      "retrieved": 5253,
+      "unique": 2817
     },
-    "selected_count": 1,
+    "selected_count": 4,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 55,
-  "new_count": 15,
+  "article_count": 59,
+  "new_count": 19,
   "historical_count": 40,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Purpose: Reinforcement learning is suited to sequential decision making in clinical settings, where treatment strategies are adjusted based on patient response. This aligns with therapeutic drug monitoring and model-informed precision dosing, in which dosage is iteratively refined as conditions evolve. Thus, reinforcement learning is a potential dosing optimization framework. This review provides a structured and clinically interpretable overview of these applications and their implementation. Methods: A narrative literature review of studies that applied reinforcement learning to dosing optimization was conducted, using database searches and manual screening. Studies were qualitatively analyzed for drug type, algorithm, training environment, and their state, action, and reward definitions. A simplified implementation example using a deep Q-network illustrates the core workflow. Results: Reinforcement learning has been applied across diverse clinical settings, including anesthesia, oncology, and critical care. Most studies used simulation-based environments (pharmacokinetic, pharmacodynamic, or mathematical models) to enable safe, scalable training. Off-policy methods (eg, Q-learning and deep Q-networks) were commonly used for discrete dosing decisions and retrospective data; on-policy methods (eg, actor–critic approaches) were applied when adaptive dose adjustment was required. Substantial variability was observed in algorithm selection and in state, action, and reward definitions. The simplified example illustrates how deep Q-network–based reinforcement learning can be integrated with pharmacokinetic models to support dose optimization. Conclusions: Reinforcement learning provides a flexible framework that complements pharmacometric models to support dosing optimization. Further research is required to develop best-practice recommendations for study design, algorithm selection, reward design, and model evaluation to facilitate translation into clinical practice.",
+      "authors": [
+        "Kei Irie",
+        "Wen Rui Tan",
+        "Tomoyuki Mizuno"
+      ],
+      "doi": "10.1097/ftd.0000000000001540",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "framework",
+            "algorithm",
+            "optimization",
+            "model evaluation",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometric",
+            "model informed precision dosing"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "framework",
+            "algorithm",
+            "optimization",
+            "model evaluation",
+            "workflow"
+          ],
+          "pk": [
+            "model informed precision dosing",
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [],
+          "pk": [
+            "model informed precision dosing"
+          ]
+        }
+      },
+      "id": "doi:10.1097/ftd.0000000000001540",
+      "publication_date": "2026-10-21",
+      "reported_at": "2026-10-22 09:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "Thus, reinforcement learning is a potential dosing optimization framework.",
+        "new_capability": "Reinforcement learning provides a flexible framework that complements pharmacometric models to support dosing optimization.",
+        "prior_limitation": "A narrative literature review of studies that applied reinforcement learning to dosing optimization was conducted, using database searches and manual screening.",
+        "significance": "This aligns with therapeutic drug monitoring and model-informed precision dosing, in which dosage is iteratively refined as conditions evolve.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Toward Reinforcement Learning–Enabled Model-Informed Precision Dosing: Concepts, Applications, and Implementation",
+      "url": "https://doi.org/10.1097/ftd.0000000000001540",
+      "venue": "Therapeutic Drug Monitoring"
+    },
+    {
+      "abstract": "ABSTRACT Inter‐individual variability in drug exposure can lead to ineffective therapy or toxicity, particularly in vulnerable patients. Routine model‐informed precision dosing (MIPD) relies mainly on population pharmacokinetic (PopPK) models, Bayesian forecasting, and therapeutic drug monitoring (TDM). Physiologically based pharmacokinetic (PBPK) modeling has a complementary role in extrapolation to special populations, evaluation of drug–drug interactions, and simulation of unobserved scenarios, but it remains uncommon for bedside dose adjustment. Machine learning (ML) may provide additional support when critical illness, organ dysfunction, or polypharmacy creates complex nonlinear relationships. The increasing availability of electronic health records, real‐world data, and high‐dimensional biomedical datasets has accelerated interest in ML for precision dosing. ML can support exposure prediction, limited‐sampling AUC estimation, outcome‐risk stratification, and monitoring prioritization. Its clinical role depends on the decision target, the availability of concentration data, and whether pharmacological constraints are retained within the modeling architecture. This review covers direct prediction models, limited‐sampling AUC estimators, hybrid pharmacometric‐ML models, neural ordinary differential equation approaches, and reinforcement learning for sequential dose decisions. We examine data sources, feature engineering, validation, reporting, and governance across glycopeptides, beta‐lactams, polymyxins, triazole antifungals, and immunosuppressants. We also describe a staged clinical workflow in which concentration measurements and mechanistic models are used to calibrate data‐driven predictions, and we identify the evidence needed for clinical implementation.",
+      "authors": [
+        "Yunmeng Pang",
+        "Bingqi Zhang",
+        "Zhiqiu He",
+        "Yuliu Li",
+        "Jiaxin Yu",
+        "Wei Zuo"
+      ],
+      "doi": "10.1002/psp4.70354",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "reinforcement learning",
+            "neural ordinary differential equation"
+          ],
+          "method": [
+            "estimation",
+            "workflow",
+            "architecture",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "pharmacometric",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "reinforcement learning",
+            "neural ordinary differential equation"
+          ],
+          "method": [
+            "estimation",
+            "workflow",
+            "architecture",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk",
+            "pharmacometric",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70354",
+      "publication_date": "2026-10-20",
+      "reported_at": "2026-10-22 09:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "ML can support exposure prediction, limited‐sampling AUC estimation, outcome‐risk stratification, and monitoring prioritization.",
+        "prior_limitation": "Physiologically based pharmacokinetic (PBPK) modeling has a complementary role in extrapolation to special populations, evaluation of drug–drug interactions, and simulation of unobserved scenarios, but it remains uncommon for bedside dose adjustment.",
+        "significance": "Routine model‐informed precision dosing (MIPD) relies mainly on population pharmacokinetic (PopPK) models, Bayesian forecasting, and therapeutic drug monitoring (TDM).",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine Learning–Augmented Precision Dosing: Integrating Pharmacokinetic Modeling With Clinical Decision Support",
+      "url": "https://doi.org/10.1002/psp4.70354",
+      "venue": "CPT: Pharmacometrics & Systems Pharmacology"
+    },
+    {
+      "abstract": "PyDarwin is an open-source Python package integrating machine learning with NONMEM for automated model selection; however, its utility in model-informed precision dosing (MIPD) remains unvalidated. This study aims to evaluate pyDarwin for population pharmacokinetics (PopPK) model development in MIPD compared with expert-developed models, using paediatric tobramycin as a representative case. The model-building dataset included 450 plasma concentrations from 63 children with cystic fibrosis (CF). One group manually developed a model using stepwise covariate selection, while another applied pyDarwin within a predefined 27-dimensional model space, using a fitness function that incorporated a penalty based on 24-h area under the curve (AUC 24h ). External validation was performed using 1011 concentrations from 144 children, including evaluation using all therapeutic drug monitoring (TDM) data and clinically relevant MIPD scenarios (a priori [AP], Bayesian 1, Bayesian 2). Both models included weight-based scaling, a maturation function, and estimated glomerular filtration rate as covariates on clearance, yielding comparable clearance estimates. The pyDarwin-selected model was a two-compartment model with fixed allometric scaling exponents, whereas the manual model was a one-compartment model with estimated exponents. Both models showed comparable probability of target attainment for steady-state AUC 24h . In external validation using all TDM data, the pyDarwin-selected model demonstrated better predictive performance for CF patients than manual model (prediction-based MPE -14.6% vs -41.6%; MAPE 34.0% vs 54.4%). In MIPD scenarios, the pyDarwin-selected model showed superior performance in the AP setting, with differences diminishing after Bayesian updating. These findings support pyDarwin-based automated PopPK model selection as a reliable and efficient framework for MIPD.",
+      "authors": [
+        "Wang J",
+        "Harwood K",
+        "Yang W",
+        "Lei A",
+        "Lai T",
+        "Nieforth K",
+        "Duffull S",
+        "Sale M",
+        "Gwee A",
+        "Zhu X"
+      ],
+      "doi": "10.1208/s12248-026-01321-z",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "model selection",
+            "covariate selection",
+            "model development",
+            "automated",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "model selection",
+            "covariate selection",
+            "model development",
+            "automated",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "model informed precision dosing",
+            "population pharmacokinetics",
+            "poppk",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic",
+            "model informed precision dosing"
+          ]
+        }
+      },
+      "id": "doi:10.1208/s12248-026-01321-z",
+      "publication_date": "2026-10-19",
+      "reported_at": "2026-10-22 09:21 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 30,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC",
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "This study aims to evaluate pyDarwin for population pharmacokinetics (PopPK) model development in MIPD compared with expert-developed models, using paediatric tobramycin as a representative case.",
+        "new_capability": "In external validation using all TDM data, the pyDarwin-selected model demonstrated better predictive performance for CF patients than manual model (prediction-based MPE -14.6% vs -41.6%; MAPE 34.0% vs 54.4%).",
+        "prior_limitation": "PyDarwin is an open-source Python package integrating machine learning with NONMEM for automated model selection; however, its utility in model-informed precision dosing (MIPD) remains unvalidated.",
+        "significance": "These findings support pyDarwin-based automated PopPK model selection as a reliable and efficient framework for MIPD.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Predictive Performance of pyDarwin-Selected Versus Expert-Developed Paediatric Tobramycin Population Pharmacokinetic Models for Model-Informed Precision Dosing.",
+      "url": "https://europepmc.org/article/MED/42897405",
+      "venue": "The AAPS journal"
+    },
+    {
+      "abstract": "Background The high variability in the pharmacokinetics of tigecycline may impact therapeutic efficacy, particularly in critically ill patients. This study introduces machine learning (ML) methods, aiming to clarify their effectiveness in individualized drug exposure prediction and determine the optimal modeling strategy. Methods The least absolute shrinkage and selection operator (LASSO) method was used to screen the covariates. Four ML models, random forest, extreme gradient boosting, multilayer perceptron, and long short-term memory network (LSTM), were trained and tested using 751 concentrations from 98 patients in the pharmacokinetic dataset to predict the area under the steady-state plasma concentration-time curve within 24 hours (AUC 0-24h ) of tigecycline. Furthermore, on the internal test set, we evaluated the accuracy of the published tigecycline Population Pharmacokinetics (PopPK) models. Results Seven covariates were screened out by LASSO method, including total bilirubin, creatinine clearance, Sequential Organ Failure Assessment (SOFA) score, body mass index, serum creatinine, age, and prothrombin time. Internal validation showed that, among the four ML models, the LSTM model performed the best, with the combination of covariates and the plasma concentration feature \"C 0 + C 0.5 + C 6 \" exhibited the optimal predictive performance (R 2 : 0.887, RMSE: 2.496 mg·h/L, F 20 : 75%). In comparison, the model combining covariates with C 0 was the most concise and better suited to practical computational conditions; its LSTM model was comparable to some PopPK models in terms of overall trend fitting and systematic bias control (R 2 : 0.818, RMSE: 3.164 mg·h/L, F 20 = 60%). Conclusion The LSTM model established in this study enables an accurate estimate of tigecycline AUC 0-24h . Three-point sampling provided the lowest prediction error, whereas C 0 alone reduced the sampling burden. These findings provide an effective modeling reference for tigecycline therapeutic drug monitoring.",
+      "authors": [
+        "Dai A",
+        "Liu H",
+        "Yang B",
+        "Zheng F",
+        "Guan Y",
+        "Liu J",
+        "Zhu J",
+        "Liang G",
+        "Yang Y",
+        "Yu L",
+        "Zhao Y",
+        "Yu Z"
+      ],
+      "doi": "10.2147/dddt.s630414",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.2147/dddt.s630414",
+      "publication_date": "2026-10-14",
+      "reported_at": "2026-10-22 09:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Furthermore, on the internal test set, we evaluated the accuracy of the published tigecycline Population Pharmacokinetics (PopPK) models.",
+        "new_capability": "Three-point sampling provided the lowest prediction error, whereas C 0 alone reduced the sampling burden.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "These findings provide an effective modeling reference for tigecycline therapeutic drug monitoring.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Application of Machine Learning Models to Predict Tigecycline Exposure in Critically Ill Patients Using Different Limited Sampling Strategies.",
+      "url": "https://europepmc.org/article/MED/42894723",
+      "venue": "Drug design, development and therapy"
+    },
     {
       "abstract": "Decision-making in drug development spans heterogeneous stages from molecular design to clinical optimization, yet computer-aided workflows across stages remain fragmented, limiting traceability from evidence-derived clinical questions to simulation scenarios and decision endpoints. We present a model-driven hybrid AI framework for end-to-end decision support that treats PICO (Participants, Intervention, Comparison, Outcome) as a machine-actionable specification to define scenarios and align endpoints across modules. Given a PICO-defined clinical question and a drug SMILES, the framework infers PBPK-ready parameters from structure, generates exposure via mechanistic PBPK simulation, and links exposure outputs to clinic-facing therapeutic drug monitoring (TDM) decision support using an open-source NLME-based Clinical Pharmacokinetic Consultant Service (CPCS). We additionally implement an LLM-based PICO extraction layer to structure clinical abstracts into P/I/C/O elements for systematic evidence ingestion. Results include backbone verification for DTI-guided intrinsic clearance prediction under fold-error bounds and PBPK trajectory plausibility, and external validation of the hybrid AI–PBPK pipeline showing substantial dispersion for several endpoints. An input-controlled comparison between PhysioSim and PK-Sim on N = 9 drugs yields similarly degraded accuracy under identical AI-predicted inputs, suggesting upstream parameter quality as a dominant constraint. For evidence ingestion, prompting-only PICO extraction achieves F1 of 0.687 on EBM-NLP and 0.552 on TB-PICO. For clinical utility, CPCS improves TDM performance over a PKS baseline on phenobarbital and vancomycin, reducing MAPE by approximately 26–60% depending on configuration. Overall, the framework provides a modular, traceable blueprint linking evidence-defined questions to exposure simulation and TDM decision support while preserving mechanistic interpretability. Future work will integrate outcome-aligned time-to-event modeling and federated learning to close the PICO-to-outcome loop and improve parameter inference under multi-site governance.",
       "authors": [
