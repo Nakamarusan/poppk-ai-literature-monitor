@@ -1,6 +1,79 @@
 {
   "articles": [
     {
+      "abstract": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming. Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy. Methods A total of 1,806 infliximab and ADA concentration measurements were prospectively collected from 149 IBD patients. Recurrent neural networks (RNN)-based models, including long short-term memory (LSTM) and gated recurrent unit (GRU) architectures, as well as regression-based models such as Elastic Net, Support Vector Regression, Random Forest (RF), and extreme gradient boosting (XGBoost), were developed. Recursive multi-step prediction was applied to evaluate short-term forecasting performance. Results RF outperformed in predicting infliximab concentrations, and XGBoost yielded the best performance in predicting ADA levels (2-fold accuracy, 86.67% and 96.67%, respectively). The infliximab prediction model maintained acceptable accuracy up to two recursive predictions steps but exhibited a notable performance decline at the third step. In contrast, the ADA model showed robust performance across all three recursive steps, maintaining 2-fold accuracy exceeding 96%. Conclusion ML models were developed to predict infliximab and ADA concentrations, with RF and XGBoost showing the best performance for infliximab and ADA prediction, respectively. The ADA model demonstrated stable multi-step forecasting capability. These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
+      "authors": [
+        "Kim M",
+        "Song JH",
+        "Hong SN",
+        "Kim MG",
+        "Kim ER",
+        "Chang DK",
+        "Kim YH"
+      ],
+      "doi": "10.3389/fphar.2026.1731193",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.3389/fphar.2026.1731193",
+      "publication_date": "2026-01-28",
+      "reported_at": "2026-10-23 09:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy.",
+        "new_capability": "The ADA model demonstrated stable multi-step forecasting capability.",
+        "prior_limitation": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming.",
+        "significance": "These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study.",
+      "url": "https://europepmc.org/article/MED/41685197",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
       "abstract": "Purpose: Reinforcement learning is suited to sequential decision making in clinical settings, where treatment strategies are adjusted based on patient response. This aligns with therapeutic drug monitoring and model-informed precision dosing, in which dosage is iteratively refined as conditions evolve. Thus, reinforcement learning is a potential dosing optimization framework. This review provides a structured and clinically interpretable overview of these applications and their implementation. Methods: A narrative literature review of studies that applied reinforcement learning to dosing optimization was conducted, using database searches and manual screening. Studies were qualitatively analyzed for drug type, algorithm, training environment, and their state, action, and reward definitions. A simplified implementation example using a deep Q-network illustrates the core workflow. Results: Reinforcement learning has been applied across diverse clinical settings, including anesthesia, oncology, and critical care. Most studies used simulation-based environments (pharmacokinetic, pharmacodynamic, or mathematical models) to enable safe, scalable training. Off-policy methods (eg, Q-learning and deep Q-networks) were commonly used for discrete dosing decisions and retrospective data; on-policy methods (eg, actor–critic approaches) were applied when adaptive dose adjustment was required. Substantial variability was observed in algorithm selection and in state, action, and reward definitions. The simplified example illustrates how deep Q-network–based reinforcement learning can be integrated with pharmacokinetic models to support dose optimization. Conclusions: Reinforcement learning provides a flexible framework that complements pharmacometric models to support dosing optimization. Further research is required to develop best-practice recommendations for study design, algorithm selection, reward design, and model evaluation to facilitate translation into clinical practice.",
       "authors": [
         "Kei Irie",
@@ -4681,13 +4754,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-22 09:21 JST",
+  "last_scan_at": "2026-10-23 09:21 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-22 09:21 JST",
+    "archive": {
+      "cached_candidates_before": 8,
+      "completed_windows": 1,
+      "eligible_candidates": 8,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 436,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-23 09:21 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/75"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -4699,21 +4783,25 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2436,
-      "eligible_unreported": 4,
-      "excluded_publication_type": 157,
+      "already_reported": 6,
+      "duplicates": 2413,
+      "excluded_publication_type": 170,
       "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2643,
-      "retrieved": 5253,
-      "unique": 2817
+      "missing_pk_evidence": 2655,
+      "retrieved": 5255,
+      "unique": 2842
     },
-    "selected_count": 4,
+    "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },

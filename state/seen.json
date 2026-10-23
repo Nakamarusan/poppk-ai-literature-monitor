@@ -1,18 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-22",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/75",
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-10-22T00:21:34.876602+00:00",
-      "message": "Network error: The read operation timed out"
-    }
-  },
+  "last_delivery_date_jst": "2026-10-23",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-10-22 09:21 JST",
+    "archive": {
+      "cached_candidates_before": 8,
+      "completed_windows": 1,
+      "eligible_candidates": 8,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 436,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-23 09:21 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/75"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -24,26 +29,30 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2436,
-      "eligible_unreported": 4,
-      "excluded_publication_type": 157,
+      "already_reported": 6,
+      "duplicates": 2413,
+      "excluded_publication_type": 170,
       "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2643,
-      "retrieved": 5253,
-      "unique": 2817
+      "missing_pk_evidence": 2655,
+      "retrieved": 5255,
+      "unique": 2842
     },
-    "selected_count": 4,
+    "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-22",
-  "last_success_utc": "2026-10-22T00:21:34.876602+00:00",
+  "last_selection_date_jst": "2026-10-23",
+  "last_success_utc": "2026-10-23T00:21:06.743806+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -304,6 +313,12 @@
       "selection_type": "new",
       "title": "Application of Machine Learning Models to Predict Tigecycline Exposure in Critically Ill Patients Using Different Limited Sampling Strategies."
     },
+    "doi:10.3389/fphar.2026.1731193": {
+      "doi": "10.3389/fphar.2026.1731193",
+      "selected_at": "2026-10-23T00:21:06.743806+00:00",
+      "selection_type": "historical",
+      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study."
+    },
     "doi:10.3389/fphar.2026.1817282": {
       "doi": "10.3389/fphar.2026.1817282",
       "notified_at": "2026-09-10T23:37:46.352364+00:00",
@@ -457,6 +472,12 @@
       "selected_at": "2026-10-13T02:48:06.795623+00:00",
       "selection_type": "historical",
       "title": "Stochastic Gates for Covariate Selection in Population Pharmacokinetics Modeling."
+    },
+    "source:europe pmc:med:41685197": {
+      "doi": "10.3389/fphar.2026.1731193",
+      "selected_at": "2026-10-23T00:21:06.743806+00:00",
+      "selection_type": "historical",
+      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study."
     },
     "source:europe pmc:med:41760637": {
       "doi": "10.1038/s41540-026-00674-7",
@@ -967,6 +988,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "title:96b387a6c5e2800e5f3bfd2d": {
+      "doi": "10.3389/fphar.2026.1731193",
+      "selected_at": "2026-10-23T00:21:06.743806+00:00",
+      "selection_type": "historical",
+      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study."
+    },
     "title:992fb50ebf9de82b90e1157a": {
       "doi": "10.1186/s13321-026-01152-2",
       "selected_at": "2026-10-05T00:22:56.559712+00:00",
@@ -1129,22 +1156,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-22"
+    "arxiv": "2026-10-23"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-22T00:21:34.876602+00:00",
-      "message": "Network error: The read operation timed out",
-      "status": "error"
+      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
+      "records": 0,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-22T00:21:34.876602+00:00",
-      "records": 5246,
+      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
+      "records": 5247,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-22T00:21:34.876602+00:00",
-      "records": 7,
+      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
+      "records": 8,
       "status": "ok"
     }
   }
