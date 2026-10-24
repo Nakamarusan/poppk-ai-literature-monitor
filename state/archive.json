@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-23",
+  "last_check": "2026-10-24",
   "last_run": {
-    "cached_candidates_before": 8,
+    "cached_candidates_before": 7,
     "completed_windows": 1,
-    "eligible_candidates": 8,
+    "eligible_candidates": 7,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 436,
+    "pending_windows": 455,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -3066,6 +3066,139 @@
       "since": "2026-10-22",
       "source": "crossref",
       "until": "2026-10-23"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-24",
+      "source": "europe_pmc",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-24",
+      "source": "crossref",
+      "until": "2026-10-24"
     }
   ],
   "pool": [
@@ -3209,30 +3342,6 @@
       "venue": "Pharmaceuticals (Basel, Switzerland)"
     },
     {
-      "abstract": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming. Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy. Methods A total of 1,806 infliximab and ADA concentration measurements were prospectively collected from 149 IBD patients. Recurrent neural networks (RNN)-based models, including long short-term memory (LSTM) and gated recurrent unit (GRU) architectures, as well as regression-based models such as Elastic Net, Support Vector Regression, Random Forest (RF), and extreme gradient boosting (XGBoost), were developed. Recursive multi-step prediction was applied to evaluate short-term forecasting performance. Results RF outperformed in predicting infliximab concentrations, and XGBoost yielded the best performance in predicting ADA levels (2-fold accuracy, 86.67% and 96.67%, respectively). The infliximab prediction model maintained acceptable accuracy up to two recursive predictions steps but exhibited a notable performance decline at the third step. In contrast, the ADA model showed robust performance across all three recursive steps, maintaining 2-fold accuracy exceeding 96%. Conclusion ML models were developed to predict infliximab and ADA concentrations, with RF and XGBoost showing the best performance for infliximab and ADA prediction, respectively. The ADA model demonstrated stable multi-step forecasting capability. These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
-      "authors": [
-        "Kim M",
-        "Song JH",
-        "Hong SN",
-        "Kim MG",
-        "Kim ER",
-        "Chang DK",
-        "Kim YH"
-      ],
-      "date": "2026-01-28",
-      "doi": "10.3389/fphar.2026.1731193",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41685197"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Prediction of infliximab and anti-drug antibody concentrations in patients with inflammatory bowel disease using machine learning models with real-world data from a prospective cohort study.",
-      "url": "https://europepmc.org/article/MED/41685197",
-      "venue": "Frontiers in pharmacology"
-    },
-    {
       "abstract": "Background Computed tomography (CT) and magnetic resonance imaging (MRI) are essential in clinical diagnosis and treatment planning, but their images are often compromised by limited contrast and insufficient detail, reducing diagnostic clarity. Traditional enhancement methods-such as histogram equalization (HE) can improve visibility but may introduce noise, over-enhancement, or structural distortion. Quantum-inspired computational techniques have recently emerged as promising tools for nonlinear and adaptive image processing. Building on the quantum signal processing (QSP) framework, this study proposes a quantum-inspired enhancement (QIE) algorithm designed to improve medical image contrast while preserving structural details. Methods We propose a QIE algorithm that embeds a three-pixel quantum-correlation system within a QSP framework. After normalizing grayscale values, each 3×3 neighborhood is mapped to superposition states; edge-sensitive basis states are selectively accumulated in four orientations to produce the enhanced output. The algorithm was evaluated using T2-weighted magnetic resonance (MR) brain images and CT lung images obtained from 10 different patients. Its performance was compared with four representative classical enhancement methods: HE, contrast-limited adaptive HE (CLAHE), fuzzy HE (FHE), and wavelet-based enhancement (WBE), employing quantitative metrics such as entropy, peak signal-to-noise ratio (PSNR), structural similarity index (SSIM), and contrast-to-noise ratio (CNR). Paired two-sided t -tests (α=0.05) were used. Results QIE reached the highest mean entropy on both datasets (CT: 4.37±0.31; MR: 6.45±0.16) vs . HE 4.00±0.25 (P=2.8×10 -4 ) and 5.67±0.16 (P=2.3×10 -7 ) respectively, indicating superior information retention and detail enhancement. Its PSNR and SSIM were significantly better than HE, FHE, and WBE (all P vs . CLAHE, QIE PSNR was -3.4 dB lower on CT and -3.3 dB lower on MR (both P Conclusions The proposed QIE algorithm demonstrates superior performance in enhancing the contrast and preserving the structural details of medical images. By leveraging quantum-inspired mechanisms, the algorithm shows potential for improving diagnostic accuracy and supporting clinical treatment planning. Future work will explore the application of this algorithm to other imaging modalities, investigate its effectiveness as a preprocessing step for commercial artificial intelligence (AI) models, and study the integration with actual quantum computing platforms.",
       "authors": [
         "Zhu H",
@@ -3280,5 +3389,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-23"
+  "through": "2026-10-24"
 }

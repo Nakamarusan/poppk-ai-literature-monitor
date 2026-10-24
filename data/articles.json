@@ -1,6 +1,80 @@
 {
   "articles": [
     {
+      "abstract": "Background Computed tomography (CT) and magnetic resonance imaging (MRI) are essential in clinical diagnosis and treatment planning, but their images are often compromised by limited contrast and insufficient detail, reducing diagnostic clarity. Traditional enhancement methods-such as histogram equalization (HE) can improve visibility but may introduce noise, over-enhancement, or structural distortion. Quantum-inspired computational techniques have recently emerged as promising tools for nonlinear and adaptive image processing. Building on the quantum signal processing (QSP) framework, this study proposes a quantum-inspired enhancement (QIE) algorithm designed to improve medical image contrast while preserving structural details. Methods We propose a QIE algorithm that embeds a three-pixel quantum-correlation system within a QSP framework. After normalizing grayscale values, each 3×3 neighborhood is mapped to superposition states; edge-sensitive basis states are selectively accumulated in four orientations to produce the enhanced output. The algorithm was evaluated using T2-weighted magnetic resonance (MR) brain images and CT lung images obtained from 10 different patients. Its performance was compared with four representative classical enhancement methods: HE, contrast-limited adaptive HE (CLAHE), fuzzy HE (FHE), and wavelet-based enhancement (WBE), employing quantitative metrics such as entropy, peak signal-to-noise ratio (PSNR), structural similarity index (SSIM), and contrast-to-noise ratio (CNR). Paired two-sided t -tests (α=0.05) were used. Results QIE reached the highest mean entropy on both datasets (CT: 4.37±0.31; MR: 6.45±0.16) vs . HE 4.00±0.25 (P=2.8×10 -4 ) and 5.67±0.16 (P=2.3×10 -7 ) respectively, indicating superior information retention and detail enhancement. Its PSNR and SSIM were significantly better than HE, FHE, and WBE (all P vs . CLAHE, QIE PSNR was -3.4 dB lower on CT and -3.3 dB lower on MR (both P Conclusions The proposed QIE algorithm demonstrates superior performance in enhancing the contrast and preserving the structural details of medical images. By leveraging quantum-inspired mechanisms, the algorithm shows potential for improving diagnostic accuracy and supporting clinical treatment planning. Future work will explore the application of this algorithm to other imaging modalities, investigate its effectiveness as a preprocessing step for commercial artificial intelligence (AI) models, and study the integration with actual quantum computing platforms.",
+      "authors": [
+        "Zhu H",
+        "Su J",
+        "Meng X",
+        "Li W",
+        "Yang B",
+        "Qiu J"
+      ],
+      "doi": "10.21037/qims-2025-1474",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework",
+            "algorithm"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "algorithm",
+            "framework"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "algorithm"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.21037/qims-2025-1474",
+      "publication_date": "2026-01-21",
+      "reported_at": "2026-10-24 09:11 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Building on the quantum signal processing (QSP) framework, this study proposes a quantum-inspired enhancement (QIE) algorithm designed to improve medical image contrast while preserving structural details.",
+        "new_capability": "Traditional enhancement methods-such as histogram equalization (HE) can improve visibility but may introduce noise, over-enhancement, or structural distortion.",
+        "prior_limitation": "Background Computed tomography (CT) and magnetic resonance imaging (MRI) are essential in clinical diagnosis and treatment planning, but their images are often compromised by limited contrast and insufficient detail, reducing diagnostic clarity.",
+        "significance": "By leveraging quantum-inspired mechanisms, the algorithm shows potential for improving diagnostic accuracy and supporting clinical treatment planning.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm.",
+      "url": "https://europepmc.org/article/MED/41669435",
+      "venue": "Quantitative imaging in medicine and surgery"
+    },
+    {
       "abstract": "Background Although population pharmacokinetic models are the standard approach for identifying inter-individual variability and optimizing infliximab concentration, their development and validation are complex and time-consuming. Therefore, this study aimed to develop and evaluate machine learning (ML) models to predict infliximab and anti-drug antibody (ADA) concentrations in patients with inflammatory bowel disease (IBD) receiving maintenance infliximab therapy. Methods A total of 1,806 infliximab and ADA concentration measurements were prospectively collected from 149 IBD patients. Recurrent neural networks (RNN)-based models, including long short-term memory (LSTM) and gated recurrent unit (GRU) architectures, as well as regression-based models such as Elastic Net, Support Vector Regression, Random Forest (RF), and extreme gradient boosting (XGBoost), were developed. Recursive multi-step prediction was applied to evaluate short-term forecasting performance. Results RF outperformed in predicting infliximab concentrations, and XGBoost yielded the best performance in predicting ADA levels (2-fold accuracy, 86.67% and 96.67%, respectively). The infliximab prediction model maintained acceptable accuracy up to two recursive predictions steps but exhibited a notable performance decline at the third step. In contrast, the ADA model showed robust performance across all three recursive steps, maintaining 2-fold accuracy exceeding 96%. Conclusion ML models were developed to predict infliximab and ADA concentrations, with RF and XGBoost showing the best performance for infliximab and ADA prediction, respectively. The ADA model demonstrated stable multi-step forecasting capability. These models may support individualized dosing strategies and reduce the need for frequent therapeutic drug monitoring in clinical practice.",
       "authors": [
         "Kim M",
@@ -141,7 +215,8 @@
       },
       "selection_type": "new",
       "sources": [
-        "Crossref"
+        "Crossref",
+        "Europe PMC"
       ],
       "summary": {
         "contribution": "Thus, reinforcement learning is a potential dosing optimization framework.",
@@ -150,7 +225,7 @@
         "significance": "This aligns with therapeutic drug monitoring and model-informed precision dosing, in which dosage is iteratively refined as conditions evolve.",
         "source": "Abstract-only extractive summary"
       },
-      "title": "Toward Reinforcement Learning–Enabled Model-Informed Precision Dosing: Concepts, Applications, and Implementation",
+      "title": "Toward Reinforcement Learning-Enabled Model-Informed Precision Dosing: Concepts, Applications, and Implementation.",
       "url": "https://doi.org/10.1097/ftd.0000000000001540",
       "venue": "Therapeutic Drug Monitoring"
     },
@@ -4754,29 +4829,29 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-23 09:21 JST",
+  "last_scan_at": "2026-10-24 09:11 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 8,
+      "cached_candidates_before": 7,
       "completed_windows": 1,
-      "eligible_candidates": 8,
+      "eligible_candidates": 7,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 436,
+      "pending_windows": 455,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-23 09:21 JST",
+    "checked_at": "2026-10-24 09:11 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/77"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -4791,13 +4866,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 6,
-      "duplicates": 2413,
-      "excluded_publication_type": 170,
-      "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2655,
-      "retrieved": 5255,
-      "unique": 2842
+      "already_reported": 5,
+      "duplicates": 2434,
+      "excluded_publication_type": 149,
+      "missing_ai_evidence": 16,
+      "missing_pk_evidence": 2653,
+      "retrieved": 5257,
+      "unique": 2823
     },
     "selected_count": 1,
     "selection_status": "selected",

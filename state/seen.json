@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-23",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76",
+  "last_delivery_date_jst": "2026-10-24",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/77",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 8,
+      "cached_candidates_before": 7,
       "completed_windows": 1,
-      "eligible_candidates": 8,
+      "eligible_candidates": 7,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 436,
+      "pending_windows": 455,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-23 09:21 JST",
+    "checked_at": "2026-10-24 09:11 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/76"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/77"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -37,13 +37,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 6,
-      "duplicates": 2413,
-      "excluded_publication_type": 170,
-      "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2655,
-      "retrieved": 5255,
-      "unique": 2842
+      "already_reported": 5,
+      "duplicates": 2434,
+      "excluded_publication_type": 149,
+      "missing_ai_evidence": 16,
+      "missing_pk_evidence": 2653,
+      "retrieved": 5257,
+      "unique": 2823
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-23",
-  "last_success_utc": "2026-10-23T00:21:06.743806+00:00",
+  "last_selection_date_jst": "2026-10-24",
+  "last_success_utc": "2026-10-24T00:11:18.927364+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -289,6 +289,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "doi:10.21037/qims-2025-1474": {
+      "doi": "10.21037/qims-2025-1474",
+      "selected_at": "2026-10-24T00:11:18.927364+00:00",
+      "selection_type": "historical",
+      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm."
+    },
     "doi:10.21203/rs.3.rs-10620781/v1": {
       "doi": "10.21203/rs.3.rs-10620781/v1",
       "notified_at": "2026-09-11T23:48:19.363976+00:00",
@@ -472,6 +478,12 @@
       "selected_at": "2026-10-13T02:48:06.795623+00:00",
       "selection_type": "historical",
       "title": "Stochastic Gates for Covariate Selection in Population Pharmacokinetics Modeling."
+    },
+    "source:europe pmc:med:41669435": {
+      "doi": "10.21037/qims-2025-1474",
+      "selected_at": "2026-10-24T00:11:18.927364+00:00",
+      "selection_type": "historical",
+      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm."
     },
     "source:europe pmc:med:41685197": {
       "doi": "10.3389/fphar.2026.1731193",
@@ -904,6 +916,12 @@
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
     },
+    "title:4eec1cd33961b05afb150f11": {
+      "doi": "10.21037/qims-2025-1474",
+      "selected_at": "2026-10-24T00:11:18.927364+00:00",
+      "selection_type": "historical",
+      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm."
+    },
     "title:5206539aec0283952e54a4f7": {
       "doi": "10.1002/psp4.70354",
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
@@ -1156,22 +1174,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-23"
+    "arxiv": "2026-10-24"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
+      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
-      "records": 5247,
+      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
+      "records": 5250,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-23T00:21:06.743806+00:00",
-      "records": 8,
+      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
+      "records": 7,
       "status": "ok"
     }
   }
