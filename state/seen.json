@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-10-25",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/78",
+  "last_delivery_date_jst": "2026-10-26",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/79",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 6,
+      "cached_candidates_before": 5,
       "completed_windows": 1,
-      "eligible_candidates": 6,
+      "eligible_candidates": 5,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 474,
+      "pending_windows": 493,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-25 08:56 JST",
+    "checked_at": "2026-10-26 08:42 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/78"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/79"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,12 +38,12 @@
     },
     "recent_screening": {
       "already_reported": 5,
-      "duplicates": 2465,
-      "excluded_publication_type": 143,
-      "missing_ai_evidence": 15,
-      "missing_pk_evidence": 2648,
-      "retrieved": 5276,
-      "unique": 2811
+      "duplicates": 2451,
+      "excluded_publication_type": 138,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2664,
+      "retrieved": 5272,
+      "unique": 2821
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-25",
-  "last_success_utc": "2026-10-24T23:56:29.642026+00:00",
+  "last_selection_date_jst": "2026-10-26",
+  "last_success_utc": "2026-10-25T23:42:53.548980+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -312,6 +312,12 @@
       "selected_at": "2026-10-08T01:30:24.721404+00:00",
       "selection_type": "historical",
       "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data"
+    },
+    "doi:10.21203/rs.3.rs-9855030/v1": {
+      "doi": "10.21203/rs.3.rs-9855030/v1",
+      "selected_at": "2026-10-25T23:42:53.548980+00:00",
+      "selection_type": "historical",
+      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome"
     },
     "doi:10.2147/dddt.s576598": {
       "doi": "10.2147/dddt.s576598",
@@ -802,6 +808,12 @@
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
     },
+    "source:europe pmc:ppr:ppr1309953": {
+      "doi": "10.21203/rs.3.rs-9855030/v1",
+      "selected_at": "2026-10-25T23:42:53.548980+00:00",
+      "selection_type": "historical",
+      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome"
+    },
     "source:europe pmc:ppr:ppr1310314": {
       "doi": "10.20944/preprints202609.0069.v1",
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
@@ -1071,6 +1083,12 @@
       "selection_type": "historical",
       "title": "Development and validation of a machine learning model for individualised meropenem dosing in CRRT patients."
     },
+    "title:bf78c2776ff429907b71d369": {
+      "doi": "10.21203/rs.3.rs-9855030/v1",
+      "selected_at": "2026-10-25T23:42:53.548980+00:00",
+      "selection_type": "historical",
+      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome"
+    },
     "title:c0a9b57ec095d6d23d971f7c": {
       "doi": "10.21203/rs.3.rs-9308510/v1",
       "selected_at": "2026-10-08T01:30:24.721404+00:00",
@@ -1192,21 +1210,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-25"
+    "arxiv": "2026-10-26"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
+      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
-      "records": 5270,
+      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
+      "records": 5266,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
+      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
       "records": 6,
       "status": "ok"
     }

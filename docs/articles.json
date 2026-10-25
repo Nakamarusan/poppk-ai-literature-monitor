@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-25 08:56 JST",
+  "last_scan_at": "2026-10-26 08:42 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 6,
+      "cached_candidates_before": 5,
       "completed_windows": 1,
-      "eligible_candidates": 6,
+      "eligible_candidates": 5,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 474,
+      "pending_windows": 493,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-25 08:56 JST",
+    "checked_at": "2026-10-26 08:42 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/78"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/79"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -39,12 +39,12 @@
     },
     "recent_screening": {
       "already_reported": 5,
-      "duplicates": 2465,
-      "excluded_publication_type": 143,
-      "missing_ai_evidence": 15,
-      "missing_pk_evidence": 2648,
-      "retrieved": 5276,
-      "unique": 2811
+      "duplicates": 2451,
+      "excluded_publication_type": 138,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2664,
+      "retrieved": 5272,
+      "unique": 2821
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,13 +52,106 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 62,
+  "article_count": 63,
   "new_count": 19,
-  "historical_count": 43,
+  "historical_count": 44,
   "years": [
     "2026"
   ],
   "articles": [
+    {
+      "abstract": "Abstract The human gut microbiome encodes a large spectrum of quorum sensing peptides (QSPs) playing a vital role in microbial communication and host-microbial interactions, yet discovery and functional characterization of novel QSPs are still limited. Here, we developed an integrated artificial intelligence (AI)-driven pipeline combining large-scale genome mining, machine learning-based screening, Alphafold3 structural modelling, and molecular dynamics simulations to systematically identify 1,670 novel candidate QSPs (cQSPs) from 12,488 human gut microbial genomes. Subsequent experimental screening identified 29 cQSPs with α-glucosidase inhibitory activities. Notably, GIVLVPTSLVSG (GIVL), an Agr-derived QSP from Clostridium tyrobutyricum, not only exhibited canonical quorum-sensing functions, but also demonstrated a stable interaction with and strong inhibitory activity against α-glucosidase. In diabetic mice, administration of GIVL significantly improved glucose homeostasis and insulin sensitivity accompanied by increased production of short-chain fatty acids (SCFAs) in the gut microbiome. Our findings expand the QSP database and establish a generalizable, AI-enabled framework for the systematic discovery of microbiome-derived peptides with therapeutic potential in metabolic disease, positioning QSPs as promising sources of therapeutics for diabetes and other chronic metabolic disorders.",
+      "authors": [
+        "Kristiansen K",
+        "Xue c",
+        "Chen J",
+        "Kang W",
+        "Peng L",
+        "Liu J",
+        "Zhou X",
+        "Liu Y",
+        "Wang D",
+        "Chen X",
+        "Yang Y",
+        "Feng Y",
+        "Wang M",
+        "Yao Z",
+        "Wan H",
+        "Ma X",
+        "Zhu C",
+        "Liu G",
+        "Wu R",
+        "Li H",
+        "Wu S",
+        "Liu R",
+        "Lee SM",
+        "Yang H",
+        "Fan G",
+        "Yin Y",
+        "Xue C"
+      ],
+      "doi": "10.21203/rs.3.rs-9855030/v1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.21203/rs.3.rs-9855030/v1",
+      "publication_date": "2026-09-01",
+      "reported_at": "2026-10-26 08:42 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 30
+        },
+        "priority": "Low",
+        "total": 30
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here, we developed an integrated artificial intelligence (AI)-driven pipeline combining large-scale genome mining, machine learning-based screening, Alphafold3 structural modelling, and molecular dynamics simulations to systematically identify 1,670 novel candidate QSPs (cQSPs) from 12,488 human gut microbial genomes.",
+        "new_capability": "Notably, GIVLVPTSLVSG (GIVL), an Agr-derived QSP from Clostridium tyrobutyricum, not only exhibited canonical quorum-sensing functions, but also demonstrated a stable interaction with and strong inhibitory activity against α-glucosidase.",
+        "prior_limitation": "Abstract The human gut microbiome encodes a large spectrum of quorum sensing peptides (QSPs) playing a vital role in microbial communication and host-microbial interactions, yet discovery and functional characterization of novel QSPs are still limited.",
+        "significance": "Our findings expand the QSP database and establish a generalizable, AI-enabled framework for the systematic discovery of microbiome-derived peptides with therapeutic potential in metabolic disease, positioning QSPs as promising sources of therapeutics for diabetes and other chronic metabolic disorders.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome",
+      "url": "https://europepmc.org/article/PPR/PPR1309953",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Aim Tacrolimus dosing in the early post-kidney transplant period is challenging due to a narrow therapeutic index and substantial interindividual pharmacokinetic (PK) variability. This study aimed to develop and validate mechanism-informed machine learning (ML) models to support individualized tacrolimus dosing during this critical period. Methods A total of 4311 tacrolimus trough concentrations (C trough ) within 7 days post-transplant were obtained from 1624 kidney transplant recipients. Two ML models, Gated Recurrent Unit (GRU) and eXtreme Gradient Boosting (XGBoost), were developed to predict C trough and recommend doses to achieve target levels. Both models incorporated PK principles based on linear pharmacokinetics. Model performance was compared to a traditional Bayesian population PK (PopPK) model and purely data-driven ML models via internal cross-validation and external validation. Results The mechanism-informed GRU model outperformed the Bayesian PopPK model in both internal validation (MSE = 7.81 vs. 9.27 ng 2 /mL 2 , R 2 = 0.537 vs. 0.450) and external validation (MSE = 6.09 vs. 8.96 ng 2 /mL 2 , R 2 = 0.397 vs. 0.211). The mechanism-informed XGBoost model performed comparably to the GRU model. The incorporation of PK principles enhanced model interpretability and generalizability without reducing accuracy. When clinically administered doses, determined by conventional therapeutic drug monitoring, fell within the GRU model's recommended range, subsequent C trough reached the therapeutic target (8-12 ng/mL) in 51.3% of cases, compared to 37.0% overall (p Conclusion Mechanism-informed ML models offer a robust and interpretable approach for individualized tacrolimus dosing, with the potential to improve therapeutic target attainment by enabling accurate dose adjustments in the early post-transplant period.",
       "authors": [

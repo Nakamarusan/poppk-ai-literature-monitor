@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-25",
+  "last_check": "2026-10-26",
   "last_run": {
-    "cached_candidates_before": 6,
+    "cached_candidates_before": 5,
     "completed_windows": 1,
-    "eligible_candidates": 6,
+    "eligible_candidates": 5,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 474,
+    "pending_windows": 493,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -3332,6 +3332,139 @@
       "since": "2026-10-25",
       "source": "crossref",
       "until": "2026-10-25"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-26",
+      "source": "europe_pmc",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-26",
+      "source": "crossref",
+      "until": "2026-10-26"
     }
   ],
   "pool": [
@@ -3473,31 +3606,9 @@
       "title": "From Pharmacovigilance Signals to Mechanistic Phenotypes: Integrating ADMET, PK/PD, and Network Context to Interpret Antiviral Safety in Pregnancy.",
       "url": "https://europepmc.org/article/MED/41901296",
       "venue": "Pharmaceuticals (Basel, Switzerland)"
-    },
-    {
-      "abstract": "Aim Tacrolimus dosing in the early post-kidney transplant period is challenging due to a narrow therapeutic index and substantial interindividual pharmacokinetic (PK) variability. This study aimed to develop and validate mechanism-informed machine learning (ML) models to support individualized tacrolimus dosing during this critical period. Methods A total of 4311 tacrolimus trough concentrations (C trough ) within 7 days post-transplant were obtained from 1624 kidney transplant recipients. Two ML models, Gated Recurrent Unit (GRU) and eXtreme Gradient Boosting (XGBoost), were developed to predict C trough and recommend doses to achieve target levels. Both models incorporated PK principles based on linear pharmacokinetics. Model performance was compared to a traditional Bayesian population PK (PopPK) model and purely data-driven ML models via internal cross-validation and external validation. Results The mechanism-informed GRU model outperformed the Bayesian PopPK model in both internal validation (MSE = 7.81 vs. 9.27 ng 2 /mL 2 , R 2 = 0.537 vs. 0.450) and external validation (MSE = 6.09 vs. 8.96 ng 2 /mL 2 , R 2 = 0.397 vs. 0.211). The mechanism-informed XGBoost model performed comparably to the GRU model. The incorporation of PK principles enhanced model interpretability and generalizability without reducing accuracy. When clinically administered doses, determined by conventional therapeutic drug monitoring, fell within the GRU model's recommended range, subsequent C trough reached the therapeutic target (8-12 ng/mL) in 51.3% of cases, compared to 37.0% overall (p Conclusion Mechanism-informed ML models offer a robust and interpretable approach for individualized tacrolimus dosing, with the potential to improve therapeutic target attainment by enabling accurate dose adjustments in the early post-transplant period.",
-      "authors": [
-        "Yu H",
-        "Qin Z",
-        "Smith LS",
-        "Park JM",
-        "Zhu HJ"
-      ],
-      "date": "2026-01-13",
-      "doi": "10.1002/bcp.70448",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41531243"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period.",
-      "url": "https://europepmc.org/article/MED/41531243",
-      "venue": "British journal of clinical pharmacology"
     }
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-25"
+  "through": "2026-10-26"
 }
