@@ -1,14 +1,14 @@
 {
   "completed_windows": 1,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-24",
+  "last_check": "2026-10-25",
   "last_run": {
-    "cached_candidates_before": 7,
+    "cached_candidates_before": 6,
     "completed_windows": 1,
-    "eligible_candidates": 7,
+    "eligible_candidates": 6,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 455,
+    "pending_windows": 474,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -3199,6 +3199,139 @@
       "since": "2026-10-24",
       "source": "crossref",
       "until": "2026-10-24"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-25",
+      "source": "europe_pmc",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-25",
+      "source": "crossref",
+      "until": "2026-10-25"
     }
   ],
   "pool": [
@@ -3342,29 +3475,6 @@
       "venue": "Pharmaceuticals (Basel, Switzerland)"
     },
     {
-      "abstract": "Background Computed tomography (CT) and magnetic resonance imaging (MRI) are essential in clinical diagnosis and treatment planning, but their images are often compromised by limited contrast and insufficient detail, reducing diagnostic clarity. Traditional enhancement methods-such as histogram equalization (HE) can improve visibility but may introduce noise, over-enhancement, or structural distortion. Quantum-inspired computational techniques have recently emerged as promising tools for nonlinear and adaptive image processing. Building on the quantum signal processing (QSP) framework, this study proposes a quantum-inspired enhancement (QIE) algorithm designed to improve medical image contrast while preserving structural details. Methods We propose a QIE algorithm that embeds a three-pixel quantum-correlation system within a QSP framework. After normalizing grayscale values, each 3×3 neighborhood is mapped to superposition states; edge-sensitive basis states are selectively accumulated in four orientations to produce the enhanced output. The algorithm was evaluated using T2-weighted magnetic resonance (MR) brain images and CT lung images obtained from 10 different patients. Its performance was compared with four representative classical enhancement methods: HE, contrast-limited adaptive HE (CLAHE), fuzzy HE (FHE), and wavelet-based enhancement (WBE), employing quantitative metrics such as entropy, peak signal-to-noise ratio (PSNR), structural similarity index (SSIM), and contrast-to-noise ratio (CNR). Paired two-sided t -tests (α=0.05) were used. Results QIE reached the highest mean entropy on both datasets (CT: 4.37±0.31; MR: 6.45±0.16) vs . HE 4.00±0.25 (P=2.8×10 -4 ) and 5.67±0.16 (P=2.3×10 -7 ) respectively, indicating superior information retention and detail enhancement. Its PSNR and SSIM were significantly better than HE, FHE, and WBE (all P vs . CLAHE, QIE PSNR was -3.4 dB lower on CT and -3.3 dB lower on MR (both P Conclusions The proposed QIE algorithm demonstrates superior performance in enhancing the contrast and preserving the structural details of medical images. By leveraging quantum-inspired mechanisms, the algorithm shows potential for improving diagnostic accuracy and supporting clinical treatment planning. Future work will explore the application of this algorithm to other imaging modalities, investigate its effectiveness as a preprocessing step for commercial artificial intelligence (AI) models, and study the integration with actual quantum computing platforms.",
-      "authors": [
-        "Zhu H",
-        "Su J",
-        "Meng X",
-        "Li W",
-        "Yang B",
-        "Qiu J"
-      ],
-      "date": "2026-01-21",
-      "doi": "10.21037/qims-2025-1474",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41669435"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "A novel approach for contrast enhancement in medical images based on quantum-inspired enhancement algorithm.",
-      "url": "https://europepmc.org/article/MED/41669435",
-      "venue": "Quantitative imaging in medicine and surgery"
-    },
-    {
       "abstract": "Aim Tacrolimus dosing in the early post-kidney transplant period is challenging due to a narrow therapeutic index and substantial interindividual pharmacokinetic (PK) variability. This study aimed to develop and validate mechanism-informed machine learning (ML) models to support individualized tacrolimus dosing during this critical period. Methods A total of 4311 tacrolimus trough concentrations (C trough ) within 7 days post-transplant were obtained from 1624 kidney transplant recipients. Two ML models, Gated Recurrent Unit (GRU) and eXtreme Gradient Boosting (XGBoost), were developed to predict C trough and recommend doses to achieve target levels. Both models incorporated PK principles based on linear pharmacokinetics. Model performance was compared to a traditional Bayesian population PK (PopPK) model and purely data-driven ML models via internal cross-validation and external validation. Results The mechanism-informed GRU model outperformed the Bayesian PopPK model in both internal validation (MSE = 7.81 vs. 9.27 ng 2 /mL 2 , R 2 = 0.537 vs. 0.450) and external validation (MSE = 6.09 vs. 8.96 ng 2 /mL 2 , R 2 = 0.397 vs. 0.211). The mechanism-informed XGBoost model performed comparably to the GRU model. The incorporation of PK principles enhanced model interpretability and generalizability without reducing accuracy. When clinically administered doses, determined by conventional therapeutic drug monitoring, fell within the GRU model's recommended range, subsequent C trough reached the therapeutic target (8-12 ng/mL) in 51.3% of cases, compared to 37.0% overall (p Conclusion Mechanism-informed ML models offer a robust and interpretable approach for individualized tacrolimus dosing, with the potential to improve therapeutic target attainment by enabling accurate dose adjustments in the early post-transplant period.",
       "authors": [
         "Yu H",
@@ -3389,5 +3499,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-24"
+  "through": "2026-10-25"
 }

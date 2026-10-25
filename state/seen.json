@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-10-24",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/77",
+  "last_delivery_date_jst": "2026-10-25",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/78",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 7,
+      "cached_candidates_before": 6,
       "completed_windows": 1,
-      "eligible_candidates": 7,
+      "eligible_candidates": 6,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 455,
+      "pending_windows": 474,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-24 09:11 JST",
+    "checked_at": "2026-10-25 08:56 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/77"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/78"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,12 +38,12 @@
     },
     "recent_screening": {
       "already_reported": 5,
-      "duplicates": 2434,
-      "excluded_publication_type": 149,
-      "missing_ai_evidence": 16,
-      "missing_pk_evidence": 2653,
-      "retrieved": 5257,
-      "unique": 2823
+      "duplicates": 2465,
+      "excluded_publication_type": 143,
+      "missing_ai_evidence": 15,
+      "missing_pk_evidence": 2648,
+      "retrieved": 5276,
+      "unique": 2811
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,11 +51,17 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-24",
-  "last_success_utc": "2026-10-24T00:11:18.927364+00:00",
+  "last_selection_date_jst": "2026-10-25",
+  "last_success_utc": "2026-10-24T23:56:29.642026+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
+    "doi:10.1002/bcp.70448": {
+      "doi": "10.1002/bcp.70448",
+      "selected_at": "2026-10-24T23:56:29.642026+00:00",
+      "selection_type": "historical",
+      "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period."
+    },
     "doi:10.1002/cpt.70499": {
       "doi": "10.1002/cpt.70499",
       "selected_at": "2026-10-04T00:18:17.062144+00:00",
@@ -472,6 +478,12 @@
       "selected_at": "2026-10-05T00:22:56.559712+00:00",
       "selection_type": "historical",
       "title": "Proteolysis-targeting Chimera efficacy prediction using a deep-learning-QSP model."
+    },
+    "source:europe pmc:med:41531243": {
+      "doi": "10.1002/bcp.70448",
+      "selected_at": "2026-10-24T23:56:29.642026+00:00",
+      "selection_type": "historical",
+      "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period."
     },
     "source:europe pmc:med:41637692": {
       "doi": "10.1002/psp4.70147",
@@ -910,6 +922,12 @@
       "selection_type": "historical",
       "title": "Multi-objective optimization in population pharmacokinetic model selection and optimization: application of NSGA-II in pyDarwin."
     },
+    "title:35d96c811ded48ad6c3f0f31": {
+      "doi": "10.1002/bcp.70448",
+      "selected_at": "2026-10-24T23:56:29.642026+00:00",
+      "selection_type": "historical",
+      "title": "Mechanism-informed machine learning for individualized tacrolimus dose adjustment in the early post-kidney transplant period."
+    },
     "title:3bdf2e2be0fa86aca7bb81d4": {
       "doi": "10.1002/psp4.70313",
       "notified_at": "2026-09-05T23:29:24.639976+00:00",
@@ -1174,22 +1192,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-24"
+    "arxiv": "2026-10-25"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
+      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
-      "records": 5250,
+      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
+      "records": 5270,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-24T00:11:18.927364+00:00",
-      "records": 7,
+      "last_attempt_utc": "2026-10-24T23:56:29.642026+00:00",
+      "records": 6,
       "status": "ok"
     }
   }
