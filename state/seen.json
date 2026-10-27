@@ -1,23 +1,32 @@
 {
-  "last_delivery_date_jst": "2026-10-26",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/79",
+  "last_delivery_date_jst": "2026-10-27",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/80",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 5,
-      "completed_windows": 1,
-      "eligible_candidates": 5,
+      "cached_candidates_before": 4,
+      "completed_windows": 2,
+      "eligible_candidates": 50,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 493,
+      "pending_windows": 511,
       "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
+      "requests": 1,
+      "screening": {
+        "duplicates": 2,
+        "eligible_unreported": 47,
+        "excluded_publication_type": 29,
+        "missing_abstract": 1,
+        "missing_method_evidence": 12,
+        "missing_pk_evidence": 1,
+        "retrieved": 92,
+        "unique": 90
+      },
       "split_windows": 0
     },
-    "checked_at": "2026-10-26 08:42 JST",
+    "checked_at": "2026-10-27 10:02 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/79"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/80"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,13 +46,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 5,
-      "duplicates": 2451,
-      "excluded_publication_type": 138,
-      "missing_ai_evidence": 14,
-      "missing_pk_evidence": 2664,
-      "retrieved": 5272,
-      "unique": 2821
+      "already_reported": 4,
+      "duplicates": 2464,
+      "excluded_publication_type": 136,
+      "missing_ai_evidence": 17,
+      "missing_pk_evidence": 2629,
+      "retrieved": 5250,
+      "unique": 2786
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +60,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-26",
-  "last_success_utc": "2026-10-25T23:42:53.548980+00:00",
+  "last_selection_date_jst": "2026-10-27",
+  "last_success_utc": "2026-10-27T01:02:52.751572+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -181,6 +190,12 @@
       "notified_at": "2026-09-26T00:19:20.751920+00:00",
       "selection_type": "historical",
       "title": "Data-driven system identification in cancer systems biology: A multiscale modeling approach to melanoma."
+    },
+    "doi:10.1016/j.compbiomed.2025.110782": {
+      "doi": "10.1016/j.compbiomed.2025.110782",
+      "selected_at": "2026-10-27T01:02:52.751572+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
     },
     "doi:10.1016/j.ejps.2026.107609": {
       "doi": "10.1016/j.ejps.2026.107609",
@@ -478,6 +493,12 @@
       "selected_at": "2026-10-06T02:01:15.287149+00:00",
       "selection_type": "new",
       "title": "DeepNLME - Conditional Generative Scientific Machine Learning with Applications in Pharmacology"
+    },
+    "source:europe pmc:med:40684660": {
+      "doi": "10.1016/j.compbiomed.2025.110782",
+      "selected_at": "2026-10-27T01:02:52.751572+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
     },
     "source:europe pmc:med:41521293": {
       "doi": "10.1186/s13321-026-01152-2",
@@ -904,6 +925,12 @@
       "selection_type": "historical",
       "title": "Evaluation of Voriconazole Population Pharmacokinetics in Japanese Patients and Factors Influencing Prediction Accuracy: A Machine Learning Approach."
     },
+    "title:279869745a4b4e2b046fbb32": {
+      "doi": "10.1016/j.compbiomed.2025.110782",
+      "selected_at": "2026-10-27T01:02:52.751572+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
+    },
     "title:2c36164f9efec9445c942fe0": {
       "doi": "10.1208/s12248-026-01248-5",
       "selected_at": "2026-10-16T00:00:26.876833+00:00",
@@ -1210,22 +1237,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-26"
+    "arxiv": "2026-10-27"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
+      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
-      "records": 5266,
+      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
+      "records": 5246,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-25T23:42:53.548980+00:00",
-      "records": 6,
+      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
+      "records": 4,
       "status": "ok"
     }
   }

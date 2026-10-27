@@ -1,30 +1,32 @@
 {
-  "completed_windows": 1,
+  "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-26",
+  "last_check": "2026-10-27",
   "last_run": {
-    "cached_candidates_before": 5,
-    "completed_windows": 1,
-    "eligible_candidates": 5,
+    "cached_candidates_before": 4,
+    "completed_windows": 2,
+    "eligible_candidates": 50,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 493,
+    "pending_windows": 511,
     "repeated_pages": 0,
-    "requests": 0,
-    "screening": {},
+    "requests": 1,
+    "screening": {
+      "duplicates": 2,
+      "eligible_unreported": 47,
+      "excluded_publication_type": 29,
+      "missing_abstract": 1,
+      "missing_method_evidence": 12,
+      "missing_pk_evidence": 1,
+      "retrieved": 92,
+      "unique": 90
+    },
     "split_windows": 0
   },
   "pending": [
     {
       "content_type": "",
       "query": "",
-      "since": "2025-01-01",
-      "source": "europe_pmc",
-      "until": "2025-12-31"
-    },
-    {
-      "content_type": "",
-      "query": "",
       "since": "2024-01-01",
       "source": "europe_pmc",
       "until": "2024-12-31"
@@ -3465,53 +3467,142 @@
       "since": "2026-10-26",
       "source": "crossref",
       "until": "2026-10-26"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-27",
+      "source": "europe_pmc",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-27",
+      "source": "crossref",
+      "until": "2026-10-27"
     }
   ],
   "pool": [
-    {
-      "abstract": "Abstract The human gut microbiome encodes a large spectrum of quorum sensing peptides (QSPs) playing a vital role in microbial communication and host-microbial interactions, yet discovery and functional characterization of novel QSPs are still limited. Here, we developed an integrated artificial intelligence (AI)-driven pipeline combining large-scale genome mining, machine learning-based screening, Alphafold3 structural modelling, and molecular dynamics simulations to systematically identify 1,670 novel candidate QSPs (cQSPs) from 12,488 human gut microbial genomes. Subsequent experimental screening identified 29 cQSPs with α-glucosidase inhibitory activities. Notably, GIVLVPTSLVSG (GIVL), an Agr-derived QSP from Clostridium tyrobutyricum, not only exhibited canonical quorum-sensing functions, but also demonstrated a stable interaction with and strong inhibitory activity against α-glucosidase. In diabetic mice, administration of GIVL significantly improved glucose homeostasis and insulin sensitivity accompanied by increased production of short-chain fatty acids (SCFAs) in the gut microbiome. Our findings expand the QSP database and establish a generalizable, AI-enabled framework for the systematic discovery of microbiome-derived peptides with therapeutic potential in metabolic disease, positioning QSPs as promising sources of therapeutics for diabetes and other chronic metabolic disorders.",
-      "authors": [
-        "Kristiansen K",
-        "Xue c",
-        "Chen J",
-        "Kang W",
-        "Peng L",
-        "Liu J",
-        "Zhou X",
-        "Liu Y",
-        "Wang D",
-        "Chen X",
-        "Yang Y",
-        "Feng Y",
-        "Wang M",
-        "Yao Z",
-        "Wan H",
-        "Ma X",
-        "Zhu C",
-        "Liu G",
-        "Wu R",
-        "Li H",
-        "Wu S",
-        "Liu R",
-        "Lee SM",
-        "Yang H",
-        "Fan G",
-        "Yin Y",
-        "Xue C"
-      ],
-      "date": "2026-09-01",
-      "doi": "10.21203/rs.3.rs-9855030/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1309953"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome",
-      "url": "https://europepmc.org/article/PPR/PPR1309953",
-      "venue": ""
-    },
     {
       "abstract": "Quantitative Systems Pharmacology (QSP) models play an inherently interventional role in pharmaceutical research and development, functioning as executable causal systems for designing, evaluating, and replacing clinical trials. However, deploying QSP as an experimental planning engine remains constrained by the difficulty of translating unstructured literature descriptions of clinical or preclinical scenarios into reproducible, simulation-ready model interventions. Motivated by this issue, we propose an agent-based framework that operationalizes QSP models as intervention-ready experimental systems by automatically extracting and executing literature-derived scenarios. The framework combines semantic grounding of model entities with a large language model (LLM)-driven Scenario Extractor and a dual-agent Scenario Mapper . Rather than relying on opaque, single-shot reasoning, our pipeline converts free-text interventions into precise parameter configurations through discrete, verifiable work orders. Moreover, our dynamic Human-in-the-Loop (HITL) strategy empowers modelers to resolve biological ambiguities interactively. Across four diverse kinetic ordinary differential equation (ODE)/QSP models and seven Subject Matter Expert (SME)-curated literature scenarios, our model resolved all selected scenarios into correct executable parameter changes, including multi-dose interventions, unit conversions, no-op scenarios, and ambiguity-triggered HITL cases, demonstrating that structured collaboration between experts and agentic systems can resolve scenarios that standalone Systems Biology Markup Language (SBML) reasoning LLM calls or prior agentic efforts operating on processed SBML data handle unreliably.",
       "authors": [
@@ -3568,7 +3659,7 @@
       "venue": "Drug design, development and therapy"
     },
     {
-      "abstract": "Ion channels are essential for signal processing and propagation in neural cells. Voltage-gated ion channels permeable to potassium (Kv) form one of the most prominent channel families. Techniques used to model the voltage-dependent gating of Kv channels date back to Hodgkin and Huxley (1952). Different Kv types can display radically different kinetic properties, requiring different mathematical models. However, the construction of Hodgkin-Huxley-like (HH-like) models is generally complex and time consuming due to the number of parameters, their tuning and having to choose functional forms to model gating. In addition to the between-Kv type heterogeneity, there can be significant within-Kv type kinetic heterogeneity between different cells with genetically identical channels. Since HH-like models do not account for such variability, extensions to it are necessary. We use scientific machine learning (SciML), the integration of machine learning methodologies with existing scientific models, and non-linear mixed effects (NLME) modelling to bypass the limitations of HH-like modelling. NLME is a modelling methodology that takes into account both within- and between-subject variability. These tools allowed us to complement the HH-like modelling and construct a unified SciML HH-like model that fits the recordings from 20 different Kv types. The unified SciML HH-like model produced closer fits to the data compared to a set of seven previous HH-like models and was able to represent the highly heterogeneous data from different cells. Our model may be the first step in producing a SciML foundation model for ion channels that would be capable of modelling the gating kinetics of any ion channel type.",
+      "abstract": "Ion channels are essential for signal processing and propagation in neural cells. Voltage-gated ion channels permeable to potassium (K v ) form one of the most prominent channel families. Techniques used to model the voltage-dependent gating of K v channels date back to Hodgkin and Huxley (1952). Different K v types can display radically different kinetic properties, requiring different mathematical models. However, the construction of Hodgkin-Huxley-like (HH-like) models is generally complex and time consuming due to the number of parameters, their tuning and having to choose functional forms to model gating. In addition to the between-K v type heterogeneity, there can be significant within-K v type kinetic heterogeneity between different cells with genetically identical channels. Since HH-like models do not account for such variability, extensions to it are necessary. We use scientific machine learning (SciML), the integration of machine learning methodologies with existing scientific models, and non-linear mixed effects (NLME) modelling to bypass the limitations of HH-like modelling. NLME is a modelling methodology that takes into account both within- and between-subject variability. These tools allowed us to complement the HH-like modelling and construct a unified SciML HH-like model that fits the recordings from 20 different K v types. The unified SciML HH-like model produced closer fits to the data compared to a set of seven previous HH-like models and was able to represent the highly heterogeneous data from different cells. Our model may be the first step in producing a SciML foundation model for ion channels that would be capable of modelling the gating kinetics of any ion channel type. Author summary Ion channels are complex molecules embedded in the membranes of neurons – the cells responsible for signal propagation and processing in the brain. Ion channels can open and close in response to various types of stimuli, in particular the voltage difference across the cell membrane. Computational modelling, usage of mathematical techniques to represent a system and algorithmically solve for its dynamics, has been previously used to understand the dynamics of voltage-gated ion channels. However, computational modelling of voltage-gated ion channels requires costly and complex optimization routines to optimize their structure and parameters. We utilize two tools new to the modelling of voltage-gated ion channels – scientific machine learning and non-linear mixed effects modelling – to bypass some limitations associated with the existing methods. By using scientific machine learning and non-linear mixed effects modelling we were able to create a unified model capable of modelling the gating dynamics of 20 different ion channels. This is in stark contrast to the existing modelling approaches, where each channel requires its own model. Moreover, our unified model performed better than seven existing ion channel gating models. Therefore, the tools we used and the model we created is a significant step forward in facilitating the modelling of ion channel gating. Future work could include even more ion channels types within the scope of our unified model.",
       "authors": [
         "Linkevicius D",
         "Chadwick A",
@@ -3579,9 +3670,11 @@
       "doi": "10.1371/journal.pcbi.1013078",
       "publication_type": "research-article, Journal Article",
       "source_ids": [
-        "MED:42044162"
+        "MED:42044162",
+        "PPR:PPR1009985"
       ],
       "sources": [
+        "Europe PMC",
         "Europe PMC"
       ],
       "title": "One model to rule them all: Unification of voltage-gated potassium channel models via deep non-linear mixed effects modelling.",
@@ -3606,9 +3699,1081 @@
       "title": "From Pharmacovigilance Signals to Mechanistic Phenotypes: Integrating ADMET, PK/PD, and Network Context to Interpret Antiviral Safety in Pregnancy.",
       "url": "https://europepmc.org/article/MED/41901296",
       "venue": "Pharmaceuticals (Basel, Switzerland)"
+    },
+    {
+      "abstract": "Physics-informed machine learning (PIML) has emerged as a promising alternative to classical methods for predicting dynamical systems, offering faster and more generalizable solutions. However, existing models, including recurrent neural networks (RNNs), transformers, and neural operators, face challenges such as long-time integration, long-range dependencies, chaotic dynamics, and extrapolation, to name a few. To this end, this paper introduces state-space models implemented in Mamba for accurate and efficient dynamical system operator learning. Mamba addresses the limitations of existing architectures by dynamically capturing long-range dependencies and enhancing computational efficiency through reparameterization techniques. To extensively test Mamba and compare against another 11 baselines, we introduce several strict extrapolation testbeds that go beyond the standard interpolation benchmarks. We demonstrate Mamba's superior performance in both interpolation and challenging extrapolation tasks. Mamba consistently ranks among the top models while maintaining the lowest computational cost and exceptional extrapolation capabilities. Moreover, we demonstrate the good performance of Mamba for a real-world application in quantitative systems pharmacology for assessing the efficacy of drugs in tumor growth under limited data scenarios. Taken together, our findings highlight Mamba's potential as a powerful tool for advancing scientific machine learning in dynamical systems modeling. (The code will be available at https://github.com/zheyuanhu01/State_Space_Model_Neural_Operator upon acceptance.).",
+      "authors": [
+        "Hu Z",
+        "Daryakenari NA",
+        "Shen Q",
+        "Kawaguchi K",
+        "Karniadakis GE"
+      ],
+      "date": "2025-12-19",
+      "doi": "10.1016/j.neunet.2025.108496",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:41447828"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "State-space models are accurate and efficient neural operators for dynamical systems.",
+      "url": "https://europepmc.org/article/MED/41447828",
+      "venue": "Neural networks : the official journal of the International Neural Network Society"
+    },
+    {
+      "abstract": "Abstract Background: Textbook Outcome (TO) reflects overall surgical quality. With the expanding use of minimally invasive pancreaticoduodenectomy (MIPD), reliable prediction of TO is essential. This study aimed to identify predictors of TO after MIPD and develop a machine learning (ML) model. Methods: We retrospectively analyzed 411 patients undergoing MIPD (2017–2023). The Least Absolute Shrinkage and Selection Operator regression was used for feature selection, and ten ML algorithms were compared. Model performance was evaluated using the area under the receiver operating characteristic curve (AUC). Model interpretability was assessed using SHapley Additive exPlanations (SHAP). Results: Of 411 patients, 263 (63.99%) achieved TO. Eight variables were identified as predictive features. Among the ten algorithms, the Random Forest model demonstrated the best discrimination (AUC = 0.86). Conclusions: The Random Forest model accurately predicted TO after MIPD and may assist in individualized preoperative risk stratification and perioperative management.",
+      "authors": [
+        "Ma P",
+        "Jiang Z",
+        "Wang Y",
+        "Jin Z",
+        "Zhang Z",
+        "Mou Y",
+        "Jin W"
+      ],
+      "date": "2025-12-10",
+      "doi": "10.21203/rs.3.rs-8269976/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1132645"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Development and Validation of a Machine Learning–Based Model for Predicting Textbook Outcome after Minimally Invasive Pancreaticoduodenectomy",
+      "url": "https://europepmc.org/article/PPR/PPR1132645",
+      "venue": ""
+    },
+    {
+      "abstract": "Dalbavancin is a long-acting lipoglycopeptide increasingly used off-label for complex Gram-positive infections requiring prolonged therapy. Its extended half-life enables simplified regimens, but interindividual pharmacokinetic variability and pathogen MIC heterogeneity complicate dosing. We developed and externally validated machine learning (ML) models to predict whether dalbavancin plasma concentrations remain above predefined pharmacokinetic/pharmacodynamic targets after two standard 1,500 mg doses (day 1/day 8 or day 1/day 15). Predictions were binary (adequate vs subtherapeutic concentration), directly reflecting the clinical decision to readminister a 1,500 mg dose. Models were trained on simulated PK profiles from a published population PK (popPK) model and evaluated in three independent settings: (i) simulated validation data sets from two alternative published popPK models, (ii) a real-world cohort from Limoges University Hospital ( n = 31), and (iii) a secondary cohort from Nantes University Hospital ( n = 7). Input features included age, body weight, creatinine clearance, MIC, and a single plasma concentration obtained before the second dose. Support vector machine models achieved high accuracy (>88%) and sensitivity (>90%) across testing sets and clinical validation cohorts. In clinical data sets, no false negatives were observed (limited by sample size), with overall accuracy approaching 95%. Compared with maximum a posteriori Bayesian estimation, ML achieved higher accuracy and sensitivity across validation cohorts, particularly by reducing false negatives. Predictions remained reliable through week 8, the clinically relevant exposure window. This ML-based approach enables early individualized redosing decisions using minimal clinical inputs. By complementing Bayesian forecasting and reducing reliance on serial sampling, it represents a pragmatic strategy to support model-informed precision dosing of dalbavancin.",
+      "authors": [
+        "Sayadi H",
+        "Gregoire M",
+        "Fromage Y",
+        "Ksentini M",
+        "Labriffe M",
+        "Monchaud C",
+        "Codde C",
+        "Faucher J-F",
+        "Boutoille D",
+        "Marquet P",
+        "Woillard J-B"
+      ],
+      "date": "2025-12-10",
+      "doi": "10.1128/aac.01363-25",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41369581"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Predicting prolonged dalbavancin exposure using machine learning: a validated strategy for individualized redosing.",
+      "url": "https://europepmc.org/article/MED/41369581",
+      "venue": "Antimicrobial agents and chemotherapy"
+    },
+    {
+      "abstract": "Model-informed drug development (MIDD) plays an important role in pharmacometrics by leveraging mathematical models to optimize drug dosing strategies. Traditional methods such as nonlinear mixed effects modeling (NONMEM) have long been the gold standard in population pharmacokinetic (PPK) modeling. However, the development of artificial intelligence (AI) presents a potential improvement in predictive performance and computational efficiency. This study evaluates the effectiveness of AI-based MIDD methods for PPK analysis by comparing them against traditional nonlinear mixed-effects (NLME)-based methods (e.g., NONMEM). We tested five machine learning (ML) models, three deep learning (DL) models, and a neural ordinary differential equations (ODE) model on both simulated and real clinical datasets under different scenarios, assessing predictive performance with metrics such as root mean squared error (RMSE), mean absolute error (MAE), and coefficient of determination (R 2 ). Simulated datasets with known ground truth were created using a two-compartment model, while the real clinical dataset included data from 1,770 patients pooled from multiple clinical trials. Results indicate that AI/ML models often outperform NONMEM, with variations in performance depending on model type and data characteristics. Neural ODE models showed good performance, providing strong performance and explainability with large datasets. These findings underscore the potential of AI/ML methodologies to complement or enhance traditional PPK modeling approaches in MIDD, highlighting their applicability in future pharmacometrics workflows.",
+      "authors": [
+        "Mao B",
+        "Gao Y",
+        "Xu C",
+        "Macha S",
+        "Shao S",
+        "Ahamadi M"
+      ],
+      "date": "2025-11-18",
+      "doi": "10.1208/s12248-025-01121-x",
+      "publication_type": "Comparative Study, Journal Article",
+      "source_ids": [
+        "MED:41254220"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Opportunities for AI-based Model-informed Drug Development: A Comparative Analysis of NONMEM and AI-based Models for Population Pharmacokinetic Prediction.",
+      "url": "https://europepmc.org/article/MED/41254220",
+      "venue": "The AAPS journal"
+    },
+    {
+      "abstract": "Pharmacometrics, as the core discipline of model-informed drug development paradigm, quantitatively characterizes drug exposure-response dynamics using mathematical models. However, its traditional methodology, represented by nonlinear mixed-effects modeling, is inherently resource-intensive and often struggles to fully capture complex biological variability. The rapid advancement of artificial intelligence technologies offers a transformative data-driven paradigm, providing superior efficiency and predictive accuracy. Yet, the artificial intelligence approaches suffer from the “black box” constraint. This review detailed the deep, complementary integration of artificial intelligence and pharmacometrics, demonstrating how this synergy is necessary to satisfy the complex, triple demands of accuracy, efficiency, and regulatory explainability. We systematically explored innovative applications across the entire pharmacometrics workflow, including model optimization, covariate screening, virtual population generation, etc. In each section, we also presented specific application cases or workflows. Furthermore, we outlined current challenges in the implementation of artificial intelligence and proposed a vision for interdisciplinary and cross-institutional collaboration.",
+      "authors": [
+        "Luo J",
+        "Yu J",
+        "Cai Z",
+        "Xu L",
+        "Lv Y",
+        "Zheng Q",
+        "Li L"
+      ],
+      "date": "2025-11-16",
+      "doi": "10.22541/au.176330731.18429951/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1194960"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Innovative Applications of Artificial Intelligence Technology in Pharmacometrics",
+      "url": "https://europepmc.org/article/PPR/PPR1194960",
+      "venue": ""
+    },
+    {
+      "abstract": "Model-informed precision dosing (MIPD) utilizes pharmacokinetic/pharmacodynamic (PK/PD) models to optimize drug therapy. However, conventional MIPD often requires manual simulation and regimen selection, which are time-consuming and demand specialized expertise. Reinforcement learning (RL), in which an agent learns optimal decisions through iterative interactions with an environment, offers a scalable and automated alternative. In this study, we developed a model-informed Deep Q-Network (DQN) to personalize infliximab dosing for patients with Crohn's disease. The DQN was trained in a simulation environment incorporating a population PK model, inter-individual variability, and assay error. Virtual patients with randomly and independently sampled covariates from log-normal distributions were used to explore dosing strategies at Infusions 1, 3, and 4. Doses ranged from 1 to 10 mg/kg at Infusion 1 and from 1 to 20 mg/kg thereafter, with intervals of 4-12 weeks. The reward function prioritized achieving trough concentrations of 18-26 μg/mL before Infusion 3 and 5-10 μg/mL before Infusions 4 and 5, while penalizing overtreatment and additional infusions. The DQN policy converged after 80,000 episodes, yielding target attainment probabilities (PTAs) of 92.9% and 98.4% at Infusions 4 and 5, respectively, in 1000 virtual patients. High doses (11-20 mg/kg) were selected in only 0.2% of cases. At Infusion 4, 66.8% of patients received an 8-week interval, and 57.3% at Infusion 5. Retrospective real-world validation showed that patients whose actual doses matched DQN recommendations had trough levels significantly closer to target ranges. These findings support the feasibility of using DQN-based agents to enhance and automate infliximab individualized dosing in pediatric populations.",
+      "authors": [
+        "Irie K",
+        "Minar P",
+        "Reifenberg J",
+        "Boyle BM",
+        "Noe JD",
+        "Hyams JS",
+        "Mizuno T"
+      ],
+      "date": "2025-11-05",
+      "doi": "10.1002/cpt.70118",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article, Research Support, N.I.H., Extramural",
+      "source_ids": [
+        "MED:41189499",
+        "PPR:PPR1053074"
+      ],
+      "sources": [
+        "Europe PMC",
+        "Europe PMC"
+      ],
+      "title": "Model-Informed Deep Q-Networks to Guide Infliximab Dosing in Pediatric Crohn's Disease.",
+      "url": "https://europepmc.org/article/MED/41189499",
+      "venue": "Clinical pharmacology and therapeutics"
+    },
+    {
+      "abstract": "Artificial intelligence (AI) is increasingly being explored as a tool to support pharmacometric modeling, particularly in addressing the coding challenges associated with NONMEM. In this study, we evaluated the ability of seven Large Language Models (LLMs) to generate NONMEM codes across 13 pharmacometrics tasks, including a range of population pharmacokinetic (PK) and pharmacodynamic (PD) models. We further developed a standardized scoring rubric to assess code accuracy and created an optimized prompt to improve LLM performance. Our results showed that the OpenAI o1 and gpt-4.1 models achieved the best performance, both generating codes with great accuracy for all tasks when using our optimized prompt. Overall, LLMs performed well in writing basic NONMEM model structures, providing a useful foundation for pharmacometrics model coding. However, user review and refinement remain essential, especially for complex models with special dataset alignment or advanced coding techniques. We also discussed the applications of AI in pharmacometrics education, particularly strategies to prevent overreliance on AI for coding. This work provides a benchmark for current LLMs' performance in NONMEM coding and introduces a practical prompt that can facilitate more accurate and efficient use of AI in pharmacometrics research and education.",
+      "authors": [
+        "Zheng W",
+        "Wang W",
+        "Kirkpatrick CMJ",
+        "Landersdorfer CB",
+        "Yao H",
+        "Zhou J"
+      ],
+      "date": "2025-11-04",
+      "doi": "10.1002/psp4.70125",
+      "publication_type": "Research Support, Non-U.S. Gov't, case-study, Journal Article, Case Reports",
+      "source_ids": [
+        "MED:41187068"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "AI for NONMEM Coding in Pharmacometrics Research and Education: Shortcut or Pitfall?",
+      "url": "https://europepmc.org/article/MED/41187068",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Generative Artificial Intelligence (AI) frameworks, such as Variational Autoencoders (VAEs), have proven powerful in learning structured representations from complex, high-dimensional data. In pharmacometrics (PMX), nonlinear mixed effects (NLME) modeling is widely used to capture inter-individual variability and link covariates to characterize parameters with the goal of informing key decisions in drug research and development. This research combines the strengths of both approaches by introducing a VAE framework specifically designed for NLME modeling. The proposed method integrates the flexibility of generative AI with the interpretability and robustness of mechanism-based PMX modeling. To advance covariate selection in PMX, we replace the Evidence Lower Bound objective in VAEs with an objective function based on the corrected Bayesian information criterion. This enables the simultaneous evaluation of all potential covariate-parameter combinations, thereby allowing for automated and joint estimation of population parameters and covariate selection within a single run. Manual selection and repeated model fitting across covariate combinations are no longer required. We demonstrate the effectiveness of this combined AI-PMX approach with two representative cases. As the first generative AI-based optimization method for NLME modeling, the VAE achieves high-quality results in a single run, outperforming traditional stepwise procedures in terms of efficiency. As such, the presented approach facilitates automated model development, advancing PMX and its applications in model-informed drug development.",
+      "authors": [
+        "Rohleff J",
+        "Bachmann F",
+        "Nahum U",
+        "Bräm D",
+        "Steffens B",
+        "Pfister M",
+        "Koch G",
+        "Schropp J"
+      ],
+      "date": "2025-11-04",
+      "doi": "10.1002/psp4.70129",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
+      "source_ids": [
+        "MED:41186137"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Redefining Parameter Estimation and Covariate Selection via Variational Autoencoders: One Run Is All You Need.",
+      "url": "https://europepmc.org/article/MED/41186137",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.",
+      "authors": [
+        "Tesfaye ZT",
+        "Belete CK",
+        "Yismaw MB",
+        "Negash Z"
+      ],
+      "date": "2025-11-03",
+      "doi": "10.21203/rs.3.rs-7767416/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1113056"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents",
+      "url": "https://europepmc.org/article/PPR/PPR1113056",
+      "venue": ""
+    },
+    {
+      "abstract": "The purpose was to evaluate the utility of large language models (LLMs) for reviewing the statistical analysis plan (SAP) and pharmacokinetics-pharmacodynamics (PK-PD) components of clinical trial protocols. Clinical trial protocols and SAPs were obtained from clinicaltrials.gov for a testbed of 15 small-molecule drugs, biologics, and global antibiotic and public health interventions. The GPT-4o (ChatGPT) LLM was used to elicit study design attributes, relevant guidelines, and detailed SAP evaluations with prompts engineered to the persona of a regulatory expert. The SAP methodology was assessed against the Food and Drug Administration's (FDA) E9 Statistical Principles for Clinical Trials guidance. The SAP evaluation outputs were assessed in post hoc analyses with ChatGPT and Grok, based on a rubric that evaluated the accuracy of primary outcome identification, the correctness of statistical methodology, compliance with the FDA E9 guidance, and clinical interpretability. PK-PD analysis plans were assessed on the accuracy of PK-PD objectives and measures and PK analysis methods. ChatGPT accurately identified the disease, intervention, and comparator groups for all trials, as well as the study sample size for 14 out of 15 trials. The most frequently cited guidelines were the FDA's E9 guidance for SAP and the FDA Guidance for Industry: Population Pharmacokinetics for PK-PD. ChatGPT outputs of the SAP and PK-PD analysis plans were clear and organized, demonstrating a satisfactory ability to extract and summarize technical details; some limitations in contextual accuracy were observed. LLMs can be effective tools for assessing the SAP, PK-PD, and other aspects of clinical trial protocol reviews.",
+      "authors": [
+        "Shin E",
+        "Bhat AG",
+        "Ramanathan M"
+      ],
+      "date": "2025-10-21",
+      "doi": "10.1002/cpt.70096",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Research Support, U.S. Gov't, Non-P.H.S., Journal Article",
+      "source_ids": [
+        "MED:41121745"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Large Language Models for Clinical Trial Protocol Assessments.",
+      "url": "https://europepmc.org/article/MED/41121745",
+      "venue": "Clinical pharmacology and therapeutics"
+    },
+    {
+      "abstract": "Africa's vast genetic diversity poses challenges for optimising drug treatments in the continent, which is exacerbated by the fact that drug discovery and development efforts have historically been performed outside Africa. This has led to suboptimal therapeutic outcomes in African populations and overall scarcity of relevant pharmacogenetic data, including characteristic genotypes as well as drugs prescribed in the continent to treat infectious diseases. Here, we propose a general approach to identify drug-gene pairs with potential pharmacogenetic interest. Our pipeline couples machine learning and artificial intelligence with physiologically-based pharmacokinetic (PBPK) and non-linear mixed effects (NLME) modelling to hypothesize which pharmacogenes could be of potential clinical interest, and which dose adjustments could be made to provide better treatment outcomes for African populations. Drug-gene pairs are first ranked with the latest knowledge embedding techniques, based on public structural and bioactivity data for drugs and genes, followed by a large language model-based refinement. Selected genes are then evaluated for their sensitivity in PBPK analysis, and relevant variants subsequently inspected with NLME for dose optimization. The analysis is focused on genes with potential clinical relevance in Africa. We delve deeper into malaria and tuberculosis therapies, many of which remain uncharacterised from a pharmacogenetic perspective.",
+      "authors": [
+        "Turon G",
+        "Mulubwa M",
+        "Montaner A",
+        "Njoroge M",
+        "Chibale K",
+        "Duran-Frigola M"
+      ],
+      "date": "2025-10-20",
+      "doi": "10.1038/s41467-025-64304-2",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41115876"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Artificial intelligence coupled to pharmacometrics modelling to tailor malaria and tuberculosis treatment in Africa.",
+      "url": "https://europepmc.org/article/MED/41115876",
+      "venue": "Nature communications"
+    },
+    {
+      "abstract": "Background : Large Language Models (LLMs) have driven significant advances in artificial intelligence (AI), with transformative applications across numerous scientific fields, including biomedical research and drug development. However, despite growing interest in adjacent domains, their adoption in pharmacometrics, a discipline central to model-informed drug development (MIDD), remains limited. This study aims to systematically explore the potential role of LLMs across the pharmacometrics workflow, from data processing to model development and reporting. Methods : We conducted a comprehensive literature review to identify documented applications of LLMs in pharmacometrics. We also analyzed relevant use cases from related scientific domains and structured these insights into a conceptual framework outlining potential pharmacometrics tasks that could benefit from LLMs. Results: Our analysis revealed that studies reporting LLMs in pharmacometrics are few and mainly limited to code generation in general-purpose programming languages. Nonetheless, broader applications are theoretically plausible and technically feasible, including information retrieval and synthesis, data collection and formatting, model coding, PK/PD model development, support to PBPK and QSP modeling, report writing and pharmacometrics education. We also discussed visionary applications such as LLM-enabled predictive modeling and digital twins. However, challenges such as hallucinations, lack of reproducibility, and the underrepresentation of pharmacometrics data in training corpora limit the actual applicability. Conclusions : LLMs are unlikely to replace mechanistic pharmacometrics models but hold great potential as assistive tools. Realizing this potential will require domain-specific fine-tuning, retrieval-augmented strategies, and rigorous validation. A hybrid future, integrating human expertise, traditional modeling, and AI, could define the next frontier for innovation in MIDD.",
+      "authors": [
+        "Tosca EM",
+        "Aiello L",
+        "De Carlo A",
+        "Magni P"
+      ],
+      "date": "2025-09-29",
+      "doi": "10.3390/pharmaceutics17101274",
+      "publication_type": "other, Journal Article",
+      "source_ids": [
+        "MED:41155911"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Pharmacometrics in the Age of Large Language Models: A Vision of the Future.",
+      "url": "https://europepmc.org/article/MED/41155911",
+      "venue": "Pharmaceutics"
+    },
+    {
+      "abstract": "Abstract Background The optimization of meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains a significant clinical challenge. This study aimed to assess whether a machine learning–based clinical decision support system (CDSS) can support clinicians in determining the optimal meropenem dosing strategy. Methods Using a previously published population pharmacokinetic (POPPK) model of meropenem, we generated a virtual cohort of 2000 CRRT patients to simulate various dosing strategies and pathogen susceptibility profiles. Patient demographics, dosing parameters, and CRRT settings were incorporated as features to train ML models predicting the probability of achieving two pharmacodynamic (PD) endpoints (100% fT > MIC and 100% fT > 4×MIC). Feature importance was further assessed using SHAP analysis. External validation was conducted with clinical CRRT patient data, and predictive performance was compared against the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose,\" for clinical use. Results Across the simulated test dataset, ML models demonstrated outstanding predictive performance for both PD targets, with most accuracy and F1 scores surpassing 0.95. SHAP analysis indicated that MIC, dosing interval, administered dose, CLCRRT, and CRCL were the key determinants of predictive performance. In external validation, the Adaboost model achieved accuracies of 0.813 and 0.835 for the 100% fT > MIC and 100% fT > 4×MIC endpoints, respectively, markedly superior to the POPPK model (0.629 and 0.714). The Streamlit-based \"MerDose\" tool enables real-time individualized dose predictions and target attainment probabilities, offering practical guidance for initial dosing decisions in clinical care. Conclusion We developed an ML-driven CDSS, \"MerDose,\" capable of accurately predicting individualized meropenem dosing in critically ill CRRT patients. Its web-based deployment ensures clinical applicability, offering a pragmatic decision-support framework to optimize antibiotic therapy in this high-risk population.",
+      "authors": [
+        "Li D",
+        "Qiao Z",
+        "Xiong X",
+        "Zhang Q",
+        "He Y",
+        "Yu Z",
+        "Zheng X",
+        "Zheng X"
+      ],
+      "date": "2025-09-19",
+      "doi": "10.21203/rs.3.rs-7564311/v1",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1087815"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool",
+      "url": "https://europepmc.org/article/PPR/PPR1087815",
+      "venue": ""
+    },
+    {
+      "abstract": "Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling. Methods This retrospective observational study included 76 eligible pediatric patients for model development, analyzing their baseline characteristics and laboratory parameters. A population pharmacokinetic (PopPK) model using NONMEM ® software was performed to assess the clearance (CL) and volume of distribution (V) of VRZ. The individual CL and V were included as input variables. The Boruta algorithm was employed for feature selection, after which six machine learning algorithms were applied. The models were evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R 2 ) to identify the optimal algorithm, which then underwent independent external validation. The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP). Results A total of 76 pediatric patients were enrolled for model development, consisting of 58 males (76.3%) and 18 females (23.7%), with a median age of 11 months and a median weight of 8.05 kg. We analyzed 110 therapeutic drug monitoring (TDM) samples of VRZ from these participants. A one-compartment model with first-order absorption and elimination described the population pharmacokinetics of VRZ. Population estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 17.9 L/h/70kg (RSE, 10.8%) and 788 L/70kg (RSE, 15.4%), respectively. An XGBoost model accurately predicted voriconazole concentrations (R 2 = 0.81, RMSE = 0.53) with a relative error of ±20% for most observations. In the external validation, the XGBoost model demonstrated an R 2 of 0.75, RMSE of 0.14. SHAP analysis identified clearance, weight, and laboratory values as significant predictors. Conclusion This study emphasized the importance of personalized treatment in utilizing VRZ for children under 24 months. The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.",
+      "authors": [
+        "Shen L",
+        "Hu M",
+        "Xu X",
+        "Zhou Y",
+        "Wu W",
+        "Ge X",
+        "Wang G",
+        "Wang Y",
+        "Li Z"
+      ],
+      "date": "2025-09-15",
+      "doi": "10.3389/fphar.2025.1671652",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:41031158"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Precision dosing of voriconazole in immunocompromised children under 2 years: integrated machine learning and population pharmacokinetic modeling.",
+      "url": "https://europepmc.org/article/MED/41031158",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
+      "abstract": "A propensity weighted (PSW) methodology was recently proposed for assessing the treatment effect conditional to the probability of non-specific response to a treatment (prob-NSRT). Prob-NSRT was estimated using an artificial neural network (ANN) model applied to pre-randomization and study endpoint observations in a placebo arm of a placebo-controlled clinical trial. Placebo data were initially used to estimate prob-NSRT, then the ANN model was applied to the data of each individual in each treatment arm (placebo + active) for estimating the individual prob-NSRT, and finally all data in the trial enriched by the prob-NSRT values were used to assess the treatment effect. One of the major limitations of this methodology was that the ANN model was developed and applied to analyze data in the same dataset. To overcome this limitation, a new artificial intelligence driven nonlinear mixed effect modeling approach (AI-NLME) is proposed. This approach involves the development of the ANN model using a dataset that is independent from the dataset used to estimate the treatment effect. A case study is presented using data from a randomized, placebo-controlled trial in major depressive disorders. The AI-NLME approach provided an effective tool for controlling the confounding effect of treatment non-specific response, for increasing signal detection, for decreasing heterogeneity in the response, for increasing the effect size, for better assessing the responder rate, and for providing a reliable estimate of the \"true\" treatment effect. These findings provide convergent evidence on the potential role of AI-NLME to become the reference approach for analyzing placebo-controlled clinical trials.",
+      "authors": [
+        "Gomeni R",
+        "Bressolle-Gomeni F"
+      ],
+      "date": "2025-09-01",
+      "doi": "10.1111/cts.70345",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
+      "source_ids": [
+        "MED:40898887"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials.",
+      "url": "https://europepmc.org/article/MED/40898887",
+      "venue": "Clinical and translational science"
+    },
+    {
+      "abstract": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease. Methods We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. Results For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and - 0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared with Bayesian estimation alone. Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
+      "authors": [
+        "Irie K",
+        "Minar P",
+        "Reifenberg J",
+        "Boyle BM",
+        "Noe JD",
+        "Hyams JS",
+        "Mizuno T"
+      ],
+      "date": "2025-08-30",
+      "doi": "10.1007/s40262-025-01564-7",
+      "publication_type": "research-article, Journal Article, Research Support, N.I.H., Extramural",
+      "source_ids": [
+        "MED:40885855"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease.",
+      "url": "https://europepmc.org/article/MED/40885855",
+      "venue": "Clinical pharmacokinetics"
+    },
+    {
+      "abstract": "Quorum sensing regulates cooperative behaviors in bacteria through the accumulation and detection of signaling molecules. This process plays a crucial role in various biological functions, including biofilm formation, antibiotic production, regulation of virulence factors, and immune modulation. Quorum sensing peptides (QSPs), primarily produced by Gram-positive bacteria, are key components of the quorum sensing mechanism, and their identification is crucial for understanding bacterial regulation. Despite the availability of several QSP prediction tools based on handcrafted features and machine learning techniques, there is still potential for improving their performance and interpretability. In this study, we present IQSPred-PLM, a novel model for predicting QSPs that integrates protein language models (PLMs) with a convolutional neural network (CNN). First, we utilize the pre-trained PLM ESM-2 to encode peptide sequences. Then, feature extraction is performed using a multi-scale residual CNN (MSRes-CNN), with dynamic feature integration through an adaptive weight modulation (AWM) module. Finally, a fully connected network is designed to conduct the classification of QSPs. Evaluated on the benchmark dataset, IQSPred-PLM demonstrated the outstanding predictive performance with accuracy (ACC), Matthews correlation coefficient (MCC), and the area under the receiver operating characteristic (ROC) curve (AUC) of 97.50%, 0.951, and 0.990, respectively. Furthermore, case studies and interpretability analyses confirmed the effectiveness of IQSPred-PLM for the QSP prediction task.",
+      "authors": [
+        "Su Y",
+        "Guo Q",
+        "Liu T"
+      ],
+      "date": "2025-08-26",
+      "doi": "10.1007/s12539-025-00766-8",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40859107"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "IQSPred-PLM: An Interpretable Quorum Sensing Peptides Prediction Model Based on Protein Language Model.",
+      "url": "https://europepmc.org/article/MED/40859107",
+      "venue": "Interdisciplinary sciences, computational life sciences"
+    },
+    {
+      "abstract": "Background Mycophenolate mofetil (MMF) is widely used as an immunosuppressant in kidney transplantation. The pharmacokinetics (PK) of its active metabolite, mycophenolic acid (MPA), exhibit significant inter- and intra-individual variability. The early post-operative period is crucial for renal function recovery, and MPA exposure is linked to acute rejection. Due to the difficulty of implementing intensive sampling, limited sampling strategies (LSSs) are clinically important for MMF therapeutic drug monitoring for early-stage kidney transplant patients. Methods Demographic data, MPA plasma drug concentrations, and laboratory results for 137 patients in early period after kidney transplantation (within 30 days after surgery) were retrospectively analyzed. A population pharmacokinetic (PPK) model for MMF was developed using nonlinear mixed-effects modeling to assess the impact of covariates on the PK characteristics of MPA. Individualized initial dosing regimens were proposed based on Monte Carlo simulations. Using virtual population data, LSSs were developed through multiple linear regression (MLR), Bayesian estimation, and machine learning (ML). Results A two-compartment model with first-order absorption with a lag time and first-order elimination best described the PK data of MPA. Sex and weight were identified as significant covariates for CL/F and Vc/F, respectively. The recommended initial dose for male patients was 0.75 or 1 g twice daily, while for female patients, it was 0.5 or 0.75 g twice daily. The Bayesian estimation demonstrated the lowest prediction error among the LSSs approaches. Conclusion A PPK model and LSSs for MMF in Chinese kidney transplant patients in the early post-operative period were successfully developed, providing a valuable reference for MMF therapeutic drug monitoring.",
+      "authors": [
+        "Deng K",
+        "Liu J",
+        "Liu Y",
+        "Huang J",
+        "Xi Q",
+        "Yang G"
+      ],
+      "date": "2025-08-01",
+      "doi": "10.1111/ctr.70275",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40802254"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Population Pharmacokinetics and Limited Sampling Strategy of Mycophenolate Mofetil for Patients in Early Period After Kidney Transplantation.",
+      "url": "https://europepmc.org/article/MED/40802254",
+      "venue": "Clinical transplantation"
+    },
+    {
+      "abstract": "Background Population pharmacokinetic (PopPK) models are crucial for understanding drug behaviour across populations, yet traditional development is often labour-intensive and slow. This study demonstrates an automated, out-of-the-box approach for popPK model development, leveraging optimisation algorithms implemented using pyDarwin to efficiently handle a diverse range of extravascular drugs. Methods We proposed a generic model search space for drugs with extravascular administration and developed a penalty function to discourage over-parameterisation whilst ensuring plausible parameter values. Optimisation within the model search space was conducted using pyDarwin, employing Bayesian optimisation with a random forest surrogate combined with exhaustive local search. This approach was evaluated on one synthetic and four clinical datasets, with results compared to manually developed models. Results Here we show that the automated approach reliably identifies model structures comparable to manually developed expert models in less than 48 h on average (40-CPU, 40 GB environment) while evaluating fewer than 2.6% of the models in the search space. Ablation experiments demonstrate the importance of our penalty function in selecting plausible models, and the benefit of global search algorithms in avoiding local minima. Conclusions These results demonstrate that a single penalty function and model space can be used within the pyDarwin framework to automatically identify model structures for a diverse range of drugs. By reducing the configuration required at search setup, this approach simplifies the process, potentially making the technology more accessible to users. Adoption of automatic model search can accelerate popPK analysis, improve model quality, increase reproducibility, and reduce manual effort for modellers.",
+      "authors": [
+        "Richardson S",
+        "Irurzun Arana I",
+        "Nowojewski A",
+        "Zhou D",
+        "Leander J",
+        "Tang W",
+        "Dearden R",
+        "Gibbs M"
+      ],
+      "date": "2025-07-31",
+      "doi": "10.1038/s43856-025-01054-8",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40745042"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "A machine learning approach to population pharmacokinetic modelling automation.",
+      "url": "https://europepmc.org/article/MED/40745042",
+      "venue": "Communications medicine"
+    },
+    {
+      "abstract": "Selecting an appropriate population pharmacokinetic (PK) model for individual patients in model-informed precision dosing (MIPD) can be challenging, particularly in the absence of therapeutic drug monitoring (TDM) samples. We developed a machine learning (ML) model to guide individualized PK model selection for a priori MIPD of vancomycin based on routinely recorded patient characteristics. This retrospective analysis included 343,636 vancomycin TDM records, each from a distinct adult patient across 156 healthcare centers, along with a priori predictions from six PK models. A multi-label classification approach was applied, labeling PK model predictions based on whether they fell within 80%-125% of observed TDM values. Various modeling strategies were evaluated using XGBoost as the base algorithm, with binary relevance selected for the final model. At the prediction stage, PK models were ranked and averaged for each patient based on ML-predicted probabilities that predictions would fall within 80%-125% of the observed concentration. Selecting the highest ranked PK model for each patient and ML-based model averaging outperformed all single PK models, body mass index-based selection, and naive averaging. On a population level, these ML approaches resulted in more accurate predictions, a higher proportion of predictions within 80%-125% of observed vancomycin concentrations, and no systematic bias. Predictive performance declined with lower ML-assigned rankings, and selecting the lowest-ranked PK model for each patient resulted in worse performance than the worst-performing single PK model. By guiding the selection of appropriate models and avoiding less suitable ones, ML approaches for a priori MIPD may improve early dosing decisions.",
+      "authors": [
+        "van Os W",
+        "O'Jeanson A",
+        "Troisi C",
+        "Liu C",
+        "Brooks JT",
+        "Hughes JH",
+        "Tong DMH",
+        "Keizer RJ"
+      ],
+      "date": "2025-07-30",
+      "doi": "10.1002/psp4.70084",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Multicenter Study, Journal Article",
+      "source_ids": [
+        "MED:40734640"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing.",
+      "url": "https://europepmc.org/article/MED/40734640",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Background Cyclosporine (CsA), an immunosuppressant widely used in solid-organ transplantation, requires precise therapeutic drug monitoring to balance its efficacy and toxicity. The interdose area under the concentration-time curve (AUC 0-12 h ) is considered to be a superior metric of drug exposure compared with single concentration measurements but is, nevertheless, resource-intensive. Machine learning (ML) offers a novel approach for AUC prediction by leveraging patient-specific data without relying on traditional pharmacokinetic assumptions. This study intended to develop and evaluate XGBoost ML models for predicting CsA AUC 0-12 h using either two or three blood concentrations and to compare their performance against maximum a posteriori Bayesian estimation (MAP-BE) based on population pharmacokinetic models. Methods Using data from 2009 patients and 6360 dose-adjustment requests on the Immunosuppressant Bayesian Dose Adjustment website ( https://abis.chu-limoges.fr/ ), supervised ML models were trained with predictors including CsA concentrations at predefined time points (C0, C1, and C3), dose, age, and sampling time deviations. External validation was performed using rich pharmacokinetic profiles of kidney, heart, lung, and bone marrow transplant recipients. Results The three-sample XGBoost model achieved high accuracy in kidney transplant recipients (root mean square error [RMSE] Conclusions ML-based AUC prediction is a promising alternative to MAP-BE, particularly for kidney transplantation. Future studies should focus on expanding datasets, incorporating additional transplant types, and refining ML models for broader applicability.",
+      "authors": [
+        "Woillard JB",
+        "Labriffe M",
+        "Marquet P"
+      ],
+      "date": "2025-07-23",
+      "doi": "10.1097/ftd.0000000000001346",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40698833"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning.",
+      "url": "https://europepmc.org/article/MED/40698833",
+      "venue": "Therapeutic drug monitoring"
+    },
+    {
+      "abstract": "Objective This study aimed to improve treatment effectiveness in childhood-onset systemic lupus erythematosus (cSLE) by developing machine learning algorithms integrated with pharmacokinetic parameters to predict individualized tacrolimus dosing for optimized therapy. Methods Data from 480 trough tacrolimus concentrations in 86 cSLE patients over five years were analyzed. A nonlinear mixed-effects model was constructed to characterize the pharmacokinetics of tacrolimus. We screened 27 machine learning and deep learning models using 29 clinical variables to select the best-performing individualized dose prediction model. To further enhance prediction accuracy, the pharmacokinetic parameters were subsequently embedded within the optimized model. Model performance was assessed through the utilization of goodness-of-fit plots and diagnostic parameters such as objective function values and Shapley Additive exPlanations (SHAP) values. Results The pharmacokinetic profile of tacrolimus was best accurately characterized by a one-compartment model, which incorporated first-order kinetics for both absorption and elimination processes. The typical estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 3.52 L/h/70 kg and 124.84 L/70 kg, respectively. Among the 27 machine learning models, the XGBoost algorithm demonstrated the best prediction accuracy for tacrolimus dose (R 2 = 0.74, mean absolute error [MAE] = 0.016, mean square error [MSE] = 0.0005). After incorporating 11 key variables, including pharmacokinetic parameters (CL/F and V/F), into the model and performing hyperparameter turning, prediction accuracy significantly enhanced (R 2 = 0.80, MAE = 0.013, MSE = 0.0004). Two cSLE patients who received model-predicted doses achieved disease activity indexes ≤4 after treatment. Conclusion This study successfully developed an accurate machine learning-based model for predicting individualized tacrolimus dosing in cSLE patients. The integration of pharmacokinetic parameters significantly enhanced the model's accuracy, improving dosing precision and reducing overexposure, thus enhancing therapeutic efficacy.",
+      "authors": [
+        "Liang H",
+        "Xuan Q",
+        "Liu C",
+        "Wan A",
+        "You N",
+        "Xiao M",
+        "Zhang H",
+        "Han M",
+        "Wan G"
+      ],
+      "date": "2025-07-19",
+      "doi": "10.1016/j.compbiomed.2025.110782",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40684660"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling.",
+      "url": "https://europepmc.org/article/MED/40684660",
+      "venue": "Computers in biology and medicine"
+    },
+    {
+      "abstract": "Purpose This study develops and compares population pharmacokinetics (PopPK) models and machine learning methods, including neural networks, to predict steady-state trough concentrations in pediatric patients and provide improved dosing recommendations. Methods Valproic acid concentration data were collected from 490 pediatric epilepsy patients treated at Beijing Tiantan Hospital and Beijing Children's Hospital. We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques. The predictive accuracy of these models was then rigorously tested through external validation using the independent dataset from Beijing Children's Hospital. Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented. Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance. Transforming these models into multiple linear regression enhanced prediction accuracy. Moreover, when prior data was available, the MAPB method significantly boosted prediction performance. Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%. Conclusion This study explored model optimization strategies and compared machine learning and neural network models alongside traditional PopPK. It introduced an advanced method to predict drug concentrations and stable trough dosing regimens in pediatric epilepsy treatment, reducing the need for frequent, invasive blood tests in TDM. These improvements enhanced the efficacy and safety of valproic acid therapy for children, supporting the development of personalized treatment plans.",
+      "authors": [
+        "Chen J",
+        "Wang J",
+        "Li K",
+        "Wu Y",
+        "Wang Z",
+        "Guo J",
+        "Zhao Z",
+        "Feng W",
+        "Mei S"
+      ],
+      "date": "2025-07-05",
+      "doi": "10.1007/s00228-025-03874-y",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40617982"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?",
+      "url": "https://europepmc.org/article/MED/40617982",
+      "venue": "European journal of clinical pharmacology"
+    },
+    {
+      "abstract": "Keizer initially described Pirana as a workbench designed to streamline management of NONMEM modeling, visualization, and analysis. Initial versions of Pirana integrated tools included NONMEM and PSN. As new tools have become available to pharmacometricians, new capabilities have been added to Pirana. These capabilities include: Integration of the NLME engine via the R speaks NLME (RsNLME) package for developing NLME models Integration of a Shiny graphical interface for the construction of NLME models Integration of machine learning pyDarwin python package Integration of a Shiny interface for custom diagnostics including Goodness of Fit (GOF) plots, tables, Visual Predictive Check (VPC) and report shell generation Improved setup with support for parallel execution on a wide range of platforms In this tutorial, we present a full workflow demonstrating how to use Pirana to build, fit, post-process, and perform VPC on models using NONMEM and NLME. In addition, we show how to use the machine learning-driven pyDarwin package with Pirana to automatically search model structures, random effects, and covariate models.",
+      "authors": [
+        "Chen R",
+        "Sale M",
+        "Craig J",
+        "Tomashevskiy M",
+        "Mazur A",
+        "Hu S",
+        "Nieforth K"
+      ],
+      "date": "2025-07-04",
+      "doi": "10.1002/psp4.70067",
+      "publication_type": "other, Journal Article",
+      "source_ids": [
+        "MED:40613737"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Pirana and Integrated PMX Tools, a Workbench for NONMEM, NLME, pyDarwin, and RsNLME.",
+      "url": "https://europepmc.org/article/MED/40613737",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Covariate identification in population pharmacokinetic/pharmacodynamic (popPK/PD) modeling is a key component in model development that is often prone to bias, time-consuming, and even intractable when too many covariates or complicated models are being considered. Early work leveraging machine learning (ML) for covariate screening has shown promising results over traditional methods. In this work, we expand this effort by integrating explainable machine learning facilitated by Shapley Additive Explanations (SHAP) analysis and covariate uncertainty quantification as well as a formal framework for establishing statistical significance of covariate relationships. Finally, we have packaged the proposed methodology into a flexible set of functions (shap-cov) to support popPK/PD modeling covariate identification.",
+      "authors": [
+        "Brooks L",
+        "Harun R",
+        "Jin JY",
+        "Lu J"
+      ],
+      "date": "2025-07-02",
+      "doi": "10.1002/psp4.70044",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
+      "source_ids": [
+        "MED:40601439"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Shap-Cov: An Explainable Machine Learning Based Workflow for Rapid Covariate Identification in Population Modeling.",
+      "url": "https://europepmc.org/article/MED/40601439",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Population pharmacokinetic (PopPK) modelling is a fundamental tool for understanding drug behaviour across diverse patient populations and enabling personalized dosing strategies to improve therapeutic outcomes. A key challenge in PopPK analysis lies in identifying and modelling covariates that influence drug absorption, as these relationships are often complex and nonlinear. Traditional methods may fail to capture hidden patterns within the data. In this study, we propose a data-driven, model-free framework that integrates Variational Autoencoders (VAEs) deep learning model and LASSO regression to uncover key covariates from simulated tacrolimus pharmacokinetic (PK) profiles. The VAE compresses high-dimensional PK signals into a structured latent space, achieving accurate reconstruction with a mean absolute percentage error (MAPE) of 2.26%. LASSO regression is then applied to map patient-specific covariates to the latent space, enabling sparse feature selection through L1 regularization. This approach consistently identifies clinically relevant covariates for tacrolimus including SNP, age, albumin, and hemoglobin which are retained across the tested regularization strength levels, while effectively discarding non-informative features. The proposed VAE-LASSO methodology offers a scalable, interpretable, and fully data-driven solution for covariate selection, with promising applications in drug development and precision pharmacotherapy.Clinical relevance- This study provides a fully data-driven framework for identifying key patient-specific factors influencing pharmacokinetics. By leveraging multiple techniques, the proposed methodology is highly adaptable, and applicable to multiple population pharmacokinetic studies, with the potential to improve therapeutic drug monitoring and patient treatment efficacy.",
+      "authors": [
+        "Perazzolo D",
+        "Castellani C",
+        "Grisan E"
+      ],
+      "date": "2025-07-01",
+      "doi": "10.1109/embc58623.2025.11252862",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:41336851"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Uncovering Population PK Covariates from VAE-Generated Latent Spaces.",
+      "url": "https://europepmc.org/article/MED/41336851",
+      "venue": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International Conference"
+    },
+    {
+      "abstract": "Introduction Appropriate vancomycin trough levels are crucial for ensuring therapeutic efficacy while minimizing toxicity. The aim of this study is to identify clinical factors that influence the steady-state trough concentration of vancomycin and to establish a machine learning model for accurately predicting vancomycin's steady-state trough concentration. Methods This study is a single-center, retrospective, observational investigation involving 546 hospitalized patients who received intravenous vancomycin therapy. A total of 57 clinical indicators were collected from the subjects. Random forest models were constructed and validated using internal and external datasets, with performance compared to a Bayesian PopPK model. Results The random forest model incorporated a comprehensive set of clinical indicators, including creatinine clearance, C-reactive protein (CRP), B-type natriuretic peptide (BNP), high-density lipoprotein cholesterol (HDL-C), and daily vancomycin dose, collected 48 hours before steady-state concentration assessment. The random forest regression model achieved correlation coefficients of 0.94 for the training set and 0.81 for the test set, respectively. The random forest classification model demonstrated impressive accuracy rates of 0.99 for the training set and 0.84 for the test set. External validation further confirmed the model's generalization capabilities, with a predictive accuracy of 0.83, surpassing the Bayesian PopPK model's 0.57 accuracy. Discussion This study presents a robust random forest model that predicts vancomycin steady-state trough concentrations with high accuracy, offering a significant advantage over existing Bayesian PopPK model. By integrating diverse clinical indicators, the model supports personalized medicine approaches and has the potential to improve clinical outcomes by facilitating more precise dosing strategies.",
+      "authors": [
+        "Hu T",
+        "Ding X",
+        "Han F",
+        "An Z"
+      ],
+      "date": "2025-06-12",
+      "doi": "10.3389/fphar.2025.1549500",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40575776"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine learning approach for personalized vancomycin steady-state trough concentration prediction: a superior approach over Bayesian population pharmacokinetic model.",
+      "url": "https://europepmc.org/article/MED/40575776",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
+      "abstract": "This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics. Unlike standard models that rely on strong assumptions and often struggle with high-dimensional covariate relationships, NODEs offer a data-driven approach, learning differential equations directly from data while integrating covariates. To evaluate their performance, NODEs were applied to a real-world Dalbavancin pharmacokinetic dataset comprising 218 patients and compared against a two-compartment model and an NLME within a cross-validation framework, which ensures an evaluation of robustness. Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs. Their predictive performance was assessed both with and without covariates, while model explainability was analyzed using Shapley additive explanations (SHAP) values. Results show that, in the absence of covariates, NODEs performed comparably to state-of-the-art NLME models. However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy. SHAP analyses further revealed how NODEs leverage covariates in their predictions. These results establish NODEs as a promising alternative for pharmacokinetic modeling, particularly in capturing complex covariate interactions, even when dealing with sparse and small datasets, thus paving the way for improved drug concentration predictions and personalized treatment strategies in precision medicine.",
+      "authors": [
+        "Giacometti T",
+        "Rocchi E",
+        "Cojutti PG",
+        "Magnani F",
+        "Remondini D",
+        "Pea F",
+        "Castellani G"
+      ],
+      "date": "2025-06-05",
+      "doi": "10.3390/e27060602",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40566189"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data.",
+      "url": "https://europepmc.org/article/MED/40566189",
+      "venue": "Entropy (Basel, Switzerland)"
+    },
+    {
+      "abstract": "Advancements in large language models (LLMs) have suggested their potential utility for diverse pharmacometrics tasks. This study investigated the performance of LLM for generating structure diagrams, publication-ready tables, analysis reports, and conducting simulations using output files from pharmacometrics models. Forty-four NONMEM output files were obtained from the GitHub software repository. The performance of Claude 3.5 Sonnet (Claude) and ChatGPT 4o was compared with two other candidate LLMs: Gemini 1.5 Pro and Llama 3.2. Prompt engineering was conducted for Claude for pharmacometrics tasks such as generating model structure diagrams, parameter tables, and analysis reports. Simulations were conducted using ChatGPT. Claude Artifacts was used to visualize model structure diagrams, parameter tables, and analysis reports. A web-based R Shiny application was implemented to provide an accessible interface for automating pharmacometric model structure diagrams, parameter tables, and analysis reports tasks. Claude was selected for investigation following performance comparisons with ChatGPT 4o, Gemini 1.5 Pro, and Llama on model structure diagram and parameter table generation tasks. Claude successfully generated the model structure diagrams for 40 (90.9%) of the 44 NONMEM output files with the initial prompts, and the remaining were resolved with an additional prompt. Claude consistently generated accurate parameter summary tables and succinct model analysis reports. Modest variability in model structure diagrams generated for replicate prompts was identified. ChatGPT demonstrated simulation capabilities but revealed limitations with complex PK/PD models. LLMs have the potential to enhance key pharmacometrics modeling tasks. However, expert review of the results generated is essential.",
+      "authors": [
+        "Cha HJ",
+        "Choe K",
+        "Shin E",
+        "Ramanathan M",
+        "Han S"
+      ],
+      "date": "2025-06-04",
+      "doi": "10.1007/s10928-025-09982-7",
+      "publication_type": "Research Support, Non-U.S. Gov't, Research Support, U.S. Gov't, Non-P.H.S., Journal Article",
+      "source_ids": [
+        "MED:40464844",
+        "PPR:PPR1011419"
+      ],
+      "sources": [
+        "Europe PMC",
+        "Europe PMC"
+      ],
+      "title": "Leveraging large language models in pharmacometrics: evaluation of NONMEM output interpretation and simulation capabilities.",
+      "url": "https://europepmc.org/article/MED/40464844",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
+    {
+      "abstract": "Purpose This study explores the potential of generative AI models to aid experts in developing scripts for pharmacokinetic (PK) models, with a focus on constructing a two-compartment population PK model using data from Hosseini et al. Methods Generative AI tools ChatGPT v3.5, Gemini v2.0 Flash and Microsoft Copilot free could help PK professionals- even those without programming experience-learn the programming languages and skills needed for PK modeling. To evaluate these free AI tools, PK models were created in R Studio, covering key tasks in pharmacometrics and clinical pharmacology, including model descriptions, input requirements, results, and code generation, with a focus on reproducibility. Results ChatGPT demonstrated superior performance compared to Copilot and Gemini, highlighting strong foundational knowledge, advanced concepts, and practical skills, including PK code structure and syntax. Validation indicated high accuracy in estimated and simulated plots, with minimal differences in clearance (Cl) and volume of distribution (V c and V p) compared to reference values. The metrics showed absolute fractional error (AFE), absolute average fractional error (AAFE), and mean percentage error (MPE) values of 0.99, 1.14, and -1.85, respectively. Conclusion These results show that generative AI can effectively extract PK data from literature, build population PK models in R, and create interactive Shiny apps for visualization, with expert support.",
+      "authors": [
+        "Sánchez-Herrero S",
+        "Calvet Liñan L"
+      ],
+      "date": "2025-06-03",
+      "doi": "10.34172/apb.025.43852",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40922744"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Assessing the Potential of Generative Artificial Intelligence Models to Assist Experts in the Development of Pharmacokinetic Models.",
+      "url": "https://europepmc.org/article/MED/40922744",
+      "venue": "Advanced pharmaceutical bulletin"
+    },
+    {
+      "abstract": "Covariate selection in population pharmacokinetics modelling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modelling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of Neural Networks with Stochastic Gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate pre-selection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios. Graphical Abstract Study Highlights WHAT IS THE CURRENT KNOWLEDGE ON THE TOPIC? Covariate selection in population pharmacokinetics modelling is a crucial step in drug development and dosing determination. Traditionally, this process is conducted in a stepwise manner, which can be very time-consuming. Recently, fast machine learning (ML)-based methods for covariate selection have emerged in the literature, offering more efficient alternatives. WHAT QUESTION DID THIS STUDY ADDRESS? Can we use Neural Networks with Stochastic Gates, incorporating explicit penalization on the number of covariates, to select superior set of covariates compared to prior ML-based methods? WHAT DOES THIS STUDY ADD TO OUR KNOWLEDGE? Neural Networks with Stochastic Gates provide a reliable approach in accurately detecting covariates because they can effectively eliminate irrelevant covariates even in cases with high inter-covariates correlation. HOW MIGHT THIS CHANGE DRUG DISCOVERY, DEVELOPMENT, AND/OR THERAPEUTICS? This approach accelerates pharmacokinetic model development by significantly reducing the time required for covariate evaluation. Additionally, it allows for the screening of a wider set of covariates, potentially leading to fewer falsely missed covariates and better-quality models, a task that would be infeasible with traditional stepwise covariate modelling.",
+      "authors": [
+        "Kekic M",
+        "Stepanov O",
+        "Wang W",
+        "Richardson S",
+        "Olabode D",
+        "Traynor C",
+        "Dearden R",
+        "Zhou D",
+        "Tang W",
+        "Gibbs M",
+        "Nowojewski A"
+      ],
+      "date": "2025-06-01",
+      "doi": "10.1101/2025.05.28.656586",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1029163"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Stochastic gates for covariate selection in population pharmacokinetics modelling",
+      "url": "https://europepmc.org/article/PPR/PPR1029163",
+      "venue": ""
+    },
+    {
+      "abstract": "Purpose Voriconazole (VCZ) is a first-line treatment for invasive fungal disease, characterized by a narrow therapeutic window and significant inter-individual variability. It is primarily metabolized by the liver, the function of which declines with age. Pathological and physiological changes in elderly patients contribute to increased fluctuations in VCZ plasma concentrations. Thus, it is crucial to develop a model that accurately predicts the VCZ plasma concentrations in elderly patients. Patients and methods This retrospective study incorporated 31 features, including pharmacokinetic parameters derived from a population pharmacokinetic (PPK) model. Feature selection for machine learning (ML) models was performed using Recursive Feature Elimination with Cross-Validation (RFECV). Multiple algorithms were selected and combined into an ML ensemble model, which was interpreted using Shapley Additive exPlanations (SHAP). Results The predictive performance of ML models was significantly improved by incorporating pharmacokinetic parameters. The ensemble model consisting of XGBoost, random forest (RF), and CatBoost (1:1:8) achieved the highest R 2 (0.828) and was selected as the final ML model. Feature selection reduced the number of features from 31 to 9 without compromising predictive performance. The R 2 , mean absolute error (MAE), and mean squared error (MSE) of the external validation dataset were 0.633, 1.094, and 2.286, respectively. Conclusion Our study is the first to incorporate pharmacokinetic parameters into ML models to predict VCZ plasma concentrations in elderly patients. The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.",
+      "authors": [
+        "Liu R",
+        "Ma P",
+        "Chen D",
+        "Yu M",
+        "Xie L",
+        "Zhao L",
+        "Huang Y",
+        "Shang S",
+        "Chen Y"
+      ],
+      "date": "2025-05-17",
+      "doi": "10.2147/dddt.s495050",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40401163"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics.",
+      "url": "https://europepmc.org/article/MED/40401163",
+      "venue": "Drug design, development and therapy"
+    },
+    {
+      "abstract": "Recent research has increasingly focused on using machine learning for covariate selection in population pharmacokinetics (PPK) analysis. However, few studies have explored the prediction of plasma concentration profiles of drugs using nonlinear mixed-effect models combined with machine learning. This gap includes limited validation of prediction accuracy and applicability to diverse patient populations and dosing conditions. This study addresses these gaps by using remifentanil as a model drug and applying machine learning models to predict plasma concentration profiles based on virtual and real-world data. We created various training data sets for the virtual data by clustering based on the size and diversity of the test data set. Our results demonstrated high prediction accuracy for virtual and real-world data sets using Random Forest models. These results suggest that machine learning models are effective for large-scale data sets and real-world data with variable dosing times and amounts per patient. Considering the efficiency of machine learning, it offers a fit-for-purpose approach alongside traditional PPK methods, potentially enhancing future pharmacokinetic and pharmacodynamic studies.",
+      "authors": [
+        "Iwata H",
+        "Kageyama M",
+        "Handa K"
+      ],
+      "date": "2025-05-09",
+      "doi": "10.1021/acs.molpharmaceut.4c01431",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40345671"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine Learning Prediction and Validation of Plasma Concentration-Time Profiles.",
+      "url": "https://europepmc.org/article/MED/40345671",
+      "venue": "Molecular pharmaceutics"
+    },
+    {
+      "abstract": "Integrated understanding of pharmacokinetics (PK) and pharmacodynamics (PD) is a key aspect of successful drug discovery. Yet in generative computational drug design, the focus often lies on optimizing potency. Here we integrate PK property predictions in DrugEx, a generative drug design framework and we explore the generated compounds' PD through simulations with a quantitative systems pharmacology (QSP) model. Quantitative structure-property relationship models were developed to predict molecule PK (clearance, volume of distribution and unbound fraction) and affinity for the Adenosine A 2A R receptor (A 2A R), a drug target in immuno-oncology. These models were used to score compounds in a reinforcement learning framework to generate molecules with a specific PK profile and high affinity for the A 2A R. We predicted the expected tumor growth inhibition profiles using the QSP model for selected candidate molecules with varying PK and affinity profiles. We show that optimizing affinity to the A 2A R, while minimizing or maximizing a PK property, shifts the type of molecular scaffolds that are generated. The difference in physicochemical properties of the compounds with different predicted PK parameters was found to correspond with the differences observed in the PK data set. We demonstrated the use of the QSP model by simulating the effect of a broad range of compound properties on the predicted tumor volume. In conclusion, our proposed integrated workflow incorporating affinity predictions with PKPD may provide a template for the next generation of advanced generative computational drug design.",
+      "authors": [
+        "van den Maagdenberg HW",
+        "de Mol van Otterloo J",
+        "van Hasselt JGC",
+        "van der Graaf PH",
+        "van Westen GJP"
+      ],
+      "date": "2025-05-09",
+      "doi": "10.1021/acs.jcim.5c00107",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40343729"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Integrating Pharmacokinetics and Quantitative Systems Pharmacology Approaches in Generative Drug Design.",
+      "url": "https://europepmc.org/article/MED/40343729",
+      "venue": "Journal of chemical information and modeling"
+    },
+    {
+      "abstract": "Introduction Chinese fir (Cunninghamia lanceolata) is a crucial afforestation and timber species in southern China. Accurate estimation of its stand biomass is vital for forest resource assessment, ecological industry development, and ecosystem management. However, traditional biomass prediction methods often face limitations in terms of accuracy and efficiency, highlighting the need for more robust modeling approaches. Methods This study utilized data from 154 forest stands in Guangdong Province to develop biomass regression models that incorporate random effects and dummy variables. The models were based on airborne LiDAR-derived metrics. Among 41 highly correlated LiDAR variables, only two-5% cumulative height percentile and leaf area index-were retained in the final model. Results The results revealed that the logistic mixed-effects model was the most effective for estimating leaf biomass, while the empirical mixed-effects model was better suited for other biomass components. Nonlinear models outperformed linear models, with the nonlinear mixed-effects model (incorporating stand age as a random effect) achieving the highest predictive accuracy. Furthermore, machine learning techniques further improved model performance (R² = 0.855 to 0.939). Validation with independent test samples confirmed the robustness and reliability of the nonlinear mixed-effects model. Discussion This study highlights the effectiveness of airborne LiDAR data in providing efficient and precise estimates of stand biomass. It also emphasizes the significant role of stand developmental stages in biomass modeling. The findings contribute to the development of a rigorous and scalable framework for large-scale artificial forest biomass estimation, which has important implications for forest resource monitoring, ecological industry development, and ecosystem management strategies.",
+      "authors": [
+        "Zhu X",
+        "Huang T",
+        "Liu Z",
+        "Bai L",
+        "Yang Y",
+        "Ye J",
+        "Wang Q",
+        "Sharma RP",
+        "Fu L"
+      ],
+      "date": "2025-05-08",
+      "doi": "10.3389/fpls.2025.1532138",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40406727"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Developing a generalized nonlinear mixed-effects biomass model at stand-level under different age conditions for Chinese fir based on LiDAR and ground survey data in southern China.",
+      "url": "https://europepmc.org/article/MED/40406727",
+      "venue": "Frontiers in plant science"
+    },
+    {
+      "abstract": "Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient. The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study conducted at the Pharmacology department in Fattouma Bourguiba's hospital in Monastir, Tunisia. We included patients who had undergone kidney transplantation in the Nephrology department of Monastir Hospital and received the Tac immunosuppressant protocol, for whom routine therapeutic drug monitoring (TDM) during the early post-transplant period (0-3 months) had been performed in our department. Results A total of 187 Tac predose concentration (C 0 ) issued from 56 adult renal transplant patients were included in the present study. The whole population was divided into building (n = 39 patients, 119 C 0 ) and validation groups (n = 17 patients, 68 C 0 ). In the validation dataset, the RMSE was 0.76, 0.19, and 0.01, and the MAE was 0.55, 0.36, and 0.06, respectively, for the Bayesian approach, XGBoost, and LSTM. Conclusion Our study demonstrates that the LSTM approach outperforms XGBoost and Bayesian estimation in predicting tacrolimus concentration in Tunisian kidney transplant patients. Implementing TDM-based LSTM models during the first PT 3 months in clinical practice can significantly enhance patient outcomes and prevent acute kidney rejection in this population.",
+      "authors": [
+        "Ben-Fredj N",
+        "Dridi I",
+        "Dridi I",
+        "Ben-Yahya N",
+        "Aouam K"
+      ],
+      "date": "2025-05-08",
+      "doi": "10.1007/s13318-025-00942-7",
+      "publication_type": "Comparative Study, Journal Article",
+      "source_ids": [
+        "MED:40338501"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Comparison of Machine Learning Algorithms and Bayesian Estimation in Predicting Tacrolimus Concentration in Tunisian Kidney Transplant Patients During the Early Post-Transplant Period.",
+      "url": "https://europepmc.org/article/MED/40338501",
+      "venue": "European journal of drug metabolism and pharmacokinetics"
+    },
+    {
+      "abstract": "ABSTRACT Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn’s disease. We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and -0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of -0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared to Bayesian estimation alone. This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization. Key points A new hybrid model combining population pharmacokinetic model-based Bayesian estimation and machine learning significantly improved the accuracy of infliximab concentration predictions in young adult and pediatric patients with Crohn’s disease. The developed hybrid model can facilitate infliximab individualized dosing by accounting for changes in clinical conditions and patient-specific factors that the conventional Bayesian estimation approach may not address, and can be integrated into precision dosing dashboards, such as RoadMAB, for real-world clinical application. This study indicates that model predictive accuracy can be enhanced by combining the Bayesian method with machine learning, even with a relatively small amount of clinical data. This is particularly encouraging for specific populations, such as pediatric patients, where obtaining rich clinical data is challenging.",
+      "authors": [
+        "Irie K",
+        "Minar P",
+        "Reifenberg J",
+        "Boyle BM",
+        "Noe JD",
+        "Hyams JS",
+        "Mizuno T"
+      ],
+      "date": "2025-05-07",
+      "doi": "10.1101/2025.05.01.651780",
+      "publication_type": "Preprint",
+      "source_ids": [
+        "PPR:PPR1014574"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Hybrid Population PK-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn’s Disease",
+      "url": "https://europepmc.org/article/PPR/PPR1014574",
+      "venue": ""
+    },
+    {
+      "abstract": "Precision dosing aims to optimize and customize pharmacological treatment at the individual level. The integration of pharmacometric models with Reinforcement Learning (RL) algorithms is currently under investigation to support the personalization of adaptive dosing therapies. In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients. PV is a chronic myeloproliferative disease with an overproduction of platelets (PLT), white blood cells (WBC), and hematocrit (HCT). The therapeutic goal is to simultaneously normalize the levels of these efficacy/safety biomarkers, thus inducing a complete hematological response (CHR). An RL algorithm, Q-Learning (QL), was integrated with a PK-PD model describing the givinostat effect on PLT, WBC, and HCT to derive both an adaptive dosing protocol (QL pop -agent) for the whole population and personalized dosing strategies by coupling a specific QL-agent to each patient (QL ind -agents). QL pop -agent learned a general adaptive dosing protocol that achieved a similar CHR rate (77% vs. 83%) when compared to the actual givinostat clinical protocol on 10 simulated populations. Treatment efficacy and safety increased with a deeper dosing personalization by QL ind -agents. These QL-based patient-specific adaptive dosing rules outperformed both the clinical protocol and QL pop -agent by reaching the CHR in 93% of the test patients and completely avoided severe toxicities during the whole treatment period. These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.",
+      "authors": [
+        "De Carlo A",
+        "Tosca EM",
+        "Magni P"
+      ],
+      "date": "2025-05-05",
+      "doi": "10.1002/psp4.70012",
+      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
+      "source_ids": [
+        "MED:40325832"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera.",
+      "url": "https://europepmc.org/article/MED/40325832",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
+      "abstract": "Two recent papers offer contrasting perspectives on integrating Quantitative Systems Pharmacology (QSP) and Artificial Intelligence/Machine Learning (AI/ML): one views QSP as the primary driver using AI/ML to enhance computational tasks, while the other argues that AI/ML should provide an alternative mechanistic framework. Rather than perpetuate this tension, we used Large Language Models (LLMs) to examine both papers in two tests-one comparing their core arguments and another probing which methodology LLM should take precedence. Repeating each test multiple times with an identical and neutral prompt, the LLM revealed that each perspective suits specific stages of the drug development pipeline. QSP offers mechanistic rigor and regulatory clarity, and AI/ML excels in high-dimensional data analysis and exploratory modeling. A hybrid approach might best serve researchers and decision-makers, especially when harmonizing data-driven insights with mechanistic integrity. This exercise also highlights the potential of LLMs as promising tools for synthesizing complex information, offering an arguably less biased viewpoint that can trigger deeper discussion from the broader community seeking to align QSP and AI/ML in model-informed drug development (MIDD). By combining our human expertise with AI-driven analyses, we hope to further discuss with the scientific community how QSP and AI/ML-and the synergy between them-can drive innovation in therapeutic discovery and optimization.",
+      "authors": [
+        "Androulakis IP",
+        "Cheng L",
+        "Cho CR",
+        "Zhang T"
+      ],
+      "date": "2025-05-05",
+      "doi": "10.1007/s10928-025-09976-5",
+      "publication_type": "Comparative Study, Journal Article",
+      "source_ids": [
+        "MED:40325298"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Leveraging large language models to compare perspectives on integrating QSP and AI/ML.",
+      "url": "https://europepmc.org/article/MED/40325298",
+      "venue": "Journal of pharmacokinetics and pharmacodynamics"
+    },
+    {
+      "abstract": "Bipolar disorder (BD) is a chronic psychiatric illness characterized by recurrent manic and depressive episodes, leading to significant impairment. Lithium remains a key treatment for BD, particularly in relapse prevention. However, its narrow therapeutic range and inter-individual pharmacokinetic variability necessitate careful dosing. This study aims to establish a suitable platform to investigate the pharmacokinetics of lithium in hospitalized patients with BD in Mashhad, Iran, to optimize therapeutic use and minimize toxicity. This cross-sectional study was conducted at Ibn Sina Hospital, Mashhad, between 2016 and 2022. Hospitalized patients diagnosed with BD and receiving lithium therapy were included. Clinical, demographic, and laboratory data were collected, including lithium serum levels, renal function parameters, and co-administered medications. Advanced data pre-processing techniques were applied to ensure accuracy and facilitate future pharmacokinetic modeling. A total of 701 patients (53.1% male, mean age: 38.0 SD: ± 12.2 years) with 795 hospitalization episodes were analyzed. The mean lithium serum concentration was 0.65 ± 0.30 mEq/L. Thyroid disorders (5.9%) and diabetes (5.6%) were the most common comorbidities. The mean duration of hospitalization during lithium treatment was 21.7 ± 10.8 days. Sodium valproate was the most frequently co-prescribed medication (n = 553), followed by lorazepam (n = 468) and risperidone (n = 458). Lithium dosing showed considerable variability, emphasizing the need for individualized therapeutic strategies. This study provides valuable insights into lithium pharmacokinetics in Iranian BD patients. The findings highlight the necessity of personalized dosing approaches to enhance efficacy and reduce adverse effects. Future research should incorporate pharmacokinetic modeling and machine learning to refine lithium therapy.",
+      "authors": [
+        "Khakshoor MM",
+        "Pariz N",
+        "Askari VR",
+        "Fayyazi Bordbar MR",
+        "Honari S",
+        "Shirazinia M",
+        "Baradaran Rahimi V",
+        "Naghibi Sistani MB"
+      ],
+      "date": "2025-05-03",
+      "doi": "10.1038/s41598-025-99698-y",
+      "publication_type": "research-article, Journal Article",
+      "source_ids": [
+        "MED:40319121"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Designing and characterizing first Iranian study evaluating serum levels of lithium in patients for population pharmacokinetics (FIRELOLIPOP): baseline and first report.",
+      "url": "https://europepmc.org/article/MED/40319121",
+      "venue": "Scientific reports"
+    },
+    {
+      "abstract": "Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.",
+      "authors": [
+        "Podina L",
+        "Ghodsi A",
+        "Kohandel M"
+      ],
+      "date": "2025-04-17",
+      "doi": "10.1007/s11095-025-03858-8",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40244511"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks.",
+      "url": "https://europepmc.org/article/MED/40244511",
+      "venue": "Pharmaceutical research"
+    },
+    {
+      "abstract": "Background and purpose Glioblastoma (GBM), the most frequent and aggressive brain tumour in adults, is associated with a dismal prognostic despite intensive treatment involving surgery, radiotherapy and temozolomide (TMZ)-based chemotherapy. The initial or acquired resistance of GBM to TMZ appeals for precision medicine approaches to the design of novel efficient combination pharmacotherapies. Such investigation needs to account for the overexpression of the O6-methylguanine-DNA methyl-transferase (MGMT) repair enzyme which is responsible for TMZ resistance in patients. Experimental approach A comprehensive approach combining quantitative systems pharmacology (QSP) models and machine learning (ML) was undertaken to design TMZ-based drug combinations circumventing the initial resistance to the alkylating agent. Key results A QSP model representing TMZ cellular pharmacokinetics-pharmacodynamics and dysregulated pathways in GBM was developed and validated using multi-type time- and dose-resolved datasets, available in control or MGMT-overexpressing cells. In silico drug screening and subsequent experimental validation identified a strategy to re-sensitise TMZ-resistant cells consisting in combining TMZ with inhibitors of the base excision repair and of homologous recombination. Using ML, functional signatures of response to such optimal multi-agent therapy were derived to assist decision-making in patients. Conclusion and implications We successfully demonstrated the relevance of combined QSP and ML to design efficient drug combinations re-sensitising glioblastoma cells initially resistant to TMZ. The developed framework may further serve to identify personalised therapies and administration schedules by extending it to account for additional patient-specific altered pathways and whole-body features.",
+      "authors": [
+        "Corridore S",
+        "Verreault M",
+        "Martin H",
+        "Delobel T",
+        "Carrère C",
+        "Idbaih A",
+        "Ballesta A"
+      ],
+      "date": "2025-04-14",
+      "doi": "10.1111/bph.70027",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40229949"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Circumventing glioblastoma resistance to temozolomide through optimal drug combinations designed by systems pharmacology and machine learning.",
+      "url": "https://europepmc.org/article/MED/40229949",
+      "venue": "British journal of pharmacology"
+    },
+    {
+      "abstract": "Aims The uncertainty about the efficacy and safety of currently used azithromycin dosing regimens in children warrants individualized therapy. The area under the plasma concentration-time curve over 24 h (AUC 0-24 ) of azithromycin correlates best with its effectiveness. The aim of this study was to evaluate the ability of machine learning (ML) to predict the AUC 0-24 of azithromycin in children with community-acquired pneumonia. Methods Various ML algorithms were used to build ML models based on simulated pharmacokinetic profiles from a published population pharmacokinetic model. A priori-ML model predicted AUC 0-24 using patients' characteristics and after the trough concentration (C 0 ) became available, a posteriori-ML model was built for improved prediction. Statistical methods and pharmacodynamic (PD) evaluation methods were used to evaluate the ML model's predictive accuracy in a real-world study. ML-optimized doses were evaluated by calculating the probability of PD target attainment in virtual trials compared with guideline-recommended doses. Results The AUC 0-24 can be predicted by priori-ML model using the CatBoost algorithm with dosing regimen and two covariates as predictors (weight, alanine aminotransferase) before initial administration. A posteriori-ML model using CatBoost algorithm was built with adding C 0 as a predictor. In real-world validation, the mean absolute prediction error of the priori-ML and posteriori-ML models was less than 30%. The accuracy (determining whether the PD target is met) of the priori-ML model was 76.3%, whereas that of the posteriori-ML model increased to 90.4%. Conclusions ML models were established to predict the AUC 0-24 of azithromycin successfully and could be used for individual dose adjustment in children before treatment and after obtaining C 0 .",
+      "authors": [
+        "Tang BH",
+        "Fu SM",
+        "Tian LY",
+        "Zhang XF",
+        "Yao BF",
+        "Zhang W",
+        "Wu YE",
+        "Zhou Y",
+        "Wang YK",
+        "Hao GX",
+        "van den Anker J",
+        "Zheng Y",
+        "Zhao W"
+      ],
+      "date": "2025-04-03",
+      "doi": "10.1002/bcp.70050",
+      "publication_type": "Journal Article",
+      "source_ids": [
+        "MED:40181615"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Machine learning approach for dosage individualization of azithromycin in children with community-acquired pneumonia.",
+      "url": "https://europepmc.org/article/MED/40181615",
+      "venue": "British journal of clinical pharmacology"
+    },
+    {
+      "abstract": "Introduction Valganciclovir, a prodrug of ganciclovir (GCV), is used to prevent cytomegalovirus infection after transplantation, with doses adjusted based on creatinine clearance (CrCL) to target GCV AUC0-24 h of 40-60 mg*h/L. This sometimes leads to overexposure or underexposure. This study aimed to train, test and validate machine learning (ML) algorithms for accurate GCV AUC0-24 h estimation in solid organ transplantation. Methods We simulated patients for different dosing regimen (900 mg/24 h, 450 mg/24 h, 450 mg/48 h, 450 mg/72 h) using two literature population pharmacokinetic models, allocating 75% for training and 25% for testing. Simulations from two other literature models and real patients provided validation datasets. Three independent sets of ML algorithms were created for each regimen, incorporating CrCL and 2 or 3 concentrations. We evaluated their performance on testing and validation datasets and compared them with MAP-BE. Results XGBoost using 3 concentrations generated the most accurate predictions. In testing dataset, they exhibited a relative bias of -0.02 to 1.5% and a relative RMSE of 2.6 to 8.5%. In the validation dataset, a relative bias of 1.5 to 5.8% and 8.9 to 16.5%, and a relative RMSE of 8.5 to 9.6% and 10.7% to 19.7% were observed depending on the model used. XGBoost algorithms outperformed or matched MAP-BE, showing enhanced generalization and robustness in their estimates. When applied to real patients' data, algorithms using 2 concentrations showed relative bias of 1.26% and relative RMSE of 12.68%. Conclusions XGBoost ML models accurately estimated GCV AUC0-24 h from limited samples and CrCL, providing a strategy for optimized therapeutic drug monitoring.",
+      "authors": [
+        "Sayadi H",
+        "Fromage Y",
+        "Labriffe M",
+        "Billat PA",
+        "Codde C",
+        "Arraki Zava S",
+        "Marquet P",
+        "Woillard JB"
+      ],
+      "date": "2025-02-28",
+      "doi": "10.1208/s12248-025-01034-9",
+      "publication_type": "Research Support, Non-U.S. Gov't, Validation Study, Journal Article",
+      "source_ids": [
+        "MED:40021573"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning.",
+      "url": "https://europepmc.org/article/MED/40021573",
+      "venue": "The AAPS journal"
+    },
+    {
+      "abstract": "Disease activity scores are efficacy endpoints in clinical trials of inflammatory bowel disease (IBD) therapies. Crohn's disease activity index (CDAI), Mayo endoscopic score (MES) and Mayo score are frequently used in clinical trials. They rely on either the physician's observation of the inflammatory state of the patient's gastrointestinal tissue alone or combined with the patient's subjective evaluation of general wellbeing. Given the importance of these scores in evaluating the efficacy of drug treatment and disease severity, there has been interest in developing a computational approach to reliably predict these scores. A promising approach is using mechanistic models such as quantitative systems pharmacology (QSP) which simulate the mechanisms of the disease and its modulation by the drug pharmacology. However, extending QSP model simulations to clinical score predictions has been challenging due to the limited availability of gut biopsy measurements and the subjective nature of some of the evaluation criteria for these scores that cannot be described using mechanistic relationships. In this perspective, we examine details of IBD disease activity scores and current progress in building predictive models for these scores (such as biomarkers for disease activity). Then, we propose a method to leverage simulated markers of inflammation from a QSP model to predict IBD clinical scores using a machine learning algorithm. We will demonstrate how this combined approach can be used to (1) explore mechanistic insights underlying clinical observations; and (2) simulate novel therapeutic strategies that could potentially improve clinical outcomes.",
+      "authors": [
+        "Shim JV",
+        "Rehberg M",
+        "Wagenhuber B",
+        "van der Graaf PH",
+        "Chung DW"
+      ],
+      "date": "2025-02-25",
+      "doi": "10.3389/fphar.2025.1479666",
+      "publication_type": "brief-report, Journal Article",
+      "source_ids": [
+        "MED:40070575"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Combining mechanistic modeling with machine learning as a strategy to predict inflammatory bowel disease clinical scores.",
+      "url": "https://europepmc.org/article/MED/40070575",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
+      "abstract": "A variety of classical machine learning (ML) approaches has been developed over the past decade aiming to individualize drug dosages based on measured plasma concentrations. However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition. In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework. MMPK-SciML allows to estimate PopPK parameters and their inter-individual variability (IIV) using multimodal covariate data of each patient and does not require assumptions about the underlying covariate relationships. A dataset of 541 fluorouracil (5FU) plasma concentrations as example for an intravenously administered drug and a dataset of 302 sunitinib and its active metabolite concentrations each as example for an orally administered drug were used for analysis. Whereas classical ML models were not able to describe the data sufficiently, MMPK-SciML allowed us to obtain accurate drug plasma concentration predictions for test patients. In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models. For sunitinib, we observed slightly less accurate drug concentration predictions compared to PopPK. Overall, MMPK-SciML has shown promising results and should therefore be further investigated as a valuable alternative to classical PopPK modeling, provided there is sufficient training data.",
+      "authors": [
+        "Valderrama D",
+        "Teplytska O",
+        "Koltermann LM",
+        "Trunz E",
+        "Schmulenson E",
+        "Fritsch A",
+        "Jaehde U",
+        "Fröhlich H"
+      ],
+      "date": "2025-02-07",
+      "doi": "10.1002/psp4.13313",
+      "publication_type": "Comparative Study, research-article, Journal Article",
+      "source_ids": [
+        "MED:39921335"
+      ],
+      "sources": [
+        "Europe PMC"
+      ],
+      "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations.",
+      "url": "https://europepmc.org/article/MED/39921335",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
     }
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-26"
+  "through": "2026-10-27"
 }
