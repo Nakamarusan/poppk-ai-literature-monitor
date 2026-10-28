@@ -1,33 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-27 10:02 JST",
+  "last_scan_at": "2026-10-28 09:54 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 4,
-      "completed_windows": 2,
-      "eligible_candidates": 50,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 511,
-      "repeated_pages": 0,
-      "requests": 1,
-      "screening": {
-        "duplicates": 2,
-        "eligible_unreported": 47,
-        "excluded_publication_type": 29,
-        "missing_abstract": 1,
-        "missing_method_evidence": 12,
-        "missing_pk_evidence": 1,
-        "retrieved": 92,
-        "unique": 90
-      },
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-27 10:02 JST",
+    "archive": {},
+    "checked_at": "2026-10-28 09:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/80"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/81"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -47,28 +27,104 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2464,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 17,
-      "missing_pk_evidence": 2629,
-      "retrieved": 5250,
-      "unique": 2786
+      "already_reported": 5,
+      "duplicates": 2462,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 132,
+      "missing_ai_evidence": 20,
+      "missing_pk_evidence": 2631,
+      "retrieved": 5251,
+      "unique": 2789
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 64,
-  "new_count": 19,
+  "article_count": 65,
+  "new_count": 20,
   "historical_count": 45,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Large language models (LLMs) and autonomous agents can synthesise scientific arguments and construct computational models rapidly, but fluency is not scientific validity. Neither expert status, human oversight, multi-agent consensus, publication nor patent protection substitutes for independent empirical testing. Experiments themselves can conflict because of bias, measurement error or genuine biological heterogeneity. We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions. Credibility is evaluated for a specified context of use, not assigned globally to people or algorithms. The framework spans target validation, translational pharmacology, dosing, clinical development and regulatory assessment, illustrated by a proposed IQANOVA ATLAS AI–quantitative systems pharmacology (AI-QSP) workflow. We extend the framework to regulatory agencies using AI agents: scientific assessment and model credibility are distinct from the legally binding act of medicine authorisation. Inspired by Juvenal's question of who checks the guardians and the historical Rabkrin inspection debate, we propose auditable agent roles, explicit legal decision rights, independent scrutiny and routes for challenge. A synthetic SBML/SED-ML/COMBINE package with provenance ontologies illustrates reproducible reporting without claiming biological validation. A prospective benchmark is proposed to test scientific quality, regulatory decision loss, agent independence and appeal outcomes. The final question—whether, when and under whose authority an AI could make binding decisions—remains unresolved.",
+      "authors": [
+        "Igor Goryanin"
+      ],
+      "doi": "10.20944/preprints202610.2468.v1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [],
+          "method": [
+            "framework",
+            "benchmark",
+            "workflow",
+            "architecture",
+            "validation"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [
+            "framework",
+            "benchmark",
+            "workflow",
+            "architecture",
+            "validation"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "llm"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.20944/preprints202610.2468.v1",
+      "publication_date": "2026-10-26",
+      "reported_at": "2026-10-28 09:54 JST",
+      "score": {
+        "components": {
+          "ai": 20,
+          "intersection": 0,
+          "method": 10,
+          "pk": 10,
+          "total": 40
+        },
+        "priority": "Medium",
+        "total": 40
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions.",
+        "new_capability": "The final question—whether, when and under whose authority an AI could make binding decisions—remains unresolved.",
+        "prior_limitation": "Large language models (LLMs) and autonomous agents can synthesise scientific arguments and construct computational models rapidly, but fluency is not scientific validity.",
+        "significance": "The framework spans target validation, translational pharmacology, dosing, clinical development and regulatory assessment, illustrated by a proposed IQANOVA ATLAS AI–quantitative systems pharmacology (AI-QSP) workflow.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Who—or What—Should We Trust in the LLM Era?",
+      "url": "https://doi.org/10.20944/preprints202610.2468.v1",
+      "venue": "[]"
+    },
     {
       "abstract": "Objective This study aimed to improve treatment effectiveness in childhood-onset systemic lupus erythematosus (cSLE) by developing machine learning algorithms integrated with pharmacokinetic parameters to predict individualized tacrolimus dosing for optimized therapy. Methods Data from 480 trough tacrolimus concentrations in 86 cSLE patients over five years were analyzed. A nonlinear mixed-effects model was constructed to characterize the pharmacokinetics of tacrolimus. We screened 27 machine learning and deep learning models using 29 clinical variables to select the best-performing individualized dose prediction model. To further enhance prediction accuracy, the pharmacokinetic parameters were subsequently embedded within the optimized model. Model performance was assessed through the utilization of goodness-of-fit plots and diagnostic parameters such as objective function values and Shapley Additive exPlanations (SHAP) values. Results The pharmacokinetic profile of tacrolimus was best accurately characterized by a one-compartment model, which incorporated first-order kinetics for both absorption and elimination processes. The typical estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 3.52 L/h/70 kg and 124.84 L/70 kg, respectively. Among the 27 machine learning models, the XGBoost algorithm demonstrated the best prediction accuracy for tacrolimus dose (R 2 = 0.74, mean absolute error [MAE] = 0.016, mean square error [MSE] = 0.0005). After incorporating 11 key variables, including pharmacokinetic parameters (CL/F and V/F), into the model and performing hyperparameter turning, prediction accuracy significantly enhanced (R 2 = 0.80, MAE = 0.013, MSE = 0.0004). Two cSLE patients who received model-predicted doses achieved disease activity indexes ≤4 after treatment. Conclusion This study successfully developed an accurate machine learning-based model for predicting individualized tacrolimus dosing in cSLE patients. The integration of pharmacokinetic parameters significantly enhanced the model's accuracy, improving dosing precision and reducing overexposure, thus enhancing therapeutic efficacy.",
       "authors": [

@@ -1,32 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-10-27",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/80",
+  "last_delivery_date_jst": "2026-10-28",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/81",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 4,
-      "completed_windows": 2,
-      "eligible_candidates": 50,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 511,
-      "repeated_pages": 0,
-      "requests": 1,
-      "screening": {
-        "duplicates": 2,
-        "eligible_unreported": 47,
-        "excluded_publication_type": 29,
-        "missing_abstract": 1,
-        "missing_method_evidence": 12,
-        "missing_pk_evidence": 1,
-        "retrieved": 92,
-        "unique": 90
-      },
-      "split_windows": 0
-    },
-    "checked_at": "2026-10-27 10:02 JST",
+    "archive": {},
+    "checked_at": "2026-10-28 09:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/80"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/81"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -46,22 +26,23 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2464,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 17,
-      "missing_pk_evidence": 2629,
-      "retrieved": 5250,
-      "unique": 2786
+      "already_reported": 5,
+      "duplicates": 2462,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 132,
+      "missing_ai_evidence": 20,
+      "missing_pk_evidence": 2631,
+      "retrieved": 5251,
+      "unique": 2789
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-27",
-  "last_success_utc": "2026-10-27T01:02:52.751572+00:00",
+  "last_selection_date_jst": "2026-10-28",
+  "last_success_utc": "2026-10-28T00:54:10.722409+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -310,6 +291,12 @@
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
     },
+    "doi:10.20944/preprints202610.2468.v1": {
+      "doi": "10.20944/preprints202610.2468.v1",
+      "selected_at": "2026-10-28T00:54:10.722409+00:00",
+      "selection_type": "new",
+      "title": "Who—or What—Should We Trust in the LLM Era?"
+    },
     "doi:10.21037/qims-2025-1474": {
       "doi": "10.21037/qims-2025-1474",
       "selected_at": "2026-10-24T00:11:18.927364+00:00",
@@ -482,6 +469,12 @@
       "notified_at": "2026-09-03T23:44:24.145261+00:00",
       "selection_type": "new",
       "title": "Artificial Intelligence in the Fight Against Antimicrobial Resistance: Applications in Diagnosis, Susceptibility Prediction, Precision Dosing, and Antibiotic Discovery"
+    },
+    "source:crossref:10.20944/preprints202610.2468.v1": {
+      "doi": "10.20944/preprints202610.2468.v1",
+      "selected_at": "2026-10-28T00:54:10.722409+00:00",
+      "selection_type": "new",
+      "title": "Who—or What—Should We Trust in the LLM Era?"
     },
     "source:crossref:10.64898/2026.08.25.26361215": {
       "doi": "10.64898/2026.08.25.26361215",
@@ -1080,6 +1073,12 @@
       "notified_at": "2026-08-29T03:26:59.536032+00:00",
       "title": "Towards a ML-powered Multiscale Computational Platform Based on QSP and PBPK Modeling to Support the Development of mRNA-based Therapies"
     },
+    "title:9e073dc266dbcbf2599348da": {
+      "doi": "10.20944/preprints202610.2468.v1",
+      "selected_at": "2026-10-28T00:54:10.722409+00:00",
+      "selection_type": "new",
+      "title": "Who—or What—Should We Trust in the LLM Era?"
+    },
     "title:a1a9b973a05c5a580cc9625c": {
       "doi": "10.1208/s12248-026-01321-z",
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
@@ -1237,22 +1236,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-27"
+    "arxiv": "2026-10-28"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
+      "last_attempt_utc": "2026-10-28T00:54:10.722409+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
+      "last_attempt_utc": "2026-10-28T00:54:10.722409+00:00",
       "records": 5246,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-27T01:02:52.751572+00:00",
-      "records": 4,
+      "last_attempt_utc": "2026-10-28T00:54:10.722409+00:00",
+      "records": 5,
       "status": "ok"
     }
   }
