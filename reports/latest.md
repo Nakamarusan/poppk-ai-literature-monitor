@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-10-28 09:54 JST
+Run time: 2026-10-29 10:28 JST
 Source retrieval: **Complete**
-New articles: **1**
-Archive selections: **0** (unreported papers published since 2020)
+New articles: **0**
+Archive selections: **1** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5246, Europe PMC 5, arXiv 0
+Recent-search records: Crossref 5208, Europe PMC 4, arXiv 0
 
 ## Selection and search coverage
 
@@ -24,41 +24,43 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5251
-- unique: 2789
-- duplicates: 2462
-- already reported: 5
-- excluded publication type: 132
-- missing pk evidence: 2631
-- missing ai evidence: 20
-- eligible unreported: 1
+- retrieved: 5212
+- unique: 2742
+- duplicates: 2470
+- already reported: 4
+- excluded publication type: 131
+- missing pk evidence: 2588
+- missing ai evidence: 19
+
+Archive candidates available: 49; unvisited/unfinished windows: 530; completed windows: 2.
+Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Who—or What—Should We Trust in the LLM Era?](https://doi.org/10.20944/preprints202610.2468.v1)
+## 1. [Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations.](https://europepmc.org/article/MED/39921335)
 
-- **Selection:** New article
-- **Authors:** Igor Goryanin
-- **Venue/source:** []
-- **Publication date:** 2026-10-26
-- **DOI:** 10.20944/preprints202610.2468.v1
+- **Selection:** Archive article (2020+ fallback)
+- **Authors:** Valderrama D, Teplytska O, Koltermann LM, Trunz E, Schmulenson E, Fritsch A, Jaehde U, Fröhlich H
+- **Venue/source:** CPT: pharmacometrics & systems pharmacology
+- **Publication date:** 2025-02-07
+- **DOI:** 10.1002/psp4.13313
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Large language models (LLMs) and autonomous agents can synthesise scientific arguments and construct computational models rapidly, but fluency is not scientific validity.
-- **Methodological contribution:** We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions.
-- **What becomes possible:** The final question—whether, when and under whose authority an AI could make binding decisions—remains unresolved.
-- **Why it matters:** The framework spans target validation, translational pharmacology, dosing, clinical development and regulatory assessment, illustrated by a proposed IQANOVA ATLAS AI–quantitative systems pharmacology (AI-QSP) workflow.
+- **Prior limitation:** However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition.
+- **Methodological contribution:** In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework.
+- **What becomes possible:** In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models.
+- **Why it matters:** Not stated in the available abstract.
 
-- **Relevance score:** 40/100 — PK 10, AI 20, method 10, title intersection 0
+- **Relevance score:** 100/100 — PK 30, AI 30, method 30, title intersection 10
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Large language models (LLMs) and autonomous agents can synthesise scientific arguments and construct computational models rapidly, but fluency is not scientific validity. Neither expert status, human oversight, multi-agent consensus, publication nor patent protection substitutes for independent empirical testing. Experiments themselves can conflict because of bias, measurement error or genuine biological heterogeneity. We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions. Credibility is evaluated for a specified context of use, not assigned globally to people or algorithms. The framework spans target validation, translational pharmacology, dosing, clinical development and regulatory assessment, illustrated by a proposed IQANOVA ATLAS AI–quantitative systems pharmacology (AI-QSP) workflow. We extend the framework to regulatory agencies using AI agents: scientific assessment and model credibility are distinct from the legally binding act of medicine authorisation. Inspired by Juvenal's question of who checks the guardians and the historical Rabkrin inspection debate, we propose auditable agent roles, explicit legal decision rights, indep…
-- **PopPK/pharmacometrics terms:** quantitative systems pharmacology, qsp
-- **AI/ML terms:** llm
-- **Method terms:** framework, benchmark, workflow, architecture, validation
+- **Abstract:** A variety of classical machine learning (ML) approaches has been developed over the past decade aiming to individualize drug dosages based on measured plasma concentrations. However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition. In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework. MMPK-SciML allows to estimate PopPK parameters and their inter-individual variability (IIV) using multimodal covariate data of each patient and does not require assumptions about the underlying covariate relationships. A dataset of 541 fluorouracil (5FU) plasma concentrations as example for an intravenously administered drug and a dataset of 302 sunitinib and its active metabolite concentrations each as example for an orally administered drug were used for analysis. Whereas classical ML models were not able to describe the data sufficiently, MMPK-SciML allowed us to obtain accurate drug plasma concentration predictions for test patients. In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models. For sunitinib, we observed slightly less accurate drug concentration predictions…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic, poppk
+- **AI/ML terms:** machine learning, scientific machine learning
+- **Method terms:** framework
 
 </details>
 

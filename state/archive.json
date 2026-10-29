@@ -1,26 +1,17 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-27",
+  "last_check": "2026-10-29",
   "last_run": {
-    "cached_candidates_before": 4,
+    "cached_candidates_before": 49,
     "completed_windows": 2,
-    "eligible_candidates": 50,
+    "eligible_candidates": 49,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 511,
+    "pending_windows": 530,
     "repeated_pages": 0,
-    "requests": 1,
-    "screening": {
-      "duplicates": 2,
-      "eligible_unreported": 47,
-      "excluded_publication_type": 29,
-      "missing_abstract": 1,
-      "missing_method_evidence": 12,
-      "missing_pk_evidence": 1,
-      "retrieved": 92,
-      "unique": 90
-    },
+    "requests": 0,
+    "screening": {},
     "split_windows": 0
   },
   "pending": [
@@ -3600,6 +3591,139 @@
       "since": "2026-10-27",
       "source": "crossref",
       "until": "2026-10-27"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-28",
+      "source": "europe_pmc",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-28",
+      "source": "crossref",
+      "until": "2026-10-29"
     }
   ],
   "pool": [
@@ -4188,32 +4312,6 @@
       "venue": "Therapeutic drug monitoring"
     },
     {
-      "abstract": "Objective This study aimed to improve treatment effectiveness in childhood-onset systemic lupus erythematosus (cSLE) by developing machine learning algorithms integrated with pharmacokinetic parameters to predict individualized tacrolimus dosing for optimized therapy. Methods Data from 480 trough tacrolimus concentrations in 86 cSLE patients over five years were analyzed. A nonlinear mixed-effects model was constructed to characterize the pharmacokinetics of tacrolimus. We screened 27 machine learning and deep learning models using 29 clinical variables to select the best-performing individualized dose prediction model. To further enhance prediction accuracy, the pharmacokinetic parameters were subsequently embedded within the optimized model. Model performance was assessed through the utilization of goodness-of-fit plots and diagnostic parameters such as objective function values and Shapley Additive exPlanations (SHAP) values. Results The pharmacokinetic profile of tacrolimus was best accurately characterized by a one-compartment model, which incorporated first-order kinetics for both absorption and elimination processes. The typical estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 3.52 L/h/70 kg and 124.84 L/70 kg, respectively. Among the 27 machine learning models, the XGBoost algorithm demonstrated the best prediction accuracy for tacrolimus dose (R 2 = 0.74, mean absolute error [MAE] = 0.016, mean square error [MSE] = 0.0005). After incorporating 11 key variables, including pharmacokinetic parameters (CL/F and V/F), into the model and performing hyperparameter turning, prediction accuracy significantly enhanced (R 2 = 0.80, MAE = 0.013, MSE = 0.0004). Two cSLE patients who received model-predicted doses achieved disease activity indexes ≤4 after treatment. Conclusion This study successfully developed an accurate machine learning-based model for predicting individualized tacrolimus dosing in cSLE patients. The integration of pharmacokinetic parameters significantly enhanced the model's accuracy, improving dosing precision and reducing overexposure, thus enhancing therapeutic efficacy.",
-      "authors": [
-        "Liang H",
-        "Xuan Q",
-        "Liu C",
-        "Wan A",
-        "You N",
-        "Xiao M",
-        "Zhang H",
-        "Han M",
-        "Wan G"
-      ],
-      "date": "2025-07-19",
-      "doi": "10.1016/j.compbiomed.2025.110782",
-      "publication_type": "Journal Article",
-      "source_ids": [
-        "MED:40684660"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling.",
-      "url": "https://europepmc.org/article/MED/40684660",
-      "venue": "Computers in biology and medicine"
-    },
-    {
       "abstract": "Purpose This study develops and compares population pharmacokinetics (PopPK) models and machine learning methods, including neural networks, to predict steady-state trough concentrations in pediatric patients and provide improved dosing recommendations. Methods Valproic acid concentration data were collected from 490 pediatric epilepsy patients treated at Beijing Tiantan Hospital and Beijing Children's Hospital. We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques. The predictive accuracy of these models was then rigorously tested through external validation using the independent dataset from Beijing Children's Hospital. Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented. Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance. Transforming these models into multiple linear regression enhanced prediction accuracy. Moreover, when prior data was available, the MAPB method significantly boosted prediction performance. Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%. Conclusion This study explored model optimization strategies and compared machine learning and neural network models alongside traditional PopPK. It introduced an advanced method to predict drug concentrations and stable trough dosing regimens in pediatric epilepsy treatment, reducing the need for frequent, invasive blood tests in TDM. These improvements enhanced the efficacy and safety of valproic acid therapy for children, supporting the development of personalized treatment plans.",
       "authors": [
         "Chen J",
@@ -4775,5 +4873,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-27"
+  "through": "2026-10-29"
 }

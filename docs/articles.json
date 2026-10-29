@@ -1,13 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-28 09:54 JST",
+  "last_scan_at": "2026-10-29 10:28 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-10-28 09:54 JST",
+    "archive": {
+      "cached_candidates_before": 49,
+      "completed_windows": 2,
+      "eligible_candidates": 49,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 530,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-10-29 10:28 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/81"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/82"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -27,29 +38,108 @@
       }
     },
     "recent_screening": {
-      "already_reported": 5,
-      "duplicates": 2462,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 132,
-      "missing_ai_evidence": 20,
-      "missing_pk_evidence": 2631,
-      "retrieved": 5251,
-      "unique": 2789
+      "already_reported": 4,
+      "duplicates": 2470,
+      "excluded_publication_type": 131,
+      "missing_ai_evidence": 19,
+      "missing_pk_evidence": 2588,
+      "retrieved": 5212,
+      "unique": 2742
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 65,
+  "article_count": 66,
   "new_count": 20,
-  "historical_count": 45,
+  "historical_count": 46,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "A variety of classical machine learning (ML) approaches has been developed over the past decade aiming to individualize drug dosages based on measured plasma concentrations. However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition. In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework. MMPK-SciML allows to estimate PopPK parameters and their inter-individual variability (IIV) using multimodal covariate data of each patient and does not require assumptions about the underlying covariate relationships. A dataset of 541 fluorouracil (5FU) plasma concentrations as example for an intravenously administered drug and a dataset of 302 sunitinib and its active metabolite concentrations each as example for an orally administered drug were used for analysis. Whereas classical ML models were not able to describe the data sufficiently, MMPK-SciML allowed us to obtain accurate drug plasma concentration predictions for test patients. In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models. For sunitinib, we observed slightly less accurate drug concentration predictions compared to PopPK. Overall, MMPK-SciML has shown promising results and should therefore be further investigated as a valuable alternative to classical PopPK modeling, provided there is sufficient training data.",
+      "authors": [
+        "Valderrama D",
+        "Teplytska O",
+        "Koltermann LM",
+        "Trunz E",
+        "Schmulenson E",
+        "Fritsch A",
+        "Jaehde U",
+        "Fröhlich H"
+      ],
+      "doi": "10.1002/psp4.13313",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "scientific machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "scientific machine learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning",
+            "scientific machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.13313",
+      "publication_date": "2025-02-07",
+      "reported_at": "2026-10-29 10:28 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 100
+        },
+        "priority": "High",
+        "total": 100
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework.",
+        "new_capability": "In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models.",
+        "prior_limitation": "However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations.",
+      "url": "https://europepmc.org/article/MED/39921335",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
     {
       "abstract": "Large language models (LLMs) and autonomous agents can synthesise scientific arguments and construct computational models rapidly, but fluency is not scientific validity. Neither expert status, human oversight, multi-agent consensus, publication nor patent protection substitutes for independent empirical testing. Experiments themselves can conflict because of bias, measurement error or genuine biological heterogeneity. We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions. Credibility is evaluated for a specified context of use, not assigned globally to people or algorithms. The framework spans target validation, translational pharmacology, dosing, clinical development and regulatory assessment, illustrated by a proposed IQANOVA ATLAS AI–quantitative systems pharmacology (AI-QSP) workflow. We extend the framework to regulatory agencies using AI agents: scientific assessment and model credibility are distinct from the legally binding act of medicine authorisation. Inspired by Juvenal's question of who checks the guardians and the historical Rabkrin inspection debate, we propose auditable agent roles, explicit legal decision rights, independent scrutiny and routes for challenge. A synthetic SBML/SED-ML/COMBINE package with provenance ontologies illustrates reproducible reporting without claiming biological validation. A prospective benchmark is proposed to test scientific quality, regulatory decision loss, agent independence and appeal outcomes. The final question—whether, when and under whose authority an AI could make binding decisions—remains unresolved.",
       "authors": [
@@ -112,7 +202,8 @@
       },
       "selection_type": "new",
       "sources": [
-        "Crossref"
+        "Crossref",
+        "Europe PMC"
       ],
       "summary": {
         "contribution": "We propose an evidence-to-decision trust architecture for drug research and model-informed drug development (MIDD) that links verifiable primary observations, provenance and uncertainty to competing mechanistic hypotheses, adversarial AI review, discriminating experiments and accountable decisions.",
