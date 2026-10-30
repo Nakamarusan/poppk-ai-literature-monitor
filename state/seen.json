@@ -1,23 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-10-29",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/82",
+  "last_delivery_date_jst": "2026-10-30",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/83",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-10-30T01:29:48.472875+00:00",
+      "message": "HTTP 429: Rate exceeded."
+    }
+  },
   "last_run": {
     "archive": {
-      "cached_candidates_before": 49,
+      "cached_candidates_before": 48,
       "completed_windows": 2,
-      "eligible_candidates": 49,
+      "eligible_candidates": 48,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 530,
+      "pending_windows": 549,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-29 10:28 JST",
+    "checked_at": "2026-10-30 10:29 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/82"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/83"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -29,21 +35,16 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2470,
-      "excluded_publication_type": 131,
-      "missing_ai_evidence": 19,
-      "missing_pk_evidence": 2588,
-      "retrieved": 5212,
-      "unique": 2742
+      "duplicates": 2446,
+      "excluded_publication_type": 135,
+      "missing_ai_evidence": 18,
+      "missing_pk_evidence": 2565,
+      "retrieved": 5168,
+      "unique": 2722
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-10-29",
-  "last_success_utc": "2026-10-29T01:28:52.021385+00:00",
+  "last_selection_date_jst": "2026-10-30",
+  "last_success_utc": "2026-10-30T01:29:48.472875+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -216,6 +217,12 @@
       "selected_at": "2026-10-11T00:37:47.090142+00:00",
       "selection_type": "historical",
       "title": "Development and validation of a machine learning model for individualised meropenem dosing in CRRT patients."
+    },
+    "doi:10.1038/s43856-025-01054-8": {
+      "doi": "10.1038/s43856-025-01054-8",
+      "selected_at": "2026-10-30T01:29:48.472875+00:00",
+      "selection_type": "historical",
+      "title": "A machine learning approach to population pharmacokinetic modelling automation."
     },
     "doi:10.1097/ftd.0000000000001540": {
       "doi": "10.1097/ftd.0000000000001540",
@@ -514,6 +521,12 @@
       "selected_at": "2026-10-27T01:02:52.751572+00:00",
       "selection_type": "historical",
       "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
+    },
+    "source:europe pmc:med:40745042": {
+      "doi": "10.1038/s43856-025-01054-8",
+      "selected_at": "2026-10-30T01:29:48.472875+00:00",
+      "selection_type": "historical",
+      "title": "A machine learning approach to population pharmacokinetic modelling automation."
     },
     "source:europe pmc:med:41521293": {
       "doi": "10.1186/s13321-026-01152-2",
@@ -1060,6 +1073,12 @@
       "selection_type": "new",
       "title": "AI-integrated human-relevant alternatives to animal experimentation in drug development: Toward a predictive translational ecosystem, from in vitro and in silico models to clinical and real-world evidence."
     },
+    "title:81ec86023ecea3cdf6d5238f": {
+      "doi": "10.1038/s43856-025-01054-8",
+      "selected_at": "2026-10-30T01:29:48.472875+00:00",
+      "selection_type": "historical",
+      "title": "A machine learning approach to population pharmacokinetic modelling automation."
+    },
     "title:850e5863b9d0238d349d1290": {
       "doi": "10.1002/prp2.70241",
       "selected_at": "2026-09-30T16:02:12.388200+00:00",
@@ -1264,21 +1283,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-10-29"
+    "arxiv": "2026-10-30"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-10-29T01:28:52.021385+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-10-30T01:29:48.472875+00:00",
+      "message": "HTTP 429: Rate exceeded.",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-10-29T01:28:52.021385+00:00",
-      "records": 5208,
+      "last_attempt_utc": "2026-10-30T01:29:48.472875+00:00",
+      "records": 5164,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-10-29T01:28:52.021385+00:00",
+      "last_attempt_utc": "2026-10-30T01:29:48.472875+00:00",
       "records": 4,
       "status": "ok"
     }

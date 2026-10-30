@@ -1,6 +1,89 @@
 {
   "articles": [
     {
+      "abstract": "Background Population pharmacokinetic (PopPK) models are crucial for understanding drug behaviour across populations, yet traditional development is often labour-intensive and slow. This study demonstrates an automated, out-of-the-box approach for popPK model development, leveraging optimisation algorithms implemented using pyDarwin to efficiently handle a diverse range of extravascular drugs. Methods We proposed a generic model search space for drugs with extravascular administration and developed a penalty function to discourage over-parameterisation whilst ensuring plausible parameter values. Optimisation within the model search space was conducted using pyDarwin, employing Bayesian optimisation with a random forest surrogate combined with exhaustive local search. This approach was evaluated on one synthetic and four clinical datasets, with results compared to manually developed models. Results Here we show that the automated approach reliably identifies model structures comparable to manually developed expert models in less than 48 h on average (40-CPU, 40 GB environment) while evaluating fewer than 2.6% of the models in the search space. Ablation experiments demonstrate the importance of our penalty function in selecting plausible models, and the benefit of global search algorithms in avoiding local minima. Conclusions These results demonstrate that a single penalty function and model space can be used within the pyDarwin framework to automatically identify model structures for a diverse range of drugs. By reducing the configuration required at search setup, this approach simplifies the process, potentially making the technology more accessible to users. Adoption of automatic model search can accelerate popPK analysis, improve model quality, increase reproducibility, and reduce manual effort for modellers.",
+      "authors": [
+        "Richardson S",
+        "Irurzun Arana I",
+        "Nowojewski A",
+        "Zhou D",
+        "Leander J",
+        "Tang W",
+        "Dearden R",
+        "Gibbs M"
+      ],
+      "doi": "10.1038/s43856-025-01054-8",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [],
+          "method": [
+            "framework",
+            "model development",
+            "automated"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "automation",
+            "framework",
+            "model development",
+            "automated"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "automation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1038/s43856-025-01054-8",
+      "publication_date": "2025-07-31",
+      "reported_at": "2026-10-30 10:29 JST",
+      "score": {
+        "components": {
+          "ai": 20,
+          "intersection": 10,
+          "method": 30,
+          "pk": 30,
+          "total": 90
+        },
+        "priority": "High",
+        "total": 90
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study demonstrates an automated, out-of-the-box approach for popPK model development, leveraging optimisation algorithms implemented using pyDarwin to efficiently handle a diverse range of extravascular drugs.",
+        "new_capability": "Conclusions These results demonstrate that a single penalty function and model space can be used within the pyDarwin framework to automatically identify model structures for a diverse range of drugs.",
+        "prior_limitation": "Adoption of automatic model search can accelerate popPK analysis, improve model quality, increase reproducibility, and reduce manual effort for modellers.",
+        "significance": "This approach was evaluated on one synthetic and four clinical datasets, with results compared to manually developed models.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A machine learning approach to population pharmacokinetic modelling automation.",
+      "url": "https://europepmc.org/article/MED/40745042",
+      "venue": "Communications medicine"
+    },
+    {
       "abstract": "A variety of classical machine learning (ML) approaches has been developed over the past decade aiming to individualize drug dosages based on measured plasma concentrations. However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition. In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework. MMPK-SciML allows to estimate PopPK parameters and their inter-individual variability (IIV) using multimodal covariate data of each patient and does not require assumptions about the underlying covariate relationships. A dataset of 541 fluorouracil (5FU) plasma concentrations as example for an intravenously administered drug and a dataset of 302 sunitinib and its active metabolite concentrations each as example for an orally administered drug were used for analysis. Whereas classical ML models were not able to describe the data sufficiently, MMPK-SciML allowed us to obtain accurate drug plasma concentration predictions for test patients. In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models. For sunitinib, we observed slightly less accurate drug concentration predictions compared to PopPK. Overall, MMPK-SciML has shown promising results and should therefore be further investigated as a valuable alternative to classical PopPK modeling, provided there is sufficient training data.",
       "authors": [
         "Valderrama D",
@@ -5232,24 +5315,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-29 10:28 JST",
+  "last_scan_at": "2026-10-30 10:29 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 49,
+      "cached_candidates_before": 48,
       "completed_windows": 2,
-      "eligible_candidates": 49,
+      "eligible_candidates": 48,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 530,
+      "pending_windows": 549,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-29 10:28 JST",
+    "checked_at": "2026-10-30 10:29 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/82"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/83"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -5261,21 +5344,16 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2470,
-      "excluded_publication_type": 131,
-      "missing_ai_evidence": 19,
-      "missing_pk_evidence": 2588,
-      "retrieved": 5212,
-      "unique": 2742
+      "duplicates": 2446,
+      "excluded_publication_type": 135,
+      "missing_ai_evidence": 18,
+      "missing_pk_evidence": 2565,
+      "retrieved": 5168,
+      "unique": 2722
     },
     "selected_count": 1,
     "selection_status": "selected",

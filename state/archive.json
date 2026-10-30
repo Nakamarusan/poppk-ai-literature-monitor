@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-29",
+  "last_check": "2026-10-30",
   "last_run": {
-    "cached_candidates_before": 49,
+    "cached_candidates_before": 48,
     "completed_windows": 2,
-    "eligible_candidates": 49,
+    "eligible_candidates": 48,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 530,
+    "pending_windows": 549,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -3724,6 +3724,139 @@
       "since": "2026-10-28",
       "source": "crossref",
       "until": "2026-10-29"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-10-30",
+      "source": "europe_pmc",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-10-30",
+      "source": "crossref",
+      "until": "2026-10-30"
     }
   ],
   "pool": [
@@ -4844,34 +4977,9 @@
       "title": "Combining mechanistic modeling with machine learning as a strategy to predict inflammatory bowel disease clinical scores.",
       "url": "https://europepmc.org/article/MED/40070575",
       "venue": "Frontiers in pharmacology"
-    },
-    {
-      "abstract": "A variety of classical machine learning (ML) approaches has been developed over the past decade aiming to individualize drug dosages based on measured plasma concentrations. However, the interpretability of these models is challenging as they do not incorporate information on pharmacokinetic (PK) drug disposition. In this work we compare drug plasma concentraton predictions of well-known population PK (PopPK) modeling with classical machine learning models and a newly proposed scientific machine learning (MMPK-SciML) framework. MMPK-SciML allows to estimate PopPK parameters and their inter-individual variability (IIV) using multimodal covariate data of each patient and does not require assumptions about the underlying covariate relationships. A dataset of 541 fluorouracil (5FU) plasma concentrations as example for an intravenously administered drug and a dataset of 302 sunitinib and its active metabolite concentrations each as example for an orally administered drug were used for analysis. Whereas classical ML models were not able to describe the data sufficiently, MMPK-SciML allowed us to obtain accurate drug plasma concentration predictions for test patients. In case of 5FU, goodness-of-fit shows that the MMPK-SciML approach predicts drug plasma concentrations more accurately than PopPK models. For sunitinib, we observed slightly less accurate drug concentration predictions compared to PopPK. Overall, MMPK-SciML has shown promising results and should therefore be further investigated as a valuable alternative to classical PopPK modeling, provided there is sufficient training data.",
-      "authors": [
-        "Valderrama D",
-        "Teplytska O",
-        "Koltermann LM",
-        "Trunz E",
-        "Schmulenson E",
-        "Fritsch A",
-        "Jaehde U",
-        "Fröhlich H"
-      ],
-      "date": "2025-02-07",
-      "doi": "10.1002/psp4.13313",
-      "publication_type": "Comparative Study, research-article, Journal Article",
-      "source_ids": [
-        "MED:39921335"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations.",
-      "url": "https://europepmc.org/article/MED/39921335",
-      "venue": "CPT: pharmacometrics & systems pharmacology"
     }
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-29"
+  "through": "2026-10-30"
 }
