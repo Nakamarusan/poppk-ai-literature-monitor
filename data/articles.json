@@ -1,6 +1,87 @@
 {
   "articles": [
     {
+      "abstract": "Pharmacometrics, as the core discipline of model-informed drug development paradigm, quantitatively characterizes drug exposure-response dynamics using mathematical models. However, its traditional methodology, represented by nonlinear mixed-effects modeling, is inherently resource-intensive and often struggles to fully capture complex biological variability. The rapid advancement of artificial intelligence technologies offers a transformative data-driven paradigm, providing superior efficiency and predictive accuracy. Yet, the artificial intelligence approaches suffer from the “black box” constraint. This review detailed the deep, complementary integration of artificial intelligence and pharmacometrics, demonstrating how this synergy is necessary to satisfy the complex, triple demands of accuracy, efficiency, and regulatory explainability. We systematically explored innovative applications across the entire pharmacometrics workflow, including model optimization, covariate screening, virtual population generation, etc. In each section, we also presented specific application cases or workflows. Furthermore, we outlined current challenges in the implementation of artificial intelligence and proposed a vision for interdisciplinary and cross-institutional collaboration.",
+      "authors": [
+        "Luo J",
+        "Yu J",
+        "Cai Z",
+        "Xu L",
+        "Lv Y",
+        "Zheng Q",
+        "Li L"
+      ],
+      "doi": "10.22541/au.176330731.18429951/v1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "methodology",
+            "optimization",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "nonlinear mixed effects"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "methodology",
+            "optimization",
+            "workflow"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "nonlinear mixed effects"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.22541/au.176330731.18429951/v1",
+      "publication_date": "2025-11-16",
+      "reported_at": "2026-10-31 10:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "However, its traditional methodology, represented by nonlinear mixed-effects modeling, is inherently resource-intensive and often struggles to fully capture complex biological variability.",
+        "significance": "Pharmacometrics, as the core discipline of model-informed drug development paradigm, quantitatively characterizes drug exposure-response dynamics using mathematical models.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Innovative Applications of Artificial Intelligence Technology in Pharmacometrics",
+      "url": "https://europepmc.org/article/PPR/PPR1194960",
+      "venue": "Europe PMC"
+    },
+    {
       "abstract": "Background Population pharmacokinetic (PopPK) models are crucial for understanding drug behaviour across populations, yet traditional development is often labour-intensive and slow. This study demonstrates an automated, out-of-the-box approach for popPK model development, leveraging optimisation algorithms implemented using pyDarwin to efficiently handle a diverse range of extravascular drugs. Methods We proposed a generic model search space for drugs with extravascular administration and developed a penalty function to discourage over-parameterisation whilst ensuring plausible parameter values. Optimisation within the model search space was conducted using pyDarwin, employing Bayesian optimisation with a random forest surrogate combined with exhaustive local search. This approach was evaluated on one synthetic and four clinical datasets, with results compared to manually developed models. Results Here we show that the automated approach reliably identifies model structures comparable to manually developed expert models in less than 48 h on average (40-CPU, 40 GB environment) while evaluating fewer than 2.6% of the models in the search space. Ablation experiments demonstrate the importance of our penalty function in selecting plausible models, and the benefit of global search algorithms in avoiding local minima. Conclusions These results demonstrate that a single penalty function and model space can be used within the pyDarwin framework to automatically identify model structures for a diverse range of drugs. By reducing the configuration required at search setup, this approach simplifies the process, potentially making the technology more accessible to users. Adoption of automatic model search can accelerate popPK analysis, improve model quality, increase reproducibility, and reduce manual effort for modellers.",
       "authors": [
         "Richardson S",
@@ -5315,24 +5396,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-10-30 10:29 JST",
+  "last_scan_at": "2026-10-31 10:21 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 48,
+      "cached_candidates_before": 47,
       "completed_windows": 2,
-      "eligible_candidates": 48,
+      "eligible_candidates": 47,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 549,
+      "pending_windows": 568,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-30 10:29 JST",
+    "checked_at": "2026-10-31 10:21 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/83"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/84"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -5344,16 +5425,22 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2446,
-      "excluded_publication_type": 135,
-      "missing_ai_evidence": 18,
-      "missing_pk_evidence": 2565,
-      "retrieved": 5168,
-      "unique": 2722
+      "already_reported": 2,
+      "duplicates": 2408,
+      "excluded_publication_type": 132,
+      "missing_ai_evidence": 13,
+      "missing_method_evidence": 1,
+      "missing_pk_evidence": 2596,
+      "retrieved": 5152,
+      "unique": 2744
     },
     "selected_count": 1,
     "selection_status": "selected",
