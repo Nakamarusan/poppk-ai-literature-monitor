@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-10-31",
+  "last_check": "2026-11-01",
   "last_run": {
-    "cached_candidates_before": 47,
+    "cached_candidates_before": 46,
     "completed_windows": 2,
-    "eligible_candidates": 47,
+    "eligible_candidates": 46,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 568,
+    "pending_windows": 587,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -3990,6 +3990,139 @@
       "since": "2026-10-31",
       "source": "crossref",
       "until": "2026-10-31"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-01",
+      "source": "europe_pmc",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-01",
+      "source": "crossref",
+      "until": "2026-11-01"
     }
   ],
   "pool": [
@@ -4186,30 +4319,6 @@
       "title": "Opportunities for AI-based Model-informed Drug Development: A Comparative Analysis of NONMEM and AI-based Models for Population Pharmacokinetic Prediction.",
       "url": "https://europepmc.org/article/MED/41254220",
       "venue": "The AAPS journal"
-    },
-    {
-      "abstract": "Pharmacometrics, as the core discipline of model-informed drug development paradigm, quantitatively characterizes drug exposure-response dynamics using mathematical models. However, its traditional methodology, represented by nonlinear mixed-effects modeling, is inherently resource-intensive and often struggles to fully capture complex biological variability. The rapid advancement of artificial intelligence technologies offers a transformative data-driven paradigm, providing superior efficiency and predictive accuracy. Yet, the artificial intelligence approaches suffer from the “black box” constraint. This review detailed the deep, complementary integration of artificial intelligence and pharmacometrics, demonstrating how this synergy is necessary to satisfy the complex, triple demands of accuracy, efficiency, and regulatory explainability. We systematically explored innovative applications across the entire pharmacometrics workflow, including model optimization, covariate screening, virtual population generation, etc. In each section, we also presented specific application cases or workflows. Furthermore, we outlined current challenges in the implementation of artificial intelligence and proposed a vision for interdisciplinary and cross-institutional collaboration.",
-      "authors": [
-        "Luo J",
-        "Yu J",
-        "Cai Z",
-        "Xu L",
-        "Lv Y",
-        "Zheng Q",
-        "Li L"
-      ],
-      "date": "2025-11-16",
-      "doi": "10.22541/au.176330731.18429951/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1194960"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Innovative Applications of Artificial Intelligence Technology in Pharmacometrics",
-      "url": "https://europepmc.org/article/PPR/PPR1194960",
-      "venue": ""
     },
     {
       "abstract": "Model-informed precision dosing (MIPD) utilizes pharmacokinetic/pharmacodynamic (PK/PD) models to optimize drug therapy. However, conventional MIPD often requires manual simulation and regimen selection, which are time-consuming and demand specialized expertise. Reinforcement learning (RL), in which an agent learns optimal decisions through iterative interactions with an environment, offers a scalable and automated alternative. In this study, we developed a model-informed Deep Q-Network (DQN) to personalize infliximab dosing for patients with Crohn's disease. The DQN was trained in a simulation environment incorporating a population PK model, inter-individual variability, and assay error. Virtual patients with randomly and independently sampled covariates from log-normal distributions were used to explore dosing strategies at Infusions 1, 3, and 4. Doses ranged from 1 to 10 mg/kg at Infusion 1 and from 1 to 20 mg/kg thereafter, with intervals of 4-12 weeks. The reward function prioritized achieving trough concentrations of 18-26 μg/mL before Infusion 3 and 5-10 μg/mL before Infusions 4 and 5, while penalizing overtreatment and additional infusions. The DQN policy converged after 80,000 episodes, yielding target attainment probabilities (PTAs) of 92.9% and 98.4% at Infusions 4 and 5, respectively, in 1000 virtual patients. High doses (11-20 mg/kg) were selected in only 0.2% of cases. At Infusion 4, 66.8% of patients received an 8-week interval, and 57.3% at Infusion 5. Retrospective real-world validation showed that patients whose actual doses matched DQN recommendations had trough levels significantly closer to target ranges. These findings support the feasibility of using DQN-based agents to enhance and automate infliximab individualized dosing in pediatric populations.",
@@ -5089,5 +5198,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-10-31"
+  "through": "2026-11-01"
 }

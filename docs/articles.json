@@ -1,30 +1,30 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-10-31 10:21 JST",
+  "last_scan_at": "2026-11-01 09:36 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 47,
+      "cached_candidates_before": 46,
       "completed_windows": 2,
-      "eligible_candidates": 47,
+      "eligible_candidates": 46,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 568,
+      "pending_windows": 587,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-10-31 10:21 JST",
+    "checked_at": "2026-11-01 09:36 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/84"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/85"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 36
+        "pages": 35
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -39,13 +39,13 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2408,
+      "duplicates": 2382,
       "excluded_publication_type": 132,
-      "missing_ai_evidence": 13,
+      "missing_ai_evidence": 14,
       "missing_method_evidence": 1,
       "missing_pk_evidence": 2596,
-      "retrieved": 5152,
-      "unique": 2744
+      "retrieved": 5127,
+      "unique": 2745
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,14 +53,93 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 68,
+  "article_count": 69,
   "new_count": 20,
-  "historical_count": 48,
+  "historical_count": 49,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Africa's vast genetic diversity poses challenges for optimising drug treatments in the continent, which is exacerbated by the fact that drug discovery and development efforts have historically been performed outside Africa. This has led to suboptimal therapeutic outcomes in African populations and overall scarcity of relevant pharmacogenetic data, including characteristic genotypes as well as drugs prescribed in the continent to treat infectious diseases. Here, we propose a general approach to identify drug-gene pairs with potential pharmacogenetic interest. Our pipeline couples machine learning and artificial intelligence with physiologically-based pharmacokinetic (PBPK) and non-linear mixed effects (NLME) modelling to hypothesize which pharmacogenes could be of potential clinical interest, and which dose adjustments could be made to provide better treatment outcomes for African populations. Drug-gene pairs are first ranked with the latest knowledge embedding techniques, based on public structural and bioactivity data for drugs and genes, followed by a large language model-based refinement. Selected genes are then evaluated for their sensitivity in PBPK analysis, and relevant variants subsequently inspected with NLME for dose optimization. The analysis is focused on genes with potential clinical relevance in Africa. We delve deeper into malaria and tuberculosis therapies, many of which remain uncharacterised from a pharmacogenetic perspective.",
+      "authors": [
+        "Turon G",
+        "Mulubwa M",
+        "Montaner A",
+        "Njoroge M",
+        "Chibale K",
+        "Duran-Frigola M"
+      ],
+      "doi": "10.1038/s41467-025-64304-2",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "artificial intelligence",
+            "large language model"
+          ],
+          "method": [
+            "optimization"
+          ],
+          "pk": [
+            "nlme"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence",
+            "machine learning",
+            "large language model"
+          ],
+          "method": [
+            "optimization"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "nlme"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.1038/s41467-025-64304-2",
+      "publication_date": "2025-10-20",
+      "reported_at": "2026-11-01 09:36 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Here, we propose a general approach to identify drug-gene pairs with potential pharmacogenetic interest.",
+        "new_capability": "Our pipeline couples machine learning and artificial intelligence with physiologically-based pharmacokinetic (PBPK) and non-linear mixed effects (NLME) modelling to hypothesize which pharmacogenes could be of potential clinical interest, and which dose adjustments could be made to provide better treatment outcomes for…",
+        "prior_limitation": "We delve deeper into malaria and tuberculosis therapies, many of which remain uncharacterised from a pharmacogenetic perspective.",
+        "significance": "The analysis is focused on genes with potential clinical relevance in Africa.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Artificial intelligence coupled to pharmacometrics modelling to tailor malaria and tuberculosis treatment in Africa.",
+      "url": "https://europepmc.org/article/MED/41115876",
+      "venue": "Nature communications"
+    },
     {
       "abstract": "Pharmacometrics, as the core discipline of model-informed drug development paradigm, quantitatively characterizes drug exposure-response dynamics using mathematical models. However, its traditional methodology, represented by nonlinear mixed-effects modeling, is inherently resource-intensive and often struggles to fully capture complex biological variability. The rapid advancement of artificial intelligence technologies offers a transformative data-driven paradigm, providing superior efficiency and predictive accuracy. Yet, the artificial intelligence approaches suffer from the “black box” constraint. This review detailed the deep, complementary integration of artificial intelligence and pharmacometrics, demonstrating how this synergy is necessary to satisfy the complex, triple demands of accuracy, efficiency, and regulatory explainability. We systematically explored innovative applications across the entire pharmacometrics workflow, including model optimization, covariate screening, virtual population generation, etc. In each section, we also presented specific application cases or workflows. Furthermore, we outlined current challenges in the implementation of artificial intelligence and proposed a vision for interdisciplinary and cross-institutional collaboration.",
       "authors": [
