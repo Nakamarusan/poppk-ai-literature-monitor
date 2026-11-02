@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-01 09:36 JST",
+  "last_scan_at": "2026-11-02 10:10 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 46,
+      "cached_candidates_before": 45,
       "completed_windows": 2,
-      "eligible_candidates": 46,
+      "eligible_candidates": 45,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 587,
+      "pending_windows": 606,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-01 09:36 JST",
+    "checked_at": "2026-11-02 10:10 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/85"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/86"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -39,13 +39,13 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2382,
-      "excluded_publication_type": 132,
+      "duplicates": 2404,
+      "excluded_publication_type": 135,
       "missing_ai_evidence": 14,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2596,
-      "retrieved": 5127,
-      "unique": 2745
+      "missing_pk_evidence": 2573,
+      "retrieved": 5129,
+      "unique": 2725
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,14 +53,101 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 69,
+  "article_count": 70,
   "new_count": 20,
-  "historical_count": 49,
+  "historical_count": 50,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling. Methods This retrospective observational study included 76 eligible pediatric patients for model development, analyzing their baseline characteristics and laboratory parameters. A population pharmacokinetic (PopPK) model using NONMEM ® software was performed to assess the clearance (CL) and volume of distribution (V) of VRZ. The individual CL and V were included as input variables. The Boruta algorithm was employed for feature selection, after which six machine learning algorithms were applied. The models were evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R 2 ) to identify the optimal algorithm, which then underwent independent external validation. The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP). Results A total of 76 pediatric patients were enrolled for model development, consisting of 58 males (76.3%) and 18 females (23.7%), with a median age of 11 months and a median weight of 8.05 kg. We analyzed 110 therapeutic drug monitoring (TDM) samples of VRZ from these participants. A one-compartment model with first-order absorption and elimination described the population pharmacokinetics of VRZ. Population estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 17.9 L/h/70kg (RSE, 10.8%) and 788 L/70kg (RSE, 15.4%), respectively. An XGBoost model accurately predicted voriconazole concentrations (R 2 = 0.81, RMSE = 0.53) with a relative error of ±20% for most observations. In the external validation, the XGBoost model demonstrated an R 2 of 0.75, RMSE of 0.14. SHAP analysis identified clearance, weight, and laboratory values as significant predictors. Conclusion This study emphasized the importance of personalized treatment in utilizing VRZ for children under 24 months. The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.",
+      "authors": [
+        "Shen L",
+        "Hu M",
+        "Xu X",
+        "Zhou Y",
+        "Wu W",
+        "Ge X",
+        "Wang G",
+        "Wang Y",
+        "Li Z"
+      ],
+      "doi": "10.3389/fphar.2025.1671652",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "model development",
+            "software",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "model development",
+            "software",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.3389/fphar.2025.1671652",
+      "publication_date": "2025-09-15",
+      "reported_at": "2026-11-02 10:10 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling.",
+        "new_capability": "The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP).",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Precision dosing of voriconazole in immunocompromised children under 2 years: integrated machine learning and population pharmacokinetic modeling.",
+      "url": "https://europepmc.org/article/MED/41031158",
+      "venue": "Frontiers in pharmacology"
+    },
     {
       "abstract": "Africa's vast genetic diversity poses challenges for optimising drug treatments in the continent, which is exacerbated by the fact that drug discovery and development efforts have historically been performed outside Africa. This has led to suboptimal therapeutic outcomes in African populations and overall scarcity of relevant pharmacogenetic data, including characteristic genotypes as well as drugs prescribed in the continent to treat infectious diseases. Here, we propose a general approach to identify drug-gene pairs with potential pharmacogenetic interest. Our pipeline couples machine learning and artificial intelligence with physiologically-based pharmacokinetic (PBPK) and non-linear mixed effects (NLME) modelling to hypothesize which pharmacogenes could be of potential clinical interest, and which dose adjustments could be made to provide better treatment outcomes for African populations. Drug-gene pairs are first ranked with the latest knowledge embedding techniques, based on public structural and bioactivity data for drugs and genes, followed by a large language model-based refinement. Selected genes are then evaluated for their sensitivity in PBPK analysis, and relevant variants subsequently inspected with NLME for dose optimization. The analysis is focused on genes with potential clinical relevance in Africa. We delve deeper into malaria and tuberculosis therapies, many of which remain uncharacterised from a pharmacogenetic perspective.",
       "authors": [

@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-01",
+  "last_check": "2026-11-02",
   "last_run": {
-    "cached_candidates_before": 46,
+    "cached_candidates_before": 45,
     "completed_windows": 2,
-    "eligible_candidates": 46,
+    "eligible_candidates": 45,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 587,
+    "pending_windows": 606,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4123,6 +4123,139 @@
       "since": "2026-11-01",
       "source": "crossref",
       "until": "2026-11-01"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-02",
+      "source": "europe_pmc",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-02",
+      "source": "crossref",
+      "until": "2026-11-02"
     }
   ],
   "pool": [
@@ -4434,29 +4567,6 @@
       "title": "Large Language Models for Clinical Trial Protocol Assessments.",
       "url": "https://europepmc.org/article/MED/41121745",
       "venue": "Clinical pharmacology and therapeutics"
-    },
-    {
-      "abstract": "Africa's vast genetic diversity poses challenges for optimising drug treatments in the continent, which is exacerbated by the fact that drug discovery and development efforts have historically been performed outside Africa. This has led to suboptimal therapeutic outcomes in African populations and overall scarcity of relevant pharmacogenetic data, including characteristic genotypes as well as drugs prescribed in the continent to treat infectious diseases. Here, we propose a general approach to identify drug-gene pairs with potential pharmacogenetic interest. Our pipeline couples machine learning and artificial intelligence with physiologically-based pharmacokinetic (PBPK) and non-linear mixed effects (NLME) modelling to hypothesize which pharmacogenes could be of potential clinical interest, and which dose adjustments could be made to provide better treatment outcomes for African populations. Drug-gene pairs are first ranked with the latest knowledge embedding techniques, based on public structural and bioactivity data for drugs and genes, followed by a large language model-based refinement. Selected genes are then evaluated for their sensitivity in PBPK analysis, and relevant variants subsequently inspected with NLME for dose optimization. The analysis is focused on genes with potential clinical relevance in Africa. We delve deeper into malaria and tuberculosis therapies, many of which remain uncharacterised from a pharmacogenetic perspective.",
-      "authors": [
-        "Turon G",
-        "Mulubwa M",
-        "Montaner A",
-        "Njoroge M",
-        "Chibale K",
-        "Duran-Frigola M"
-      ],
-      "date": "2025-10-20",
-      "doi": "10.1038/s41467-025-64304-2",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41115876"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Artificial intelligence coupled to pharmacometrics modelling to tailor malaria and tuberculosis treatment in Africa.",
-      "url": "https://europepmc.org/article/MED/41115876",
-      "venue": "Nature communications"
     },
     {
       "abstract": "Background : Large Language Models (LLMs) have driven significant advances in artificial intelligence (AI), with transformative applications across numerous scientific fields, including biomedical research and drug development. However, despite growing interest in adjacent domains, their adoption in pharmacometrics, a discipline central to model-informed drug development (MIDD), remains limited. This study aims to systematically explore the potential role of LLMs across the pharmacometrics workflow, from data processing to model development and reporting. Methods : We conducted a comprehensive literature review to identify documented applications of LLMs in pharmacometrics. We also analyzed relevant use cases from related scientific domains and structured these insights into a conceptual framework outlining potential pharmacometrics tasks that could benefit from LLMs. Results: Our analysis revealed that studies reporting LLMs in pharmacometrics are few and mainly limited to code generation in general-purpose programming languages. Nonetheless, broader applications are theoretically plausible and technically feasible, including information retrieval and synthesis, data collection and formatting, model coding, PK/PD model development, support to PBPK and QSP modeling, report writing and pharmacometrics education. We also discussed visionary applications such as LLM-enabled predictive modeling and digital twins. However, challenges such as hallucinations, lack of reproducibility, and the underrepresentation of pharmacometrics data in training corpora limit the actual applicability. Conclusions : LLMs are unlikely to replace mechanistic pharmacometrics models but hold great potential as assistive tools. Realizing this potential will require domain-specific fine-tuning, retrieval-augmented strategies, and rigorous validation. A hybrid future, integrating human expertise, traditional modeling, and AI, could define the next frontier for innovation in MIDD.",
@@ -5198,5 +5308,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-01"
+  "through": "2026-11-02"
 }
