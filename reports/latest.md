@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-02 10:10 JST
+Run time: 2026-11-03 12:15 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5124, Europe PMC 5, arXiv 0
+Recent-search records: Crossref 5134, Europe PMC 5, arXiv 0
 
 ## Selection and search coverage
 
@@ -24,44 +24,42 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5129
-- unique: 2725
+- retrieved: 5139
+- unique: 2735
 - duplicates: 2404
-- excluded publication type: 135
+- excluded publication type: 139
 - missing method evidence: 1
 - already reported: 2
-- missing pk evidence: 2573
-- missing ai evidence: 14
-
-Archive candidates available: 45; unvisited/unfinished windows: 606; completed windows: 2.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
+- missing pk evidence: 2581
+- missing ai evidence: 11
+- eligible unreported: 1
 
 
-## 1. [Precision dosing of voriconazole in immunocompromised children under 2 years: integrated machine learning and population pharmacokinetic modeling.](https://europepmc.org/article/MED/41031158)
+## 1. [From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization](https://doi.org/10.3390/ph19111729)
 
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** Shen L, Hu M, Xu X, Zhou Y, Wu W, Ge X, Wang G, Wang Y, et al.
-- **Venue/source:** Frontiers in pharmacology
-- **Publication date:** 2025-09-15
-- **DOI:** 10.3389/fphar.2025.1671652
+- **Selection:** New article
+- **Authors:** Stefano Ruga
+- **Venue/source:** Pharmaceuticals
+- **Publication date:** 2026-11-01
+- **DOI:** 10.3390/ph19111729
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Not stated in the available abstract.
-- **Methodological contribution:** Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling.
-- **What becomes possible:** The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.
-- **Why it matters:** The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP).
+- **Prior limitation:** Current barriers to implementation are discussed, including the lack of validated biomarkers, heterogeneous clinical phenotypes, limited prospective evidence, and the need for clinically applicable predictive models.
+- **Methodological contribution:** By integrating pharmacological, biological, and computational perspectives, this review provides a framework for the future development of individualized ASM therapy, moving beyond traditional TDM toward precision pharmacotherapy in epilepsy.
+- **What becomes possible:** Conventional therapeutic drug monitoring (TDM), based on plasma drug concentrations, provides limited information regarding clinical efficacy, toxicity risk, and the optimal therapeutic strategy for individual patients.
+- **Why it matters:** The review addresses the potential clinical applications of these approaches in challenging scenarios, including drug-resistant epilepsy, polytherapy, pediatric and elderly populations, pregnancy, and patients with altered drug metabolism.
 
-- **Relevance score:** 80/100 — PK 30, AI 30, method 10, title intersection 10
+- **Relevance score:** 50/100 — PK 10, AI 10, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling. Methods This retrospective observational study included 76 eligible pediatric patients for model development, analyzing their baseline characteristics and laboratory parameters. A population pharmacokinetic (PopPK) model using NONMEM ® software was performed to assess the clearance (CL) and volume of distribution (V) of VRZ. The individual CL and V were included as input variables. The Boruta algorithm was employed for feature selection, after which six machine learning algorithms were applied. The models were evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R 2 ) to identify the optimal algorithm, which then underwent independent external validation. The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP). Results A total of 76 pediatric patients were enrolled for model development, consisting of 58 males (76.3%) and 18 females (23.7%), with a median age of 11 months and a median weight of 8.05 kg. We analyzed 110 therapeutic drug monitoring (TDM) samples of VRZ from these participants. A one-compartment model with first-order absorptio…
-- **PopPK/pharmacometrics terms:** population pharmacokinetic, population pharmacokinetics, poppk
-- **AI/ML terms:** machine learning
-- **Method terms:** algorithm, model development, software, validation
+- **Abstract:** Epilepsy management has significantly evolved with the introduction of numerous antiseizure medications (ASMs), yet treatment selection and dose optimization remain challenging due to substantial interindividual variability in efficacy, tolerability, pharmacokinetics, and treatment response. Conventional therapeutic drug monitoring (TDM), based on plasma drug concentrations, provides limited information regarding clinical efficacy, toxicity risk, and the optimal therapeutic strategy for individual patients. This review critically discusses the transition from concentration-based monitoring toward integrated precision pharmacotherapy, the emerging role of pharmacokinetic/pharmacodynamic (PK/PD) integration population pharmacokinetic models, Bayesian forecasting, pharmacodynamic biomarkers, pharmacogenomic information, and artificial intelligence-based prediction models. Particular attention is given to the limitations of conventional TDM and to novel approaches that may improve the prediction of treatment outcomes and guide rational dose adjustments. The review addresses the potential clinical applications of these approaches in challenging scenarios, including drug-resistant epilepsy, polytherapy, pediatric and elderly populations, pregnancy, and patients with altered drug metabolism. Current barriers to implementation are discussed, including the lack of validated biomarkers,…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic
+- **AI/ML terms:** artificial intelligence
+- **Method terms:** optimization, framework
 
 </details>
 

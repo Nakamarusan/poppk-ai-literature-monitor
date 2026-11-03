@@ -1,6 +1,75 @@
 {
   "articles": [
     {
+      "abstract": "Epilepsy management has significantly evolved with the introduction of numerous antiseizure medications (ASMs), yet treatment selection and dose optimization remain challenging due to substantial interindividual variability in efficacy, tolerability, pharmacokinetics, and treatment response. Conventional therapeutic drug monitoring (TDM), based on plasma drug concentrations, provides limited information regarding clinical efficacy, toxicity risk, and the optimal therapeutic strategy for individual patients. This review critically discusses the transition from concentration-based monitoring toward integrated precision pharmacotherapy, the emerging role of pharmacokinetic/pharmacodynamic (PK/PD) integration population pharmacokinetic models, Bayesian forecasting, pharmacodynamic biomarkers, pharmacogenomic information, and artificial intelligence-based prediction models. Particular attention is given to the limitations of conventional TDM and to novel approaches that may improve the prediction of treatment outcomes and guide rational dose adjustments. The review addresses the potential clinical applications of these approaches in challenging scenarios, including drug-resistant epilepsy, polytherapy, pediatric and elderly populations, pregnancy, and patients with altered drug metabolism. Current barriers to implementation are discussed, including the lack of validated biomarkers, heterogeneous clinical phenotypes, limited prospective evidence, and the need for clinically applicable predictive models. By integrating pharmacological, biological, and computational perspectives, this review provides a framework for the future development of individualized ASM therapy, moving beyond traditional TDM toward precision pharmacotherapy in epilepsy.",
+      "authors": [
+        "Stefano Ruga"
+      ],
+      "doi": "10.3390/ph19111729",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework",
+            "optimization"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization",
+            "framework"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [
+            "optimization"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.3390/ph19111729",
+      "publication_date": "2026-11-01",
+      "reported_at": "2026-11-03 12:15 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "By integrating pharmacological, biological, and computational perspectives, this review provides a framework for the future development of individualized ASM therapy, moving beyond traditional TDM toward precision pharmacotherapy in epilepsy.",
+        "new_capability": "Conventional therapeutic drug monitoring (TDM), based on plasma drug concentrations, provides limited information regarding clinical efficacy, toxicity risk, and the optimal therapeutic strategy for individual patients.",
+        "prior_limitation": "Current barriers to implementation are discussed, including the lack of validated biomarkers, heterogeneous clinical phenotypes, limited prospective evidence, and the need for clinically applicable predictive models.",
+        "significance": "The review addresses the potential clinical applications of these approaches in challenging scenarios, including drug-resistant epilepsy, polytherapy, pediatric and elderly populations, pregnancy, and patients with altered drug metabolism.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization",
+      "url": "https://doi.org/10.3390/ph19111729",
+      "venue": "Pharmaceuticals"
+    },
+    {
       "abstract": "Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling. Methods This retrospective observational study included 76 eligible pediatric patients for model development, analyzing their baseline characteristics and laboratory parameters. A population pharmacokinetic (PopPK) model using NONMEM ® software was performed to assess the clearance (CL) and volume of distribution (V) of VRZ. The individual CL and V were included as input variables. The Boruta algorithm was employed for feature selection, after which six machine learning algorithms were applied. The models were evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R 2 ) to identify the optimal algorithm, which then underwent independent external validation. The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP). Results A total of 76 pediatric patients were enrolled for model development, consisting of 58 males (76.3%) and 18 females (23.7%), with a median age of 11 months and a median weight of 8.05 kg. We analyzed 110 therapeutic drug monitoring (TDM) samples of VRZ from these participants. A one-compartment model with first-order absorption and elimination described the population pharmacokinetics of VRZ. Population estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 17.9 L/h/70kg (RSE, 10.8%) and 788 L/70kg (RSE, 15.4%), respectively. An XGBoost model accurately predicted voriconazole concentrations (R 2 = 0.81, RMSE = 0.53) with a relative error of ±20% for most observations. In the external validation, the XGBoost model demonstrated an R 2 of 0.75, RMSE of 0.14. SHAP analysis identified clearance, weight, and laboratory values as significant predictors. Conclusion This study emphasized the importance of personalized treatment in utilizing VRZ for children under 24 months. The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.",
       "authors": [
         "Shen L",
@@ -5562,24 +5631,13 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-02 10:10 JST",
+  "last_scan_at": "2026-11-03 12:15 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 45,
-      "completed_windows": 2,
-      "eligible_candidates": 45,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 606,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-02 10:10 JST",
+    "archive": {},
+    "checked_at": "2026-11-03 12:15 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/86"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -5601,16 +5659,17 @@
     "recent_screening": {
       "already_reported": 2,
       "duplicates": 2404,
-      "excluded_publication_type": 135,
-      "missing_ai_evidence": 14,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 139,
+      "missing_ai_evidence": 11,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2573,
-      "retrieved": 5129,
-      "unique": 2725
+      "missing_pk_evidence": 2581,
+      "retrieved": 5139,
+      "unique": 2735
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },

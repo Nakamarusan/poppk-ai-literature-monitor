@@ -1,23 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-11-02",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/86",
+  "last_delivery_date_jst": "2026-11-03",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 45,
-      "completed_windows": 2,
-      "eligible_candidates": 45,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 606,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-02 10:10 JST",
+    "archive": {},
+    "checked_at": "2026-11-03 12:15 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/86"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -39,21 +28,22 @@
     "recent_screening": {
       "already_reported": 2,
       "duplicates": 2404,
-      "excluded_publication_type": 135,
-      "missing_ai_evidence": 14,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 139,
+      "missing_ai_evidence": 11,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2573,
-      "retrieved": 5129,
-      "unique": 2725
+      "missing_pk_evidence": 2581,
+      "retrieved": 5139,
+      "unique": 2735
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-02",
-  "last_success_utc": "2026-11-02T01:10:44.702777+00:00",
+  "last_selection_date_jst": "2026-11-03",
+  "last_success_utc": "2026-11-03T03:15:32.386205+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -404,6 +394,12 @@
       "selection_type": "historical",
       "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver."
     },
+    "doi:10.3390/ph19111729": {
+      "doi": "10.3390/ph19111729",
+      "selected_at": "2026-11-03T03:15:32.386205+00:00",
+      "selection_type": "new",
+      "title": "From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization"
+    },
     "doi:10.3390/pharmaceutics18040501": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -516,6 +512,12 @@
       "selected_at": "2026-10-28T00:54:10.722409+00:00",
       "selection_type": "new",
       "title": "Who—or What—Should We Trust in the LLM Era?"
+    },
+    "source:crossref:10.3390/ph19111729": {
+      "doi": "10.3390/ph19111729",
+      "selected_at": "2026-11-03T03:15:32.386205+00:00",
+      "selection_type": "new",
+      "title": "From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization"
     },
     "source:crossref:10.64898/2026.08.25.26361215": {
       "doi": "10.64898/2026.08.25.26361215",
@@ -1174,6 +1176,12 @@
       "selection_type": "new",
       "title": "Who—or What—Should We Trust in the LLM Era?"
     },
+    "title:a03fd142ed869cfdf42aa69e": {
+      "doi": "10.3390/ph19111729",
+      "selected_at": "2026-11-03T03:15:32.386205+00:00",
+      "selection_type": "new",
+      "title": "From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization"
+    },
     "title:a1a9b973a05c5a580cc9625c": {
       "doi": "10.1208/s12248-026-01321-z",
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
@@ -1337,21 +1345,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-02"
+    "arxiv": "2026-11-03"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-02T01:10:44.702777+00:00",
+      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-02T01:10:44.702777+00:00",
-      "records": 5124,
+      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
+      "records": 5134,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-02T01:10:44.702777+00:00",
+      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
       "records": 5,
       "status": "ok"
     }
