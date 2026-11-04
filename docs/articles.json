@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-03 12:15 JST",
+  "last_scan_at": "2026-11-04 10:50 JST",
   "run_status": {
     "archive": {},
-    "checked_at": "2026-11-03 12:15 JST",
+    "checked_at": "2026-11-04 10:50 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/88"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -27,15 +27,15 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2404,
+      "already_reported": 3,
+      "duplicates": 2443,
       "eligible_unreported": 1,
-      "excluded_publication_type": 139,
-      "missing_ai_evidence": 11,
+      "excluded_publication_type": 144,
+      "missing_ai_evidence": 10,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2581,
-      "retrieved": 5139,
-      "unique": 2735
+      "missing_pk_evidence": 2572,
+      "retrieved": 5174,
+      "unique": 2731
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -43,14 +43,84 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 71,
-  "new_count": 21,
+  "article_count": 72,
+  "new_count": 22,
   "historical_count": 50,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "ABSTRACT Quantitative systems pharmacology ( QSP ) provides a mechanistic framework for integrating biological and pharmacological knowledge in drug development. Simultaneously, advances in artificial intelligence ( AI ), particularly in multi‐modal data analysis, are transforming how biological information is derived. I argue that AI should not be viewed as a data integration tool, but as a new layer of quantitative measurement generation. This reframing positions QSP as a foundational model of biology, used here in a conceptual rather than technical sense, and AI as a source of quantitative inputs.",
+      "authors": [
+        "Knöchel J"
+      ],
+      "doi": "10.1002/psp4.70373",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "qsp",
+            "quantitative systems pharmacology"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": [
+            "qsp"
+          ]
+        }
+      },
+      "id": "doi:10.1002/psp4.70373",
+      "publication_date": "2026-11-01",
+      "reported_at": "2026-11-04 10:50 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 30,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC",
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "ABSTRACT Quantitative systems pharmacology ( QSP ) provides a mechanistic framework for integrating biological and pharmacological knowledge in drug development.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "I argue that AI should not be viewed as a data integration tool, but as a new layer of quantitative measurement generation.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer.",
+      "url": "https://europepmc.org/article/MED/42971924",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
     {
       "abstract": "Epilepsy management has significantly evolved with the introduction of numerous antiseizure medications (ASMs), yet treatment selection and dose optimization remain challenging due to substantial interindividual variability in efficacy, tolerability, pharmacokinetics, and treatment response. Conventional therapeutic drug monitoring (TDM), based on plasma drug concentrations, provides limited information regarding clinical efficacy, toxicity risk, and the optimal therapeutic strategy for individual patients. This review critically discusses the transition from concentration-based monitoring toward integrated precision pharmacotherapy, the emerging role of pharmacokinetic/pharmacodynamic (PK/PD) integration population pharmacokinetic models, Bayesian forecasting, pharmacodynamic biomarkers, pharmacogenomic information, and artificial intelligence-based prediction models. Particular attention is given to the limitations of conventional TDM and to novel approaches that may improve the prediction of treatment outcomes and guide rational dose adjustments. The review addresses the potential clinical applications of these approaches in challenging scenarios, including drug-resistant epilepsy, polytherapy, pediatric and elderly populations, pregnancy, and patients with altered drug metabolism. Current barriers to implementation are discussed, including the lack of validated biomarkers, heterogeneous clinical phenotypes, limited prospective evidence, and the need for clinically applicable predictive models. By integrating pharmacological, biological, and computational perspectives, this review provides a framework for the future development of individualized ASM therapy, moving beyond traditional TDM toward precision pharmacotherapy in epilepsy.",
       "authors": [

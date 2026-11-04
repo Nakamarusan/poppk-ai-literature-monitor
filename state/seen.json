@@ -1,12 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-11-03",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87",
+  "last_delivery_date_jst": "2026-11-04",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/88",
   "last_run": {
     "archive": {},
-    "checked_at": "2026-11-03 12:15 JST",
+    "checked_at": "2026-11-04 10:50 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/87"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/88"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -26,15 +26,15 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2404,
+      "already_reported": 3,
+      "duplicates": 2443,
       "eligible_unreported": 1,
-      "excluded_publication_type": 139,
-      "missing_ai_evidence": 11,
+      "excluded_publication_type": 144,
+      "missing_ai_evidence": 10,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2581,
-      "retrieved": 5139,
-      "unique": 2735
+      "missing_pk_evidence": 2572,
+      "retrieved": 5174,
+      "unique": 2731
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -42,8 +42,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-03",
-  "last_success_utc": "2026-11-03T03:15:32.386205+00:00",
+  "last_selection_date_jst": "2026-11-04",
+  "last_success_utc": "2026-11-04T01:50:00.370529+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -142,6 +142,12 @@
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
       "selection_type": "new",
       "title": "Machine Learning–Augmented Precision Dosing: Integrating Pharmacokinetic Modeling With Clinical Decision Support"
+    },
+    "doi:10.1002/psp4.70373": {
+      "doi": "10.1002/psp4.70373",
+      "selected_at": "2026-11-04T01:50:00.370529+00:00",
+      "selection_type": "new",
+      "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer."
     },
     "doi:10.1007/s10928-026-10036-9": {
       "doi": "10.1007/s10928-026-10036-9",
@@ -482,6 +488,12 @@
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
       "selection_type": "new",
       "title": "Machine Learning–Augmented Precision Dosing: Integrating Pharmacokinetic Modeling With Clinical Decision Support"
+    },
+    "source:crossref:10.1002/psp4.70373": {
+      "doi": "10.1002/psp4.70373",
+      "selected_at": "2026-11-04T01:50:00.370529+00:00",
+      "selection_type": "new",
+      "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer."
     },
     "source:crossref:10.1097/ftd.0000000000001540": {
       "doi": "10.1097/ftd.0000000000001540",
@@ -829,6 +841,12 @@
       "selection_type": "new",
       "title": "Predictive Performance of pyDarwin-Selected Versus Expert-Developed Paediatric Tobramycin Population Pharmacokinetic Models for Model-Informed Precision Dosing."
     },
+    "source:europe pmc:med:42971924": {
+      "doi": "10.1002/psp4.70373",
+      "selected_at": "2026-11-04T01:50:00.370529+00:00",
+      "selection_type": "new",
+      "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer."
+    },
     "source:europe pmc:ppr:ppr1182052": {
       "doi": "10.21203/rs.3.rs-9308510/v1",
       "selected_at": "2026-10-08T01:30:24.721404+00:00",
@@ -1002,6 +1020,12 @@
       "selected_at": "2026-10-27T01:02:52.751572+00:00",
       "selection_type": "historical",
       "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
+    },
+    "title:2b460f5855c5daaf776b4e3d": {
+      "doi": "10.1002/psp4.70373",
+      "selected_at": "2026-11-04T01:50:00.370529+00:00",
+      "selection_type": "new",
+      "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer."
     },
     "title:2c36164f9efec9445c942fe0": {
       "doi": "10.1208/s12248-026-01248-5",
@@ -1345,22 +1369,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-03"
+    "arxiv": "2026-11-04"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
+      "last_attempt_utc": "2026-11-04T01:50:00.370529+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
-      "records": 5134,
+      "last_attempt_utc": "2026-11-04T01:50:00.370529+00:00",
+      "records": 5168,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-03T03:15:32.386205+00:00",
-      "records": 5,
+      "last_attempt_utc": "2026-11-04T01:50:00.370529+00:00",
+      "records": 6,
       "status": "ok"
     }
   }
