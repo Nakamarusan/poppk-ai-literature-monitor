@@ -1,19 +1,19 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-04 10:50 JST",
+  "last_scan_at": "2026-11-05 10:56 JST",
   "run_status": {
     "archive": {},
-    "checked_at": "2026-11-04 10:50 JST",
+    "checked_at": "2026-11-05 10:56 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/88"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/89"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 35
+        "pages": 36
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -27,30 +27,249 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2443,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 144,
-      "missing_ai_evidence": 10,
+      "already_reported": 2,
+      "duplicates": 2437,
+      "eligible_unreported": 3,
+      "excluded_publication_type": 149,
+      "missing_ai_evidence": 11,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2572,
-      "retrieved": 5174,
-      "unique": 2731
+      "missing_pk_evidence": 2596,
+      "retrieved": 5199,
+      "unique": 2762
     },
-    "selected_count": 1,
+    "selected_count": 3,
     "selection_status": "selected",
     "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 72,
-  "new_count": 22,
+  "article_count": 75,
+  "new_count": 25,
   "historical_count": 50,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "NONMEM is the gold-standard tool in pharmacometrics, yet much of its estimation engine operates out of sight. Routine outputs show what the engine reports, but not everything it computes along the way. The quantities needed to answer a specific question may exist transiently within the long-established Fortran-based engine, but for most modelers they remain hidden behind an implementation barrier. AI-assisted modeling changes that barrier. A user can pose a question in \"vibe\" language, work with an AI assistant to generate verbatim Fortran code that instruments the running engine and exposes otherwise unavailable quantities on demand for use as additional model diagnostics or in other ad hoc investigations. We illustrate this capability with two examples: capturing how subject-level samples evolve from one iteration to the next during NONMEM's expectation-maximization (EM) methods, including importance sampling (IMP) and stochastic approximation expectation maximization (SAEM), and tracking the BFGS Hessian approximation and objective-function gradients across snapshots of first-order conditional estimation (FOCE). The examples themselves are not the central contribution. Rather, they demonstrate how AI can turn NONMEM from a closed black box into an engine that motivated users can interrogate when new questions arise. When paired with scientific judgment and numerical verification, AI can make forms of engine-level inspection once largely limited to developers and specialized experts accessible to everyday modelers, substantially shortening the distance between a NONMEM user and a NONMEM expert.",
+      "authors": [
+        "Cheng Y",
+        "Li Y"
+      ],
+      "doi": "10.1007/s11095-026-04231-z",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [],
+          "method": [
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [
+            "estimation"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "agentic"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1007/s11095-026-04231-z",
+      "publication_date": "2026-11-02",
+      "reported_at": "2026-11-05 10:56 JST",
+      "score": {
+        "components": {
+          "ai": 20,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 60
+        },
+        "priority": "Medium",
+        "total": 60
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "When paired with scientific judgment and numerical verification, AI can make forms of engine-level inspection once largely limited to developers and specialized experts accessible to everyday modelers, substantially shortening the distance between a NONMEM user and a NONMEM expert.",
+        "prior_limitation": "The quantities needed to answer a specific question may exist transiently within the long-established Fortran-based engine, but for most modelers they remain hidden behind an implementation barrier.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Opening the Black Box: How Agentic AI-Assisted Modeling Lets Pharmacometricians See Inside NONMEM.",
+      "url": "https://europepmc.org/article/MED/42972177",
+      "venue": "Pharmaceutical research"
+    },
+    {
+      "abstract": "Background: As warfarin therapy outcomes in Chinese patients can differ from those in other populations owing to differences in genotype frequencies and demographic characteristics (e.g., weight and height), this study was developed to investigate warfarin treatment patterns among Chinese patients and to propose dose optimization. Methods: This study recruited adults undergoing heart valve replacement surgery who received warfarin treatment. Several anticoagulation response-related parameters were measured in these patients and compared among major genotype subgroups. These data were used to construct a population-based pharmacometric model, and warfarin initiation dosing regimens were proposed using generative artificial intelligence (GAI)-assisted model simulation. Results: We found that those patients carrying the Vitamin K epoxide reductase complex subunit 1 (VKORC1) AA & Cytochrome P450 family 2 subfamily C member 9 (CYP2C9)*1/*1 genotype, which accounted for the majority of patients (73.3%), achieved 39% time in the therapeutic range (%TTR) within the first week of treatment, stabilizing to approximately 50% within four weeks after initiating warfarin therapy. In contrast, those patients carrying the VKORC1 AA & CYP2C9*1/*3 genotype (8.9%) exhibited more pronounced fluctuations in %TTR, while those with the VKORC1 GA & CYP2C9*1/*1 genotype (15.1%) tended to exhibit subtherapeutic %TTR. The GAI-based dosing regimen proposed in this study, consisting of higher loading doses on Days 1–5 and lower maintenance doses thereafter, was found to enable patients to achieve target international normalized ratio (INR) range within one week. Conclusion: As over 70% of Chinese patients have the VKORC1 AA/CYP2C9*1/*1 genotype, this means that most carry more than one VKORC1/CYP2C9 variant allele. On average, those patients with >1 VKORC1/CYP2C9 variant allele required lower warfarin doses and reached the therapeutic INR range more quickly than those with ≤1 variant allele. GAI-based approaches can provide value as a means of facilitating dose optimization based on modeling and simulation.",
+      "authors": [
+        "Liu F",
+        "Nan D",
+        "Li S",
+        "Wang Y",
+        "Cai Y",
+        "Liu B",
+        "Peng J",
+        "Ye J",
+        "Pang Z",
+        "Deng J"
+      ],
+      "doi": "10.31083/pharmazie58987",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "artificial intelligence"
+          ],
+          "method": [
+            "optimization"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.31083/pharmazie58987",
+      "publication_date": "2026-10-01",
+      "reported_at": "2026-11-05 10:56 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC",
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "As warfarin therapy outcomes in Chinese patients can differ from those in other populations owing to differences in genotype frequencies and demographic characteristics (e.g., weight and height), this study was developed to investigate warfarin treatment patterns among Chinese patients and to propose dose optimization.",
+        "new_capability": "GAI-based approaches can provide value as a means of facilitating dose optimization based on modeling and simulation.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "The GAI-based dosing regimen proposed in this study, consisting of higher loading doses on Days 1–5 and lower maintenance doses thereafter, was found to enable patients to achieve target international normalized ratio (INR) range within one week.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients.",
+      "url": "https://europepmc.org/article/MED/42980171",
+      "venue": "Die Pharmazie"
+    },
+    {
+      "abstract": "Background Textbook Outcome (TO) has been proposed as a composite indicator reflecting overall surgical quality. With the expanding use of minimally invasive pancreaticoduodenectomy (MIPD), including laparoscopic and robotic-assisted approaches, reliable prediction of TO achievement has become essential. This study aimed to identify independent predictors of TO after MIPD and to develop an interpretable machine learning (ML)-based prediction model. Methods We retrospectively analyzed 411 consecutive patients who underwent MIPD at Zhejiang Provincial People's Hospital between 2017 and 2023. Clinical, operative, and pathological variables were collected. The Least Absolute Shrinkage and Selection Operator regression was used for feature selection, and ten ML algorithms were developed and compared. Model performance was evaluated using the area under the receiver operating characteristic curve (AUC), Brier score, and decision curve analysis. Model interpretability was assessed using SHapley Additive exPlanations (SHAP). Results Of 411 patients, 263 (63.99%) achieved TO. Eight variables were identified as independent predictors: pancreatic duct diameter > 3 mm, intraoperative blood loss, Nutritional Risk Screening 2002 score, direct bilirubin, triglyceride, carbohydrate antigen 125, male, and body mass index. Among the ten algorithms, the Random Forest model demonstrated the best discrimination (AUC = 0.86; Brier score = 0.15). SHAP analysis confirmed that larger pancreatic duct diameter and reduced blood loss were most strongly associated with TO achievement. Conclusions An interpretable ML-based model accurately predicted TO after MIPD. The Random Forest algorithm demonstrated superior performance and may assist in individualized perioperative risk stratification and management.",
+      "authors": [
+        "Zhang Y",
+        "Lu X",
+        "Weng X",
+        "Pu Y",
+        "Wu W"
+      ],
+      "doi": "10.1186/s12893-026-04068-8",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm"
+          ],
+          "pk": [
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation",
+            "algorithm"
+          ],
+          "pk": [
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1186/s12893-026-04068-8",
+      "publication_date": "2026-08-07",
+      "reported_at": "2026-11-05 10:56 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to identify independent predictors of TO after MIPD and to develop an interpretable machine learning (ML)-based prediction model.",
+        "new_capability": "The Random Forest algorithm demonstrated superior performance and may assist in individualized perioperative risk stratification and management.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Model interpretability was assessed using SHapley Additive exPlanations (SHAP).",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Development and validation of a machine learning-based model for predicting textbook outcome after minimally invasive pancreaticoduodenectomy.",
+      "url": "https://europepmc.org/article/MED/42977931",
+      "venue": "BMC surgery"
+    },
     {
       "abstract": "ABSTRACT Quantitative systems pharmacology ( QSP ) provides a mechanistic framework for integrating biological and pharmacological knowledge in drug development. Simultaneously, advances in artificial intelligence ( AI ), particularly in multi‐modal data analysis, are transforming how biological information is derived. I argue that AI should not be viewed as a data integration tool, but as a new layer of quantitative measurement generation. This reframing positions QSP as a foundational model of biology, used here in a conceptual rather than technical sense, and AI as a source of quantitative inputs.",
       "authors": [
