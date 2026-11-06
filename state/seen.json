@@ -1,17 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-11-05",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/89",
+  "last_delivery_date_jst": "2026-11-06",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/90",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-05 10:56 JST",
+    "archive": {
+      "cached_candidates_before": 43,
+      "completed_windows": 2,
+      "eligible_candidates": 43,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 625,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-06 10:57 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/89"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/90"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 16,
+        "limited_queries": 17,
         "pages": 36
       },
       "Europe PMC": {
@@ -26,24 +37,23 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2437,
-      "eligible_unreported": 3,
-      "excluded_publication_type": 149,
-      "missing_ai_evidence": 11,
+      "already_reported": 4,
+      "duplicates": 2460,
+      "excluded_publication_type": 130,
+      "missing_ai_evidence": 16,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2596,
-      "retrieved": 5199,
-      "unique": 2762
+      "missing_pk_evidence": 2576,
+      "retrieved": 5187,
+      "unique": 2727
     },
-    "selected_count": 3,
+    "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-05",
-  "last_success_utc": "2026-11-05T01:56:54.949242+00:00",
+  "last_selection_date_jst": "2026-11-06",
+  "last_success_utc": "2026-11-06T01:57:00.331344+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -243,6 +253,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "doi:10.1111/cts.70345": {
+      "doi": "10.1111/cts.70345",
+      "selected_at": "2026-11-06T01:57:00.331344+00:00",
+      "selection_type": "historical",
+      "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials."
     },
     "doi:10.1111/cts.70694": {
       "doi": "10.1111/cts.70694",
@@ -583,6 +599,12 @@
       "selected_at": "2026-10-30T01:29:48.472875+00:00",
       "selection_type": "historical",
       "title": "A machine learning approach to population pharmacokinetic modelling automation."
+    },
+    "source:europe pmc:med:40898887": {
+      "doi": "10.1111/cts.70345",
+      "selected_at": "2026-11-06T01:57:00.331344+00:00",
+      "selection_type": "historical",
+      "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials."
     },
     "source:europe pmc:med:41031158": {
       "doi": "10.3389/fphar.2025.1671652",
@@ -1123,6 +1145,12 @@
       "selection_type": "historical",
       "title": "Beyond Traditional Covariates: An Interpretable Machine Learning Workflow for Improved Hybrid Pharmacometric Modeling."
     },
+    "title:42aaadc47b2c1d36f17dbdde": {
+      "doi": "10.1111/cts.70345",
+      "selected_at": "2026-11-06T01:57:00.331344+00:00",
+      "selection_type": "historical",
+      "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials."
+    },
     "title:47149655abd685772a1fb84a": {
       "doi": "10.1038/s41467-025-64304-2",
       "selected_at": "2026-11-01T00:36:52.833971+00:00",
@@ -1429,22 +1457,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-05"
+    "arxiv": "2026-11-06"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-05T01:56:54.949242+00:00",
+      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-05T01:56:54.949242+00:00",
-      "records": 5191,
+      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
+      "records": 5181,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-05T01:56:54.949242+00:00",
-      "records": 8,
+      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
+      "records": 6,
       "status": "ok"
     }
   }

@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-02",
+  "last_check": "2026-11-06",
   "last_run": {
-    "cached_candidates_before": 45,
+    "cached_candidates_before": 43,
     "completed_windows": 2,
-    "eligible_candidates": 45,
+    "eligible_candidates": 43,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 606,
+    "pending_windows": 625,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4256,6 +4256,139 @@
       "since": "2026-11-02",
       "source": "crossref",
       "until": "2026-11-02"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-03",
+      "source": "europe_pmc",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-03",
+      "source": "crossref",
+      "until": "2026-11-06"
     }
   ],
   "pool": [
@@ -4377,30 +4510,6 @@
       "title": "State-space models are accurate and efficient neural operators for dynamical systems.",
       "url": "https://europepmc.org/article/MED/41447828",
       "venue": "Neural networks : the official journal of the International Neural Network Society"
-    },
-    {
-      "abstract": "Abstract Background: Textbook Outcome (TO) reflects overall surgical quality. With the expanding use of minimally invasive pancreaticoduodenectomy (MIPD), reliable prediction of TO is essential. This study aimed to identify predictors of TO after MIPD and develop a machine learning (ML) model. Methods: We retrospectively analyzed 411 patients undergoing MIPD (2017–2023). The Least Absolute Shrinkage and Selection Operator regression was used for feature selection, and ten ML algorithms were compared. Model performance was evaluated using the area under the receiver operating characteristic curve (AUC). Model interpretability was assessed using SHapley Additive exPlanations (SHAP). Results: Of 411 patients, 263 (63.99%) achieved TO. Eight variables were identified as predictive features. Among the ten algorithms, the Random Forest model demonstrated the best discrimination (AUC = 0.86). Conclusions: The Random Forest model accurately predicted TO after MIPD and may assist in individualized preoperative risk stratification and perioperative management.",
-      "authors": [
-        "Ma P",
-        "Jiang Z",
-        "Wang Y",
-        "Jin Z",
-        "Zhang Z",
-        "Mou Y",
-        "Jin W"
-      ],
-      "date": "2025-12-10",
-      "doi": "10.21203/rs.3.rs-8269976/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1132645"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Development and Validation of a Machine Learning–Based Model for Predicting Textbook Outcome after Minimally Invasive Pancreaticoduodenectomy",
-      "url": "https://europepmc.org/article/PPR/PPR1132645",
-      "venue": ""
     },
     {
       "abstract": "Dalbavancin is a long-acting lipoglycopeptide increasingly used off-label for complex Gram-positive infections requiring prolonged therapy. Its extended half-life enables simplified regimens, but interindividual pharmacokinetic variability and pathogen MIC heterogeneity complicate dosing. We developed and externally validated machine learning (ML) models to predict whether dalbavancin plasma concentrations remain above predefined pharmacokinetic/pharmacodynamic targets after two standard 1,500 mg doses (day 1/day 8 or day 1/day 15). Predictions were binary (adequate vs subtherapeutic concentration), directly reflecting the clinical decision to readminister a 1,500 mg dose. Models were trained on simulated PK profiles from a published population PK (popPK) model and evaluated in three independent settings: (i) simulated validation data sets from two alternative published popPK models, (ii) a real-world cohort from Limoges University Hospital ( n = 31), and (iii) a secondary cohort from Nantes University Hospital ( n = 7). Input features included age, body weight, creatinine clearance, MIC, and a single plasma concentration obtained before the second dose. Support vector machine models achieved high accuracy (>88%) and sensitivity (>90%) across testing sets and clinical validation cohorts. In clinical data sets, no false negatives were observed (limited by sample size), with overall accuracy approaching 95%. Compared with maximum a posteriori Bayesian estimation, ML achieved higher accuracy and sensitivity across validation cohorts, particularly by reducing false negatives. Predictions remained reliable through week 8, the clinically relevant exposure window. This ML-based approach enables early individualized redosing decisions using minimal clinical inputs. By complementing Bayesian forecasting and reducing reliance on serial sampling, it represents a pragmatic strategy to support model-informed precision dosing of dalbavancin.",
@@ -4613,32 +4722,6 @@
       "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool",
       "url": "https://europepmc.org/article/PPR/PPR1087815",
       "venue": ""
-    },
-    {
-      "abstract": "Objective This study aimed to develop an individualized dosing strategy for voriconazole (VRZ) in children under 2 years of age by integrating machine learning (ML) and population pharmacokinetic (PopPK) modeling. Methods This retrospective observational study included 76 eligible pediatric patients for model development, analyzing their baseline characteristics and laboratory parameters. A population pharmacokinetic (PopPK) model using NONMEM ® software was performed to assess the clearance (CL) and volume of distribution (V) of VRZ. The individual CL and V were included as input variables. The Boruta algorithm was employed for feature selection, after which six machine learning algorithms were applied. The models were evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R 2 ) to identify the optimal algorithm, which then underwent independent external validation. The selected final model was analyzed for interpretability using Shapley Additive Explanations (SHAP). Results A total of 76 pediatric patients were enrolled for model development, consisting of 58 males (76.3%) and 18 females (23.7%), with a median age of 11 months and a median weight of 8.05 kg. We analyzed 110 therapeutic drug monitoring (TDM) samples of VRZ from these participants. A one-compartment model with first-order absorption and elimination described the population pharmacokinetics of VRZ. Population estimates for apparent clearance (CL/F) and volume of distribution (V/F) were 17.9 L/h/70kg (RSE, 10.8%) and 788 L/70kg (RSE, 15.4%), respectively. An XGBoost model accurately predicted voriconazole concentrations (R 2 = 0.81, RMSE = 0.53) with a relative error of ±20% for most observations. In the external validation, the XGBoost model demonstrated an R 2 of 0.75, RMSE of 0.14. SHAP analysis identified clearance, weight, and laboratory values as significant predictors. Conclusion This study emphasized the importance of personalized treatment in utilizing VRZ for children under 24 months. The XGBoost model demonstrated potential in identifying an initial dose recommendation for VRZ.",
-      "authors": [
-        "Shen L",
-        "Hu M",
-        "Xu X",
-        "Zhou Y",
-        "Wu W",
-        "Ge X",
-        "Wang G",
-        "Wang Y",
-        "Li Z"
-      ],
-      "date": "2025-09-15",
-      "doi": "10.3389/fphar.2025.1671652",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:41031158"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Precision dosing of voriconazole in immunocompromised children under 2 years: integrated machine learning and population pharmacokinetic modeling.",
-      "url": "https://europepmc.org/article/MED/41031158",
-      "venue": "Frontiers in pharmacology"
     },
     {
       "abstract": "A propensity weighted (PSW) methodology was recently proposed for assessing the treatment effect conditional to the probability of non-specific response to a treatment (prob-NSRT). Prob-NSRT was estimated using an artificial neural network (ANN) model applied to pre-randomization and study endpoint observations in a placebo arm of a placebo-controlled clinical trial. Placebo data were initially used to estimate prob-NSRT, then the ANN model was applied to the data of each individual in each treatment arm (placebo + active) for estimating the individual prob-NSRT, and finally all data in the trial enriched by the prob-NSRT values were used to assess the treatment effect. One of the major limitations of this methodology was that the ANN model was developed and applied to analyze data in the same dataset. To overcome this limitation, a new artificial intelligence driven nonlinear mixed effect modeling approach (AI-NLME) is proposed. This approach involves the development of the ANN model using a dataset that is independent from the dataset used to estimate the treatment effect. A case study is presented using data from a randomized, placebo-controlled trial in major depressive disorders. The AI-NLME approach provided an effective tool for controlling the confounding effect of treatment non-specific response, for increasing signal detection, for decreasing heterogeneity in the response, for increasing the effect size, for better assessing the responder rate, and for providing a reliable estimate of the \"true\" treatment effect. These findings provide convergent evidence on the potential role of AI-NLME to become the reference approach for analyzing placebo-controlled clinical trials.",
@@ -5308,5 +5391,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-02"
+  "through": "2026-11-06"
 }
