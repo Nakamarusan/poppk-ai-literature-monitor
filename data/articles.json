@@ -1,6 +1,85 @@
 {
   "articles": [
     {
+      "abstract": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease. Methods We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. Results For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and - 0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared with Bayesian estimation alone. Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
+      "authors": [
+        "Irie K",
+        "Minar P",
+        "Reifenberg J",
+        "Boyle BM",
+        "Noe JD",
+        "Hyams JS",
+        "Mizuno T"
+      ],
+      "doi": "10.1007/s40262-025-01564-7",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1007/s40262-025-01564-7",
+      "publication_date": "2025-08-30",
+      "reported_at": "2026-11-07 10:31 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease.",
+        "new_capability": "Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation.",
+        "prior_limitation": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited.",
+        "significance": "Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease.",
+      "url": "https://europepmc.org/article/MED/40885855",
+      "venue": "Clinical pharmacokinetics"
+    },
+    {
       "abstract": "A propensity weighted (PSW) methodology was recently proposed for assessing the treatment effect conditional to the probability of non-specific response to a treatment (prob-NSRT). Prob-NSRT was estimated using an artificial neural network (ANN) model applied to pre-randomization and study endpoint observations in a placebo arm of a placebo-controlled clinical trial. Placebo data were initially used to estimate prob-NSRT, then the ANN model was applied to the data of each individual in each treatment arm (placebo + active) for estimating the individual prob-NSRT, and finally all data in the trial enriched by the prob-NSRT values were used to assess the treatment effect. One of the major limitations of this methodology was that the ANN model was developed and applied to analyze data in the same dataset. To overcome this limitation, a new artificial intelligence driven nonlinear mixed effect modeling approach (AI-NLME) is proposed. This approach involves the development of the ANN model using a dataset that is independent from the dataset used to estimate the treatment effect. A case study is presented using data from a randomized, placebo-controlled trial in major depressive disorders. The AI-NLME approach provided an effective tool for controlling the confounding effect of treatment non-specific response, for increasing signal detection, for decreasing heterogeneity in the response, for increasing the effect size, for better assessing the responder rate, and for providing a reliable estimate of the \"true\" treatment effect. These findings provide convergent evidence on the potential role of AI-NLME to become the reference approach for analyzing placebo-controlled clinical trials.",
       "authors": [
         "Gomeni R",
@@ -5992,29 +6071,29 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-06 10:57 JST",
+  "last_scan_at": "2026-11-07 10:31 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 43,
+      "cached_candidates_before": 42,
       "completed_windows": 2,
-      "eligible_candidates": 43,
+      "eligible_candidates": 42,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 625,
+      "pending_windows": 644,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-06 10:57 JST",
+    "checked_at": "2026-11-07 10:31 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/90"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -6030,13 +6109,13 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2460,
-      "excluded_publication_type": 130,
-      "missing_ai_evidence": 16,
+      "duplicates": 2478,
+      "excluded_publication_type": 134,
+      "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2576,
-      "retrieved": 5187,
-      "unique": 2727
+      "missing_pk_evidence": 2550,
+      "retrieved": 5184,
+      "unique": 2706
     },
     "selected_count": 1,
     "selection_status": "selected",

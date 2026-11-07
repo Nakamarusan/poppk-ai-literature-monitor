@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-06",
+  "last_check": "2026-11-07",
   "last_run": {
-    "cached_candidates_before": 43,
+    "cached_candidates_before": 42,
     "completed_windows": 2,
-    "eligible_candidates": 43,
+    "eligible_candidates": 42,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 625,
+    "pending_windows": 644,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4389,6 +4389,139 @@
       "since": "2026-11-03",
       "source": "crossref",
       "until": "2026-11-06"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-07",
+      "source": "europe_pmc",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-07",
+      "source": "crossref",
+      "until": "2026-11-07"
     }
   ],
   "pool": [
@@ -4722,25 +4855,6 @@
       "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool",
       "url": "https://europepmc.org/article/PPR/PPR1087815",
       "venue": ""
-    },
-    {
-      "abstract": "A propensity weighted (PSW) methodology was recently proposed for assessing the treatment effect conditional to the probability of non-specific response to a treatment (prob-NSRT). Prob-NSRT was estimated using an artificial neural network (ANN) model applied to pre-randomization and study endpoint observations in a placebo arm of a placebo-controlled clinical trial. Placebo data were initially used to estimate prob-NSRT, then the ANN model was applied to the data of each individual in each treatment arm (placebo + active) for estimating the individual prob-NSRT, and finally all data in the trial enriched by the prob-NSRT values were used to assess the treatment effect. One of the major limitations of this methodology was that the ANN model was developed and applied to analyze data in the same dataset. To overcome this limitation, a new artificial intelligence driven nonlinear mixed effect modeling approach (AI-NLME) is proposed. This approach involves the development of the ANN model using a dataset that is independent from the dataset used to estimate the treatment effect. A case study is presented using data from a randomized, placebo-controlled trial in major depressive disorders. The AI-NLME approach provided an effective tool for controlling the confounding effect of treatment non-specific response, for increasing signal detection, for decreasing heterogeneity in the response, for increasing the effect size, for better assessing the responder rate, and for providing a reliable estimate of the \"true\" treatment effect. These findings provide convergent evidence on the potential role of AI-NLME to become the reference approach for analyzing placebo-controlled clinical trials.",
-      "authors": [
-        "Gomeni R",
-        "Bressolle-Gomeni F"
-      ],
-      "date": "2025-09-01",
-      "doi": "10.1111/cts.70345",
-      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
-      "source_ids": [
-        "MED:40898887"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials.",
-      "url": "https://europepmc.org/article/MED/40898887",
-      "venue": "Clinical and translational science"
     },
     {
       "abstract": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease. Methods We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. Results For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and - 0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared with Bayesian estimation alone. Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
@@ -5391,5 +5505,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-06"
+  "through": "2026-11-07"
 }

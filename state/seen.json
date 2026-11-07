@@ -1,28 +1,28 @@
 {
-  "last_delivery_date_jst": "2026-11-06",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/90",
+  "last_delivery_date_jst": "2026-11-07",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 43,
+      "cached_candidates_before": 42,
       "completed_windows": 2,
-      "eligible_candidates": 43,
+      "eligible_candidates": 42,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 625,
+      "pending_windows": 644,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-06 10:57 JST",
+    "checked_at": "2026-11-07 10:31 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/90"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
-        "limited_queries": 17,
+        "limited_queries": 16,
         "pages": 36
       },
       "Europe PMC": {
@@ -38,13 +38,13 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2460,
-      "excluded_publication_type": 130,
-      "missing_ai_evidence": 16,
+      "duplicates": 2478,
+      "excluded_publication_type": 134,
+      "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2576,
-      "retrieved": 5187,
-      "unique": 2727
+      "missing_pk_evidence": 2550,
+      "retrieved": 5184,
+      "unique": 2706
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-06",
-  "last_success_utc": "2026-11-06T01:57:00.331344+00:00",
+  "last_selection_date_jst": "2026-11-07",
+  "last_success_utc": "2026-11-07T01:31:26.578181+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -194,6 +194,12 @@
       "selected_at": "2026-10-20T00:52:28.580070+00:00",
       "selection_type": "historical",
       "title": "Predicting Ketamine Exposure in Pediatric Status Epilepticus: A Pharmacokinetic-Machine Learning Approach."
+    },
+    "doi:10.1007/s40262-025-01564-7": {
+      "doi": "10.1007/s40262-025-01564-7",
+      "selected_at": "2026-11-07T01:31:26.578181+00:00",
+      "selection_type": "historical",
+      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease."
     },
     "doi:10.1016/j.cmpb.2026.109511": {
       "doi": "10.1016/j.cmpb.2026.109511",
@@ -599,6 +605,12 @@
       "selected_at": "2026-10-30T01:29:48.472875+00:00",
       "selection_type": "historical",
       "title": "A machine learning approach to population pharmacokinetic modelling automation."
+    },
+    "source:europe pmc:med:40885855": {
+      "doi": "10.1007/s40262-025-01564-7",
+      "selected_at": "2026-11-07T01:31:26.578181+00:00",
+      "selection_type": "historical",
+      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease."
     },
     "source:europe pmc:med:40898887": {
       "doi": "10.1111/cts.70345",
@@ -1205,6 +1217,12 @@
       "selection_type": "new",
       "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
     },
+    "title:67360dd3bee9e7d6b321541f": {
+      "doi": "10.1007/s40262-025-01564-7",
+      "selected_at": "2026-11-07T01:31:26.578181+00:00",
+      "selection_type": "historical",
+      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease."
+    },
     "title:6d34584626133d97a4fc919e": {
       "doi": "10.3390/plants15081176",
       "selected_at": "2026-10-18T23:51:53.926881+00:00",
@@ -1457,22 +1475,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-06"
+    "arxiv": "2026-11-07"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
+      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
-      "records": 5181,
+      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
+      "records": 5180,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-06T01:57:00.331344+00:00",
-      "records": 6,
+      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
+      "records": 4,
       "status": "ok"
     }
   }
