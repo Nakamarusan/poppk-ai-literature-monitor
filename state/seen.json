@@ -1,23 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-11-07",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91",
+  "last_delivery_date_jst": "2026-11-08",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/92",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-11-08T01:00:07.956207+00:00",
+      "message": "Network error: The read operation timed out"
+    }
+  },
   "last_run": {
     "archive": {
-      "cached_candidates_before": 42,
+      "cached_candidates_before": 41,
       "completed_windows": 2,
-      "eligible_candidates": 42,
+      "eligible_candidates": 41,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 644,
+      "pending_windows": 663,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-07 10:31 JST",
+    "checked_at": "2026-11-08 10:00 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/92"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -29,22 +35,17 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2478,
+      "duplicates": 2493,
       "excluded_publication_type": 134,
       "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2550,
-      "retrieved": 5184,
-      "unique": 2706
+      "missing_pk_evidence": 2531,
+      "retrieved": 5180,
+      "unique": 2687
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-07",
-  "last_success_utc": "2026-11-07T01:31:26.578181+00:00",
+  "last_selection_date_jst": "2026-11-08",
+  "last_success_utc": "2026-11-08T01:00:07.956207+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -158,6 +159,12 @@
       "selected_at": "2026-11-04T01:50:00.370529+00:00",
       "selection_type": "new",
       "title": "Reframing QSP: AI-Driven Multi-Modal Data as a New Measurement Layer."
+    },
+    "doi:10.1007/s00228-025-03874-y": {
+      "doi": "10.1007/s00228-025-03874-y",
+      "selected_at": "2026-11-08T01:00:07.956207+00:00",
+      "selection_type": "historical",
+      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?"
     },
     "doi:10.1007/s10928-026-10036-9": {
       "doi": "10.1007/s10928-026-10036-9",
@@ -593,6 +600,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40617982": {
+      "doi": "10.1007/s00228-025-03874-y",
+      "selected_at": "2026-11-08T01:00:07.956207+00:00",
+      "selection_type": "historical",
+      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?"
     },
     "source:europe pmc:med:40684660": {
       "doi": "10.1016/j.compbiomed.2025.110782",
@@ -1456,6 +1469,12 @@
       "selection_type": "historical",
       "title": "PKGPT: Expert-Orchestrated Recursive LLM Agent for Automated NONMEM PopPK Modeling with Human Benchmarking."
     },
+    "title:f01b1a890856626d4a28288f": {
+      "doi": "10.1007/s00228-025-03874-y",
+      "selected_at": "2026-11-08T01:00:07.956207+00:00",
+      "selection_type": "historical",
+      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?"
+    },
     "title:f24f43e98f6f0b03fac53eee": {
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
@@ -1475,22 +1494,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-07"
+    "arxiv": "2026-11-08"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-11-08T01:00:07.956207+00:00",
+      "message": "Network error: The read operation timed out",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
-      "records": 5180,
+      "last_attempt_utc": "2026-11-08T01:00:07.956207+00:00",
+      "records": 5177,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-07T01:31:26.578181+00:00",
-      "records": 4,
+      "last_attempt_utc": "2026-11-08T01:00:07.956207+00:00",
+      "records": 3,
       "status": "ok"
     }
   }

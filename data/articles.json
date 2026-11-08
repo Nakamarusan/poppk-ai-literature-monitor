@@ -1,6 +1,90 @@
 {
   "articles": [
     {
+      "abstract": "Purpose This study develops and compares population pharmacokinetics (PopPK) models and machine learning methods, including neural networks, to predict steady-state trough concentrations in pediatric patients and provide improved dosing recommendations. Methods Valproic acid concentration data were collected from 490 pediatric epilepsy patients treated at Beijing Tiantan Hospital and Beijing Children's Hospital. We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques. The predictive accuracy of these models was then rigorously tested through external validation using the independent dataset from Beijing Children's Hospital. Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented. Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance. Transforming these models into multiple linear regression enhanced prediction accuracy. Moreover, when prior data was available, the MAPB method significantly boosted prediction performance. Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%. Conclusion This study explored model optimization strategies and compared machine learning and neural network models alongside traditional PopPK. It introduced an advanced method to predict drug concentrations and stable trough dosing regimens in pediatric epilepsy treatment, reducing the need for frequent, invasive blood tests in TDM. These improvements enhanced the efficacy and safety of valproic acid therapy for children, supporting the development of personalized treatment plans.",
+      "authors": [
+        "Chen J",
+        "Wang J",
+        "Li K",
+        "Wu Y",
+        "Wang Z",
+        "Guo J",
+        "Zhao Z",
+        "Feng W",
+        "Mei S"
+      ],
+      "doi": "10.1007/s00228-025-03874-y",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "neural network"
+          ],
+          "method": [
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "neural network"
+          ],
+          "method": [
+            "optimization",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1007/s00228-025-03874-y",
+      "publication_date": "2025-07-05",
+      "reported_at": "2026-11-08 10:00 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques.",
+        "new_capability": "Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%.",
+        "prior_limitation": "Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance.",
+        "significance": "Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?",
+      "url": "https://europepmc.org/article/MED/40617982",
+      "venue": "European journal of clinical pharmacology"
+    },
+    {
       "abstract": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease. Methods We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. Results For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and - 0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared with Bayesian estimation alone. Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
       "authors": [
         "Irie K",
@@ -6071,24 +6155,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-07 10:31 JST",
+  "last_scan_at": "2026-11-08 10:00 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 42,
+      "cached_candidates_before": 41,
       "completed_windows": 2,
-      "eligible_candidates": 42,
+      "eligible_candidates": 41,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 644,
+      "pending_windows": 663,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-07 10:31 JST",
+    "checked_at": "2026-11-08 10:00 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/91"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/92"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -6100,22 +6184,17 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2478,
+      "duplicates": 2493,
       "excluded_publication_type": 134,
       "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2550,
-      "retrieved": 5184,
-      "unique": 2706
+      "missing_pk_evidence": 2531,
+      "retrieved": 5180,
+      "unique": 2687
     },
     "selected_count": 1,
     "selection_status": "selected",

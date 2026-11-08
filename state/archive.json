@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-07",
+  "last_check": "2026-11-08",
   "last_run": {
-    "cached_candidates_before": 42,
+    "cached_candidates_before": 41,
     "completed_windows": 2,
-    "eligible_candidates": 42,
+    "eligible_candidates": 41,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 644,
+    "pending_windows": 663,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4522,6 +4522,139 @@
       "since": "2026-11-07",
       "source": "crossref",
       "until": "2026-11-07"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-08",
+      "source": "europe_pmc",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-08",
+      "source": "crossref",
+      "until": "2026-11-08"
     }
   ],
   "pool": [
@@ -4855,30 +4988,6 @@
       "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool",
       "url": "https://europepmc.org/article/PPR/PPR1087815",
       "venue": ""
-    },
-    {
-      "abstract": "Background and objective Population pharmacokinetic (PK) model-based Bayesian estimation is widely used for dose individualization, particularly when sample availability is limited. However, its predictive accuracy can be compromised by factors such as misspecified prior information, intra-patient variability, and uncertainties in PK variations. In this study, we developed a hybrid approach that combines machine learning (ML) with population PK-based Bayesian methods to improve the prediction of infliximab concentrations in children with Crohn's disease. Methods We calculated prediction errors between Bayesian-estimated and observed infliximab concentrations from 292 measurements across 93 patients. Incorporating clinical patient features, we explored various ML algorithms, including linear regression, random forest, support vector regression, neural networks, and XGBoost to correct the Bayesian-based prediction errors. The predictive performance of these ML models was assessed using root mean square error (RMSE) and mean prediction error (MPE) with 5-fold cross-validation. Results For Bayesian estimation alone, the RMSE and MPE were 4.8 µg/mL and - 0.67 µg/mL, respectively. Among the ML algorithms, the XGBoost model demonstrated the best performance, achieving an RMSE of 3.78 ± 0.85 µg/mL and an MPE of - 0.03 ± 0.69 µg/mL in 5-fold cross-validation. The ML-corrected Bayesian estimation significantly reduced the absolute prediction error compared with Bayesian estimation alone. Conclusion This hybrid population PK-ML approach provides a promising framework for improving the predictive performance of Bayesian estimation, with the potential for continuous learning from new clinical data to enhance dose individualization.",
-      "authors": [
-        "Irie K",
-        "Minar P",
-        "Reifenberg J",
-        "Boyle BM",
-        "Noe JD",
-        "Hyams JS",
-        "Mizuno T"
-      ],
-      "date": "2025-08-30",
-      "doi": "10.1007/s40262-025-01564-7",
-      "publication_type": "research-article, Journal Article, Research Support, N.I.H., Extramural",
-      "source_ids": [
-        "MED:40885855"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease.",
-      "url": "https://europepmc.org/article/MED/40885855",
-      "venue": "Clinical pharmacokinetics"
     },
     {
       "abstract": "Quorum sensing regulates cooperative behaviors in bacteria through the accumulation and detection of signaling molecules. This process plays a crucial role in various biological functions, including biofilm formation, antibiotic production, regulation of virulence factors, and immune modulation. Quorum sensing peptides (QSPs), primarily produced by Gram-positive bacteria, are key components of the quorum sensing mechanism, and their identification is crucial for understanding bacterial regulation. Despite the availability of several QSP prediction tools based on handcrafted features and machine learning techniques, there is still potential for improving their performance and interpretability. In this study, we present IQSPred-PLM, a novel model for predicting QSPs that integrates protein language models (PLMs) with a convolutional neural network (CNN). First, we utilize the pre-trained PLM ESM-2 to encode peptide sequences. Then, feature extraction is performed using a multi-scale residual CNN (MSRes-CNN), with dynamic feature integration through an adaptive weight modulation (AWM) module. Finally, a fully connected network is designed to conduct the classification of QSPs. Evaluated on the benchmark dataset, IQSPred-PLM demonstrated the outstanding predictive performance with accuracy (ACC), Matthews correlation coefficient (MCC), and the area under the receiver operating characteristic (ROC) curve (AUC) of 97.50%, 0.951, and 0.990, respectively. Furthermore, case studies and interpretability analyses confirmed the effectiveness of IQSPred-PLM for the QSP prediction task.",
@@ -5505,5 +5614,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-07"
+  "through": "2026-11-08"
 }
