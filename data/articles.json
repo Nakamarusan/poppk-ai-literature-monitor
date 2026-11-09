@@ -1,6 +1,79 @@
 {
   "articles": [
     {
+      "abstract": "Introduction Appropriate vancomycin trough levels are crucial for ensuring therapeutic efficacy while minimizing toxicity. The aim of this study is to identify clinical factors that influence the steady-state trough concentration of vancomycin and to establish a machine learning model for accurately predicting vancomycin's steady-state trough concentration. Methods This study is a single-center, retrospective, observational investigation involving 546 hospitalized patients who received intravenous vancomycin therapy. A total of 57 clinical indicators were collected from the subjects. Random forest models were constructed and validated using internal and external datasets, with performance compared to a Bayesian PopPK model. Results The random forest model incorporated a comprehensive set of clinical indicators, including creatinine clearance, C-reactive protein (CRP), B-type natriuretic peptide (BNP), high-density lipoprotein cholesterol (HDL-C), and daily vancomycin dose, collected 48 hours before steady-state concentration assessment. The random forest regression model achieved correlation coefficients of 0.94 for the training set and 0.81 for the test set, respectively. The random forest classification model demonstrated impressive accuracy rates of 0.99 for the training set and 0.84 for the test set. External validation further confirmed the model's generalization capabilities, with a predictive accuracy of 0.83, surpassing the Bayesian PopPK model's 0.57 accuracy. Discussion This study presents a robust random forest model that predicts vancomycin steady-state trough concentrations with high accuracy, offering a significant advantage over existing Bayesian PopPK model. By integrating diverse clinical indicators, the model supports personalized medicine approaches and has the potential to improve clinical outcomes by facilitating more precise dosing strategies.",
+      "authors": [
+        "Hu T",
+        "Ding X",
+        "Han F",
+        "An Z"
+      ],
+      "doi": "10.3389/fphar.2025.1549500",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.3389/fphar.2025.1549500",
+      "publication_date": "2025-06-12",
+      "reported_at": "2026-11-09 10:21 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "The aim of this study is to identify clinical factors that influence the steady-state trough concentration of vancomycin and to establish a machine learning model for accurately predicting vancomycin's steady-state trough concentration.",
+        "new_capability": "The random forest classification model demonstrated impressive accuracy rates of 0.99 for the training set and 0.84 for the test set.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "By integrating diverse clinical indicators, the model supports personalized medicine approaches and has the potential to improve clinical outcomes by facilitating more precise dosing strategies.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine learning approach for personalized vancomycin steady-state trough concentration prediction: a superior approach over Bayesian population pharmacokinetic model.",
+      "url": "https://europepmc.org/article/MED/40575776",
+      "venue": "Frontiers in pharmacology"
+    },
+    {
       "abstract": "Purpose This study develops and compares population pharmacokinetics (PopPK) models and machine learning methods, including neural networks, to predict steady-state trough concentrations in pediatric patients and provide improved dosing recommendations. Methods Valproic acid concentration data were collected from 490 pediatric epilepsy patients treated at Beijing Tiantan Hospital and Beijing Children's Hospital. We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques. The predictive accuracy of these models was then rigorously tested through external validation using the independent dataset from Beijing Children's Hospital. Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented. Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance. Transforming these models into multiple linear regression enhanced prediction accuracy. Moreover, when prior data was available, the MAPB method significantly boosted prediction performance. Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%. Conclusion This study explored model optimization strategies and compared machine learning and neural network models alongside traditional PopPK. It introduced an advanced method to predict drug concentrations and stable trough dosing regimens in pediatric epilepsy treatment, reducing the need for frequent, invasive blood tests in TDM. These improvements enhanced the efficacy and safety of valproic acid therapy for children, supporting the development of personalized treatment plans.",
       "authors": [
         "Chen J",
@@ -6155,24 +6228,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-08 10:00 JST",
+  "last_scan_at": "2026-11-09 10:21 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 41,
+      "cached_candidates_before": 40,
       "completed_windows": 2,
-      "eligible_candidates": 41,
+      "eligible_candidates": 40,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 663,
+      "pending_windows": 682,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-08 10:00 JST",
+    "checked_at": "2026-11-09 10:21 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/92"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/93"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -6184,17 +6257,22 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2493,
-      "excluded_publication_type": 134,
+      "duplicates": 2507,
+      "excluded_publication_type": 136,
       "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2531,
-      "retrieved": 5180,
-      "unique": 2687
+      "missing_pk_evidence": 2505,
+      "retrieved": 5170,
+      "unique": 2663
     },
     "selected_count": 1,
     "selection_status": "selected",

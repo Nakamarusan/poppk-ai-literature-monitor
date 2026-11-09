@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-08",
+  "last_check": "2026-11-09",
   "last_run": {
-    "cached_candidates_before": 41,
+    "cached_candidates_before": 40,
     "completed_windows": 2,
-    "eligible_candidates": 41,
+    "eligible_candidates": 40,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 663,
+    "pending_windows": 682,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4655,6 +4655,139 @@
       "since": "2026-11-08",
       "source": "crossref",
       "until": "2026-11-08"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-09",
+      "source": "europe_pmc",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-09",
+      "source": "crossref",
+      "until": "2026-11-09"
     }
   ],
   "pool": [
@@ -5076,32 +5209,6 @@
       "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning.",
       "url": "https://europepmc.org/article/MED/40698833",
       "venue": "Therapeutic drug monitoring"
-    },
-    {
-      "abstract": "Purpose This study develops and compares population pharmacokinetics (PopPK) models and machine learning methods, including neural networks, to predict steady-state trough concentrations in pediatric patients and provide improved dosing recommendations. Methods Valproic acid concentration data were collected from 490 pediatric epilepsy patients treated at Beijing Tiantan Hospital and Beijing Children's Hospital. We developed predictive models employing PopPK, maximum a posteriori Bayesian (MAPB), multiple linear regression (MLR), machine learning (including Random Forest, XGBoost, and LightGBM for feature selection), and neural network techniques. The predictive accuracy of these models was then rigorously tested through external validation using the independent dataset from Beijing Children's Hospital. Upon identifying the optimal model, dosing regimens for various clinical scenarios were derived and presented. Results Under the same dataset modeling conditions, the original PopPK models showed limited predictive performance. Transforming these models into multiple linear regression enhanced prediction accuracy. Moreover, when prior data was available, the MAPB method significantly boosted prediction performance. Machine learning and neural networks showed higher accuracy, with neural networks achieving an F 30 value above 80%. Conclusion This study explored model optimization strategies and compared machine learning and neural network models alongside traditional PopPK. It introduced an advanced method to predict drug concentrations and stable trough dosing regimens in pediatric epilepsy treatment, reducing the need for frequent, invasive blood tests in TDM. These improvements enhanced the efficacy and safety of valproic acid therapy for children, supporting the development of personalized treatment plans.",
-      "authors": [
-        "Chen J",
-        "Wang J",
-        "Li K",
-        "Wu Y",
-        "Wang Z",
-        "Guo J",
-        "Zhao Z",
-        "Feng W",
-        "Mei S"
-      ],
-      "date": "2025-07-05",
-      "doi": "10.1007/s00228-025-03874-y",
-      "publication_type": "Journal Article",
-      "source_ids": [
-        "MED:40617982"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Dosing prediction of valproic acid in pediatric patients with epilepsy: population pharmacokinetic model or machine learning model?",
-      "url": "https://europepmc.org/article/MED/40617982",
-      "venue": "European journal of clinical pharmacology"
     },
     {
       "abstract": "Keizer initially described Pirana as a workbench designed to streamline management of NONMEM modeling, visualization, and analysis. Initial versions of Pirana integrated tools included NONMEM and PSN. As new tools have become available to pharmacometricians, new capabilities have been added to Pirana. These capabilities include: Integration of the NLME engine via the R speaks NLME (RsNLME) package for developing NLME models Integration of a Shiny graphical interface for the construction of NLME models Integration of machine learning pyDarwin python package Integration of a Shiny interface for custom diagnostics including Goodness of Fit (GOF) plots, tables, Visual Predictive Check (VPC) and report shell generation Improved setup with support for parallel execution on a wide range of platforms In this tutorial, we present a full workflow demonstrating how to use Pirana to build, fit, post-process, and perform VPC on models using NONMEM and NLME. In addition, we show how to use the machine learning-driven pyDarwin package with Pirana to automatically search model structures, random effects, and covariate models.",
@@ -5614,5 +5721,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-08"
+  "through": "2026-11-09"
 }
