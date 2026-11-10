@@ -1,6 +1,84 @@
 {
   "articles": [
     {
+      "abstract": "Purpose Voriconazole (VCZ) is a first-line treatment for invasive fungal disease, characterized by a narrow therapeutic window and significant inter-individual variability. It is primarily metabolized by the liver, the function of which declines with age. Pathological and physiological changes in elderly patients contribute to increased fluctuations in VCZ plasma concentrations. Thus, it is crucial to develop a model that accurately predicts the VCZ plasma concentrations in elderly patients. Patients and methods This retrospective study incorporated 31 features, including pharmacokinetic parameters derived from a population pharmacokinetic (PPK) model. Feature selection for machine learning (ML) models was performed using Recursive Feature Elimination with Cross-Validation (RFECV). Multiple algorithms were selected and combined into an ML ensemble model, which was interpreted using Shapley Additive exPlanations (SHAP). Results The predictive performance of ML models was significantly improved by incorporating pharmacokinetic parameters. The ensemble model consisting of XGBoost, random forest (RF), and CatBoost (1:1:8) achieved the highest R 2 (0.828) and was selected as the final ML model. Feature selection reduced the number of features from 31 to 9 without compromising predictive performance. The R 2 , mean absolute error (MAE), and mean squared error (MSE) of the external validation dataset were 0.633, 1.094, and 2.286, respectively. Conclusion Our study is the first to incorporate pharmacokinetic parameters into ML models to predict VCZ plasma concentrations in elderly patients. The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.",
+      "authors": [
+        "Liu R",
+        "Ma P",
+        "Chen D",
+        "Yu M",
+        "Xie L",
+        "Zhao L",
+        "Huang Y",
+        "Shang S",
+        "Chen Y"
+      ],
+      "doi": "10.2147/dddt.s495050",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        }
+      },
+      "id": "doi:10.2147/dddt.s495050",
+      "publication_date": "2025-05-17",
+      "reported_at": "2026-11-10 12:55 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Not stated in the available abstract.",
+        "new_capability": "Feature selection reduced the number of features from 31 to 9 without compromising predictive performance.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics.",
+      "url": "https://europepmc.org/article/MED/40401163",
+      "venue": "Drug design, development and therapy"
+    },
+    {
       "abstract": "Introduction Appropriate vancomycin trough levels are crucial for ensuring therapeutic efficacy while minimizing toxicity. The aim of this study is to identify clinical factors that influence the steady-state trough concentration of vancomycin and to establish a machine learning model for accurately predicting vancomycin's steady-state trough concentration. Methods This study is a single-center, retrospective, observational investigation involving 546 hospitalized patients who received intravenous vancomycin therapy. A total of 57 clinical indicators were collected from the subjects. Random forest models were constructed and validated using internal and external datasets, with performance compared to a Bayesian PopPK model. Results The random forest model incorporated a comprehensive set of clinical indicators, including creatinine clearance, C-reactive protein (CRP), B-type natriuretic peptide (BNP), high-density lipoprotein cholesterol (HDL-C), and daily vancomycin dose, collected 48 hours before steady-state concentration assessment. The random forest regression model achieved correlation coefficients of 0.94 for the training set and 0.81 for the test set, respectively. The random forest classification model demonstrated impressive accuracy rates of 0.99 for the training set and 0.84 for the test set. External validation further confirmed the model's generalization capabilities, with a predictive accuracy of 0.83, surpassing the Bayesian PopPK model's 0.57 accuracy. Discussion This study presents a robust random forest model that predicts vancomycin steady-state trough concentrations with high accuracy, offering a significant advantage over existing Bayesian PopPK model. By integrating diverse clinical indicators, the model supports personalized medicine approaches and has the potential to improve clinical outcomes by facilitating more precise dosing strategies.",
       "authors": [
         "Hu T",
@@ -449,7 +527,7 @@
         "significance": "The GAI-based dosing regimen proposed in this study, consisting of higher loading doses on Days 1–5 and lower maintenance doses thereafter, was found to enable patients to achieve target international normalized ratio (INR) range within one week.",
         "source": "Abstract-only extractive summary"
       },
-      "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients",
+      "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients.",
       "url": "https://europepmc.org/article/MED/42980171",
       "venue": "Die Pharmazie"
     },
@@ -6228,24 +6306,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-09 10:21 JST",
+  "last_scan_at": "2026-11-10 12:55 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 40,
+      "cached_candidates_before": 39,
       "completed_windows": 2,
-      "eligible_candidates": 40,
+      "eligible_candidates": 39,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 682,
+      "pending_windows": 701,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-09 10:21 JST",
+    "checked_at": "2026-11-10 12:55 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/93"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -6266,13 +6344,13 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2507,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 17,
+      "duplicates": 2542,
+      "excluded_publication_type": 133,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2505,
-      "retrieved": 5170,
-      "unique": 2663
+      "missing_pk_evidence": 2504,
+      "retrieved": 5199,
+      "unique": 2657
     },
     "selected_count": 1,
     "selection_status": "selected",

@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-09",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/93",
+  "last_delivery_date_jst": "2026-11-10",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 40,
+      "cached_candidates_before": 39,
       "completed_windows": 2,
-      "eligible_candidates": 40,
+      "eligible_candidates": 39,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 682,
+      "pending_windows": 701,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-09 10:21 JST",
+    "checked_at": "2026-11-10 12:55 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/93"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,13 +38,13 @@
     },
     "recent_screening": {
       "already_reported": 4,
-      "duplicates": 2507,
-      "excluded_publication_type": 136,
-      "missing_ai_evidence": 17,
+      "duplicates": 2542,
+      "excluded_publication_type": 133,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2505,
-      "retrieved": 5170,
-      "unique": 2663
+      "missing_pk_evidence": 2504,
+      "retrieved": 5199,
+      "unique": 2657
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-09",
-  "last_success_utc": "2026-11-09T01:21:36.722154+00:00",
+  "last_selection_date_jst": "2026-11-10",
+  "last_success_utc": "2026-11-10T03:55:58.404080+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -386,6 +386,12 @@
       "selection_type": "historical",
       "title": "AI-driven discovery of hypoglycemic quorum sensing peptides from the human gut microbiome"
     },
+    "doi:10.2147/dddt.s495050": {
+      "doi": "10.2147/dddt.s495050",
+      "selected_at": "2026-11-10T03:55:58.404080+00:00",
+      "selection_type": "historical",
+      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics."
+    },
     "doi:10.2147/dddt.s576598": {
       "doi": "10.2147/dddt.s576598",
       "selected_at": "2026-10-02T01:14:35.775711+00:00",
@@ -605,6 +611,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40401163": {
+      "doi": "10.2147/dddt.s495050",
+      "selected_at": "2026-11-10T03:55:58.404080+00:00",
+      "selection_type": "historical",
+      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics."
     },
     "source:europe pmc:med:40575776": {
       "doi": "10.3389/fphar.2025.1549500",
@@ -1036,6 +1048,12 @@
       "selected_at": "2026-10-17T00:06:14.428879+00:00",
       "selection_type": "new",
       "title": "Hackathon on predictive modelling in systems pharmacology: design, implementation, and outcomes"
+    },
+    "title:011f6d7db475b0b859a3b750": {
+      "doi": "10.2147/dddt.s495050",
+      "selected_at": "2026-11-10T03:55:58.404080+00:00",
+      "selection_type": "historical",
+      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics."
     },
     "title:021f455ebe957744e5b13d70": {
       "doi": "10.1038/s41540-026-00674-7",
@@ -1511,22 +1529,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-09"
+    "arxiv": "2026-11-10"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-09T01:21:36.722154+00:00",
+      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-09T01:21:36.722154+00:00",
-      "records": 5167,
+      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
+      "records": 5192,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-09T01:21:36.722154+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
+      "records": 7,
       "status": "ok"
     }
   }
