@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-10",
+  "last_check": "2026-11-11",
   "last_run": {
-    "cached_candidates_before": 39,
+    "cached_candidates_before": 38,
     "completed_windows": 2,
-    "eligible_candidates": 39,
+    "eligible_candidates": 38,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 701,
+    "pending_windows": 720,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -4921,6 +4921,139 @@
       "since": "2026-11-10",
       "source": "crossref",
       "until": "2026-11-10"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-11",
+      "source": "europe_pmc",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-11",
+      "source": "crossref",
+      "until": "2026-11-11"
     }
   ],
   "pool": [
@@ -5504,32 +5637,6 @@
       "venue": ""
     },
     {
-      "abstract": "Purpose Voriconazole (VCZ) is a first-line treatment for invasive fungal disease, characterized by a narrow therapeutic window and significant inter-individual variability. It is primarily metabolized by the liver, the function of which declines with age. Pathological and physiological changes in elderly patients contribute to increased fluctuations in VCZ plasma concentrations. Thus, it is crucial to develop a model that accurately predicts the VCZ plasma concentrations in elderly patients. Patients and methods This retrospective study incorporated 31 features, including pharmacokinetic parameters derived from a population pharmacokinetic (PPK) model. Feature selection for machine learning (ML) models was performed using Recursive Feature Elimination with Cross-Validation (RFECV). Multiple algorithms were selected and combined into an ML ensemble model, which was interpreted using Shapley Additive exPlanations (SHAP). Results The predictive performance of ML models was significantly improved by incorporating pharmacokinetic parameters. The ensemble model consisting of XGBoost, random forest (RF), and CatBoost (1:1:8) achieved the highest R 2 (0.828) and was selected as the final ML model. Feature selection reduced the number of features from 31 to 9 without compromising predictive performance. The R 2 , mean absolute error (MAE), and mean squared error (MSE) of the external validation dataset were 0.633, 1.094, and 2.286, respectively. Conclusion Our study is the first to incorporate pharmacokinetic parameters into ML models to predict VCZ plasma concentrations in elderly patients. The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.",
-      "authors": [
-        "Liu R",
-        "Ma P",
-        "Chen D",
-        "Yu M",
-        "Xie L",
-        "Zhao L",
-        "Huang Y",
-        "Shang S",
-        "Chen Y"
-      ],
-      "date": "2025-05-17",
-      "doi": "10.2147/dddt.s495050",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:40401163"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics.",
-      "url": "https://europepmc.org/article/MED/40401163",
-      "venue": "Drug design, development and therapy"
-    },
-    {
       "abstract": "Recent research has increasingly focused on using machine learning for covariate selection in population pharmacokinetics (PPK) analysis. However, few studies have explored the prediction of plasma concentration profiles of drugs using nonlinear mixed-effect models combined with machine learning. This gap includes limited validation of prediction accuracy and applicability to diverse patient populations and dosing conditions. This study addresses these gaps by using remifentanil as a model drug and applying machine learning models to predict plasma concentration profiles based on virtual and real-world data. We created various training data sets for the virtual data by clustering based on the size and diversity of the test data set. Our results demonstrated high prediction accuracy for virtual and real-world data sets using Random Forest models. These results suggest that machine learning models are effective for large-scale data sets and real-world data with variable dosing times and amounts per patient. Considering the efficiency of machine learning, it offers a fit-for-purpose approach alongside traditional PPK methods, potentially enhancing future pharmacokinetic and pharmacodynamic studies.",
       "authors": [
         "Iwata H",
@@ -5833,5 +5940,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-10"
+  "through": "2026-11-11"
 }

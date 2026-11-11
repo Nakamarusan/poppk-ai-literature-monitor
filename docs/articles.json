@@ -1,30 +1,30 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-10 12:55 JST",
+  "last_scan_at": "2026-11-11 10:39 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 39,
+      "cached_candidates_before": 38,
       "completed_windows": 2,
-      "eligible_candidates": 39,
+      "eligible_candidates": 38,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 701,
+      "pending_windows": 720,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-10 12:55 JST",
+    "checked_at": "2026-11-11 10:39 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/95"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 36
+        "pages": 35
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -38,14 +38,14 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2542,
-      "excluded_publication_type": 133,
-      "missing_ai_evidence": 15,
+      "already_reported": 3,
+      "duplicates": 2500,
+      "excluded_publication_type": 132,
+      "missing_ai_evidence": 14,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2504,
-      "retrieved": 5199,
-      "unique": 2657
+      "missing_pk_evidence": 2512,
+      "retrieved": 5162,
+      "unique": 2662
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -53,14 +53,89 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 80,
+  "article_count": 81,
   "new_count": 25,
-  "historical_count": 55,
+  "historical_count": 56,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.",
+      "authors": [
+        "Tesfaye ZT",
+        "Belete CK",
+        "Yismaw MB",
+        "Negash Z"
+      ],
+      "doi": "10.21203/rs.3.rs-7767416/v1",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "population pharmacokinetics"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.21203/rs.3.rs-7767416/v1",
+      "publication_date": "2025-11-03",
+      "reported_at": "2026-11-11 10:39 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness.",
+        "new_capability": "Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools.",
+        "prior_limitation": "External validation was present in several but not all studies.",
+        "significance": "However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents",
+      "url": "https://europepmc.org/article/PPR/PPR1113056",
+      "venue": "Europe PMC"
+    },
     {
       "abstract": "Purpose Voriconazole (VCZ) is a first-line treatment for invasive fungal disease, characterized by a narrow therapeutic window and significant inter-individual variability. It is primarily metabolized by the liver, the function of which declines with age. Pathological and physiological changes in elderly patients contribute to increased fluctuations in VCZ plasma concentrations. Thus, it is crucial to develop a model that accurately predicts the VCZ plasma concentrations in elderly patients. Patients and methods This retrospective study incorporated 31 features, including pharmacokinetic parameters derived from a population pharmacokinetic (PPK) model. Feature selection for machine learning (ML) models was performed using Recursive Feature Elimination with Cross-Validation (RFECV). Multiple algorithms were selected and combined into an ML ensemble model, which was interpreted using Shapley Additive exPlanations (SHAP). Results The predictive performance of ML models was significantly improved by incorporating pharmacokinetic parameters. The ensemble model consisting of XGBoost, random forest (RF), and CatBoost (1:1:8) achieved the highest R 2 (0.828) and was selected as the final ML model. Feature selection reduced the number of features from 31 to 9 without compromising predictive performance. The R 2 , mean absolute error (MAE), and mean squared error (MSE) of the external validation dataset were 0.633, 1.094, and 2.286, respectively. Conclusion Our study is the first to incorporate pharmacokinetic parameters into ML models to predict VCZ plasma concentrations in elderly patients. The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.",
       "authors": [

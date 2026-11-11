@@ -1,29 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-11-10",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94",
+  "last_delivery_date_jst": "2026-11-11",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/95",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 39,
+      "cached_candidates_before": 38,
       "completed_windows": 2,
-      "eligible_candidates": 39,
+      "eligible_candidates": 38,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 701,
+      "pending_windows": 720,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-10 12:55 JST",
+    "checked_at": "2026-11-11 10:39 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/94"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/95"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 36
+        "pages": 35
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -37,14 +37,14 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2542,
-      "excluded_publication_type": 133,
-      "missing_ai_evidence": 15,
+      "already_reported": 3,
+      "duplicates": 2500,
+      "excluded_publication_type": 132,
+      "missing_ai_evidence": 14,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2504,
-      "retrieved": 5199,
-      "unique": 2657
+      "missing_pk_evidence": 2512,
+      "retrieved": 5162,
+      "unique": 2662
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-10",
-  "last_success_utc": "2026-11-10T03:55:58.404080+00:00",
+  "last_selection_date_jst": "2026-11-11",
+  "last_success_utc": "2026-11-11T01:39:46.331494+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -373,6 +373,12 @@
       "notified_at": "2026-09-11T23:48:19.363976+00:00",
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
+    },
+    "doi:10.21203/rs.3.rs-7767416/v1": {
+      "doi": "10.21203/rs.3.rs-7767416/v1",
+      "selected_at": "2026-11-11T01:39:46.331494+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents"
     },
     "doi:10.21203/rs.3.rs-9308510/v1": {
       "doi": "10.21203/rs.3.rs-9308510/v1",
@@ -959,6 +965,12 @@
       "selection_type": "new",
       "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients."
     },
+    "source:europe pmc:ppr:ppr1113056": {
+      "doi": "10.21203/rs.3.rs-7767416/v1",
+      "selected_at": "2026-11-11T01:39:46.331494+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents"
+    },
     "source:europe pmc:ppr:ppr1182052": {
       "doi": "10.21203/rs.3.rs-9308510/v1",
       "selected_at": "2026-10-08T01:30:24.721404+00:00",
@@ -1295,6 +1307,12 @@
       "selection_type": "new",
       "title": "Opening the Black Box: How Agentic AI-Assisted Modeling Lets Pharmacometricians See Inside NONMEM."
     },
+    "title:7e9c91f1ff44dd0cbae3de62": {
+      "doi": "10.21203/rs.3.rs-7767416/v1",
+      "selected_at": "2026-11-11T01:39:46.331494+00:00",
+      "selection_type": "historical",
+      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents"
+    },
     "title:8184547a7ff29c98b9247ffc": {
       "doi": "10.1177/02611929261492225",
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
@@ -1529,22 +1547,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-10"
+    "arxiv": "2026-11-11"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
+      "last_attempt_utc": "2026-11-11T01:39:46.331494+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
-      "records": 5192,
+      "last_attempt_utc": "2026-11-11T01:39:46.331494+00:00",
+      "records": 5156,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-10T03:55:58.404080+00:00",
-      "records": 7,
+      "last_attempt_utc": "2026-11-11T01:39:46.331494+00:00",
+      "records": 6,
       "status": "ok"
     }
   }

@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-10 12:55 JST
+Run time: 2026-11-11 10:39 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5192, Europe PMC 7, arXiv 0
+Recent-search records: Crossref 5156, Europe PMC 6, arXiv 0
 
 ## Selection and search coverage
 
@@ -20,48 +20,48 @@ Papers selected in this run: **1**
 Retrieval success does not mean that a paper was selected or that all literature was searched.
 
 - Europe PMC: 1 pages; 0 capped queries; 0 failed queries.
-- Crossref: 36 pages; 16 capped queries; 0 failed queries.
+- Crossref: 35 pages; 16 capped queries; 0 failed queries.
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5199
-- unique: 2657
-- duplicates: 2542
-- excluded publication type: 133
+- retrieved: 5162
+- unique: 2662
+- duplicates: 2500
+- excluded publication type: 132
 - missing method evidence: 1
-- already reported: 4
-- missing pk evidence: 2504
-- missing ai evidence: 15
+- already reported: 3
+- missing pk evidence: 2512
+- missing ai evidence: 14
 
-Archive candidates available: 39; unvisited/unfinished windows: 701; completed windows: 2.
+Archive candidates available: 38; unvisited/unfinished windows: 720; completed windows: 2.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics.](https://europepmc.org/article/MED/40401163)
+## 1. [Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents](https://europepmc.org/article/PPR/PPR1113056)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** Liu R, Ma P, Chen D, Yu M, Xie L, Zhao L, Huang Y, Shang S, et al.
-- **Venue/source:** Drug design, development and therapy
-- **Publication date:** 2025-05-17
-- **DOI:** 10.2147/dddt.s495050
+- **Authors:** Tesfaye ZT, Belete CK, Yismaw MB, Negash Z
+- **Venue/source:** Europe PMC
+- **Publication date:** 2025-11-03
+- **DOI:** 10.21203/rs.3.rs-7767416/v1
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Not stated in the available abstract.
-- **Methodological contribution:** Not stated in the available abstract.
-- **What becomes possible:** Feature selection reduced the number of features from 31 to 9 without compromising predictive performance.
-- **Why it matters:** The model was optimized using feature selection and may serve as a reference for individualized VCZ dosing in clinical practice, thereby enhancing the efficacy and safety of VCZ treatment in elderly patients.
+- **Prior limitation:** External validation was present in several but not all studies.
+- **Methodological contribution:** This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness.
+- **What becomes possible:** Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools.
+- **Why it matters:** However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.
 
-- **Relevance score:** 80/100 — PK 30, AI 30, method 10, title intersection 10
+- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Purpose Voriconazole (VCZ) is a first-line treatment for invasive fungal disease, characterized by a narrow therapeutic window and significant inter-individual variability. It is primarily metabolized by the liver, the function of which declines with age. Pathological and physiological changes in elderly patients contribute to increased fluctuations in VCZ plasma concentrations. Thus, it is crucial to develop a model that accurately predicts the VCZ plasma concentrations in elderly patients. Patients and methods This retrospective study incorporated 31 features, including pharmacokinetic parameters derived from a population pharmacokinetic (PPK) model. Feature selection for machine learning (ML) models was performed using Recursive Feature Elimination with Cross-Validation (RFECV). Multiple algorithms were selected and combined into an ML ensemble model, which was interpreted using Shapley Additive exPlanations (SHAP). Results The predictive performance of ML models was significantly improved by incorporating pharmacokinetic parameters. The ensemble model consisting of XGBoost, random forest (RF), and CatBoost (1:1:8) achieved the highest R 2 (0.828) and was selected as the final ML model. Feature selection reduced the number of features from 31 to 9 without compromising predictive performance. The R 2 , mean absolute error (MAE), and mean squared error (MSE) of the external v…
-- **PopPK/pharmacometrics terms:** population pharmacokinetics, population pharmacokinetic
+- **Abstract:** Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective,…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic, population pharmacokinetics
 - **AI/ML terms:** machine learning
-- **Method terms:** validation
+- **Method terms:** estimation, validation
 
 </details>
 
