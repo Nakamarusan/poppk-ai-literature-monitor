@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-11 10:39 JST
+Run time: 2026-11-12 11:39 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5156, Europe PMC 6, arXiv 0
+Recent-search records: Crossref 5165, Europe PMC 2, arXiv 0
 
 ## Selection and search coverage
 
@@ -24,44 +24,41 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5162
-- unique: 2662
-- duplicates: 2500
-- excluded publication type: 132
+- retrieved: 5167
+- unique: 2635
+- duplicates: 2532
+- excluded publication type: 116
 - missing method evidence: 1
-- already reported: 3
-- missing pk evidence: 2512
-- missing ai evidence: 14
-
-Archive candidates available: 38; unvisited/unfinished windows: 720; completed windows: 2.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
+- eligible unreported: 1
+- missing pk evidence: 2501
+- missing ai evidence: 16
 
 
-## 1. [Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents](https://europepmc.org/article/PPR/PPR1113056)
+## 1. [Comparing Machine Learning and Population Pharmacokinetic Approaches for Drug Concentration Prediction in Dense and Sparse Data Settings](https://doi.org/10.1002/cpt.70570)
 
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** Tesfaye ZT, Belete CK, Yismaw MB, Negash Z
-- **Venue/source:** Europe PMC
-- **Publication date:** 2025-11-03
-- **DOI:** 10.21203/rs.3.rs-7767416/v1
+- **Selection:** New article
+- **Authors:** Shuqi Huang, Qihan Xu, Shengnan Zhang, Yujie Wen, Guoping Yang, Qi Pei
+- **Venue/source:** Clinical Pharmacology & Therapeutics
+- **Publication date:** 2026-11-10
+- **DOI:** 10.1002/cpt.70570
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** External validation was present in several but not all studies.
-- **Methodological contribution:** This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness.
-- **What becomes possible:** Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools.
-- **Why it matters:** However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.
+- **Prior limitation:** Population pharmacokinetic (PopPK) models, the gold standard for drug concentration prediction, are relatively complex and time‐consuming; machine learning (ML) excels with high‐dimensional data but remains exploratory.
+- **Methodological contribution:** This study systematically evaluated seven ML algorithms—Extreme Gradient Boosting (XGBoost), Long Short‐Term Memory (LSTM), Bidirectional Long Short‐Term Memory (BiLSTM), Gated Recurrent Unit with Decay (GRUD), Phased Long Short‐Term Memory (PLSTM), Neural Controlled Differential Equations (NCDE), and Neural Ordinary…
+- **What becomes possible:** On multi‐point sparse prior data, XGBoost (F30 = 26.84%, MdPE = −5.88%) outperformed PopPK (F30 = 23.63%, MdPE = −13.88%).
+- **Why it matters:** Not stated in the available abstract.
 
-- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
+- **Relevance score:** 80/100 — PK 30, AI 30, method 10, title intersection 10
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective,…
-- **PopPK/pharmacometrics terms:** population pharmacokinetic, population pharmacokinetics
-- **AI/ML terms:** machine learning
-- **Method terms:** estimation, validation
+- **Abstract:** Population pharmacokinetic (PopPK) models, the gold standard for drug concentration prediction, are relatively complex and time‐consuming; machine learning (ML) excels with high‐dimensional data but remains exploratory. This study systematically evaluated seven ML algorithms—Extreme Gradient Boosting (XGBoost), Long Short‐Term Memory (LSTM), Bidirectional Long Short‐Term Memory (BiLSTM), Gated Recurrent Unit with Decay (GRUD), Phased Long Short‐Term Memory (PLSTM), Neural Controlled Differential Equations (NCDE), and Neural Ordinary Differential Equation (NODE)—and their heterogeneous XGBoost‐based ensembles against PopPK across three data settings: dense phase I trial data; simulated dense data: linear absorption and elimination (LL), Michaelis–Menten absorption with linear elimination (MMA), linear absorption with Michaelis–Menten elimination (MME); and sparse therapeutic drug‐monitoring (TDM) data. On two dense trial data, BiLSTM showed low systematic bias (F30 = 48.44%, MdPE = −6.86%; F30 = 50.62%, MdPE = 1.08%), whereas NCDE (F30 = 50.00%, MdPE = −19.39%) and NODE (F30 = 62.96%, MdPE = 11.77%) achieved the highest F30 values, respectively, compared with PopPK (F30 = 37.50%, MdPE = 24.73%; F30 = 61.73%, MdPE = 14.88%). BiLSTM showed robust extrapolation across LL, MMA, and MME datasets (F30 ≥ 75%, |MdPE| ≤ 10%). XGBoost lacked extrapolation ability, limiting ensemble gains…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic, poppk
+- **AI/ML terms:** machine learning, neural network, neural ordinary differential equation
+- **Method terms:** None
 
 </details>
 

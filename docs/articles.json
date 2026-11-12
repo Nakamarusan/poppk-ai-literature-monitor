@@ -1,24 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-11 10:39 JST",
+  "last_scan_at": "2026-11-12 11:39 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 38,
-      "completed_windows": 2,
-      "eligible_candidates": 38,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 720,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-11 10:39 JST",
+    "archive": {},
+    "checked_at": "2026-11-12 11:39 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/95"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/96"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,29 +27,105 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2500,
-      "excluded_publication_type": 132,
-      "missing_ai_evidence": 14,
+      "duplicates": 2532,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 116,
+      "missing_ai_evidence": 16,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2512,
-      "retrieved": 5162,
-      "unique": 2662
+      "missing_pk_evidence": 2501,
+      "retrieved": 5167,
+      "unique": 2635
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 81,
-  "new_count": 25,
+  "article_count": 82,
+  "new_count": 26,
   "historical_count": 56,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Population pharmacokinetic (PopPK) models, the gold standard for drug concentration prediction, are relatively complex and time‐consuming; machine learning (ML) excels with high‐dimensional data but remains exploratory. This study systematically evaluated seven ML algorithms—Extreme Gradient Boosting (XGBoost), Long Short‐Term Memory (LSTM), Bidirectional Long Short‐Term Memory (BiLSTM), Gated Recurrent Unit with Decay (GRUD), Phased Long Short‐Term Memory (PLSTM), Neural Controlled Differential Equations (NCDE), and Neural Ordinary Differential Equation (NODE)—and their heterogeneous XGBoost‐based ensembles against PopPK across three data settings: dense phase I trial data; simulated dense data: linear absorption and elimination (LL), Michaelis–Menten absorption with linear elimination (MMA), linear absorption with Michaelis–Menten elimination (MME); and sparse therapeutic drug‐monitoring (TDM) data. On two dense trial data, BiLSTM showed low systematic bias (F30 = 48.44%, MdPE = −6.86%; F30 = 50.62%, MdPE = 1.08%), whereas NCDE (F30 = 50.00%, MdPE = −19.39%) and NODE (F30 = 62.96%, MdPE = 11.77%) achieved the highest F30 values, respectively, compared with PopPK (F30 = 37.50%, MdPE = 24.73%; F30 = 61.73%, MdPE = 14.88%). BiLSTM showed robust extrapolation across LL, MMA, and MME datasets (F30 ≥ 75%, |MdPE| ≤ 10%). XGBoost lacked extrapolation ability, limiting ensemble gains. On sparse single‐point prior data, XGBoost (F30 = 23.61%, MdPE = −8.42%) was most robust, while PopPK failed to converge. On multi‐point sparse prior data, XGBoost (F30 = 26.84%, MdPE = −5.88%) outperformed PopPK (F30 = 23.63%, MdPE = −13.88%). In single‐point sparse posterior prediction, PopPK (F30 = 29.71%, MdPE = 2.32%) performed best, while several ensembles improved over their neural network components. Overall, BiLSTM showed strong performance in dense data, XGBoost performed best in the prior sparse scenarios, and PopPK retained the advantage after prior concentration information was incorporated. ML approaches achieved similar accuracy to PopPK with unique advantages, representing promising tools for drug concentration prediction.",
+      "authors": [
+        "Shuqi Huang",
+        "Qihan Xu",
+        "Shengnan Zhang",
+        "Yujie Wen",
+        "Guoping Yang",
+        "Qi Pei"
+      ],
+      "doi": "10.1002/cpt.70570",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "neural network",
+            "neural ordinary differential equation"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "neural network",
+            "neural ordinary differential equation"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        }
+      },
+      "id": "doi:10.1002/cpt.70570",
+      "publication_date": "2026-11-10",
+      "reported_at": "2026-11-12 11:39 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "This study systematically evaluated seven ML algorithms—Extreme Gradient Boosting (XGBoost), Long Short‐Term Memory (LSTM), Bidirectional Long Short‐Term Memory (BiLSTM), Gated Recurrent Unit with Decay (GRUD), Phased Long Short‐Term Memory (PLSTM), Neural Controlled Differential Equations (NCDE), and Neural Ordinary…",
+        "new_capability": "On multi‐point sparse prior data, XGBoost (F30 = 26.84%, MdPE = −5.88%) outperformed PopPK (F30 = 23.63%, MdPE = −13.88%).",
+        "prior_limitation": "Population pharmacokinetic (PopPK) models, the gold standard for drug concentration prediction, are relatively complex and time‐consuming; machine learning (ML) excels with high‐dimensional data but remains exploratory.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Comparing Machine Learning and Population Pharmacokinetic Approaches for Drug Concentration Prediction in Dense and Sparse Data Settings",
+      "url": "https://doi.org/10.1002/cpt.70570",
+      "venue": "Clinical Pharmacology & Therapeutics"
+    },
     {
       "abstract": "Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.",
       "authors": [
