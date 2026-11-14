@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-11",
+  "last_check": "2026-11-14",
   "last_run": {
-    "cached_candidates_before": 38,
+    "cached_candidates_before": 37,
     "completed_windows": 2,
-    "eligible_candidates": 38,
+    "eligible_candidates": 37,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 720,
+    "pending_windows": 739,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -5054,6 +5054,139 @@
       "since": "2026-11-11",
       "source": "crossref",
       "until": "2026-11-11"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-12",
+      "source": "europe_pmc",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-12",
+      "source": "crossref",
+      "until": "2026-11-14"
     }
   ],
   "pool": [
@@ -5300,27 +5433,6 @@
       "title": "Redefining Parameter Estimation and Covariate Selection via Variational Autoencoders: One Run Is All You Need.",
       "url": "https://europepmc.org/article/MED/41186137",
       "venue": "CPT: pharmacometrics & systems pharmacology"
-    },
-    {
-      "abstract": "Abstract Background Machine learning (ML) methods may improve individualized vancomycin dosing by leveraging high dimensional electronic health records data. This review aimed to identify studies that developed, validated, or implemented ML models to recommend or predict intravenous vancomycin doses in adolescents and adults, and to appraise their methodological quality and clinical readiness. Methods We searched electronic sources for original human studies using ML for vancomycin dosing or pharmaco-kinetic prediction. Two reviewers independently screened records, extracted data, and assessed risk of bias using PROBAST tool. Due to heterogeneity in targets, models and metrics, narrative synthesis was carried out. Results Twelve retrospective studies met inclusion criteria. Algorithms included tree-based ensembles, deep neural nets and hybrid population pharmacokinetics plus ML. Across studies ML methods consistently reduced prediction error and increased dosing accuracy compared to conventional population pharmacokinetic/Bayesian tools. External validation was present in several but not all studies. No study evaluated clinical outcomes. Risk of bias was variable, with concerns about participant selection, calibration reporting and generalizability. Conclusions ML approaches improve vancomycin exposure and dose prediction compared to traditional methods. However, prospective, multicenter evaluation targeting guideline-recommended AUC outcomes and trials linking ML guided dosing to clinical outcomes are needed before routine clinical deployment.",
-      "authors": [
-        "Tesfaye ZT",
-        "Belete CK",
-        "Yismaw MB",
-        "Negash Z"
-      ],
-      "date": "2025-11-03",
-      "doi": "10.21203/rs.3.rs-7767416/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1113056"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Machine learning models for vancomycin dose estimation in hospitalized adults and adolescents",
-      "url": "https://europepmc.org/article/PPR/PPR1113056",
-      "venue": ""
     },
     {
       "abstract": "The purpose was to evaluate the utility of large language models (LLMs) for reviewing the statistical analysis plan (SAP) and pharmacokinetics-pharmacodynamics (PK-PD) components of clinical trial protocols. Clinical trial protocols and SAPs were obtained from clinicaltrials.gov for a testbed of 15 small-molecule drugs, biologics, and global antibiotic and public health interventions. The GPT-4o (ChatGPT) LLM was used to elicit study design attributes, relevant guidelines, and detailed SAP evaluations with prompts engineered to the persona of a regulatory expert. The SAP methodology was assessed against the Food and Drug Administration's (FDA) E9 Statistical Principles for Clinical Trials guidance. The SAP evaluation outputs were assessed in post hoc analyses with ChatGPT and Grok, based on a rubric that evaluated the accuracy of primary outcome identification, the correctness of statistical methodology, compliance with the FDA E9 guidance, and clinical interpretability. PK-PD analysis plans were assessed on the accuracy of PK-PD objectives and measures and PK analysis methods. ChatGPT accurately identified the disease, intervention, and comparator groups for all trials, as well as the study sample size for 14 out of 15 trials. The most frequently cited guidelines were the FDA's E9 guidance for SAP and the FDA Guidance for Industry: Population Pharmacokinetics for PK-PD. ChatGPT outputs of the SAP and PK-PD analysis plans were clear and organized, demonstrating a satisfactory ability to extract and summarize technical details; some limitations in contextual accuracy were observed. LLMs can be effective tools for assessing the SAP, PK-PD, and other aspects of clinical trial protocol reviews.",
@@ -5940,5 +6052,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-11"
+  "through": "2026-11-14"
 }

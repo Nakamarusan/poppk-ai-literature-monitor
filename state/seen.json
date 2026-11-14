@@ -1,12 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-13",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/97",
+  "last_delivery_date_jst": "2026-11-14",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/98",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-13 11:19 JST",
+    "archive": {
+      "cached_candidates_before": 37,
+      "completed_windows": 2,
+      "eligible_candidates": 37,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 739,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-14 10:56 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/97"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/98"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -26,24 +37,23 @@
       }
     },
     "recent_screening": {
-      "already_reported": 1,
-      "duplicates": 2527,
-      "eligible_unreported": 2,
-      "excluded_publication_type": 130,
-      "missing_ai_evidence": 15,
+      "already_reported": 3,
+      "duplicates": 2522,
+      "excluded_publication_type": 122,
+      "missing_ai_evidence": 11,
       "missing_method_evidence": 2,
-      "missing_pk_evidence": 2541,
-      "retrieved": 5218,
-      "unique": 2691
+      "missing_pk_evidence": 2593,
+      "retrieved": 5253,
+      "unique": 2731
     },
-    "selected_count": 2,
+    "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-13",
-  "last_success_utc": "2026-11-13T02:19:47.415818+00:00",
+  "last_selection_date_jst": "2026-11-14",
+  "last_success_utc": "2026-11-14T01:56:05.148359+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -369,6 +379,12 @@
       "notified_at": "2026-09-11T23:48:19.363976+00:00",
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
+    },
+    "doi:10.21203/rs.3.rs-7564311/v1": {
+      "doi": "10.21203/rs.3.rs-7564311/v1",
+      "selected_at": "2026-11-14T01:56:05.148359+00:00",
+      "selection_type": "historical",
+      "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool"
     },
     "doi:10.21203/rs.3.rs-7767416/v1": {
       "doi": "10.21203/rs.3.rs-7767416/v1",
@@ -991,6 +1007,12 @@
       "selection_type": "new",
       "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients."
     },
+    "source:europe pmc:ppr:ppr1087815": {
+      "doi": "10.21203/rs.3.rs-7564311/v1",
+      "selected_at": "2026-11-14T01:56:05.148359+00:00",
+      "selection_type": "historical",
+      "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool"
+    },
     "source:europe pmc:ppr:ppr1113056": {
       "doi": "10.21203/rs.3.rs-7767416/v1",
       "selected_at": "2026-11-11T01:39:46.331494+00:00",
@@ -1494,6 +1516,12 @@
       "selection_type": "new",
       "title": "Comparative Predictive Performance of Machine Learning and Population Pharmacokinetic Models for Valproic Acid Clearance and Trough Concentrations: An In-silico Simulation Study in Epilepsy Scenarios."
     },
+    "title:ccf3e4690ad0b3506ad5d738": {
+      "doi": "10.21203/rs.3.rs-7564311/v1",
+      "selected_at": "2026-11-14T01:56:05.148359+00:00",
+      "selection_type": "historical",
+      "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool"
+    },
     "title:cff8f348b475ee64a38f4161": {
       "doi": "10.2147/dddt.s576598",
       "selected_at": "2026-10-02T01:14:35.775711+00:00",
@@ -1591,22 +1619,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-13"
+    "arxiv": "2026-11-14"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-13T02:19:47.415818+00:00",
+      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-13T02:19:47.415818+00:00",
-      "records": 5215,
+      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
+      "records": 5248,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-13T02:19:47.415818+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
+      "records": 5,
       "status": "ok"
     }
   }
