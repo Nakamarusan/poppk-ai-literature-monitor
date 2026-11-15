@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-14",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/98",
+  "last_delivery_date_jst": "2026-11-15",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/99",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 37,
+      "cached_candidates_before": 36,
       "completed_windows": 2,
-      "eligible_candidates": 37,
+      "eligible_candidates": 36,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 739,
+      "pending_windows": 758,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-14 10:56 JST",
+    "checked_at": "2026-11-15 10:28 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/98"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/99"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,13 +38,13 @@
     },
     "recent_screening": {
       "already_reported": 3,
-      "duplicates": 2522,
-      "excluded_publication_type": 122,
-      "missing_ai_evidence": 11,
-      "missing_method_evidence": 2,
-      "missing_pk_evidence": 2593,
-      "retrieved": 5253,
-      "unique": 2731
+      "duplicates": 2526,
+      "excluded_publication_type": 121,
+      "missing_ai_evidence": 13,
+      "missing_method_evidence": 1,
+      "missing_pk_evidence": 2599,
+      "retrieved": 5263,
+      "unique": 2737
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-14",
-  "last_success_utc": "2026-11-14T01:56:05.148359+00:00",
+  "last_selection_date_jst": "2026-11-15",
+  "last_success_utc": "2026-11-15T01:28:40.482365+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -92,6 +92,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "doi:10.1002/psp4.70084": {
+      "doi": "10.1002/psp4.70084",
+      "selected_at": "2026-11-15T01:28:40.482365+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing."
     },
     "doi:10.1002/psp4.70147": {
       "doi": "10.1002/psp4.70147",
@@ -684,6 +690,12 @@
       "selection_type": "historical",
       "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
     },
+    "source:europe pmc:med:40734640": {
+      "doi": "10.1002/psp4.70084",
+      "selected_at": "2026-11-15T01:28:40.482365+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing."
+    },
     "source:europe pmc:med:40745042": {
       "doi": "10.1038/s43856-025-01054-8",
       "selected_at": "2026-10-30T01:29:48.472875+00:00",
@@ -1126,6 +1138,12 @@
       "selected_at": "2026-10-17T23:42:14.066193+00:00",
       "selection_type": "historical",
       "title": "Artificial Intelligence, LLM-based generation of synthetic patients with Parkinson’s Disease: towards a digital twin paradigm for in silico studies"
+    },
+    "title:05c5a30e091cb53da333d910": {
+      "doi": "10.1002/psp4.70084",
+      "selected_at": "2026-11-15T01:28:40.482365+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing."
     },
     "title:0881c9bc9af76b779f89d637": {
       "doi": "10.1208/s12248-026-01255-6",
@@ -1619,22 +1637,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-14"
+    "arxiv": "2026-11-15"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
+      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
-      "records": 5248,
+      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
+      "records": 5259,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-14T01:56:05.148359+00:00",
-      "records": 5,
+      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
+      "records": 4,
       "status": "ok"
     }
   }

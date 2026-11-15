@@ -1,6 +1,88 @@
 {
   "articles": [
     {
+      "abstract": "Selecting an appropriate population pharmacokinetic (PK) model for individual patients in model-informed precision dosing (MIPD) can be challenging, particularly in the absence of therapeutic drug monitoring (TDM) samples. We developed a machine learning (ML) model to guide individualized PK model selection for a priori MIPD of vancomycin based on routinely recorded patient characteristics. This retrospective analysis included 343,636 vancomycin TDM records, each from a distinct adult patient across 156 healthcare centers, along with a priori predictions from six PK models. A multi-label classification approach was applied, labeling PK model predictions based on whether they fell within 80%-125% of observed TDM values. Various modeling strategies were evaluated using XGBoost as the base algorithm, with binary relevance selected for the final model. At the prediction stage, PK models were ranked and averaged for each patient based on ML-predicted probabilities that predictions would fall within 80%-125% of the observed concentration. Selecting the highest ranked PK model for each patient and ML-based model averaging outperformed all single PK models, body mass index-based selection, and naive averaging. On a population level, these ML approaches resulted in more accurate predictions, a higher proportion of predictions within 80%-125% of observed vancomycin concentrations, and no systematic bias. Predictive performance declined with lower ML-assigned rankings, and selecting the lowest-ranked PK model for each patient resulted in worse performance than the worst-performing single PK model. By guiding the selection of appropriate models and avoiding less suitable ones, ML approaches for a priori MIPD may improve early dosing decisions.",
+      "authors": [
+        "van Os W",
+        "O'Jeanson A",
+        "Troisi C",
+        "Liu C",
+        "Brooks JT",
+        "Hughes JH",
+        "Tong DMH",
+        "Keizer RJ"
+      ],
+      "doi": "10.1002/psp4.70084",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "algorithm",
+            "model selection"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection",
+            "algorithm"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "model selection"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70084",
+      "publication_date": "2025-07-30",
+      "reported_at": "2026-11-15 10:28 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "We developed a machine learning (ML) model to guide individualized PK model selection for a priori MIPD of vancomycin based on routinely recorded patient characteristics.",
+        "new_capability": "Selecting the highest ranked PK model for each patient and ML-based model averaging outperformed all single PK models, body mass index-based selection, and naive averaging.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Selecting an appropriate population pharmacokinetic (PK) model for individual patients in model-informed precision dosing (MIPD) can be challenging, particularly in the absence of therapeutic drug monitoring (TDM) samples.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing.",
+      "url": "https://europepmc.org/article/MED/40734640",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
+    {
       "abstract": "Abstract Background The optimization of meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains a significant clinical challenge. This study aimed to assess whether a machine learning–based clinical decision support system (CDSS) can support clinicians in determining the optimal meropenem dosing strategy. Methods Using a previously published population pharmacokinetic (POPPK) model of meropenem, we generated a virtual cohort of 2000 CRRT patients to simulate various dosing strategies and pathogen susceptibility profiles. Patient demographics, dosing parameters, and CRRT settings were incorporated as features to train ML models predicting the probability of achieving two pharmacodynamic (PD) endpoints (100% fT > MIC and 100% fT > 4×MIC). Feature importance was further assessed using SHAP analysis. External validation was conducted with clinical CRRT patient data, and predictive performance was compared against the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose,\" for clinical use. Results Across the simulated test dataset, ML models demonstrated outstanding predictive performance for both PD targets, with most accuracy and F1 scores surpassing 0.95. SHAP analysis indicated that MIC, dosing interval, administered dose, CLCRRT, and CRCL were the key determinants of predictive performance. In external validation, the Adaboost model achieved accuracies of 0.813 and 0.835 for the 100% fT > MIC and 100% fT > 4×MIC endpoints, respectively, markedly superior to the POPPK model (0.629 and 0.714). The Streamlit-based \"MerDose\" tool enables real-time individualized dose predictions and target attainment probabilities, offering practical guidance for initial dosing decisions in clinical care. Conclusion We developed an ML-driven CDSS, \"MerDose,\" capable of accurately predicting individualized meropenem dosing in critically ill CRRT patients. Its web-based deployment ensures clinical applicability, offering a pragmatic decision-support framework to optimize antibiotic therapy in this high-risk population.",
       "authors": [
         "Li D",
@@ -6695,24 +6777,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-14 10:56 JST",
+  "last_scan_at": "2026-11-15 10:28 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 37,
+      "cached_candidates_before": 36,
       "completed_windows": 2,
-      "eligible_candidates": 37,
+      "eligible_candidates": 36,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 739,
+      "pending_windows": 758,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-14 10:56 JST",
+    "checked_at": "2026-11-15 10:28 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/98"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/99"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -6733,13 +6815,13 @@
     },
     "recent_screening": {
       "already_reported": 3,
-      "duplicates": 2522,
-      "excluded_publication_type": 122,
-      "missing_ai_evidence": 11,
-      "missing_method_evidence": 2,
-      "missing_pk_evidence": 2593,
-      "retrieved": 5253,
-      "unique": 2731
+      "duplicates": 2526,
+      "excluded_publication_type": 121,
+      "missing_ai_evidence": 13,
+      "missing_method_evidence": 1,
+      "missing_pk_evidence": 2599,
+      "retrieved": 5263,
+      "unique": 2737
     },
     "selected_count": 1,
     "selection_status": "selected",

@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-14",
+  "last_check": "2026-11-15",
   "last_run": {
-    "cached_candidates_before": 37,
+    "cached_candidates_before": 36,
     "completed_windows": 2,
-    "eligible_candidates": 37,
+    "eligible_candidates": 36,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 739,
+    "pending_windows": 758,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -5187,6 +5187,139 @@
       "since": "2026-11-12",
       "source": "crossref",
       "until": "2026-11-14"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-15",
+      "source": "europe_pmc",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-15",
+      "source": "crossref",
+      "until": "2026-11-15"
     }
   ],
   "pool": [
@@ -5474,31 +5607,6 @@
       "title": "Pharmacometrics in the Age of Large Language Models: A Vision of the Future.",
       "url": "https://europepmc.org/article/MED/41155911",
       "venue": "Pharmaceutics"
-    },
-    {
-      "abstract": "Abstract Background The optimization of meropenem dosing in critically ill patients undergoing continuous renal replacement therapy (CRRT) remains a significant clinical challenge. This study aimed to assess whether a machine learning–based clinical decision support system (CDSS) can support clinicians in determining the optimal meropenem dosing strategy. Methods Using a previously published population pharmacokinetic (POPPK) model of meropenem, we generated a virtual cohort of 2000 CRRT patients to simulate various dosing strategies and pathogen susceptibility profiles. Patient demographics, dosing parameters, and CRRT settings were incorporated as features to train ML models predicting the probability of achieving two pharmacodynamic (PD) endpoints (100% fT > MIC and 100% fT > 4×MIC). Feature importance was further assessed using SHAP analysis. External validation was conducted with clinical CRRT patient data, and predictive performance was compared against the traditional POPPK model. The top-performing model was deployed into a Streamlit-based web CDSS, named \"MerDose,\" for clinical use. Results Across the simulated test dataset, ML models demonstrated outstanding predictive performance for both PD targets, with most accuracy and F1 scores surpassing 0.95. SHAP analysis indicated that MIC, dosing interval, administered dose, CLCRRT, and CRCL were the key determinants of predictive performance. In external validation, the Adaboost model achieved accuracies of 0.813 and 0.835 for the 100% fT > MIC and 100% fT > 4×MIC endpoints, respectively, markedly superior to the POPPK model (0.629 and 0.714). The Streamlit-based \"MerDose\" tool enables real-time individualized dose predictions and target attainment probabilities, offering practical guidance for initial dosing decisions in clinical care. Conclusion We developed an ML-driven CDSS, \"MerDose,\" capable of accurately predicting individualized meropenem dosing in critically ill CRRT patients. Its web-based deployment ensures clinical applicability, offering a pragmatic decision-support framework to optimize antibiotic therapy in this high-risk population.",
-      "authors": [
-        "Li D",
-        "Qiao Z",
-        "Xiong X",
-        "Zhang Q",
-        "He Y",
-        "Yu Z",
-        "Zheng X",
-        "Zheng X"
-      ],
-      "date": "2025-09-19",
-      "doi": "10.21203/rs.3.rs-7564311/v1",
-      "publication_type": "Preprint",
-      "source_ids": [
-        "PPR:PPR1087815"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Individualized Meropenem Dosing in CRRT Patients: Development and Validation of a Machine Learning-Based Decision Support Tool",
-      "url": "https://europepmc.org/article/PPR/PPR1087815",
-      "venue": ""
     },
     {
       "abstract": "Quorum sensing regulates cooperative behaviors in bacteria through the accumulation and detection of signaling molecules. This process plays a crucial role in various biological functions, including biofilm formation, antibiotic production, regulation of virulence factors, and immune modulation. Quorum sensing peptides (QSPs), primarily produced by Gram-positive bacteria, are key components of the quorum sensing mechanism, and their identification is crucial for understanding bacterial regulation. Despite the availability of several QSP prediction tools based on handcrafted features and machine learning techniques, there is still potential for improving their performance and interpretability. In this study, we present IQSPred-PLM, a novel model for predicting QSPs that integrates protein language models (PLMs) with a convolutional neural network (CNN). First, we utilize the pre-trained PLM ESM-2 to encode peptide sequences. Then, feature extraction is performed using a multi-scale residual CNN (MSRes-CNN), with dynamic feature integration through an adaptive weight modulation (AWM) module. Finally, a fully connected network is designed to conduct the classification of QSPs. Evaluated on the benchmark dataset, IQSPred-PLM demonstrated the outstanding predictive performance with accuracy (ACC), Matthews correlation coefficient (MCC), and the area under the receiver operating characteristic (ROC) curve (AUC) of 97.50%, 0.951, and 0.990, respectively. Furthermore, case studies and interpretability analyses confirmed the effectiveness of IQSPred-PLM for the QSP prediction task.",
@@ -6052,5 +6160,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-14"
+  "through": "2026-11-15"
 }
