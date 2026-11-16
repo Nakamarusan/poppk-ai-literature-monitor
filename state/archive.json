@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-15",
+  "last_check": "2026-11-16",
   "last_run": {
-    "cached_candidates_before": 36,
+    "cached_candidates_before": 35,
     "completed_windows": 2,
-    "eligible_candidates": 36,
+    "eligible_candidates": 35,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 758,
+    "pending_windows": 777,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -5320,6 +5320,139 @@
       "since": "2026-11-15",
       "source": "crossref",
       "until": "2026-11-15"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-16",
+      "source": "europe_pmc",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-16",
+      "source": "crossref",
+      "until": "2026-11-16"
     }
   ],
   "pool": [
@@ -5650,31 +5783,6 @@
       "title": "Population Pharmacokinetics and Limited Sampling Strategy of Mycophenolate Mofetil for Patients in Early Period After Kidney Transplantation.",
       "url": "https://europepmc.org/article/MED/40802254",
       "venue": "Clinical transplantation"
-    },
-    {
-      "abstract": "Selecting an appropriate population pharmacokinetic (PK) model for individual patients in model-informed precision dosing (MIPD) can be challenging, particularly in the absence of therapeutic drug monitoring (TDM) samples. We developed a machine learning (ML) model to guide individualized PK model selection for a priori MIPD of vancomycin based on routinely recorded patient characteristics. This retrospective analysis included 343,636 vancomycin TDM records, each from a distinct adult patient across 156 healthcare centers, along with a priori predictions from six PK models. A multi-label classification approach was applied, labeling PK model predictions based on whether they fell within 80%-125% of observed TDM values. Various modeling strategies were evaluated using XGBoost as the base algorithm, with binary relevance selected for the final model. At the prediction stage, PK models were ranked and averaged for each patient based on ML-predicted probabilities that predictions would fall within 80%-125% of the observed concentration. Selecting the highest ranked PK model for each patient and ML-based model averaging outperformed all single PK models, body mass index-based selection, and naive averaging. On a population level, these ML approaches resulted in more accurate predictions, a higher proportion of predictions within 80%-125% of observed vancomycin concentrations, and no systematic bias. Predictive performance declined with lower ML-assigned rankings, and selecting the lowest-ranked PK model for each patient resulted in worse performance than the worst-performing single PK model. By guiding the selection of appropriate models and avoiding less suitable ones, ML approaches for a priori MIPD may improve early dosing decisions.",
-      "authors": [
-        "van Os W",
-        "O'Jeanson A",
-        "Troisi C",
-        "Liu C",
-        "Brooks JT",
-        "Hughes JH",
-        "Tong DMH",
-        "Keizer RJ"
-      ],
-      "date": "2025-07-30",
-      "doi": "10.1002/psp4.70084",
-      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Multicenter Study, Journal Article",
-      "source_ids": [
-        "MED:40734640"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Machine Learning-Based Model Selection and Averaging Outperform Single-Model Approaches for a Priori Vancomycin Precision Dosing.",
-      "url": "https://europepmc.org/article/MED/40734640",
-      "venue": "CPT: pharmacometrics & systems pharmacology"
     },
     {
       "abstract": "Background Cyclosporine (CsA), an immunosuppressant widely used in solid-organ transplantation, requires precise therapeutic drug monitoring to balance its efficacy and toxicity. The interdose area under the concentration-time curve (AUC 0-12 h ) is considered to be a superior metric of drug exposure compared with single concentration measurements but is, nevertheless, resource-intensive. Machine learning (ML) offers a novel approach for AUC prediction by leveraging patient-specific data without relying on traditional pharmacokinetic assumptions. This study intended to develop and evaluate XGBoost ML models for predicting CsA AUC 0-12 h using either two or three blood concentrations and to compare their performance against maximum a posteriori Bayesian estimation (MAP-BE) based on population pharmacokinetic models. Methods Using data from 2009 patients and 6360 dose-adjustment requests on the Immunosuppressant Bayesian Dose Adjustment website ( https://abis.chu-limoges.fr/ ), supervised ML models were trained with predictors including CsA concentrations at predefined time points (C0, C1, and C3), dose, age, and sampling time deviations. External validation was performed using rich pharmacokinetic profiles of kidney, heart, lung, and bone marrow transplant recipients. Results The three-sample XGBoost model achieved high accuracy in kidney transplant recipients (root mean square error [RMSE] Conclusions ML-based AUC prediction is a promising alternative to MAP-BE, particularly for kidney transplantation. Future studies should focus on expanding datasets, incorporating additional transplant types, and refining ML models for broader applicability.",
@@ -6160,5 +6268,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-15"
+  "through": "2026-11-16"
 }

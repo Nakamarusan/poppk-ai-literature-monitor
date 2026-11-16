@@ -1,23 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-11-15",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/99",
+  "last_delivery_date_jst": "2026-11-16",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/100",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-11-16T01:31:28.302539+00:00",
+      "message": "HTTP 429: Rate exceeded."
+    }
+  },
   "last_run": {
     "archive": {
-      "cached_candidates_before": 36,
+      "cached_candidates_before": 35,
       "completed_windows": 2,
-      "eligible_candidates": 36,
+      "eligible_candidates": 35,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 758,
+      "pending_windows": 777,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-15 10:28 JST",
+    "checked_at": "2026-11-16 10:31 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/99"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/100"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -29,22 +35,17 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 3,
-      "duplicates": 2526,
-      "excluded_publication_type": 121,
-      "missing_ai_evidence": 13,
+      "duplicates": 2525,
+      "excluded_publication_type": 117,
+      "missing_ai_evidence": 14,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2599,
-      "retrieved": 5263,
-      "unique": 2737
+      "missing_pk_evidence": 2597,
+      "retrieved": 5257,
+      "unique": 2732
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +53,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-15",
-  "last_success_utc": "2026-11-15T01:28:40.482365+00:00",
+  "last_selection_date_jst": "2026-11-16",
+  "last_success_utc": "2026-11-16T01:31:28.302539+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -265,6 +266,12 @@
       "selected_at": "2026-10-30T01:29:48.472875+00:00",
       "selection_type": "historical",
       "title": "A machine learning approach to population pharmacokinetic modelling automation."
+    },
+    "doi:10.1097/ftd.0000000000001346": {
+      "doi": "10.1097/ftd.0000000000001346",
+      "selected_at": "2026-11-16T01:31:28.302539+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning."
     },
     "doi:10.1097/ftd.0000000000001540": {
       "doi": "10.1097/ftd.0000000000001540",
@@ -689,6 +696,12 @@
       "selected_at": "2026-10-27T01:02:52.751572+00:00",
       "selection_type": "historical",
       "title": "Machine learning-assisted tacrolimus dose optimization in childhood- onset systemic lupus erythematosus through population pharmacokinetic modeling."
+    },
+    "source:europe pmc:med:40698833": {
+      "doi": "10.1097/ftd.0000000000001346",
+      "selected_at": "2026-11-16T01:31:28.302539+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning."
     },
     "source:europe pmc:med:40734640": {
       "doi": "10.1002/psp4.70084",
@@ -1468,6 +1481,12 @@
       "selection_type": "historical",
       "title": "Machine learning approach for personalized vancomycin steady-state trough concentration prediction: a superior approach over Bayesian population pharmacokinetic model."
     },
+    "title:aac93239f3cb2d6a95e70779": {
+      "doi": "10.1097/ftd.0000000000001346",
+      "selected_at": "2026-11-16T01:31:28.302539+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning."
+    },
     "title:b940fa785af583e96d32a3c3": {
       "doi": "10.1002/psp4.70239",
       "selected_at": "2026-10-10T01:26:31.002513+00:00",
@@ -1637,22 +1656,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-15"
+    "arxiv": "2026-11-16"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
+      "message": "HTTP 429: Rate exceeded.",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
-      "records": 5259,
+      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
+      "records": 5254,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-15T01:28:40.482365+00:00",
-      "records": 4,
+      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
+      "records": 3,
       "status": "ok"
     }
   }
