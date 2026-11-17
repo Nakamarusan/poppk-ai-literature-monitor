@@ -1,29 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-11-16",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/100",
-  "last_optional_source_errors": {
-    "arXiv": {
-      "at_utc": "2026-11-16T01:31:28.302539+00:00",
-      "message": "HTTP 429: Rate exceeded."
-    }
-  },
+  "last_delivery_date_jst": "2026-11-17",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 35,
-      "completed_windows": 2,
-      "eligible_candidates": 35,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 777,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-16 10:31 JST",
+    "archive": {},
+    "checked_at": "2026-11-17 13:17 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/100"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -35,26 +18,32 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 3,
-      "duplicates": 2525,
-      "excluded_publication_type": 117,
-      "missing_ai_evidence": 14,
+      "duplicates": 2475,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 119,
+      "missing_ai_evidence": 18,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2597,
-      "retrieved": 5257,
-      "unique": 2732
+      "missing_pk_evidence": 2648,
+      "retrieved": 5265,
+      "unique": 2790
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-16",
-  "last_success_utc": "2026-11-16T01:31:28.302539+00:00",
+  "last_selection_date_jst": "2026-11-17",
+  "last_success_utc": "2026-11-17T04:17:12.304402+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -513,6 +502,12 @@
       "selection_type": "historical",
       "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
     },
+    "doi:10.37394/23203.2026.21.46": {
+      "doi": "10.37394/23203.2026.21.46",
+      "selected_at": "2026-11-17T04:17:12.304402+00:00",
+      "selection_type": "new",
+      "title": "Integrating Pharmacometrics and Machine Learning for Enhanced Clinical Trial Outcomes"
+    },
     "doi:10.61096/ijphr.v14.iss2.2026.344-357": {
       "doi": "10.61096/ijphr.v14.iss2.2026.344-357",
       "selected_at": "2026-11-13T02:19:47.415818+00:00",
@@ -649,6 +644,12 @@
       "selected_at": "2026-11-03T03:15:32.386205+00:00",
       "selection_type": "new",
       "title": "From Drug Levels to Precision Pharmacotherapy: Integrating Pharmacokinetics, Pharmacodynamics and Biomarkers for Individualized Antiseizure Medication Optimization"
+    },
+    "source:crossref:10.37394/23203.2026.21.46": {
+      "doi": "10.37394/23203.2026.21.46",
+      "selected_at": "2026-11-17T04:17:12.304402+00:00",
+      "selection_type": "new",
+      "title": "Integrating Pharmacometrics and Machine Learning for Enhanced Clinical Trial Outcomes"
     },
     "source:crossref:10.61096/ijphr.v14.iss2.2026.344-357": {
       "doi": "10.61096/ijphr.v14.iss2.2026.344-357",
@@ -1302,6 +1303,12 @@
       "selection_type": "historical",
       "title": "AI-NLME: A New Artificial Intelligence-Driven Nonlinear Mixed Effect Modeling Approach for Analyzing Longitudinal Data in Randomized Placebo-Controlled Clinical Trials."
     },
+    "title:464889c0399cd119bd50404b": {
+      "doi": "10.37394/23203.2026.21.46",
+      "selected_at": "2026-11-17T04:17:12.304402+00:00",
+      "selection_type": "new",
+      "title": "Integrating Pharmacometrics and Machine Learning for Enhanced Clinical Trial Outcomes"
+    },
     "title:47149655abd685772a1fb84a": {
       "doi": "10.1038/s41467-025-64304-2",
       "selected_at": "2026-11-01T00:36:52.833971+00:00",
@@ -1656,21 +1663,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-16"
+    "arxiv": "2026-11-17"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
-      "message": "HTTP 429: Rate exceeded.",
-      "status": "error"
+      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
+      "records": 1,
+      "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
-      "records": 5254,
+      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
+      "records": 5261,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-16T01:31:28.302539+00:00",
+      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
       "records": 3,
       "status": "ok"
     }

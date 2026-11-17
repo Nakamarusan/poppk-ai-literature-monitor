@@ -1,24 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-16 10:31 JST",
+  "last_scan_at": "2026-11-17 13:17 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 35,
-      "completed_windows": 2,
-      "eligible_candidates": 35,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 777,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-16 10:31 JST",
+    "archive": {},
+    "checked_at": "2026-11-17 13:17 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/100"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -30,32 +19,111 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
       "already_reported": 3,
-      "duplicates": 2525,
-      "excluded_publication_type": 117,
-      "missing_ai_evidence": 14,
+      "duplicates": 2475,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 119,
+      "missing_ai_evidence": 18,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2597,
-      "retrieved": 5257,
-      "unique": 2732
+      "missing_pk_evidence": 2648,
+      "retrieved": 5265,
+      "unique": 2790
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 87,
-  "new_count": 28,
+  "article_count": 88,
+  "new_count": 29,
   "historical_count": 59,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "A novel computational framework that integrates the mechanistic rigor of Pharmacometrics (PMx) with the predictive power of Multimodal Machine Learning (MML) is conceptually formulated and discussed. The framework is designed to address critical developmental bottlenecks in the drug development sector, which is already witnessing a paradigm shift driven by the rise of Antibody-Drug Conjugates (ADCs)—a class that, according to recent pipeline analyses, accounts for an expanding share of innovative oncology trials. Unfortunately, despite the therapeutic promise of ADCs and other targeted modalities, the industry faces a productivity paradox, characterized by high attrition rates in transitional clinical phases and a median development timeline of seven years. By leveraging transfer learning strategies, we delineate how the synergistic adoption of PMx and MML can conceptually optimize dose selection, inform metastatic risk assessment through genomic-imaging integration, and ultimately accelerate the transition from bench to bedside. This is conceptualized through the definition of methodologies capable of transforming noisy early-phase clinical data into actionable insights, thus bridging the gap between Physiologically Based Pharmacokinetic (PBPK) modeling and deep learning-driven outcomes. Without advancing premature empirical claims, we establish a structured methodological roadmap for a scalable, AI-enhanced clinical trial infrastructure, positioning hybrid modeling as a viable architectural paradigm for the next generation of precision oncology.",
+      "authors": [
+        "Maria Cacciapuoti",
+        "Mauro D’arco",
+        "Alessandro Minella"
+      ],
+      "doi": "10.37394/23203.2026.21.46",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning",
+            "deep learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning",
+            "deep learning"
+          ],
+          "method": [
+            "framework"
+          ],
+          "pk": [
+            "pharmacometrics"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [],
+          "pk": [
+            "pharmacometrics"
+          ]
+        }
+      },
+      "id": "doi:10.37394/23203.2026.21.46",
+      "publication_date": "2026-11-16",
+      "reported_at": "2026-11-17 13:17 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 80
+        },
+        "priority": "High",
+        "total": 80
+      },
+      "selection_type": "new",
+      "sources": [
+        "Crossref"
+      ],
+      "summary": {
+        "contribution": "A novel computational framework that integrates the mechanistic rigor of Pharmacometrics (PMx) with the predictive power of Multimodal Machine Learning (MML) is conceptually formulated and discussed.",
+        "new_capability": "By leveraging transfer learning strategies, we delineate how the synergistic adoption of PMx and MML can conceptually optimize dose selection, inform metastatic risk assessment through genomic-imaging integration, and ultimately accelerate the transition from bench to bedside.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Without advancing premature empirical claims, we establish a structured methodological roadmap for a scalable, AI-enhanced clinical trial infrastructure, positioning hybrid modeling as a viable architectural paradigm for the next generation of precision oncology.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Integrating Pharmacometrics and Machine Learning for Enhanced Clinical Trial Outcomes",
+      "url": "https://doi.org/10.37394/23203.2026.21.46",
+      "venue": "WSEAS Transactions on Systems and Control"
+    },
     {
       "abstract": "Background Cyclosporine (CsA), an immunosuppressant widely used in solid-organ transplantation, requires precise therapeutic drug monitoring to balance its efficacy and toxicity. The interdose area under the concentration-time curve (AUC 0-12 h ) is considered to be a superior metric of drug exposure compared with single concentration measurements but is, nevertheless, resource-intensive. Machine learning (ML) offers a novel approach for AUC prediction by leveraging patient-specific data without relying on traditional pharmacokinetic assumptions. This study intended to develop and evaluate XGBoost ML models for predicting CsA AUC 0-12 h using either two or three blood concentrations and to compare their performance against maximum a posteriori Bayesian estimation (MAP-BE) based on population pharmacokinetic models. Methods Using data from 2009 patients and 6360 dose-adjustment requests on the Immunosuppressant Bayesian Dose Adjustment website ( https://abis.chu-limoges.fr/ ), supervised ML models were trained with predictors including CsA concentrations at predefined time points (C0, C1, and C3), dose, age, and sampling time deviations. External validation was performed using rich pharmacokinetic profiles of kidney, heart, lung, and bone marrow transplant recipients. Results The three-sample XGBoost model achieved high accuracy in kidney transplant recipients (root mean square error [RMSE] Conclusions ML-based AUC prediction is a promising alternative to MAP-BE, particularly for kidney transplantation. Future studies should focus on expanding datasets, incorporating additional transplant types, and refining ML models for broader applicability.",
       "authors": [
