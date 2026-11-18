@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-16",
+  "last_check": "2026-11-18",
   "last_run": {
-    "cached_candidates_before": 35,
+    "cached_candidates_before": 34,
     "completed_windows": 2,
-    "eligible_candidates": 35,
+    "eligible_candidates": 34,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 777,
+    "pending_windows": 796,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -5453,6 +5453,139 @@
       "since": "2026-11-16",
       "source": "crossref",
       "until": "2026-11-16"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-17",
+      "source": "europe_pmc",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-17",
+      "source": "crossref",
+      "until": "2026-11-18"
     }
   ],
   "pool": [
@@ -5783,26 +5916,6 @@
       "title": "Population Pharmacokinetics and Limited Sampling Strategy of Mycophenolate Mofetil for Patients in Early Period After Kidney Transplantation.",
       "url": "https://europepmc.org/article/MED/40802254",
       "venue": "Clinical transplantation"
-    },
-    {
-      "abstract": "Background Cyclosporine (CsA), an immunosuppressant widely used in solid-organ transplantation, requires precise therapeutic drug monitoring to balance its efficacy and toxicity. The interdose area under the concentration-time curve (AUC 0-12 h ) is considered to be a superior metric of drug exposure compared with single concentration measurements but is, nevertheless, resource-intensive. Machine learning (ML) offers a novel approach for AUC prediction by leveraging patient-specific data without relying on traditional pharmacokinetic assumptions. This study intended to develop and evaluate XGBoost ML models for predicting CsA AUC 0-12 h using either two or three blood concentrations and to compare their performance against maximum a posteriori Bayesian estimation (MAP-BE) based on population pharmacokinetic models. Methods Using data from 2009 patients and 6360 dose-adjustment requests on the Immunosuppressant Bayesian Dose Adjustment website ( https://abis.chu-limoges.fr/ ), supervised ML models were trained with predictors including CsA concentrations at predefined time points (C0, C1, and C3), dose, age, and sampling time deviations. External validation was performed using rich pharmacokinetic profiles of kidney, heart, lung, and bone marrow transplant recipients. Results The three-sample XGBoost model achieved high accuracy in kidney transplant recipients (root mean square error [RMSE] Conclusions ML-based AUC prediction is a promising alternative to MAP-BE, particularly for kidney transplantation. Future studies should focus on expanding datasets, incorporating additional transplant types, and refining ML models for broader applicability.",
-      "authors": [
-        "Woillard JB",
-        "Labriffe M",
-        "Marquet P"
-      ],
-      "date": "2025-07-23",
-      "doi": "10.1097/ftd.0000000000001346",
-      "publication_type": "Journal Article",
-      "source_ids": [
-        "MED:40698833"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Estimation of Overall Cyclosporine Exposure Using Machine Learning.",
-      "url": "https://europepmc.org/article/MED/40698833",
-      "venue": "Therapeutic drug monitoring"
     },
     {
       "abstract": "Keizer initially described Pirana as a workbench designed to streamline management of NONMEM modeling, visualization, and analysis. Initial versions of Pirana integrated tools included NONMEM and PSN. As new tools have become available to pharmacometricians, new capabilities have been added to Pirana. These capabilities include: Integration of the NLME engine via the R speaks NLME (RsNLME) package for developing NLME models Integration of a Shiny graphical interface for the construction of NLME models Integration of machine learning pyDarwin python package Integration of a Shiny interface for custom diagnostics including Goodness of Fit (GOF) plots, tables, Visual Predictive Check (VPC) and report shell generation Improved setup with support for parallel execution on a wide range of platforms In this tutorial, we present a full workflow demonstrating how to use Pirana to build, fit, post-process, and perform VPC on models using NONMEM and NLME. In addition, we show how to use the machine learning-driven pyDarwin package with Pirana to automatically search model structures, random effects, and covariate models.",
@@ -6268,5 +6381,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-16"
+  "through": "2026-11-18"
 }

@@ -1,13 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-17 13:17 JST",
+  "last_scan_at": "2026-11-18 12:16 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-11-17 13:17 JST",
+    "archive": {
+      "cached_candidates_before": 34,
+      "completed_windows": 2,
+      "eligible_candidates": 34,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 796,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-18 12:16 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -27,30 +38,108 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2475,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 119,
-      "missing_ai_evidence": 18,
+      "already_reported": 4,
+      "duplicates": 2522,
+      "excluded_publication_type": 129,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2648,
-      "retrieved": 5265,
-      "unique": 2790
+      "missing_pk_evidence": 2592,
+      "retrieved": 5267,
+      "unique": 2745
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 88,
+  "article_count": 89,
   "new_count": 29,
-  "historical_count": 59,
+  "historical_count": 60,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Covariate identification in population pharmacokinetic/pharmacodynamic (popPK/PD) modeling is a key component in model development that is often prone to bias, time-consuming, and even intractable when too many covariates or complicated models are being considered. Early work leveraging machine learning (ML) for covariate screening has shown promising results over traditional methods. In this work, we expand this effort by integrating explainable machine learning facilitated by Shapley Additive Explanations (SHAP) analysis and covariate uncertainty quantification as well as a formal framework for establishing statistical significance of covariate relationships. Finally, we have packaged the proposed methodology into a flexible set of functions (shap-cov) to support popPK/PD modeling covariate identification.",
+      "authors": [
+        "Brooks L",
+        "Harun R",
+        "Jin JY",
+        "Lu J"
+      ],
+      "doi": "10.1002/psp4.70044",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "methodology",
+            "framework",
+            "model development"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "workflow",
+            "methodology",
+            "framework",
+            "model development"
+          ],
+          "pk": [
+            "population pharmacokinetic",
+            "poppk"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "workflow"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70044",
+      "publication_date": "2025-07-02",
+      "reported_at": "2026-11-18 12:16 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "In this work, we expand this effort by integrating explainable machine learning facilitated by Shapley Additive Explanations (SHAP) analysis and covariate uncertainty quantification as well as a formal framework for establishing statistical significance of covariate relationships.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Covariate identification in population pharmacokinetic/pharmacodynamic (popPK/PD) modeling is a key component in model development that is often prone to bias, time-consuming, and even intractable when too many covariates or complicated models are being considered.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Shap-Cov: An Explainable Machine Learning Based Workflow for Rapid Covariate Identification in Population Modeling.",
+      "url": "https://europepmc.org/article/MED/40601439",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
     {
       "abstract": "A novel computational framework that integrates the mechanistic rigor of Pharmacometrics (PMx) with the predictive power of Multimodal Machine Learning (MML) is conceptually formulated and discussed. The framework is designed to address critical developmental bottlenecks in the drug development sector, which is already witnessing a paradigm shift driven by the rise of Antibody-Drug Conjugates (ADCs)—a class that, according to recent pipeline analyses, accounts for an expanding share of innovative oncology trials. Unfortunately, despite the therapeutic promise of ADCs and other targeted modalities, the industry faces a productivity paradox, characterized by high attrition rates in transitional clinical phases and a median development timeline of seven years. By leveraging transfer learning strategies, we delineate how the synergistic adoption of PMx and MML can conceptually optimize dose selection, inform metastatic risk assessment through genomic-imaging integration, and ultimately accelerate the transition from bench to bedside. This is conceptualized through the definition of methodologies capable of transforming noisy early-phase clinical data into actionable insights, thus bridging the gap between Physiologically Based Pharmacokinetic (PBPK) modeling and deep learning-driven outcomes. Without advancing premature empirical claims, we establish a structured methodological roadmap for a scalable, AI-enhanced clinical trial infrastructure, positioning hybrid modeling as a viable architectural paradigm for the next generation of precision oncology.",
       "authors": [

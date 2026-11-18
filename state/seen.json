@@ -1,12 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-17",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101",
+  "last_delivery_date_jst": "2026-11-18",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-17 13:17 JST",
+    "archive": {
+      "cached_candidates_before": 34,
+      "completed_windows": 2,
+      "eligible_candidates": 34,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 796,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-18 12:16 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/101"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -26,24 +37,23 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2475,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 119,
-      "missing_ai_evidence": 18,
+      "already_reported": 4,
+      "duplicates": 2522,
+      "excluded_publication_type": 129,
+      "missing_ai_evidence": 19,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2648,
-      "retrieved": 5265,
-      "unique": 2790
+      "missing_pk_evidence": 2592,
+      "retrieved": 5267,
+      "unique": 2745
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-17",
-  "last_success_utc": "2026-11-17T04:17:12.304402+00:00",
+  "last_selection_date_jst": "2026-11-18",
+  "last_success_utc": "2026-11-18T03:16:08.199396+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -82,6 +92,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "doi:10.1002/psp4.70044": {
+      "doi": "10.1002/psp4.70044",
+      "selected_at": "2026-11-18T03:16:08.199396+00:00",
+      "selection_type": "historical",
+      "title": "Shap-Cov: An Explainable Machine Learning Based Workflow for Rapid Covariate Identification in Population Modeling."
     },
     "doi:10.1002/psp4.70084": {
       "doi": "10.1002/psp4.70084",
@@ -685,6 +701,12 @@
       "selected_at": "2026-11-09T01:21:36.722154+00:00",
       "selection_type": "historical",
       "title": "Machine learning approach for personalized vancomycin steady-state trough concentration prediction: a superior approach over Bayesian population pharmacokinetic model."
+    },
+    "source:europe pmc:med:40601439": {
+      "doi": "10.1002/psp4.70044",
+      "selected_at": "2026-11-18T03:16:08.199396+00:00",
+      "selection_type": "historical",
+      "title": "Shap-Cov: An Explainable Machine Learning Based Workflow for Rapid Covariate Identification in Population Modeling."
     },
     "source:europe pmc:med:40617982": {
       "doi": "10.1007/s00228-025-03874-y",
@@ -1363,6 +1385,12 @@
       "selection_type": "new",
       "title": "PMxAgent: An Agentic Platform for Pharmacometrics."
     },
+    "title:64ed793f75355c87134cb922": {
+      "doi": "10.1002/psp4.70044",
+      "selected_at": "2026-11-18T03:16:08.199396+00:00",
+      "selection_type": "historical",
+      "title": "Shap-Cov: An Explainable Machine Learning Based Workflow for Rapid Covariate Identification in Population Modeling."
+    },
     "title:67360dd3bee9e7d6b321541f": {
       "doi": "10.1007/s40262-025-01564-7",
       "selected_at": "2026-11-07T01:31:26.578181+00:00",
@@ -1663,21 +1691,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-17"
+    "arxiv": "2026-11-18"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
+      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
-      "records": 5261,
+      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
+      "records": 5263,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-17T04:17:12.304402+00:00",
+      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
       "records": 3,
       "status": "ok"
     }
