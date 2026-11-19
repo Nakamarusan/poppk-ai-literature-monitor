@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-18",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102",
+  "last_delivery_date_jst": "2026-11-19",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/103",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 34,
+      "cached_candidates_before": 33,
       "completed_windows": 2,
-      "eligible_candidates": 34,
+      "eligible_candidates": 33,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 796,
+      "pending_windows": 815,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-18 12:16 JST",
+    "checked_at": "2026-11-19 11:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/103"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,14 +37,14 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2522,
+      "already_reported": 3,
+      "duplicates": 2526,
       "excluded_publication_type": 129,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2592,
-      "retrieved": 5267,
-      "unique": 2745
+      "missing_pk_evidence": 2598,
+      "retrieved": 5274,
+      "unique": 2748
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,8 +52,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-18",
-  "last_success_utc": "2026-11-18T03:16:08.199396+00:00",
+  "last_selection_date_jst": "2026-11-19",
+  "last_success_utc": "2026-11-19T02:54:37.298764+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -500,6 +500,12 @@
       "selection_type": "historical",
       "title": "From animal testing to model-informed drug development: building on ICH M15 and EMA initiatives to make new approach methodologies (NAMs) deliver."
     },
+    "doi:10.3390/e27060602": {
+      "doi": "10.3390/e27060602",
+      "selected_at": "2026-11-19T02:54:37.298764+00:00",
+      "selection_type": "historical",
+      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data."
+    },
     "doi:10.3390/ph19111729": {
       "doi": "10.3390/ph19111729",
       "selected_at": "2026-11-03T03:15:32.386205+00:00",
@@ -695,6 +701,12 @@
       "selected_at": "2026-11-10T03:55:58.404080+00:00",
       "selection_type": "historical",
       "title": "A Real-Time Plasma Concentration Prediction Model for Voriconazole in Elderly Patients via Machine Learning Combined with Population Pharmacokinetics."
+    },
+    "source:europe pmc:med:40566189": {
+      "doi": "10.3390/e27060602",
+      "selected_at": "2026-11-19T02:54:37.298764+00:00",
+      "selection_type": "historical",
+      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data."
     },
     "source:europe pmc:med:40575776": {
       "doi": "10.3389/fphar.2025.1549500",
@@ -1259,6 +1271,12 @@
       "selection_type": "new",
       "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients."
     },
+    "title:26ffffc66e69a7a709efaed9": {
+      "doi": "10.3390/e27060602",
+      "selected_at": "2026-11-19T02:54:37.298764+00:00",
+      "selection_type": "historical",
+      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data."
+    },
     "title:279869745a4b4e2b046fbb32": {
       "doi": "10.1016/j.compbiomed.2025.110782",
       "selected_at": "2026-10-27T01:02:52.751572+00:00",
@@ -1691,22 +1709,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-18"
+    "arxiv": "2026-11-19"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
+      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
-      "records": 5263,
+      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
+      "records": 5271,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-18T03:16:08.199396+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
+      "records": 2,
       "status": "ok"
     }
   }

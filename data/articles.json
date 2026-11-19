@@ -1,6 +1,84 @@
 {
   "articles": [
     {
+      "abstract": "This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics. Unlike standard models that rely on strong assumptions and often struggle with high-dimensional covariate relationships, NODEs offer a data-driven approach, learning differential equations directly from data while integrating covariates. To evaluate their performance, NODEs were applied to a real-world Dalbavancin pharmacokinetic dataset comprising 218 patients and compared against a two-compartment model and an NLME within a cross-validation framework, which ensures an evaluation of robustness. Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs. Their predictive performance was assessed both with and without covariates, while model explainability was analyzed using Shapley additive explanations (SHAP) values. Results show that, in the absence of covariates, NODEs performed comparably to state-of-the-art NLME models. However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy. SHAP analyses further revealed how NODEs leverage covariates in their predictions. These results establish NODEs as a promising alternative for pharmacokinetic modeling, particularly in capturing complex covariate interactions, even when dealing with sparse and small datasets, thus paving the way for improved drug concentration predictions and personalized treatment strategies in precision medicine.",
+      "authors": [
+        "Giacometti T",
+        "Rocchi E",
+        "Cojutti PG",
+        "Magnani F",
+        "Remondini D",
+        "Pea F",
+        "Castellani G"
+      ],
+      "doi": "10.3390/e27060602",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "nonlinear mixed effects",
+            "nlme"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "neural odes"
+          ],
+          "method": [
+            "framework",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics",
+            "nonlinear mixed effects",
+            "nlme"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "neural odes"
+          ],
+          "method": [],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        }
+      },
+      "id": "doi:10.3390/e27060602",
+      "publication_date": "2025-06-05",
+      "reported_at": "2026-11-19 11:54 JST",
+      "score": {
+        "components": {
+          "ai": 20,
+          "intersection": 10,
+          "method": 10,
+          "pk": 30,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics.",
+        "new_capability": "However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy.",
+        "prior_limitation": "Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data.",
+      "url": "https://europepmc.org/article/MED/40566189",
+      "venue": "Entropy (Basel, Switzerland)"
+    },
+    {
       "abstract": "Covariate identification in population pharmacokinetic/pharmacodynamic (popPK/PD) modeling is a key component in model development that is often prone to bias, time-consuming, and even intractable when too many covariates or complicated models are being considered. Early work leveraging machine learning (ML) for covariate screening has shown promising results over traditional methods. In this work, we expand this effort by integrating explainable machine learning facilitated by Shapley Additive Explanations (SHAP) analysis and covariate uncertainty quantification as well as a formal framework for establishing statistical significance of covariate relationships. Finally, we have packaged the proposed methodology into a flexible set of functions (shap-cov) to support popPK/PD modeling covariate identification.",
       "authors": [
         "Brooks L",
@@ -7002,24 +7080,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-18 12:16 JST",
+  "last_scan_at": "2026-11-19 11:54 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 34,
+      "cached_candidates_before": 33,
       "completed_windows": 2,
-      "eligible_candidates": 34,
+      "eligible_candidates": 33,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 796,
+      "pending_windows": 815,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-18 12:16 JST",
+    "checked_at": "2026-11-19 11:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/102"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/103"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -7039,14 +7117,14 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2522,
+      "already_reported": 3,
+      "duplicates": 2526,
       "excluded_publication_type": 129,
-      "missing_ai_evidence": 19,
+      "missing_ai_evidence": 17,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2592,
-      "retrieved": 5267,
-      "unique": 2745
+      "missing_pk_evidence": 2598,
+      "retrieved": 5274,
+      "unique": 2748
     },
     "selected_count": 1,
     "selection_status": "selected",
