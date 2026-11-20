@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-19 11:54 JST
+Run time: 2026-11-20 11:47 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5271, Europe PMC 2, arXiv 1
+Recent-search records: Crossref 5262, Europe PMC 2, arXiv 1
 
 ## Selection and search coverage
 
@@ -24,44 +24,42 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5274
-- unique: 2748
-- duplicates: 2526
-- already reported: 3
+- retrieved: 5265
+- unique: 2725
+- duplicates: 2540
+- already reported: 2
 - missing method evidence: 1
-- missing ai evidence: 17
-- missing pk evidence: 2598
-- excluded publication type: 129
-
-Archive candidates available: 33; unvisited/unfinished windows: 815; completed windows: 2.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
+- missing pk evidence: 2580
+- missing ai evidence: 15
+- excluded publication type: 126
+- eligible unreported: 1
 
 
-## 1. [Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data.](https://europepmc.org/article/MED/40566189)
+## 1. [Pharmacometrics, Artificial Intelligence, and Machine Learning in Precision Dosing and Clinical Toxicology](https://doi.org/10.1097/ftd.0000000000001553)
 
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** Giacometti T, Rocchi E, Cojutti PG, Magnani F, Remondini D, Pea F, Castellani G
-- **Venue/source:** Entropy (Basel, Switzerland)
-- **Publication date:** 2025-06-05
-- **DOI:** 10.3390/e27060602
+- **Selection:** New article
+- **Authors:** Carlos Goncalves, Wanzhu Zhao, Uwe Christians
+- **Venue/source:** Therapeutic Drug Monitoring
+- **Publication date:** 2026-11-19
+- **DOI:** 10.1097/ftd.0000000000001553
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs.
-- **Methodological contribution:** This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics.
-- **What becomes possible:** However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy.
-- **Why it matters:** Not stated in the available abstract.
+- **Prior limitation:** However, evidence linking improved predictive performance to meaningful clinical outcomes remains limited.
+- **Methodological contribution:** Not stated in the available abstract.
+- **What becomes possible:** In 13 studies, AI models demonstrated predictive performance comparable with or exceeding that of traditional population pharmacokinetic and Bayesian approaches for selected applications.
+- **Why it matters:** AI-based methods have considerable potential for enhancing TDM, particularly for dose optimization, drug-exposure estimation, and toxicity prediction.
 
-- **Relevance score:** 70/100 — PK 30, AI 20, method 10, title intersection 10
+- **Relevance score:** 80/100 — PK 30, AI 30, method 10, title intersection 10
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics. Unlike standard models that rely on strong assumptions and often struggle with high-dimensional covariate relationships, NODEs offer a data-driven approach, learning differential equations directly from data while integrating covariates. To evaluate their performance, NODEs were applied to a real-world Dalbavancin pharmacokinetic dataset comprising 218 patients and compared against a two-compartment model and an NLME within a cross-validation framework, which ensures an evaluation of robustness. Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs. Their predictive performance was assessed both with and without covariates, while model explainability was analyzed using Shapley additive explanations (SHAP) values. Results show that, in the absence of covariates, NODEs performed comparably to state-of-the-art NLME models. However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy. SHAP analyses further revealed how NODEs leverage covariates in their predictions. These results establish NODEs as a promising alternative for pharmacokinetic modeling, particularly i…
-- **PopPK/pharmacometrics terms:** population pharmacokinetics, nonlinear mixed effects, nlme
-- **AI/ML terms:** neural odes
-- **Method terms:** framework, validation
+- **Abstract:** Background: Therapeutic drug monitoring (TDM) enables individualized pharmacotherapy for drugs with high interpatient variability and concentration-dependent effects. Conventional Bayesian approaches, although clinically established, may not fully capture pharmacokinetic complexity in dynamic or heterogeneous patient populations. Artificial intelligence (AI) and machine-learning methods offer complementary capabilities, including modeling nonlinear relationships and integrating high-dimensional clinical data. Methods: Peer-reviewed studies that applied AI or machine-learning methods to TDM between January 2017 and April 2026 were reviewed in accordance with Preferred Reporting Items for Systematic Reviews and Meta-Analyses 2020 guidelines. Studies involving adult and pediatric populations were included, whereas reviews, editorials, and animal studies were excluded. Results: Forty-seven studies covering a range of drugs, including vancomycin, tacrolimus, antiepileptics, mycophenolic acid, methotrexate, and voriconazole, were included. Tree-based ensemble methods, particularly eXtreme Gradient Boosting, random forest, and gradient boosting, were the most frequently applied algorithms. In general, these methods demonstrated strong predictive performance, with area under the receiver operating characteristic curve values up to 0.90 for classification tasks and coefficient of deter…
+- **PopPK/pharmacometrics terms:** pharmacometrics, population pharmacokinetic
+- **AI/ML terms:** machine learning, artificial intelligence
+- **Method terms:** estimation, optimization, validation
 
 </details>
 

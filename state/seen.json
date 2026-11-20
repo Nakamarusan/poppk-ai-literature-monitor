@@ -1,23 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-11-19",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/103",
+  "last_delivery_date_jst": "2026-11-20",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/104",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 33,
-      "completed_windows": 2,
-      "eligible_candidates": 33,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 815,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-19 11:54 JST",
+    "archive": {},
+    "checked_at": "2026-11-20 11:47 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/103"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/104"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,23 +26,24 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2526,
-      "excluded_publication_type": 129,
-      "missing_ai_evidence": 17,
+      "already_reported": 2,
+      "duplicates": 2540,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 126,
+      "missing_ai_evidence": 15,
       "missing_method_evidence": 1,
-      "missing_pk_evidence": 2598,
-      "retrieved": 5274,
-      "unique": 2748
+      "missing_pk_evidence": 2580,
+      "retrieved": 5265,
+      "unique": 2725
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-19",
-  "last_success_utc": "2026-11-19T02:54:37.298764+00:00",
+  "last_selection_date_jst": "2026-11-20",
+  "last_success_utc": "2026-11-20T02:47:55.895625+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -283,6 +273,12 @@
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
       "selection_type": "new",
       "title": "Toward Reinforcement Learning–Enabled Model-Informed Precision Dosing: Concepts, Applications, and Implementation"
+    },
+    "doi:10.1097/ftd.0000000000001553": {
+      "doi": "10.1097/ftd.0000000000001553",
+      "selected_at": "2026-11-20T02:47:55.895625+00:00",
+      "selection_type": "new",
+      "title": "Pharmacometrics, Artificial Intelligence, and Machine Learning in Precision Dosing and Clinical Toxicology"
     },
     "doi:10.1097/mcc.0000000000001428": {
       "doi": "10.1097/mcc.0000000000001428",
@@ -624,6 +620,12 @@
       "selected_at": "2026-10-22T00:21:34.876602+00:00",
       "selection_type": "new",
       "title": "Toward Reinforcement Learning–Enabled Model-Informed Precision Dosing: Concepts, Applications, and Implementation"
+    },
+    "source:crossref:10.1097/ftd.0000000000001553": {
+      "doi": "10.1097/ftd.0000000000001553",
+      "selected_at": "2026-11-20T02:47:55.895625+00:00",
+      "selection_type": "new",
+      "title": "Pharmacometrics, Artificial Intelligence, and Machine Learning in Precision Dosing and Clinical Toxicology"
     },
     "source:crossref:10.1128/aac.01089-26": {
       "doi": "10.1128/aac.01089-26",
@@ -1594,6 +1596,12 @@
       "selection_type": "historical",
       "title": "Mechanistically informed adaptive dosing for cancer immunotherapy using AI-guided decision making"
     },
+    "title:ca0022476b5caca9e17ce65c": {
+      "doi": "10.1097/ftd.0000000000001553",
+      "selected_at": "2026-11-20T02:47:55.895625+00:00",
+      "selection_type": "new",
+      "title": "Pharmacometrics, Artificial Intelligence, and Machine Learning in Precision Dosing and Clinical Toxicology"
+    },
     "title:cb55f3adf9727e36167c119e": {
       "doi": "10.3389/fphar.2026.1839423",
       "notified_at": "2026-09-20T23:47:04.387197+00:00",
@@ -1709,21 +1717,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-19"
+    "arxiv": "2026-11-20"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
+      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
-      "records": 5271,
+      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
+      "records": 5262,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-19T02:54:37.298764+00:00",
+      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
       "records": 2,
       "status": "ok"
     }
