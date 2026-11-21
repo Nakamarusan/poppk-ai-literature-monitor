@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-19",
+  "last_check": "2026-11-21",
   "last_run": {
-    "cached_candidates_before": 33,
+    "cached_candidates_before": 32,
     "completed_windows": 2,
-    "eligible_candidates": 33,
+    "eligible_candidates": 32,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 815,
+    "pending_windows": 834,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -5719,6 +5719,139 @@
       "since": "2026-11-19",
       "source": "crossref",
       "until": "2026-11-19"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-20",
+      "source": "europe_pmc",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-20",
+      "source": "crossref",
+      "until": "2026-11-21"
     }
   ],
   "pool": [
@@ -6095,30 +6228,6 @@
       "venue": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International Conference"
     },
     {
-      "abstract": "This study investigates the use of Neural Ordinary Differential Equations (NODEs) as an alternative to traditional compartmental models and Nonlinear Mixed-Effects (NLME) models for drug concentration prediction in pharmacokinetics. Unlike standard models that rely on strong assumptions and often struggle with high-dimensional covariate relationships, NODEs offer a data-driven approach, learning differential equations directly from data while integrating covariates. To evaluate their performance, NODEs were applied to a real-world Dalbavancin pharmacokinetic dataset comprising 218 patients and compared against a two-compartment model and an NLME within a cross-validation framework, which ensures an evaluation of robustness. Given the challenge of limited data availability, a data augmentation strategy was employed to pre-train NODEs. Their predictive performance was assessed both with and without covariates, while model explainability was analyzed using Shapley additive explanations (SHAP) values. Results show that, in the absence of covariates, NODEs performed comparably to state-of-the-art NLME models. However, when covariates were incorporated, NODEs demonstrated superior predictive accuracy. SHAP analyses further revealed how NODEs leverage covariates in their predictions. These results establish NODEs as a promising alternative for pharmacokinetic modeling, particularly in capturing complex covariate interactions, even when dealing with sparse and small datasets, thus paving the way for improved drug concentration predictions and personalized treatment strategies in precision medicine.",
-      "authors": [
-        "Giacometti T",
-        "Rocchi E",
-        "Cojutti PG",
-        "Magnani F",
-        "Remondini D",
-        "Pea F",
-        "Castellani G"
-      ],
-      "date": "2025-06-05",
-      "doi": "10.3390/e27060602",
-      "publication_type": "research-article, Journal Article",
-      "source_ids": [
-        "MED:40566189"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data.",
-      "url": "https://europepmc.org/article/MED/40566189",
-      "venue": "Entropy (Basel, Switzerland)"
-    },
-    {
       "abstract": "Advancements in large language models (LLMs) have suggested their potential utility for diverse pharmacometrics tasks. This study investigated the performance of LLM for generating structure diagrams, publication-ready tables, analysis reports, and conducting simulations using output files from pharmacometrics models. Forty-four NONMEM output files were obtained from the GitHub software repository. The performance of Claude 3.5 Sonnet (Claude) and ChatGPT 4o was compared with two other candidate LLMs: Gemini 1.5 Pro and Llama 3.2. Prompt engineering was conducted for Claude for pharmacometrics tasks such as generating model structure diagrams, parameter tables, and analysis reports. Simulations were conducted using ChatGPT. Claude Artifacts was used to visualize model structure diagrams, parameter tables, and analysis reports. A web-based R Shiny application was implemented to provide an accessible interface for automating pharmacometric model structure diagrams, parameter tables, and analysis reports tasks. Claude was selected for investigation following performance comparisons with ChatGPT 4o, Gemini 1.5 Pro, and Llama on model structure diagram and parameter table generation tasks. Claude successfully generated the model structure diagrams for 40 (90.9%) of the 44 NONMEM output files with the initial prompts, and the remaining were resolved with an additional prompt. Claude consistently generated accurate parameter summary tables and succinct model analysis reports. Modest variability in model structure diagrams generated for replicate prompts was identified. ChatGPT demonstrated simulation capabilities but revealed limitations with complex PK/PD models. LLMs have the potential to enhance key pharmacometrics modeling tasks. However, expert review of the results generated is essential.",
       "authors": [
         "Cha HJ",
@@ -6493,5 +6602,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-19"
+  "through": "2026-11-21"
 }

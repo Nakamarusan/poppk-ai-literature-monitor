@@ -1,12 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-20",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/104",
+  "last_delivery_date_jst": "2026-11-21",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/105",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-20 11:47 JST",
+    "archive": {
+      "cached_candidates_before": 32,
+      "completed_windows": 2,
+      "eligible_candidates": 32,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 834,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-21 11:56 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/104"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/105"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -27,23 +38,21 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2540,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 126,
-      "missing_ai_evidence": 15,
-      "missing_method_evidence": 1,
-      "missing_pk_evidence": 2580,
-      "retrieved": 5265,
-      "unique": 2725
+      "duplicates": 2546,
+      "excluded_publication_type": 134,
+      "missing_ai_evidence": 16,
+      "missing_pk_evidence": 2544,
+      "retrieved": 5242,
+      "unique": 2696
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-20",
-  "last_success_utc": "2026-11-20T02:47:55.895625+00:00",
+  "last_selection_date_jst": "2026-11-21",
+  "last_success_utc": "2026-11-21T02:56:52.731879+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -285,6 +294,12 @@
       "notified_at": "2026-09-04T23:38:17.948862+00:00",
       "selection_type": "new",
       "title": "Antimicrobial dosing in patients with renal dysfunction."
+    },
+    "doi:10.1101/2025.05.28.656586": {
+      "doi": "10.1101/2025.05.28.656586",
+      "selected_at": "2026-11-21T02:56:52.731879+00:00",
+      "selection_type": "historical",
+      "title": "Stochastic gates for covariate selection in population pharmacokinetics modelling"
     },
     "doi:10.1111/cts.70345": {
       "doi": "10.1111/cts.70345",
@@ -1069,6 +1084,12 @@
       "selection_type": "new",
       "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients."
     },
+    "source:europe pmc:ppr:ppr1029163": {
+      "doi": "10.1101/2025.05.28.656586",
+      "selected_at": "2026-11-21T02:56:52.731879+00:00",
+      "selection_type": "historical",
+      "title": "Stochastic gates for covariate selection in population pharmacokinetics modelling"
+    },
     "source:europe pmc:ppr:ppr1087815": {
       "doi": "10.21203/rs.3.rs-7564311/v1",
       "selected_at": "2026-11-14T01:56:05.148359+00:00",
@@ -1703,6 +1724,12 @@
       "selection_type": "new",
       "title": "Comparing Machine Learning and Population Pharmacokinetic Approaches for Drug Concentration Prediction in Dense and Sparse Data Settings"
     },
+    "title:f5139d76cd2cf7ff79a9e30a": {
+      "doi": "10.1101/2025.05.28.656586",
+      "selected_at": "2026-11-21T02:56:52.731879+00:00",
+      "selection_type": "historical",
+      "title": "Stochastic gates for covariate selection in population pharmacokinetics modelling"
+    },
     "title:f7da8454a4d96dcee63ef2f1": {
       "doi": "10.12688/f1000research.186702.1",
       "selected_at": "2026-10-17T00:06:14.428879+00:00",
@@ -1717,21 +1744,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-20"
+    "arxiv": "2026-11-21"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
-      "records": 1,
+      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
+      "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
-      "records": 5262,
+      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
+      "records": 5240,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-20T02:47:55.895625+00:00",
+      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
       "records": 2,
       "status": "ok"
     }
