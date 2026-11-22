@@ -1,24 +1,13 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-21 11:56 JST",
+  "last_scan_at": "2026-11-22 10:51 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 32,
-      "completed_windows": 2,
-      "eligible_candidates": 32,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 834,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-21 11:56 JST",
+    "archive": {},
+    "checked_at": "2026-11-22 10:51 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/105"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -39,27 +28,115 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2546,
-      "excluded_publication_type": 134,
-      "missing_ai_evidence": 16,
-      "missing_pk_evidence": 2544,
-      "retrieved": 5242,
-      "unique": 2696
+      "duplicates": 2537,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 139,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2542,
+      "retrieved": 5235,
+      "unique": 2698
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 92,
-  "new_count": 30,
+  "article_count": 93,
+  "new_count": 31,
   "historical_count": 62,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Subtherapeutic rifampicin exposure drives treatment failure and acquired resistance in tuberculosis. We aimed to develop and externally validate a concentration-driven machine learning (ML) model predicting rifampicin systemic exposure (AUC0-24h) from sparse clinical sampling, addressing the structural biases and limited generalizability of conventional Bayesian precision dosing. Twenty-six published population pharmacokinetic models were benchmarked against real-world TDM data from a French cohort; the five externally compatible models were used to simulate a training cohort of 4,500 virtual patients. An XGBoost regression model was trained to predict AUC0-24h from a two-point sampling strategy and evaluated against Maximum A Posteriori Bayesian Estimation (MAP-BE) and dynamic Model Averaging (MA). External validation was performed on two completely independent datasets: a US cohort of healthy volunteers and a Brazilian cohort of inpatient tuberculosis cases, including HIV-coinfected patients. A sampling strategy at 2 and 8 hours post-dose provided optimal accuracy. Across the combined cross-continental validation cohorts (n = 40), the concentration-driven ML model showed consistent external predictive performance. It achieved 75.0% of predictions within ±20% of the reference exposure, significantly outperforming the dynamic MA strategy (42.5%, P < 0.001) and all five individual MAP-BE priors (0-60.0%, P < 0.01). Furthermore, the ML approach yielded substantially lower overall imprecision (relative root mean square error: 26.2% vs. 52.6% for MA) and systematic bias (17.5% vs. 38.1%). By integrating mechanistic pharmacology with data-driven inference, this framework enables covariate-free estimation of rifampicin exposure from two plasma samples. External evaluation in two independent cohorts supports its further prospective assessment as a scalable TDM decision-support approach.",
+      "authors": [
+        "Sayadi H",
+        "Ximenez JPB",
+        "Fromage Y",
+        "Alsultan A",
+        "Nardotto GHB",
+        "Lanchote VL",
+        "Labriffe M",
+        "Monchaud C",
+        "Codde C",
+        "Marquet P",
+        "Peloquin CA",
+        "Woillard JB"
+      ],
+      "doi": "10.1016/j.cmi.2026.11.017",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "framework",
+            "estimation",
+            "inference",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation",
+            "framework",
+            "inference"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1016/j.cmi.2026.11.017",
+      "publication_date": "2026-11-20",
+      "reported_at": "2026-11-22 10:51 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "new",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Furthermore, the ML approach yielded substantially lower overall imprecision (relative root mean square error: 26.2% vs.",
+        "new_capability": "External evaluation in two independent cohorts supports its further prospective assessment as a scalable TDM decision-support approach.",
+        "prior_limitation": "We aimed to develop and externally validate a concentration-driven machine learning (ML) model predicting rifampicin systemic exposure (AUC0-24h) from sparse clinical sampling, addressing the structural biases and limited generalizability of conventional Bayesian precision dosing.",
+        "significance": "Not stated in the available abstract.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Two-sample machine-learning estimation of rifampicin exposure in tuberculosis: an external validation study.",
+      "url": "https://europepmc.org/article/MED/43064154",
+      "venue": "Clinical microbiology and infection : the official publication of the European Society of Clinical Microbiology and Infectious Diseases"
+    },
     {
       "abstract": "Covariate selection in population pharmacokinetics modelling is essential for understanding interindividual variability in drug response and optimizing dosing. Traditional stepwise covariate modelling is often time-consuming, compared to the new machine learning alternatives. This study investigates the use of Neural Networks with Stochastic Gates for automated covariate selection, aiming to efficiently identify relevant covariates while penalizing excessive covariate inclusion. On various synthetic datasets the approach demonstrated robustness in detecting important covariates, overcoming challenges such as high correlations, low covariate frequencies, high interindividual variability and complex covariate dependencies. In real clinical data from a monalizumab study, the method successfully identified covariates that matched those found by experts. However, for tixagevimab/cilgavimab, it identified a superset of covariates, indicating a potential need for further pruning. This machine learning-based method enhances the covariate pre-selection process in population pharmacokinetics model development, offering significant time savings and improving efficiency even under challenging scenarios. Graphical Abstract Study Highlights WHAT IS THE CURRENT KNOWLEDGE ON THE TOPIC? Covariate selection in population pharmacokinetics modelling is a crucial step in drug development and dosing determination. Traditionally, this process is conducted in a stepwise manner, which can be very time-consuming. Recently, fast machine learning (ML)-based methods for covariate selection have emerged in the literature, offering more efficient alternatives. WHAT QUESTION DID THIS STUDY ADDRESS? Can we use Neural Networks with Stochastic Gates, incorporating explicit penalization on the number of covariates, to select superior set of covariates compared to prior ML-based methods? WHAT DOES THIS STUDY ADD TO OUR KNOWLEDGE? Neural Networks with Stochastic Gates provide a reliable approach in accurately detecting covariates because they can effectively eliminate irrelevant covariates even in cases with high inter-covariates correlation. HOW MIGHT THIS CHANGE DRUG DISCOVERY, DEVELOPMENT, AND/OR THERAPEUTICS? This approach accelerates pharmacokinetic model development by significantly reducing the time required for covariate evaluation. Additionally, it allows for the screening of a wider set of covariates, potentially leading to fewer falsely missed covariates and better-quality models, a task that would be infeasible with traditional stepwise covariate modelling.",
       "authors": [

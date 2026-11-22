@@ -1,23 +1,12 @@
 {
-  "last_delivery_date_jst": "2026-11-21",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/105",
+  "last_delivery_date_jst": "2026-11-22",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106",
   "last_run": {
-    "archive": {
-      "cached_candidates_before": 32,
-      "completed_windows": 2,
-      "eligible_candidates": 32,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 834,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-21 11:56 JST",
+    "archive": {},
+    "checked_at": "2026-11-22 10:51 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/105"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,21 +27,22 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2546,
-      "excluded_publication_type": 134,
-      "missing_ai_evidence": 16,
-      "missing_pk_evidence": 2544,
-      "retrieved": 5242,
-      "unique": 2696
+      "duplicates": 2537,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 139,
+      "missing_ai_evidence": 14,
+      "missing_pk_evidence": 2542,
+      "retrieved": 5235,
+      "unique": 2698
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-21",
-  "last_success_utc": "2026-11-21T02:56:52.731879+00:00",
+  "last_selection_date_jst": "2026-11-22",
+  "last_success_utc": "2026-11-22T01:51:45.353364+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -223,6 +213,12 @@
       "selected_at": "2026-11-07T01:31:26.578181+00:00",
       "selection_type": "historical",
       "title": "Hybrid Population Pharmacokinetic-Machine Learning Modeling to Predict Infliximab Pharmacokinetics in Pediatric and Young Adult Patients with Crohn's Disease."
+    },
+    "doi:10.1016/j.cmi.2026.11.017": {
+      "doi": "10.1016/j.cmi.2026.11.017",
+      "selected_at": "2026-11-22T01:51:45.353364+00:00",
+      "selection_type": "new",
+      "title": "Two-sample machine-learning estimation of rifampicin exposure in tuberculosis: an external validation study."
     },
     "doi:10.1016/j.cmpb.2026.109511": {
       "doi": "10.1016/j.cmpb.2026.109511",
@@ -1084,6 +1080,12 @@
       "selection_type": "new",
       "title": "VKORC1 and CYP2C9 Genetic Variant-Associated Warfarin Treatment Outcomes and Artificial Intelligence-Based Dosing Optimization Among Chinese Patients."
     },
+    "source:europe pmc:med:43064154": {
+      "doi": "10.1016/j.cmi.2026.11.017",
+      "selected_at": "2026-11-22T01:51:45.353364+00:00",
+      "selection_type": "new",
+      "title": "Two-sample machine-learning estimation of rifampicin exposure in tuberculosis: an external validation study."
+    },
     "source:europe pmc:ppr:ppr1029163": {
       "doi": "10.1101/2025.05.28.656586",
       "selected_at": "2026-11-21T02:56:52.731879+00:00",
@@ -1420,6 +1422,12 @@
       "selection_type": "new",
       "title": "Prediction of the clinical outcomes of imipenem and meropenem in patients with treatment-associated AKI and death via machine learning models combined with pharmacokinetic parameters: A retrospective cohort study."
     },
+    "title:5a5edbf99bea49c08941189a": {
+      "doi": "10.1016/j.cmi.2026.11.017",
+      "selected_at": "2026-11-22T01:51:45.353364+00:00",
+      "selection_type": "new",
+      "title": "Two-sample machine-learning estimation of rifampicin exposure in tuberculosis: an external validation study."
+    },
     "title:5ff74044bdddda3069368e3b": {
       "doi": "10.1002/psp4.70325",
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
@@ -1744,22 +1752,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-21"
+    "arxiv": "2026-11-22"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
+      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
       "records": 0,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
-      "records": 5240,
+      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
+      "records": 5232,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-21T02:56:52.731879+00:00",
-      "records": 2,
+      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
+      "records": 3,
       "status": "ok"
     }
   }
