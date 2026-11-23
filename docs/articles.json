@@ -1,13 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-22 10:51 JST",
+  "last_scan_at": "2026-11-23 11:07 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-11-22 10:51 JST",
+    "archive": {
+      "cached_candidates_before": 31,
+      "completed_windows": 2,
+      "eligible_candidates": 31,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 853,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-23 11:07 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/107"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -19,37 +30,104 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2537,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 139,
-      "missing_ai_evidence": 14,
-      "missing_pk_evidence": 2542,
-      "retrieved": 5235,
-      "unique": 2698
+      "already_reported": 3,
+      "duplicates": 2521,
+      "excluded_publication_type": 144,
+      "missing_ai_evidence": 13,
+      "missing_pk_evidence": 2558,
+      "retrieved": 5239,
+      "unique": 2718
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 93,
+  "article_count": 94,
   "new_count": 31,
-  "historical_count": 62,
+  "historical_count": 63,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Recent research has increasingly focused on using machine learning for covariate selection in population pharmacokinetics (PPK) analysis. However, few studies have explored the prediction of plasma concentration profiles of drugs using nonlinear mixed-effect models combined with machine learning. This gap includes limited validation of prediction accuracy and applicability to diverse patient populations and dosing conditions. This study addresses these gaps by using remifentanil as a model drug and applying machine learning models to predict plasma concentration profiles based on virtual and real-world data. We created various training data sets for the virtual data by clustering based on the size and diversity of the test data set. Our results demonstrated high prediction accuracy for virtual and real-world data sets using Random Forest models. These results suggest that machine learning models are effective for large-scale data sets and real-world data with variable dosing times and amounts per patient. Considering the efficiency of machine learning, it offers a fit-for-purpose approach alongside traditional PPK methods, potentially enhancing future pharmacokinetic and pharmacodynamic studies.",
+      "authors": [
+        "Iwata H",
+        "Kageyama M",
+        "Handa K"
+      ],
+      "doi": "10.1021/acs.molpharmaceut.4c01431",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "covariate selection",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation",
+            "covariate selection"
+          ],
+          "pk": [
+            "population pharmacokinetics"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "validation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1021/acs.molpharmaceut.4c01431",
+      "publication_date": "2025-05-09",
+      "reported_at": "2026-11-23 11:07 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study addresses these gaps by using remifentanil as a model drug and applying machine learning models to predict plasma concentration profiles based on virtual and real-world data.",
+        "new_capability": "Our results demonstrated high prediction accuracy for virtual and real-world data sets using Random Forest models.",
+        "prior_limitation": "However, few studies have explored the prediction of plasma concentration profiles of drugs using nonlinear mixed-effect models combined with machine learning.",
+        "significance": "These results suggest that machine learning models are effective for large-scale data sets and real-world data with variable dosing times and amounts per patient.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Machine Learning Prediction and Validation of Plasma Concentration-Time Profiles.",
+      "url": "https://europepmc.org/article/MED/40345671",
+      "venue": "Molecular pharmaceutics"
+    },
     {
       "abstract": "Subtherapeutic rifampicin exposure drives treatment failure and acquired resistance in tuberculosis. We aimed to develop and externally validate a concentration-driven machine learning (ML) model predicting rifampicin systemic exposure (AUC0-24h) from sparse clinical sampling, addressing the structural biases and limited generalizability of conventional Bayesian precision dosing. Twenty-six published population pharmacokinetic models were benchmarked against real-world TDM data from a French cohort; the five externally compatible models were used to simulate a training cohort of 4,500 virtual patients. An XGBoost regression model was trained to predict AUC0-24h from a two-point sampling strategy and evaluated against Maximum A Posteriori Bayesian Estimation (MAP-BE) and dynamic Model Averaging (MA). External validation was performed on two completely independent datasets: a US cohort of healthy volunteers and a Brazilian cohort of inpatient tuberculosis cases, including HIV-coinfected patients. A sampling strategy at 2 and 8 hours post-dose provided optimal accuracy. Across the combined cross-continental validation cohorts (n = 40), the concentration-driven ML model showed consistent external predictive performance. It achieved 75.0% of predictions within ±20% of the reference exposure, significantly outperforming the dynamic MA strategy (42.5%, P < 0.001) and all five individual MAP-BE priors (0-60.0%, P < 0.01). Furthermore, the ML approach yielded substantially lower overall imprecision (relative root mean square error: 26.2% vs. 52.6% for MA) and systematic bias (17.5% vs. 38.1%). By integrating mechanistic pharmacology with data-driven inference, this framework enables covariate-free estimation of rifampicin exposure from two plasma samples. External evaluation in two independent cohorts supports its further prospective assessment as a scalable TDM decision-support approach.",
       "authors": [

@@ -1,12 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-11-22",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106",
+  "last_delivery_date_jst": "2026-11-23",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/107",
+  "last_optional_source_errors": {
+    "arXiv": {
+      "at_utc": "2026-11-23T02:07:56.498764+00:00",
+      "message": "HTTP 429: Rate exceeded."
+    }
+  },
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-22 10:51 JST",
+    "archive": {
+      "cached_candidates_before": 31,
+      "completed_windows": 2,
+      "eligible_candidates": 31,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 853,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-23 11:07 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/106"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/107"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -18,31 +35,25 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
-      },
-      "arXiv": {
-        "failed_queries": 0,
-        "limited_queries": 0,
-        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2537,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 139,
-      "missing_ai_evidence": 14,
-      "missing_pk_evidence": 2542,
-      "retrieved": 5235,
-      "unique": 2698
+      "already_reported": 3,
+      "duplicates": 2521,
+      "excluded_publication_type": 144,
+      "missing_ai_evidence": 13,
+      "missing_pk_evidence": 2558,
+      "retrieved": 5239,
+      "unique": 2718
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-22",
-  "last_success_utc": "2026-11-22T01:51:45.353364+00:00",
+  "last_selection_date_jst": "2026-11-23",
+  "last_success_utc": "2026-11-23T02:07:56.498764+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -242,6 +253,12 @@
       "doi": "10.1016/j.jiac.2026.103058",
       "notified_at": "2026-08-28T10:06:33.122254+00:00",
       "title": "Development and validation of machine learning model for selecting the optimal population pharmacokinetic model for vancomycin."
+    },
+    "doi:10.1021/acs.molpharmaceut.4c01431": {
+      "doi": "10.1021/acs.molpharmaceut.4c01431",
+      "selected_at": "2026-11-23T02:07:56.498764+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning Prediction and Validation of Plasma Concentration-Time Profiles."
     },
     "doi:10.1038/s41467-025-64304-2": {
       "doi": "10.1038/s41467-025-64304-2",
@@ -708,6 +725,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40345671": {
+      "doi": "10.1021/acs.molpharmaceut.4c01431",
+      "selected_at": "2026-11-23T02:07:56.498764+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning Prediction and Validation of Plasma Concentration-Time Profiles."
     },
     "source:europe pmc:med:40401163": {
       "doi": "10.2147/dddt.s495050",
@@ -1685,6 +1708,12 @@
       "selection_type": "historical",
       "title": "Transforming Patient Voices into Early Predictors of Survival Using Nonlinear Mixed-Effect Models and AI/ML for Patient-Centered Decision-Making"
     },
+    "title:dbe5a06a56910b81dc0cde29": {
+      "doi": "10.1021/acs.molpharmaceut.4c01431",
+      "selected_at": "2026-11-23T02:07:56.498764+00:00",
+      "selection_type": "historical",
+      "title": "Machine Learning Prediction and Validation of Plasma Concentration-Time Profiles."
+    },
     "title:dd0ea03f50dbe7221be01121": {
       "doi": "10.1002/psp4.70285",
       "notified_at": "2026-09-01T23:44:02.778982+00:00",
@@ -1752,21 +1781,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-22"
+    "arxiv": "2026-11-23"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
-      "records": 0,
-      "status": "ok"
+      "last_attempt_utc": "2026-11-23T02:07:56.498764+00:00",
+      "message": "HTTP 429: Rate exceeded.",
+      "status": "error"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
-      "records": 5232,
+      "last_attempt_utc": "2026-11-23T02:07:56.498764+00:00",
+      "records": 5236,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-22T01:51:45.353364+00:00",
+      "last_attempt_utc": "2026-11-23T02:07:56.498764+00:00",
       "records": 3,
       "status": "ok"
     }
