@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-23 11:07 JST",
+  "last_scan_at": "2026-11-24 14:42 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 31,
+      "cached_candidates_before": 30,
       "completed_windows": 2,
-      "eligible_candidates": 31,
+      "eligible_candidates": 30,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 853,
+      "pending_windows": 872,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-23 11:07 JST",
+    "checked_at": "2026-11-24 14:42 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/107"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/108"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -30,16 +30,21 @@
         "failed_queries": 0,
         "limited_queries": 0,
         "pages": 1
+      },
+      "arXiv": {
+        "failed_queries": 0,
+        "limited_queries": 0,
+        "pages": 1
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2521,
-      "excluded_publication_type": 144,
+      "already_reported": 2,
+      "duplicates": 2529,
+      "excluded_publication_type": 143,
       "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2558,
-      "retrieved": 5239,
-      "unique": 2718
+      "missing_pk_evidence": 2569,
+      "retrieved": 5256,
+      "unique": 2727
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -47,14 +52,91 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 94,
+  "article_count": 95,
   "new_count": 31,
-  "historical_count": 63,
+  "historical_count": 64,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient. The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study conducted at the Pharmacology department in Fattouma Bourguiba's hospital in Monastir, Tunisia. We included patients who had undergone kidney transplantation in the Nephrology department of Monastir Hospital and received the Tac immunosuppressant protocol, for whom routine therapeutic drug monitoring (TDM) during the early post-transplant period (0-3 months) had been performed in our department. Results A total of 187 Tac predose concentration (C 0 ) issued from 56 adult renal transplant patients were included in the present study. The whole population was divided into building (n = 39 patients, 119 C 0 ) and validation groups (n = 17 patients, 68 C 0 ). In the validation dataset, the RMSE was 0.76, 0.19, and 0.01, and the MAE was 0.55, 0.36, and 0.06, respectively, for the Bayesian approach, XGBoost, and LSTM. Conclusion Our study demonstrates that the LSTM approach outperforms XGBoost and Bayesian estimation in predicting tacrolimus concentration in Tunisian kidney transplant patients. Implementing TDM-based LSTM models during the first PT 3 months in clinical practice can significantly enhance patient outcomes and prevent acute kidney rejection in this population.",
+      "authors": [
+        "Ben-Fredj N",
+        "Dridi I",
+        "Dridi I",
+        "Ben-Yahya N",
+        "Aouam K"
+      ],
+      "doi": "10.1007/s13318-025-00942-7",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "model informed precision dosing",
+            "mipd"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1007/s13318-025-00942-7",
+      "publication_date": "2025-05-08",
+      "reported_at": "2026-11-24 14:42 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study co…",
+        "new_capability": "Implementing TDM-based LSTM models during the first PT 3 months in clinical practice can significantly enhance patient outcomes and prevent acute kidney rejection in this population.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Comparison of Machine Learning Algorithms and Bayesian Estimation in Predicting Tacrolimus Concentration in Tunisian Kidney Transplant Patients During the Early Post-Transplant Period.",
+      "url": "https://europepmc.org/article/MED/40338501",
+      "venue": "European journal of drug metabolism and pharmacokinetics"
+    },
     {
       "abstract": "Recent research has increasingly focused on using machine learning for covariate selection in population pharmacokinetics (PPK) analysis. However, few studies have explored the prediction of plasma concentration profiles of drugs using nonlinear mixed-effect models combined with machine learning. This gap includes limited validation of prediction accuracy and applicability to diverse patient populations and dosing conditions. This study addresses these gaps by using remifentanil as a model drug and applying machine learning models to predict plasma concentration profiles based on virtual and real-world data. We created various training data sets for the virtual data by clustering based on the size and diversity of the test data set. Our results demonstrated high prediction accuracy for virtual and real-world data sets using Random Forest models. These results suggest that machine learning models are effective for large-scale data sets and real-world data with variable dosing times and amounts per patient. Considering the efficiency of machine learning, it offers a fit-for-purpose approach alongside traditional PPK methods, potentially enhancing future pharmacokinetic and pharmacodynamic studies.",
       "authors": [
