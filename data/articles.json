@@ -1,6 +1,82 @@
 {
   "articles": [
     {
+      "abstract": "Nonlinear mixed-effects (NLME) models are the central statistical models of pharmacometrics, where they support dose selection, individualized dosing and regulatory decisions in drug development. Statistically, NLME modeling is a marginalized likelihood problem. Variational autoencoders (VAEs) solve such problems with a neural network encoder that amortizes the approximation of the intractable posterior distribution, and allow the integration of AI components into NLME modeling. This paper provides the convergence analysis of the VAE-NLME algorithm. First, its version for the evidence lower bound (ELBO) is proven to converge almost surely to the set of stationary points of the ELBO, without assuming that the encoder is trained exactly. Second, the final VAE-NLME algorithm trains the encoder on the ELBO by gradient-based optimization and uses it as proposal for importance-weighted sufficient statistics. It converges almost surely to the set of stationary points of the marginal log-likelihood, without any assumption on the training of the encoder. Thus, it combines the fast gradient-based training of VAEs with the limit of maximum likelihood estimation.",
+      "authors": [
+        "Jan Rohleff",
+        "Johannes Schropp"
+      ],
+      "doi": "",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "neural network"
+          ],
+          "method": [
+            "algorithm",
+            "estimation",
+            "optimization"
+          ],
+          "pk": [
+            "pharmacometrics",
+            "nonlinear mixed effects",
+            "nlme"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "neural network"
+          ],
+          "method": [
+            "algorithm",
+            "estimation",
+            "optimization"
+          ],
+          "pk": [
+            "nonlinear mixed effects",
+            "pharmacometrics",
+            "nlme"
+          ]
+        },
+        "title_terms": {
+          "ai": [],
+          "method": [],
+          "pk": [
+            "nonlinear mixed effects"
+          ]
+        }
+      },
+      "id": "title:7811c3e5cf963786f5add900",
+      "publication_date": "2026-11-24T10:41:06Z",
+      "reported_at": "2026-11-25 13:44 JST",
+      "score": {
+        "components": {
+          "ai": 10,
+          "intersection": 0,
+          "method": 10,
+          "pk": 30,
+          "total": 50
+        },
+        "priority": "Medium",
+        "total": 50
+      },
+      "selection_type": "new",
+      "sources": [
+        "arXiv"
+      ],
+      "summary": {
+        "contribution": "This paper provides the convergence analysis of the VAE-NLME algorithm.",
+        "new_capability": "Not stated in the available abstract.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Nonlinear mixed-effects (NLME) models are the central statistical models of pharmacometrics, where they support dose selection, individualized dosing and regulatory decisions in drug development.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "From the ELBO to Maximum Likelihood: Convergence of Variational Autoencoders for Nonlinear Mixed-Effects Modeling",
+      "url": "https://arxiv.org/abs/2611.32372v1",
+      "venue": "arXiv"
+    },
+    {
       "abstract": "Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient. The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study conducted at the Pharmacology department in Fattouma Bourguiba's hospital in Monastir, Tunisia. We included patients who had undergone kidney transplantation in the Nephrology department of Monastir Hospital and received the Tac immunosuppressant protocol, for whom routine therapeutic drug monitoring (TDM) during the early post-transplant period (0-3 months) had been performed in our department. Results A total of 187 Tac predose concentration (C 0 ) issued from 56 adult renal transplant patients were included in the present study. The whole population was divided into building (n = 39 patients, 119 C 0 ) and validation groups (n = 17 patients, 68 C 0 ). In the validation dataset, the RMSE was 0.76, 0.19, and 0.01, and the MAE was 0.55, 0.36, and 0.06, respectively, for the Bayesian approach, XGBoost, and LSTM. Conclusion Our study demonstrates that the LSTM approach outperforms XGBoost and Bayesian estimation in predicting tacrolimus concentration in Tunisian kidney transplant patients. Implementing TDM-based LSTM models during the first PT 3 months in clinical practice can significantly enhance patient outcomes and prevent acute kidney rejection in this population.",
       "authors": [
         "Ben-Fredj N",
@@ -7482,24 +7558,13 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-24 14:42 JST",
+  "last_scan_at": "2026-11-25 13:44 JST",
   "run_status": {
-    "archive": {
-      "cached_candidates_before": 30,
-      "completed_windows": 2,
-      "eligible_candidates": 30,
-      "exhausted": false,
-      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 872,
-      "repeated_pages": 0,
-      "requests": 0,
-      "screening": {},
-      "split_windows": 0
-    },
-    "checked_at": "2026-11-24 14:42 JST",
+    "archive": {},
+    "checked_at": "2026-11-25 13:44 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/108"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/109"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -7520,16 +7585,17 @@
     },
     "recent_screening": {
       "already_reported": 2,
-      "duplicates": 2529,
-      "excluded_publication_type": 143,
+      "duplicates": 2506,
+      "eligible_unreported": 1,
+      "excluded_publication_type": 146,
       "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2569,
-      "retrieved": 5256,
-      "unique": 2727
+      "missing_pk_evidence": 2560,
+      "retrieved": 5228,
+      "unique": 2722
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "historical",
+    "selection_type": "new",
     "source_status": "ok",
     "warnings": {}
   },

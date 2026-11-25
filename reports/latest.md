@@ -2,16 +2,16 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-24 14:42 JST
+Run time: 2026-11-25 13:44 JST
 Source retrieval: **Complete**
-New articles: **0**
-Archive selections: **1** (unreported papers published since 2020)
+New articles: **1**
+Archive selections: **0** (unreported papers published since 2020)
 
 Evidence basis: titles and abstracts are used for screening; all interpretations use the abstract only. Full text is not fetched.
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5253, Europe PMC 3, arXiv 0
+Recent-search records: Crossref 5224, Europe PMC 3, arXiv 1
 
 ## Selection and search coverage
 
@@ -24,43 +24,41 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5256
-- unique: 2727
-- duplicates: 2529
+- retrieved: 5228
+- unique: 2722
+- duplicates: 2506
 - already reported: 2
-- excluded publication type: 143
-- missing pk evidence: 2569
+- excluded publication type: 146
+- missing pk evidence: 2560
 - missing ai evidence: 13
-
-Archive candidates available: 30; unvisited/unfinished windows: 872; completed windows: 2.
-Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
+- eligible unreported: 1
 
 
-## 1. [Comparison of Machine Learning Algorithms and Bayesian Estimation in Predicting Tacrolimus Concentration in Tunisian Kidney Transplant Patients During the Early Post-Transplant Period.](https://europepmc.org/article/MED/40338501)
+## 1. [From the ELBO to Maximum Likelihood: Convergence of Variational Autoencoders for Nonlinear Mixed-Effects Modeling](https://arxiv.org/abs/2611.32372v1)
 
-- **Selection:** Archive article (2020+ fallback)
-- **Authors:** Ben-Fredj N, Dridi I, Dridi I, Ben-Yahya N, Aouam K
-- **Venue/source:** European journal of drug metabolism and pharmacokinetics
-- **Publication date:** 2025-05-08
-- **DOI:** 10.1007/s13318-025-00942-7
+- **Selection:** New article
+- **Authors:** Jan Rohleff, Johannes Schropp
+- **Venue/source:** arXiv
+- **Publication date:** 2026-11-24T10:41:06Z
+- **DOI:** Not available
 
 ### Abstract-only interpretation
 
 - **Prior limitation:** Not stated in the available abstract.
-- **Methodological contribution:** The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study co…
-- **What becomes possible:** Implementing TDM-based LSTM models during the first PT 3 months in clinical practice can significantly enhance patient outcomes and prevent acute kidney rejection in this population.
-- **Why it matters:** Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient.
+- **Methodological contribution:** This paper provides the convergence analysis of the VAE-NLME algorithm.
+- **What becomes possible:** Not stated in the available abstract.
+- **Why it matters:** Nonlinear mixed-effects (NLME) models are the central statistical models of pharmacometrics, where they support dose selection, individualized dosing and regulatory decisions in drug development.
 
-- **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
+- **Relevance score:** 50/100 — PK 30, AI 10, method 10, title intersection 0
 - **Summary method:** Abstract-only extractive summary
 
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Background and objective Model-informed precision dosing (MIPD), based on a Bayesian approach and machine learning (ML) algorithms, is a suitable approach to personalize dosage recommendations and to improve the concentration target attainment for each patient. The objective of this study is to compare the predictive performance of two ML approaches, XGBoost and LSTM, with a previously developed Bayesian model of tacrolimus (Tac) in a cohort of Tunisian kidney transplant patients during the early post-transplant period (0-3 months) METHOD: This was a cross-sectional study conducted at the Pharmacology department in Fattouma Bourguiba's hospital in Monastir, Tunisia. We included patients who had undergone kidney transplantation in the Nephrology department of Monastir Hospital and received the Tac immunosuppressant protocol, for whom routine therapeutic drug monitoring (TDM) during the early post-transplant period (0-3 months) had been performed in our department. Results A total of 187 Tac predose concentration (C 0 ) issued from 56 adult renal transplant patients were included in the present study. The whole population was divided into building (n = 39 patients, 119 C 0 ) and validation groups (n = 17 patients, 68 C 0 ). In the validation dataset, the RMSE was 0.76, 0.19, and 0.01, and the MAE was 0.55, 0.36, and 0.06, respectively, for the Bayesian approach, XGBoost, and LST…
-- **PopPK/pharmacometrics terms:** model informed precision dosing, mipd
-- **AI/ML terms:** machine learning
-- **Method terms:** estimation, validation
+- **Abstract:** Nonlinear mixed-effects (NLME) models are the central statistical models of pharmacometrics, where they support dose selection, individualized dosing and regulatory decisions in drug development. Statistically, NLME modeling is a marginalized likelihood problem. Variational autoencoders (VAEs) solve such problems with a neural network encoder that amortizes the approximation of the intractable posterior distribution, and allow the integration of AI components into NLME modeling. This paper provides the convergence analysis of the VAE-NLME algorithm. First, its version for the evidence lower bound (ELBO) is proven to converge almost surely to the set of stationary points of the ELBO, without assuming that the encoder is trained exactly. Second, the final VAE-NLME algorithm trains the encoder on the ELBO by gradient-based optimization and uses it as proposal for importance-weighted sufficient statistics. It converges almost surely to the set of stationary points of the marginal log-likelihood, without any assumption on the training of the encoder. Thus, it combines the fast gradient-based training of VAEs with the limit of maximum likelihood estimation.
+- **PopPK/pharmacometrics terms:** nonlinear mixed effects, pharmacometrics, nlme
+- **AI/ML terms:** neural network
+- **Method terms:** algorithm, estimation, optimization
 
 </details>
 
