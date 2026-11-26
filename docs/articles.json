@@ -1,19 +1,30 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-25 13:44 JST",
+  "last_scan_at": "2026-11-26 12:53 JST",
   "run_status": {
-    "archive": {},
-    "checked_at": "2026-11-25 13:44 JST",
+    "archive": {
+      "cached_candidates_before": 29,
+      "completed_windows": 2,
+      "eligible_candidates": 29,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 891,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-26 12:53 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/109"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 36
+        "pages": 35
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -27,29 +38,97 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2506,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 146,
+      "already_reported": 3,
+      "duplicates": 2483,
+      "excluded_publication_type": 157,
       "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2560,
-      "retrieved": 5228,
-      "unique": 2722
+      "missing_pk_evidence": 2548,
+      "retrieved": 5204,
+      "unique": 2721
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 96,
+  "article_count": 97,
   "new_count": 32,
-  "historical_count": 64,
+  "historical_count": 65,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Precision dosing aims to optimize and customize pharmacological treatment at the individual level. The integration of pharmacometric models with Reinforcement Learning (RL) algorithms is currently under investigation to support the personalization of adaptive dosing therapies. In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients. PV is a chronic myeloproliferative disease with an overproduction of platelets (PLT), white blood cells (WBC), and hematocrit (HCT). The therapeutic goal is to simultaneously normalize the levels of these efficacy/safety biomarkers, thus inducing a complete hematological response (CHR). An RL algorithm, Q-Learning (QL), was integrated with a PK-PD model describing the givinostat effect on PLT, WBC, and HCT to derive both an adaptive dosing protocol (QL pop -agent) for the whole population and personalized dosing strategies by coupling a specific QL-agent to each patient (QL ind -agents). QL pop -agent learned a general adaptive dosing protocol that achieved a similar CHR rate (77% vs. 83%) when compared to the actual givinostat clinical protocol on 10 simulated populations. Treatment efficacy and safety increased with a deeper dosing personalization by QL ind -agents. These QL-based patient-specific adaptive dosing rules outperformed both the clinical protocol and QL pop -agent by reaching the CHR in 93% of the test patients and completely avoided severe toxicities during the whole treatment period. These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.",
+      "authors": [
+        "De Carlo A",
+        "Tosca EM",
+        "Magni P"
+      ],
+      "doi": "10.1002/psp4.70012",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "algorithm"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [
+            "algorithm"
+          ],
+          "pk": [
+            "pharmacometric"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "reinforcement learning"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1002/psp4.70012",
+      "publication_date": "2025-05-05",
+      "reported_at": "2026-11-26 12:53 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients.",
+        "new_capability": "These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.",
+        "prior_limitation": "Not stated in the available abstract.",
+        "significance": "Precision dosing aims to optimize and customize pharmacological treatment at the individual level.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera.",
+      "url": "https://europepmc.org/article/MED/40325832",
+      "venue": "CPT: pharmacometrics & systems pharmacology"
+    },
     {
       "abstract": "Nonlinear mixed-effects (NLME) models are the central statistical models of pharmacometrics, where they support dose selection, individualized dosing and regulatory decisions in drug development. Statistically, NLME modeling is a marginalized likelihood problem. Variational autoencoders (VAEs) solve such problems with a neural network encoder that amortizes the approximation of the intractable posterior distribution, and allow the integration of AI components into NLME modeling. This paper provides the convergence analysis of the VAE-NLME algorithm. First, its version for the evidence lower bound (ELBO) is proven to converge almost surely to the set of stationary points of the ELBO, without assuming that the encoder is trained exactly. Second, the final VAE-NLME algorithm trains the encoder on the ELBO by gradient-based optimization and uses it as proposal for importance-weighted sufficient statistics. It converges almost surely to the set of stationary points of the marginal log-likelihood, without any assumption on the training of the encoder. Thus, it combines the fast gradient-based training of VAEs with the limit of maximum likelihood estimation.",
       "authors": [

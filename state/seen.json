@@ -1,18 +1,29 @@
 {
-  "last_delivery_date_jst": "2026-11-25",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/109",
+  "last_delivery_date_jst": "2026-11-26",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110",
   "last_run": {
-    "archive": {},
-    "checked_at": "2026-11-25 13:44 JST",
+    "archive": {
+      "cached_candidates_before": 29,
+      "completed_windows": 2,
+      "eligible_candidates": 29,
+      "exhausted": false,
+      "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
+      "pending_windows": 891,
+      "repeated_pages": 0,
+      "requests": 0,
+      "screening": {},
+      "split_windows": 0
+    },
+    "checked_at": "2026-11-26 12:53 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/109"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110"
     ],
     "recent_coverage": {
       "Crossref": {
         "failed_queries": 0,
         "limited_queries": 16,
-        "pages": 36
+        "pages": 35
       },
       "Europe PMC": {
         "failed_queries": 0,
@@ -26,23 +37,22 @@
       }
     },
     "recent_screening": {
-      "already_reported": 2,
-      "duplicates": 2506,
-      "eligible_unreported": 1,
-      "excluded_publication_type": 146,
+      "already_reported": 3,
+      "duplicates": 2483,
+      "excluded_publication_type": 157,
       "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2560,
-      "retrieved": 5228,
-      "unique": 2722
+      "missing_pk_evidence": 2548,
+      "retrieved": 5204,
+      "unique": 2721
     },
     "selected_count": 1,
     "selection_status": "selected",
-    "selection_type": "new",
+    "selection_type": "historical",
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-25",
-  "last_success_utc": "2026-11-25T04:44:21.224605+00:00",
+  "last_selection_date_jst": "2026-11-26",
+  "last_success_utc": "2026-11-26T03:53:42.908354+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -81,6 +91,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "doi:10.1002/psp4.70012": {
+      "doi": "10.1002/psp4.70012",
+      "selected_at": "2026-11-26T03:53:42.908354+00:00",
+      "selection_type": "historical",
+      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera."
     },
     "doi:10.1002/psp4.70044": {
       "doi": "10.1002/psp4.70044",
@@ -726,6 +742,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40325832": {
+      "doi": "10.1002/psp4.70012",
+      "selected_at": "2026-11-26T03:53:42.908354+00:00",
+      "selection_type": "historical",
+      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera."
     },
     "source:europe pmc:med:40338501": {
       "doi": "10.1007/s13318-025-00942-7",
@@ -1757,6 +1779,12 @@
       "selection_type": "historical",
       "title": "A Systems Biology and Generative Artificial Intelligence Framework for Rational Multi-Target Drug Design in Metabolic Dysfunction-Associated Steatotic Liver Disease: Proof-of-Concept Identification of HPM-001"
     },
+    "title:e6fbb1066d2a9c055c2d2a3d": {
+      "doi": "10.1002/psp4.70012",
+      "selected_at": "2026-11-26T03:53:42.908354+00:00",
+      "selection_type": "historical",
+      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera."
+    },
     "title:ea6bb6a4bf42c674d6856f1c": {
       "doi": "10.3390/pharmaceutics18040501",
       "notified_at": "2026-09-02T23:46:45.286041+00:00",
@@ -1800,21 +1828,21 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-25"
+    "arxiv": "2026-11-26"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-25T04:44:21.224605+00:00",
+      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-25T04:44:21.224605+00:00",
-      "records": 5224,
+      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
+      "records": 5200,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-25T04:44:21.224605+00:00",
+      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
       "records": 3,
       "status": "ok"
     }
