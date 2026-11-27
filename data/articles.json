@@ -1,6 +1,73 @@
 {
   "articles": [
     {
+      "abstract": "Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.",
+      "authors": [
+        "Podina L",
+        "Ghodsi A",
+        "Kohandel M"
+      ],
+      "doi": "10.1007/s11095-025-03858-8",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [],
+          "pk": [
+            "quantitative systems pharmacology",
+            "qsp"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "physics informed"
+          ],
+          "method": [],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1007/s11095-025-03858-8",
+      "publication_date": "2025-04-17",
+      "reported_at": "2026-11-27 12:54 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously.",
+        "new_capability": "UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.",
+        "prior_limitation": "However, significant manual distillation of the literature is needed in order to construct a QSP model.",
+        "significance": "Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks.",
+      "url": "https://europepmc.org/article/MED/40244511",
+      "venue": "Pharmaceutical research"
+    },
+    {
       "abstract": "Precision dosing aims to optimize and customize pharmacological treatment at the individual level. The integration of pharmacometric models with Reinforcement Learning (RL) algorithms is currently under investigation to support the personalization of adaptive dosing therapies. In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients. PV is a chronic myeloproliferative disease with an overproduction of platelets (PLT), white blood cells (WBC), and hematocrit (HCT). The therapeutic goal is to simultaneously normalize the levels of these efficacy/safety biomarkers, thus inducing a complete hematological response (CHR). An RL algorithm, Q-Learning (QL), was integrated with a PK-PD model describing the givinostat effect on PLT, WBC, and HCT to derive both an adaptive dosing protocol (QL pop -agent) for the whole population and personalized dosing strategies by coupling a specific QL-agent to each patient (QL ind -agents). QL pop -agent learned a general adaptive dosing protocol that achieved a similar CHR rate (77% vs. 83%) when compared to the actual givinostat clinical protocol on 10 simulated populations. Treatment efficacy and safety increased with a deeper dosing personalization by QL ind -agents. These QL-based patient-specific adaptive dosing rules outperformed both the clinical protocol and QL pop -agent by reaching the CHR in 93% of the test patients and completely avoided severe toxicities during the whole treatment period. These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.",
       "authors": [
         "De Carlo A",
@@ -7627,24 +7694,24 @@
       "venue": "Europe PMC"
     }
   ],
-  "last_scan_at": "2026-11-26 12:53 JST",
+  "last_scan_at": "2026-11-27 12:54 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 29,
+      "cached_candidates_before": 28,
       "completed_windows": 2,
-      "eligible_candidates": 29,
+      "eligible_candidates": 28,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 891,
+      "pending_windows": 910,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-26 12:53 JST",
+    "checked_at": "2026-11-27 12:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -7664,13 +7731,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2483,
-      "excluded_publication_type": 157,
-      "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2548,
-      "retrieved": 5204,
-      "unique": 2721
+      "already_reported": 4,
+      "duplicates": 2449,
+      "excluded_publication_type": 154,
+      "missing_ai_evidence": 11,
+      "missing_pk_evidence": 2556,
+      "retrieved": 5174,
+      "unique": 2725
     },
     "selected_count": 1,
     "selection_status": "selected",

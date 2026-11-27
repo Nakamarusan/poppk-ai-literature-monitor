@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-26",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110",
+  "last_delivery_date_jst": "2026-11-27",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 29,
+      "cached_candidates_before": 28,
       "completed_windows": 2,
-      "eligible_candidates": 29,
+      "eligible_candidates": 28,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 891,
+      "pending_windows": 910,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-26 12:53 JST",
+    "checked_at": "2026-11-27 12:54 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/110"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,13 +37,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 3,
-      "duplicates": 2483,
-      "excluded_publication_type": 157,
-      "missing_ai_evidence": 13,
-      "missing_pk_evidence": 2548,
-      "retrieved": 5204,
-      "unique": 2721
+      "already_reported": 4,
+      "duplicates": 2449,
+      "excluded_publication_type": 154,
+      "missing_ai_evidence": 11,
+      "missing_pk_evidence": 2556,
+      "retrieved": 5174,
+      "unique": 2725
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-26",
-  "last_success_utc": "2026-11-26T03:53:42.908354+00:00",
+  "last_selection_date_jst": "2026-11-27",
+  "last_success_utc": "2026-11-27T03:54:12.875519+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -205,6 +205,12 @@
       "notified_at": "2026-09-18T23:48:45.150035+00:00",
       "selection_type": "historical",
       "title": "Diffusion models for virtual populations and pharmacometric simulations."
+    },
+    "doi:10.1007/s11095-025-03858-8": {
+      "doi": "10.1007/s11095-025-03858-8",
+      "selected_at": "2026-11-27T03:54:12.875519+00:00",
+      "selection_type": "historical",
+      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks."
     },
     "doi:10.1007/s11095-026-04206-0": {
       "doi": "10.1007/s11095-026-04206-0",
@@ -742,6 +748,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40244511": {
+      "doi": "10.1007/s11095-025-03858-8",
+      "selected_at": "2026-11-27T03:54:12.875519+00:00",
+      "selection_type": "historical",
+      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks."
     },
     "source:europe pmc:med:40325832": {
       "doi": "10.1002/psp4.70012",
@@ -1510,6 +1522,12 @@
       "selection_type": "historical",
       "title": "Tree Height Prediction Using a Double Hidden-Layer Neural Network and a Mixed-Effects Model."
     },
+    "title:7520df7b559ee519410e664e": {
+      "doi": "10.1007/s11095-025-03858-8",
+      "selected_at": "2026-11-27T03:54:12.875519+00:00",
+      "selection_type": "historical",
+      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks."
+    },
     "title:779b4671ae7d80177f71f576": {
       "doi": "10.64898/2026.09.29.755460",
       "selected_at": "2026-10-03T00:52:50.227445+00:00",
@@ -1828,22 +1846,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-26"
+    "arxiv": "2026-11-27"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
+      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
-      "records": 5200,
+      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
+      "records": 5169,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-26T03:53:42.908354+00:00",
-      "records": 3,
+      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
+      "records": 4,
       "status": "ok"
     }
   }

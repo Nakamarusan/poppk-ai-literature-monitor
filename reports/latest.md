@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-26 12:53 JST
+Run time: 2026-11-27 12:54 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5200, Europe PMC 3, arXiv 1
+Recent-search records: Crossref 5169, Europe PMC 4, arXiv 1
 
 ## Selection and search coverage
 
@@ -24,32 +24,32 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5204
-- unique: 2721
-- duplicates: 2483
-- already reported: 3
-- excluded publication type: 157
-- missing pk evidence: 2548
-- missing ai evidence: 13
+- retrieved: 5174
+- unique: 2725
+- duplicates: 2449
+- already reported: 4
+- excluded publication type: 154
+- missing pk evidence: 2556
+- missing ai evidence: 11
 
-Archive candidates available: 29; unvisited/unfinished windows: 891; completed windows: 2.
+Archive candidates available: 28; unvisited/unfinished windows: 910; completed windows: 2.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera.](https://europepmc.org/article/MED/40325832)
+## 1. [Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks.](https://europepmc.org/article/MED/40244511)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** De Carlo A, Tosca EM, Magni P
-- **Venue/source:** CPT: pharmacometrics & systems pharmacology
-- **Publication date:** 2025-05-05
-- **DOI:** 10.1002/psp4.70012
+- **Authors:** Podina L, Ghodsi A, Kohandel M
+- **Venue/source:** Pharmaceutical research
+- **Publication date:** 2025-04-17
+- **DOI:** 10.1007/s11095-025-03858-8
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** Not stated in the available abstract.
-- **Methodological contribution:** In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients.
-- **What becomes possible:** These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.
-- **Why it matters:** Precision dosing aims to optimize and customize pharmacological treatment at the individual level.
+- **Prior limitation:** However, significant manual distillation of the literature is needed in order to construct a QSP model.
+- **Methodological contribution:** Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously.
+- **What becomes possible:** UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.
+- **Why it matters:** Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial.
 
 - **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
@@ -57,10 +57,10 @@ Unfinished date windows are resumed on the next eligible run. API cursors are no
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Precision dosing aims to optimize and customize pharmacological treatment at the individual level. The integration of pharmacometric models with Reinforcement Learning (RL) algorithms is currently under investigation to support the personalization of adaptive dosing therapies. In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients. PV is a chronic myeloproliferative disease with an overproduction of platelets (PLT), white blood cells (WBC), and hematocrit (HCT). The therapeutic goal is to simultaneously normalize the levels of these efficacy/safety biomarkers, thus inducing a complete hematological response (CHR). An RL algorithm, Q-Learning (QL), was integrated with a PK-PD model describing the givinostat effect on PLT, WBC, and HCT to derive both an adaptive dosing protocol (QL pop -agent) for the whole population and personalized dosing strategies by coupling a specific QL-agent to each patient (QL ind -agents). QL pop -agent learned a general adaptive dosing protocol that achieved a similar CHR rate (77% vs. 83%) when compared to the actual givinostat clinical protocol on 10 simulated populations. Treatment efficacy and safety increased with a deeper dosing personalization by QL ind -agents. These QL-based patient-specific adaptive dosing rules outperformed both the clin…
-- **PopPK/pharmacometrics terms:** pharmacometric
-- **AI/ML terms:** reinforcement learning
-- **Method terms:** algorithm
+- **Abstract:** Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms tha…
+- **PopPK/pharmacometrics terms:** quantitative systems pharmacology, qsp
+- **AI/ML terms:** physics informed
+- **Method terms:** None
 
 </details>
 

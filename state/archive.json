@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-26",
+  "last_check": "2026-11-27",
   "last_run": {
-    "cached_candidates_before": 29,
+    "cached_candidates_before": 28,
     "completed_windows": 2,
-    "eligible_candidates": 29,
+    "eligible_candidates": 28,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 891,
+    "pending_windows": 910,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -6251,6 +6251,139 @@
       "since": "2026-11-25",
       "source": "crossref",
       "until": "2026-11-26"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-27",
+      "source": "europe_pmc",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-27",
+      "source": "crossref",
+      "until": "2026-11-27"
     }
   ],
   "pool": [
@@ -6742,26 +6875,6 @@
       "venue": ""
     },
     {
-      "abstract": "Precision dosing aims to optimize and customize pharmacological treatment at the individual level. The integration of pharmacometric models with Reinforcement Learning (RL) algorithms is currently under investigation to support the personalization of adaptive dosing therapies. In this study, this hybrid technique is applied to the real multiobjective precision dosing problem of givinostat treatment in polycythemia vera (PV) patients. PV is a chronic myeloproliferative disease with an overproduction of platelets (PLT), white blood cells (WBC), and hematocrit (HCT). The therapeutic goal is to simultaneously normalize the levels of these efficacy/safety biomarkers, thus inducing a complete hematological response (CHR). An RL algorithm, Q-Learning (QL), was integrated with a PK-PD model describing the givinostat effect on PLT, WBC, and HCT to derive both an adaptive dosing protocol (QL pop -agent) for the whole population and personalized dosing strategies by coupling a specific QL-agent to each patient (QL ind -agents). QL pop -agent learned a general adaptive dosing protocol that achieved a similar CHR rate (77% vs. 83%) when compared to the actual givinostat clinical protocol on 10 simulated populations. Treatment efficacy and safety increased with a deeper dosing personalization by QL ind -agents. These QL-based patient-specific adaptive dosing rules outperformed both the clinical protocol and QL pop -agent by reaching the CHR in 93% of the test patients and completely avoided severe toxicities during the whole treatment period. These results confirm that RL and PK-PD models can be valid tools for supporting adaptive dosing strategies as interesting performances were achieved in both learning a general set of rules and in customizing treatment for each patient.",
-      "authors": [
-        "De Carlo A",
-        "Tosca EM",
-        "Magni P"
-      ],
-      "date": "2025-05-05",
-      "doi": "10.1002/psp4.70012",
-      "publication_type": "Research Support, Non-U.S. Gov't, research-article, Journal Article",
-      "source_ids": [
-        "MED:40325832"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Precision Dosing in Presence of Multiobjective Therapies by Integrating Reinforcement Learning and PK-PD Models: Application to Givinostat Treatment of Polycythemia Vera.",
-      "url": "https://europepmc.org/article/MED/40325832",
-      "venue": "CPT: pharmacometrics & systems pharmacology"
-    },
-    {
       "abstract": "Two recent papers offer contrasting perspectives on integrating Quantitative Systems Pharmacology (QSP) and Artificial Intelligence/Machine Learning (AI/ML): one views QSP as the primary driver using AI/ML to enhance computational tasks, while the other argues that AI/ML should provide an alternative mechanistic framework. Rather than perpetuate this tension, we used Large Language Models (LLMs) to examine both papers in two tests-one comparing their core arguments and another probing which methodology LLM should take precedence. Repeating each test multiple times with an identical and neutral prompt, the LLM revealed that each perspective suits specific stages of the drug development pipeline. QSP offers mechanistic rigor and regulatory clarity, and AI/ML excels in high-dimensional data analysis and exploratory modeling. A hybrid approach might best serve researchers and decision-makers, especially when harmonizing data-driven insights with mechanistic integrity. This exercise also highlights the potential of LLMs as promising tools for synthesizing complex information, offering an arguably less biased viewpoint that can trigger deeper discussion from the broader community seeking to align QSP and AI/ML in model-informed drug development (MIDD). By combining our human expertise with AI-driven analyses, we hope to further discuss with the scientific community how QSP and AI/ML-and the synergy between them-can drive innovation in therapeutic discovery and optimization.",
       "authors": [
         "Androulakis IP",
@@ -6931,5 +7044,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-26"
+  "through": "2026-11-27"
 }
