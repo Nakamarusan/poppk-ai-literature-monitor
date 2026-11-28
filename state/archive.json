@@ -1,14 +1,14 @@
 {
   "completed_windows": 2,
   "cycle_started": "2026-10-01",
-  "last_check": "2026-11-27",
+  "last_check": "2026-11-28",
   "last_run": {
-    "cached_candidates_before": 28,
+    "cached_candidates_before": 27,
     "completed_windows": 2,
-    "eligible_candidates": 28,
+    "eligible_candidates": 27,
     "exhausted": false,
     "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-    "pending_windows": 910,
+    "pending_windows": 929,
     "repeated_pages": 0,
     "requests": 0,
     "screening": {},
@@ -6384,6 +6384,139 @@
       "since": "2026-11-27",
       "source": "crossref",
       "until": "2026-11-27"
+    },
+    {
+      "content_type": "",
+      "query": "",
+      "since": "2026-11-28",
+      "source": "europe_pmc",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetic machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "population pharmacokinetics artificial intelligence",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "pharmacometrics machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "nonlinear mixed effects neural network pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "model informed precision dosing artificial intelligence",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "federated learning pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "quantitative systems pharmacology machine learning",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "neural ordinary differential equation pharmacokinetics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "journal-article",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
+    },
+    {
+      "content_type": "posted-content",
+      "query": "mechanistic machine learning pharmacometrics",
+      "since": "2026-11-28",
+      "source": "crossref",
+      "until": "2026-11-28"
     }
   ],
   "pool": [
@@ -6921,26 +7054,6 @@
       "venue": "Scientific reports"
     },
     {
-      "abstract": "Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.",
-      "authors": [
-        "Podina L",
-        "Ghodsi A",
-        "Kohandel M"
-      ],
-      "date": "2025-04-17",
-      "doi": "10.1007/s11095-025-03858-8",
-      "publication_type": "Journal Article",
-      "source_ids": [
-        "MED:40244511"
-      ],
-      "sources": [
-        "Europe PMC"
-      ],
-      "title": "Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks.",
-      "url": "https://europepmc.org/article/MED/40244511",
-      "venue": "Pharmaceutical research"
-    },
-    {
       "abstract": "Background and purpose Glioblastoma (GBM), the most frequent and aggressive brain tumour in adults, is associated with a dismal prognostic despite intensive treatment involving surgery, radiotherapy and temozolomide (TMZ)-based chemotherapy. The initial or acquired resistance of GBM to TMZ appeals for precision medicine approaches to the design of novel efficient combination pharmacotherapies. Such investigation needs to account for the overexpression of the O6-methylguanine-DNA methyl-transferase (MGMT) repair enzyme which is responsible for TMZ resistance in patients. Experimental approach A comprehensive approach combining quantitative systems pharmacology (QSP) models and machine learning (ML) was undertaken to design TMZ-based drug combinations circumventing the initial resistance to the alkylating agent. Key results A QSP model representing TMZ cellular pharmacokinetics-pharmacodynamics and dysregulated pathways in GBM was developed and validated using multi-type time- and dose-resolved datasets, available in control or MGMT-overexpressing cells. In silico drug screening and subsequent experimental validation identified a strategy to re-sensitise TMZ-resistant cells consisting in combining TMZ with inhibitors of the base excision repair and of homologous recombination. Using ML, functional signatures of response to such optimal multi-agent therapy were derived to assist decision-making in patients. Conclusion and implications We successfully demonstrated the relevance of combined QSP and ML to design efficient drug combinations re-sensitising glioblastoma cells initially resistant to TMZ. The developed framework may further serve to identify personalised therapies and administration schedules by extending it to account for additional patient-specific altered pathways and whole-body features.",
       "authors": [
         "Corridore S",
@@ -7044,5 +7157,5 @@
   ],
   "query_signature": "99c968c60adf51ea1aee6d9dd550c16617e33f3fec561936df509fd0d1063bcc",
   "schema_version": 1,
-  "through": "2026-11-27"
+  "through": "2026-11-28"
 }

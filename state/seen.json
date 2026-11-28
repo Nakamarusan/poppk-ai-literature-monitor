@@ -1,23 +1,23 @@
 {
-  "last_delivery_date_jst": "2026-11-27",
-  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111",
+  "last_delivery_date_jst": "2026-11-28",
+  "last_notification_url": "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/112",
   "last_run": {
     "archive": {
-      "cached_candidates_before": 28,
+      "cached_candidates_before": 27,
       "completed_windows": 2,
-      "eligible_candidates": 28,
+      "eligible_candidates": 27,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 910,
+      "pending_windows": 929,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-27 12:54 JST",
+    "checked_at": "2026-11-28 12:41 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/112"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -37,13 +37,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2449,
-      "excluded_publication_type": 154,
+      "already_reported": 3,
+      "duplicates": 2459,
+      "excluded_publication_type": 152,
       "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2556,
-      "retrieved": 5174,
-      "unique": 2725
+      "missing_pk_evidence": 2533,
+      "retrieved": 5158,
+      "unique": 2699
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -51,8 +51,8 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "last_selection_date_jst": "2026-11-27",
-  "last_success_utc": "2026-11-27T03:54:12.875519+00:00",
+  "last_selection_date_jst": "2026-11-28",
+  "last_success_utc": "2026-11-28T03:41:05.586463+00:00",
   "pending_notifications": [],
   "schema_version": 1,
   "seen": {
@@ -384,6 +384,12 @@
       "notified_at": "2026-09-29T01:24:35.574854+00:00",
       "selection_type": "new",
       "title": "Development and evaluation of machine learning-based prediction-modelling for initial vancomycin serum concentrations in septic ICU patients using clinical health record data."
+    },
+    "doi:10.1208/s12248-025-01034-9": {
+      "doi": "10.1208/s12248-025-01034-9",
+      "selected_at": "2026-11-28T03:41:05.586463+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning."
     },
     "doi:10.1208/s12248-026-01248-5": {
       "doi": "10.1208/s12248-026-01248-5",
@@ -748,6 +754,12 @@
       "selected_at": "2026-10-29T01:28:52.021385+00:00",
       "selection_type": "historical",
       "title": "Comparing Scientific Machine Learning With Population Pharmacokinetic and Classical Machine Learning Approaches for Prediction of Drug Concentrations."
+    },
+    "source:europe pmc:med:40021573": {
+      "doi": "10.1208/s12248-025-01034-9",
+      "selected_at": "2026-11-28T03:41:05.586463+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning."
     },
     "source:europe pmc:med:40244511": {
       "doi": "10.1007/s11095-025-03858-8",
@@ -1641,6 +1653,12 @@
       "selection_type": "historical",
       "title": "Physics-informed LSTM neural network for personalized pharmacokinetic modeling of polymyxin B in critically Ill patients."
     },
+    "title:a9cb6a2ad8ce355803531584": {
+      "doi": "10.1208/s12248-025-01034-9",
+      "selected_at": "2026-11-28T03:41:05.586463+00:00",
+      "selection_type": "historical",
+      "title": "Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning."
+    },
     "title:aa1d9f96ecc1c150c62ff4ab": {
       "doi": "10.3389/fphar.2025.1549500",
       "selected_at": "2026-11-09T01:21:36.722154+00:00",
@@ -1846,22 +1864,22 @@
     }
   },
   "source_attempt_dates": {
-    "arxiv": "2026-11-27"
+    "arxiv": "2026-11-28"
   },
   "source_health": {
     "arxiv": {
-      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
+      "last_attempt_utc": "2026-11-28T03:41:05.586463+00:00",
       "records": 1,
       "status": "ok"
     },
     "crossref": {
-      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
-      "records": 5169,
+      "last_attempt_utc": "2026-11-28T03:41:05.586463+00:00",
+      "records": 5154,
       "status": "ok"
     },
     "europe_pmc": {
-      "last_attempt_utc": "2026-11-27T03:54:12.875519+00:00",
-      "records": 4,
+      "last_attempt_utc": "2026-11-28T03:41:05.586463+00:00",
+      "records": 3,
       "status": "ok"
     }
   }

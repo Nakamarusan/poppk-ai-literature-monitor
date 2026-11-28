@@ -2,7 +2,7 @@
 
 # PopPK × AI Methodology Literature Report
 
-Run time: 2026-11-27 12:54 JST
+Run time: 2026-11-28 12:41 JST
 Source retrieval: **Complete**
 New articles: **0**
 Archive selections: **1** (unreported papers published since 2020)
@@ -11,7 +11,7 @@ Evidence basis: titles and abstracts are used for screening; all interpretations
 
 Source counts and warnings describe this run. Daily selections are retained when a later retry refreshes the report status.
 
-Recent-search records: Crossref 5169, Europe PMC 4, arXiv 1
+Recent-search records: Crossref 5154, Europe PMC 3, arXiv 1
 
 ## Selection and search coverage
 
@@ -24,32 +24,32 @@ Retrieval success does not mean that a paper was selected or that all literature
 - arXiv: 1 pages; 0 capped queries; 0 failed queries.
 
 Recent screening (one exclusion reason per unique record):
-- retrieved: 5174
-- unique: 2725
-- duplicates: 2449
-- already reported: 4
-- excluded publication type: 154
-- missing pk evidence: 2556
+- retrieved: 5158
+- unique: 2699
+- duplicates: 2459
+- already reported: 3
+- excluded publication type: 152
+- missing pk evidence: 2533
 - missing ai evidence: 11
 
-Archive candidates available: 28; unvisited/unfinished windows: 910; completed windows: 2.
+Archive candidates available: 27; unvisited/unfinished windows: 929; completed windows: 2.
 Unfinished date windows are resumed on the next eligible run. API cursors are not stored across days.
 
 
-## 1. [Learning Chemotherapy Drug Action via Universal Physics-Informed Neural Networks.](https://europepmc.org/article/MED/40244511)
+## 1. [Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning.](https://europepmc.org/article/MED/40021573)
 
 - **Selection:** Archive article (2020+ fallback)
-- **Authors:** Podina L, Ghodsi A, Kohandel M
-- **Venue/source:** Pharmaceutical research
-- **Publication date:** 2025-04-17
-- **DOI:** 10.1007/s11095-025-03858-8
+- **Authors:** Sayadi H, Fromage Y, Labriffe M, Billat PA, Codde C, Arraki Zava S, Marquet P, Woillard JB
+- **Venue/source:** The AAPS journal
+- **Publication date:** 2025-02-28
+- **DOI:** 10.1208/s12248-025-01034-9
 
 ### Abstract-only interpretation
 
-- **Prior limitation:** However, significant manual distillation of the literature is needed in order to construct a QSP model.
-- **Methodological contribution:** Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously.
-- **What becomes possible:** UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.
-- **Why it matters:** Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial.
+- **Prior limitation:** Conclusions XGBoost ML models accurately estimated GCV AUC0-24 h from limited samples and CrCL, providing a strategy for optimized therapeutic drug monitoring.
+- **Methodological contribution:** This study aimed to train, test and validate machine learning (ML) algorithms for accurate GCV AUC0-24 h estimation in solid organ transplantation.
+- **What becomes possible:** XGBoost algorithms outperformed or matched MAP-BE, showing enhanced generalization and robustness in their estimates.
+- **Why it matters:** Methods We simulated patients for different dosing regimen (900 mg/24 h, 450 mg/24 h, 450 mg/48 h, 450 mg/72 h) using two literature population pharmacokinetic models, allocating 75% for training and 25% for testing.
 
 - **Relevance score:** 70/100 — PK 10, AI 30, method 30, title intersection 0
 - **Summary method:** Abstract-only extractive summary
@@ -57,10 +57,10 @@ Unfinished date windows are resumed on the next eligible run. API cursors are no
 <details>
 <summary>Abstract and screening evidence</summary>
 
-- **Abstract:** Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms tha…
-- **PopPK/pharmacometrics terms:** quantitative systems pharmacology, qsp
-- **AI/ML terms:** physics informed
-- **Method terms:** None
+- **Abstract:** Introduction Valganciclovir, a prodrug of ganciclovir (GCV), is used to prevent cytomegalovirus infection after transplantation, with doses adjusted based on creatinine clearance (CrCL) to target GCV AUC0-24 h of 40-60 mg*h/L. This sometimes leads to overexposure or underexposure. This study aimed to train, test and validate machine learning (ML) algorithms for accurate GCV AUC0-24 h estimation in solid organ transplantation. Methods We simulated patients for different dosing regimen (900 mg/24 h, 450 mg/24 h, 450 mg/48 h, 450 mg/72 h) using two literature population pharmacokinetic models, allocating 75% for training and 25% for testing. Simulations from two other literature models and real patients provided validation datasets. Three independent sets of ML algorithms were created for each regimen, incorporating CrCL and 2 or 3 concentrations. We evaluated their performance on testing and validation datasets and compared them with MAP-BE. Results XGBoost using 3 concentrations generated the most accurate predictions. In testing dataset, they exhibited a relative bias of -0.02 to 1.5% and a relative RMSE of 2.6 to 8.5%. In the validation dataset, a relative bias of 1.5 to 5.8% and 8.9 to 16.5%, and a relative RMSE of 8.5 to 9.6% and 10.7% to 19.7% were observed depending on the model used. XGBoost algorithms outperformed or matched MAP-BE, showing enhanced generalization and r…
+- **PopPK/pharmacometrics terms:** population pharmacokinetic
+- **AI/ML terms:** machine learning
+- **Method terms:** estimation, validation
 
 </details>
 

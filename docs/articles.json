@@ -1,24 +1,24 @@
 {
   "schema_version": 2,
   "evidence_basis": "abstract-only",
-  "last_scan_at": "2026-11-27 12:54 JST",
+  "last_scan_at": "2026-11-28 12:41 JST",
   "run_status": {
     "archive": {
-      "cached_candidates_before": 28,
+      "cached_candidates_before": 27,
       "completed_windows": 2,
-      "eligible_candidates": 28,
+      "eligible_candidates": 27,
       "exhausted": false,
       "note": "Screening counts are per retrieved page; a record can recur across queries or split windows.",
-      "pending_windows": 910,
+      "pending_windows": 929,
       "repeated_pages": 0,
       "requests": 0,
       "screening": {},
       "split_windows": 0
     },
-    "checked_at": "2026-11-27 12:54 JST",
+    "checked_at": "2026-11-28 12:41 JST",
     "delivery_status": "sent",
     "notification_urls": [
-      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/111"
+      "https://github.com/Nakamarusan/poppk-ai-literature-monitor/issues/112"
     ],
     "recent_coverage": {
       "Crossref": {
@@ -38,13 +38,13 @@
       }
     },
     "recent_screening": {
-      "already_reported": 4,
-      "duplicates": 2449,
-      "excluded_publication_type": 154,
+      "already_reported": 3,
+      "duplicates": 2459,
+      "excluded_publication_type": 152,
       "missing_ai_evidence": 11,
-      "missing_pk_evidence": 2556,
-      "retrieved": 5174,
-      "unique": 2725
+      "missing_pk_evidence": 2533,
+      "retrieved": 5158,
+      "unique": 2699
     },
     "selected_count": 1,
     "selection_status": "selected",
@@ -52,14 +52,92 @@
     "source_status": "ok",
     "warnings": {}
   },
-  "article_count": 98,
+  "article_count": 99,
   "new_count": 32,
-  "historical_count": 66,
+  "historical_count": 67,
   "years": [
     "2026",
     "2025"
   ],
   "articles": [
+    {
+      "abstract": "Introduction Valganciclovir, a prodrug of ganciclovir (GCV), is used to prevent cytomegalovirus infection after transplantation, with doses adjusted based on creatinine clearance (CrCL) to target GCV AUC0-24 h of 40-60 mg*h/L. This sometimes leads to overexposure or underexposure. This study aimed to train, test and validate machine learning (ML) algorithms for accurate GCV AUC0-24 h estimation in solid organ transplantation. Methods We simulated patients for different dosing regimen (900 mg/24 h, 450 mg/24 h, 450 mg/48 h, 450 mg/72 h) using two literature population pharmacokinetic models, allocating 75% for training and 25% for testing. Simulations from two other literature models and real patients provided validation datasets. Three independent sets of ML algorithms were created for each regimen, incorporating CrCL and 2 or 3 concentrations. We evaluated their performance on testing and validation datasets and compared them with MAP-BE. Results XGBoost using 3 concentrations generated the most accurate predictions. In testing dataset, they exhibited a relative bias of -0.02 to 1.5% and a relative RMSE of 2.6 to 8.5%. In the validation dataset, a relative bias of 1.5 to 5.8% and 8.9 to 16.5%, and a relative RMSE of 8.5 to 9.6% and 10.7% to 19.7% were observed depending on the model used. XGBoost algorithms outperformed or matched MAP-BE, showing enhanced generalization and robustness in their estimates. When applied to real patients' data, algorithms using 2 concentrations showed relative bias of 1.26% and relative RMSE of 12.68%. Conclusions XGBoost ML models accurately estimated GCV AUC0-24 h from limited samples and CrCL, providing a strategy for optimized therapeutic drug monitoring.",
+      "authors": [
+        "Sayadi H",
+        "Fromage Y",
+        "Labriffe M",
+        "Billat PA",
+        "Codde C",
+        "Arraki Zava S",
+        "Marquet P",
+        "Woillard JB"
+      ],
+      "doi": "10.1208/s12248-025-01034-9",
+      "evidence": {
+        "abstract_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "basis": "abstract-only",
+        "terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation",
+            "validation"
+          ],
+          "pk": [
+            "population pharmacokinetic"
+          ]
+        },
+        "title_terms": {
+          "ai": [
+            "machine learning"
+          ],
+          "method": [
+            "estimation"
+          ],
+          "pk": []
+        }
+      },
+      "id": "doi:10.1208/s12248-025-01034-9",
+      "publication_date": "2025-02-28",
+      "reported_at": "2026-11-28 12:41 JST",
+      "score": {
+        "components": {
+          "ai": 30,
+          "intersection": 0,
+          "method": 30,
+          "pk": 10,
+          "total": 70
+        },
+        "priority": "High",
+        "total": 70
+      },
+      "selection_type": "historical",
+      "sources": [
+        "Europe PMC"
+      ],
+      "summary": {
+        "contribution": "This study aimed to train, test and validate machine learning (ML) algorithms for accurate GCV AUC0-24 h estimation in solid organ transplantation.",
+        "new_capability": "XGBoost algorithms outperformed or matched MAP-BE, showing enhanced generalization and robustness in their estimates.",
+        "prior_limitation": "Conclusions XGBoost ML models accurately estimated GCV AUC0-24 h from limited samples and CrCL, providing a strategy for optimized therapeutic drug monitoring.",
+        "significance": "Methods We simulated patients for different dosing regimen (900 mg/24 h, 450 mg/24 h, 450 mg/48 h, 450 mg/72 h) using two literature population pharmacokinetic models, allocating 75% for training and 25% for testing.",
+        "source": "Abstract-only extractive summary"
+      },
+      "title": "Estimation of Ganciclovir Exposure in Adults Transplant Patients by Machine Learning.",
+      "url": "https://europepmc.org/article/MED/40021573",
+      "venue": "The AAPS journal"
+    },
     {
       "abstract": "Objective Quantitative systems pharmacology (QSP) is widely used to assess drug effects and toxicity before the drug goes to clinical trial. However, significant manual distillation of the literature is needed in order to construct a QSP model. Parameters may need to be fit, and simplifying assumptions of the model need to be made. In this work, we apply Universal Physics-Informed Neural Networks (UPINNs) to learn unknown components of various differential equations that model chemotherapy pharmacodynamics. Methods Using UPINNs, we learn three commonly employed chemotherapeutic drug actions (log-kill, Norton-Simon, and Emax ) from synthetic data. Then, we use the UPINN method to fit the parameters for several synthetic datasets simultaneously. Finally, we learn the net proliferation rate in a model of doxorubicin (a chemotherapeutic) pharmacodynamics. Results We show that the UPINN can successfully learn the hidden terms and unknown parameters in a variety of differential equations (with differing time and variable scales) that model the effect of chemotherapeutics on cancer cells. Conclusions As the examples we study are only toy examples, we highlight the usefulness of UPINNs in learning unknown terms in pharmacodynamic and pharmacokinetic models. UPINNs can be used to find these terms and analyze them further to understand new chemotherapeutics and biological mechanisms that interact with them.",
       "authors": [
